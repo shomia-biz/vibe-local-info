@@ -39,6 +39,17 @@
   ],
   "benefits": [
     {
+      "id": 6,
+      "name": "근로·자녀장려금",
+      "category": "혜택",
+      "startDate": "2024-05-15",
+      "endDate": "상시",
+      "location": "국세청",
+      "target": "소득 및 재산 요건을 충족하는 근로, 사업, 종교인 소득이 있는 가구",
+      "summary": "소득과 재산이 적은 근로소득자에게 근로장려금을, 자녀가 있을 경우 자녀장려금 지급",
+      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/105100000001"
+    },
+    {
       "id": 5,
       "name": "유아학비 (누리과정) 지원",
       "category": "혜택",
