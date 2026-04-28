@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
 import Script from "next/script";
 import "./globals.css";
+import ChatBot from "@/components/ChatBot";
 
 const ADSENSE_ID = process.env.NEXT_PUBLIC_ADSENSE_ID;
 
@@ -89,6 +90,9 @@ export default function RootLayout({
         <div className="flex-1">
           {children}
         </div>
+        
+        {/* 채널톡 스타일 챗봇 */}
+        <ChatBot />
       </body>
     </html>
   );
