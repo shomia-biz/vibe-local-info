@@ -142,12 +142,12 @@ export default function ChatBot() {
 
         {/* 질문 버튼 및 입력 영역 */}
         <div className="p-3 bg-white border-t border-gray-100">
-          <div className="flex gap-2 overflow-x-auto whitespace-nowrap scrollbar-hide mb-3 pb-1">
+          <div className="flex flex-col gap-2 overflow-y-auto max-h-32 scrollbar-hide mb-3 pr-1">
             {chatData.map((item, idx) => (
               <button
                 key={idx}
                 onClick={() => handleQuestionClick(item)}
-                className="inline-block px-3 py-1.5 bg-orange-50 text-orange-600 text-xs font-medium rounded-full border border-orange-100 hover:bg-orange-100 transition-colors shrink-0"
+                className="w-full text-left px-4 py-2 bg-orange-50 text-orange-600 text-xs font-medium rounded-xl border border-orange-100 hover:bg-orange-100 transition-colors"
               >
                 {item.question}
               </button>
