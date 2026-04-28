@@ -81,7 +81,7 @@ export default function ChatBot() {
     <div className="fixed bottom-6 right-6 z-[9999] font-sans">
       {/* 챗봇 창 */}
       <div
-        className={`fixed bottom-24 right-6 w-[360px] h-[500px] bg-white rounded-2xl shadow-2xl overflow-hidden transition-all duration-300 transform ${
+        className={`fixed bottom-24 right-6 w-[360px] h-[750px] max-h-[85vh] bg-white rounded-2xl shadow-2xl overflow-hidden transition-all duration-300 transform ${
           isOpen ? 'scale-100 opacity-100 translate-y-0' : 'scale-95 opacity-0 translate-y-10 pointer-events-none'
         } flex flex-col max-sm:inset-0 max-sm:w-full max-sm:h-full max-sm:rounded-none`}
       >
