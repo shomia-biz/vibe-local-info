@@ -15,9 +15,11 @@ interface Message {
 export default function ChatBot() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    { type: 'bot', text: '안녕하세요! 궁금하신 점이 있으신가요? 아래 질문 버튼을 눌러주세요.' }
+    { type: 'bot', text: '안녕하세요! 궁금하신 점이 있으신가요? 아래 질문 버튼을 누르거나 직접 질문을 입력해 주세요.' }
   ]);
   const [chatData, setChatData] = useState<ChatDataItem[]>([]);
+  const [input, setInput] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
 
   // chat-data.json 불러오기
@@ -33,17 +35,46 @@ export default function ChatBot() {
     if (scrollRef.current) {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
     }
-  }, [messages]);
+  }, [messages, isLoading]);
 
   const handleQuestionClick = (item: ChatDataItem) => {
-    // 사용자 질문 추가
     const newMessages: Message[] = [...messages, { type: 'user', text: item.question }];
     setMessages(newMessages);
 
-    // AI 답변 추가 (약간의 딜레이)
     setTimeout(() => {
       setMessages((prev) => [...prev, { type: 'bot', text: item.answer }]);
     }, 500);
+  };
+
+  const handleSendMessage = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!input.trim() || isLoading) return;
+
+    const userMessage = input.trim();
+    setInput('');
+    setMessages((prev) => [...prev, { type: 'user', text: userMessage }]);
+    setIsLoading(true);
+
+    try {
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          messages: [{ role: 'user', content: userMessage }]
+        }),
+      });
+
+      const data = await response.json();
+      if (data.response) {
+        setMessages((prev) => [...prev, { type: 'bot', text: data.response }]);
+      } else if (data.error) {
+        setMessages((prev) => [...prev, { type: 'bot', text: '죄송합니다. 오류가 발생했습니다: ' + data.error }]);
+      }
+    } catch (err) {
+      setMessages((prev) => [...prev, { type: 'bot', text: '네트워크 오류가 발생했습니다.' }]);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -96,21 +127,52 @@ export default function ChatBot() {
               </div>
             </div>
           ))}
+          {isLoading && (
+            <div className="flex justify-start">
+              <div className="bg-white p-3 rounded-2xl rounded-tl-none border border-gray-100 shadow-sm">
+                <div className="flex gap-1">
+                  <span className="w-1.5 h-1.5 bg-gray-300 rounded-full animate-bounce"></span>
+                  <span className="w-1.5 h-1.5 bg-gray-300 rounded-full animate-bounce [animation-delay:0.2s]"></span>
+                  <span className="w-1.5 h-1.5 bg-gray-300 rounded-full animate-bounce [animation-delay:0.4s]"></span>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
 
-        {/* 질문 버튼 영역 */}
-        <div className="p-3 bg-white border-t border-gray-100 overflow-x-auto whitespace-nowrap scrollbar-hide">
-          <div className="flex gap-2">
+        {/* 질문 버튼 및 입력 영역 */}
+        <div className="p-3 bg-white border-t border-gray-100">
+          <div className="flex gap-2 overflow-x-auto whitespace-nowrap scrollbar-hide mb-3 pb-1">
             {chatData.map((item, idx) => (
               <button
                 key={idx}
                 onClick={() => handleQuestionClick(item)}
-                className="inline-block px-4 py-2 bg-orange-50 text-orange-600 text-sm font-medium rounded-full border border-orange-100 hover:bg-orange-100 transition-colors shrink-0"
+                className="inline-block px-3 py-1.5 bg-orange-50 text-orange-600 text-xs font-medium rounded-full border border-orange-100 hover:bg-orange-100 transition-colors shrink-0"
               >
                 {item.question}
               </button>
             ))}
           </div>
+          
+          <form onSubmit={handleSendMessage} className="flex gap-2">
+            <input
+              type="text"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              placeholder="궁금한 내용을 입력하세요..."
+              className="flex-1 px-4 py-2 bg-gray-100 border-none rounded-xl text-sm focus:ring-2 focus:ring-orange-500 outline-none"
+              disabled={isLoading}
+            />
+            <button
+              type="submit"
+              disabled={isLoading}
+              className="p-2 bg-orange-500 text-white rounded-xl hover:bg-orange-600 transition-colors disabled:bg-gray-300"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
 
