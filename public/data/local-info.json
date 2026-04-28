@@ -39,6 +39,17 @@
   ],
   "benefits": [
     {
+      "id": 9,
+      "name": "해양사고 국선 심판변론인 선정 지원",
+      "category": "혜택",
+      "startDate": "2023-10-27",
+      "endDate": "상시",
+      "location": "관할지방해양안전심판원 심판관실",
+      "target": "사회적 약자(연령, 장애, 빈곤, 교육정도 등)에 해당하는 해양사고관련자",
+      "summary": "해양사고를 입은 사회적 약자에게 국선 심판변론인 선정 및 법률자문 지원",
+      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/119200000007"
+    },
+    {
       "id": 8,
       "name": "친환경 에너지절감장비 보급",
       "category": "혜택",
