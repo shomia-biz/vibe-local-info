@@ -1,6 +1,50 @@
 {
   "events": [
     {
+      "id": 1777391602447,
+      "name": "[서울백제어린이박물관] 초등 2-3학년 학급 대상 [어린이백제연구소2] 옛날 도구, 오늘날 도구 (도구의변천)",
+      "category": "행사",
+      "startDate": "2026-05-12",
+      "endDate": "2026-06-10",
+      "location": "서울백제어린이박물관(교육실, 전시실)",
+      "target": "초등 1~2학년 학급",
+      "summary": "[서울백제어린이박물관] 초등 2-3학년 학급 대상 [어린이백제연구소2] 옛날 도구, 오늘날 도구 (도구의변천) 행사가 서울백제어린이박물관(교육실, 전시실)에서 열립니다.",
+      "link": "https://baekjemuseum.seoul.go.kr/module/index.jsp?boardid=a&code=ED&mmode=content&mpid=SBM0402000000&pid=23194&strsearch=&d_s_que=&cpage=1"
+    },
+    {
+      "id": 1777391601936,
+      "name": "[한성백제박물관] 역사를 알기 쉽게 천천히 배우고 싶은 초등학생을 위한 [신비한 유물도감]",
+      "category": "행사",
+      "startDate": "2026-05-13",
+      "endDate": "2026-06-24",
+      "location": "한성백제박물관 교육실",
+      "target": "초등학생",
+      "summary": "[한성백제박물관] 역사를 알기 쉽게 천천히 배우고 싶은 초등학생을 위한 [신비한 유물도감] 행사가 한성백제박물관 교육실에서 열립니다.",
+      "link": "https://baekjemuseum.seoul.go.kr/module/index.jsp?boardid=a&code=ED&mmode=content&mpid=SBM0402000000&pid=23260&strsearch=&d_s_que=&cpage=1"
+    },
+    {
+      "id": 1777391602375,
+      "name": "[서울시립교향악단] 2026 서울시향 마르쿠스 슈텐츠와 바딤 글루즈만 ①",
+      "category": "행사",
+      "startDate": "2026-05-28",
+      "endDate": "2026-05-28",
+      "location": "롯데콘서트홀",
+      "target": "초등학생 이상 관람가",
+      "summary": "[서울시립교향악단] 2026 서울시향 마르쿠스 슈텐츠와 바딤 글루즈만 ① 행사가 롯데콘서트홀에서 열립니다.",
+      "link": "https://www.seoulphil.or.kr/perf/view?perfNo=7123"
+    },
+    {
+      "id": 1777391601998,
+      "name": "[한성백제박물관] 2026 초등단체 비대면 [한성부터 서울까지] (서울역사박물관 공동교육)",
+      "category": "행사",
+      "startDate": "2026-06-18",
+      "endDate": "2026-07-03",
+      "location": "비대면 원격교육",
+      "target": "초등학생(3-5학년 학급(반별신청), 돌봄단체)",
+      "summary": "[한성백제박물관] 2026 초등단체 비대면 [한성부터 서울까지] (서울역사박물관 공동교육) 행사가 비대면 원격교육에서 열립니다.",
+      "link": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260416095504620846"
+    },
+    {
       "id": 1,
       "name": "송파 어린이날 대축제 🎈",
       "category": "축제",

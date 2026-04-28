@@ -32,9 +32,11 @@ jobs:
         run: |
           node scripts/fetch-public-data.js
           node scripts/generate-blog-post.js
+          node scripts/fetch-seoul-api.js
         env:
           PUBLIC_DATA_API_KEY: ${{ secrets.PUBLIC_DATA_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          SEOUL_DATA_API_KEY: ${{ secrets.SEOUL_DATA_API_KEY }}
 
       - name: Commit and Push changes (Schedule/Manual only)
         if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
