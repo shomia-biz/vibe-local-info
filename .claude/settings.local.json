@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:openrouter.ai)",
+      "WebSearch"
+    ]
+  },
+  "env": {
+    "ANTHROPIC_BASE_URL": "https://openrouter.ai/api/v1",
+    "ANTHROPIC_API_KEY": "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"
+  },
+  "model_options": {
+    "free_gemini": "google/gemini-2.0-flash-lite-preview-02-05:free",
+    "smart_sonnet": "anthropic/claude-3.5-sonnet",
+    "fast_haiku": "anthropic/claude-3-haiku"
+  },
+  "model": "google/gemini-2.0-flash-lite-preview-02-05:free"
+}

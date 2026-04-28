@@ -1,5 +1,6 @@
 import localData from "../../public/data/local-info.json";
 import Link from "next/link";
+import AdBanner from "@/components/AdBanner";
 
 export default function Home() {
   // 오늘 날짜를 가져와서 "202x년 x월 x일" 형식으로 만들어줍니다.
@@ -11,6 +12,43 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-[#FFFBF7] font-sans pb-10"> {/* 따뜻한 크림색 배경 */}
+      {/* 구조화 데이터: Event & GovernmentService */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            ...localData.events.map(event => ({
+              "@context": "https://schema.org",
+              "@type": "Event",
+              "name": event.name,
+              "startDate": event.startDate,
+              "endDate": event.endDate,
+              "location": {
+                "@type": "Place",
+                "name": event.location,
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Songpa-gu",
+                  "addressRegion": "Seoul",
+                  "addressCountry": "KR"
+                }
+              },
+              "description": event.summary
+            })),
+            ...localData.benefits.map(benefit => ({
+              "@context": "https://schema.org",
+              "@type": "GovernmentService",
+              "name": benefit.name,
+              "description": benefit.summary,
+              "provider": {
+                "@type": "GovernmentOrganization",
+                "name": "송파구청"
+              },
+              "serviceType": "Government Benefits"
+            }))
+          ])
+        }}
+      />
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         {/* 1. 상단 헤더 */}
@@ -75,6 +113,9 @@ export default function Home() {
             ))}
           </div>
         </section>
+
+        {/* 중앙 광고 영역 */}
+        <AdBanner />
 
         {/* 3. 지원금/혜택 정보 카드 목록 */}
         <section>

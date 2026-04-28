@@ -1,0 +1,3 @@
+User-Agent: *
+Allow: /
+Sitemap: https://vibe-local-info.pages.dev/sitemap.xml
