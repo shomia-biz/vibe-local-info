@@ -2,8 +2,36 @@ import localData from "../../public/data/local-info.json";
 import Link from "next/link";
 import AdBanner from "@/components/AdBanner";
 
+interface BaseInfo {
+  id: number | string;
+  name: string;
+  category: string;
+  startDate: string;
+  endDate: string;
+  location: string;
+  summary: string;
+  link: string;
+  updatedAt?: string;
+}
+
+interface EventItem extends BaseInfo {
+  target?: string;
+}
+
+interface BenefitItem extends BaseInfo {
+  target?: string;
+}
+
+interface LocalData {
+  events: EventItem[];
+  benefits: BenefitItem[];
+  seoulEvents?: EventItem[];
+  nationalEvents?: EventItem[];
+}
+
+const data = localData as unknown as LocalData;
+
 export default function Home() {
-  // 오늘 날짜를 가져와서 "202x년 x월 x일" 형식으로 만들어줍니다.
   const currentDate = new Date().toLocaleDateString('ko-KR', {
     year: 'numeric',
     month: 'long',
@@ -17,7 +45,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
-            ...localData.events.map(event => ({
+            ...data.events.map(event => ({
               "@context": "https://schema.org",
               "@type": "Event",
               "name": event.name,
@@ -35,7 +63,7 @@ export default function Home() {
               },
               "description": event.summary
             })),
-            ...localData.benefits.map(benefit => ({
+            ...data.benefits.map(benefit => ({
               "@context": "https://schema.org",
               "@type": "GovernmentService",
               "name": benefit.name,
@@ -69,7 +97,7 @@ export default function Home() {
           </div>
           
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {localData.events.map((event) => (
+            {data.events.map((event) => (
               <div 
                 key={event.id} 
                 className="bg-white rounded-3xl shadow-sm border border-orange-50 p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col"
@@ -130,7 +158,7 @@ export default function Home() {
           </div>
           
           <div className="grid gap-6 sm:grid-cols-2">
-            {localData.benefits.map((benefit) => (
+            {data.benefits.map((benefit) => (
               <div 
                 key={benefit.id} 
                 className="bg-white rounded-3xl shadow-sm border border-yellow-100 p-6 sm:p-8 hover:shadow-lg transition-all duration-300 relative overflow-hidden flex flex-col"
@@ -192,7 +220,7 @@ export default function Home() {
           </div>
           
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {localData.seoulEvents?.map((event) => (
+            {data.seoulEvents?.map((event) => (
               <div 
                 key={`seoul-${event.id}`} 
                 className="bg-white rounded-3xl shadow-sm border border-blue-50 p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col"
@@ -244,7 +272,7 @@ export default function Home() {
           </div>
           
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {localData.nationalEvents?.map((event) => (
+            {data.nationalEvents?.map((event) => (
               <div 
                 key={`national-${event.id}`} 
                 className="bg-white rounded-3xl shadow-sm border border-pink-50 p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col"
