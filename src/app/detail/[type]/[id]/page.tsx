@@ -71,26 +71,26 @@ export default async function DetailPage({ params }: { params: Promise<{ type: s
             </span>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-8 leading-tight relative z-10 break-keep">
+          <h1 className="text-2xl sm:text-3xl lg:text-3xl font-extrabold text-gray-900 mb-8 leading-tight relative z-10 break-keep">
             {itemData.name}
           </h1>
 
           {/* 핵심 정보 요약 박스 (회색 배경) */}
-          <div className="bg-gray-50 rounded-2xl p-6 mb-10 space-y-4 border border-gray-100">
+          <div className="bg-gray-50 rounded-2xl p-6 mb-10 space-y-5 border border-gray-100">
             <div className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-6">
-              <span className="text-gray-500 font-semibold min-w-[50px]">기간</span>
-              <span className="text-gray-900 font-medium">
+              <span className="text-gray-500 font-semibold min-w-[60px] text-lg sm:text-xl">기간</span>
+              <span className="text-gray-900 font-bold text-lg sm:text-xl">
                 {itemData.startDate === '상시' ? '상시 진행' : `${itemData.startDate} ~ ${itemData.endDate}`}
               </span>
             </div>
             <div className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-6">
-              <span className="text-gray-500 font-semibold min-w-[50px]">장소</span>
-              <span className="text-gray-900 font-medium">{itemData.location}</span>
+              <span className="text-gray-500 font-semibold min-w-[60px] text-lg sm:text-xl">장소</span>
+              <span className="text-gray-900 font-bold text-lg sm:text-xl">{itemData.location}</span>
             </div>
             {itemData.target && (
               <div className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-6">
-                <span className="text-gray-500 font-semibold min-w-[50px]">대상</span>
-                <span className="text-gray-900 font-medium">{itemData.target}</span>
+                <span className="text-gray-500 font-semibold min-w-[60px] text-lg sm:text-xl">대상</span>
+                <span className="text-gray-900 font-bold text-lg sm:text-xl">{itemData.target}</span>
               </div>
             )}
           </div>
