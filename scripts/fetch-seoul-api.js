@@ -62,7 +62,8 @@ async function fetchSeoulEvents() {
           location: event.PLACE,
           target: event.USE_TRGT || '누구나',
           summary: `${event.TITLE} 행사가 ${event.PLACE}에서 열립니다.`,
-          link: event.ORG_LINK
+          link: event.ORG_LINK,
+          updatedAt: new Date().toISOString().split('T')[0]
         };
         
         localData.events.unshift(newEvent);

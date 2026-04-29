@@ -92,8 +92,10 @@ async function fetchData() {
     processedItem.id = maxId + 1;
 
     if (processedItem.category === '행사') {
+      processedItem.updatedAt = new Date().toISOString().split('T')[0];
       localData.events.unshift(processedItem);
     } else {
+      processedItem.updatedAt = new Date().toISOString().split('T')[0];
       localData.benefits.unshift(processedItem);
     }
 

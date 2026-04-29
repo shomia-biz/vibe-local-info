@@ -101,6 +101,11 @@ export default function Home() {
                     </p>
                   )}
                 </div>
+
+                {/* 업데이트 날짜 표시 */}
+                <p className="text-[10px] text-gray-400 mt-2 text-right">
+                  업데이트: {event.updatedAt || '최근'}
+                </p>
                 
                 {/* 상세보기 버튼 - Link 컴포넌트 적용 */}
                 <Link 
@@ -161,6 +166,11 @@ export default function Home() {
                     <span>{benefit.location}</span>
                   </p>
                 </div>
+
+                {/* 업데이트 날짜 표시 */}
+                <p className="text-[10px] text-gray-400 mt-2 text-right">
+                  업데이트: {benefit.updatedAt || '최근'}
+                </p>
                 
                 {/* 자세히 알아보기 버튼 - Link 컴포넌트 적용 */}
                 <Link 
@@ -208,6 +218,11 @@ export default function Home() {
                     <span>{event.location}</span>
                   </p>
                 </div>
+
+                {/* 업데이트 날짜 표시 */}
+                <p className="text-[10px] text-gray-400 mt-2 text-right">
+                  업데이트: {event.updatedAt || '최근'}
+                </p>
                 
                 {/* 상세보기 버튼 */}
                 <Link 
@@ -255,6 +270,11 @@ export default function Home() {
                     <span>{event.location}</span>
                   </p>
                 </div>
+
+                {/* 업데이트 날짜 표시 */}
+                <p className="text-[10px] text-gray-400 mt-2 text-right">
+                  업데이트: {event.updatedAt || '최근'}
+                </p>
                 
                 {/* 상세보기 버튼 */}
                 <Link 
