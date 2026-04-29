@@ -16,35 +16,41 @@ async function generatePost() {
   try {
     // [1단계] 최신 데이터 확인
     const localData = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
-    // 여러 카테고리 중 가장 최근에 추가된 것(배열의 맨 앞)을 가져옵니다. 
-    // 사용자가 '마지막 항목'이라고 했으나, unshift로 추가되었으므로 [0]번이 최신입니다. 
-    // 여기서는 사용자의 명시적 요청대로 '배열의 마지막' 항목을 일단 확인하되, 
-    // 혜택(benefits)과 행사(events) 중 하나를 선택합니다.
+    
+    // 모든 항목(행사 + 혜택)을 하나로 합칩니다. 
+    // unshift로 추가되었으므로 앞쪽이 최신입니다.
     const allItems = [...localData.events, ...localData.benefits];
+    
     if (allItems.length === 0) {
       console.log('데이터가 없습니다.');
       return;
     }
-    
-    // 사용자가 지칭한 '마지막 항목' (배열의 마지막)
-    const latestItem = allItems[allItems.length - 1];
 
-    // 기존 포스트와 비교 (중복 확인)
+    // 기존 포스트 파일들 읽기
     const existingFiles = fs.readdirSync(postsDir).filter(f => f.endsWith('.md'));
-    let alreadyExists = false;
+    const existingContents = existingFiles.map(file => fs.readFileSync(path.join(postsDir, file), 'utf8'));
 
-    for (const file of existingFiles) {
-      const content = fs.readFileSync(path.join(postsDir, file), 'utf8');
-      if (content.includes(`title: "${latestItem.name}"`) || content.includes(`title: ${latestItem.name}`)) {
-        alreadyExists = true;
-        break;
+    // 아직 글을 작성하지 않은 '최신' 항목 찾기
+    let targetItem = null;
+    for (const item of allItems) {
+      // 제목이나 본문에 해당 데이터의 이름이 포함되어 있는지 확인
+      const alreadyPosted = existingContents.some(content => 
+        content.includes(item.name) || 
+        (content.includes('title:') && content.includes(item.name))
+      );
+
+      if (!alreadyPosted) {
+        targetItem = item;
+        break; // 가장 최신인 것 하나만 선택
       }
     }
 
-    if (alreadyExists) {
-      console.log('이미 작성된 글입니다.');
+    if (!targetItem) {
+      console.log('모든 최신 데이터에 대해 이미 블로그 글이 작성되었습니다. 새 글 생성을 건너뜁니다.');
       return;
     }
+
+    const latestItem = targetItem;
 
     // [2단계] Gemini AI로 블로그 글 생성
     const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`;
