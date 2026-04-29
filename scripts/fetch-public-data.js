@@ -21,33 +21,25 @@ async function fetchData() {
     return;
   }
 
-  // [1단계] 공공데이터 가져오기
-  const publicDataUrl = `https://api.odcloud.kr/api/gov24/v3/serviceList?page=1&perPage=20&returnType=JSON&serviceKey=${PUBLIC_DATA_API_KEY}`;
+  // [1단계] 공공데이터 가져오기 (더 많은 데이터를 훑어보기 위해 perPage를 100으로 늘림)
+  const publicDataUrl = `https://api.odcloud.kr/api/gov24/v3/serviceList?page=1&perPage=100&returnType=JSON&serviceKey=${PUBLIC_DATA_API_KEY}`;
   
   try {
     const response = await fetch(publicDataUrl);
     const result = await response.json();
     const rawItems = result.data || [];
 
-    // 필터링 로직
-    let filteredItems = rawItems.filter(item => 
-      (item.서비스명 || '').includes('송파') || 
-      (item.서비스목적요약 || '').includes('송파') || 
-      (item.지원대상 || '').includes('송파') || 
-      (item.소관기관명 || '').includes('송파')
-    );
+    // 필터링 키워드
+    const keywords = ['송파', '서울', '소상공인', '육아', '아동', '사업자', '다자녀'];
+
+    // 필터링 로직: 키워드가 하나라도 포함된 항목을 찾습니다.
+    let filteredItems = rawItems.filter(item => {
+      const targetText = (item.서비스명 || '') + (item.서비스목적요약 || '') + (item.지원대상 || '') + (item.소관기관명 || '');
+      return keywords.some(keyword => targetText.includes(keyword));
+    });
 
     if (filteredItems.length === 0) {
-      filteredItems = rawItems.filter(item => 
-        (item.서비스명 || '').includes('서울') || 
-        (item.서비스목적요약 || '').includes('서울') || 
-        (item.지원대상 || '').includes('서울') || 
-        (item.소관기관명 || '').includes('서울')
-      );
-    }
-
-    if (filteredItems.length === 0) {
-      filteredItems = rawItems;
+      filteredItems = rawItems; // 만약 필터링된 게 하나도 없으면 전체에서 찾습니다.
     }
 
     // [2단계] 기존 데이터와 비교 (중복 제거)
