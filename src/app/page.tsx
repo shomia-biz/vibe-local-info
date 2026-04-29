@@ -1,6 +1,7 @@
 import localData from "../../public/data/local-info.json";
 import Link from "next/link";
 import AdBanner from "@/components/AdBanner";
+import WeatherWidget from "@/components/WeatherWidget";
 
 interface BaseInfo {
   id: number | string;
@@ -77,10 +78,15 @@ export default function Home() {
           ])
         }}
       />
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 relative">
         
+        {/* 실시간 송파구 날씨/미세먼지 위젯 */}
+        <div className="pt-8 flex justify-start">
+          <WeatherWidget />
+        </div>
+
         {/* 1. 상단 헤더 */}
-        <header className="text-center pt-16 pb-10 border-b-2 border-orange-100/50">
+        <header className="text-center pb-10 border-b-2 border-orange-100/50">
           <h1 className="text-4xl sm:text-5xl font-extrabold text-orange-600 mb-4 tracking-tight drop-shadow-sm">
             서울 송파구 생활 정보 🏡
           </h1>
