@@ -11,6 +11,9 @@ on:
 permissions:
   contents: write
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -46,17 +49,19 @@ jobs:
           git add .
           if ! git diff-index --quiet HEAD; then
             git commit -m "자동 업데이트: 공공데이터 수집 및 블로그 글 생성"
-            git push
+            git pull --rebase origin main
+            git push origin main
           else
             echo "No changes to commit"
           fi
 
       - name: Build
         run: npm run build
+        env:
+          NEXT_TELEMETRY_DISABLED: 1
 
       - name: Deploy to Cloudflare Pages
         run: npx wrangler pages deploy out --project-name=vibe-local-info
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
