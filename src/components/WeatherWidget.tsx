@@ -55,15 +55,17 @@ export default function WeatherWidget() {
   if (!weather) return null;
 
   return (
-    <div className="flex items-center gap-3 bg-white/80 backdrop-blur-md px-4 py-2 rounded-2xl border border-orange-100 shadow-sm transition-all hover:shadow-md">
-      <div className="text-xl">{weather.condition}</div>
-      <div className="flex flex-col">
-        <span className="text-sm font-bold text-gray-800">{weather.temp}°C</span>
-        <div className="flex items-center gap-1">
-          <span className="text-[10px] text-gray-500">미세먼지</span>
-          <span className={`text-[10px] font-bold ${weather.dustValue > 75 ? 'text-red-500' : 'text-green-600'}`}>
-            {weather.dustValue <= 30 ? '좋음' : weather.dustValue <= 80 ? '보통' : '나쁨'}
-          </span>
+    <div className="flex items-center gap-2 bg-white/50 backdrop-blur-sm px-3 py-1 rounded-xl border border-orange-100/50 shadow-sm transition-all hover:shadow-md h-9">
+      <div className="text-lg leading-none">{weather.condition}</div>
+      <div className="flex flex-col justify-center leading-tight">
+        <div className="flex items-center gap-2">
+          <span className="text-xs font-bold text-gray-800">{weather.temp}°C</span>
+          <div className="flex items-center gap-1 border-l border-gray-200 pl-2">
+            <span className="text-[9px] text-gray-500 whitespace-nowrap">미세먼지</span>
+            <span className={`text-[9px] font-bold whitespace-nowrap ${weather.dustValue > 75 ? 'text-red-500' : 'text-green-600'}`}>
+              {weather.dust}
+            </span>
+          </div>
         </div>
       </div>
     </div>
