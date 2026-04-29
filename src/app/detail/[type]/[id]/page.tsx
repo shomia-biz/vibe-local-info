@@ -71,7 +71,7 @@ export default async function DetailPage({ params }: { params: Promise<{ type: s
             </span>
           </div>
 
-          <h1 className="text-2xl sm:text-[26px] lg:text-[26px] font-extrabold text-gray-900 mb-8 leading-tight relative z-10 break-keep">
+          <h1 className="text-[26px] sm:text-[28px] lg:text-[28px] font-extrabold text-gray-900 mb-8 leading-tight relative z-10 break-keep">
             {itemData.name}
           </h1>
 
