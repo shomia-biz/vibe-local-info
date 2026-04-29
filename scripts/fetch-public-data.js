@@ -30,7 +30,7 @@ async function fetchData() {
     const rawItems = result.data || [];
 
     // 필터링 키워드
-    const keywords = ['송파', '서울', '소상공인', '육아', '아동', '사업자', '다자녀'];
+    const keywords = ['송파', '서울', '소상공인', '육아', '아동', '사업자', '다자녀', '청소년', '학생', '청년'];
 
     // 필터링 로직: 키워드가 하나라도 포함된 항목을 찾습니다.
     let filteredItems = rawItems.filter(item => {
