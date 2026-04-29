@@ -84,17 +84,6 @@
   ],
   "benefits": [
     {
-      "id": 8,
-      "name": "친환경 에너지절감장비 보급",
-      "category": "혜택",
-      "startDate": "2023-10-27",
-      "endDate": "상시",
-      "location": "시·군·구청",
-      "target": "어선의 기관, 고효율 등(燈)(집어등, 작업등) 외 에너지 절감 장비의 대체 또는 설치 희망하는 연근해 허가를 가진 어업인",
-      "summary": "연근해 어업인을 대상으로 노후기관, 장비, 설비를 대체 보급",
-      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/119200000001"
-    },
-    {
       "id": 7,
       "name": "주택금융공사 월세자금보증",
       "category": "혜택",
