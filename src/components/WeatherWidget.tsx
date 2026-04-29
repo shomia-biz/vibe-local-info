@@ -55,8 +55,8 @@ export default function WeatherWidget() {
   if (!weather) return null;
 
   return (
-    <div className="flex items-center gap-2 bg-white/50 backdrop-blur-sm px-3 py-1 rounded-xl border border-orange-100/50 shadow-sm transition-all hover:shadow-md h-9">
-      <div className="text-lg leading-none">{weather.condition}</div>
+    <div className="flex items-center gap-2 bg-white/50 backdrop-blur-sm px-3 py-1 rounded-xl border border-orange-100/50 shadow-sm transition-all hover:shadow-md h-9 min-w-max">
+      <div className="text-sm font-medium leading-none whitespace-nowrap">{weather.condition}</div>
       <div className="flex flex-col justify-center leading-tight">
         <div className="flex items-center gap-2">
           <span className="text-xs font-bold text-gray-800">{weather.temp}°C</span>
