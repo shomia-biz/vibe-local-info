@@ -27,21 +27,34 @@ export function generateStaticParams() {
   return [...eventParams, ...benefitParams, ...nationalEventParams, ...seoulEventParams];
 }
 
+interface ItemData {
+  id: number | string;
+  name: string;
+  category: string;
+  startDate: string;
+  endDate: string;
+  location: string;
+  summary: string;
+  link: string;
+  target?: string;
+  blogContent?: string;
+}
+
 // 상세 페이지 화면 그리기
 export default async function DetailPage({ params }: { params: Promise<{ type: string; id: string }> }) {
   // Next.js 최신 버전에서는 params를 가져올 때 await를 사용해야 합니다.
   const { type, id } = await params;
 
   // URL에 따라 행사인지 혜택인지 확인하고 데이터를 가져옵니다.
-  let itemData;
+  let itemData: ItemData | undefined;
   if (type === "events") {
-    itemData = localData.events.find((e) => e.id.toString() === id);
+    itemData = localData.events.find((e) => e.id.toString() === id) as ItemData | undefined;
   } else if (type === "benefits") {
-    itemData = localData.benefits.find((b) => b.id.toString() === id);
+    itemData = localData.benefits.find((b) => b.id.toString() === id) as ItemData | undefined;
   } else if (type === "nationalEvents") {
-    itemData = localData.nationalEvents?.find((e) => e.id.toString() === id);
+    itemData = localData.nationalEvents?.find((e) => e.id.toString() === id) as ItemData | undefined;
   } else if (type === "seoulEvents") {
-    itemData = localData.seoulEvents?.find((e) => e.id.toString() === id);
+    itemData = localData.seoulEvents?.find((e) => e.id.toString() === id) as ItemData | undefined;
   }
 
   // 만약 주소가 잘못되어서 데이터가 없다면 "페이지를 찾을 수 없습니다(404)"를 보여줍니다.
