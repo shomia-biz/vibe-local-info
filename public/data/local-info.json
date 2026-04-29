@@ -83,6 +83,17 @@
   ],
   "benefits": [
     {
+      "id": 1777391602448,
+      "name": "옵서버 승선경비 지원",
+      "category": "혜택",
+      "startDate": "2023-10-27",
+      "endDate": "상시",
+      "location": "한국수산자원공단",
+      "target": "국제옵서버를 승선시킨 원양선사",
+      "summary": "국제옵서버를 승선시킨 원양선사에 승선경비 및 활동 등을 지원",
+      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/119200000008"
+    },
+    {
       "id": 9,
       "name": "해양사고 국선 심판변론인 선정 지원",
       "category": "혜택",
