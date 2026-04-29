@@ -4,6 +4,7 @@ import Link from "next/link";
 import Script from "next/script";
 import "./globals.css";
 import ChatBot from "@/components/ChatBot";
+import WeatherWidget from "@/components/WeatherWidget";
 
 const ADSENSE_ID = process.env.NEXT_PUBLIC_ADSENSE_ID;
 
@@ -68,10 +69,16 @@ export default function RootLayout({
         <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-orange-100 shadow-sm">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
-              <Link href="/" className="font-bold text-xl text-orange-600 hover:text-orange-700 transition-colors">
+              <Link href="/" className="font-bold text-xl text-orange-600 hover:text-orange-700 transition-colors shrink-0">
                 동네정보🍯
               </Link>
-              <div className="flex gap-6">
+
+              {/* 날씨 위젯 - 중앙 배치 (모바일에서는 숨기거나 조절 가능) */}
+              <div className="hidden sm:block flex-1 max-w-[150px] mx-4">
+                <WeatherWidget />
+              </div>
+
+              <div className="flex gap-4 sm:gap-6 items-center">
                 <Link href="/" className="font-medium text-gray-600 hover:text-orange-600 transition-colors">
                   홈
                 </Link>
