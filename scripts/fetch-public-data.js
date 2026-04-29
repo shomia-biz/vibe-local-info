@@ -31,11 +31,18 @@ async function fetchData() {
 
     // 필터링 키워드
     const keywords = ['송파', '서울', '소상공인', '육아', '아동', '사업자', '다자녀', '청소년', '학생', '청년'];
+    
+    // 제외 키워드 (송파구에 맞지 않는 정보 차단)
+    const excludeKeywords = ['어업', '해운', '선박', '항만', '선원', '수산'];
 
-    // 필터링 로직: 키워드가 하나라도 포함된 항목을 찾습니다.
+    // 필터링 로직: 포함 키워드가 하나라도 있고, 제외 키워드는 하나도 없는 항목을 찾습니다.
     let filteredItems = rawItems.filter(item => {
       const targetText = (item.서비스명 || '') + (item.서비스목적요약 || '') + (item.지원대상 || '') + (item.소관기관명 || '');
-      return keywords.some(keyword => targetText.includes(keyword));
+      
+      const hasKeyword = keywords.some(keyword => targetText.includes(keyword));
+      const hasExcludeKeyword = excludeKeywords.some(exclude => targetText.includes(exclude));
+      
+      return hasKeyword && !hasExcludeKeyword;
     });
 
     if (filteredItems.length === 0) {
