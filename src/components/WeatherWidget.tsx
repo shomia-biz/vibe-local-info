@@ -9,7 +9,7 @@ interface WeatherData {
   dustValue: number;
 }
 
-export default function WeatherWidget() {
+export default function WeatherWidget({ isDark = false }: { isDark?: boolean }) {
   const [weather, setWeather] = useState<WeatherData | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -21,7 +21,7 @@ export default function WeatherWidget() {
         const weatherData = await weatherRes.json();
         const current = weatherData.current_weather;
 
-        // 날씨 코드 변환 (간단히)
+        // 날씨 코드 변환
         const getCondition = (code: number) => {
           if (code === 0) return '맑음 ☀️';
           if (code <= 3) return '구름 ☁️';
@@ -51,18 +51,18 @@ export default function WeatherWidget() {
     fetchWeather();
   }, []);
 
-  if (loading) return <div className="animate-pulse bg-orange-50 w-32 h-10 rounded-full"></div>;
+  if (loading) return <div className={`animate-pulse ${isDark ? 'bg-white/10' : 'bg-orange-50'} w-24 h-8 rounded-xl`}></div>;
   if (!weather) return null;
 
   return (
-    <div className="flex items-center gap-2 bg-white/50 backdrop-blur-sm px-3 py-1 rounded-xl border border-orange-100/50 shadow-sm transition-all hover:shadow-md h-9 min-w-max">
-      <div className="text-sm font-bold leading-none whitespace-nowrap text-gray-800">{weather.condition}</div>
+    <div className={`flex items-center gap-2 px-3 py-1 rounded-xl transition-all h-9 min-w-max ${isDark ? '' : 'bg-white/50 backdrop-blur-sm border border-orange-100/50 shadow-sm hover:shadow-md'}`}>
+      <div className="text-lg leading-none">{weather.condition}</div>
       <div className="flex flex-col justify-center leading-tight">
         <div className="flex items-center gap-2">
-          <span className="text-xs font-bold text-gray-800">{weather.temp}°C</span>
-          <div className="flex items-center gap-1 border-l border-gray-200 pl-2">
-            <span className="text-[9px] text-gray-500 whitespace-nowrap">미세먼지</span>
-            <span className={`text-[9px] font-bold whitespace-nowrap ${weather.dustValue > 75 ? 'text-red-500' : 'text-green-600'}`}>
+          <span className={`text-xs font-bold ${isDark ? 'text-white' : 'text-gray-800'}`}>{weather.temp}°C</span>
+          <div className={`flex items-center gap-1 border-l pl-2 ${isDark ? 'border-white/20' : 'border-gray-200'}`}>
+            <span className={`text-[9px] whitespace-nowrap ${isDark ? 'text-white/60' : 'text-gray-500'}`}>미세먼지</span>
+            <span className={`text-[9px] font-bold whitespace-nowrap ${weather.dustValue > 75 ? 'text-red-400' : isDark ? 'text-green-400' : 'text-green-600'}`}>
               {weather.dust}
             </span>
           </div>

@@ -65,33 +65,36 @@ export default function RootLayout({
             })
           }}
         />
-        {/* 상단 전역 내비게이션 바 */}
-        <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-orange-100 shadow-sm">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between h-16">
-              <Link href="/" className="font-bold text-xl text-orange-600 hover:text-orange-700 transition-colors shrink-0">
+        {/* 상단 전역 내비게이션 바 (아이놀자 스타일 플로팅 바) */}
+        <div className="fixed top-6 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 pointer-events-none">
+          <nav className="max-w-5xl mx-auto bg-[#0a0a0a] rounded-[16px] shadow-2xl border border-white/5 pointer-events-auto overflow-hidden">
+            <div className="flex items-center justify-between h-[60px] px-4 sm:px-7">
+              <Link href="/" className="font-[800] text-[20px] sm:text-[22px] text-white hover:opacity-90 transition-opacity shrink-0 tracking-tight">
                 동네정보🍯
               </Link>
 
-              {/* 날씨 위젯 - 중앙 배치 (모바일에서는 숨기거나 조절 가능) */}
-              <div className="hidden sm:block flex-1 max-w-[150px] mx-4">
-                <WeatherWidget />
+              {/* 날씨 위젯 - 중앙 배치 */}
+              <div className="hidden md:block flex-1 max-w-[160px] mx-4">
+                <WeatherWidget isDark={true} />
               </div>
 
-              <div className="flex gap-4 sm:gap-6 items-center">
-                <Link href="/" className="font-medium text-gray-600 hover:text-orange-600 transition-colors">
+              <div className="flex gap-4 sm:gap-[32px] items-center">
+                <Link href="/" className="text-[13px] sm:text-[14px] font-[500] text-white/80 hover:text-white hover:-translate-y-[1px] transition-all tracking-[-0.14px]">
                   홈
                 </Link>
-                <Link href="/blog" className="font-medium text-gray-600 hover:text-orange-600 transition-colors">
+                <Link href="/blog" className="text-[13px] sm:text-[14px] font-[500] text-white/80 hover:text-white hover:-translate-y-[1px] transition-all tracking-[-0.14px]">
                   AI 블로그
                 </Link>
-                <Link href="/about" className="font-medium text-gray-600 hover:text-orange-600 transition-colors">
+                <Link href="/about" className="text-[13px] sm:text-[14px] font-[500] text-white/80 hover:text-white hover:-translate-y-[1px] transition-all tracking-[-0.14px]">
                   소개
                 </Link>
               </div>
             </div>
-          </div>
-        </nav>
+          </nav>
+        </div>
+        
+        {/* 상단 여백 확보 (내비게이션 바가 떠 있으므로 상단 패딩 추가) */}
+        <div className="pt-24"></div>
         
         {/* 메인 콘텐츠 영역 */}
         <div className="flex-1">
