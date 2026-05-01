@@ -84,6 +84,18 @@
   ],
   "benefits": [
     {
+      "id": 1777391602448,
+      "name": "원산지검증 대응 지원",
+      "category": "혜택",
+      "startDate": "2025-02-24",
+      "endDate": "상시",
+      "location": "관세청",
+      "target": "중소‧중견기업, 소상공인",
+      "summary": "FTA 원산지검증에 대비하여 중소·중견기업 및 소상공인에게 원산지관리 컨설팅 제공 (최대 200만원 지원)",
+      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/122000000003",
+      "updatedAt": "2026-04-29"
+    },
+    {
       "id": 7,
       "name": "주택금융공사 월세자금보증",
       "category": "혜택",
