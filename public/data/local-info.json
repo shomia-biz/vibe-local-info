@@ -1,6 +1,18 @@
 {
   "events": [
     {
+      "id": 1778108006702,
+      "name": "[서울책보고] 첫눈토크#5 [나를 넓히는 오독의 순간들]",
+      "category": "행사",
+      "startDate": "2026-05-21",
+      "endDate": "2026-05-21",
+      "location": "서울책보고 라운지",
+      "target": "시민 누구나",
+      "summary": "[서울책보고] 첫눈토크#5 [나를 넓히는 오독의 순간들] 행사가 서울책보고 라운지에서 열립니다.",
+      "link": "https://www.seoulbookbogo.kr/front/index.php?g_page=program&m_page=program01&act=lecture_view&lgCode=1&leCode=32&cate=&siteCode=TOL&allLec=&bstart=&dateType=&slDateS=&slDateE=&sValue=&allGrp=Y",
+      "updatedAt": "2026-05-06"
+    },
+    {
       "id": 1777391602447,
       "name": "[서울백제어린이박물관] 초등 2-3학년 학급 대상 [어린이백제연구소2] 옛날 도구, 오늘날 도구 (도구의변천)",
       "category": "행사",
