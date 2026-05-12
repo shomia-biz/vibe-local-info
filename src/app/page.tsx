@@ -80,12 +80,14 @@ export default function Home() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 relative">
         
         {/* 1. 상단 헤더 */}
-        <header className="text-center pt-16 pb-10 border-b-2 border-orange-100/50">
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-orange-600 mb-4 tracking-tight drop-shadow-sm">
-            서울 송파구 생활 정보 🏡
+        <header className="text-center pt-16 pb-10 border-b-2 border-gray-100/50">
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-800 mb-4 tracking-tight drop-shadow-sm">
+            <span className="flash-text">수도권</span> 나들이부터 <span className="flash-text">지원금</span> 혜택까지<br/>한눈에 <span className="flash-text">모아팁스</span>🏡
           </h1>
-          <p className="text-lg sm:text-xl text-orange-800/80 font-medium">
-            우리 동네의 따뜻한 소식과 알찬 혜택을 한눈에 모아보세요
+          <p className="text-lg sm:text-xl text-gray-800/80 font-medium break-keep">
+            <strong className="text-gray-900 flash-text">모아팁스(Moatips)</strong>는 서울, 경기, 인천 지역의 놓치기 아쉬운 정보를 엄선하여 전해드립니다.
+            <br />
+            이번 주말 어디로 떠날지 고민되는 나들이 장소부터, 우리 가족이 꼭 챙겨야 할 지자체별 <span className="flash-text">지원금</span>과 생활 혜택까지—<span className="flash-text">수도권</span>의 모든 실속 정보를 한곳에서 편리하게 만나보세요.
           </p>
         </header>
         

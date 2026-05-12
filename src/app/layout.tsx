@@ -19,13 +19,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "송파구 생활 정보 | 행사·혜택·지원금 안내",
-  description: "송파구 주민을 위한 지역 행사, 축제, 지원금, 혜택 정보를 매일 업데이트합니다.",
+  title: "수도권 모아팁스 | 지원금·행사·혜택 안내",
+  description: "서울, 경기, 인천 주민을 위한 지역 행사, 축제, 지원금, 혜택 정보를 매일 업데이트합니다.",
   openGraph: {
-    title: "송파구 생활 정보 | 행사·혜택·지원금 안내",
-    description: "송파구 주민을 위한 지역 행사, 축제, 지원금, 혜택 정보를 매일 업데이트합니다.",
+    title: "수도권 모아팁스 | 지원금·행사·혜택 안내",
+    description: "서울, 경기, 인천 주민을 위한 지역 행사, 축제, 지원금, 혜택 정보를 매일 업데이트합니다.",
     url: "https://vibe-local-info.pages.dev",
-    siteName: "송파구 생활 정보",
+    siteName: "수도권 모아팁스",
     locale: "ko_KR",
     type: "website",
   },
@@ -59,9 +59,9 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              "name": "송파구 생활 정보",
+              "name": "수도권 모아팁스",
               "url": "https://vibe-local-info.pages.dev",
-              "description": "송파구 주민을 위한 지역 행사, 축제, 지원금, 혜택 정보"
+              "description": "수도권 주민을 위한 지역 행사, 축제, 지원금, 혜택 정보"
             })
           }}
         />
@@ -70,7 +70,7 @@ export default function RootLayout({
           <nav className="max-w-5xl mx-auto bg-[#0a0a0a] rounded-[16px] shadow-2xl border border-white/5 pointer-events-auto overflow-hidden">
             <div className="flex items-center justify-between h-[60px] px-4 sm:px-7">
               <Link href="/" className="font-[800] text-[20px] sm:text-[22px] text-white hover:opacity-90 transition-opacity shrink-0 tracking-tight">
-                동네정보🍯
+                모아팁스🍯
               </Link>
 
               {/* 날씨 위젯 - 중앙 배치 */}
