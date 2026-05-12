@@ -78,6 +78,12 @@ async function fetchData() {
     });
 
     const geminiResult = await geminiResponse.json();
+    
+    if (!geminiResult.candidates || !geminiResult.candidates[0]) {
+      console.error('❌ Gemini API 응답 오류:', JSON.stringify(geminiResult));
+      return;
+    }
+
     let aiText = geminiResult.candidates[0].content.parts[0].text;
     
     // JSON 부분만 추출 (마크다운 제거)
