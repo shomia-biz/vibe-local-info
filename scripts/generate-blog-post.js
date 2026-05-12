@@ -81,8 +81,9 @@ tags: [태그1, 태그2, 태그3]
     });
 
     const result = await response.json();
+    
     if (!result.candidates || !result.candidates[0]) {
-        console.error('Gemini API 응답 오류:', JSON.stringify(result));
+        console.error('❌ Gemini API 응답 오류:', JSON.stringify(result));
         return;
     }
     
