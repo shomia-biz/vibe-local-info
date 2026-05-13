@@ -1,6 +1,18 @@
 {
   "events": [
     {
+      "id": 1778713506166,
+      "name": "[서울백제어린이박물관] 유단체 대상 [서울역사생태탐험대2] (여름)",
+      "category": "행사",
+      "startDate": "2026-06-11",
+      "endDate": "2026-07-30",
+      "location": "서울백제어린이박물관 교육실, 전시실 등",
+      "target": "6~7세 유아 단체",
+      "summary": "[서울백제어린이박물관] 유단체 대상 [서울역사생태탐험대2] (여름) 행사가 서울백제어린이박물관 교육실, 전시실 등에서 열립니다.",
+      "link": "https://baekjemuseum.seoul.go.kr/module/index.jsp?boardid=a&code=ED&mmode=content&mpid=SBM0402000000&pid=23295&strsearch=&d_s_que=&cpage=1",
+      "updatedAt": "2026-05-13"
+    },
+    {
       "id": 1778108006702,
       "name": "[서울책보고] 첫눈토크#5 [나를 넓히는 오독의 순간들]",
       "category": "행사",
