@@ -4,7 +4,6 @@ import Link from "next/link";
 import Script from "next/script";
 import "./globals.css";
 import ChatBot from "@/components/ChatBot";
-import WeatherWidget from "@/components/WeatherWidget";
 
 const ADSENSE_ID = process.env.NEXT_PUBLIC_ADSENSE_ID;
 
@@ -42,6 +41,12 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
+        <link
+          rel="stylesheet"
+          as="style"
+          crossOrigin=""
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css"
+        />
         {ADSENSE_ID && ADSENSE_ID !== "나중에_입력" && (
           <Script
             async
@@ -51,7 +56,7 @@ export default function RootLayout({
           />
         )}
       </head>
-      <body className="min-h-full flex flex-col bg-[#FFFBF7]">
+      <body className="min-h-full flex flex-col bg-[#F8FAFC]">
         {/* 구조화 데이터: WebSite */}
         <script
           type="application/ld+json"
@@ -65,39 +70,29 @@ export default function RootLayout({
             })
           }}
         />
-        {/* 상단 전역 내비게이션 바 (아이놀자 스타일 플로팅 바) */}
-        <div className="fixed top-6 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 pointer-events-none">
-          <nav className="max-w-5xl mx-auto bg-[#0a0a0a] rounded-[16px] shadow-2xl border border-white/5 pointer-events-auto overflow-hidden">
-            <div className="flex items-center justify-between h-[60px] px-4 sm:px-7">
-              <Link href="/" className="font-[800] text-[20px] sm:text-[22px] text-white hover:opacity-90 transition-opacity shrink-0 tracking-tight">
-                모아팁스🍯
+        {/* 상단 전역 내비게이션 바 (화이트 스티키 바) */}
+        <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+          <nav className="max-w-6xl mx-auto h-[64px] px-4 sm:px-6 flex items-center justify-between">
+            <Link href="/" className="font-extrabold text-xl sm:text-2xl text-slate-900 hover:opacity-80 transition-opacity tracking-tight flex items-center gap-1">
+              모아팁스🍯
+            </Link>
+
+            <div className="flex gap-6 sm:gap-10 items-center">
+              <Link href="/" className="text-sm sm:text-[15px] font-semibold text-slate-600 hover:text-cyan-600 transition-colors">
+                홈
               </Link>
-
-              {/* 날씨 위젯 - 중앙 배치 */}
-              <div className="hidden md:block flex-1 max-w-[160px] mx-4">
-                <WeatherWidget isDark={true} />
-              </div>
-
-              <div className="flex gap-4 sm:gap-[32px] items-center">
-                <Link href="/" className="text-[13px] sm:text-[14px] font-[500] text-white/80 hover:text-white hover:-translate-y-[1px] transition-all tracking-[-0.14px]">
-                  홈
-                </Link>
-                <Link href="/blog" className="text-[13px] sm:text-[14px] font-[500] text-white/80 hover:text-white hover:-translate-y-[1px] transition-all tracking-[-0.14px]">
-                  AI 블로그
-                </Link>
-                <Link href="/about" className="text-[13px] sm:text-[14px] font-[500] text-white/80 hover:text-white hover:-translate-y-[1px] transition-all tracking-[-0.14px]">
-                  소개
-                </Link>
-              </div>
+              <Link href="/blog" className="text-sm sm:text-[15px] font-semibold text-slate-600 hover:text-cyan-600 transition-colors">
+                AI 블로그
+              </Link>
+              <Link href="/about" className="text-sm sm:text-[15px] font-semibold text-slate-600 hover:text-cyan-600 transition-colors">
+                소개
+              </Link>
             </div>
           </nav>
-        </div>
-        
-        {/* 상단 여백 확보 (내비게이션 바가 떠 있으므로 상단 패딩 추가) */}
-        <div className="pt-24"></div>
+        </header>
         
         {/* 메인 콘텐츠 영역 */}
-        <div className="flex-1">
+        <div className="flex-1 pt-[64px]">
           {children}
         </div>
         
