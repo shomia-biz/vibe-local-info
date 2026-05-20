@@ -1,6 +1,18 @@
 {
   "events": [
     {
+      "id": 1779318767896,
+      "name": "[서울백제어린이박물관] 2026년 한성백제박물관 어린이 문화행사 [어린이 박물관 축제 한마당]",
+      "category": "행사",
+      "startDate": "2026-06-06",
+      "endDate": "2026-06-06",
+      "location": "서울백제어린이박물관",
+      "target": "어린이를 동반한 가족",
+      "summary": "[서울백제어린이박물관] 2026년 한성백제박물관 어린이 문화행사 [어린이 박물관 축제 한마당] 행사가 서울백제어린이박물관에서 열립니다.",
+      "link": "https://baekjemuseum.seoul.go.kr/dreamvillage/board/notice/index.jsp?boardid=SDM0303000000&mmode=content&mpid=SDM0303000000&skin=notice&pid=23301&cpage=1",
+      "updatedAt": "2026-05-20"
+    },
+    {
       "id": 1779231708795,
       "name": "[송파 청년아티스트센터] 예술가와 함께하는 풍납 탐구 생활 6월 프로그램",
       "category": "행사",
