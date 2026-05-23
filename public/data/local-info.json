@@ -1,6 +1,45 @@
 {
   "events": [
     {
+      "name": "오리지널 드로잉쇼!",
+      "category": "행사",
+      "region": "인천",
+      "startDate": "2026-06-13",
+      "endDate": "2026-06-13",
+      "location": "인천수봉문화회관 소극장",
+      "target": "누구나",
+      "summary": "말이 아닌 그림으로 전하는 이야기, 오리지널 드로잉쇼 공연입니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13626",
+      "id": 1778713506206,
+      "updatedAt": "2026-05-23"
+    },
+    {
+      "name": "2026 찾아가는 문화공연 <요기조기 데이>",
+      "category": "행사",
+      "region": "인천",
+      "startDate": "2026-05-23",
+      "endDate": "2026-05-23",
+      "location": "인천아트플랫폼 중앙광장",
+      "target": "누구나",
+      "summary": "디아스포라영화제와 함께하며 밴드, 재즈, 팝 등 다양한 장르의 무료 음악 공연을 즐길 수 있는 축제",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13627",
+      "id": 1778713506205,
+      "updatedAt": "2026-05-23"
+    },
+    {
+      "name": "서구가요무대 <남진 콘서트>",
+      "category": "행사",
+      "region": "인천",
+      "startDate": "2026-07-10",
+      "endDate": "2026-07-10",
+      "location": "인천서구문화회관 대공연장",
+      "target": "누구나",
+      "summary": "인천서구문화회관 대공연장에서 개최되는 서구가요무대 <남진 콘서트> 공연으로, 트로트의 전설 남진의 무대를 만나보실 수 있습니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13636",
+      "id": 1778713506201,
+      "updatedAt": "2026-05-23"
+    },
+    {
       "name": "2026 까망돌어울마당 아트홀 상반기 정기 기획공연 '까망돌 칸타빌레' 6회차 <우리 국악 이야기>",
       "category": "행사",
       "region": "서울",
@@ -564,6 +603,33 @@
   ],
   "cultureEvents": [
     {
+      "name": "2026년 6월 재직자 대상 무료 디자인교육 안내",
+      "category": "문화",
+      "region": "인천",
+      "startDate": "2026-06-09",
+      "endDate": "2026-06-30",
+      "location": "인천종합비즈니스센터 2층 디자인교육센터",
+      "target": "협약기업 재직자",
+      "summary": "인천디자인교육센터에서 재직자를 대상으로 진행하는 전액 무료 맞춤형 직무 교육입니다. AI 활용 영상 편집, 마케팅 콘텐츠 제작, AI 바이브코딩, AI 제품 비주얼 연출컷 제작 등 실무 중심의 교육 과정을 제공합니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13633",
+      "imageUrl": "https://ifac.or.kr/resource/www/images/layout/og_images.png",
+      "id": 1778713506204,
+      "updatedAt": "2026-05-23"
+    },
+    {
+      "name": "2026 도시산보클럽 <입과 발, 손으로 동네 채집해보기>",
+      "category": "문화",
+      "region": "인천",
+      "startDate": "2026-05-30",
+      "endDate": "2026-05-30",
+      "location": "패치워크",
+      "target": "누구나",
+      "summary": "만화가·미술가 전지 작가와 함께 입, 발, 손 등 다양한 감각을 활용하여 배다리 동네를 관찰하고 기록해보는 특별한 동네 채집 워크숍 프로그램입니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13637",
+      "id": 1778713506200,
+      "updatedAt": "2026-05-23"
+    },
+    {
       "name": "고양문화재단 2026 2학기 아람문예아카데미",
       "category": "문화",
       "region": "경기",
@@ -609,9 +675,64 @@
       "updatedAt": "2026-05-21"
     }
   ],
-  "incheonCultureEvents": [],
+  "incheonCultureEvents": [
+    {
+      "name": "2026년 6월 재직자 대상 무료 디자인교육 안내",
+      "category": "문화",
+      "region": "인천",
+      "startDate": "2026-06-09",
+      "endDate": "2026-06-30",
+      "location": "인천종합비즈니스센터 2층 디자인교육센터",
+      "target": "협약기업 재직자",
+      "summary": "인천디자인교육센터에서 재직자를 대상으로 진행하는 전액 무료 맞춤형 직무 교육입니다. AI 활용 영상 편집, 마케팅 콘텐츠 제작, AI 바이브코딩, AI 제품 비주얼 연출컷 제작 등 실무 중심의 교육 과정을 제공합니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13633",
+      "imageUrl": "https://ifac.or.kr/resource/www/images/layout/og_images.png",
+      "id": 1778713506204,
+      "updatedAt": "2026-05-23"
+    },
+    {
+      "name": "2026 도시산보클럽 <입과 발, 손으로 동네 채집해보기>",
+      "category": "문화",
+      "region": "인천",
+      "startDate": "2026-05-30",
+      "endDate": "2026-05-30",
+      "location": "패치워크",
+      "target": "누구나",
+      "summary": "만화가·미술가 전지 작가와 함께 입, 발, 손 등 다양한 감각을 활용하여 배다리 동네를 관찰하고 기록해보는 특별한 동네 채집 워크숍 프로그램입니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13637",
+      "id": 1778713506200,
+      "updatedAt": "2026-05-23"
+    }
+  ],
   "nationalCultureEvents": [],
   "exhibitionEvents": [
+    {
+      "name": "엄마들의 화려한 외출",
+      "category": "전시",
+      "region": "인천",
+      "startDate": "2026-05-28",
+      "endDate": "2026-06-10",
+      "location": "인천광역시교육청평생학습관 갤러리나무",
+      "target": "엄마, 아내 등 일반 시민",
+      "summary": "엄마, 아내, 딸 등으로 살아온 자신의 모습을 되돌아보며 잊고 지냈던 자아를 발견하고 자신감을 회복하고자 기획된 전시로, 전통 민화를 현대적으로 재해석한 50여 점의 작품을 선보입니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13634",
+      "id": 1778713506203,
+      "updatedAt": "2026-05-23"
+    },
+    {
+      "name": "인천을 걷다",
+      "category": "전시",
+      "region": "인천",
+      "startDate": "2026-05-28",
+      "endDate": "2026-06-10",
+      "location": "인천광역시교육청평생학습관 갤러리다솜",
+      "target": "누구나",
+      "summary": "인천 전역의 일상적인 골목길, 바닷가, 오래된 거리 등을 주제로 한 사진 전시회로, 18명의 작가가 참여하여 36점의 작품을 선보입니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13635",
+      "imageUrl": "https://ifac.or.kr/resource/www/images/layout/og_images.png",
+      "id": 1778713506202,
+      "updatedAt": "2026-05-23"
+    },
     {
       "name": "한국국제가구 및 인테리어산업대전 (코펀)",
       "category": "전시",
@@ -781,7 +902,35 @@
       "updatedAt": "2026-05-20"
     }
   ],
-  "incheonExhibitionEvents": [],
+  "incheonExhibitionEvents": [
+    {
+      "name": "엄마들의 화려한 외출",
+      "category": "전시",
+      "region": "인천",
+      "startDate": "2026-05-28",
+      "endDate": "2026-06-10",
+      "location": "인천광역시교육청평생학습관 갤러리나무",
+      "target": "엄마, 아내 등 일반 시민",
+      "summary": "엄마, 아내, 딸 등으로 살아온 자신의 모습을 되돌아보며 잊고 지냈던 자아를 발견하고 자신감을 회복하고자 기획된 전시로, 전통 민화를 현대적으로 재해석한 50여 점의 작품을 선보입니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13634",
+      "id": 1778713506203,
+      "updatedAt": "2026-05-23"
+    },
+    {
+      "name": "인천을 걷다",
+      "category": "전시",
+      "region": "인천",
+      "startDate": "2026-05-28",
+      "endDate": "2026-06-10",
+      "location": "인천광역시교육청평생학습관 갤러리다솜",
+      "target": "누구나",
+      "summary": "인천 전역의 일상적인 골목길, 바닷가, 오래된 거리 등을 주제로 한 사진 전시회로, 18명의 작가가 참여하여 36점의 작품을 선보입니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13635",
+      "imageUrl": "https://ifac.or.kr/resource/www/images/layout/og_images.png",
+      "id": 1778713506202,
+      "updatedAt": "2026-05-23"
+    }
+  ],
   "nationalExhibitionEvents": [],
   "seoulEvents": [
     {
@@ -1029,7 +1178,47 @@
       "updatedAt": "2026-05-20"
     }
   ],
-  "incheonEvents": [],
+  "incheonEvents": [
+    {
+      "name": "오리지널 드로잉쇼!",
+      "category": "행사",
+      "region": "인천",
+      "startDate": "2026-06-13",
+      "endDate": "2026-06-13",
+      "location": "인천수봉문화회관 소극장",
+      "target": "누구나",
+      "summary": "말이 아닌 그림으로 전하는 이야기, 오리지널 드로잉쇼 공연입니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13626",
+      "id": 1778713506206,
+      "updatedAt": "2026-05-23"
+    },
+    {
+      "name": "2026 찾아가는 문화공연 <요기조기 데이>",
+      "category": "행사",
+      "region": "인천",
+      "startDate": "2026-05-23",
+      "endDate": "2026-05-23",
+      "location": "인천아트플랫폼 중앙광장",
+      "target": "누구나",
+      "summary": "디아스포라영화제와 함께하며 밴드, 재즈, 팝 등 다양한 장르의 무료 음악 공연을 즐길 수 있는 축제",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13627",
+      "id": 1778713506205,
+      "updatedAt": "2026-05-23"
+    },
+    {
+      "name": "서구가요무대 <남진 콘서트>",
+      "category": "행사",
+      "region": "인천",
+      "startDate": "2026-07-10",
+      "endDate": "2026-07-10",
+      "location": "인천서구문화회관 대공연장",
+      "target": "누구나",
+      "summary": "인천서구문화회관 대공연장에서 개최되는 서구가요무대 <남진 콘서트> 공연으로, 트로트의 전설 남진의 무대를 만나보실 수 있습니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13636",
+      "id": 1778713506201,
+      "updatedAt": "2026-05-23"
+    }
+  ],
   "nationalEvents": [
     {
       "name": "`",
