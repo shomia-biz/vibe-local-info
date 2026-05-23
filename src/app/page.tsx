@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import localData from "../../public/data/local-info.json";
 import Link from "next/link";
 import AdBanner from "@/components/AdBanner";
@@ -15,6 +15,7 @@ interface BaseInfo {
   summary: string;
   link: string;
   updatedAt?: string;
+  imageUrl?: string; // 맞춤 이미지 URL
 }
 
 interface EventItem extends BaseInfo {
@@ -29,14 +30,92 @@ interface LocalData {
   events: EventItem[];
   benefits: BenefitItem[];
   seoulEvents?: EventItem[];
+  kyeonggiEvents?: EventItem[];
+  incheonEvents?: EventItem[];
   nationalEvents?: EventItem[];
+  seoulBenefits?: BenefitItem[];
+  kyeonggiBenefits?: BenefitItem[];
+  incheonBenefits?: BenefitItem[];
+  nationalBenefits?: BenefitItem[];
+
+  cultureEvents?: EventItem[];
+  seoulCultureEvents?: EventItem[];
+  kyeonggiCultureEvents?: EventItem[];
+  incheonCultureEvents?: EventItem[];
+  nationalCultureEvents?: EventItem[];
+
+  exhibitionEvents?: EventItem[];
+  seoulExhibitionEvents?: EventItem[];
+  kyeonggiExhibitionEvents?: EventItem[];
+  incheonExhibitionEvents?: EventItem[];
+  nationalExhibitionEvents?: EventItem[];
 }
 
 const data = localData as unknown as LocalData;
 
 export default function Home() {
+  const [localDataState, setLocalDataState] = useState<LocalData>(data);
   const [selectedRegion, setSelectedRegion] = useState('서울');
   const [timeTab, setTimeTab] = useState('thisWeek'); // 'thisWeek', 'past', 'upcoming'
+  const [selectedCategory, setSelectedCategory] = useState('전체');
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  // 마운트 시 sessionStorage에서 필터 상태 복원
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const savedRegion = sessionStorage.getItem('moatips_region');
+      const savedTimeTab = sessionStorage.getItem('moatips_timeTab');
+      const savedCategory = sessionStorage.getItem('moatips_category');
+      if (savedRegion) setSelectedRegion(savedRegion);
+      if (savedTimeTab) setTimeTab(savedTimeTab);
+      if (savedCategory) setSelectedCategory(savedCategory);
+      setIsLoaded(true);
+    }
+  }, []);
+
+  // 필터 상태가 바뀔 때마다 sessionStorage에 저장
+  useEffect(() => {
+    if (isLoaded && typeof window !== 'undefined') {
+      sessionStorage.setItem('moatips_region', selectedRegion);
+    }
+  }, [selectedRegion, isLoaded]);
+
+  useEffect(() => {
+    if (isLoaded && typeof window !== 'undefined') {
+      sessionStorage.setItem('moatips_timeTab', timeTab);
+    }
+  }, [timeTab, isLoaded]);
+
+  useEffect(() => {
+    if (isLoaded && typeof window !== 'undefined') {
+      sessionStorage.setItem('moatips_category', selectedCategory);
+    }
+  }, [selectedCategory, isLoaded]);
+
+  // 최신 데이터 가져오기 함수 (캐시 방지를 위해 쿼리 스트링 추가)
+  const fetchFreshData = () => {
+    fetch('/data/local-info.json?t=' + Date.now())
+      .then(res => {
+        if (res.ok) return res.json();
+        throw new Error('Failed to fetch latest data');
+      })
+      .then(freshData => {
+        setLocalDataState(freshData as LocalData);
+      })
+      .catch(err => console.error("Failed to load fresh local-info.json:", err));
+  };
+
+  // 1. 처음에 홈페이지가 열릴 때 한 번 데이터를 가져옴
+  useEffect(() => {
+    fetchFreshData();
+  }, []);
+
+  // 2. 혹시 모를 실시간 백엔드 쓰기 작업을 위해 3초마다 자동으로 데이터를 갱신함
+  useEffect(() => {
+    const interval = setInterval(fetchFreshData, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
 
   // 오전 1시 기준 오늘 날짜 계산
   const getMoatipsToday = () => {
@@ -68,6 +147,7 @@ export default function Home() {
 
   // 행사 이름/장소에 따라 지역을 판별하는 함수
   const getRegion = (event: EventItem) => {
+    if ((event as any).region) return (event as any).region;
     const text = (event.name + event.location + (event.summary || '')).toLowerCase();
     if (text.includes('서울') || text.includes('송파') || text.includes('잠실') || text.includes('강북') || text.includes('관악') || text.includes('한성')) return '서울';
     if (text.includes('경기') || text.includes('군포') || text.includes('양평') || text.includes('고양') || text.includes('이천') || text.includes('화순') || text.includes('태안')) return '경기';
@@ -75,15 +155,71 @@ export default function Home() {
     return '서울'; // 기본값
   };
 
-  // 모든 행사 데이터 통합
-  const allEvents = [
-    ...(data.events || []),
-    ...(data.seoulEvents || []),
-    ...(data.nationalEvents || [])
-  ].map(event => ({
-    ...event,
-    region: getRegion(event as EventItem)
-  }));
+  // 모든 행사 데이터 통합 및 중복 제거
+  const uniqueEventsMap = new Map<string, any>();
+  
+  [
+    ...(localDataState.events || []).map(e => ({ ...e, type: "events" })),
+    ...(localDataState.seoulEvents || []).map(e => ({ ...e, type: "seoulEvents" })),
+    ...(localDataState.kyeonggiEvents || []).map(e => ({ ...e, type: "kyeonggiEvents" })),
+    ...(localDataState.incheonEvents || []).map(e => ({ ...e, type: "incheonEvents" })),
+    ...(localDataState.nationalEvents || []).map(e => ({ ...e, type: "nationalEvents" })),
+    
+    ...(localDataState.cultureEvents || []).map(e => ({ ...e, type: "cultureEvents" })),
+    ...(localDataState.seoulCultureEvents || []).map(e => ({ ...e, type: "seoulCultureEvents" })),
+    ...(localDataState.kyeonggiCultureEvents || []).map(e => ({ ...e, type: "kyeonggiCultureEvents" })),
+    ...(localDataState.incheonCultureEvents || []).map(e => ({ ...e, type: "incheonCultureEvents" })),
+    ...(localDataState.nationalCultureEvents || []).map(e => ({ ...e, type: "nationalCultureEvents" })),
+    
+    ...(localDataState.exhibitionEvents || []).map(e => ({ ...e, type: "exhibitionEvents" })),
+    ...(localDataState.seoulExhibitionEvents || []).map(e => ({ ...e, type: "seoulExhibitionEvents" })),
+    ...(localDataState.kyeonggiExhibitionEvents || []).map(e => ({ ...e, type: "kyeonggiExhibitionEvents" })),
+    ...(localDataState.incheonExhibitionEvents || []).map(e => ({ ...e, type: "incheonExhibitionEvents" })),
+    ...(localDataState.nationalExhibitionEvents || []).map(e => ({ ...e, type: "nationalExhibitionEvents" }))
+  ].forEach(event => {
+    const key = event.name;
+    const region = (event as any).region || getRegion(event as EventItem);
+    const eventWithRegion = { ...event, region };
+    
+    if (!uniqueEventsMap.has(key)) {
+      uniqueEventsMap.set(key, eventWithRegion);
+    } else {
+      const existing = uniqueEventsMap.get(key);
+      const isGeneric = (t: string) => t === 'events' || t === 'cultureEvents' || t === 'exhibitionEvents';
+      // 일반 대형 리스트보다는 구체적인 지역 정보를 우선하여 저장합니다.
+      if (isGeneric(existing.type) && !isGeneric(event.type)) {
+        uniqueEventsMap.set(key, eventWithRegion);
+      }
+    }
+  });
+
+  const allEvents = Array.from(uniqueEventsMap.values());
+
+  // 모든 혜택 데이터 통합 및 중복 제거
+  const uniqueBenefitsMap = new Map<string, any>();
+  
+  [
+    ...(localDataState.benefits || []).map(b => ({ ...b, type: "benefits", region: "전국" })),
+    ...(localDataState.seoulBenefits || []).map(b => ({ ...b, type: "seoulBenefits", region: "서울" })),
+    ...(localDataState.kyeonggiBenefits || []).map(b => ({ ...b, type: "kyeonggiBenefits", region: "경기" })),
+    ...(localDataState.incheonBenefits || []).map(b => ({ ...b, type: "incheonBenefits", region: "인천" })),
+    ...(localDataState.nationalBenefits || []).map(b => ({ ...b, type: "nationalBenefits", region: "전국" }))
+  ].forEach(benefit => {
+    const key = benefit.name;
+    if (!uniqueBenefitsMap.has(key)) {
+      uniqueBenefitsMap.set(key, benefit);
+    } else {
+      const existing = uniqueBenefitsMap.get(key);
+      // 일반 'benefits'보다는 지역 정보가 더 구체적인 타입을 우선하여 저장합니다.
+      if (existing.type === 'benefits' && benefit.type !== 'benefits') {
+        uniqueBenefitsMap.set(key, benefit);
+      }
+    }
+  });
+
+  const filteredBenefits = Array.from(uniqueBenefitsMap.values()).filter(benefit => {
+    return selectedRegion === '전체' || benefit.region === '전국' || benefit.region === selectedRegion;
+  });
 
   // 새로운 정보 개수 계산 (오늘~3일 이내 시작하는 행사)
   const threeDaysLater = new Date(today);
@@ -97,31 +233,38 @@ export default function Home() {
   // 필터링 로직
   const filteredEvents = allEvents.filter(event => {
     const regionMatch = selectedRegion === '전체' || event.region === selectedRegion;
+    const categoryMatch = selectedCategory === '전체' || event.category === selectedCategory;
+
+    if (!regionMatch || !categoryMatch) return false;
 
     if (timeTab === 'all') {
-      return regionMatch;
+      return true;
     }
     if (timeTab === 'past') {
-      return regionMatch && event.endDate < currentDateStr;
+      return event.endDate < currentDateStr;
     }
     if (timeTab === 'upcoming') {
-      return regionMatch && event.startDate >= nextMondayStr;
+      return event.startDate >= nextMondayStr;
     }
     // 이번 주 행사 (오늘 ~ 이번주 일요일까지 진행 중인 것)
     const isDuringThisWeek = event.startDate <= thisSundayStr && event.endDate >= currentDateStr;
-    return regionMatch && isDuringThisWeek;
+    return isDuringThisWeek;
+  }).sort((a, b) => {
+    // 날짜 순 정렬 (시작일 기준 오름차순)
+    if (a.startDate !== b.startDate) {
+      return a.startDate.localeCompare(b.startDate);
+    }
+    return 0;
   });
 
   // 행사 이름에 따라 가장 어울리는 이미지를 찾아주는 함수
-
-  // 행사 이름에 따라 가장 어울리는 이미지를 찾아주는 함수
   const getEventImage = (name: string) => {
-    if (name.includes('어린이')) return 'https://images.unsplash.com/photo-1472162072942-cd5147eb3902?auto=format&fit=crop&w=400&q=80'; // 놀이공원/아이
-    if (name.includes('장미') || name.includes('꽃') || name.includes('철쭉') || name.includes('튤립')) return 'https://images.unsplash.com/photo-1496062031456-07b8f162a322?auto=format&fit=crop&w=400&q=80'; // 꽃
-    if (name.includes('교향악단') || name.includes('음악회') || name.includes('콘서트')) return 'https://images.unsplash.com/photo-1465847733345-2feba59b6467?auto=format&fit=crop&w=400&q=80'; // 오케스트라
-    if (name.includes('책') || name.includes('도서관')) return 'https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=400&q=80'; // 도서관
-    if (name.includes('박물관') || name.includes('백제') || name.includes('고인돌') || name.includes('궁중') || name.includes('한옥')) return 'https://images.unsplash.com/photo-1548115184-bc6544d06a58?auto=format&fit=crop&w=400&q=80'; // 한국 전통/박물관
-    if (name.includes('한강') || name.includes('잠수교') || name.includes('호수')) return 'https://images.unsplash.com/photo-1538669715515-5c31d102e35a?auto=format&fit=crop&w=400&q=80'; // 한강/물가
+    if (name.includes('어린이') || name.includes('체험') || name.includes('캠프')) return 'https://images.unsplash.com/photo-1472162072942-cd5147eb3902?auto=format&fit=crop&w=400&q=80'; // 놀이공원/아이
+    if (name.includes('장미') || name.includes('꽃') || name.includes('철쭉') || name.includes('튤립') || name.includes('코스모스') || name.includes('유채꽃')) return 'https://images.unsplash.com/photo-1496062031456-07b8f162a322?auto=format&fit=crop&w=400&q=80'; // 꽃
+    if (name.includes('교향악단') || name.includes('음악회') || name.includes('콘서트') || name.includes('오페라') || name.includes('음악')) return 'https://images.unsplash.com/photo-1465847733345-2feba59b6467?auto=format&fit=crop&w=400&q=80'; // 오케스트라
+    if (name.includes('책') || name.includes('도서관') || name.includes('인문학') || name.includes('아카데미') || name.includes('강좌') || name.includes('교육')) return 'https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=400&q=80'; // 도서관/교육
+    if (name.includes('박물관') || name.includes('미술관') || name.includes('전시') || name.includes('특별전') || name.includes('갤러리')) return 'https://images.unsplash.com/photo-1548115184-bc6544d06a58?auto=format&fit=crop&w=400&q=80'; // 한국 전통/박물관/전시
+    if (name.includes('한강') || name.includes('잠수교') || name.includes('호수')) return 'https://images.unsplash.com/photo-1449034446853-66c86144b0ad?auto=format&fit=crop&w=400&q=80'; // 한강/물가
     if (name.includes('나비')) return 'https://images.unsplash.com/photo-1555037015-1498966cbd7a?auto=format&fit=crop&w=400&q=80'; // 나비
     if (name.includes('도자기')) return 'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=400&q=80'; // 도자기
     return `https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80`; // 기본 풍경
@@ -134,7 +277,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
-            ...data.events.map(event => ({
+            ...(localDataState.events || []).map(event => ({
               "@context": "https://schema.org",
               "@type": "Event",
               "name": event.name,
@@ -152,7 +295,43 @@ export default function Home() {
               },
               "description": event.summary
             })),
-            ...data.benefits.map(benefit => ({
+            ...(localDataState.cultureEvents || []).map(event => ({
+              "@context": "https://schema.org",
+              "@type": "Event",
+              "name": event.name,
+              "startDate": event.startDate,
+              "endDate": event.endDate,
+              "location": {
+                "@type": "Place",
+                "name": event.location,
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Songpa-gu",
+                  "addressRegion": "Seoul",
+                  "addressCountry": "KR"
+                }
+              },
+              "description": event.summary
+            })),
+            ...(localDataState.exhibitionEvents || []).map(event => ({
+              "@context": "https://schema.org",
+              "@type": "Event",
+              "name": event.name,
+              "startDate": event.startDate,
+              "endDate": event.endDate,
+              "location": {
+                "@type": "Place",
+                "name": event.location,
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Songpa-gu",
+                  "addressRegion": "Seoul",
+                  "addressCountry": "KR"
+                }
+              },
+              "description": event.summary
+            })),
+            ...(localDataState.benefits || []).map(benefit => ({
               "@context": "https://schema.org",
               "@type": "GovernmentService",
               "name": benefit.name,
@@ -270,67 +449,98 @@ export default function Home() {
             </div>
 
             {/* 필터 컨트롤 */}
-            <div className="flex flex-wrap items-center gap-6">
-              {/* 기간 선택 탭 */}
-              <div className="flex items-center">
-                <div className="bg-[#47A1B8] text-white px-4 py-2 rounded-l-lg font-bold text-sm min-w-[60px] text-center">
-                  기간
+            <div className="flex flex-col items-start sm:items-end gap-4 sm:flex-1 w-full sm:w-auto">
+              <div className="flex flex-col items-start gap-4">
+                {/* 분류 선택 탭 */}
+                <div className="flex items-center">
+                  <div className="bg-[#47A1B8] text-white px-4 py-2 rounded-l-lg font-bold text-sm min-w-[60px] text-center">
+                    분류
+                  </div>
+                  <div className="flex bg-white border border-[#47A1B8] rounded-r-lg overflow-hidden">
+                    {[
+                      { id: '전체', label: '전체' },
+                      { id: '행사', label: '🎈 행사' },
+                      { id: '문화', label: '🎓 문화' },
+                      { id: '전시', label: '🖼️ 전시' }
+                    ].map((cat) => (
+                      <button
+                        key={cat.id}
+                        onClick={() => { setSelectedCategory(cat.id); fetchFreshData(); }}
+                        className={`px-4 py-2 font-bold text-sm transition-all border-l first:border-l-0 border-slate-100 ${selectedCategory === cat.id
+                            ? 'bg-black text-white'
+                            : 'bg-white text-slate-400 hover:bg-slate-50'
+                          }`}
+                      >
+                        {cat.label}
+                      </button>
+                    ))}
+                  </div>
                 </div>
-                <div className="flex bg-white border border-[#47A1B8] rounded-r-lg overflow-hidden">
-                  {[
-                    { id: 'all', label: '전체' },
-                    { id: 'thisWeek', label: '이번 주' },
-                    { id: 'upcoming', label: '진행 예정' },
-                    { id: 'past', label: '지난 행사' }
-                  ].map((tab) => (
-                    <button
-                      key={tab.id}
-                      onClick={() => setTimeTab(tab.id)}
-                      className={`px-4 py-2 font-bold text-sm transition-all border-l first:border-l-0 border-slate-100 ${timeTab === tab.id
-                          ? 'bg-black text-white'
-                          : 'bg-white text-slate-400 hover:bg-slate-50'
-                        }`}
-                    >
-                      {tab.label}
-                    </button>
-                  ))}
-                </div>
-              </div>
 
-              {/* 지역 선택 탭 */}
-              <div className="flex items-center">
-                <div className="bg-[#47A1B8] text-white px-4 py-2 rounded-l-lg font-bold text-sm min-w-[60px] text-center">
-                  지역
-                </div>
-                <div className="flex bg-white border border-[#47A1B8] rounded-r-lg overflow-hidden">
-                  {['전체', '서울', '경기', '인천'].map((region) => (
-                    <button
-                      key={region}
-                      onClick={() => setSelectedRegion(region)}
-                      className={`px-5 py-2 font-bold text-sm transition-all border-l first:border-l-0 border-slate-100 ${selectedRegion === region
-                          ? 'bg-black text-white'
-                          : 'bg-white text-slate-400 hover:bg-slate-50'
-                        }`}
-                    >
-                      {region}
-                    </button>
-                  ))}
+                {/* 지역 및 기간 선택 탭 (지역 ➡️ 기간 순서) */}
+                <div className="flex flex-wrap items-center gap-4 sm:gap-6">
+                  {/* 지역 선택 탭 */}
+                  <div className="flex items-center">
+                    <div className="bg-[#47A1B8] text-white px-4 py-2 rounded-l-lg font-bold text-sm min-w-[60px] text-center">
+                      지역
+                    </div>
+                    <div className="flex bg-white border border-[#47A1B8] rounded-r-lg overflow-hidden">
+                      {['전체', '서울', '경기', '인천'].map((region) => (
+                        <button
+                          key={region}
+                          onClick={() => { setSelectedRegion(region); fetchFreshData(); }}
+                          className={`px-5 py-2 font-bold text-sm transition-all border-l first:border-l-0 border-slate-100 ${selectedRegion === region
+                              ? 'bg-black text-white'
+                              : 'bg-white text-slate-400 hover:bg-slate-50'
+                            }`}
+                        >
+                          {region}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* 기간 선택 탭 */}
+                  <div className="flex items-center">
+                    <div className="bg-[#47A1B8] text-white px-4 py-2 rounded-l-lg font-bold text-sm min-w-[60px] text-center">
+                      기간
+                    </div>
+                    <div className="flex bg-white border border-[#47A1B8] rounded-r-lg overflow-hidden">
+                      {[
+                        { id: 'all', label: '전체' },
+                        { id: 'thisWeek', label: '이번 주' },
+                        { id: 'upcoming', label: '진행 예정' },
+                        { id: 'past', label: '지난 행사' }
+                      ].map((tab) => (
+                        <button
+                          key={tab.id}
+                          onClick={() => { setTimeTab(tab.id); fetchFreshData(); }}
+                          className={`px-4 py-2 font-bold text-sm transition-all border-l first:border-l-0 border-slate-100 ${timeTab === tab.id
+                              ? 'bg-black text-white'
+                              : 'bg-white text-slate-400 hover:bg-slate-50'
+                            }`}
+                        >
+                          {tab.label}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
           <div className="grid gap-6 grid-cols-1 lg:grid-cols-2">
-            {filteredEvents.map((event) => (
+            {filteredEvents.map((event, index) => (
               <Link
-                key={`${event.id}-${event.name}`}
-                href={`/detail/events/${event.id}`}
+                key={`${event.id}-${event.name}-${index}`}
+                href={`/detail/${(event as any).type}/${event.id}`}
                 className="group bg-white rounded-2xl border border-slate-100 hover:border-cyan-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col sm:flex-row overflow-hidden h-full"
               >
                 {/* Left: Image Area */}
                 <div className="w-full sm:w-48 h-48 sm:h-auto bg-slate-100 shrink-0 overflow-hidden">
                   <img
-                    src={getEventImage(event.name)}
+                    src={event.imageUrl || getEventImage(event.name)}
                     alt={event.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -341,6 +551,9 @@ export default function Home() {
                   <div className="flex gap-2 mb-3">
                     <span className="bg-slate-100 text-slate-600 text-[10px] font-black px-2.5 py-1 rounded-md">
                       {(event as any).region}
+                    </span>
+                    <span className="bg-indigo-50 text-indigo-600 text-[10px] font-black px-2.5 py-1 rounded-md">
+                      {event.category || '행사'}
                     </span>
                     {event.endDate < currentDateStr ? (
                       <span className="bg-slate-400 text-white text-[10px] font-black px-2.5 py-1 rounded-md">
@@ -392,9 +605,9 @@ export default function Home() {
           </div>
 
           <div className="grid gap-8 sm:grid-cols-2">
-            {data.benefits.map((benefit) => (
+            {filteredBenefits.map((benefit, index) => (
               <div
-                key={benefit.id}
+                key={`${benefit.id}-${benefit.name}-${index}`}
                 className="group bg-white rounded-[32px] shadow-sm border border-slate-100 p-8 hover:shadow-2xl transition-all duration-500 relative overflow-hidden flex flex-col"
               >
                 <div className="absolute -right-6 -top-6 w-32 h-32 bg-cyan-50 rounded-full opacity-30 group-hover:scale-125 transition-transform duration-700"></div>
@@ -424,7 +637,7 @@ export default function Home() {
                 </div>
 
                 <Link
-                  href={`/detail/benefits/${benefit.id}`}
+                  href={`/detail/${(benefit as any).type}/${benefit.id}`}
                   className="w-full text-center bg-rose-500 text-white font-black py-4 rounded-2xl hover:bg-rose-600 transition-all shadow-lg shadow-rose-100 relative z-10 text-lg"
                 >
                   자세히 알아보기

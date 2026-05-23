@@ -42,8 +42,8 @@ async function fetchSeoulEvents() {
     }
 
     const rawEvents = result.culturalEventInfo.row;
-    const songpaEvents = rawEvents.filter(event => event.GUNAME === '송파구');
-    console.log(`✅ 총 ${songpaEvents.length}개의 송파구 행사를 찾았습니다.`);
+    const seoulEvents = rawEvents.filter(event => event.GUNAME === '서울시');
+    console.log(`✅ 총 ${seoulEvents.length}개의 서울시 행사를 찾았습니다.`);
 
     const dataPath = path.join(process.cwd(), 'public/data/local-info.json');
     const localData = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
@@ -73,7 +73,7 @@ async function fetchSeoulEvents() {
 
     if (addedCount > 0) {
       fs.writeFileSync(dataPath, JSON.stringify(localData, null, 2), 'utf8');
-      console.log(`🎉 ${addedCount}개의 새로운 송파구 행사가 추가되었습니다!`);
+      console.log(`🎉 ${addedCount}개의 새로운 서울 행사가 추가되었습니다!`);
     } else {
       console.log('✨ 이미 최신 상태입니다. 추가할 새로운 행사가 없습니다.');
     }

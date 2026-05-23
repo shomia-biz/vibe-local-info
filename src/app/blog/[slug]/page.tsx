@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${post.title} | 송파구 생활 정보`,
+    title: `${post.title} |서울 경기 인천 생활 정보`,
     description: post.summary,
     openGraph: {
       title: post.title,
@@ -89,8 +89,8 @@ export default async function PostPage({ params }: Props) {
               "headline": post.title,
               "datePublished": post.date,
               "description": post.summary,
-              "author": { "@type": "Organization", "name": "송파구 생활 정보" },
-              "publisher": { "@type": "Organization", "name": "송파구 생활 정보" }
+              "author": { "@type": "Organization", "name": "서울 경기 인천 생활 정보" },
+              "publisher": { "@type": "Organization", "name": "서울 경기 인천 생활 정보" }
             },
             {
               "@context": "https://schema.org",
@@ -149,7 +149,7 @@ export default async function PostPage({ params }: Props) {
             <p className="font-semibold mb-1">🤖 AI 생성 정보 안내</p>
             <p>
               이 글은 공공데이터포털(<a href="http://data.go.kr/" target="_blank" rel="nofollow" className="underline">http://data.go.kr/</a>)의 정보를 바탕으로 AI가 작성하였습니다. 
-              정확한 내용은 반드시 위 원문 링크를 통해 확인해 주시기 바랍니다.
+              <br />정확한 내용은 반드시 위 원문 링크를 통해 확인해 주시기 바랍니다.
             </p>
           </div>
         </div>

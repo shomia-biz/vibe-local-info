@@ -14,7 +14,7 @@ export default function AboutPage() {
           <section className="mb-10">
             <h2 className="text-2xl font-bold text-orange-600 mb-4">🏠 사이트 운영 목적</h2>
             <p className="text-gray-700 leading-relaxed">
-              <strong>송파구 생활 정보</strong>는 지역 주민분들이 일상에서 놓치기 쉬운 소중한 혜택들을 한눈에 확인하실 수 있도록 돕는 커뮤니티형 정보 서비스입니다. 
+              <strong>서울 경기 인천 생활 정보</strong>는 지역 주민분들이 일상에서 놓치기 쉬운 소중한 혜택들을 한눈에 확인하실 수 있도록 돕는 커뮤니티형 정보 서비스입니다. 
               복잡한 공고문 대신, 누구나 이해하기 쉬운 설명으로 우리 동네의 축제, 행사, 지원금 정보를 신속하게 전달하는 것을 목표로 합니다.
             </p>
           </section>
