@@ -2,9 +2,18 @@ import json
 import os
 import re
 from datetime import datetime
-import google.generativeai as genai
+
+try:
+    import google.generativeai as genai
+    GEMINI_AVAILABLE = True
+except ImportError:
+    GEMINI_AVAILABLE = False
 
 def generate_fortune_with_gemini():
+    if not GEMINI_AVAILABLE:
+        print("Warning: google-generativeai module is not installed. Using fallback fortune.")
+        return get_fallback_fortune()
+
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
         print("Warning: GEMINI_API_KEY is not set. Using fallback fortune.")
