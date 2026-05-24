@@ -47,12 +47,13 @@ export default function RootLayout({
           crossOrigin=""
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css"
         />
+      </head>  
+      <head>
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7299812089029185"
           crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
+        ></Script>
       </head>
       <body className="min-h-full flex flex-col bg-[#F8FAFC]" suppressHydrationWarning>
         {/* 구조화 데이터: WebSite */}
