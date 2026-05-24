@@ -47,7 +47,7 @@ export default function RootLayout({
           crossOrigin=""
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css"
         />
-      </head>  
+      </head>
       <head>
         <Script
           async
@@ -89,12 +89,12 @@ export default function RootLayout({
             </div>
           </nav>
         </header>
-        
+
         {/* 메인 콘텐츠 영역 */}
         <div className="flex-1 pt-[64px]">
           {children}
         </div>
-        
+
         {/* 채널톡 스타일 챗봇 */}
         <ChatBot />
       </body>
