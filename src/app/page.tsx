@@ -221,13 +221,13 @@ export default function Home() {
     return selectedRegion === '전체' || benefit.region === '전국' || benefit.region === selectedRegion;
   });
 
-  // 새로운 정보 개수 계산 (오늘~3일 이내 시작하는 행사)
-  const threeDaysLater = new Date(today);
-  threeDaysLater.setDate(today.getDate() + 3);
-  const threeDaysLaterStr = threeDaysLater.toISOString().split('T')[0];
+  // 새로운 정보 개수 계산 (오늘~7일 이내 시작하는 행사)
+  const sevenDaysLater = new Date(today);
+  sevenDaysLater.setDate(today.getDate() + 7);
+  const sevenDaysLaterStr = sevenDaysLater.toISOString().split('T')[0];
 
   const newInfoCount = allEvents.filter(event =>
-    event.startDate >= currentDateStr && event.startDate <= threeDaysLaterStr
+    event.startDate >= currentDateStr && event.startDate <= sevenDaysLaterStr
   ).length;
 
   // 필터링 로직

@@ -49,7 +49,7 @@
       "target": "전연령",
       "summary": "2026. 6. 24.(수) 오후 7시교과서에 나오는 우리 음악, 우리 소리 그리고 전통악기를 만나보는 신명나는 한마당! 다양한 궁중음악과 민요, 아쟁, 가야금 등 다양한 악기를 경험할 수 있는 국악 공연이 펼쳐집니다.",
       "link": "https://www.idfac.or.kr/bbs/board.php?bo_table=gallery_info&wr_id=275",
-      "imageUrl": "/imaged/1778713506196.webp",
+      "imageUrl": "/images/1778713506197.webp",
       "id": 1778713506197,
       "updatedAt": "2026-05-23"
     },
@@ -943,7 +943,7 @@
       "target": "전연령",
       "summary": "교과서에 나오는 우리 음악, 우리 소리 그리고 전통악기를 만나보는 신명나는 한마당! 다양한 궁중음악과 민요, 아쟁, 가야금 등 다양한 악기를 경험할 수 있는 국악 공연이 펼쳐집니다.",
       "link": "https://www.idfac.or.kr/bbs/board.php?bo_table=gallery_info&wr_id=275",
-      "imageUrl": "/imaged/1778713506196.webp",
+      "imageUrl": "/images/1778713506197.webp",
       "id": 1778713506197,
       "updatedAt": "2026-05-23"
     },
@@ -1000,6 +1000,31 @@
       "link": "https://baekjemuseum.seoul.go.kr/module/index.jsp?boardid=a&code=ED&mmode=content&mpid=SBM0402000000&pid=23194&strsearch=&d_s_que=&cpage=1",
       "updatedAt": "2026-04-29",
       "region": "서울"
+    },
+    {
+      "name": "피에트로 마스카니의 <카발레리아 루스티카나>",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-05-20",
+      "endDate": "2026-05-21",
+      "location": "오페라박물관",
+      "target": "",
+      "summary": "",
+      "link": "https://ggc.ggcf.kr/cultureEvents/view/6a04179d7868ff8f1fe11788",
+      "id": 1778713506170,
+      "updatedAt": "2026-05-20"
+    },
+    {
+      "id": 1777391601936,
+      "name": "[한성백제박물관] 역사를 알기 쉽게 천천히 배우고 싶은 초등학생을 위한 [신비한 유물도감]",
+      "category": "행사",
+      "startDate": "2026-05-13",
+      "endDate": "2026-06-24",
+      "location": "한성백제박물관 교육실",
+      "target": "초등학생",
+      "summary": "[한성백제박물관] 역사를 알기 쉽게 천천히 배우고 싶은 초등학생을 위한 [신비한 유물도감] 행사가 한성백제박물관 교육실에서 열립니다.",
+      "link": "https://baekjemuseum.seoul.go.kr/module/index.jsp?boardid=a&code=ED&mmode=content&mpid=SBM0402000000&pid=23260&strsearch=&d_s_que=&cpage=1",
+      "region": "전국"
     },
     {
       "id": 1777391602375,
@@ -1220,31 +1245,6 @@
     }
   ],
   "nationalEvents": [
-    {
-      "name": "`",
-      "category": "행사",
-      "region": "전국",
-      "startDate": "2026-05-20",
-      "endDate": "상시",
-      "location": "",
-      "target": "",
-      "summary": "",
-      "link": "https://ggc.ggcf.kr/cultureEvents/view/6a04179d7868ff8f1fe11788https://ggc.ggcf.kr/cultureEvents/view/6a04179d7868ff8f1fe11788",
-      "id": 1778713506170,
-      "updatedAt": "2026-05-20"
-    },
-    {
-      "id": 1777391601936,
-      "name": "[한성백제박물관] 역사를 알기 쉽게 천천히 배우고 싶은 초등학생을 위한 [신비한 유물도감]",
-      "category": "행사",
-      "startDate": "2026-05-13",
-      "endDate": "2026-06-24",
-      "location": "한성백제박물관 교육실",
-      "target": "초등학생",
-      "summary": "[한성백제박물관] 역사를 알기 쉽게 천천히 배우고 싶은 초등학생을 위한 [신비한 유물도감] 행사가 한성백제박물관 교육실에서 열립니다.",
-      "link": "https://baekjemuseum.seoul.go.kr/module/index.jsp?boardid=a&code=ED&mmode=content&mpid=SBM0402000000&pid=23260&strsearch=&d_s_que=&cpage=1",
-      "region": "전국"
-    },
     {
       "id": 2,
       "name": "올림픽공원 장미축제 (로즈아워페스타) 🌹",

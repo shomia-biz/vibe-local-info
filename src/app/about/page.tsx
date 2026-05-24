@@ -44,6 +44,13 @@ export default function AboutPage() {
               다양한 소식 보러가기
             </Link>
           </div>
+
+          <div className="mt-12 flex flex-wrap justify-center gap-6 text-sm text-gray-500">
+            <Link href="/terms" className="hover:font-bold text-blue-900">이용약관</Link>
+            <Link href="/privacy" className="hover:font-bold text-blue-900">개인정보처리방침</Link>
+            <Link href="/disclaimer" className="hover:font-bold text-blue-900">면책공고</Link>
+            <Link href="/contact" className="hover:font-bold text-blue-900">광고문의</Link>
+          </div>
         </div>
       </div>
     </main>
