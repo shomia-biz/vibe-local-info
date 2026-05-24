@@ -1,6 +1,103 @@
 {
   "events": [
     {
+      "name": "[영등포문화재단] 어슬렁 어슬렁 콘서트 #여름 [죠지&김뜻돌]",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-07-24",
+      "endDate": "2026-07-24",
+      "location": "영등포아트홀",
+      "target": "중학생(2013년생 포함) 이상",
+      "summary": "영등포아트홀에서 열리는 '어슬렁 어슬렁 콘서트 #여름' 공연으로, 아티스트 죠지와 김뜻돌이 참여합니다. 중학생 이상 관람 가능한 유료(전석 45,000원) 콘서트입니다.",
+      "link": "https://www.ydpcf.or.kr/artexhibit/view.do?id=541",
+      "imageUrl": "https://ydpcf.or.kr/images/og_img_white.jpg",
+      "id": 1778713506216,
+      "updatedAt": "2026-05-24"
+    },
+    {
+      "name": "2026 마포문화재단 가족·어린이 축제 [해피 마포 와글와글] 이머시브 뮤지컬 [고래밥 - 바다 대운동회]",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-07-24",
+      "endDate": "2026-08-16",
+      "location": "마포아트센터 아트홀맥",
+      "target": "8세이상 관람가능(미취학아동입장불가)",
+      "summary": "마포문화재단에서 개최하는 가족·어린이 축제 [해피 마포 와글와글]의 프로그램으로, 마포아트센터 아트홀맥에서 진행되는 이머시브 뮤지컬 [고래밥 - 바다 대운동회] 공연입니다.",
+      "link": "https://www.mfac.or.kr/performance/whole_view.jsp?sc_b_category=17&sc_b_code=BOARD_1207683401&pk_seq=2637&page=1",
+      "imageUrl": "https://www.mfac.or.kr/web/images/common/logo.png",
+      "id": 1778713506215,
+      "updatedAt": "2026-05-24"
+    },
+    {
+      "name": "[영등포문화재단] 영등포아트홀 상주단체 '서울발레시어터' [해설이 있는 고전발레]",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-08-22",
+      "endDate": "2026-08-22",
+      "location": "영등포아트홀",
+      "target": "초등학생 이상(2019년생 포함)",
+      "summary": "영등포아트홀 상주단체 서울발레시어터가 선보이는 해설이 있는 고전발레 공연으로, 전석 20,000원에 관람할 수 있는 무용 예술 프로그램입니다.",
+      "link": "https://www.ydpcf.or.kr/artexhibit/view.do?id=548",
+      "imageUrl": "https://ydpcf.or.kr/images/og_img_white.jpg",
+      "id": 1778713506212,
+      "updatedAt": "2026-05-24"
+    },
+    {
+      "name": "[마포문화재단] M 마티네 [2026 MAC 모닝 콘서트 ＃6]",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-08-26",
+      "endDate": "2026-08-26",
+      "location": "마포아트센터 아트홀맥",
+      "target": "8세이상 관람가능(미취학아동입장불가)",
+      "summary": "마포문화재단에서 진행하는 'M 마티네 [2026 MAC 모닝 콘서트 ＃6]' 콘서트 공연입니다. 전석 20,000원(패키지권 구매 시 20% 할인)으로 관람하실 수 있습니다.",
+      "link": "https://www.mfac.or.kr/performance/whole_view.jsp?sc_b_category=17&sc_b_code=BOARD_1207683401&pk_seq=2636&page=1",
+      "imageUrl": "https://www.mfac.or.kr/web/images/common/logo.png",
+      "id": 1778713506211,
+      "updatedAt": "2026-05-24"
+    },
+    {
+      "name": "[마포문화재단] 2026 M 아티스트 선율 피아노 리사이틀 Ⅱ",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-09-16",
+      "endDate": "2026-09-16",
+      "location": "마포아트센터 아트홀맥",
+      "target": "8세이상 관람가능(미취학아동입장불가)",
+      "summary": "피아니스트 선율이 선보이는 클래식 피아노 독주회로, 마포아트센터 아트홀맥에서 진행되는 가을밤의 연주회 행사입니다.",
+      "link": "https://www.mfac.or.kr/performance/whole_view.jsp?sc_b_category=17&sc_b_code=BOARD_1207683401&pk_seq=2625&page=1",
+      "imageUrl": "https://www.mfac.or.kr/web/images/common/logo.png",
+      "id": 1778713506210,
+      "updatedAt": "2026-05-24"
+    },
+    {
+      "name": "[영등포문화재단] 마티네콘서트 With 금난새 #3.베버",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-10-15",
+      "endDate": "2026-10-15",
+      "location": "영등포아트홀",
+      "target": "초등학생(2019년생 포함) 이상",
+      "summary": "영등포아트홀에서 개최되는 금난새와 함께하는 마티네 콘서트 클래식 공연",
+      "link": "https://www.ydpcf.or.kr/artexhibit/view.do?id=537",
+      "imageUrl": "https://ydpcf.or.kr/images/og_img_white.jpg",
+      "id": 1778713506209,
+      "updatedAt": "2026-05-24"
+    },
+    {
+      "name": "Family Concert(2026멍때림 실내악시리즈)",
+      "category": "행사",
+      "region": "인천",
+      "startDate": "2026-05-30",
+      "endDate": "2026-05-30",
+      "location": "멍때림 문화공간",
+      "target": "어린이부터 장년까지",
+      "summary": "전문예술단체 콘체르트앙상블 '노래위에날개위에' 단원들이 어린이부터 장년까지 함께 클래식을 쉽고 즐겁게 감상할 수 있도록 기획한 가족 연주회입니다. 오페라의 유령 중 'Think of Me', 'The Phantom of the Opera' 등 친숙하고 다양한 기악 및 성악 연주곡을 선보입니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13631",
+      "id": 1778713506208,
+      "updatedAt": "2026-05-24"
+    },
+    {
       "name": "오리지널 드로잉쇼!",
       "category": "행사",
       "region": "인천",
@@ -707,6 +804,48 @@
   "nationalCultureEvents": [],
   "exhibitionEvents": [
     {
+      "name": "서울일러스트레이션페어V.21",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-07-30",
+      "endDate": "2026-08-02",
+      "location": "서울 코엑스 C홀",
+      "target": "누구나",
+      "summary": "서울 코엑스 C홀에서 진행되는 일러스트레이션 전문 전시회 '서울일러스트레이션페어V.21'입니다. 관람 시간은 10:00 ~ 18:00이며 이용 요금은 성인 15,000원, 청소년 9,000원입니다.",
+      "link": "https://www.ocreo.kr/",
+      "imageUrl": "https://www.ocreo.kr/ogtag.jpg",
+      "id": 1778713506214,
+      "updatedAt": "2026-05-24"
+    },
+    {
+      "name": "2026 핸드아티코리아",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-08-13",
+      "endDate": "2026-08-16",
+      "location": "코엑스전시장 B홀",
+      "target": "누구나",
+      "summary": "코엑스전시장 B홀에서 개최되는 2026 핸드아티코리아 전시로, 이용 요금은 정가 15,000원이며 10:00부터 18:00까지 관람 가능합니다.",
+      "link": "https://handarty.co.kr/coex/visitors/guide/",
+      "imageUrl": "https://d2m30fi342zjti.cloudfront.net/wp-content/uploads/sites/2/2025/11/11213730/2x.png",
+      "id": 1778713506213,
+      "updatedAt": "2026-05-24"
+    },
+    {
+      "name": "2026Green_Project  신예은 x 영 성",
+      "category": "전시",
+      "region": "인천",
+      "startDate": "2026-05-19",
+      "endDate": "2026-05-29",
+      "location": "라보체갤러리(구월관)",
+      "target": "누구나",
+      "summary": "가능성과 잠재력을 지닌 청년 작가를 발굴하여 소개하는 라보체갤러리의 그린 프로젝트 특별 전시로, 신예은 작가와 영성 작가의 사유와 응축된 감정이 담긴 예술 작품들을 선보입니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13632",
+      "imageUrl": "https://ifac.or.kr/resource/www/images/layout/og_images.png",
+      "id": 1778713506207,
+      "updatedAt": "2026-05-24"
+    },
+    {
       "name": "엄마들의 화려한 외출",
       "category": "전시",
       "region": "인천",
@@ -815,7 +954,36 @@
       "updatedAt": "2026-05-20"
     }
   ],
-  "seoulExhibitionEvents": [],
+  "seoulExhibitionEvents": [
+    {
+      "name": "서울일러스트레이션페어V.21",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-07-30",
+      "endDate": "2026-08-02",
+      "location": "서울 코엑스 C홀",
+      "target": "누구나",
+      "summary": "서울 코엑스 C홀에서 진행되는 일러스트레이션 전문 전시회 '서울일러스트레이션페어V.21'입니다. 관람 시간은 10:00 ~ 18:00이며 이용 요금은 성인 15,000원, 청소년 9,000원입니다.",
+      "link": "https://www.ocreo.kr/",
+      "imageUrl": "https://www.ocreo.kr/ogtag.jpg",
+      "id": 1778713506214,
+      "updatedAt": "2026-05-24"
+    },
+    {
+      "name": "2026 핸드아티코리아",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-08-13",
+      "endDate": "2026-08-16",
+      "location": "코엑스전시장 B홀",
+      "target": "누구나",
+      "summary": "코엑스전시장 B홀에서 개최되는 2026 핸드아티코리아 전시로, 이용 요금은 정가 15,000원이며 10:00부터 18:00까지 관람 가능합니다.",
+      "link": "https://handarty.co.kr/coex/visitors/guide/",
+      "imageUrl": "https://d2m30fi342zjti.cloudfront.net/wp-content/uploads/sites/2/2025/11/11213730/2x.png",
+      "id": 1778713506213,
+      "updatedAt": "2026-05-24"
+    }
+  ],
   "kyeonggiExhibitionEvents": [
     {
       "name": "한국국제가구 및 인테리어산업대전 (코펀)",
@@ -904,6 +1072,20 @@
   ],
   "incheonExhibitionEvents": [
     {
+      "name": "2026Green_Project  신예은 x 영 성",
+      "category": "전시",
+      "region": "인천",
+      "startDate": "2026-05-19",
+      "endDate": "2026-05-29",
+      "location": "라보체갤러리(구월관)",
+      "target": "누구나",
+      "summary": "가능성과 잠재력을 지닌 청년 작가를 발굴하여 소개하는 라보체갤러리의 그린 프로젝트 특별 전시로, 신예은 작가와 영성 작가의 사유와 응축된 감정이 담긴 예술 작품들을 선보입니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13632",
+      "imageUrl": "https://ifac.or.kr/resource/www/images/layout/og_images.png",
+      "id": 1778713506207,
+      "updatedAt": "2026-05-24"
+    },
+    {
       "name": "엄마들의 화려한 외출",
       "category": "전시",
       "region": "인천",
@@ -933,6 +1115,90 @@
   ],
   "nationalExhibitionEvents": [],
   "seoulEvents": [
+    {
+      "name": "[영등포문화재단] 어슬렁 어슬렁 콘서트 #여름 [죠지&김뜻돌]",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-07-24",
+      "endDate": "2026-07-24",
+      "location": "영등포아트홀",
+      "target": "중학생(2013년생 포함) 이상",
+      "summary": "영등포아트홀에서 열리는 '어슬렁 어슬렁 콘서트 #여름' 공연으로, 아티스트 죠지와 김뜻돌이 참여합니다. 중학생 이상 관람 가능한 유료(전석 45,000원) 콘서트입니다.",
+      "link": "https://www.ydpcf.or.kr/artexhibit/view.do?id=541",
+      "imageUrl": "https://ydpcf.or.kr/images/og_img_white.jpg",
+      "id": 1778713506216,
+      "updatedAt": "2026-05-24"
+    },
+    {
+      "name": "2026 마포문화재단 가족·어린이 축제 [해피 마포 와글와글] 이머시브 뮤지컬 [고래밥 - 바다 대운동회]",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-07-24",
+      "endDate": "2026-08-16",
+      "location": "마포아트센터 아트홀맥",
+      "target": "8세이상 관람가능(미취학아동입장불가)",
+      "summary": "마포문화재단에서 개최하는 가족·어린이 축제 [해피 마포 와글와글]의 프로그램으로, 마포아트센터 아트홀맥에서 진행되는 이머시브 뮤지컬 [고래밥 - 바다 대운동회] 공연입니다.",
+      "link": "https://www.mfac.or.kr/performance/whole_view.jsp?sc_b_category=17&sc_b_code=BOARD_1207683401&pk_seq=2637&page=1",
+      "imageUrl": "https://www.mfac.or.kr/web/images/common/logo.png",
+      "id": 1778713506215,
+      "updatedAt": "2026-05-24"
+    },
+    {
+      "name": "[영등포문화재단] 영등포아트홀 상주단체 '서울발레시어터' [해설이 있는 고전발레]",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-08-22",
+      "endDate": "2026-08-22",
+      "location": "영등포아트홀",
+      "target": "초등학생 이상(2019년생 포함)",
+      "summary": "영등포아트홀 상주단체 서울발레시어터가 선보이는 해설이 있는 고전발레 공연으로, 전석 20,000원에 관람할 수 있는 무용 예술 프로그램입니다.",
+      "link": "https://www.ydpcf.or.kr/artexhibit/view.do?id=548",
+      "imageUrl": "https://ydpcf.or.kr/images/og_img_white.jpg",
+      "id": 1778713506212,
+      "updatedAt": "2026-05-24"
+    },
+    {
+      "name": "[마포문화재단] M 마티네 [2026 MAC 모닝 콘서트 ＃6]",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-08-26",
+      "endDate": "2026-08-26",
+      "location": "마포아트센터 아트홀맥",
+      "target": "8세이상 관람가능(미취학아동입장불가)",
+      "summary": "마포문화재단에서 진행하는 'M 마티네 [2026 MAC 모닝 콘서트 ＃6]' 콘서트 공연입니다. 전석 20,000원(패키지권 구매 시 20% 할인)으로 관람하실 수 있습니다.",
+      "link": "https://www.mfac.or.kr/performance/whole_view.jsp?sc_b_category=17&sc_b_code=BOARD_1207683401&pk_seq=2636&page=1",
+      "imageUrl": "https://www.mfac.or.kr/web/images/common/logo.png",
+      "id": 1778713506211,
+      "updatedAt": "2026-05-24"
+    },
+    {
+      "name": "[마포문화재단] 2026 M 아티스트 선율 피아노 리사이틀 Ⅱ",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-09-16",
+      "endDate": "2026-09-16",
+      "location": "마포아트센터 아트홀맥",
+      "target": "8세이상 관람가능(미취학아동입장불가)",
+      "summary": "피아니스트 선율이 선보이는 클래식 피아노 독주회로, 마포아트센터 아트홀맥에서 진행되는 가을밤의 연주회 행사입니다.",
+      "link": "https://www.mfac.or.kr/performance/whole_view.jsp?sc_b_category=17&sc_b_code=BOARD_1207683401&pk_seq=2625&page=1",
+      "imageUrl": "https://www.mfac.or.kr/web/images/common/logo.png",
+      "id": 1778713506210,
+      "updatedAt": "2026-05-24"
+    },
+    {
+      "name": "[영등포문화재단] 마티네콘서트 With 금난새 #3.베버",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-10-15",
+      "endDate": "2026-10-15",
+      "location": "영등포아트홀",
+      "target": "초등학생(2019년생 포함) 이상",
+      "summary": "영등포아트홀에서 개최되는 금난새와 함께하는 마티네 콘서트 클래식 공연",
+      "link": "https://www.ydpcf.or.kr/artexhibit/view.do?id=537",
+      "imageUrl": "https://ydpcf.or.kr/images/og_img_white.jpg",
+      "id": 1778713506209,
+      "updatedAt": "2026-05-24"
+    },
     {
       "name": "교과서에 나오는 우리 음악, 우리 소리 그리고 전통악기를 만나보는 신명나는 한마당! 다양한 궁중음악과 민요, 아쟁, 가야금 등 다양한 악기를 경험할 수 있는 국악 공연이 펼쳐집니다.",
       "category": "행사",
@@ -1204,6 +1470,19 @@
     }
   ],
   "incheonEvents": [
+    {
+      "name": "Family Concert(2026멍때림 실내악시리즈)",
+      "category": "행사",
+      "region": "인천",
+      "startDate": "2026-05-30",
+      "endDate": "2026-05-30",
+      "location": "멍때림 문화공간",
+      "target": "어린이부터 장년까지",
+      "summary": "전문예술단체 콘체르트앙상블 '노래위에날개위에' 단원들이 어린이부터 장년까지 함께 클래식을 쉽고 즐겁게 감상할 수 있도록 기획한 가족 연주회입니다. 오페라의 유령 중 'Think of Me', 'The Phantom of the Opera' 등 친숙하고 다양한 기악 및 성악 연주곡을 선보입니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13631",
+      "id": 1778713506208,
+      "updatedAt": "2026-05-24"
+    },
     {
       "name": "오리지널 드로잉쇼!",
       "category": "행사",
