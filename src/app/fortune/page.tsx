@@ -12,6 +12,7 @@ interface FortuneData {
 export default function FortunePage() {
   const [fortuneData, setFortuneData] = useState<FortuneData | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [isFlipped, setIsFlipped] = useState(false);
 
   useEffect(() => {
     fetch('/data/today_fortune.json?t=' + Date.now())
@@ -35,32 +36,65 @@ export default function FortunePage() {
       
       {isLoading ? (
         <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 text-center">
-          <p className="text-slate-500 animate-pulse font-bold">운세 데이터를 불러오는 중입니다...</p>
+          <p className="text-slate-500 animate-pulse font-bold">운세 카드를 가져오는 중입니다...</p>
         </div>
       ) : fortuneData ? (
-        <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 sm:p-10 text-center max-w-2xl mx-auto hover:shadow-lg transition-shadow">
-          <div className="mb-6 inline-block px-5 py-2 bg-indigo-50 text-indigo-700 rounded-full text-sm font-black tracking-wide">
-            {fortuneData.date} 운세
-          </div>
-          
-          <p className="text-xl sm:text-2xl font-bold text-slate-800 leading-relaxed mb-10 break-keep">
-            "{fortuneData.general}"
-          </p>
-          
-          <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl p-8 border border-slate-200/60">
-            <h3 className="text-sm font-black text-slate-400 mb-3 tracking-widest">오늘의 럭키 아이템</h3>
-            <p className="text-2xl font-black text-rose-500 mb-8">{fortuneData.lucky_item}</p>
-            <a 
-              href={fortuneData.coupang_url} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-block w-full sm:w-auto px-8 py-4 bg-rose-500 text-white font-black rounded-xl shadow-lg shadow-rose-200 hover:bg-rose-600 hover:-translate-y-0.5 transition-all"
+        <div className="max-w-sm mx-auto perspective-[1000px]" style={{ perspective: '1000px' }}>
+          <div 
+            className={`relative w-full cursor-pointer ${isFlipped ? '' : 'hover:-translate-y-2'} transition-all duration-300`}
+            onClick={() => setIsFlipped(true)}
+            style={{ 
+              transformStyle: 'preserve-3d', 
+              transition: 'transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1)', 
+              transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
+              minHeight: '480px'
+            }}
+          >
+            {/* Front of the Card */}
+            <div 
+              className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 rounded-3xl shadow-2xl border-4 border-indigo-200/50 p-10 text-center flex flex-col items-center justify-center"
+              style={{ backfaceVisibility: 'hidden' }}
             >
-              럭키 아이템 구경하기 🎁
-            </a>
-            <p className="text-[11px] font-medium text-slate-400 mt-5">
-              이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
-            </p>
+              <div className="text-7xl mb-8 animate-pulse">✨</div>
+              <h2 className="text-2xl font-black text-white mb-2 tracking-wide drop-shadow-md">
+                오늘의 운세 카드
+              </h2>
+              <p className="text-indigo-100 mt-6 font-bold bg-white/20 px-6 py-2 rounded-full shadow-inner">
+                클릭해서 뒤집기 👆
+              </p>
+            </div>
+
+            {/* Back of the Card */}
+            <div 
+              className="absolute top-0 left-0 w-full h-full bg-white rounded-3xl shadow-2xl border border-slate-200 p-8 text-center flex flex-col justify-between"
+              style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
+            >
+              <div>
+                <div className="mb-6 inline-block px-4 py-1.5 bg-indigo-50 text-indigo-700 rounded-full text-xs font-black tracking-wide">
+                  {fortuneData.date} 운세
+                </div>
+                <p className="text-lg font-bold text-slate-800 leading-relaxed mb-6 break-keep">
+                  "{fortuneData.general}"
+                </p>
+              </div>
+              
+              <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl p-6 border border-slate-200/60 mt-auto">
+                <h3 className="text-xs font-black text-slate-400 mb-2 tracking-widest">🍀 오늘의 럭키 아이템</h3>
+                <p className="text-xl font-black text-rose-500 mb-6">{fortuneData.lucky_item}</p>
+                <a 
+                  href={fortuneData.coupang_url} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-block w-full px-6 py-3.5 bg-rose-500 text-white font-black rounded-xl shadow-lg shadow-rose-200 hover:bg-rose-600 transition-colors text-sm"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  구경하기 🎁
+                </a>
+                <p className="text-[10px] font-medium text-slate-400 mt-4 leading-tight">
+                  이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       ) : (
