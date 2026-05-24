@@ -96,6 +96,9 @@ export default function RootLayout({
               <Link href="/about" className="text-sm sm:text-[15px] font-semibold text-slate-600 hover:text-cyan-600 transition-colors">
                 소개
               </Link>
+              <Link href="/fortune" className="text-sm sm:text-[15px] font-semibold text-slate-600 hover:text-cyan-600 transition-colors">
+                🔮 오늘의 운세
+              </Link>
             </div>
           </nav>
         </header>
