@@ -157,20 +157,20 @@ export default function Home() {
 
   // 모든 행사 데이터 통합 및 중복 제거
   const uniqueEventsMap = new Map<string, any>();
-  
+
   [
     ...(localDataState.events || []).map(e => ({ ...e, type: "events" })),
     ...(localDataState.seoulEvents || []).map(e => ({ ...e, type: "seoulEvents" })),
     ...(localDataState.kyeonggiEvents || []).map(e => ({ ...e, type: "kyeonggiEvents" })),
     ...(localDataState.incheonEvents || []).map(e => ({ ...e, type: "incheonEvents" })),
     ...(localDataState.nationalEvents || []).map(e => ({ ...e, type: "nationalEvents" })),
-    
+
     ...(localDataState.cultureEvents || []).map(e => ({ ...e, type: "cultureEvents" })),
     ...(localDataState.seoulCultureEvents || []).map(e => ({ ...e, type: "seoulCultureEvents" })),
     ...(localDataState.kyeonggiCultureEvents || []).map(e => ({ ...e, type: "kyeonggiCultureEvents" })),
     ...(localDataState.incheonCultureEvents || []).map(e => ({ ...e, type: "incheonCultureEvents" })),
     ...(localDataState.nationalCultureEvents || []).map(e => ({ ...e, type: "nationalCultureEvents" })),
-    
+
     ...(localDataState.exhibitionEvents || []).map(e => ({ ...e, type: "exhibitionEvents" })),
     ...(localDataState.seoulExhibitionEvents || []).map(e => ({ ...e, type: "seoulExhibitionEvents" })),
     ...(localDataState.kyeonggiExhibitionEvents || []).map(e => ({ ...e, type: "kyeonggiExhibitionEvents" })),
@@ -180,7 +180,7 @@ export default function Home() {
     const key = event.name;
     const region = (event as any).region || getRegion(event as EventItem);
     const eventWithRegion = { ...event, region };
-    
+
     if (!uniqueEventsMap.has(key)) {
       uniqueEventsMap.set(key, eventWithRegion);
     } else {
@@ -197,7 +197,7 @@ export default function Home() {
 
   // 모든 혜택 데이터 통합 및 중복 제거
   const uniqueBenefitsMap = new Map<string, any>();
-  
+
   [
     ...(localDataState.benefits || []).map(b => ({ ...b, type: "benefits", region: "전국" })),
     ...(localDataState.seoulBenefits || []).map(b => ({ ...b, type: "seoulBenefits", region: "서울" })),
@@ -225,8 +225,8 @@ export default function Home() {
   const threeDaysLater = new Date(today);
   threeDaysLater.setDate(today.getDate() + 3);
   const threeDaysLaterStr = threeDaysLater.toISOString().split('T')[0];
-  
-  const newInfoCount = allEvents.filter(event => 
+
+  const newInfoCount = allEvents.filter(event =>
     event.startDate >= currentDateStr && event.startDate <= threeDaysLaterStr
   ).length;
 
@@ -467,8 +467,8 @@ export default function Home() {
                         key={cat.id}
                         onClick={() => { setSelectedCategory(cat.id); fetchFreshData(); }}
                         className={`px-4 py-2 font-bold text-sm transition-all border-l first:border-l-0 border-slate-100 ${selectedCategory === cat.id
-                            ? 'bg-black text-white'
-                            : 'bg-white text-slate-400 hover:bg-slate-50'
+                          ? 'bg-black text-white'
+                          : 'bg-white text-slate-400 hover:bg-slate-50'
                           }`}
                       >
                         {cat.label}
@@ -490,8 +490,8 @@ export default function Home() {
                           key={region}
                           onClick={() => { setSelectedRegion(region); fetchFreshData(); }}
                           className={`px-5 py-2 font-bold text-sm transition-all border-l first:border-l-0 border-slate-100 ${selectedRegion === region
-                              ? 'bg-black text-white'
-                              : 'bg-white text-slate-400 hover:bg-slate-50'
+                            ? 'bg-black text-white'
+                            : 'bg-white text-slate-400 hover:bg-slate-50'
                             }`}
                         >
                           {region}
@@ -516,8 +516,8 @@ export default function Home() {
                           key={tab.id}
                           onClick={() => { setTimeTab(tab.id); fetchFreshData(); }}
                           className={`px-4 py-2 font-bold text-sm transition-all border-l first:border-l-0 border-slate-100 ${timeTab === tab.id
-                              ? 'bg-black text-white'
-                              : 'bg-white text-slate-400 hover:bg-slate-50'
+                            ? 'bg-black text-white'
+                            : 'bg-white text-slate-400 hover:bg-slate-50'
                             }`}
                         >
                           {tab.label}
