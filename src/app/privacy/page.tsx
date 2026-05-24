@@ -64,7 +64,7 @@ export default function PrivacyPage() {
           <div className="border-t border-gray-100 pt-6 mt-8">
             <h3 className="text-lg font-bold text-gray-900 mb-2">문의 및 연락처</h3>
             <p className="mb-2">📧 이메일:<a href="mailto:omia.ahn.biz@gmail.com" className="text-gray-700 hover:text-orange-600 transition-colors">omia.ahn.biz@gmail.com</a></p>
-            <p>🌐 운영자: 수도권 모아팁스 (<a href="https://moatips.com" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-orange-600 transition-colors">moatips.com</a>)</p>
+            <p>🌐 운영자: 수도권 모아팁스 (<a href="https://moa-tips.com" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-orange-600 transition-colors">moa-tips.com</a>)</p>
           </div>
           <div className="mt-12 flex flex-wrap justify-center gap-6 text-sm text-gray-500">
             <Link href="/terms" className="hover:font-bold text-blue-900">이용약관</Link>
