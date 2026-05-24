@@ -4,6 +4,7 @@ import re
 from datetime import datetime
 
 try:
+    # pyrefly: ignore [missing-import]
     import google.generativeai as genai
     GEMINI_AVAILABLE = True
 except ImportError:
