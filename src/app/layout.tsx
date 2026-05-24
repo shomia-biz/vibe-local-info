@@ -5,7 +5,6 @@ import Script from "next/script";
 import "./globals.css";
 import ChatBot from "@/components/ChatBot";
 
-const ADSENSE_ID = process.env.NEXT_PUBLIC_ADSENSE_ID;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -48,14 +47,12 @@ export default function RootLayout({
           crossOrigin=""
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css"
         />
-        {ADSENSE_ID && ADSENSE_ID !== "나중에_입력" && (
-          <Script
-            async
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-${ADSENSE_ID}`}
-            crossOrigin="anonymous"
-            strategy="lazyOnload"
-          />
-        )}
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7299812089029185"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
       </head>
       <body className="min-h-full flex flex-col bg-[#F8FAFC]" suppressHydrationWarning>
         {/* 구조화 데이터: WebSite */}
