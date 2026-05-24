@@ -52,6 +52,18 @@ export default function RootLayout({
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7299812089029185"
           crossOrigin="anonymous"
         ></script>
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-DZ5L26LSW0"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-DZ5L26LSW0');
+            `
+          }}
+        />
       </head>
       <body className="min-h-full flex flex-col bg-[#F8FAFC]" suppressHydrationWarning>
         {/* 구조화 데이터: WebSite */}
