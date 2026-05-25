@@ -41,6 +41,44 @@ export default function FortunePage() {
     }
   };
 
+  const shareToKakao = () => {
+    if (typeof window !== 'undefined' && (window as any).Kakao) {
+      const Kakao = (window as any).Kakao;
+      if (!Kakao.isInitialized()) {
+        const appKey = process.env.NEXT_PUBLIC_KAKAO_APP_KEY;
+        if (!appKey || appKey === '나중에_입력') {
+          alert('카카오 공유하기를 사용하려면 NEXT_PUBLIC_KAKAO_APP_KEY를 환경변수에 등록해주세요. (카카오 디벨로퍼스 JavaScript 키)');
+          return;
+        }
+        Kakao.init(appKey);
+      }
+
+      Kakao.Share.sendDefault({
+        objectType: 'feed',
+        content: {
+          title: '🔮 나의 오늘의 운세 결과는?',
+          description: '신비로운 타로 카드가 알려주는 소름 돋는 오늘의 운세와 나만의 행운 아이템을 확인해보세요!',
+          imageUrl: 'https://vibe-local-info.pages.dev/apple-icon.png', // 적절한 대표 썸네일 이미지로 교체 권장
+          link: {
+            mobileWebUrl: 'https://vibe-local-info.pages.dev/fortune',
+            webUrl: 'https://vibe-local-info.pages.dev/fortune',
+          },
+        },
+        buttons: [
+          {
+            title: '나도 타로 뽑아보기',
+            link: {
+              mobileWebUrl: 'https://vibe-local-info.pages.dev/fortune',
+              webUrl: 'https://vibe-local-info.pages.dev/fortune',
+            },
+          },
+        ],
+      });
+    } else {
+      alert("카카오톡 공유 기능을 불러오는 중입니다. 잠시 후 다시 시도해주세요.");
+    }
+  };
+
   return (
     <main className="max-w-5xl mx-auto px-4 sm:px-6 py-12 min-h-[70vh]">
       <h1 className="text-3xl font-extrabold text-slate-900 mb-2 text-center">🔮 오늘의 운세</h1>
@@ -129,10 +167,20 @@ export default function FortunePage() {
             })}
           </div>
           {selectedIndex !== null && (
-            <div className="mt-8 text-center animate-fade-in">
+            <div className="mt-8 flex flex-col items-center gap-4 animate-fade-in">
+              <button
+                onClick={shareToKakao}
+                className="w-full max-w-md px-6 py-3 bg-[#FEE500] text-[#000000] font-black rounded-xl hover:bg-[#F4DC00] transition-colors shadow-md flex items-center justify-center gap-3"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                  <path d="M12 3c-5.52 0-10 3.52-10 7.86 0 2.8 1.83 5.25 4.65 6.64-.17.65-.63 2.45-.66 2.6-.04.18.06.18.15.12.07-.05 2.1-1.38 2.94-1.95 1.1.2 2.25.32 3.44.32 5.52 0 10-3.52 10-7.86S17.52 3 12 3z"/>
+                </svg>
+                카카오톡으로 소름 돋는 내 운세 공유하기
+              </button>
+
               <button 
                 onClick={() => setSelectedIndex(null)}
-                className="px-6 py-2.5 bg-slate-100 text-slate-600 font-bold rounded-full hover:bg-slate-200 transition-colors shadow-sm"
+                className="px-6 py-2 bg-transparent text-slate-400 font-bold rounded-full hover:text-slate-600 transition-colors text-sm"
               >
                 다른 카드 다시 뽑기 🔄
               </button>

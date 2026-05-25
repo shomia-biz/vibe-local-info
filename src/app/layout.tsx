@@ -79,6 +79,7 @@ export default function RootLayout({
             })
           }}
         />
+        <Script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.2/kakao.min.js" strategy="lazyOnload" />
         {/* 상단 전역 내비게이션 바 (화이트 스티키 바) */}
         <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
           <nav className="max-w-6xl mx-auto h-[64px] px-4 sm:px-6 flex items-center justify-between">
