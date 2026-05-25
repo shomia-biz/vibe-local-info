@@ -58,6 +58,7 @@ jobs:
         run: npm run build
         env:
           NEXT_TELEMETRY_DISABLED: 1
+          NEXT_PUBLIC_KAKAO_APP_KEY: ${{ secrets.NEXT_PUBLIC_KAKAO_APP_KEY }}
 
       - name: Deploy to Cloudflare Pages
         run: npx wrangler pages deploy out --project-name=vibe-local-info
