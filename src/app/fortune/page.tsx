@@ -56,7 +56,7 @@ export default function FortunePage() {
       // 선택된 카드가 있으면 해당 운세를, 없으면 기본 문구를 보여줍니다.
       const selectedCard = selectedIndex !== null && fortuneData && fortuneData.cards ? fortuneData.cards[selectedIndex] : null;
       
-      const shareTitle = selectedCard 
+      const shareTitle = selectedCard && fortuneData
         ? `[${fortuneData.date} | ${selectedCard.type}]\n🔮 오늘의 운세 결과` 
         : '🔮 나의 오늘의 운세 결과는?';
         
