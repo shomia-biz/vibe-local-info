@@ -56,7 +56,7 @@ export default function FortunePage() {
               ? "오늘 당신의 직감이 이끄는 카드를 한 장 선택하세요!" 
               : "당신의 선택 결과입니다."}
           </p>
-          <div className={`grid grid-cols-1 md:grid-cols-3 gap-6 transition-all duration-700 ${selectedIndex !== null ? 'max-w-md mx-auto md:grid-cols-1' : ''}`}>
+          <div className={`grid grid-cols-1 gap-6 transition-all duration-700 ${selectedIndex !== null ? 'max-w-md mx-auto md:grid-cols-1' : 'md:grid-cols-3'}`}>
             {fortuneData.cards.map((card, index) => {
               const isSelected = selectedIndex === index;
               const isHidden = selectedIndex !== null && !isSelected;
