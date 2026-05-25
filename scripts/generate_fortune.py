@@ -27,32 +27,46 @@ def generate_fortune_with_gemini():
         
         prompt = """
         너는 매일 사람들에게 긍정적인 에너지를 주는 다정한 점성술사야.
-        오늘 하루를 활기차게 보낼 수 있도록 전체적인 운세를 1~2문장으로 긍정적이고 따뜻하게 작성해주고,
-        오늘 하루 행운을 가져다줄 '행운 아이템'을 일상 생활에서 쿠팡 등에서 쉽게 살 수 있는 구체적인 상품(예: 텀블러, 비타민, 디퓨저, 무선마우스 등)으로 딱 1개만 추천해줘.
+        방문자가 3장의 미스터리 타로 카드 중 하나를 선택하는 게임을 진행할 거야.
+        너는 3개의 서로 다른 매력적인 운세(예: 금전운 폭발, 연애운 상승, 평온한 힐링 등)를 1~2문장으로 긍정적으로 작성해주고,
+        각 운세에 어울리는 '행운 아이템'을 일상 생활에서 쉽게 살 수 있는 구체적인 상품(예: 무드등, 비타민, 디퓨저, 텀블러 등)으로 각각 1개씩 추천해줘.
         
-        반드시 아래 JSON 형식에 맞춰서 답변해줘. 다른 말은 절대 하지마.
-        {
-            "general": "오늘의 운세 내용",
-            "lucky_item": "행운 아이템 이름"
-        }
+        반드시 아래 JSON 배열 형식에 맞춰서 답변해줘. 다른 말은 절대 하지마.
+        [
+            {
+                "type": "행운의 달빛 카드",
+                "general": "첫 번째 운세 내용",
+                "lucky_item": "아이템1"
+            },
+            {
+                "type": "신비한 별빛 카드",
+                "general": "두 번째 운세 내용",
+                "lucky_item": "아이템2"
+            },
+            {
+                "type": "따뜻한 햇살 카드",
+                "general": "세 번째 운세 내용",
+                "lucky_item": "아이템3"
+            }
+        ]
         """
         
         response = model.generate_content(prompt)
         text = response.text
         
-        # JSON 부분만 추출 (마크다운 ```json ... ``` 등 제거)
-        match = re.search(r'\{.*\}', text, re.DOTALL)
+        # JSON 배열 부분만 추출
+        match = re.search(r'\[.*\]', text, re.DOTALL)
         if match:
-            parsed = json.loads(match.group(0))
-            item = parsed.get("lucky_item", "행운의 머그컵")
-            # 쿠팡 검색 링크로 연결
-            coupang_url = f"https://link.coupang.com/a/your_id?keyword={item}" 
+            cards = json.loads(match.group(0))
+            
+            # 각 카드에 쿠팡 링크 추가
+            for card in cards:
+                item = card.get("lucky_item", "행운의 머그컵")
+                card["coupang_url"] = f"https://link.coupang.com/a/your_id?keyword={item}"
             
             return {
                 "date": datetime.now().strftime("%Y-%m-%d"),
-                "general": parsed.get("general", "오늘은 뜻밖의 기분 좋은 일이 생길 것 같아요!"),
-                "lucky_item": item,
-                "coupang_url": coupang_url
+                "cards": cards
             }
         else:
             print("Failed to parse JSON from Gemini response. Using fallback.")
@@ -65,9 +79,26 @@ def generate_fortune_with_gemini():
 def get_fallback_fortune():
     return {
         "date": datetime.now().strftime("%Y-%m-%d"),
-        "general": "오늘은 주변의 사소한 변화가 큰 행운을 불러올 수 있으니 주의 깊게 살펴보세요.",
-        "lucky_item": "가성비 무선 키보드",
-        "coupang_url": "https://link.coupang.com/a/your_id?keyword=무선키보드"
+        "cards": [
+            {
+                "type": "금전운 상승 카드",
+                "general": "오늘은 뜻밖의 이익이 생기거나 좋은 소식을 들을 수 있는 날입니다. 작은 행운을 놓치지 마세요!",
+                "lucky_item": "가성비 무선 키보드",
+                "coupang_url": "https://link.coupang.com/a/your_id?keyword=무선키보드"
+            },
+            {
+                "type": "연애운 폭발 카드",
+                "general": "새로운 인연이나 반가운 연락이 올 수 있습니다. 주변 사람들에게 따뜻한 미소를 지어보세요.",
+                "lucky_item": "향기로운 디퓨저",
+                "coupang_url": "https://link.coupang.com/a/your_id?keyword=디퓨저"
+            },
+            {
+                "type": "평온한 힐링 카드",
+                "general": "바쁜 일상 속에서 나만을 위한 휴식이 필요한 날입니다. 커피 한 잔의 여유가 큰 힘이 될 것입니다.",
+                "lucky_item": "감성 무드등",
+                "coupang_url": "https://link.coupang.com/a/your_id?keyword=무드등"
+            }
+        ]
     }
 
 if __name__ == "__main__":
