@@ -55,9 +55,13 @@ export default function FortunePage() {
 
       // 선택된 카드가 있으면 해당 운세를, 없으면 기본 문구를 보여줍니다.
       const selectedCard = selectedIndex !== null && fortuneData && fortuneData.cards ? fortuneData.cards[selectedIndex] : null;
-      const shareTitle = selectedCard ? '🔮 소름 돋는 내 타로 운세 결과!' : '🔮 나의 오늘의 운세 결과는?';
+      
+      const shareTitle = selectedCard 
+        ? `[${fortuneData.date} | ${selectedCard.type}]\n🔮 오늘의 운세 결과` 
+        : '🔮 나의 오늘의 운세 결과는?';
+        
       const shareDescription = selectedCard 
-        ? `"${selectedCard.general}"\n\n🍀 행운의 아이템: ${selectedCard.lucky_item}\n지금 바로 내 운세도 확인해보세요!` 
+        ? `"${selectedCard.general}"\n\n🍀 행운의 아이템: ${selectedCard.lucky_item}` 
         : '신비로운 타로 카드가 알려주는 소름 돋는 오늘의 운세와 나만의 행운 아이템을 확인해보세요!';
 
       Kakao.Share.sendDefault({
@@ -66,16 +70,18 @@ export default function FortunePage() {
           title: shareTitle,
           description: shareDescription,
           imageUrl: 'https://moa-tips.com/images/fortune-thumbnail.png',
+          imageWidth: 800,
+          imageHeight: 400, // 2:1 비율로 설정하여 이미지가 카톡 화면에서 덜 부담스럽게(작게) 보이도록 유도합니다.
           link: {
-            mobileWebUrl: 'https://moa-tips.com/fortune',
-            webUrl: 'https://moa-tips.com/fortune',
+            mobileWebUrl: 'https://moa-tips.com', // 그림이나 모아팁스를 눌렀을 때는 홈페이지 메인으로!
+            webUrl: 'https://moa-tips.com',
           },
         },
         buttons: [
           {
             title: '나도 타로 뽑아보기',
             link: {
-              mobileWebUrl: 'https://moa-tips.com/fortune',
+              mobileWebUrl: 'https://moa-tips.com/fortune', // 버튼을 눌렀을 때는 운세 페이지로!
               webUrl: 'https://moa-tips.com/fortune',
             },
           },
