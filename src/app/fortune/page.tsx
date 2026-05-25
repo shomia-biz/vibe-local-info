@@ -55,11 +55,11 @@ export default function FortunePage() {
 
       // 선택된 카드가 있으면 해당 운세를, 없으면 기본 문구를 보여줍니다.
       const selectedCard = selectedIndex !== null && fortuneData && fortuneData.cards ? fortuneData.cards[selectedIndex] : null;
-      
+
       const shareTitle = '🔮 나의 오늘의 운세 결과는?';
-        
+
       const shareDescription = selectedCard && fortuneData
-        ? `${fortuneData.date} | ${selectedCard.type}\n${selectedCard.general}` 
+        ? `${fortuneData.date} | ${selectedCard.type}\n${selectedCard.general}`
         : '신비로운 타로 카드가 알려주는 소름 돋는 오늘의 운세와 나만의 행운 아이템을 확인해보세요!';
 
       Kakao.Share.sendDefault({
@@ -68,8 +68,8 @@ export default function FortunePage() {
           title: shareTitle,
           description: shareDescription,
           imageUrl: 'https://moa-tips.com/images/fortune-thumbnail.png',
-          imageWidth: 800,
-          imageHeight: 400, // 카카오톡 정책상 2:1 비율을 써야 이미지가 작아지고 글자가 더 많이 노출됩니다.
+          // imageWidth: 800,
+          // imageHeight: 400, // 카카오톡 정책상 2:1 비율을 써야 이미지가 작아지고 글자가 더 많이 노출됩니다.
           link: {
             mobileWebUrl: 'https://moa-tips.com',
             webUrl: 'https://moa-tips.com',
