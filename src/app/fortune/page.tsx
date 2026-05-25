@@ -68,11 +68,22 @@ export default function FortunePage() {
           title: shareTitle,
           description: shareDescription,
           imageUrl: 'https://moa-tips.com/images/fortune-thumbnail.png',
+          imageWidth: 800,
+          imageHeight: 400, // 카카오톡 정책상 2:1 비율을 써야 이미지가 작아지고 글자가 더 많이 노출됩니다.
           link: {
             mobileWebUrl: 'https://moa-tips.com',
             webUrl: 'https://moa-tips.com',
           },
         },
+        buttons: [
+          {
+            title: '운세 결과 전체보기', // 글자가 잘리는 카톡 정책을 보완하기 위해 버튼 추가
+            link: {
+              mobileWebUrl: 'https://moa-tips.com',
+              webUrl: 'https://moa-tips.com',
+            },
+          },
+        ],
       });
     } else {
       alert("카카오톡 공유 기능을 불러오는 중입니다. 잠시 후 다시 시도해주세요.");
