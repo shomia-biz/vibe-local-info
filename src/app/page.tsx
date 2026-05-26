@@ -440,9 +440,9 @@ export default function Home() {
 
         {/* Hero Section */}
         <section className="text-center pt-8 pb-0">
-          <div className="inline-block px-4 py-1.5 mb-6 bg-cyan-50 text-cyan-600 rounded-full text-sm font-bold tracking-tight animate-flash-pulse shadow-sm border border-cyan-100">
+          {/* <div className="inline-block px-4 py-1.5 mb-6 bg-cyan-50 text-cyan-600 rounded-full text-sm font-bold tracking-tight animate-flash-pulse shadow-sm border border-cyan-100">
             오늘 <span className="text-amber-600 font-black">{newInfoCount}</span>개의 새로운 정보가 도착했습니다 💌
-          </div>
+          </div> */}
           <h1 className="text-4xl sm:text-6xl font-black text-slate-900 mb-6 tracking-tight leading-tight">
             수도권 나들이부터<br />
             <span className="text-cyan-500">지원금 혜택</span>까지 한눈에
@@ -555,7 +555,7 @@ export default function Home() {
 
         {/* 모아팁스 행사/축제 */}
         <section id="events">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-8">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-4">
             <div className="flex items-center gap-3">
               <span className="text-3xl">🎈</span>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">모아팁스 행사/축제</h2>
