@@ -528,7 +528,8 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            ))}
+              );
+            })}
 
             <div className="md:pl-4 md:border-l border-slate-100 hidden lg:flex justify-end w-full">
               <span className="text-[12px] font-bold text-slate-300 whitespace-nowrap italic">
