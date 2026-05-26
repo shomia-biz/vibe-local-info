@@ -126,15 +126,25 @@ export default function Home() {
   // 날씨 호출 함수
   const fetchWeather = async () => {
     try {
-      // 서울, 경기(수원), 인천
-      const lat = "37.5665,37.2636,37.4563";
-      const lon = "126.9780,127.0286,126.7052";
+      const locations = [
+        { lat: 37.5665, lon: 126.9780 }, // 서울
+        { lat: 37.2636, lon: 127.0286 }, // 경기(수원)
+        { lat: 37.4563, lon: 126.7052 }  // 인천
+      ];
+
+      const fetchCityData = async (loc: any) => {
+        const weatherRes = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${loc.lat}&longitude=${loc.lon}&current=temperature_2m,weather_code&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=auto`);
+        const airRes = await fetch(`https://air-quality-api.open-meteo.com/v1/air-quality?latitude=${loc.lat}&longitude=${loc.lon}&current=pm10,pm2_5&timezone=auto`);
+        return {
+          weather: await weatherRes.json(),
+          air: await airRes.json()
+        };
+      };
+
+      const results = await Promise.all(locations.map(fetchCityData));
       
-      const weatherRes = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,weather_code&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=Asia%2FSeoul`);
-      const weatherJson = await weatherRes.json();
-      
-      const airRes = await fetch(`https://air-quality-api.open-meteo.com/v1/air-quality?latitude=${lat}&longitude=${lon}&current=pm10,pm2_5&timezone=Asia%2FSeoul`);
-      const airJson = await airRes.json();
+      const weatherJson = results.map(r => r.weather);
+      const airJson = results.map(r => r.air);
 
       setWeatherData(weatherJson);
       setAirQualityData(airJson);
