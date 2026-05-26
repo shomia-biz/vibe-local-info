@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import localData from "../../public/data/local-info.json";
 import Link from "next/link";
 import AdBanner from "@/components/AdBanner";
+import WeatherModal, { DailyForecast } from "@/components/WeatherModal";
 
 interface BaseInfo {
   id: number | string;
@@ -60,6 +61,12 @@ export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState('전체');
   const [isLoaded, setIsLoaded] = useState(false);
 
+  // 날씨 상태
+  const [weatherData, setWeatherData] = useState<any>(null);
+  const [airQualityData, setAirQualityData] = useState<any>(null);
+  const [weatherLastUpdated, setWeatherLastUpdated] = useState<string>('');
+  const [selectedCityForModal, setSelectedCityForModal] = useState<string | null>(null);
+
   // 마운트 시 sessionStorage에서 필터 상태 복원
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -115,6 +122,76 @@ export default function Home() {
     const interval = setInterval(fetchFreshData, 3000);
     return () => clearInterval(interval);
   }, []);
+
+  // 날씨 호출 함수
+  const fetchWeather = async () => {
+    try {
+      // 서울, 경기(수원), 인천
+      const lat = "37.5665,37.2636,37.4563";
+      const lon = "126.9780,127.0286,126.7052";
+      
+      const weatherRes = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,weather_code&daily=weather_code,temperature_2m_max,temperature_2m_min&timezone=Asia%2FSeoul`);
+      const weatherJson = await weatherRes.json();
+      
+      const airRes = await fetch(`https://air-quality-api.open-meteo.com/v1/air-quality?latitude=${lat}&longitude=${lon}&current=pm10,pm2_5&timezone=Asia%2FSeoul`);
+      const airJson = await airRes.json();
+
+      setWeatherData(weatherJson);
+      setAirQualityData(airJson);
+      
+      const now = new Date();
+      setWeatherLastUpdated(`${now.getHours()}:${now.getMinutes() < 10 ? '0' : ''}${now.getMinutes()}`);
+    } catch (error) {
+      console.error("Failed to fetch weather data:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchWeather();
+    const interval = setInterval(fetchWeather, 30 * 60 * 1000); // 30분
+    return () => clearInterval(interval);
+  }, []);
+
+  const getWeatherInfo = (code: number) => {
+    if (code === 0) return { desc: '맑음', icon: '☀️' };
+    if (code === 1 || code === 2) return { desc: '구름조금', icon: '⛅' };
+    if (code === 3) return { desc: '흐림', icon: '☁️' };
+    if (code >= 45 && code <= 48) return { desc: '안개', icon: '🌫️' };
+    if (code >= 51 && code <= 67) return { desc: '비', icon: '🌧️' };
+    if (code >= 71 && code <= 77) return { desc: '눈', icon: '❄️' };
+    if (code >= 80 && code <= 82) return { desc: '소나기', icon: '🌦️' };
+    if (code >= 95) return { desc: '천둥번개', icon: '⛈️' };
+    return { desc: '맑음', icon: '☀️' };
+  };
+
+  const getDustLevel = (pm10: number) => {
+    if (pm10 <= 30) return { level: '좋음', color: 'text-cyan-500' };
+    if (pm10 <= 80) return { level: '보통', color: 'text-emerald-500' };
+    if (pm10 <= 150) return { level: '나쁨', color: 'text-amber-500' };
+    return { level: '매우나쁨', color: 'text-rose-500' };
+  };
+
+  const getModalForecasts = (cityName: string) => {
+    if (!weatherData) return [];
+    const cityId = cityName === '서울' ? 0 : cityName === '경기' ? 1 : 2;
+    const daily = weatherData[cityId]?.daily;
+    if (!daily || !daily.time) return [];
+    
+    const days = ['일', '월', '화', '수', '목', '금', '토'];
+    return daily.time.map((timeStr: string, idx: number) => {
+      const d = new Date(timeStr);
+      const dateStr = `${d.getMonth() + 1}/${d.getDate()}`;
+      const dayOfWeek = `(${days[d.getDay()]})`;
+      const wInfo = getWeatherInfo(daily.weather_code[idx]);
+      return {
+        dateStr,
+        dayOfWeek,
+        icon: wInfo.icon,
+        maxTemp: Math.round(daily.temperature_2m_max[idx]),
+        minTemp: Math.round(daily.temperature_2m_min[idx]),
+      };
+    });
+  };
 
 
   // 오전 1시 기준 오늘 날짜 계산
@@ -374,30 +451,40 @@ export default function Home() {
 
             {/* 중앙: 도시별 날씨 */}
             {[
-              { city: '서울', temp: '14°', desc: '구름조금', dust: '좋음', icon: '☁️' },
-              { city: '경기', temp: '13°', desc: '흐림', dust: '좋음', icon: '☁️' },
-              { city: '인천', temp: '13°', desc: '흐림', dust: '보통', icon: '🌥️' }
-            ].map((w, idx) => (
-              <div key={w.city} className={`flex items-center gap-4 w-full justify-center md:justify-start md:pl-10 ${idx !== 2 ? 'md:border-r border-slate-50' : ''}`}>
-                <span className="text-[15px] font-black text-slate-700 min-w-[30px]">{w.city}</span>
-                <div className="flex items-center gap-2">
-                  <span className="text-xl">{w.icon}</span>
-                  <span className="text-[18px] font-black text-slate-900">{w.temp}</span>
+              { id: 0, city: '서울' },
+              { id: 1, city: '경기' },
+              { id: 2, city: '인천' }
+            ].map((loc, idx) => {
+              const currentW = weatherData?.[loc.id]?.current;
+              const currentA = airQualityData?.[loc.id]?.current;
+              const wInfo = currentW ? getWeatherInfo(currentW.weather_code) : { desc: '로딩중', icon: '⏳' };
+              const dustInfo = currentA ? getDustLevel(currentA.pm10) : { level: '-', color: 'text-slate-400' };
+              const temp = currentW ? Math.round(currentW.temperature_2m) + '°' : '-°';
+
+              return (
+                <div key={loc.city} 
+                     onClick={() => setSelectedCityForModal(loc.city)}
+                     className={`flex items-center gap-4 w-full justify-center md:justify-start md:pl-10 cursor-pointer hover:bg-slate-50/50 rounded-xl transition-colors py-1 ${idx !== 2 ? 'md:border-r border-slate-50' : ''}`}>
+                  <span className="text-[15px] font-black text-slate-700 min-w-[30px]">{loc.city}</span>
+                  <div className="flex items-center gap-2">
+                    <span className="text-xl">{wInfo.icon}</span>
+                    <span className="text-[18px] font-black text-slate-900">{temp}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-[12px] font-bold text-slate-500">{wInfo.desc}</span>
+                    <span className="w-px h-2 bg-slate-200"></span>
+                    <span className={`text-[10px] font-black ${dustInfo.color}`}>
+                      미세: {dustInfo.level}
+                    </span>
+                  </div>
                 </div>
-                <div className="flex items-center gap-2">
-                  <span className="text-[12px] font-bold text-slate-500">{w.desc}</span>
-                  <span className="w-px h-2 bg-slate-200"></span>
-                  <span className={`text-[10px] font-black ${w.dust === '좋음' ? 'text-cyan-500' : 'text-amber-500'}`}>
-                    미세: {w.dust}
-                  </span>
-                </div>
-              </div>
-            ))}
+              );
+            })}
 
             {/* 오른쪽: 기준 시간 */}
             <div className="md:pl-4 md:border-l border-slate-100 hidden lg:flex justify-end w-full">
               <span className="text-[12px] font-bold text-slate-300 whitespace-nowrap">
-                {new Date().getHours()}:{new Date().getMinutes() < 30 ? '00' : '30'} 기준
+                {weatherLastUpdated ? `${weatherLastUpdated} 기준` : '업데이트 중...'}
               </span>
             </div>
           </div>
@@ -410,23 +497,34 @@ export default function Home() {
             </div>
 
             {[
-              { region: '서울', sat: '22°', sun: '20°', satIcon: '☀️', sunIcon: '⛅' },
-              { region: '경기', sat: '21°', sun: '19°', satIcon: '☀️', sunIcon: '⛅' },
-              { region: '인천', sat: '21°', sun: '19°', satIcon: '☀️', sunIcon: '🌥️' }
-            ].map((r, idx) => (
+              { id: 0, region: '서울' },
+              { id: 1, region: '경기' },
+              { id: 2, region: '인천' }
+            ].map((r, idx) => {
+              const daily = weatherData?.[r.id]?.daily;
+              let sat = { temp: '-', icon: '⏳' };
+              let sun = { temp: '-', icon: '⏳' };
+              if (daily && daily.time) {
+                const satIdx = daily.time.findIndex((t: string) => new Date(t).getDay() === 6);
+                const sunIdx = daily.time.findIndex((t: string) => new Date(t).getDay() === 0);
+                if (satIdx !== -1) sat = { temp: Math.round(daily.temperature_2m_max[satIdx]) + '°', icon: getWeatherInfo(daily.weather_code[satIdx]).icon };
+                if (sunIdx !== -1) sun = { temp: Math.round(daily.temperature_2m_max[sunIdx]) + '°', icon: getWeatherInfo(daily.weather_code[sunIdx]).icon };
+              }
+
+              return (
               <div key={r.region} className={`flex items-center gap-4 w-full justify-center md:justify-start md:pl-10 ${idx !== 2 ? 'md:border-r border-slate-50' : ''}`}>
                 <span className="text-[15px] font-black text-slate-700 min-w-[30px]">{r.region}</span>
                 <div className="flex items-center gap-4 bg-slate-50/50 px-3 py-1 rounded-xl border border-slate-100">
                   <div className="flex items-center gap-1.5">
                     <span className="text-[11px] font-bold text-blue-500">토</span>
-                    <span className="text-sm">{r.satIcon}</span>
-                    <span className="text-[14px] font-extrabold text-slate-700">{r.sat}</span>
+                    <span className="text-sm">{sat.icon}</span>
+                    <span className="text-[14px] font-extrabold text-slate-700">{sat.temp}</span>
                   </div>
                   <div className="w-px h-2.5 bg-slate-200"></div>
                   <div className="flex items-center gap-1.5">
                     <span className="text-[11px] font-bold text-rose-500">일</span>
-                    <span className="text-sm">{r.sunIcon}</span>
-                    <span className="text-[14px] font-extrabold text-slate-700">{r.sun}</span>
+                    <span className="text-sm">{sun.icon}</span>
+                    <span className="text-[14px] font-extrabold text-slate-700">{sun.temp}</span>
                   </div>
                 </div>
               </div>
@@ -675,7 +773,7 @@ export default function Home() {
             데이터 출처: 공공데이터포털 및 각 지자체 공식 홈페이지
           </p>
           <p className="text-slate-300 text-xs">
-            © 2024 모아팁스 Moatips. All rights reserved.
+            © 2026 모아팁스 Moatips. All rights reserved.
           </p>
           <p className="text-[10px] text-slate-300 mt-4">
             마지막 업데이트: {currentDate}
@@ -683,6 +781,13 @@ export default function Home() {
         </footer>
 
       </div>
+      
+      <WeatherModal 
+        isOpen={!!selectedCityForModal}
+        onClose={() => setSelectedCityForModal(null)}
+        cityName={selectedCityForModal || ''}
+        forecasts={selectedCityForModal ? getModalForecasts(selectedCityForModal) : []}
+      />
     </main>
   );
 }
