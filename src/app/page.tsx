@@ -56,7 +56,7 @@ const data = localData as unknown as LocalData;
 
 export default function Home() {
   const [localDataState, setLocalDataState] = useState<LocalData>(data);
-  const [selectedRegion, setSelectedRegion] = useState('서울');
+  const [selectedRegion, setSelectedRegion] = useState('전체');
   const [timeTab, setTimeTab] = useState('thisWeek'); // 'thisWeek', 'past', 'upcoming'
   const [selectedCategory, setSelectedCategory] = useState('전체');
   const [isLoaded, setIsLoaded] = useState(false);
@@ -142,13 +142,13 @@ export default function Home() {
       };
 
       const results = await Promise.all(locations.map(fetchCityData));
-      
+
       const weatherJson = results.map(r => r.weather);
       const airJson = results.map(r => r.air);
 
       setWeatherData(weatherJson);
       setAirQualityData(airJson);
-      
+
       const now = new Date();
       setWeatherLastUpdated(`${now.getHours()}:${now.getMinutes() < 10 ? '0' : ''}${now.getMinutes()}`);
     } catch (error) {
@@ -190,7 +190,7 @@ export default function Home() {
     const cityId = cityName === '서울' ? 0 : cityName === '경기' ? 1 : 2;
     const daily = weatherData[cityId]?.daily;
     if (!daily || !daily.time) return [];
-    
+
     const days = ['일', '월', '화', '수', '목', '금', '토'];
     return daily.time.map((timeStr: string, idx: number) => {
       const d = new Date(timeStr);
@@ -436,14 +436,14 @@ export default function Home() {
           ])
         }}
       />
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
 
         {/* Hero Section */}
         <section className="text-center pt-8 pb-0">
           {/* <div className="inline-block px-4 py-1.5 mb-6 bg-cyan-50 text-cyan-600 rounded-full text-sm font-bold tracking-tight animate-flash-pulse shadow-sm border border-cyan-100">
             오늘 <span className="text-amber-600 font-black">{newInfoCount}</span>개의 새로운 정보가 도착했습니다 💌
           </div> */}
-          <h1 className="text-4xl sm:text-6xl font-black text-slate-900 mb-6 tracking-tight leading-tight">
+          <h1 className="text-4xl sm:text-6xl font-black text-slate-900 mb-1 tracking-tight leading-tight">
             수도권 나들이부터<br />
             <span className="text-cyan-500">지원금 혜택</span>까지 한눈에
           </h1>
@@ -476,9 +476,9 @@ export default function Home() {
               const temp = currentW ? Math.round(currentW.temperature_2m) + '°' : '-°';
 
               return (
-                <div key={loc.city} 
-                     onClick={() => setSelectedCityForModal(loc.city)}
-                     className={`flex items-center gap-4 w-full justify-center md:justify-start md:pl-10 cursor-pointer hover:bg-slate-50/50 rounded-xl transition-colors py-1 ${idx !== 2 ? 'md:border-r border-slate-50' : ''}`}>
+                <div key={loc.city}
+                  onClick={() => setSelectedCityForModal(loc.city)}
+                  className={`flex items-center gap-4 w-full justify-center md:justify-start md:pl-10 cursor-pointer hover:bg-slate-50/50 rounded-xl transition-colors py-1 ${idx !== 2 ? 'md:border-r border-slate-50' : ''}`}>
                   <span className="text-[15px] font-black text-slate-700 min-w-[30px]">{loc.city}</span>
                   <div className="flex items-center gap-2">
                     <span className="text-xl">{wInfo.icon}</span>
@@ -526,22 +526,22 @@ export default function Home() {
               }
 
               return (
-              <div key={r.region} className={`flex items-center gap-4 w-full justify-center md:justify-start md:pl-10 ${idx !== 2 ? 'md:border-r border-slate-50' : ''}`}>
-                <span className="text-[15px] font-black text-slate-700 min-w-[30px]">{r.region}</span>
-                <div className="flex items-center gap-4 bg-slate-50/50 px-3 py-1 rounded-xl border border-slate-100">
-                  <div className="flex items-center gap-1.5">
-                    <span className="text-[11px] font-bold text-blue-500">토</span>
-                    <span className="text-sm">{sat.icon}</span>
-                    <span className="text-[14px] font-extrabold text-slate-700">{sat.temp}</span>
-                  </div>
-                  <div className="w-px h-2.5 bg-slate-200"></div>
-                  <div className="flex items-center gap-1.5">
-                    <span className="text-[11px] font-bold text-rose-500">일</span>
-                    <span className="text-sm">{sun.icon}</span>
-                    <span className="text-[14px] font-extrabold text-slate-700">{sun.temp}</span>
+                <div key={r.region} className={`flex items-center gap-4 w-full justify-center md:justify-start md:pl-10 ${idx !== 2 ? 'md:border-r border-slate-50' : ''}`}>
+                  <span className="text-[15px] font-black text-slate-700 min-w-[30px]">{r.region}</span>
+                  <div className="flex items-center gap-4 bg-slate-50/50 px-3 py-1 rounded-xl border border-slate-100">
+                    <div className="flex items-center gap-1.5">
+                      <span className="text-[11px] font-bold text-blue-500">토</span>
+                      <span className="text-sm">{sat.icon}</span>
+                      <span className="text-[14px] font-extrabold text-slate-700">{sat.temp}</span>
+                    </div>
+                    <div className="w-px h-2.5 bg-slate-200"></div>
+                    <div className="flex items-center gap-1.5">
+                      <span className="text-[11px] font-bold text-rose-500">일</span>
+                      <span className="text-sm">{sun.icon}</span>
+                      <span className="text-[14px] font-extrabold text-slate-700">{sun.temp}</span>
+                    </div>
                   </div>
                 </div>
-              </div>
               );
             })}
 
@@ -796,8 +796,8 @@ export default function Home() {
         </footer>
 
       </div>
-      
-      <WeatherModal 
+
+      <WeatherModal
         isOpen={!!selectedCityForModal}
         onClose={() => setSelectedCityForModal(null)}
         cityName={selectedCityForModal || ''}

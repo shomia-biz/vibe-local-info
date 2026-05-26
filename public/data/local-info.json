@@ -458,6 +458,48 @@
   ],
   "benefits": [
     {
+      "name": "[인천] 2026년 1인 창조기업 지원센터 선택형 지원 모집 공고",
+      "category": "혜택",
+      "region": "인천",
+      "startDate": "2026-05-26",
+      "endDate": "2026-06-08",
+      "location": "인천테크노파크",
+      "target": "인천 1인 창조기업 지원센터 입주기업 및 당해연도 졸업기업",
+      "summary": "인천 1인 창조기업 지원센터 입주기업 및 당해연도 졸업기업의 사업화 및 마케팅 능력을 강화하기 위해 디자인 개발, 시제품 제작, 마케팅, 기업 역량 강화 비용을 기업당 최대 3백만 원 이내로 지원합니다.",
+      "link": "https://bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=6&rows=15&cpage=1&cat=&schPblancDiv=01&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6280000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=searchPblancNm&condition1=AND&keyword=&pblancId=PBLN_000000000122414",
+      "imageUrl": "https://bizinfo.go.kr/images/bizinfo/common/sns_thumbnail_img.png",
+      "id": 1778713506229,
+      "updatedAt": "2026-05-26"
+    },
+    {
+      "name": "시흥시 2026년 소공인 협업 활성화 지원사업",
+      "category": "혜택",
+      "region": "경기",
+      "startDate": "2026-05-22",
+      "endDate": "2026-06-12",
+      "location": "시흥산업진흥원",
+      "target": "시흥시 관내 10인 미만 제조 소공인(신청기업ㆍ참여기업)",
+      "summary": "시흥시 관내 제조 소공인의 협업을 활성화하여 사업화 역량을 강화하고 성장 기반을 마련할 수 있도록 시제품 제작, 마케팅, 지식재산 출원 등록, 전문 교육 등을 모임별 최대 1,000만 원 한도로 지원합니다.",
+      "link": "https://bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=6&rows=15&cpage=1&cat=&schPblancDiv=01&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6110000%2C6410000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=searchPblancNm&condition1=AND&keyword=&pblancId=PBLN_000000000122419",
+      "imageUrl": "https://bizinfo.go.kr/images/bizinfo/common/sns_thumbnail_img.png",
+      "id": 1778713506228,
+      "updatedAt": "2026-05-26"
+    },
+    {
+      "name": "[서울] 2026년 2차 소규모 세탁소 VOCs 저감시설 지원사업 세탁소 모집 공고",
+      "category": "혜택",
+      "region": "서울",
+      "startDate": "2026-05-27",
+      "endDate": "2026-06-10",
+      "location": "서울특별시",
+      "target": "VOCs 저감시설 설치 지원 대상 소규모 세탁소",
+      "summary": "서울시에서 휘발성유기화합물(VOCs) 배출 저감을 위해 소규모 세탁소를 대상으로 회수건조기 설치비(제작비 포함)를 최대 80%까지 지원하는 사업입니다.",
+      "link": "https://bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=6&rows=15&cpage=1&cat=&schPblancDiv=01&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6110000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=searchPblancNm&condition1=AND&keyword=&pblancId=PBLN_000000000122406",
+      "imageUrl": "https://bizinfo.go.kr/images/bizinfo/common/sns_thumbnail_img.png",
+      "id": 1778713506227,
+      "updatedAt": "2026-05-26"
+    },
+    {
       "name": "100세 어르신 장수축하물품 지급",
       "category": "혜택",
       "region": "서울",
@@ -1816,6 +1858,20 @@
   ],
   "seoulBenefits": [
     {
+      "name": "[서울] 2026년 2차 소규모 세탁소 VOCs 저감시설 지원사업 세탁소 모집 공고",
+      "category": "혜택",
+      "region": "서울",
+      "startDate": "2026-05-27",
+      "endDate": "2026-06-10",
+      "location": "서울특별시",
+      "target": "VOCs 저감시설 설치 지원 대상 소규모 세탁소",
+      "summary": "서울시에서 휘발성유기화합물(VOCs) 배출 저감을 위해 소규모 세탁소를 대상으로 회수건조기 설치비(제작비 포함)를 최대 80%까지 지원하는 사업입니다.",
+      "link": "https://bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=6&rows=15&cpage=1&cat=&schPblancDiv=01&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6110000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=searchPblancNm&condition1=AND&keyword=&pblancId=PBLN_000000000122406",
+      "imageUrl": "https://bizinfo.go.kr/images/bizinfo/common/sns_thumbnail_img.png",
+      "id": 1778713506227,
+      "updatedAt": "2026-05-26"
+    },
+    {
       "name": "100세 어르신 장수축하물품 지급",
       "category": "혜택",
       "region": "서울",
@@ -1844,8 +1900,38 @@
       "updatedAt": "2026-05-23"
     }
   ],
-  "kyeonggiBenefits": [],
-  "incheonBenefits": [],
+  "kyeonggiBenefits": [
+    {
+      "name": "시흥시 2026년 소공인 협업 활성화 지원사업",
+      "category": "혜택",
+      "region": "경기",
+      "startDate": "2026-05-22",
+      "endDate": "2026-06-12",
+      "location": "시흥산업진흥원",
+      "target": "시흥시 관내 10인 미만 제조 소공인(신청기업ㆍ참여기업)",
+      "summary": "시흥시 관내 제조 소공인의 협업을 활성화하여 사업화 역량을 강화하고 성장 기반을 마련할 수 있도록 시제품 제작, 마케팅, 지식재산 출원 등록, 전문 교육 등을 모임별 최대 1,000만 원 한도로 지원합니다.",
+      "link": "https://bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=6&rows=15&cpage=1&cat=&schPblancDiv=01&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6110000%2C6410000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=searchPblancNm&condition1=AND&keyword=&pblancId=PBLN_000000000122419",
+      "imageUrl": "https://bizinfo.go.kr/images/bizinfo/common/sns_thumbnail_img.png",
+      "id": 1778713506228,
+      "updatedAt": "2026-05-26"
+    }
+  ],
+  "incheonBenefits": [
+    {
+      "name": "[인천] 2026년 1인 창조기업 지원센터 선택형 지원 모집 공고",
+      "category": "혜택",
+      "region": "인천",
+      "startDate": "2026-05-26",
+      "endDate": "2026-06-08",
+      "location": "인천테크노파크",
+      "target": "인천 1인 창조기업 지원센터 입주기업 및 당해연도 졸업기업",
+      "summary": "인천 1인 창조기업 지원센터 입주기업 및 당해연도 졸업기업의 사업화 및 마케팅 능력을 강화하기 위해 디자인 개발, 시제품 제작, 마케팅, 기업 역량 강화 비용을 기업당 최대 3백만 원 이내로 지원합니다.",
+      "link": "https://bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=6&rows=15&cpage=1&cat=&schPblancDiv=01&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6280000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=searchPblancNm&condition1=AND&keyword=&pblancId=PBLN_000000000122414",
+      "imageUrl": "https://bizinfo.go.kr/images/bizinfo/common/sns_thumbnail_img.png",
+      "id": 1778713506229,
+      "updatedAt": "2026-05-26"
+    }
+  ],
   "nationalBenefits": [
     {
       "name": "노인복지시설 지방세 감면",
