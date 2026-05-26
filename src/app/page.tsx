@@ -154,18 +154,9 @@ export default function Home() {
     } catch (error) {
       console.error("Failed to fetch weather data:", error);
       // API 실패 시 사이트가 고장나 보이지 않도록 기본값(Fallback) 제공
-      const fallbackWeather = [
-        { current: { temperature_2m: 22, weather_code: 1 }, daily: { time: ["2026-05-26","2026-05-27","2026-05-28","2026-05-29","2026-05-30","2026-05-31","2026-06-01"], weather_code: [1,2,3,1,1,2,1], temperature_2m_max: [25,24,22,26,27,25,24], temperature_2m_min: [14,15,16,15,14,15,14] } },
-        { current: { temperature_2m: 21, weather_code: 1 }, daily: { time: ["2026-05-26","2026-05-27","2026-05-28","2026-05-29","2026-05-30","2026-05-31","2026-06-01"], weather_code: [1,2,3,1,1,2,1], temperature_2m_max: [24,23,21,25,26,24,23], temperature_2m_min: [13,14,15,14,13,14,13] } },
-        { current: { temperature_2m: 21, weather_code: 2 }, daily: { time: ["2026-05-26","2026-05-27","2026-05-28","2026-05-29","2026-05-30","2026-05-31","2026-06-01"], weather_code: [2,3,3,2,1,2,2], temperature_2m_max: [23,22,20,24,25,23,22], temperature_2m_min: [14,15,16,15,14,15,14] } }
-      ];
-      const fallbackAir = [
-        { current: { pm10: 25 } },
-        { current: { pm10: 35 } },
-        { current: { pm10: 45 } }
-      ];
-      setWeatherData(fallbackWeather);
-      setAirQualityData(fallbackAir);
+      setWeatherData(null);
+      setAirQualityData(null);
+      setWeatherLastUpdated('');
     }
   };
 
