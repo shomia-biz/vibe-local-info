@@ -332,19 +332,6 @@
       "updatedAt": "2026-05-24"
     },
     {
-      "name": "Family Concert(2026멍때림 실내악시리즈)",
-      "category": "행사",
-      "region": "인천",
-      "startDate": "2026-05-30",
-      "endDate": "2026-05-30",
-      "location": "멍때림 문화공간",
-      "target": "어린이부터 장년까지",
-      "summary": "전문예술단체 콘체르트앙상블 '노래위에날개위에' 단원들이 어린이부터 장년까지 함께 클래식을 쉽고 즐겁게 감상할 수 있도록 기획한 가족 연주회입니다. 오페라의 유령 중 'Think of Me', 'The Phantom of the Opera' 등 친숙하고 다양한 기악 및 성악 연주곡을 선보입니다.",
-      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13631",
-      "id": 1778713506208,
-      "updatedAt": "2026-05-24"
-    },
-    {
       "name": "오리지널 드로잉쇼!",
       "category": "행사",
       "region": "인천",
@@ -512,6 +499,7 @@
       "location": "서울백제어린이박물관(교육실, 전시실)",
       "target": "초등 1~2학년 학급",
       "summary": "[서울백제어린이박물관] 초등 2-3학년 학급 대상 [어린이백제연구소2] 옛날 도구, 오늘날 도구 (도구의변천) 행사가 서울백제어린이박물관(교육실, 전시실)에서 열립니다.",
+      "imageUrl": "/images/1777391602447.webp",
       "link": "https://baekjemuseum.seoul.go.kr/module/index.jsp?boardid=a&code=ED&mmode=content&mpid=SBM0402000000&pid=23194&strsearch=&d_s_que=&cpage=1",
       "updatedAt": "2026-04-29",
       "region": "서울"
@@ -1026,6 +1014,7 @@
       "target": "누구나",
       "summary": "만화가·미술가 전지 작가와 함께 입, 발, 손 등 다양한 감각을 활용하여 배다리 동네를 관찰하고 기록해보는 특별한 동네 채집 워크숍 프로그램입니다.",
       "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13637",
+      "imageUrl": "/images/1778713506200.webp",
       "id": 1778713506200,
       "updatedAt": "2026-05-23"
     },
@@ -1114,6 +1103,7 @@
       "target": "누구나",
       "summary": "만화가·미술가 전지 작가와 함께 입, 발, 손 등 다양한 감각을 활용하여 배다리 동네를 관찰하고 기록해보는 특별한 동네 채집 워크숍 프로그램입니다.",
       "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13637",
+      "imageUrl": "/images/1778713506200.webp",
       "id": 1778713506200,
       "updatedAt": "2026-05-23"
     }
@@ -1439,6 +1429,7 @@
       "location": "인천광역시교육청평생학습관 갤러리나무",
       "target": "엄마, 아내 등 일반 시민",
       "summary": "엄마, 아내, 딸 등으로 살아온 자신의 모습을 되돌아보며 잊고 지냈던 자아를 발견하고 자신감을 회복하고자 기획된 전시로, 전통 민화를 현대적으로 재해석한 50여 점의 작품을 선보입니다.",
+      "imageUrl": "/images/1778713506203.webp",
       "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13634",
       "id": 1778713506203,
       "updatedAt": "2026-05-23"
@@ -1882,7 +1873,7 @@
       "target": "초등학생",
       "summary": "[한성백제박물관] 역사를 알기 쉽게 천천히 배우고 싶은 초등학생을 위한 [신비한 유물도감] 행사가 한성백제박물관 교육실에서 열립니다.",
       "link": "https://baekjemuseum.seoul.go.kr/module/index.jsp?boardid=a&code=ED&mmode=content&mpid=SBM0402000000&pid=23260&strsearch=&d_s_que=&cpage=1",
-      "region": "전국"
+      "region": "서울"
     },
     {
       "id": 1777391602375,
@@ -2063,7 +2054,7 @@
   ],
   "incheonEvents": [
     {
-      "name": "Family Concert(2026멍때림 실내악시리즈)",
+      "name": "Family Concert (2026멍때림 실내악시리즈)",
       "category": "행사",
       "region": "인천",
       "startDate": "2026-05-30",
@@ -2072,6 +2063,7 @@
       "target": "어린이부터 장년까지",
       "summary": "전문예술단체 콘체르트앙상블 '노래위에날개위에' 단원들이 어린이부터 장년까지 함께 클래식을 쉽고 즐겁게 감상할 수 있도록 기획한 가족 연주회입니다. 오페라의 유령 중 'Think of Me', 'The Phantom of the Opera' 등 친숙하고 다양한 기악 및 성악 연주곡을 선보입니다.",
       "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13631",
+      "imageUrl": "/images/1778713506208.webp",
       "id": 1778713506208,
       "updatedAt": "2026-05-24"
     },
