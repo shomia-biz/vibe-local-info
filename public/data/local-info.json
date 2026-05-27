@@ -1,6 +1,48 @@
 {
   "events": [
     {
+      "name": "한국-오스트리아 어린이 국제 무용극 [파울라, 피터 그리고 파니니]",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-06-20",
+      "endDate": "2026-06-21",
+      "location": "아이들극장",
+      "target": "36개월 이상",
+      "summary": "종로문화재단이 주최하는 한국-오스트리아 어린이 국제 무용극 공연으로, 토요일과 일요일 오후 2시에 아이들극장에서 진행되는 유료 공연입니다.",
+      "link": "https://www.jfac.or.kr/site/main/program/perf_all_list_view?pgIdx=2701",
+      "imageUrl": "https://www.jfac.or.kr:443/design/theme/jfac/images/main/jfac_f.jpg",
+      "id": 1778713506243,
+      "updatedAt": "2026-05-27"
+    },
+    {
+      "name": "[동대문문화재단] 2026 신규 기획공연 [브런치 콘서트 아트리움 - 국립오페라스튜디오]",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-07-08",
+      "endDate": "2026-07-08",
+      "location": "선농단역사문화관",
+      "target": "초등학생 이상",
+      "summary": "동대문문화재단에서 주최하는 2026 신규 기획공연 '브런치 콘서트 아트리움 - 국립오페라스튜디오' 오페라 공연입니다. 7월 8일 오전 11시부터 선농단역사문화관에서 진행되며 관람료는 10,000원입니다.",
+      "link": "https://zrr.kr/AUHU2P",
+      "imageUrl": "http://ddmac.or.kr/images/logo3.jpg",
+      "id": 1778713506242,
+      "updatedAt": "2026-05-27"
+    },
+    {
+      "name": "퍼포먼스 콘서트",
+      "category": "행사",
+      "region": "인천",
+      "startDate": "2026-06-18",
+      "endDate": "2026-06-18",
+      "location": "인천광역시교육청평생학습관 교육누리홀",
+      "target": "인천 시민",
+      "summary": "국악인 정수연, 가수 끌로에, 성악가 유건우, 뮤지컬배우 공예림, 마술사 이훈 등이 출연하는 복합 장르의 퍼포먼스 공연입니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13643",
+      "imageUrl": "https://ifac.or.kr/resource/www/images/layout/og_images.png",
+      "id": 1778713506241,
+      "updatedAt": "2026-05-27"
+    },
+    {
       "name": "[성북문화재단] 한-량예술잔치2026",
       "category": "행사",
       "region": "서울",
@@ -1466,6 +1508,34 @@
   "nationalExhibitionEvents": [],
   "seoulEvents": [
     {
+      "name": "한국-오스트리아 어린이 국제 무용극 [파울라, 피터 그리고 파니니]",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-06-20",
+      "endDate": "2026-06-21",
+      "location": "아이들극장",
+      "target": "36개월 이상",
+      "summary": "종로문화재단이 주최하는 한국-오스트리아 어린이 국제 무용극 공연으로, 토요일과 일요일 오후 2시에 아이들극장에서 진행되는 유료 공연입니다.",
+      "link": "https://www.jfac.or.kr/site/main/program/perf_all_list_view?pgIdx=2701",
+      "imageUrl": "https://www.jfac.or.kr:443/design/theme/jfac/images/main/jfac_f.jpg",
+      "id": 1778713506243,
+      "updatedAt": "2026-05-27"
+    },
+    {
+      "name": "[동대문문화재단] 2026 신규 기획공연 [브런치 콘서트 아트리움 - 국립오페라스튜디오]",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-07-08",
+      "endDate": "2026-07-08",
+      "location": "선농단역사문화관",
+      "target": "초등학생 이상",
+      "summary": "동대문문화재단에서 주최하는 2026 신규 기획공연 '브런치 콘서트 아트리움 - 국립오페라스튜디오' 오페라 공연입니다. 7월 8일 오전 11시부터 선농단역사문화관에서 진행되며 관람료는 10,000원입니다.",
+      "link": "https://zrr.kr/AUHU2P",
+      "imageUrl": "http://ddmac.or.kr/images/logo3.jpg",
+      "id": 1778713506242,
+      "updatedAt": "2026-05-27"
+    },
+    {
       "name": "[성북문화재단] 한-량예술잔치2026",
       "category": "행사",
       "region": "서울",
@@ -2067,6 +2137,20 @@
     }
   ],
   "incheonEvents": [
+    {
+      "name": "퍼포먼스 콘서트",
+      "category": "행사",
+      "region": "인천",
+      "startDate": "2026-06-18",
+      "endDate": "2026-06-18",
+      "location": "인천광역시교육청평생학습관 교육누리홀",
+      "target": "인천 시민",
+      "summary": "국악인 정수연, 가수 끌로에, 성악가 유건우, 뮤지컬배우 공예림, 마술사 이훈 등이 출연하는 복합 장르의 퍼포먼스 공연입니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13643",
+      "imageUrl": "https://ifac.or.kr/resource/www/images/layout/og_images.png",
+      "id": 1778713506241,
+      "updatedAt": "2026-05-27"
+    },
     {
       "name": "Family Concert (2026멍때림 실내악시리즈)",
       "category": "행사",
