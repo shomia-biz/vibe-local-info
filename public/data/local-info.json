@@ -583,6 +583,20 @@
   ],
   "benefits": [
     {
+      "name": "서울형 아이돌봄비 지원사업",
+      "category": "혜택",
+      "region": "서울",
+      "startDate": "2026-03-12",
+      "endDate": "2026-12-31",
+      "location": "서울특별시",
+      "target": "24~36개월이하 영아가 있는 기준 중위소득 150% 이하 양육공백이 발생한 가정",
+      "summary": "월40시간 이상 돌봄활동/돌봄 서비스 이용 확인후 지급처리, 친인척 육아조력자:월30만원 현금지급, 민간 돌봄 서비스 이용 : 업체의 실적보고에 따라 이용비용지금(1인당 월30만원 한도내)",
+      "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005097&wlfareInfoReldBztpCd=02",
+      "imageUrl": "",
+      "id": 1778713506240,
+      "updatedAt": "2026-05-27"
+    },
+    {
       "name": "[인천] 2026년 1인 창조기업 지원센터 선택형 지원 모집 공고",
       "category": "혜택",
       "region": "인천",
@@ -2123,6 +2137,20 @@
     }
   ],
   "seoulBenefits": [
+    {
+      "name": "서울형 아이돌봄비 지원사업",
+      "category": "혜택",
+      "region": "서울",
+      "startDate": "2026-03-12",
+      "endDate": "2026-12-31",
+      "location": "서울특별시",
+      "target": "24~36개월이하 영아가 있는 기준 중위소득 150% 이하 양육공백이 발생한 가정",
+      "summary": "월40시간 이상 돌봄활동/돌봄 서비스 이용 확인후 지급처리, 친인척 육아조력자:월30만원 현금지급, 민간 돌봄 서비스 이용 : 업체의 실적보고에 따라 이용비용지금(1인당 월30만원 한도내)",
+      "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005097&wlfareInfoReldBztpCd=02",
+      "imageUrl": "",
+      "id": 1778713506240,
+      "updatedAt": "2026-05-27"
+    },
     {
       "name": "[서울] 2026년 2차 소규모 세탁소 VOCs 저감시설 지원사업 세탁소 모집 공고",
       "category": "혜택",
