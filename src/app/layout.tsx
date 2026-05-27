@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "수도권 모아팁스 | 지원금·행사·혜택 안내",
     description: "서울, 경기, 인천 주민을 위한 지역 행사, 축제, 지원금, 혜택 정보를 매일 업데이트합니다.",
-    url: "https://vibe-local-info.pages.dev",
+    url: "https://moa-tips.com",
     siteName: "수도권 모아팁스",
     locale: "ko_KR",
     type: "website",
@@ -74,7 +74,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               "name": "수도권 모아팁스",
-              "url": "https://vibe-local-info.pages.dev",
+              "url": "https://moa-tips.com",
               "description": "수도권 주민을 위한 지역 행사, 축제, 지원금, 혜택 정보"
             })
           }}

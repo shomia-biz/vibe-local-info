@@ -4,7 +4,7 @@ const path = require('path');
 function generateSitemap() {
   console.log('🌐 Generating sitemap.xml...');
 
-  const domain = 'https://vibe-local-info.pages.dev';
+  const domain = 'https://moa-tips.com';
   const today = new Date().toISOString().split('T')[0];
 
   // 기본 페이지 정의

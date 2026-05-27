@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: post.summary,
       type: "article",
       publishedTime: post.date,
-      url: `https://vibe-local-info.pages.dev/blog/${slug}/`,
+      url: `https://moa-tips.com/blog/${slug}/`,
     },
   };
 }
@@ -97,9 +97,9 @@ export default async function PostPage({ params }: Props) {
               "@context": "https://schema.org",
               "@type": "BreadcrumbList",
               "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://vibe-local-info.pages.dev/" },
-                { "@type": "ListItem", "position": 2, "name": "블로그", "item": "https://vibe-local-info.pages.dev/blog/" },
-                { "@type": "ListItem", "position": 3, "name": post.title, "item": `https://vibe-local-info.pages.dev/blog/${slug}/` }
+                { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://moa-tips.com/" },
+                { "@type": "ListItem", "position": 2, "name": "블로그", "item": "https://moa-tips.com/blog/" },
+                { "@type": "ListItem", "position": 3, "name": post.title, "item": `https://moa-tips.com/blog/${slug}/` }
               ]
             }
           ])
