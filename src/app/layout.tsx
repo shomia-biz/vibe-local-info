@@ -41,6 +41,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        <meta name="naver-site-verification" content="04100f3bcaa68e943f580830616f6bcbd7c376a2" />
         <link
           rel="stylesheet"
           as="style"
