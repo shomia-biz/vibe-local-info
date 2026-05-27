@@ -138,7 +138,7 @@ export default async function PostPage({ params }: Props) {
               a: ({node, ...props}) => <a className="text-orange-600 hover:underline font-bold" {...props} />
             }}
           >
-            {post.content}
+            {post.content.replace(/\*\*\r?\n/g, '**  \n')}
           </ReactMarkdown>
         </div>
 
