@@ -10,7 +10,27 @@ try:
 except ImportError:
     GEMINI_AVAILABLE = False
 
+def load_env():
+    try:
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        env_path = os.path.join(current_dir, '..', '.env.local')
+        if os.path.exists(env_path):
+            with open(env_path, 'r', encoding='utf-8') as f:
+                for line in f:
+                    line = line.strip()
+                    if line and not line.startswith('#'):
+                        parts = line.split('=', 1)
+                        if len(parts) == 2:
+                            key = parts[0].strip()
+                            value = parts[1].strip()
+                            if (value.startswith('"') and value.endswith('"')) or (value.startswith("'") and value.endswith("'")):
+                                value = value[1:-1]
+                            os.environ[key] = value
+    except Exception:
+        pass
+
 def generate_fortune_with_gemini():
+    load_env()
     if not GEMINI_AVAILABLE:
         print("Warning: google-generativeai module is not installed. Using fallback fortune.")
         return get_fallback_fortune()
@@ -23,7 +43,7 @@ def generate_fortune_with_gemini():
     try:
         genai.configure(api_key=api_key)
         # 추천: 최신 텍스트 모델인 gemini-1.5-flash 사용 (gemini-pro도 가능)
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        model = genai.GenerativeModel('gemini-flash-latest')
         
         prompt = """
         너는 매일 사람들에게 긍정적인 에너지를 주는 다정한 점성술사야.
