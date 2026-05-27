@@ -721,15 +721,15 @@ export default function Home() {
             {filteredBenefits.map((benefit, index) => (
               <div
                 key={`${benefit.id}-${benefit.name}-${index}`}
-                className="group bg-white rounded-[32px] shadow-sm border border-slate-100 p-8 hover:shadow-2xl transition-all duration-500 relative overflow-hidden flex flex-col"
+                className="group bg-white rounded-[32px] shadow-sm border border-slate-100 p-8 hover:border-cyan-200 hover:shadow-2xl transition-all duration-500 relative overflow-hidden flex flex-col"
               >
                 <div className="absolute -right-6 -top-6 w-32 h-32 bg-cyan-50 rounded-full opacity-30 group-hover:scale-125 transition-transform duration-700"></div>
 
                 <div className="flex flex-col gap-3 mb-6 relative z-10">
-                  <span className="self-start bg-rose-50 text-rose-500 text-[13px] font-bold px-4 py-1.5 rounded-full">
+                  <span className="self-start bg-cyan-50 text-cyan-600 text-[13px] font-bold px-4 py-1.5 rounded-full">
                     {benefit.category}
                   </span>
-                  <h3 className="font-extrabold text-2xl sm:text-3xl text-slate-900 group-hover:text-rose-500 transition-colors">{benefit.name}</h3>
+                  <h3 className="font-extrabold text-2xl sm:text-3xl text-slate-900 group-hover:text-cyan-500 transition-colors">{benefit.name}</h3>
                 </div>
 
                 <p className="text-slate-600 mb-8 flex-grow leading-relaxed relative z-10 text-lg font-medium">
@@ -751,7 +751,7 @@ export default function Home() {
 
                 <Link
                   href={`/detail/${(benefit as any).type}/${benefit.id}`}
-                  className="w-full text-center bg-rose-500 text-white font-black py-4 rounded-2xl hover:bg-rose-600 transition-all shadow-lg shadow-rose-100 relative z-10 text-lg"
+                  className="w-full text-center bg-cyan-500 text-white font-black py-4 rounded-2xl hover:bg-cyan-600 transition-all shadow-lg shadow-cyan-100 relative z-10 text-lg"
                 >
                   자세히 알아보기
                 </Link>

@@ -105,14 +105,14 @@ export default async function PostPage({ params }: Props) {
         }}
       />
       <article className="max-w-3xl mx-auto px-4">
-        <header className="mb-10 text-center">
+        <header className="mb-10 text-left">
           <div className="inline-block bg-orange-100 text-orange-600 px-4 py-1 rounded-full font-bold mb-4">
             {post.category}
           </div>
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">
+          <h1 className="text-3xl sm:text-4xl font-black text-slate-900 mb-6 tracking-tight leading-tight">
             {post.title}
           </h1>
-          <div className="flex justify-center items-center gap-4 text-gray-500 font-medium">
+          <div className="flex justify-start items-center gap-4 text-gray-500 font-medium">
             <span>{post.date}</span>
             <span className="text-gray-300">|</span>
             <span className="text-sm">최종 업데이트: {post.date}</span>
@@ -120,8 +120,22 @@ export default async function PostPage({ params }: Props) {
         </header>
 
         {/* 블로그 본문 */}
-        <div className="prose prose-orange lg:prose-xl max-w-none bg-white p-8 sm:p-12 rounded-[2rem] shadow-sm border border-orange-50 text-gray-900">
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>
+        <div className="max-w-none bg-white p-8 sm:p-12 rounded-[2rem] shadow-sm border border-orange-50 text-slate-900 font-sans">
+          <ReactMarkdown 
+            remarkPlugins={[remarkGfm]}
+            components={{
+              p: ({node, ...props}) => <p className="text-base sm:text-lg font-medium text-slate-700 leading-relaxed mb-6 break-keep" {...props} />,
+              h2: ({node, ...props}) => <h2 className="text-xl sm:text-2xl font-black text-slate-900 mt-8 mb-4 break-keep" {...props} />,
+              h3: ({node, ...props}) => <h3 className="text-lg sm:text-xl font-black text-slate-900 mt-6 mb-3 break-keep" {...props} />,
+              table: ({node, ...props}) => <div className="overflow-x-auto my-6"><table className="w-full border-collapse border border-slate-100" {...props} /></div>,
+              th: ({node, ...props}) => <th className="py-2.5 px-4 bg-slate-50/50 text-left text-slate-500 font-bold text-sm sm:text-base border border-slate-100" {...props} />,
+              td: ({node, ...props}) => <td className="py-2.5 px-4 text-slate-900 font-extrabold text-base sm:text-lg border border-slate-100 break-keep" {...props} />,
+              ul: ({node, ...props}) => <ul className="list-disc pl-6 mb-6 space-y-2 font-medium text-slate-700 text-base sm:text-lg" {...props} />,
+              ol: ({node, ...props}) => <ol className="list-decimal pl-6 mb-6 space-y-2 font-medium text-slate-700 text-base sm:text-lg" {...props} />,
+              li: ({node, ...props}) => <li className="break-keep" {...props} />,
+              a: ({node, ...props}) => <a className="text-orange-600 hover:underline font-bold" {...props} />
+            }}
+          >
             {post.content}
           </ReactMarkdown>
         </div>

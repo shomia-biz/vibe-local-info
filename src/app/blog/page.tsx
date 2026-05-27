@@ -21,7 +21,7 @@ export default function BlogPage() {
             posts.map((post) => (
               <article 
                 key={post.slug} 
-                className="bg-white p-8 rounded-3xl shadow-sm border border-orange-100 hover:shadow-md transition-all group"
+                className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:border-cyan-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
               >
                 <Link href={`/blog/${post.slug}`}>
                   <div className="flex flex-col gap-3">
@@ -31,7 +31,7 @@ export default function BlogPage() {
                       </span>
                       <span className="text-gray-400">{post.date}</span>
                     </div>
-                    <h2 className="text-2xl font-bold text-gray-900 group-hover:text-orange-600 transition-colors">
+                    <h2 className="text-2xl font-bold text-gray-900 group-hover:text-cyan-500 transition-colors">
                       {post.title}
                     </h2>
                     <p className="text-gray-600 leading-relaxed line-clamp-3">
