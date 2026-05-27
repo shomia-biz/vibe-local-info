@@ -174,6 +174,32 @@ tags: [태그1, 태그2, tags3]
 
       blogContent = blogContent.replace(/```markdown|```/g, '').trim();
 
+      // YAML Front Matter에서 title과 summary 값을 안전하게 따옴표로 감싸줍니다.
+      if (blogContent.startsWith('---')) {
+        const parts = blogContent.split('---');
+        if (parts.length >= 3) {
+          let frontMatter = parts[1];
+          const lines = frontMatter.split('\n');
+          const updatedLines = lines.map(line => {
+            if (line.startsWith('title:') || line.startsWith('summary:')) {
+              const colonIndex = line.indexOf(':');
+              const key = line.slice(0, colonIndex).trim();
+              let value = line.slice(colonIndex + 1).trim();
+              
+              // 이미 따옴표로 감싸져 있지 않다면 감싸주기
+              if (!((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'")))) {
+                // 내부의 쌍따옴표(")는 이스케이프(\") 처리
+                value = value.replace(/"/g, '\\"');
+                return `${key}: "${value}"`;
+              }
+            }
+            return line;
+          });
+          parts[1] = updatedLines.join('\n');
+          blogContent = parts.join('---');
+        }
+      }
+
       const finalPath = path.join(postsDir, filename);
       fs.writeFileSync(finalPath, blogContent, 'utf8');
 
