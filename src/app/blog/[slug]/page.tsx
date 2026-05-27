@@ -8,6 +8,7 @@ import fs from 'fs';
 import path from 'path';
 import AdBanner from '@/components/AdBanner';
 import CoupangBanner from '@/components/CoupangBanner';
+import BackButton from '@/components/BackButton';
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -105,22 +106,23 @@ export default async function PostPage({ params }: Props) {
         }}
       />
       <article className="max-w-3xl mx-auto px-4">
-        <header className="mb-10 text-left">
-          <div className="inline-block bg-orange-100 text-orange-600 px-4 py-1 rounded-full font-bold mb-4">
-            {post.category}
-          </div>
-          <h1 className="text-3xl sm:text-4xl font-black text-slate-900 mb-6 tracking-tight leading-tight">
-            {post.title}
-          </h1>
-          <div className="flex justify-start items-center gap-4 text-gray-500 font-medium">
-            <span>{post.date}</span>
-            <span className="text-gray-300">|</span>
-            <span className="text-sm">최종 업데이트: {post.date}</span>
-          </div>
-        </header>
-
+        <BackButton />
         {/* 블로그 본문 */}
         <div className="max-w-none bg-white p-8 sm:p-12 rounded-[2rem] shadow-sm border border-orange-50 text-slate-900 font-sans">
+          <header className="mb-8 pb-8 border-b border-slate-100 text-left">
+            <div className="inline-block bg-orange-100 text-orange-600 px-4 py-1 rounded-full font-bold mb-4">
+              {post.category}
+            </div>
+            <h1 className="text-3xl sm:text-4xl font-black text-slate-900 mb-6 tracking-tight leading-tight">
+              {post.title}
+            </h1>
+            <div className="flex justify-start items-center gap-4 text-gray-500 font-medium">
+              <span>{post.date}</span>
+              <span className="text-gray-300">|</span>
+              <span className="text-sm">최종 업데이트: {post.date}</span>
+            </div>
+          </header>
+
           <ReactMarkdown 
             remarkPlugins={[remarkGfm]}
             components={{
@@ -143,6 +145,16 @@ export default async function PostPage({ params }: Props) {
         {/* 광고 영역 */}
         <AdBanner />
         <CoupangBanner />
+
+        {/* 하단 네비게이션 (대안 B) */}
+        <div className="mt-8 pt-6 border-t border-orange-100 flex justify-center">
+          <Link 
+            href="/blog" 
+            className="text-orange-600 hover:text-orange-700 font-bold flex items-center gap-2 transition-colors"
+          >
+            <span>←</span> 목록으로 돌아가기
+          </Link>
+        </div>
 
         {/* 출처 및 AI 안내 영역 (E-E-A-T 강화) */}
         <div className="mt-8 bg-gray-50 p-6 rounded-2xl border border-gray-100">
@@ -177,15 +189,6 @@ export default async function PostPage({ params }: Props) {
           ))}
         </div>
 
-        {/* 하단 네비게이션 */}
-        <div className="mt-16 pt-8 border-t border-orange-100 flex justify-center">
-          <Link 
-            href="/blog" 
-            className="text-orange-600 hover:text-orange-700 font-bold flex items-center gap-2 transition-colors"
-          >
-            <span>←</span> 목록으로 돌아가기
-          </Link>
-        </div>
       </article>
     </main>
   );
