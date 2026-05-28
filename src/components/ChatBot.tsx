@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ReactMarkdown from 'react-markdown';
 import Link from 'next/link';
+import { GoogleGenerativeAI } from '@google/generative-ai';
 
 interface ChatDataItem {
   question: string;
@@ -58,22 +59,44 @@ export default function ChatBot() {
     setIsLoading(true);
 
     try {
-      const response = await fetch('/api/chat', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          messages: [{ role: 'user', content: userMessage }]
-        }),
+      // 1. 공고 데이터(local-info.json)를 클라이언트에서 직접 로드
+      let systemPrompt = "너는 친절한 지역 정보 알림 AI 상담원이야. 사용자의 질문에 답변해줘.";
+      try {
+        const infoRes = await fetch('/data/local-info.json');
+        const localInfo = await infoRes.json();
+        
+        systemPrompt = `
+너는 친절한 지역 정보 알림 AI 상담원이야. 
+아래의 [지역 지원금 공고 데이터]를 바탕으로 사용자의 질문에 정확하고 간결하게 답변해줘.
+만약 데이터에 없는 내용이라면 "제가 가진 정보에는 없는 내용입니다. 관리자에게 1:1 문의를 남겨주시면 정확한 답변을 받으실 수 있습니다."라고 안내해줘.
+답변은 길지 않게 요점만 간결하게 작성해주고 마크다운 포맷을 사용해줘.
+
+[지역 지원금 공고 데이터]
+${JSON.stringify(localInfo, null, 2)}
+`;
+      } catch (e) {
+        console.warn('Failed to load local-info data on client', e);
+      }
+
+      // 2. Gemini API 직접 호출
+      const apiKey = process.env.NEXT_PUBLIC_GEMINI_API_KEY;
+      if (!apiKey) {
+        throw new Error('API 키가 설정되지 않았습니다.');
+      }
+
+      const genAI = new GoogleGenerativeAI(apiKey);
+      const model = genAI.getGenerativeModel({ 
+        model: 'gemini-flash-latest',
+        systemInstruction: systemPrompt 
       });
 
-      const data = await response.json();
-      if (data.response) {
-        setMessages((prev) => [...prev, { type: 'bot', text: data.response }]);
-      } else if (data.error) {
-        setMessages((prev) => [...prev, { type: 'bot', text: '죄송합니다. 오류가 발생했습니다: ' + data.error }]);
-      }
-    } catch (err) {
-      setMessages((prev) => [...prev, { type: 'bot', text: '네트워크 오류가 발생했습니다.' }]);
+      const result = await model.generateContent(userMessage);
+      const responseText = result.response.text();
+      
+      setMessages((prev) => [...prev, { type: 'bot', text: responseText }]);
+    } catch (err: any) {
+      console.error(err);
+      setMessages((prev) => [...prev, { type: 'bot', text: '오류가 발생했습니다: ' + (err.message || '네트워크 오류') }]);
     } finally {
       setIsLoading(false);
     }
