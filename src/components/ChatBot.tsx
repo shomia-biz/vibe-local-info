@@ -1,6 +1,8 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
+import ReactMarkdown from 'react-markdown';
+import Link from 'next/link';
 
 interface ChatDataItem {
   question: string;
@@ -86,14 +88,14 @@ export default function ChatBot() {
         } flex flex-col max-sm:inset-0 max-sm:w-full max-sm:h-full max-sm:rounded-none`}
       >
         {/* 헤더 */}
-        <div className="bg-orange-500 p-4 text-white flex items-center justify-between">
+        <div className="bg-cyan-500 p-4 text-white flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center text-xl">
               🤖
             </div>
             <div>
               <h3 className="font-bold text-lg leading-tight">AI 상담원</h3>
-              <p className="text-xs text-orange-100 flex items-center gap-1">
+              <p className="text-xs text-cyan-100 flex items-center gap-1">
                 <span className="w-2 h-2 bg-green-400 rounded-full inline-block animate-pulse"></span>
                 온라인
               </p>
@@ -119,11 +121,15 @@ export default function ChatBot() {
               <div
                 className={`max-w-[80%] p-3 rounded-2xl text-sm ${
                   msg.type === 'user'
-                    ? 'bg-orange-500 text-white rounded-tr-none'
-                    : 'bg-white text-gray-800 shadow-sm rounded-tl-none border border-gray-100'
+                    ? 'bg-cyan-500 text-white rounded-tr-none'
+                    : 'bg-white text-gray-800 shadow-sm rounded-tl-none border border-gray-100 prose prose-sm prose-cyan max-w-none'
                 }`}
               >
-                {msg.text}
+                {msg.type === 'user' ? (
+                  msg.text
+                ) : (
+                  <ReactMarkdown>{msg.text}</ReactMarkdown>
+                )}
               </div>
             </div>
           ))}
@@ -142,16 +148,27 @@ export default function ChatBot() {
 
         {/* 질문 버튼 및 입력 영역 */}
         <div className="p-3 bg-white border-t border-gray-100">
-          <div className="flex flex-col gap-2 overflow-y-auto max-h-32 scrollbar-hide mb-3 pr-1">
+          <div className="flex flex-col gap-2 overflow-y-auto max-h-64 scrollbar-hide mb-3 pr-1">
             {chatData.map((item, idx) => (
               <button
                 key={idx}
                 onClick={() => handleQuestionClick(item)}
-                className="w-full text-left px-4 py-2 bg-orange-50 text-orange-600 text-xs font-medium rounded-xl border border-orange-100 hover:bg-orange-100 transition-colors"
+                className={`w-full text-left px-4 py-2 text-xs font-medium rounded-xl border border-cyan-100 text-cyan-700 transition-colors hover:bg-cyan-100 ${
+                  idx % 2 === 0 ? 'bg-white' : 'bg-cyan-50'
+                }`}
               >
                 {item.question}
               </button>
             ))}
+            <Link
+              href="/qna"
+              onClick={() => setIsOpen(false)}
+              className={`w-full text-left px-4 py-2 text-xs font-bold rounded-xl border border-cyan-100 text-cyan-700 transition-colors hover:bg-cyan-100 ${
+                chatData.length % 2 === 0 ? 'bg-white' : 'bg-cyan-50'
+              }`}
+            >
+              📝 관리자에게 1:1 문의글 남기기
+            </Link>
           </div>
           
           <form onSubmit={handleSendMessage} className="flex gap-2">
@@ -160,13 +177,13 @@ export default function ChatBot() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="궁금한 내용을 입력하세요..."
-              className="flex-1 px-4 py-2 bg-white border border-gray-300 rounded-xl text-sm text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none"
+              className="flex-1 px-4 py-2 bg-white border border-gray-300 rounded-xl text-sm text-gray-900 placeholder-gray-400 focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 outline-none"
               disabled={isLoading}
             />
             <button
               type="submit"
               disabled={isLoading}
-              className="p-2 bg-orange-500 text-white rounded-xl hover:bg-orange-600 transition-colors disabled:bg-gray-300"
+              className="p-2 bg-cyan-500 text-white rounded-xl hover:bg-cyan-600 transition-colors disabled:bg-gray-300"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
@@ -179,7 +196,7 @@ export default function ChatBot() {
       {/* 플로팅 버튼 */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-14 h-14 bg-orange-500 rounded-full shadow-lg flex items-center justify-center text-white hover:scale-110 transition-transform active:scale-95 group"
+        className="w-14 h-14 bg-cyan-500 rounded-full shadow-lg flex items-center justify-center text-white hover:scale-110 transition-transform active:scale-95 group"
       >
         {isOpen ? (
           <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
