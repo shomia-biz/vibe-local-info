@@ -61,6 +61,11 @@ export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState('전체');
   const [isLoaded, setIsLoaded] = useState(false);
 
+  // 1분 자가진단 툴 상태
+  const [diagnosisRegion, setDiagnosisRegion] = useState('전체');
+  const [diagnosisTarget, setDiagnosisTarget] = useState('전체');
+  const [isDiagnosisActive, setIsDiagnosisActive] = useState(false);
+
   // 날씨 상태
   const [weatherData, setWeatherData] = useState<any>(null);
   const [airQualityData, setAirQualityData] = useState<any>(null);
@@ -309,7 +314,33 @@ export default function Home() {
   });
 
   const filteredBenefits = Array.from(uniqueBenefitsMap.values()).filter(benefit => {
-    return selectedRegion === '전체' || benefit.region === '전국' || benefit.region === selectedRegion;
+    if (isDiagnosisActive) {
+      // 1. 지역 매칭
+      const regionMatch = diagnosisRegion === '전체' || benefit.region === '전국' || benefit.region === diagnosisRegion;
+      if (!regionMatch) return false;
+
+      // 2. 대상 매칭 (키워드)
+      if (diagnosisTarget !== '전체') {
+        const textToSearch = `${benefit.name} ${benefit.summary} ${benefit.target || ''}`.toLowerCase();
+        let targetMatch = false;
+        if (diagnosisTarget === '소상공인') {
+          targetMatch = textToSearch.includes('소상공인') || textToSearch.includes('자영업') || textToSearch.includes('기업') || textToSearch.includes('창업');
+        } else if (diagnosisTarget === '직장인') {
+          targetMatch = textToSearch.includes('직장인') || textToSearch.includes('근로자') || textToSearch.includes('재직자');
+        } else if (diagnosisTarget === '육아') {
+          targetMatch = textToSearch.includes('육아') || textToSearch.includes('아이') || textToSearch.includes('어린이') || textToSearch.includes('돌봄') || textToSearch.includes('임산부') || textToSearch.includes('부모');
+        } else if (diagnosisTarget === '청년') {
+          targetMatch = textToSearch.includes('청년') || textToSearch.includes('대학생') || textToSearch.includes('20대') || textToSearch.includes('30대');
+        } else if (diagnosisTarget === '어르신') {
+          targetMatch = textToSearch.includes('어르신') || textToSearch.includes('노인') || textToSearch.includes('고령') || textToSearch.includes('100세') || textToSearch.includes('실버');
+        }
+        return targetMatch;
+      }
+      return true;
+    } else {
+      // 기존 로직
+      return selectedRegion === '전체' || benefit.region === '전국' || benefit.region === selectedRegion;
+    }
   });
 
   // 새로운 정보 개수 계산 (오늘~7일 이내 시작하는 행사)
@@ -451,6 +482,62 @@ export default function Home() {
             서울, 경기, 인천 지역의 놓치기 아쉬운 정보를 엄선했습니다.<br />
             모아팁스에서 생활에 힘이 되는 혜택을 지금 바로 확인해 보세요.
           </p>
+        </section>
+
+        {/* 1분 자가진단 툴 (미끼 상품) */}
+        <section className="bg-gradient-to-r from-teal-50 to-emerald-50 border border-teal-100 rounded-[32px] p-6 sm:p-8 shadow-sm">
+          <div className="text-center mb-6">
+            <h2 className="text-2xl font-black text-teal-800 mb-2">1분 만에 끝나는 내 지원금 찾기 🔍</h2>
+            <p className="text-teal-600 font-medium text-sm sm:text-base">나에게 딱 맞는 혜택을 빠르고 간편하게 찾아보세요!</p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-3xl mx-auto">
+            {/* 지역 선택 */}
+            <div className="w-full sm:w-1/3">
+              <label className="block text-xs font-bold text-teal-700 mb-1 pl-1">지역</label>
+              <select
+                value={diagnosisRegion}
+                onChange={(e) => setDiagnosisRegion(e.target.value)}
+                className="w-full px-4 py-3 rounded-xl border-0 ring-1 ring-teal-200 focus:ring-2 focus:ring-teal-500 bg-white text-slate-700 font-bold shadow-sm outline-none cursor-pointer"
+              >
+                <option value="전체">전국 (전체)</option>
+                <option value="서울">서울특별시</option>
+                <option value="경기">경기도</option>
+                <option value="인천">인천광역시</option>
+              </select>
+            </div>
+
+            {/* 대상 선택 */}
+            <div className="w-full sm:w-1/3">
+              <label className="block text-xs font-bold text-teal-700 mb-1 pl-1">해당 대상</label>
+              <select
+                value={diagnosisTarget}
+                onChange={(e) => setDiagnosisTarget(e.target.value)}
+                className="w-full px-4 py-3 rounded-xl border-0 ring-1 ring-teal-200 focus:ring-2 focus:ring-teal-500 bg-white text-slate-700 font-bold shadow-sm outline-none cursor-pointer"
+              >
+                <option value="전체">누구나 (전체)</option>
+                <option value="소상공인">소상공인 / 자영업자</option>
+                <option value="직장인">직장인 / 근로자</option>
+                <option value="육아">육아 / 임산부 / 어린이</option>
+                <option value="청년">청년 / 대학생</option>
+                <option value="어르신">어르신 / 고령자</option>
+              </select>
+            </div>
+
+            {/* 버튼 */}
+            <div className="w-full sm:w-auto flex items-end pt-5 sm:pt-0">
+              <button
+                onClick={() => {
+                  setIsDiagnosisActive(true);
+                  // 부드러운 스크롤 이동
+                  document.getElementById('benefits')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="w-full sm:w-auto px-8 py-3 bg-teal-500 hover:bg-teal-600 text-white font-black rounded-xl shadow-lg shadow-teal-200 transition-all transform hover:scale-105"
+              >
+                맞춤 혜택 찾기
+              </button>
+            </div>
+          </div>
         </section>
 
         {/* 수도권 날씨 정보 위젯 */}
@@ -711,53 +798,109 @@ export default function Home() {
         <AdBanner />
 
         {/* 지원금/혜택 정보 */}
-        <section id="benefits">
-          <div className="flex items-center gap-3 mb-8">
-            <span className="text-3xl">🎁</span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">지원금/혜택 정보</h2>
-          </div>
+        <section id="benefits" className="scroll-mt-6">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+            <div className="flex items-center gap-3">
+              <span className="text-3xl">🎁</span>
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
+                {isDiagnosisActive ? '맞춤 지원금/혜택 결과' : '지원금/혜택 정보'}
+              </h2>
+            </div>
 
-          <div className="grid gap-8 sm:grid-cols-2">
-            {filteredBenefits.map((benefit, index) => (
-              <div
-                key={`${benefit.id}-${benefit.name}-${index}`}
-                className="group bg-white rounded-[32px] shadow-sm border border-slate-100 p-8 hover:border-cyan-200 hover:shadow-2xl transition-all duration-500 relative overflow-hidden flex flex-col"
+            {isDiagnosisActive && (
+              <button
+                onClick={() => setIsDiagnosisActive(false)}
+                className="text-sm font-bold text-slate-500 hover:text-slate-700 bg-slate-100 hover:bg-slate-200 px-4 py-2 rounded-lg transition-colors"
               >
-                <div className="absolute -right-6 -top-6 w-32 h-32 bg-cyan-50 rounded-full opacity-30 group-hover:scale-125 transition-transform duration-700"></div>
-
-                <div className="flex flex-col gap-3 mb-6 relative z-10">
-                  <span className="self-start bg-cyan-50 text-cyan-600 text-[13px] font-bold px-4 py-1.5 rounded-full">
-                    {benefit.category}
-                  </span>
-                  <h3 className="font-extrabold text-2xl sm:text-3xl text-slate-900 group-hover:text-cyan-500 transition-colors">{benefit.name}</h3>
-                </div>
-
-                <p className="text-slate-600 mb-8 flex-grow leading-relaxed relative z-10 text-lg font-medium">
-                  {benefit.summary}
-                </p>
-
-                <div className="space-y-4 text-sm sm:text-base text-slate-600 bg-slate-50 p-6 rounded-2xl relative z-10 mb-8 border border-slate-100">
-                  {benefit.target && (
-                    <p className="flex items-start gap-3">
-                      <span className="font-bold min-w-[45px] text-slate-400">대상</span>
-                      <span className="font-semibold">{benefit.target}</span>
-                    </p>
-                  )}
-                  <p className="flex items-start gap-3">
-                    <span className="font-bold min-w-[45px] text-slate-400">기간</span>
-                    <span className="font-semibold">{benefit.startDate === '상시' ? '상시 진행' : `${benefit.startDate} ~ ${benefit.endDate}`}</span>
-                  </p>
-                </div>
-
-                <Link
-                  href={`/detail/${(benefit as any).type}/${benefit.id}`}
-                  className="w-full text-center bg-cyan-500 text-white font-black py-4 rounded-2xl hover:bg-cyan-600 transition-all shadow-lg shadow-cyan-100 relative z-10 text-lg"
-                >
-                  자세히 알아보기
-                </Link>
-              </div>
-            ))}
+                전체 목록 보기 ↺
+              </button>
+            )}
           </div>
+
+          {filteredBenefits.length === 0 ? (
+            <div className="text-center py-16 bg-white rounded-3xl border border-slate-100 shadow-sm">
+              <span className="text-5xl mb-4 block">😢</span>
+              <h3 className="text-xl font-bold text-slate-700 mb-2">조건에 딱 맞는 혜택을 찾지 못했어요</h3>
+              <p className="text-slate-500 mb-6 font-medium">다른 조건으로 다시 검색하거나 전체 목록을 확인해보세요.</p>
+              <button
+                onClick={() => setIsDiagnosisActive(false)}
+                className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-bold rounded-xl transition-colors shadow-lg shadow-cyan-100"
+              >
+                전체 혜택 목록 보기
+              </button>
+              <div className="mt-8">
+                <h3 className="text-xl font-extrabold text-slate-800 mb-6 flex items-center gap-2">
+                  <span>💡</span> 요즘 많이 찾는 이런 혜택은 어떠신가요?
+                </h3>
+                <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+                  {Array.from(uniqueBenefitsMap.values()).slice(0, 3).map((benefit, index) => (
+                    <div
+                      key={`rec-${benefit.id}-${index}`}
+                      className="group bg-white rounded-2xl shadow-sm border border-slate-100 p-6 hover:border-cyan-200 hover:shadow-lg transition-all duration-300 relative overflow-hidden flex flex-col"
+                    >
+                      <div className="flex flex-col gap-2 mb-4 relative z-10">
+                        <span className="self-start bg-cyan-50 text-cyan-600 text-sm font-bold px-3 py-1 rounded-full">
+                          {benefit.category}
+                        </span>
+                        <h4 className="font-extrabold text-xl text-slate-900 group-hover:text-cyan-500 transition-colors line-clamp-1">{benefit.name}</h4>
+                      </div>
+                      <p className="text-slate-600 text-base mb-6 flex-grow leading-relaxed relative z-10 line-clamp-2">
+                        {benefit.summary}
+                      </p>
+                      <Link
+                        href={`/detail/${(benefit as any).type}/${benefit.id}`}
+                        className="w-full text-center bg-slate-50 text-slate-700 font-bold py-3 rounded-xl hover:bg-cyan-50 hover:text-cyan-600 transition-all text-base"
+                      >
+                        자세히 알아보기
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div className="grid gap-8 sm:grid-cols-2">
+              {filteredBenefits.map((benefit, index) => (
+                <div
+                  key={`${benefit.id}-${benefit.name}-${index}`}
+                  className="group bg-white rounded-[32px] shadow-sm border border-slate-100 p-8 hover:border-cyan-200 hover:shadow-2xl transition-all duration-500 relative overflow-hidden flex flex-col"
+                >
+                  <div className="absolute -right-6 -top-6 w-32 h-32 bg-cyan-50 rounded-full opacity-30 group-hover:scale-125 transition-transform duration-700"></div>
+
+                  <div className="flex flex-col gap-3 mb-6 relative z-10">
+                    <span className="self-start bg-cyan-50 text-cyan-600 text-[13px] font-bold px-4 py-1.5 rounded-full">
+                      {benefit.category}
+                    </span>
+                    <h3 className="font-extrabold text-2xl sm:text-3xl text-slate-900 group-hover:text-cyan-500 transition-colors">{benefit.name}</h3>
+                  </div>
+
+                  <p className="text-slate-600 mb-8 flex-grow leading-relaxed relative z-10 text-lg font-medium">
+                    {benefit.summary}
+                  </p>
+
+                  <div className="space-y-4 text-sm sm:text-base text-slate-600 bg-slate-50 p-6 rounded-2xl relative z-10 mb-8 border border-slate-100">
+                    {benefit.target && (
+                      <p className="flex items-start gap-3">
+                        <span className="font-bold min-w-[45px] text-slate-400">대상</span>
+                        <span className="font-semibold">{benefit.target}</span>
+                      </p>
+                    )}
+                    <p className="flex items-start gap-3">
+                      <span className="font-bold min-w-[45px] text-slate-400">기간</span>
+                      <span className="font-semibold">{benefit.startDate === '상시' ? '상시 진행' : `${benefit.startDate} ~ ${benefit.endDate}`}</span>
+                    </p>
+                  </div>
+
+                  <Link
+                    href={`/detail/${(benefit as any).type}/${benefit.id}`}
+                    className="w-full text-center bg-cyan-500 text-white font-black py-4 rounded-2xl hover:bg-cyan-600 transition-all shadow-lg shadow-cyan-100 relative z-10 text-lg"
+                  >
+                    자세히 알아보기
+                  </Link>
+                </div>
+              ))}
+            </div>
+          )}
         </section>
 
         {/* Promo Banner */}
