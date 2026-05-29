@@ -428,6 +428,44 @@ export default function Home() {
     return `https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80`; // 기본 풍경
   };
 
+  const createEventSchema = (event: LocalInfo) => ({
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": event.name,
+    "startDate": event.startDate || new Date().toISOString().split('T')[0],
+    "endDate": event.endDate && event.endDate !== "상시" ? event.endDate : "2027-12-31",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "location": {
+      "@type": "Place",
+      "name": event.location || "수도권 일대",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": event.region || "Seoul",
+        "addressCountry": "KR"
+      }
+    },
+    "image": [getEventImage(event.name)],
+    "description": event.summary,
+    "performer": {
+      "@type": "PerformingGroup",
+      "name": "모아팁스 행사팀"
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "모아팁스",
+      "url": "https://moa-tips.com"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": event.link || "https://moa-tips.com",
+      "price": "0",
+      "priceCurrency": "KRW",
+      "availability": "https://schema.org/InStock",
+      "validFrom": event.startDate || new Date().toISOString().split('T')[0]
+    }
+  });
+
   return (
     <main className="min-h-screen bg-[#F8FAFC] pb-20">
       {/* 구조화 데이터: Event & GovernmentService */}
@@ -435,60 +473,9 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
-            ...(localDataState.events || []).map(event => ({
-              "@context": "https://schema.org",
-              "@type": "Event",
-              "name": event.name,
-              "startDate": event.startDate,
-              "endDate": event.endDate,
-              "location": {
-                "@type": "Place",
-                "name": event.location,
-                "address": {
-                  "@type": "PostalAddress",
-                  "addressLocality": "Songpa-gu",
-                  "addressRegion": "Seoul",
-                  "addressCountry": "KR"
-                }
-              },
-              "description": event.summary
-            })),
-            ...(localDataState.cultureEvents || []).map(event => ({
-              "@context": "https://schema.org",
-              "@type": "Event",
-              "name": event.name,
-              "startDate": event.startDate,
-              "endDate": event.endDate,
-              "location": {
-                "@type": "Place",
-                "name": event.location,
-                "address": {
-                  "@type": "PostalAddress",
-                  "addressLocality": "Songpa-gu",
-                  "addressRegion": "Seoul",
-                  "addressCountry": "KR"
-                }
-              },
-              "description": event.summary
-            })),
-            ...(localDataState.exhibitionEvents || []).map(event => ({
-              "@context": "https://schema.org",
-              "@type": "Event",
-              "name": event.name,
-              "startDate": event.startDate,
-              "endDate": event.endDate,
-              "location": {
-                "@type": "Place",
-                "name": event.location,
-                "address": {
-                  "@type": "PostalAddress",
-                  "addressLocality": "Songpa-gu",
-                  "addressRegion": "Seoul",
-                  "addressCountry": "KR"
-                }
-              },
-              "description": event.summary
-            })),
+            ...(localDataState.events || []).map(createEventSchema),
+            ...(localDataState.cultureEvents || []).map(createEventSchema),
+            ...(localDataState.exhibitionEvents || []).map(createEventSchema),
             ...(localDataState.benefits || []).map(benefit => ({
               "@context": "https://schema.org",
               "@type": "GovernmentService",
