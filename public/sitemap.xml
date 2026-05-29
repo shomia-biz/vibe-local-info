@@ -2,31 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://moa-tips.com/</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://moa-tips.com/blog/</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://moa-tips.com/about/</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://moa-tips.com/contact/</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://moa-tips.com/fortune/</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -187,7 +187,19 @@
     <lastmod>2026-05-28</lastmod>
   </url>
   <url>
+    <loc>https://moa-tips.com/blog/2026-05-28-jeokbyeokga-pansori/</loc>
+    <lastmod>2026-05-28</lastmod>
+  </url>
+  <url>
     <loc>https://moa-tips.com/blog/2026-05-28-paula-peter-panini/</loc>
+    <lastmod>2026-05-28</lastmod>
+  </url>
+  <url>
+    <loc>https://moa-tips.com/blog/2026-05-28-seoul-gallery-mime-performance/</loc>
+    <lastmod>2026-05-28</lastmod>
+  </url>
+  <url>
+    <loc>https://moa-tips.com/blog/2026-05-28-yongsan-museum-concert/</loc>
     <lastmod>2026-05-28</lastmod>
   </url>
 </urlset>

@@ -428,7 +428,7 @@ export default function Home() {
     return `https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80`; // 기본 풍경
   };
 
-  const createEventSchema = (event: LocalInfo) => ({
+  const createEventSchema = (event: any) => ({
     "@context": "https://schema.org",
     "@type": "Event",
     "name": event.name,
