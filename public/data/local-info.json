@@ -1,6 +1,20 @@
 {
   "events": [
     {
+      "name": "15m 거대 주황버섯 22일 석촌호수 상륙",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-05-22",
+      "endDate": "2026-06-21",
+      "location": "석촌호수 동호일대 / 송파구청",
+      "target": "송파구민 및 일반 대중",
+      "summary": "5월 22일부터 한 달간 석촌호수에 메이플스토리 ‘주황버섯’ 아트벌룬 전시,야간엔 라이트업으로 이색 야경 선사, 스탬프 랠리·버블쇼 등 즐길거리 풍성, 석촌호수 맛집 영수증 챙기면 3천만 원 상당 경품이 팡팡",
+      "link": "https://www.songpa.go.kr/www/selectBbsNttView.do?key=2781&bbsNo=96&nttNo=19276535",
+      "imageUrl": "https://www.songpa.go.kr/common/images/layout/thumbnail.png?v=20230914",
+      "id": 1778713506266,
+      "updatedAt": "2026-05-30"
+    },
+    {
       "name": "[구로문화재단] 퓨전국악 콘서트_6월의 퀸(Queen)",
       "category": "행사",
       "region": "서울",
@@ -861,6 +875,20 @@
   ],
   "benefits": [
     {
+      "name": "광진구 1인가구지원센터 [동행지원] <일상, 선물> 6월 프로그램",
+      "category": "혜택",
+      "region": "서울",
+      "startDate": "2026-06-01",
+      "endDate": "2026-06-03",
+      "location": "광진구1인가구지원센터",
+      "target": "서울 생활권 1인가구 중 기준중위소득 120% 이하 (기초생활수급자, 차상위 제외)",
+      "summary": "서울시 생활권 1인가구의 일상생활을 지원하기 위해 오아시스마켓 90,000 포인트를 제공하는 동행지원사업 <일상, 선물>의 6월 참여자를 모집합니다.",
+      "link": "https://www.1lifegj.or.kr/main/sub.html?pageCode=15&page=1&num=336&processType=view",
+      "imageUrl": "https://www.1lifegj.or.kr/user/saveDir/editor/202605/26JdYLIaZ3HM2c.jpg",
+      "id": 1778713506264,
+      "updatedAt": "2026-05-30"
+    },
+    {
       "name": "서울형 아이돌봄비 지원사업",
       "category": "혜택",
       "region": "서울",
@@ -1269,6 +1297,20 @@
   ],
   "cultureEvents": [
     {
+      "name": "제30회 송파구립교향악단 정기연주회",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-06-18",
+      "endDate": "2026-06-18",
+      "location": "송파문화예술회관/송파구청",
+      "target": "송파구민 및 서울 시민",
+      "summary": "삶의 파동: 환희에서 비극까지, 2026년 6월 18일(목) 오후 7시30분 송파 문화예술회관, 관람료 : 무료, 네이버 예약 :: 송파구립교향악단 제30회 정기연주회 삶의 파동 : 환희에서 비극까지 (링크 클릭) 1인 4매 제한",
+      "link": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=92&nttNo=19276733&&pageUnit=10&key=2775&pageIndex=1",
+      "imageUrl": "https://www.songpa.go.kr/common/images/layout/thumbnail.png?v=20230914",
+      "id": 1778713506265,
+      "updatedAt": "2026-05-30"
+    },
+    {
       "name": "[서울 문화의 밤] 6월 작가힙톡(Hip-Talk) - 운동하면 좋은 걸 누가 모르냐고요(하주원)",
       "category": "문화",
       "region": "서울",
@@ -1368,6 +1410,20 @@
     }
   ],
   "seoulCultureEvents": [
+    {
+      "name": "제30회 송파구립교향악단 정기연주회",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-06-18",
+      "endDate": "2026-06-18",
+      "location": "송파문화예술회관/송파구청",
+      "target": "송파구민 및 서울 시민",
+      "summary": "삶의 파동: 환희에서 비극까지, 2026년 6월 18일(목) 오후 7시30분 송파 문화예술회관, 관람료 : 무료, 네이버 예약 :: 송파구립교향악단 제30회 정기연주회 삶의 파동 : 환희에서 비극까지 (링크 클릭) 1인 4매 제한네이버 예약 :: 송파구립교향악단 제30회 정기연주회 삶의 파동 : 환희에서 비극까지 (링크 클릭) 1인 4매 제",
+      "link": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=92&nttNo=19276733&&pageUnit=10&key=2775&pageIndex=1",
+      "imageUrl": "https://www.songpa.go.kr/common/images/layout/thumbnail.png?v=20230914",
+      "id": 1778713506265,
+      "updatedAt": "2026-05-30"
+    },
     {
       "name": "[서울 문화의 밤] 6월 작가힙톡(Hip-Talk) - 운동하면 좋은 걸 누가 모르냐고요(하주원)",
       "category": "문화",
@@ -1827,6 +1883,20 @@
   ],
   "nationalExhibitionEvents": [],
   "seoulEvents": [
+    {
+      "name": "15m 거대 주황버섯   22일 석촌호수 상륙",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-05-22",
+      "endDate": "2026-06-21",
+      "location": "석촌호수 동호일대 / 송파구청",
+      "target": "송파구민 및 일반 대중",
+      "summary": "5월 22일부터 한 달간 석촌호수에 메이플스토리 ‘주황버섯’ 아트벌룬 전시,야간엔 라이트업으로 이색 야경 선사, 스탬프 랠리·버블쇼 등 즐길거리 풍성, 석촌호수 맛집 영수증 챙기면 3천만 원 상당 경품이 팡팡",
+      "link": "https://www.songpa.go.kr/www/selectBbsNttView.do?key=2781&bbsNo=96&nttNo=19276535",
+      "imageUrl": "https://www.songpa.go.kr/common/images/layout/thumbnail.png?v=20230914",
+      "id": 1778713506266,
+      "updatedAt": "2026-05-30"
+    },
     {
       "name": "[구로문화재단] 퓨전국악 콘서트_6월의 퀸(Queen)",
       "category": "행사",
@@ -2777,6 +2847,20 @@
     }
   ],
   "seoulBenefits": [
+    {
+      "name": "광진구 1인가구지원센터 [동행지원] <일상, 선물> 6월 프로그램",
+      "category": "혜택",
+      "region": "서울",
+      "startDate": "2026-06-01",
+      "endDate": "2026-06-03",
+      "location": "광진구1인가구지원센터",
+      "target": "서울 생활권 1인가구 중 기준중위소득 120% 이하 (기초생활수급자, 차상위 제외)",
+      "summary": "서울시 생활권 1인가구의 일상생활을 지원하기 위해 오아시스마켓 90,000 포인트를 제공하는 동행지원사업 <일상, 선물>의 6월 참여자를 모집합니다.",
+      "link": "https://www.1lifegj.or.kr/main/sub.html?pageCode=15&page=1&num=336&processType=view",
+      "imageUrl": "https://www.1lifegj.or.kr/user/saveDir/editor/202605/26JdYLIaZ3HM2c.jpg",
+      "id": 1778713506264,
+      "updatedAt": "2026-05-30"
+    },
     {
       "name": "서울형 아이돌봄비 지원사업",
       "category": "혜택",
