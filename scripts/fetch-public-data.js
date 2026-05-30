@@ -250,7 +250,7 @@ async function fetchData() {
   const cleanKey = (key) => key ? key.replace(/^\[[^\]]+\]\s*/, '').trim() : '';
 
   const PUBLIC_DATA_API_KEY = cleanKey(process.env.PUBLIC_DATA_API_KEY);
-  const GEMINI_API_KEY = cleanKey(process.env.GEMINI_API_KEY);
+  const GEMINI_API_KEY = cleanKey(process.env.GEMINI_API_KEY || process.env.NEXT_PUBLIC_GEMINI_API_KEY);
   const SEOUL_DATA_API_KEY = cleanKey(process.env.SEOUL_DATA_API_KEY);
   const KYEONGGI_DATA_API_KEY = cleanKey(process.env.KYEONGGI_DATA_API_KEY);
   // 오타 방지 (__ 기입 대응)

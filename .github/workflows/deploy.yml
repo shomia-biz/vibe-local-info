@@ -36,6 +36,7 @@ jobs:
         env:
           PUBLIC_DATA_API_KEY: ${{ secrets.PUBLIC_DATA_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          NEXT_PUBLIC_GEMINI_API_KEY: ${{ secrets.NEXT_PUBLIC_GEMINI_API_KEY }}
           SEOUL_DATA_API_KEY: ${{ secrets.SEOUL_DATA_API_KEY }}
           KYEONGGI_DATA_API_KEY: ${{ secrets.KYEONGGI_DATA_API_KEY }}
           INCHEON_DATA_API_KEY: ${{ secrets.INCHEON_DATA_API_KEY }}

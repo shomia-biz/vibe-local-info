@@ -6,9 +6,9 @@ import Link from 'next/link';
 export default function QnaPage() {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
-  
-  // 관리자 이메일 주소 (이곳에 실제 회원님의 이메일을 적어주세요)
-  const ADMIN_EMAIL = 'admin@example.com';
+
+  // 관리자 이메일 주소
+  const ADMIN_EMAIL = 'omnia.ahn.biz@gmail.com';
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -49,30 +49,30 @@ export default function QnaPage() {
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label className="block text-sm font-bold text-slate-700 mb-2">문의 제목</label>
-              <input 
-                type="text" 
-                value={title} 
-                onChange={e => setTitle(e.target.value)} 
-                className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-cyan-500 outline-none transition-shadow" 
-                placeholder="예: 청년 지원금 신청 기간이 언제인가요?" 
-                required 
+              <input
+                type="text"
+                value={title}
+                onChange={e => setTitle(e.target.value)}
+                className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-cyan-500 outline-none transition-shadow"
+                placeholder="예: 청년 지원금 신청 기간이 언제인가요?"
+                required
               />
             </div>
-            
+
             <div>
               <label className="block text-sm font-bold text-slate-700 mb-2">문의 내용</label>
-              <textarea 
-                value={content} 
-                onChange={e => setContent(e.target.value)} 
-                className="w-full h-48 px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-cyan-500 outline-none resize-none transition-shadow" 
-                placeholder="궁금한 사항을 상세히 적어주세요." 
+              <textarea
+                value={content}
+                onChange={e => setContent(e.target.value)}
+                className="w-full h-48 px-4 py-3 border border-slate-300 rounded-xl focus:ring-2 focus:ring-cyan-500 outline-none resize-none transition-shadow"
+                placeholder="궁금한 사항을 상세히 적어주세요."
                 required
               ></textarea>
             </div>
 
             <div className="pt-2">
-              <button 
-                type="submit" 
+              <button
+                type="submit"
                 className="w-full py-4 bg-cyan-600 text-white font-bold text-lg rounded-xl shadow-md hover:bg-cyan-700 transition-colors flex items-center justify-center gap-2"
               >
                 <span>🚀</span> 관리자 이메일로 전송하기
