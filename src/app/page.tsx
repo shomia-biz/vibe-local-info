@@ -340,11 +340,11 @@ export default function Home() {
   const uniqueBenefitsMap = new Map<string, any>();
 
   [
-    ...(localDataState.benefits || []).map(b => ({ ...b, type: "benefits", region: "전국" })),
-    ...(localDataState.seoulBenefits || []).map(b => ({ ...b, type: "seoulBenefits", region: "서울" })),
-    ...(localDataState.kyeonggiBenefits || []).map(b => ({ ...b, type: "kyeonggiBenefits", region: "경기" })),
-    ...(localDataState.incheonBenefits || []).map(b => ({ ...b, type: "incheonBenefits", region: "인천" })),
-    ...(localDataState.nationalBenefits || []).map(b => ({ ...b, type: "nationalBenefits", region: "전국" }))
+    ...(localDataState.benefits || []).map(b => ({ ...b, type: "benefits", region: (b as any).region || "전국" })),
+    ...(localDataState.seoulBenefits || []).map(b => ({ ...b, type: "seoulBenefits", region: (b as any).region || "서울" })),
+    ...(localDataState.kyeonggiBenefits || []).map(b => ({ ...b, type: "kyeonggiBenefits", region: (b as any).region || "경기" })),
+    ...(localDataState.incheonBenefits || []).map(b => ({ ...b, type: "incheonBenefits", region: (b as any).region || "인천" })),
+    ...(localDataState.nationalBenefits || []).map(b => ({ ...b, type: "nationalBenefits", region: (b as any).region || "전국" }))
   ].forEach(benefit => {
     const key = benefit.name;
     if (!uniqueBenefitsMap.has(key)) {
@@ -378,6 +378,8 @@ export default function Home() {
           targetMatch = textToSearch.includes('청년') || textToSearch.includes('대학생') || textToSearch.includes('20대') || textToSearch.includes('30대');
         } else if (diagnosisTarget === '어르신') {
           targetMatch = textToSearch.includes('어르신') || textToSearch.includes('노인') || textToSearch.includes('고령') || textToSearch.includes('100세') || textToSearch.includes('실버');
+        } else if (diagnosisTarget === '1인가구') {
+          targetMatch = textToSearch.includes('1인가구') || textToSearch.includes('일인가구') || textToSearch.includes('혼자') || textToSearch.includes('자취');
         }
         return targetMatch;
       }
@@ -553,6 +555,7 @@ export default function Home() {
                 <option value="육아">육아 / 임산부 / 어린이</option>
                 <option value="청년">청년 / 대학생</option>
                 <option value="어르신">어르신 / 고령자</option>
+                <option value="1인가구">1인가구 / 혼자 거주</option>
               </select>
             </div>
 
