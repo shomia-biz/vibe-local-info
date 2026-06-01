@@ -102,35 +102,44 @@ async function scrapeImageFromUrl(url) {
 function getRowName(row, source) {
   if (!row) return '이름 없음';
 
+  const upperRow = {};
+  for (const key in row) {
+    upperRow[key.toUpperCase()] = row[key];
+  }
+
   // 1. 공통 표준 필드 탐색
-  const commonKeys = ['title', 'TITLE', 'name', 'NAME', 'subject', 'SUBJECT', '서비스명'];
+  const commonKeys = ['TITLE', 'NAME', 'SUBJECT', '서비스명'];
   for (const key of commonKeys) {
-    if (row[key]) return row[key].trim();
+    if (upperRow[key]) return upperRow[key].toString().trim();
   }
 
   // 2. 경기도 Open API 전용 매칭
   if (source && source.startsWith('GG_')) {
-    if (source === 'GG_FESTIVAL') return (row.FASTVL_NM || row.FSTVL_NM || '').trim();
-    if (source === 'GG_EVENT') return (row.TITLE || row.EVENT_NM || '').trim();
-    if (source === 'GG_PERFORMANCE') return (row.EVENT_TITLE || row.PERFRM_NM || '').trim();
-    if (source === 'GG_KINTEX') return (row.EVENT_NM_INFO || row.EVENT_NM || '').trim();
+    if (source === 'GG_FESTIVAL') return (upperRow.FASTVL_NM || upperRow.FSTVL_NM || '').toString().trim();
+    if (source === 'GG_EVENT') return (upperRow.TITLE || upperRow.EVENT_NM || '').toString().trim();
+    if (source === 'GG_PERFORMANCE') return (upperRow.EVENT_TITLE || upperRow.PERFRM_NM || '').toString().trim();
+    if (source === 'GG_KINTEX') return (upperRow.EVENT_NM_INFO || upperRow.EVENT_NM || '').toString().trim();
     if (source === 'GG_BENEFIT') {
-      if (row.SM_TITLE) return row.SM_TITLE.trim();
-      if (row.SIGUN_NM) return `${row.SIGUN_NM.trim()} 어린이 청소년 교통비 지원금`;
+      if (upperRow.SM_TITLE) return upperRow.SM_TITLE.toString().trim();
+      if (upperRow.SIGUN_NM) {
+        let bName = `${upperRow.SIGUN_NM.toString().trim()} 지원금`;
+        if (upperRow.HFTM_DIV_NM) bName = `${upperRow.HFTM_DIV_NM.toString().trim()} ` + bName;
+        if (upperRow.STD_YY) bName = `${upperRow.STD_YY.toString().trim()}년 ` + bName;
+        return bName;
+      }
     }
 
     // 경기도 범용 키 탐색
     const ggKeys = ['FASTVL_NM', 'TITLE', 'EVENT_TITLE', 'EVENT_NM_INFO', 'EVENT_NM', 'FSTVL_NM', 'PERFRM_NM', 'SM_TITLE'];
     for (const key of ggKeys) {
-      if (row[key]) return row[key].trim();
+      if (upperRow[key]) return upperRow[key].toString().trim();
     }
   }
 
   // 3. 패턴 매칭 탐색 (_NM, _TITLE, _NAME 등으로 끝나는 키)
-  for (const key in row) {
-    const upperKey = key.toUpperCase();
-    if (upperKey.endsWith('_NM') || upperKey.endsWith('_TITLE') || upperKey.endsWith('_NAME') || upperKey.endsWith('_INFO')) {
-      if (row[key]) return row[key].trim();
+  for (const key in upperRow) {
+    if (key.endsWith('_NM') || key.endsWith('_TITLE') || key.endsWith('_NAME') || key.endsWith('_INFO')) {
+      if (upperRow[key]) return upperRow[key].toString().trim();
     }
   }
 
@@ -217,6 +226,34 @@ function getRowStartDate(row) {
     }
   }
   return null;
+}
+
+// 데이터 내의 연도 필드(STD_YY 등)나 제목에 포함된 연도가 현재 연도보다 과거인지 체크하는 함수
+function isYearOutdated(row, nameStr) {
+  const currentYear = new Date().getFullYear();
+  
+  // 1. 객체 내 연도 필드 탐색
+  for (const key in row) {
+    if (key.toUpperCase() === 'STD_YY' || key.toUpperCase() === 'YEAR') {
+      const year = parseInt(row[key], 10);
+      if (!isNaN(year) && year < currentYear) {
+        return true;
+      }
+    }
+  }
+
+  // 2. 제목에 적힌 연도 탐색 (예: "2024년 상반기 지원금")
+  if (nameStr) {
+    const match = nameStr.match(/(20\d{2})년/);
+    if (match && match[1]) {
+      const year = parseInt(match[1], 10);
+      if (!isNaN(year) && year < currentYear) {
+        return true;
+      }
+    }
+  }
+
+  return false;
 }
 
 // StartDate 가 조회 기준(오늘) 30일 이전인지 체크하는 함수
@@ -361,6 +398,7 @@ async function fetchData() {
     const freshItems = filteredItems.filter(item => {
       const dateStr = getRowStartDate(item);
       if (isDateOlderThan30Days(dateStr)) return false;
+      if (isYearOutdated(item, item.서비스명)) return false;
       return item.서비스명 && !isDuplicateTitle(item.서비스명, existingNames);
     });
     for (const item of freshItems) {
@@ -401,6 +439,7 @@ async function fetchData() {
           const name = getRowName(row, api.name);
           const dateStr = getRowStartDate(row);
           if (isDateOlderThan30Days(dateStr)) return false;
+          if (isYearOutdated(row, name)) return false;
           return name && name !== '이름 없음' && !isDuplicateTitle(name, existingNames);
         });
         for (const row of freshGG) {
