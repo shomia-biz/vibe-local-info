@@ -298,7 +298,7 @@ async function fetchData() {
     return;
   }
 
-  const MAX_ITEMS = 10;
+  const MAX_ITEMS = 100;
   const dataPath = path.join(process.cwd(), 'public/data/local-info.json');
   const defaultLocalData = {
     events: [], benefits: [],
@@ -371,7 +371,8 @@ async function fetchData() {
 
   // A. 정부24 스캔
   try {
-    const publicDataUrl = `https://api.odcloud.kr/api/gov24/v3/serviceList?page=1&perPage=50&returnType=JSON&serviceKey=${PUBLIC_DATA_API_KEY}`;
+    const gov24RandomPage = Math.floor(Math.random() * 10) + 1; // 1~10페이지 중 무작위 선택
+    const publicDataUrl = `https://api.odcloud.kr/api/gov24/v3/serviceList?page=${gov24RandomPage}&perPage=100&returnType=JSON&serviceKey=${PUBLIC_DATA_API_KEY}`;
     const response = await fetch(publicDataUrl);
     const text = await response.text();
     let result;
@@ -412,12 +413,13 @@ async function fetchData() {
   }
 
   // B. 경기도 오픈 API 스캔
+  const ggRandomPage = Math.floor(Math.random() * 5) + 1; // 1~5페이지 중 무작위 선택
   const kyeonggiEndpoints = [
-    { name: 'GG_FESTIVAL', url: `https://openapi.gg.go.kr/CultureFestival?KEY=${KYEONGGI_DATA_API_KEY}&Type=json&pIndex=1&pSize=30`, key: 'CultureFestival', nameField: 'FSTVL_NM' },
-    { name: 'GG_EVENT', url: `https://openapi.gg.go.kr/GGCULTUREVENTSTUS?KEY=${KYEONGGI_DATA_API_KEY}&Type=json&pIndex=1&pSize=30`, key: 'GGCULTUREVENTSTUS', nameField: 'EVENT_NM' },
-    { name: 'GG_PERFORMANCE', url: `https://openapi.gg.go.kr/PerformanceEvent?KEY=${KYEONGGI_DATA_API_KEY}&Type=json&pIndex=1&pSize=30`, key: 'PerformanceEvent', nameField: 'PERFRM_NM' },
-    { name: 'GG_KINTEX', url: `https://openapi.gg.go.kr/KintexEventFixatn?KEY=${KYEONGGI_DATA_API_KEY}&Type=json&pIndex=1&pSize=30`, key: 'KintexEventFixatn', nameField: 'EVENT_NM' },
-    { name: 'GG_BENEFIT', url: `https://openapi.gg.go.kr/GGYOUNGBGTRNSSAMTSTUS?KEY=${KYEONGGI_DATA_API_KEY}&Type=json&pIndex=1&pSize=30`, key: 'GGYOUNGBGTRNSSAMTSTUS', nameField: 'SM_TITLE' }
+    { name: 'GG_FESTIVAL', url: `https://openapi.gg.go.kr/CultureFestival?KEY=${KYEONGGI_DATA_API_KEY}&Type=json&pIndex=${ggRandomPage}&pSize=50`, key: 'CultureFestival', nameField: 'FSTVL_NM' },
+    { name: 'GG_EVENT', url: `https://openapi.gg.go.kr/GGCULTUREVENTSTUS?KEY=${KYEONGGI_DATA_API_KEY}&Type=json&pIndex=${ggRandomPage}&pSize=50`, key: 'GGCULTUREVENTSTUS', nameField: 'EVENT_NM' },
+    { name: 'GG_PERFORMANCE', url: `https://openapi.gg.go.kr/PerformanceEvent?KEY=${KYEONGGI_DATA_API_KEY}&Type=json&pIndex=${ggRandomPage}&pSize=50`, key: 'PerformanceEvent', nameField: 'PERFRM_NM' },
+    { name: 'GG_KINTEX', url: `https://openapi.gg.go.kr/KintexEventFixatn?KEY=${KYEONGGI_DATA_API_KEY}&Type=json&pIndex=${ggRandomPage}&pSize=50`, key: 'KintexEventFixatn', nameField: 'EVENT_NM' },
+    { name: 'GG_BENEFIT', url: `https://openapi.gg.go.kr/GGYOUNGBGTRNSSAMTSTUS?KEY=${KYEONGGI_DATA_API_KEY}&Type=json&pIndex=${ggRandomPage}&pSize=50`, key: 'GGYOUNGBGTRNSSAMTSTUS', nameField: 'SM_TITLE' }
   ];
 
   for (const api of kyeonggiEndpoints) {
@@ -510,7 +512,9 @@ async function fetchData() {
 
   // D. 서울시 문화행사 API 스캔
   try {
-    const seoulUrl = `http://openAPI.seoul.go.kr:8088/${SEOUL_DATA_API_KEY}/json/culturalEventInfo/1/100/`;
+    const seoulStart = Math.floor(Math.random() * 5) * 100 + 1; // 1, 101, 201, 301, 401 중 무작위 선택
+    const seoulEnd = seoulStart + 99;
+    const seoulUrl = `http://openAPI.seoul.go.kr:8088/${SEOUL_DATA_API_KEY}/json/culturalEventInfo/${seoulStart}/${seoulEnd}/`;
     const res = await fetch(seoulUrl);
     const text = await res.text();
     let json;
@@ -544,10 +548,12 @@ async function fetchData() {
   }
 
   // E. 한국관광공사 웰니스관광 API 스캔 (contentTypeId: 12, 14, 15 순환 스캔)
+  const ktoRandomPage = Math.floor(Math.random() * 3) + 1; // 1~3페이지 중 무작위 선택
   const typeIds = ['12', '14', '15'];
   for (const typeId of typeIds) {
     try {
-      const wellnessUrl = `http://apis.data.go.kr/B551011/WellnessTursmService/areaBasedList?serviceKey=${PUBLIC_DATA_API_KEY}&numOfRows=100&pageNo=1&MobileOS=ETC&MobileApp=AppTest&langDivCd=KOR&contentTypeId=${typeId}&arrange=C&_type=json`;
+      // arrange=D 로 변경하여 최신 등록순으로 가져옵니다.
+      const wellnessUrl = `http://apis.data.go.kr/B551011/WellnessTursmService/areaBasedList?serviceKey=${PUBLIC_DATA_API_KEY}&numOfRows=50&pageNo=${ktoRandomPage}&MobileOS=ETC&MobileApp=AppTest&langDivCd=KOR&contentTypeId=${typeId}&arrange=D&_type=json`;
       const res = await fetch(wellnessUrl);
       const text = await res.text();
       let json;
