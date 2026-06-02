@@ -494,6 +494,7 @@ async function fetchData() {
           const name = getRowName(row, api.name);
           const dateStr = getRowStartDate(row);
           if (isDateOlderThan30Days(dateStr)) return false;
+          if (isYearOutdated(row, name)) return false;
           return name && name !== '이름 없음' && !isDuplicateTitle(name, existingNames);
         });
         for (const row of freshIC) {
@@ -531,6 +532,7 @@ async function fetchData() {
       const freshSeoul = rows.filter(row => {
         const dateStr = getRowStartDate(row);
         if (isDateOlderThan30Days(dateStr)) return false;
+        if (isYearOutdated(row, row.TITLE)) return false;
         return row.TITLE && !isDuplicateTitle(row.TITLE, existingNames);
       });
       for (const row of freshSeoul) {
@@ -573,6 +575,7 @@ async function fetchData() {
         const freshWellness = items.filter(item => {
           const dateStr = getRowStartDate(item);
           if (isDateOlderThan30Days(dateStr)) return false;
+          if (isYearOutdated(item, item.title)) return false;
           return item.title && !isDuplicateTitle(item.title, existingNames);
         });
         for (const item of freshWellness) {
