@@ -114,6 +114,19 @@ export default function RootLayout({
           {children}
         </div>
 
+        {/* 카카오톡 채널 추가 플로팅 버튼 */}
+        <a 
+          href="http://pf.kakao.com/_CrWxjX?from=qr" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="fixed bottom-[5.5rem] right-6 z-[9998] flex items-center justify-center w-14 h-14 bg-[#FEE500] hover:bg-[#F4DC00] text-[#381E1F] rounded-full shadow-lg transition-transform hover:scale-110 active:scale-95 group"
+          aria-label="카카오톡 채널 추가"
+        >
+          <svg className="w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 3c-5.5 0-10 3.5-10 7.8 0 2.8 1.8 5.3 4.5 6.6-.2.6-1 3.5-1.1 3.9-.1.4.1.4.3.2.3-.2 4-2.7 4.7-3.1 1.1.2 2.2.3 3.3.3 5.5 0 10-3.5 10-7.8S17.5 3 12 3z"/>
+          </svg>
+        </a>
+
         {/* 채널톡 스타일 챗봇 */}
         <ChatBot />
       </body>

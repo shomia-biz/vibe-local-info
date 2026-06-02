@@ -142,6 +142,27 @@ export default async function PostPage({ params }: Props) {
           </ReactMarkdown>
         </div>
 
+        {/* 카카오톡 채널 추가 유도 배너 (게시글 하단) */}
+        <div className="mt-8 bg-[#FEE500]/10 border border-[#FEE500]/30 rounded-2xl p-6 sm:p-8 text-center shadow-sm">
+          <h3 className="text-lg sm:text-xl font-black text-slate-900 mb-2">
+            이 지원금, 신청 기간 놓치면 아쉽잖아요! 🥲
+          </h3>
+          <p className="text-slate-600 font-medium mb-6 text-sm sm:text-base break-keep">
+            카카오톡 친구 추가해 두시면 마감 임박 공고와 새로운 지원금 소식을 매주 카톡으로 편하게 받아보실 수 있습니다.
+          </p>
+          <a 
+            href="http://pf.kakao.com/_CrWxjX?from=qr" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 bg-[#FEE500] hover:bg-[#F4DC00] text-[#381E1F] font-extrabold px-6 py-3 rounded-full shadow-sm transition-all hover:scale-105"
+          >
+            <svg className="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 3c-5.5 0-10 3.5-10 7.8 0 2.8 1.8 5.3 4.5 6.6-.2.6-1 3.5-1.1 3.9-.1.4.1.4.3.2.3-.2 4-2.7 4.7-3.1 1.1.2 2.2.3 3.3.3 5.5 0 10-3.5 10-7.8S17.5 3 12 3z"/>
+            </svg>
+            무료로 카톡 알림 받기
+          </a>
+        </div>
+
         {/* 광고 영역 */}
         <AdBanner />
         <CoupangBanner />
