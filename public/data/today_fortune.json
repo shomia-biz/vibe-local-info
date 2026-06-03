@@ -5,17 +5,19 @@
             "type": "행운의 달빛 카드",
             "general": "마음에 평온한 바람이 불어오며 지친 일상이 따뜻하게 치유되는 기적 같은 하루가 시작될 거예요. 당신을 괴롭히던 고민들이 눈 녹듯 사라지고 마침내 깊은 휴식과 평화를 맞이하게 됩니다.",
             "lucky_item": "아로마 디퓨저",
-            "coupang_url": "https://link.coupang.com/a/ehARXJMzmu?abTestInfo=100412_group_A/?style=kakao_existing_ui",
-            "coupang_url": "https://link.coupang.com/a/ehGsifUVS8?abTestInfo=100412_group_A",
-            "coupang_url": "https://link.coupang.com/a/ehGuLVMXeK?abTestInfo=100412_group_A",
-            "coupang_url": "https://link.coupang.com/a/ehGxjRI39E?abTestInfo=100412_group_A",
-            "coupang_url": "https://link.coupang.com/a/ehGExoGjMO?abTestInfo=100412_group_A"
+            "coupang_urls": [
+                "https://link.coupang.com/a/ehARXJMzmu?abTestInfo=100412_group_A/?style=kakao_existing_ui",
+                "https://link.coupang.com/a/ehGsifUVS8?abTestInfo=100412_group_A",
+                "https://link.coupang.com/a/ehGuLVMXeK?abTestInfo=100412_group_A",
+                "https://link.coupang.com/a/ehGxjRI39E?abTestInfo=100412_group_A",
+                "https://link.coupang.com/a/ehGExoGjMO?abTestInfo=100412_group_A"
+            ]
         },
         {
             "type": "신비한 별빛 카드",
             "general": "반짝이는 별빛처럼 당신의 매력이 사방으로 퍼져나가며 소중한 인연이 찾아오고 연애 기운이 크게 상승할 거예요. 주변 사람들에게 따뜻한 관심과 사랑을 한몸에 받으며 행복한 웃음이 가득해집니다.",
             "lucky_item": "보습 립밤",
-            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=보습 립밤"
+            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=보습립밤"
         },
         {
             "type": "따뜻한 햇살 카드",

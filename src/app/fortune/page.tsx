@@ -6,7 +6,8 @@ interface FortuneCardData {
   type: string;
   general: string;
   lucky_item: string;
-  coupang_url: string;
+  coupang_url?: string;
+  coupang_urls?: string[];
 }
 
 interface FortuneData {
@@ -158,15 +159,34 @@ export default function FortunePage() {
                       <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl p-6 border border-slate-200/60 mt-auto">
                         <h3 className="text-xs font-black text-slate-400 mb-2 tracking-widest">🍀 오늘의 럭키 아이템</h3>
                         <p className="text-xl font-black text-rose-500 mb-6">{card.lucky_item}</p>
-                        <a
-                          href={card.coupang_url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-block w-full px-6 py-3.5 bg-rose-500 text-white font-black rounded-xl shadow-lg shadow-rose-200 hover:bg-rose-600 transition-colors text-sm"
-                          onClick={(e) => e.stopPropagation()}
-                        >
-                          구경하기 🎁
-                        </a>
+                        <div className="space-y-2 w-full">
+                          {card.coupang_urls ? (
+                            card.coupang_urls.map((url, idx) => (
+                              <a
+                                key={idx}
+                                href={url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-block w-full px-6 py-3.5 bg-rose-500 text-white font-black rounded-xl shadow-lg shadow-rose-200 hover:bg-rose-600 transition-colors text-sm"
+                                onClick={(e) => e.stopPropagation()}
+                              >
+                                추천 아이템 {idx + 1} 구경하기 🎁
+                              </a>
+                            ))
+                          ) : (
+                            card.coupang_url && (
+                              <a
+                                href={card.coupang_url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-block w-full px-6 py-3.5 bg-rose-500 text-white font-black rounded-xl shadow-lg shadow-rose-200 hover:bg-rose-600 transition-colors text-sm"
+                                onClick={(e) => e.stopPropagation()}
+                              >
+                                구경하기 🎁
+                              </a>
+                            )
+                          )}
+                        </div>
                         <p className="text-[10px] font-medium text-slate-400 mt-4 leading-tight">
                           이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
                         </p>
