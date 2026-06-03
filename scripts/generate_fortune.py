@@ -82,7 +82,7 @@ def generate_fortune_with_gemini():
             # 각 카드에 쿠팡 링크 추가
             for card in cards:
                 item = card.get("lucky_item", "행운의 머그컵")
-                "coupang_url": f"https://link.coupang.com/a/AF8906554?keyword={item}"
+                card["coupang_url"] = f"https://link.coupang.com/a/AF8906554?keyword={item}"
             
             return {
                 "date": datetime.now().strftime("%Y-%m-%d"),
