@@ -318,8 +318,6 @@ async function startManualWorkflow() {
 
     // 분류에 맞추어 밀어 넣기
     if (finalItem.category === '행사') {
-      if (!localData.events) localData.events = [];
-      localData.events.unshift(finalItem);
       switch (finalItem.region) {
         case '서울': 
           if (!localData.seoulEvents) localData.seoulEvents = [];
@@ -339,8 +337,6 @@ async function startManualWorkflow() {
           break;
       }
     } else if (finalItem.category === '문화') {
-      if (!localData.cultureEvents) localData.cultureEvents = [];
-      localData.cultureEvents.unshift(finalItem);
       switch (finalItem.region) {
         case '서울': 
           if (!localData.seoulCultureEvents) localData.seoulCultureEvents = [];
@@ -360,8 +356,6 @@ async function startManualWorkflow() {
           break;
       }
     } else if (finalItem.category === '전시') {
-      if (!localData.exhibitionEvents) localData.exhibitionEvents = [];
-      localData.exhibitionEvents.unshift(finalItem);
       switch (finalItem.region) {
         case '서울': 
           if (!localData.seoulExhibitionEvents) localData.seoulExhibitionEvents = [];
@@ -380,9 +374,7 @@ async function startManualWorkflow() {
           localData.nationalExhibitionEvents.unshift(finalItem); 
           break;
       }
-    } else {
-      if (!localData.benefits) localData.benefits = [];
-      localData.benefits.unshift(finalItem);
+    } else if (finalItem.category === '혜택') {
       switch (finalItem.region) {
         case '서울': 
           if (!localData.seoulBenefits) localData.seoulBenefits = [];

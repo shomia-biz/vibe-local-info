@@ -16,7 +16,7 @@ export default function CoupangBanner() {
         <div className="flex flex-col items-center">
           {/* 쿠팡 파트너스 다이내믹 배너 스크립트가 들어갈 자리 */}
           <iframe 
-            src={`https://ads-partners.coupang.com/widgets.html?id=${COUPANG_ID}&template=carousel&trackingCode=AF1234567&subId=blog`} 
+            src={`https://ads-partners.coupang.com/widgets.html?id=${COUPANG_ID}&template=carousel&trackingCode=AF8906554&subId=blog`} 
             width="100%" 
             height="140" 
             frameBorder="0" 

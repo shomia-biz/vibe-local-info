@@ -82,7 +82,7 @@ def generate_fortune_with_gemini():
             # 각 카드에 쿠팡 링크 추가
             for card in cards:
                 item = card.get("lucky_item", "행운의 머그컵")
-                card["coupang_url"] = f"https://link.coupang.com/a/your_id?keyword={item}"
+                "coupang_url": f"https://link.coupang.com/a/AF8906554?keyword={item}"
             
             return {
                 "date": datetime.now().strftime("%Y-%m-%d"),
@@ -104,19 +104,19 @@ def get_fallback_fortune():
                 "type": "금전운 상승 카드",
                 "general": "오늘은 뜻밖의 이익이 생기거나 좋은 소식을 들을 수 있는 날입니다. 작은 행운을 놓치지 마세요!",
                 "lucky_item": "가성비 무선 키보드",
-                "coupang_url": "https://link.coupang.com/a/your_id?keyword=무선키보드"
+                "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=무선키보드"
             },
             {
                 "type": "연애운 폭발 카드",
                 "general": "새로운 인연이나 반가운 연락이 올 수 있습니다. 주변 사람들에게 따뜻한 미소를 지어보세요.",
                 "lucky_item": "향기로운 디퓨저",
-                "coupang_url": "https://link.coupang.com/a/your_id?keyword=디퓨저"
+                "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=디퓨저"
             },
             {
                 "type": "평온한 힐링 카드",
                 "general": "바쁜 일상 속에서 나만을 위한 휴식이 필요한 날입니다. 커피 한 잔의 여유가 큰 힘이 될 것입니다.",
                 "lucky_item": "감성 무드등",
-                "coupang_url": "https://link.coupang.com/a/your_id?keyword=무드등"
+                "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=무드등"
             }
         ]
     }

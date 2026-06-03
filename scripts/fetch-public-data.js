@@ -372,7 +372,7 @@ async function fetchData() {
   // A. 정부24 스캔
   try {
     const gov24RandomPage = Math.floor(Math.random() * 10) + 1; // 1~10페이지 중 무작위 선택
-    const publicDataUrl = `https://api.odcloud.kr/api/gov24/v3/serviceList?page=${gov24RandomPage}&perPage=100&returnType=JSON&serviceKey=${PUBLIC_DATA_API_KEY}`;
+    const publicDataUrl = `https://api.odcloud.kr/api/gov24/v3/serviceList?page=${gov24RandomPage}&perPage=50&returnType=JSON&serviceKey=${PUBLIC_DATA_API_KEY}`;
     const response = await fetch(publicDataUrl);
     const text = await response.text();
     let result;
@@ -389,7 +389,10 @@ async function fetchData() {
     }
 
     const keywords = ['송파', '서울', '경기', '인천', '소상공인', '육아', '아동', '다자녀', '청소년', '학생', '청년', '출산', '창업', '전세사기', '유아', '영아', '국가장학금', '건강', '문화생활', '경로', '장애인', '부동산', '행정사무', '공공임대주택', '주택청약', '복지', '지원', '기초생활보장', '생계급여', '주거급여', '긴급복지지원', '국민취업지원', '고용보험', '실업급여', '건강보험', '국민연금', '국민건강보험', '건강보험공단', '국민취업지원', '월세', '친환경'];
-    const excludeKeywords = ['어업', '해운', '선박', '항만', '선원', '수산', '축산업', '축사', '임업', '농업', '해양사고', '방역', '경마', '경륜', '유기견', '유기묘', '보상', '동물보호', '해양', '북한이탈주민', '성매매', '국적상실', '국적회복', '국적취득', '소년원', '소년원법', '귀화'];
+    const excludeKeywords = [
+      '어업', '해운', '선박', '항만', '선원', '수산', '축산업', '축사', '임업', '농업', '해양사고', '방역', '경마', '경륜', '유기견', '유기묘', '보상', '동물보호', '해양', '북한이탈주민', '성매매', '국적상실', '국적회복', '국적취득', '소년원', '소년원법', '귀화',
+      '농가', '수의사', '구제역', '송아지', '브루셀라병', '공동방제단', '공공급식', '농촌맞춤형', '농촌아이돌봄지원', '농번기돌봄지원', '농촌형', '후계농업경영인', '전통발효식품', '과수거점산지', '과실브랜드', '과실전문', '고품질쌀유통', '미곡종합처리장', '도매유통활성화', '축산관련종사자', '인삼', '농산물', '산지유통', '국내채종', '친환경농산물', '밭작물', '동물용', '저탄소', '중소식품기업', '가축개량', '농식품', '살처분', '농지연금', '농촌융복합산업', '예방약품', '방역장비', '해외인증', '귀농', '귀촌', '공영도매시장', 'GAP', '대체초지조성비', '가축전염병', '농기계', '농촌', '경영회생지원', '농가사료', '외식기업', '꿀벌질병', '전략작물', '친환경퇴비', '경관보전', '이민여성', '산지저온', '화훼류', '습식유통', '과수', '식생활', '유기농업', '축산', '외식업체', '국제식품', '조사료', '농수산', '농기자재', '농업인', '임대농장', 'FA분야', '곤충산업', '축산악취', '스마트팜'
+    ];
 
     const filteredItems = rawItems.filter(item => {
       const targetText = (item.서비스명 || '') + (item.서비스목적요약 || '') + (item.지원대상 || '') + (item.소관기관명 || '');
@@ -613,8 +616,8 @@ async function fetchData() {
       const itemName = getRowName(rawItem, source);
       console.log(`🤖 [Gemini 정제 중...] 출처: ${source} | 명칭: ${itemName}`);
 
-      // 무료 AI 사용량 제한(1분당 15회)을 초과하지 않도록, 호출 전에 4.2초씩 안전하게 쉬어갑니다.
-      await sleep(4200);
+      // 무료 AI 사용량 제한(1분당 15회)을 초과하지 않도록, 호출 전에 8초씩 안전하게 쉬어갑니다.
+      await sleep(8000);
 
       const prompt = `아래 입력된 데이터 1건을 분석해서 규격화된 시스템용 JSON 데이터로 전환해줘.
       형식: {name: 서비스명또는행사명, category: '행사' 또는 '문화' 또는 '전시' 또는 '혜택', region: '서울' 또는 '경기' 또는 '인천' 또는 '전국', startDate: 'YYYY-MM-DD', endDate: 'YYYY-MM-DD', location: 장소 또는 기관명, target: 대상층, summary: 내용 요약설명, link: 링크주소}
@@ -634,9 +637,10 @@ async function fetchData() {
 
       let geminiResponse;
       let geminiResult;
-      let retries = 3;
+      const backoffDelays = [8000, 16000, 32000];
+      let attempt = 0;
 
-      while (retries > 0) {
+      while (attempt < backoffDelays.length) {
         let errDetail = '';
         try {
           geminiResponse = await fetch(geminiUrl, {
@@ -651,29 +655,14 @@ async function fetchData() {
           }
           
           errDetail = geminiResult.error ? geminiResult.error.message : JSON.stringify(geminiResult);
-          console.warn(`   ⚠️ Gemini API 요청 실패 (남은 시도: ${retries - 1}회). 원인: ${errDetail}`);
         } catch (fetchErr) {
           errDetail = fetchErr.message;
-          console.warn(`   ⚠️ Gemini API 통신 오류 (남은 시도: ${retries - 1}회). 원인: ${errDetail}`);
         }
 
-        retries--;
-        if (retries > 0) {
-          let waitMs = 5000; // 기본 대기 시간 5초
-          if (errDetail.includes('Please retry in')) {
-            const match = errDetail.match(/Please retry in ([\d\.]+)\s*s/);
-            if (match && match[1]) {
-              // API가 안내해 준 잔여 대기 시간에 1.5초 여유를 더해 안전하게 대기합니다.
-              waitMs = (parseFloat(match[1]) + 1.5) * 1000;
-              console.log(`   ⏳ API 사용량 초과! 안전을 위해 안내된 시간(${match[1]}초)보다 조금 더 넉넉히 대기합니다 (${(waitMs / 1000).toFixed(1)}초 대기)...`);
-            } else {
-              console.log(`   ⏳ 5초 후에 다시 시도합니다...`);
-            }
-          } else {
-            console.log(`   ⏳ 5초 후에 다시 시도합니다...`);
-          }
-          await sleep(waitMs);
-        }
+        const delay = backoffDelays[attempt];
+        console.warn(`   ⚠️ Gemini API 한도 초과 또는 오류. ${delay/1000}초 후 다시 시도합니다... (원인: ${errDetail})`);
+        await sleep(delay);
+        attempt++;
       }
 
       if (!geminiResult || !geminiResult.candidates || geminiResult.candidates.length === 0) {
@@ -726,7 +715,6 @@ async function fetchData() {
       // [4단계] 통합 및 지역 타겟 세부 분기 적재
       // ========================================================
       if (processedItem.category === '행사') {
-        localData.events.unshift(processedItem);
         switch (processedItem.region) {
           case '서울': localData.seoulEvents.unshift(processedItem); break;
           case '경기': localData.kyeonggiEvents.unshift(processedItem); break;
@@ -734,7 +722,6 @@ async function fetchData() {
           default: localData.nationalEvents.unshift(processedItem); break;
         }
       } else if (processedItem.category === '문화') {
-        localData.cultureEvents.unshift(processedItem);
         switch (processedItem.region) {
           case '서울': localData.seoulCultureEvents.unshift(processedItem); break;
           case '경기': localData.kyeonggiCultureEvents.unshift(processedItem); break;
@@ -742,7 +729,6 @@ async function fetchData() {
           default: localData.nationalCultureEvents.unshift(processedItem); break;
         }
       } else if (processedItem.category === '전시') {
-        localData.exhibitionEvents.unshift(processedItem);
         switch (processedItem.region) {
           case '서울': localData.seoulExhibitionEvents.unshift(processedItem); break;
           case '경기': localData.kyeonggiExhibitionEvents.unshift(processedItem); break;
@@ -750,7 +736,6 @@ async function fetchData() {
           default: localData.nationalExhibitionEvents.unshift(processedItem); break;
         }
       } else {
-        localData.benefits.unshift(processedItem);
         switch (processedItem.region) {
           case '서울': localData.seoulBenefits.unshift(processedItem); break;
           case '경기': localData.kyeonggiBenefits.unshift(processedItem); break;

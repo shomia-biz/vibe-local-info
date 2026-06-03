@@ -87,10 +87,10 @@ async function generatePost() {
       const latestItem = targetItems[i];
       console.log(`🤖 [${i + 1}/${targetItems.length}] "${latestItem.name}" 정보로 블로그 글 생성 중...`);
 
-      // API 과부하 및 속도 제한(RPM) 우회를 위해, 첫 번째 아이템이 아니라면 앞선 호출 후 4.5초 대기
+      // API 과부하 및 속도 제한(RPM) 우회를 위해, 첫 번째 아이템이 아니라면 앞선 호출 후 8초 대기
       if (i > 0) {
-        console.log(`⏳ 안정적인 생성을 위해 4.5초간 대기합니다...`);
-        await sleep(4500);
+        console.log(`⏳ 안정적인 생성을 위해 8초간 대기합니다...`);
+        await sleep(8000);
       }
 
       const prompt = `아래 공공서비스 정보를 바탕으로 검색엔진(SEO)에 최적화된 블로그 글을 작성해줘.
@@ -125,9 +125,10 @@ tags: [태그1, 태그2, tags3]
 
       let response;
       let result;
-      let retries = 3;
+      const backoffDelays = [8000, 16000, 32000];
+      let attempt = 0;
 
-      while (retries > 0) {
+      while (attempt < backoffDelays.length) {
         let errDetail = '';
         try {
           response = await fetch(geminiUrl, {
@@ -144,28 +145,14 @@ tags: [태그1, 태그2, tags3]
           }
 
           errDetail = result.error ? result.error.message : JSON.stringify(result);
-          console.warn(`   ⚠️ Gemini API 요청 실패 (남은 시도: ${retries - 1}회). 원인: ${errDetail}`);
         } catch (fetchErr) {
           errDetail = fetchErr.message;
-          console.warn(`   ⚠️ Gemini API 통신 오류 (남은 시도: ${retries - 1}회). 원인: ${errDetail}`);
         }
 
-        retries--;
-        if (retries > 0) {
-          let waitMs = 5000;
-          if (errDetail.includes('Please retry in')) {
-            const match = errDetail.match(/Please retry in ([\d\.]+)\s*s/);
-            if (match && match[1]) {
-              waitMs = (parseFloat(match[1]) + 1.5) * 1000;
-              console.log(`   ⏳ API 사용량 초과! 안내된 시간(${match[1]}초)보다 조금 더 넉넉히 대기합니다 (${(waitMs / 1000).toFixed(1)}초 대기)...`);
-            } else {
-              console.log(`   ⏳ 5초 후에 다시 시도합니다...`);
-            }
-          } else {
-            console.log(`   ⏳ 5초 후에 다시 시도합니다...`);
-          }
-          await sleep(waitMs);
-        }
+        const delay = backoffDelays[attempt];
+        console.warn(`   ⚠️ Gemini API 한도 초과 또는 오류. ${delay/1000}초 후 다시 시도합니다... (원인: ${errDetail})`);
+        await sleep(delay);
+        attempt++;
       }
 
       if (!result || !result.candidates || !result.candidates[0]) {

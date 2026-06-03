@@ -61,6 +61,7 @@ jobs:
           NEXT_TELEMETRY_DISABLED: 1
           NEXT_PUBLIC_KAKAO_APP_KEY: ${{ secrets.NEXT_PUBLIC_KAKAO_APP_KEY }}
           NEXT_PUBLIC_GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          NEXT_PUBLIC_COUPANG_PARTNER_ID: ${{ secrets.NEXT_PUBLIC_COUPANG_PARTNER_ID }}
 
       - name: Deploy to Cloudflare Pages
         run: npx wrangler pages deploy out --project-name=vibe-local-info
