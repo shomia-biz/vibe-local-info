@@ -336,6 +336,11 @@ export default function Home() {
   });
 
   const filteredBenefits = Array.from(uniqueBenefitsMap.values()).filter(benefit => {
+    // 종료된 혜택 자동 숨기기 (상시가 아니면서 오늘 날짜보다 과거인 경우 제외)
+    if (benefit.endDate && benefit.endDate !== '상시' && benefit.endDate < currentDateStr) {
+      return false;
+    }
+
     if (isDiagnosisActive) {
       // 1. 지역 매칭
       const regionMatch = diagnosisRegion === '전체' || benefit.region === '전국' || benefit.region === diagnosisRegion;

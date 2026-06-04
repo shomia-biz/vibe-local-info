@@ -53,9 +53,81 @@ const getEventImage = (name: string) => {
   return `https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80`;
 };
 
+// 핵심 키워드(해시태그) 추출 함수
+const generateHashtags = (item: any) => {
+  const text = (item.summary || '') + (item.target || '') + (item.name || '');
+  const keywords = [
+    '무료', '예약', '선착순', '주차', '가족', '아이', '어린이', '청년', '어르신', '할인', '축제', '온라인', '체험', '공연', '전시', '소상공인', '지원금',
+    '데이트', '나들이', '주말', '야경', '실내', '야외', '문화', '예술', '음악', '콘서트', '뮤지컬', '연극', '영화', '페스티벌',
+    '전통', '역사', '자연', '캠핑', '피크닉', '드라이브', '산책', '힐링', '클래식', '미술', '박물관', '도서관', '교육', '강연',
+    '창업', '취업', '복지', '건강', '주거', '금융', '출산', '육아', '1인가구', '대학생', '직장인'
+  ];
+  
+  let found = keywords.filter(k => text.includes(k));
+  
+  // 카테고리 추가
+  if (item.category) {
+    found.unshift(item.category.replace(/[^\w\s가-힣]/g, '').trim());
+  }
+
+  // 제목에서 그럴싸한 단어(2~5글자) 추출해서 추가
+  const titleWords = (item.name || '').split(/[\s,\[\]\(\)\-\_]+/)
+    .filter((w: string) => w.length >= 2 && w.length <= 5 && !found.includes(w))
+    .slice(0, 2);
+    
+  found = [...found, ...titleWords];
+
+  // 중복 제거 및 최대 8개로 제한
+  found = Array.from(new Set(found)).filter(Boolean).slice(0, 8);
+
+  if (found.length === 0) return ['#추천정보', '#모아팁스꿀팁'];
+  return found.map(k => `#${k}`);
+};
+
 export default function DetailClient({ itemData, type }: { itemData: ItemData, type: string }) {
   const [isDarkBg, setIsDarkBg] = useState(true);
   const isEvent = !type.toLowerCase().includes("benefit");
+
+  const shareToKakao = () => {
+    if (typeof window !== 'undefined' && (window as any).Kakao) {
+      const Kakao = (window as any).Kakao;
+      if (!Kakao.isInitialized()) {
+        const appKey = process.env.NEXT_PUBLIC_KAKAO_APP_KEY;
+        if (!appKey || appKey === '나중에_입력') {
+          // 환경변수 없으면 링크 복사 폴백
+          navigator.clipboard.writeText(window.location.href);
+          alert('링크가 복사되었습니다! 공유해보세요.');
+          return;
+        }
+        Kakao.init(appKey);
+      }
+
+      Kakao.Share.sendDefault({
+        objectType: 'feed',
+        content: {
+          title: itemData.name,
+          description: itemData.summary,
+          imageUrl: getEventImage(itemData.name),
+          link: {
+            mobileWebUrl: window.location.href,
+            webUrl: window.location.href,
+          },
+        },
+        buttons: [
+          {
+            title: '자세히 보기',
+            link: {
+              mobileWebUrl: window.location.href,
+              webUrl: window.location.href,
+            },
+          },
+        ],
+      });
+    } else {
+      navigator.clipboard.writeText(window.location.href);
+      alert('링크가 복사되었습니다! 친구나 가족에게 카카오톡으로 공유해보세요.');
+    }
+  };
 
   useEffect(() => {
     const img = new Image();
@@ -159,18 +231,38 @@ export default function DetailClient({ itemData, type }: { itemData: ItemData, t
               </div>
             </div>
 
-            <div className="mb-16">
-              <h2 className="text-xl font-black text-slate-800 mb-3 flex items-center gap-2">
-                <span className="w-8 h-8 bg-amber-100 text-amber-600 rounded-lg flex items-center justify-center text-sm">💡</span>
-                알리미의 한줄 팁
-              </h2>
-              <div className="bg-slate-50 rounded-[24px] pt-6 pb-8 px-8 sm:pt-8 sm:pb-10 sm:px-10 border border-slate-100 relative">
-                <div className="absolute -top-3 -right-3 w-12 h-12 bg-white rounded-full shadow-md flex items-center justify-center text-2xl border border-slate-50">
-                  🤖
+            <div className="mb-12">
+              {/* 2번: 핵심 해시태그 요약 */}
+              <div className="flex flex-wrap gap-2.5 mb-8">
+                {generateHashtags(itemData).map((tag, idx) => (
+                  <span key={idx} className="bg-cyan-50 text-cyan-600 px-4 py-2 rounded-full text-[15px] font-black border border-cyan-100 shadow-sm">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              {/* 1번: 스마트 길찾기 (행사/축제이면서 장소 정보가 있을 때만 노출) */}
+              {isEvent && itemData.location && (
+                <div className="mb-6">
+                  <a 
+                    href={`https://map.kakao.com/?q=${encodeURIComponent(itemData.location)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 w-full bg-[#FEE500] text-[#000000] font-black text-lg py-5 rounded-2xl hover:bg-[#F4DC00] transition-colors shadow-sm"
+                  >
+                    <span className="text-2xl">📍</span> 카카오맵으로 행사장 길찾기
+                  </a>
                 </div>
-                <div className="text-slate-700 leading-relaxed text-lg whitespace-pre-line break-keep font-medium">
-                  {itemData.blogContent || '상세 정보는 아래 버튼을 눌러 공식 홈페이지에서 확인해 주세요!'}
-                </div>
+              )}
+
+              {/* 3번: 카카오톡 공유하기 */}
+              <div className="mb-8">
+                <button 
+                  onClick={shareToKakao}
+                  className="flex items-center justify-center gap-2 w-full bg-[#FEE500] text-[#000000] font-black text-lg py-5 rounded-2xl hover:bg-[#F4DC00] transition-colors shadow-sm"
+                >
+                  <span className="text-2xl">💬</span> 카카오톡으로 공유하기
+                </button>
               </div>
             </div>
 
