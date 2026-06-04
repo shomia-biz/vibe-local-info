@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import BackButton from "../../../components/BackButton";
-import CoupangBanner from "../../../components/CoupangBanner";
+import CoupangBanner from "@/components/CoupangBanner";
 
 interface ItemData {
   id: number | string;
