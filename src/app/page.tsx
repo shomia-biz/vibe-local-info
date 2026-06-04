@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import localData from "../../public/data/local-info.json";
 import Link from "next/link";
 import AdBanner from "@/components/AdBanner";
+import CoupangBanner from "@/components/CoupangBanner";
 import WeatherModal, { DailyForecast } from "@/components/WeatherModal";
 
 interface BaseInfo {
@@ -934,6 +935,11 @@ export default function Home() {
             </button>
           </div>
         </section>
+
+        {/* 쿠팡 파트너스 하단 배너 */}
+        <div className="mt-8">
+          <CoupangBanner />
+        </div>
 
         {/* SEO 텍스트 (모아팁스 소개) */}
         <section className="bg-white rounded-[24px] p-8 mt-12 border border-slate-100 shadow-sm text-left">

@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import BackButton from "../../../components/BackButton";
+import CoupangBanner from "../../../components/CoupangBanner";
 
 interface ItemData {
   id: number | string;
@@ -177,11 +178,13 @@ export default function DetailClient({ itemData, type }: { itemData: ItemData, t
               href={itemData.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center justify-center w-full bg-slate-900 text-white font-black text-lg py-6 rounded-[20px] hover:bg-indigo-600 transition-all duration-300 shadow-xl hover:shadow-indigo-200 active:scale-[0.98] gap-3"
+              className="group flex items-center justify-center w-full bg-slate-900 text-white font-black text-lg py-6 rounded-[20px] hover:bg-indigo-600 transition-all duration-300 shadow-xl hover:shadow-indigo-200 active:scale-[0.98] gap-3 mb-8"
             >
               <span>공식 홈페이지에서 자세히 보기</span>
               <span className="transition-transform group-hover:translate-x-1">→</span>
             </a>
+
+            <CoupangBanner />
           </div>
         </article>
       </div>
