@@ -935,6 +935,36 @@ export default function Home() {
           </div>
         </section>
 
+        {/* SEO 텍스트 (모아팁스 소개) */}
+        <section className="bg-white rounded-[24px] p-8 mt-12 border border-slate-100 shadow-sm text-left">
+          <h2 className="text-2xl font-black text-slate-800 mb-4">수도권 모아팁스란?</h2>
+          <p className="text-slate-600 mb-4 leading-relaxed font-medium">
+            수도권(서울, 경기, 인천) 지역의 핵심 정보, 행사, 축제 및 다양한 정부 지원금을 한곳에 모아 전달하는 종합 생활 정보 플랫폼입니다. 
+            매일 업데이트되는 공공데이터포털 및 지자체 공식 자료를 바탕으로, 소상공인, 청년, 어르신, 1인가구 등 각계각층의 시민들이 
+            놓치기 쉬운 필수 혜택을 알기 쉽게 요약하여 제공합니다.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 mt-6">
+            <div className="flex-1">
+              <h3 className="text-lg font-bold text-slate-700 mb-2">🎁 어떤 정보를 제공하나요?</h3>
+              <p className="text-slate-500 text-sm leading-relaxed">
+                각종 지역 축제, 문화 예술 공연 전시 정보부터 생활 안정을 위한 <strong>재난지원금, 청년 월세 지원, 소상공인 대출 지원, 육아 수당</strong> 등 필수 행정 정보들을 꼼꼼하게 정리하여 제공합니다.
+              </p>
+            </div>
+            <div className="flex-1">
+              <h3 className="text-lg font-bold text-slate-700 mb-2">✨ 어떻게 이용하나요?</h3>
+              <p className="text-slate-500 text-sm leading-relaxed">
+                별도의 회원가입 없이 누구나 무료로 이용 가능하며, 1분 자가진단 툴을 통해 <strong>내 조건에 딱 맞는 맞춤 혜택</strong>을 즉시 찾아볼 수 있습니다. 상세 정보는 제공되는 공식 홈페이지 링크를 통해 확인하세요.
+              </p>
+            </div>
+          </div>
+          <div className="mt-8 pt-6 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <p className="text-slate-600 font-bold">더 깊이 있는 분석과 꿀팁이 궁금하시다면?</p>
+            <Link href="/blog" className="px-6 py-2 bg-slate-900 text-center text-white rounded-xl font-bold hover:bg-slate-800 transition-colors">
+              AI 블로그 바로가기
+            </Link>
+          </div>
+        </section>
+
         {/* Footer */}
         <footer className="pt-20 border-t border-slate-200 text-center pb-10">
           <div className="flex justify-center gap-6 mb-8">

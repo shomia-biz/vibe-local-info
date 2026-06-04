@@ -1,6 +1,14 @@
 import localData from "../../../../../public/data/local-info.json";
 import { notFound } from "next/navigation";
 import DetailClient from "./DetailClient";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: true,
+  },
+};
 
 // 정적 배포(output: export)를 위해 미리 만들어둘 모든 페이지 주소를 Next.js에게 알려주는 함수입니다.
 export function generateStaticParams() {

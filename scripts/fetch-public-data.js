@@ -365,6 +365,13 @@ async function fetchData() {
 
   const targetItems = [];
 
+  // 봇 차단을 피하기 위한 공통 브라우저 위장 신분증(User-Agent)
+  const fetchOptions = {
+    headers: {
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+    }
+  };
+
   // ========================================================
   // [1단계] 우선순위 채널 스캔 (전체 채널 강제 실행 및 로그 출력)
   // ========================================================
@@ -372,8 +379,8 @@ async function fetchData() {
   // A. 정부24 스캔
   try {
     const gov24RandomPage = Math.floor(Math.random() * 10) + 1; // 1~10페이지 중 무작위 선택
-    const publicDataUrl = `https://api.odcloud.kr/api/gov24/v3/serviceList?page=${gov24RandomPage}&perPage=50&returnType=JSON&serviceKey=${PUBLIC_DATA_API_KEY}`;
-    const response = await fetch(publicDataUrl);
+    const publicDataUrl = `https://api.odcloud.kr/api/gov24/v3/serviceList?page=${gov24RandomPage}&perPage=100&returnType=JSON&serviceKey=${PUBLIC_DATA_API_KEY}`;
+    const response = await fetch(publicDataUrl, fetchOptions);
     const text = await response.text();
     let result;
     try {
@@ -384,7 +391,7 @@ async function fetchData() {
     const rawItems = result.data || [];
 
     if (rawItems.length > 0) {
-      console.log(`👀 [참고] 정부24 서버에서 방금 가져온 데이터 목록 (총 ${rawItems.length}건):`);
+      console.log(`👀 [참고] 정부24 서버에서 방금 가져온 데이터 목록 (총 ${rawItems.length}건, 랜덤선택: ${gov24RandomPage}페이지):`);
       console.log(rawItems.map((item, idx) => `   ${idx + 1}. ${item.서비스명 || '이름 없음'}`).join('\n'));
     }
 
@@ -427,7 +434,7 @@ async function fetchData() {
 
   for (const api of kyeonggiEndpoints) {
     try {
-      const res = await fetch(api.url);
+      const res = await fetch(api.url, fetchOptions);
       const text = await res.text();
       let json;
       try {
@@ -437,7 +444,7 @@ async function fetchData() {
       }
       if (json[api.key] && json[api.key][1] && json[api.key][1].row) {
         const rows = json[api.key][1].row;
-        console.log(`👀 [참고] 경기도 ${api.name} 서버에서 방금 가져온 데이터 목록 (총 ${rows.length}건):`);
+        console.log(`👀 [참고] 경기도 ${api.name} 서버에서 방금 가져온 데이터 목록 (총 ${rows.length}건, 랜덤선택: ${ggRandomPage}페이지):`);
         console.log(rows.map((row, idx) => `   ${idx + 1}. ${getRowName(row, api.name)}`).join('\n'));
 
         const freshGG = rows.filter(row => {
@@ -470,7 +477,7 @@ async function fetchData() {
 
   for (const api of incheonEndpoints) {
     try {
-      const res = await fetch(api.url);
+      const res = await fetch(api.url, fetchOptions);
       const text = await res.text();
       let json;
       try {
@@ -519,7 +526,7 @@ async function fetchData() {
     const seoulStart = Math.floor(Math.random() * 5) * 100 + 1; // 1, 101, 201, 301, 401 중 무작위 선택
     const seoulEnd = seoulStart + 99;
     const seoulUrl = `http://openAPI.seoul.go.kr:8088/${SEOUL_DATA_API_KEY}/json/culturalEventInfo/${seoulStart}/${seoulEnd}/`;
-    const res = await fetch(seoulUrl);
+    const res = await fetch(seoulUrl, fetchOptions);
     const text = await res.text();
     let json;
     try {
@@ -559,7 +566,7 @@ async function fetchData() {
     try {
       // arrange=D 로 변경하여 최신 등록순으로 가져옵니다.
       const wellnessUrl = `http://apis.data.go.kr/B551011/WellnessTursmService/areaBasedList?serviceKey=${PUBLIC_DATA_API_KEY}&numOfRows=50&pageNo=${ktoRandomPage}&MobileOS=ETC&MobileApp=AppTest&langDivCd=KOR&contentTypeId=${typeId}&arrange=D&_type=json`;
-      const res = await fetch(wellnessUrl);
+      const res = await fetch(wellnessUrl, fetchOptions);
       const text = await res.text();
       let json;
       try {
@@ -572,7 +579,7 @@ async function fetchData() {
         if (!Array.isArray(items)) {
           items = [items];
         }
-        console.log(`👀 [참고] 한국관광공사 웰니스 API (contentTypeId: ${typeId}) 서버에서 방금 가져온 데이터 목록 (총 ${items.length}건):`);
+        console.log(`👀 [참고] 한국관광공사 웰니스 API (contentTypeId: ${typeId}) 서버에서 방금 가져온 데이터 목록 (총 ${items.length}건, 랜덤선택: ${ktoRandomPage}페이지):`);
         console.log(items.map((item, idx) => `   ${idx + 1}. ${item.title || '이름 없음'}`).join('\n'));
 
         const freshWellness = items.filter(item => {
