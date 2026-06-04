@@ -179,7 +179,7 @@ export default function Home() {
       const now = new Date();
       setWeatherLastUpdated(`${now.getHours()}:${now.getMinutes() < 10 ? '0' : ''}${now.getMinutes()}`);
     } catch (error) {
-      console.error("Failed to fetch weather data:", error);
+      console.warn("Weather API is temporarily unavailable.");
       // API 실패 시 사이트가 고장나 보이지 않도록 기본값(Fallback) 제공
       setWeatherData(null);
       setAirQualityData(null);
@@ -808,6 +808,7 @@ export default function Home() {
 
         {/* 중앙 광고 영역 */}
         <AdBanner />
+        <CoupangBanner />
 
         {/* 지원금/혜택 정보 */}
         <section id="benefits" className="scroll-mt-6">

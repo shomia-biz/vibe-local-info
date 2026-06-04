@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: "소개 | 송파구 생활 정보",
-  description: "송파구 생활 정보 사이트의 운영 목적과 데이터 출처를 소개합니다.",
+  title: "소개 | 수도권 생활 정보",
+  description: "수도권 생활 정보 사이트의 운영 목적과 데이터 출처를 소개합니다.",
 };
 
 export default function AboutPage() {
