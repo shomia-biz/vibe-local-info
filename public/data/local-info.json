@@ -1229,7 +1229,21 @@
       "updatedAt": "2026-05-23"
     }
   ],
-  "nationalCultureEvents": [],
+  "nationalCultureEvents": [
+    {
+      "name": "글로벌 광고인재 육성",
+      "category": "문화",
+      "region": "전국",
+      "startDate": "2026-06-04",
+      "endDate": "상시",
+      "location": "문화체육관광부",
+      "target": "대학생, 취업준비생, 재직자 등",
+      "summary": "대학생 등을 대상으로 실제 광고프로젝트의 실무업무를 지원하는 인재교육사업",
+      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/137100000217",
+      "id": 1778713506347,
+      "updatedAt": "2026-06-04"
+    }
+  ],
   "exhibitionEvents": [
     {
       "name": "아기상어 비밀 초대장: 비커밍 샤크",
@@ -3218,6 +3232,58 @@
     }
   ],
   "nationalBenefits": [
+    {
+      "name": "임산물 소비촉진 사업 지원",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-06-04",
+      "endDate": "상시",
+      "location": "산림청",
+      "target": "단기소득임산물 관련 산림청 등록 단체",
+      "summary": "단기소득임산물 생산자 단체를 대상으로 소비촉진 직거래장터 운영, 우수임산물 전시회 및 소비촉진 교육 등을 지원하는 사업",
+      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/140000000205",
+      "id": 1778713506349,
+      "updatedAt": "2026-06-04"
+    },
+    {
+      "name": "장애 체육인 원로체육인 지원",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-06-04",
+      "endDate": "상시",
+      "location": "문화체육관광부",
+      "target": "장애인체육진흥에 뚜렷한 공이 있는 60세 이상 체육인 중 생계가 곤란하거나 의료비 지원이 필요한 자",
+      "summary": "원로체육인(장애인체육 발전에 공로가 있는 60세 이상 체육인) 대상 의료비 및 생계비 지원",
+      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/137100000234",
+      "id": 1778713506348,
+      "updatedAt": "2026-06-04"
+    },
+    {
+      "name": "도박문제 전화·온라인 상담(도박문제 헬프라인 1336(무료)/넷라인) 서비스",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-06-04",
+      "endDate": "상시",
+      "location": "한국도박문제예방치유원",
+      "target": "도박문제로 어려움을 겪고 있는 당사자 및 가족 등",
+      "summary": "도박문제로 어려움을 겪고 있는 이들을 위해 전화 및 온라인 등으로 상담 지원",
+      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/137100000173",
+      "id": 1778713506346,
+      "updatedAt": "2026-06-04"
+    },
+    {
+      "name": "장애 체육인 장학금 지원",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-06-04",
+      "endDate": "상시",
+      "location": "국민체육진흥공단 체육인복지팀",
+      "target": "체육회 또는 경기단체가 주관하는 전국규모대회에서 입상한 장애 학생 선수",
+      "summary": "우수한 장애 학생 선수에게 1인당 최대 200만원의 장학금 지원",
+      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/137100000035",
+      "id": 1778713506345,
+      "updatedAt": "2026-06-04"
+    },
     {
       "name": "농기자재 수출기업 육성지원",
       "category": "혜택",
