@@ -414,7 +414,6 @@ async function fetchData() {
       '백두대간', '산림소유자', '숲가꾸기', '조림지원', '임도', '임산물', '산사태', '국립수목원', '중소기업', '직업계고', '판로진출지원', '협동화사업', '자금융자', 
       '전통시장', '중소기업', '맞춤형', '재창업기업', '벤처', '온누리상품권', 'M&A', '수출컨소시엄', '공공연', '신진연구', '기술보증'
     ];
-''
 
     const filteredItems = rawItems.filter(item => {
       const targetText = (item.서비스명 || '') + (item.서비스목적요약 || '') + (item.지원대상 || '') + (item.소관기관명 || '');
@@ -439,7 +438,29 @@ async function fetchData() {
 
   // B. 경기도 오픈 API 스캔
   const ggRandomPage = Math.floor(Math.random() * 5) + 1; // 1~5페이지 중 무작위 선택
- 
+  const kyeonggiEndpoints = [
+    { 
+      name: 'GG_FESTIVAL', 
+      url: `https://openapi.gg.go.kr/CultureFestival?KEY=${KYEONGGI_DATA_API_KEY}&Type=json&pIndex=1&pSize=200`, 
+      key: 'CultureFestival', 
+      nameField: 'FASTVL_NM',
+      dateField: 'FASTVL_BEGIN_DE'
+    },
+    //{ name: 'GG_EVENT', url: `https://openapi.gg.go.kr/GGCULTUREVENTSTUS?KEY=${KYEONGGI_DATA_API_KEY}&Type=json&pIndex=${ggRandomPage}&pSize=50`, key: 'GGCULTUREVENTSTUS', nameField: 'EVENT_NM' },
+    { name: 'GG_PERFORMANCE', 
+      url: `https://openapi.gg.go.kr/PerformanceEvent?KEY=${KYEONGGI_DATA_API_KEY}&Type=json&pIndex=1&pSize=50`, 
+      key: 'PerformanceEvent', 
+      nameField: 'EVENT_TITLE',
+      dateField: 'EVENT_BEGIN_DE'
+    },
+    { name: 'GG_KINTEX', 
+      url: `https://openapi.gg.go.kr/KintexEventFixatn?KEY=${KYEONGGI_DATA_API_KEY}&Type=json&pIndex=1&pSize=50`, 
+      key: 'KintexEventFixatn', 
+      nameField: 'EVENT_NM_INFO',
+      dateField: 'EVENT_PERD' // "2026-01-16~2026-01-25" 형태
+    },
+    //{ name: 'GG_BENEFIT', url: `https://openapi.gg.go.kr/GGYOUNGBGTRNSSAMTSTUS?KEY=${KYEONGGI_DATA_API_KEY}&Type=json&pIndex=${ggRandomPage}&pSize=50`, key: 'GGYOUNGBGTRNSSAMTSTUS', nameField: 'SM_TITLE' }
+  ];
 
   for (const api of kyeonggiEndpoints) {
     try {
@@ -449,13 +470,7 @@ async function fetchData() {
       try {
         json = JSON.parse(text);
       } catch (e) {
-        throw new E const kyeonggiEndpoints = [
-    { name: 'GG_FESTIVAL', url: `https://openapi.gg.go.kr/CultureFestival?KEY=${KYEONGGI_DATA_API_KEY}&Type=json&pIndex=${ggRandomPage}&pSize=50`, key: 'CultureFestival', nameField: 'FSTVL_NM' },
-    { name: 'GG_EVENT', url: `https://openapi.gg.go.kr/GGCULTUREVENTSTUS?KEY=${KYEONGGI_DATA_API_KEY}&Type=json&pIndex=${ggRandomPage}&pSize=50`, key: 'GGCULTUREVENTSTUS', nameField: 'EVENT_NM' },
-    { name: 'GG_PERFORMANCE', url: `https://openapi.gg.go.kr/PerformanceEvent?KEY=${KYEONGGI_DATA_API_KEY}&Type=json&pIndex=${ggRandomPage}&pSize=50`, key: 'PerformanceEvent', nameField: 'PERFRM_NM' },
-    { name: 'GG_KINTEX', url: `https://openapi.gg.go.kr/KintexEventFixatn?KEY=${KYEONGGI_DATA_API_KEY}&Type=json&pIndex=${ggRandomPage}&pSize=50`, key: 'KintexEventFixatn', nameField: 'EVENT_NM' },
-    { name: 'GG_BENEFIT', url: `https://openapi.gg.go.kr/GGYOUNGBGTRNSSAMTSTUS?KEY=${KYEONGGI_DATA_API_KEY}&Type=json&pIndex=${ggRandomPage}&pSize=50`, key: 'GGYOUNGBGTRNSSAMTSTUS', nameField: 'SM_TITLE' }
-  ];rror(`경기도 API 응답 파싱 실패:\n${text.substring(0, 100)}`);
+        throw new Error(`경기도 API 응답 파싱 실패:\n${text.substring(0, 100)}`);
       }
       if (json[api.key] && json[api.key][1] && json[api.key][1].row) {
         const rows = json[api.key][1].row;
