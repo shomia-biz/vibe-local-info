@@ -379,7 +379,7 @@ async function fetchData() {
   // A. 정부24 스캔
   try {
     const gov24RandomPage = Math.floor(Math.random() * 10) + 1; // 1~10페이지 중 무작위 선택
-    const publicDataUrl = `https://api.odcloud.kr/api/gov24/v3/serviceList?page=${gov24RandomPage}&perPage=50&returnType=JSON&serviceKey=${PUBLIC_DATA_API_KEY}`;
+    const publicDataUrl = `https://api.odcloud.kr/api/gov24/v3/serviceList?page=${gov24RandomPage}&perPage=100&returnType=JSON&serviceKey=${PUBLIC_DATA_API_KEY}`;
     const response = await fetch(publicDataUrl, fetchOptions);
     const text = await response.text();
     let result;
@@ -397,7 +397,7 @@ async function fetchData() {
 
     const keywords = [
       '송파', '서울', '경기', '인천', '소상공인', '육아', '아동', '다자녀', '청소년', '학생', '청년', '출산', '창업', '전세사기', '유아', '영아', '국가장학금', 
-      '건강', '문화생활', '경로', '장애인', '부동산', '행정사무', '공공임대주택', '주택청약', '복지', '지원', '기초생활보장', '생계급여', '주거급여', '긴급복지지원', 
+      '건강검진', '건강관리', '문화생활', '경로', '장애인', '부동산', '행정사무', '공공임대주택', '주택청약', '복지서비스', '지원금', '지원사업', '기초생활보장', '생계급여', '주거급여', '긴급복지지원',
       '국민취업지원', '고용보험', '실업급여', '건강보험', '국민연금', '국민건강보험', '건강보험공단', '국민취업지원', '월세', '친환경', '고경력', '창업자금', '양육비'
     ];
     const excludeKeywords = [
@@ -464,7 +464,11 @@ async function fetchData() {
 
   for (const api of kyeonggiEndpoints) {
     try {
-      const res = await fetch(api.url, fetchOptions);
+      console.log(`⏳ [대기 중] 경기도 ${api.name} 서버 응답을 기다립니다 (서버 지연으로 20~30초 소요될 수 있습니다)...`);
+      const res = await fetch(api.url, {
+        ...fetchOptions,
+        signal: AbortSignal.timeout(60000) // 최대 60초까지 응답을 기다림
+      });
       const text = await res.text();
       let json;
       try {
@@ -653,8 +657,9 @@ async function fetchData() {
       const itemName = getRowName(rawItem, source);
       console.log(`🤖 [Gemini 정제 중...] 출처: ${source} | 명칭: ${itemName}`);
 
-      // 무료 AI 사용량 제한(1분당 15회)을 초과하지 않도록, 호출 전에 8초씩 안전하게 쉬어갑니다.
-      await sleep(8000);
+      // 무료 AI 사용량 제한을 완벽하게 피하기 위해 호출 전에 25초 대기합니다.
+      console.log(`⏳ [대기 중] 무료 API 한도(Rate Limit) 방지를 위해 25초간 대기합니다...`);
+      await sleep(25000);
 
       const prompt = `아래 입력된 데이터 1건을 분석해서 규격화된 시스템용 JSON 데이터로 전환해줘.
       형식: {name: 서비스명또는행사명, category: '행사' 또는 '문화' 또는 '전시' 또는 '혜택', region: '서울' 또는 '경기' 또는 '인천' 또는 '전국', startDate: 'YYYY-MM-DD', endDate: 'YYYY-MM-DD', location: 장소 또는 기관명, target: 대상층, summary: 내용 요약설명, link: 링크주소}
@@ -674,7 +679,7 @@ async function fetchData() {
 
       let geminiResponse;
       let geminiResult;
-      const backoffDelays = [8000, 16000, 32000];
+      const backoffDelays = [15000, 30000, 60000]; // 재시도 대기 시간도 15초, 30초, 60초로 늘림
       let attempt = 0;
 
       while (attempt < backoffDelays.length) {

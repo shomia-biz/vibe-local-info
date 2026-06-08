@@ -6,7 +6,31 @@ from datetime import datetime, timedelta
 # ==========================================
 # 설정 부분 (GitHub Secrets에서 환경 변수로 받아옴)
 # ==========================================
-KAKAO_ACCESS_TOKEN = os.environ.get("KAKAO_ACCESS_TOKEN")
+KAKAO_REST_API_KEY = os.environ.get("KAKAO_REST_API_KEY")
+KAKAO_REFRESH_TOKEN = os.environ.get("KAKAO_REFRESH_TOKEN")
+
+def refresh_access_token():
+    """리프레시 토큰을 사용하여 새로운 액세스 토큰을 발급받습니다."""
+    if not KAKAO_REST_API_KEY or not KAKAO_REFRESH_TOKEN:
+        print("⚠️ KAKAO_REST_API_KEY 또는 KAKAO_REFRESH_TOKEN이 설정되지 않았습니다.")
+        return None
+
+    url = "https://kauth.kakao.com/oauth/token"
+    data = {
+        "grant_type": "refresh_token",
+        "client_id": KAKAO_REST_API_KEY,
+        "refresh_token": KAKAO_REFRESH_TOKEN
+    }
+    
+    response = requests.post(url, data=data)
+    if response.status_code == 200:
+        tokens = response.json()
+        print("🔑 새로운 액세스 토큰 발급 완료!")
+        return tokens.get("access_token")
+    else:
+        print(f"❌ 토큰 갱신 실패: {response.status_code}")
+        print(response.text)
+        return None
 
 def load_data():
     """local-info.json 파일에서 데이터를 불러옵니다."""
@@ -79,10 +103,10 @@ def format_message(top5_events):
     msg += "🌐 https://moa-tips.com"
     return msg
 
-def send_kakao_message(text):
+def send_kakao_message(text, access_token):
     """카카오톡 '나에게 보내기' API를 통해 메시지를 전송합니다."""
-    if not KAKAO_ACCESS_TOKEN:
-        print("⚠️ KAKAO_ACCESS_TOKEN이 설정되지 않았습니다. 메시지 전송을 건너뜁니다.")
+    if not access_token:
+        print("⚠️ 액세스 토큰이 유효하지 않아 메시지 전송을 건너뜁니다.")
         return False
         
     # 카카오톡 메시지 전송 API 주소 (나에게 보내기)
@@ -90,7 +114,7 @@ def send_kakao_message(text):
     url = "https://kapi.kakao.com/v2/api/talk/memo/default/send"
     
     headers = {
-        "Authorization": f"Bearer {KAKAO_ACCESS_TOKEN}"
+        "Authorization": f"Bearer {access_token}"
     }
     
     # 카카오톡 링크(Link) 템플릿 데이터 구성
@@ -135,8 +159,14 @@ def main():
     print(message_text)
     print("-----------------------------------")
     
-    print("4. 카카오톡 발송 시도...")
-    send_kakao_message(message_text)
+    print("4. 카카오톡 액세스 토큰 갱신 시도...")
+    access_token = refresh_access_token()
+    
+    if access_token:
+        print("5. 카카오톡 발송 시도...")
+        send_kakao_message(message_text, access_token)
+    else:
+        print("⚠️ 발송 실패: 유효한 액세스 토큰을 얻지 못했습니다.")
 
 if __name__ == "__main__":
     main()

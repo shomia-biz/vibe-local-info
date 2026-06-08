@@ -2,8 +2,8 @@ name: Weekly Kakao Notification (Top 5 Deadlines)
 
 on:
   schedule:
-    # 매주 월요일 아침 9시 KST에 실행 (UTC 기준 월요일 0시)
-    - cron: '0 0 * * 1'
+    # 매주 월요일, 목요일 아침 9시 KST에 실행 (UTC 기준 월, 목 0시)
+    - cron: '0 0 * * 1,4'
   workflow_dispatch: # 수동 실행을 위한 옵션
 
 jobs:
@@ -26,7 +26,8 @@ jobs:
 
       - name: 마감 임박 공고 추출 및 카카오톡 발송
         env:
-          # GitHub Secrets에 등록된 카카오 토큰을 환경변수로 사용
-          KAKAO_ACCESS_TOKEN: ${{ secrets.KAKAO_ACCESS_TOKEN }}
+          # GitHub Secrets에 등록된 카카오 API 키와 리프레시 토큰을 환경변수로 사용
+          KAKAO_REST_API_KEY: ${{ secrets.KAKAO_REST_API_KEY }}
+          KAKAO_REFRESH_TOKEN: ${{ secrets.KAKAO_REFRESH_TOKEN }}
         run: |
           python scripts/send_kakao_weekly_top5.py
