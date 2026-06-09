@@ -783,6 +783,33 @@
   ],
   "seoulCultureEvents": [
     {
+      "name": "[운현궁] 2026 별 헤는 밤 운현궁 안내(5월)",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-05-29",
+      "endDate": "2026-05-29",
+      "location": "서울 운현궁",
+      "target": "만 10세 이상",
+      "summary": "운현궁에서 진행되는 야간 체험 프로그램 '별 헤는 밤'으로, 이용요금은 2인 1팀 기준 30,000원이며 18:30부터 21:00까지 진행됩니다.",
+      "link": "https://www.unhyeongung.or.kr/sub/prpgram/total_list.php?sno=0&group=basic&code=B35&category=&&abmode=view&no=1898&bsort=&bfsort=",
+      "id": 1778713506426,
+      "updatedAt": "2026-06-09"
+    },
+    {
+      "name": "[금천문화재단] 2026 공연장상주단체 영유아 예술체험 프로그램 [동그라미, 세모, 네모]",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-05-29",
+      "endDate": "2026-05-30",
+      "location": "금천뮤지컬센터",
+      "target": "8개월~16개월 영아 및 임산부",
+      "summary": "금천문화재단이 운영하는 8개월~16개월 영아 및 임산부 대상의 영유아 예술체험 프로그램 [동그라미, 세모, 네모]입니다.",
+      "link": "https://gcfac.or.kr/performance/commonView?gcfac_menu_cd=U0007&currRow=1&seq_no=3683&perDisGubun=performance&returnURI=%2Fperformance%2FcurrentList&serhDate&serhPerforDisplay&serhTitle",
+      "imageUrl": "https://gcfac.or.kr/resources/cpage/images/common/h1_2025.png",
+      "id": 1778713506425,
+      "updatedAt": "2026-06-09"
+    },
+    {
       "name": "[구로구립개봉도서관] 2026년 상반기 프로그램 [지구를 지키는 손, 업사이클 공방]",
       "category": "문화",
       "region": "서울",
@@ -3357,6 +3384,20 @@
     }
   ],
   "nationalBenefits": [
+    {
+      "name": "사회복지법인 지방세 감면",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-06-09",
+      "endDate": "상시",
+      "location": "시·군·구청",
+      "target": "사회복지법인 및 사회복지사업을 목적으로 하는 단체 등",
+      "summary": "사회복지법인 등이 사회복지사업에 직접 사용하기 위해 취득하는 부동산에 대한 취득세, 재산세, 등록면허세 등 지방세 감면 혜택 제공",
+      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/131200000012",
+      "imageUrl": "http://www.gov.kr/images/etc/og_image_600.png",
+      "id": 1778713506424,
+      "updatedAt": "2026-06-09"
+    },
     {
       "name": "일상돌봄 서비스",
       "category": "혜택",
