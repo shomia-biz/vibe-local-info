@@ -441,141 +441,130 @@ async function fetchData() {
   }
 
   // B. 경기도 오픈 API 스캔
-  const ggRandomPage = Math.floor(Math.random() * 18) + 1; // 1~18페이지 중 무작위 선택
-  const kyeonggiEndpoints = [
-    { 
-      name: 'GG_FESTIVAL', 
-      url: `https://openapi.gg.go.kr/CultureFestival?KEY=${KYEONGGI_DATA_API_KEY}&Type=json&pIndex=1&pSize=200`, 
-      key: 'CultureFestival', 
-      nameField: 'FASTVL_NM',
-      dateField: 'FASTVL_BEGIN_DE'
-    },
+  // const ggRandomPage = Math.floor(Math.random() * 18) + 1; // 1~18페이지 중 무작위 선택
+  // const kyeonggiEndpoints = [
+  //   { 
+  //     name: 'GG_FESTIVAL', 
+  //     url: `https://openapi.gg.go.kr/CultureFestival?KEY=${KYEONGGI_DATA_API_KEY}&Type=json&pIndex=1&pSize=200`, 
+  //     key: 'CultureFestival', 
+  //     nameField: 'FASTVL_NM',
+  //     dateField: 'FASTVL_BEGIN_DE'
+  //   },
     //{ name: 'GG_EVENT', url: `https://openapi.gg.go.kr/GGCULTUREVENTSTUS?KEY=${KYEONGGI_DATA_API_KEY}&Type=json&pIndex=${ggRandomPage}&pSize=50`, key: 'GGCULTUREVENTSTUS', nameField: 'EVENT_NM' },
-    { name: 'GG_PERFORMANCE', 
-      url: `https://openapi.gg.go.kr/PerformanceEvent?KEY=${KYEONGGI_DATA_API_KEY}&Type=json&pIndex=${ggRandomPage}&pSize=100`, 
-      key: 'PerformanceEvent', 
-      nameField: 'EVENT_TITLE',
-      dateField: 'EVENT_BEGIN_DE'
-    },
-    { name: 'GG_KINTEX', 
-      url: `https://openapi.gg.go.kr/KintexEventFixatn?KEY=${KYEONGGI_DATA_API_KEY}&Type=json&pIndex=1&pSize=50`, 
-      key: 'KintexEventFixatn', 
-      nameField: 'EVENT_NM_INFO',
-      dateField: 'EVENT_PERD' // "2026-01-16~2026-01-25" 형태
-    },
-    //{ name: 'GG_BENEFIT', url: `https://openapi.gg.go.kr/GGYOUNGBGTRNSSAMTSTUS?KEY=${KYEONGGI_DATA_API_KEY}&Type=json&pIndex=${ggRandomPage}&pSize=50`, key: 'GGYOUNGBGTRNSSAMTSTUS', nameField: 'SM_TITLE' }
-  ];
+    //{ name: 'GG_PERFORMANCE', url: `https://openapi.gg.go.kr/PerformanceEvent?KEY=${KYEONGGI_DATA_API_KEY}&Type=json&pIndex=${ggRandomPage}&pSize=100`, key: 'PerformanceEvent', nameField: 'EVENT_TITLE',dateField: 'EVENT_BEGIN_DE' },
+    //{ name: 'GG_KINTEX', url: `https://openapi.gg.go.kr/KintexEventFixatn?KEY=${KYEONGGI_DATA_API_KEY}&Type=json&pIndex=1&pSize=50`, key: 'KintexEventFixatn', nameField: 'EVENT_NM_INFO',dateField: 'EVENT_PERD' }, "2026-01-16~2026-01-25" 형태
+    //{ name: 'GG_BENEFIT', url: `https://openapi.gg.go.kr/GGYOUNGBGTRNSSAMTSTUS?KEY=${KYEONGGI_DATA_API_KEY}&Type=json&pIndex=${ggRandomPage}&pSize=50`, key: 'GGYOUNGBGTRNSSAMTSTUS', nameField: 'SM_TITLE' }];
 
-  for (const api of kyeonggiEndpoints) {
-    try {
-      console.log(`⏳ [대기 중] 경기도 ${api.name} 서버 응답을 기다립니다 (서버 지연으로 20~30초 소요될 수 있습니다)...`);
-      const res = await fetch(api.url, {
-        ...fetchOptions,
-        signal: AbortSignal.timeout(60000) // 최대 60초까지 응답을 기다림
-      });
-      const text = await res.text();
-      let json;
-      try {
-        json = JSON.parse(text);
-      } catch (e) {
-        throw new Error(`경기도 API 응답 파싱 실패:\n${text.substring(0, 100)}`);
-      }
-      if (json[api.key] && json[api.key][1] && json[api.key][1].row) {
-        const rows = json[api.key][1].row;
-        console.log(`👀 [참고] 경기도 ${api.name} 서버에서 방금 가져온 데이터 목록 (총 ${rows.length}건, 랜덤선택: ${ggRandomPage}페이지):`);
-        console.log(rows.map((row, idx) => `   ${idx + 1}. ${getRowName(row, api.name)}`).join('\n'));
+  // for (const api of kyeonggiEndpoints) {
+  //   try {
+  //     console.log(`⏳ [대기 중] 경기도 ${api.name} 서버 응답을 기다립니다 (서버 지연으로 20~30초 소요될 수 있습니다)...`);
+  //     const res = await fetch(api.url, {
+  //       ...fetchOptions,
+  //       signal: AbortSignal.timeout(60000) // 최대 60초까지 응답을 기다림
+  //     });
+  //     const text = await res.text();
+  //     let json;
+  //     try {
+  //       json = JSON.parse(text);
+  //     } catch (e) {
+  //       throw new Error(`경기도 API 응답 파싱 실패:\n${text.substring(0, 100)}`);
+  //     }
+  //     if (json[api.key] && json[api.key][1] && json[api.key][1].row) {
+  //       const rows = json[api.key][1].row;
+  //       console.log(`👀 [참고] 경기도 ${api.name} 서버에서 방금 가져온 데이터 목록 (총 ${rows.length}건, 랜덤선택: ${ggRandomPage}페이지):`);
+  //       console.log(rows.map((row, idx) => `   ${idx + 1}. ${getRowName(row, api.name)}`).join('\n'));
 
-        const freshGG = rows.filter(row => {
-          const name = getRowName(row, api.name);
-          const dateStr = getRowStartDate(row);
+  //       const freshGG = rows.filter(row => {
+  //         const name = getRowName(row, api.name);
+  //         const dateStr = getRowStartDate(row);
 
-          // 데이터에 제외할 단어(농업, 산업전 등)가 포함되어 있으면 버림
-          const rowText = Object.values(row).join(' ');
-          if (commonExcludeKeywords.some(e => rowText.includes(e))) return false;
+  //         // 데이터에 제외할 단어(농업, 산업전 등)가 포함되어 있으면 버림
+  //         const rowText = Object.values(row).join(' ');
+  //         if (commonExcludeKeywords.some(e => rowText.includes(e))) return false;
 
-          if (isDateOlderThan30Days(dateStr)) return false;
-          if (isYearOutdated(row, name)) return false;
-          return name && name !== '이름 없음' && !isDuplicateTitle(name, existingNames);
-        });
-        for (const row of freshGG) {
-          if (targetItems.length < MAX_ITEMS) {
-            targetItems.push({ rawItem: row, source: api.name });
-            existingNames.add(getRowName(row, api.name));
-          }
-        }
-      } else {
-        const errorMsg = json.RESULT ? `${json.RESULT.CODE}: ${json.RESULT.MESSAGE}` : JSON.stringify(json);
-        console.log(`⚠️ [참고] 경기도 ${api.name} 서버 응답 결과: ${errorMsg}`);
-      }
-    } catch (err) {
-      console.error(`경기도 ${api.name} 스캔 실패:`, err.message);
-      if (err.cause) {
-        console.error(`   └─ 상세 원인:`, err.cause);
-      }
-    }
-  }
+  //         if (isDateOlderThan30Days(dateStr)) return false;
+  //         if (isYearOutdated(row, name)) return false;
+  //         return name && name !== '이름 없음' && !isDuplicateTitle(name, existingNames);
+  //       });
+  //       for (const row of freshGG) {
+  //         if (targetItems.length < MAX_ITEMS) {
+  //           targetItems.push({ rawItem: row, source: api.name });
+  //           existingNames.add(getRowName(row, api.name));
+  //         }
+  //       }
+  //     } else {
+  //       const errorMsg = json.RESULT ? `${json.RESULT.CODE}: ${json.RESULT.MESSAGE}` : JSON.stringify(json);
+  //       console.log(`⚠️ [참고] 경기도 ${api.name} 서버 응답 결과: ${errorMsg}`);
+  //     }
+  //   } catch (err) {
+  //     console.error(`경기도 ${api.name} 스캔 실패:`, err.message);
+  //     if (err.cause) {
+  //       console.error(`   └─ 상세 원인:`, err.cause);
+  //     }
+  //   }
+  // }
 
-  // C. 인천문화재단 API 스캔
-  const incheonEndpoints = [
-    { name: 'IC_CULTURE', url: `https://ifac.or.kr/openAPI/real/search.do?apiKey=${INCHEON_DATA_API_KEY}&svID=culture&resultType=json` },
-    { name: 'IC_FESTIVAL', url: `https://ifac.or.kr/openAPI/real/search.do?apiKey=${INCHEON_DATA_API_KEY}&svID=festival&resultType=json` }
-  ];
+  // // C. 인천문화재단 API 스캔
+  // const incheonEndpoints = [
+  //   { name: 'IC_CULTURE', url: `https://ifac.or.kr/openAPI/real/search.do?apiKey=${INCHEON_DATA_API_KEY}&svID=culture&resultType=json` },
+  //   { name: 'IC_FESTIVAL', url: `https://ifac.or.kr/openAPI/real/search.do?apiKey=${INCHEON_DATA_API_KEY}&svID=festival&resultType=json` }
+  // ];
 
-  for (const api of incheonEndpoints) {
-    try {
-      const res = await fetch(api.url, fetchOptions);
-      const text = await res.text();
-      let json;
-      try {
-        json = JSON.parse(text);
-      } catch (e) {
-        throw new Error(`인천 API 응답 파싱 실패:\n${text.substring(0, 100)}`);
-      }
-      let icRows = [];
-      if (Array.isArray(json)) {
-        if (json[0] && Array.isArray(json[0].item)) {
-          icRows = json[0].item;
-        } else if (json[0] && Array.isArray(json[0].data)) {
-          icRows = json[0].data;
-        }
-      } else if (json) {
-        icRows = json.data || json.list || json.row || (json.item ? (Array.isArray(json.item) ? json.item : [json.item]) : []);
-      }
+  // for (const api of incheonEndpoints) {
+  //   try {
+  //     const res = await fetch(api.url, fetchOptions);
+  //     const text = await res.text();
+  //     let json;
+  //     try {
+  //       json = JSON.parse(text);
+  //     } catch (e) {
+  //       throw new Error(`인천 API 응답 파싱 실패:\n${text.substring(0, 100)}`);
+  //     }
+  //     let icRows = [];
+  //     if (Array.isArray(json)) {
+  //       if (json[0] && Array.isArray(json[0].item)) {
+  //         icRows = json[0].item;
+  //       } else if (json[0] && Array.isArray(json[0].data)) {
+  //         icRows = json[0].data;
+  //       }
+  //     } else if (json) {
+  //       icRows = json.data || json.list || json.row || (json.item ? (Array.isArray(json.item) ? json.item : [json.item]) : []);
+  //     }
 
-      if (Array.isArray(icRows) && icRows.length > 0) {
-        console.log(`👀 [참고] 인천 ${api.name} 서버에서 방금 가져온 데이터 목록 (총 ${icRows.length}건):`);
-        console.log(icRows.map((row, idx) => `   ${idx + 1}. ${getRowName(row, api.name)}`).join('\n'));
+  //     if (Array.isArray(icRows) && icRows.length > 0) {
+  //       console.log(`👀 [참고] 인천 ${api.name} 서버에서 방금 가져온 데이터 목록 (총 ${icRows.length}건):`);
+  //       console.log(icRows.map((row, idx) => `   ${idx + 1}. ${getRowName(row, api.name)}`).join('\n'));
 
-        const freshIC = icRows.filter(row => {
-          const name = getRowName(row, api.name);
-          const dateStr = getRowStartDate(row);
+  //       const freshIC = icRows.filter(row => {
+  //         const name = getRowName(row, api.name);
+  //         const dateStr = getRowStartDate(row);
 
-          // 데이터에 제외할 단어가 포함되어 있으면 버림
-          const rowText = Object.values(row).join(' ');
-          if (commonExcludeKeywords.some(e => rowText.includes(e))) return false;
+  //         // 데이터에 제외할 단어가 포함되어 있으면 버림
+  //         const rowText = Object.values(row).join(' ');
+  //         if (commonExcludeKeywords.some(e => rowText.includes(e))) return false;
 
-          if (isDateOlderThan30Days(dateStr)) return false;
-          if (isYearOutdated(row, name)) return false;
-          return name && name !== '이름 없음' && !isDuplicateTitle(name, existingNames);
-        });
-        for (const row of freshIC) {
-          if (targetItems.length < MAX_ITEMS) {
-            targetItems.push({ rawItem: row, source: api.name });
-            existingNames.add(getRowName(row, api.name));
-          }
-        }
-      } else {
-        console.log(`⚠️ [참고] 인천 ${api.name} 서버 응답 결과: 데이터가 없거나 형식이 올바르지 않습니다. (응답: ${JSON.stringify(json)})`);
-      }
-    } catch (err) {
-      console.error(`인천 API 스캔 에러 (${api.name}):`, err.message);
-    }
-  }
+  //         if (isDateOlderThan30Days(dateStr)) return false;
+  //         if (isYearOutdated(row, name)) return false;
+  //         return name && name !== '이름 없음' && !isDuplicateTitle(name, existingNames);
+  //       });
+  //       for (const row of freshIC) {
+  //         if (targetItems.length < MAX_ITEMS) {
+  //           targetItems.push({ rawItem: row, source: api.name });
+  //           existingNames.add(getRowName(row, api.name));
+  //         }
+  //       }
+  //     } else {
+  //       console.log(`⚠️ [참고] 인천 ${api.name} 서버 응답 결과: 데이터가 없거나 형식이 올바르지 않습니다. (응답: ${JSON.stringify(json)})`);
+  //     }
+  //   } catch (err) {
+  //     console.error(`인천 API 스캔 에러 (${api.name}):`, err.message);
+  //   }
+  // }
 
   // D. 서울시 문화행사 API 스캔
   try {
     const seoulStart = Math.floor(Math.random() * 5) * 100 + 1; // 1, 101, 201, 301, 401 중 무작위 선택
-    const seoulEnd = seoulStart + 99;
+    const seoulEnd = seoulStart + 10;
     const seoulUrl = `http://openAPI.seoul.go.kr:8088/${SEOUL_DATA_API_KEY}/json/culturalEventInfo/${seoulStart}/${seoulEnd}/`;
     const res = await fetch(seoulUrl, fetchOptions);
     const text = await res.text();
