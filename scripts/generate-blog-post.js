@@ -37,9 +37,15 @@ async function generatePost() {
     // [1단계] 최신 데이터 확인
     const localData = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
     
-    // 모든 항목(행사 + 혜택)을 하나로 합칩니다. 
-    // unshift로 추가되었으므로 앞쪽이 최신입니다.
-    const allItems = [...localData.events, ...localData.benefits];
+    // 서울, 경기, 인천, 전국 등 새롭게 분류된 모든 데이터를 하나로 합쳐서 블로그 글 후보로 만듭니다.
+    const allItems = [
+      ...localData.events, ...localData.benefits,
+      ...localData.cultureEvents, ...localData.exhibitionEvents,
+      ...localData.seoulEvents, ...localData.kyeonggiEvents, ...localData.incheonEvents, ...localData.nationalEvents,
+      ...localData.seoulCultureEvents, ...localData.kyeonggiCultureEvents, ...localData.incheonCultureEvents, ...localData.nationalCultureEvents,
+      ...localData.seoulExhibitionEvents, ...localData.kyeonggiExhibitionEvents, ...localData.incheonExhibitionEvents, ...localData.nationalExhibitionEvents,
+      ...localData.seoulBenefits, ...localData.kyeonggiBenefits, ...localData.incheonBenefits, ...localData.nationalBenefits
+    ];
     
     if (allItems.length === 0) {
       console.log('데이터가 없습니다.');
@@ -87,10 +93,10 @@ async function generatePost() {
       const latestItem = targetItems[i];
       console.log(`🤖 [${i + 1}/${targetItems.length}] "${latestItem.name}" 정보로 블로그 글 생성 중...`);
 
-      // API 과부하 및 속도 제한(RPM) 우회를 위해, 첫 번째 아이템이 아니라면 앞선 호출 후 8초 대기
+      // 무료 AI 한도(RPM) 초과 에러를 완벽하게 피하기 위해 대기 시간을 25초로 넉넉히 늘립니다.
       if (i > 0) {
-        console.log(`⏳ 안정적인 생성을 위해 8초간 대기합니다...`);
-        await sleep(8000);
+        console.log(`⏳ 안정적인 생성을 위해 25초간 대기합니다...`);
+        await sleep(25000);
       }
 
       const prompt = `아래 공공서비스 정보를 바탕으로 검색엔진(SEO)에 최적화된 블로그 글을 작성해줘.
@@ -125,7 +131,7 @@ tags: [태그1, 태그2, tags3]
 
       let response;
       let result;
-      const backoffDelays = [8000, 16000, 32000];
+      const backoffDelays = [25000, 35000, 60000];
       let attempt = 0;
 
       while (attempt < backoffDelays.length) {

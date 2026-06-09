@@ -372,6 +372,24 @@ async function fetchData() {
     }
   };
 
+  // 정부24 안에 있던 제외 키워드를 밖으로 꺼내어 공통으로 사용하게 만듭니다.
+  const commonExcludeKeywords = [
+    '어업', '해운', '선박', '항만', '선원', '수산', '축산업', '축사', '임업', '농업', '해양사고', '방역', '경마', '경륜', '유기견', '유기묘', '보상', 
+    '동물보호', '해양', '북한이탈주민', '성매매', '국적상실', '국적회복', '국적취득', '소년원', '소년원법', '귀화', '농가', '수의사', '구제역', '송아지', 
+    '브루셀라병', '공동방제단', '공공급식', '농촌맞춤형', '농촌아이돌봄지원', '농번기돌봄지원', '농촌형', '후계농업경영인', '전통발효식품', '과수거점산지', 
+    '과실브랜드', '과실전문', '고품질쌀유통', '미곡종합처리장', '도매유통활성화', '축산관련종사자', '인삼', '농산물', '산지유통', '국내채종', '친환경농산물', 
+    '밭작물', '동물용', '저탄소', '중소식품기업', '가축개량', '농식품', '살처분', '농지연금', '농촌융복합산업', '예방약품', '방역장비', '해외인증', '귀농', 
+    '귀촌', '공영도매시장', 'GAP', '대체초지조성비', '가축전염병', '농기계', '농촌', '경영회생지원', '농가사료', '외식기업', '꿀벌질병', '전략작물', '친환경퇴비', 
+    '경관보전', '이민여성', '산지저온', '화훼류', '습식유통', '과수', '식생활', '유기농업', '축산', '외식업체', '국제식품', '조사료', '농수산', '농기자재', 
+    '농업인', '임대', '농장', 'FA분야', '곤충산업', '축산악취', '스마트팜', '장애', '체육인', '도박문제', '글로벌', '이민예정자', '가정폭력', '한부모가족', '폭력', '피해', 
+    '이주여성', '다문화가족', '북한이탈여성', '디지털성범죄', '한부모', '고립', '은둔', '경력보유여성', '저소득', '다문화', 
+    '산불전문', '국가유공자', '유휴토지', '산림사업', '목재', '임업용', '치유의숲', '산림탄소', '사립휴양시설', '산림복지', '숲사랑지도원', '임업인', '귀산촌인', 
+    '백두대간', '산림소유자', '숲가꾸기', '조림지원', '임도', '임산물', '산사태', '국립수목원', '중소기업', '직업계고', '판로진출지원', '협동화사업', '자금융자', 
+    '전통시장', '맞춤형', '재창업기업', '벤처', '온누리상품권', 'M&A', '수출컨소시엄', '공공연', '신진연구', '기술보증',
+    // 기업용 산업 전시회 등 개인에게 무관한 키워드 추가
+    '산업전', '기술전', '기자재전', '물류', '보안', '테스팅', '의약품', '화학장치', '포장기자재', '솔루션'
+  ];
+
   // ========================================================
   // [1단계] 우선순위 채널 스캔 (전체 채널 강제 실행 및 로그 출력)
   // ========================================================
@@ -379,7 +397,7 @@ async function fetchData() {
   // A. 정부24 스캔
   try {
     const gov24RandomPage = Math.floor(Math.random() * 10) + 1; // 1~10페이지 중 무작위 선택
-    const publicDataUrl = `https://api.odcloud.kr/api/gov24/v3/serviceList?page=${gov24RandomPage}&perPage=100&returnType=JSON&serviceKey=${PUBLIC_DATA_API_KEY}`;
+    const publicDataUrl = `https://api.odcloud.kr/api/gov24/v3/serviceList?page=${gov24RandomPage}&perPage=50&returnType=JSON&serviceKey=${PUBLIC_DATA_API_KEY}`;
     const response = await fetch(publicDataUrl, fetchOptions);
     const text = await response.text();
     let result;
@@ -396,28 +414,14 @@ async function fetchData() {
     }
 
     const keywords = [
-      '송파', '서울', '경기', '인천', '소상공인', '육아', '아동', '다자녀', '청소년', '학생', '청년', '출산', '창업', '전세사기', '유아', '영아', '국가장학금', 
+      '송파', '서울', '경기', '인천', '소상공인', '육아', '아동', '다자녀', '청소년', '학생', '청년', '출산', '창업', '전세사기', '유아', '영아', '장학금', 
       '건강검진', '건강관리', '문화생활', '경로', '장애인', '부동산', '행정사무', '공공임대주택', '주택청약', '복지서비스', '지원금', '지원사업', '기초생활보장', '생계급여', '주거급여', '긴급복지지원',
-      '국민취업지원', '고용보험', '실업급여', '건강보험', '국민연금', '국민건강보험', '건강보험공단', '국민취업지원', '월세', '친환경', '고경력', '창업자금', '양육비'
+      '국민취업지원', '고용보험', '실업급여', '건강보험', '국민연금', '국민건강보험', '건강보험공단', '국민취업지원', '월세', '친환경', '고경력', '창업자금', '양육비', '평생교육', '임산부', '영유아', '보육료',
+      '금연클리닉', '보건소', '유휴간호사', '금연치료', '자산형성지원사업'
     ];
-    const excludeKeywords = [
-      '어업', '해운', '선박', '항만', '선원', '수산', '축산업', '축사', '임업', '농업', '해양사고', '방역', '경마', '경륜', '유기견', '유기묘', '보상', 
-      '동물보호', '해양', '북한이탈주민', '성매매', '국적상실', '국적회복', '국적취득', '소년원', '소년원법', '귀화', '농가', '수의사', '구제역', '송아지', 
-      '브루셀라병', '공동방제단', '공공급식', '농촌맞춤형', '농촌아이돌봄지원', '농번기돌봄지원', '농촌형', '후계농업경영인', '전통발효식품', '과수거점산지', 
-      '과실브랜드', '과실전문', '고품질쌀유통', '미곡종합처리장', '도매유통활성화', '축산관련종사자', '인삼', '농산물', '산지유통', '국내채종', '친환경농산물', 
-      '밭작물', '동물용', '저탄소', '중소식품기업', '가축개량', '농식품', '살처분', '농지연금', '농촌융복합산업', '예방약품', '방역장비', '해외인증', '귀농', 
-      '귀촌', '공영도매시장', 'GAP', '대체초지조성비', '가축전염병', '농기계', '농촌', '경영회생지원', '농가사료', '외식기업', '꿀벌질병', '전략작물', '친환경퇴비', 
-      '경관보전', '이민여성', '산지저온', '화훼류', '습식유통', '과수', '식생활', '유기농업', '축산', '외식업체', '국제식품', '조사료', '농수산', '농기자재', 
-      '농업인', '임대', '농장', 'FA분야', '곤충산업', '축산악취', '스마트팜', '장애', '체육인', '도박문제', '글로벌', '이민예정자', '가정폭력', '한부모가족', '폭력', '피해', 
-      '이주여성', '다문화가족', '북한이탈여성', '폭력', '디지털성범죄', '한부모', '가정폭력', '고립', '은둔', '경력보유여성', '다문화가족', '저소득', '다문화', 
-      '산불전문', '국가유공자', '유휴토지', '산림사업', '목재', '임업용', '치유의숲', '산림탄소', '사립휴양시설', '산림복지', '숲사랑지도원', '임업인', '귀산촌인', 
-      '백두대간', '산림소유자', '숲가꾸기', '조림지원', '임도', '임산물', '산사태', '국립수목원', '중소기업', '직업계고', '판로진출지원', '협동화사업', '자금융자', 
-      '전통시장', '중소기업', '맞춤형', '재창업기업', '벤처', '온누리상품권', 'M&A', '수출컨소시엄', '공공연', '신진연구', '기술보증'
-    ];
-
     const filteredItems = rawItems.filter(item => {
       const targetText = (item.서비스명 || '') + (item.서비스목적요약 || '') + (item.지원대상 || '') + (item.소관기관명 || '');
-      return keywords.some(k => targetText.includes(k)) && !excludeKeywords.some(e => targetText.includes(e));
+      return keywords.some(k => targetText.includes(k)) && !commonExcludeKeywords.some(e => targetText.includes(e));
     });
 
     const freshItems = filteredItems.filter(item => {
@@ -437,7 +441,7 @@ async function fetchData() {
   }
 
   // B. 경기도 오픈 API 스캔
-  const ggRandomPage = Math.floor(Math.random() * 5) + 1; // 1~5페이지 중 무작위 선택
+  const ggRandomPage = Math.floor(Math.random() * 18) + 1; // 1~18페이지 중 무작위 선택
   const kyeonggiEndpoints = [
     { 
       name: 'GG_FESTIVAL', 
@@ -448,7 +452,7 @@ async function fetchData() {
     },
     //{ name: 'GG_EVENT', url: `https://openapi.gg.go.kr/GGCULTUREVENTSTUS?KEY=${KYEONGGI_DATA_API_KEY}&Type=json&pIndex=${ggRandomPage}&pSize=50`, key: 'GGCULTUREVENTSTUS', nameField: 'EVENT_NM' },
     { name: 'GG_PERFORMANCE', 
-      url: `https://openapi.gg.go.kr/PerformanceEvent?KEY=${KYEONGGI_DATA_API_KEY}&Type=json&pIndex=1&pSize=50`, 
+      url: `https://openapi.gg.go.kr/PerformanceEvent?KEY=${KYEONGGI_DATA_API_KEY}&Type=json&pIndex=${ggRandomPage}&pSize=100`, 
       key: 'PerformanceEvent', 
       nameField: 'EVENT_TITLE',
       dateField: 'EVENT_BEGIN_DE'
@@ -484,6 +488,11 @@ async function fetchData() {
         const freshGG = rows.filter(row => {
           const name = getRowName(row, api.name);
           const dateStr = getRowStartDate(row);
+
+          // 데이터에 제외할 단어(농업, 산업전 등)가 포함되어 있으면 버림
+          const rowText = Object.values(row).join(' ');
+          if (commonExcludeKeywords.some(e => rowText.includes(e))) return false;
+
           if (isDateOlderThan30Days(dateStr)) return false;
           if (isYearOutdated(row, name)) return false;
           return name && name !== '이름 없음' && !isDuplicateTitle(name, existingNames);
@@ -500,6 +509,9 @@ async function fetchData() {
       }
     } catch (err) {
       console.error(`경기도 ${api.name} 스캔 실패:`, err.message);
+      if (err.cause) {
+        console.error(`   └─ 상세 원인:`, err.cause);
+      }
     }
   }
 
@@ -537,6 +549,11 @@ async function fetchData() {
         const freshIC = icRows.filter(row => {
           const name = getRowName(row, api.name);
           const dateStr = getRowStartDate(row);
+
+          // 데이터에 제외할 단어가 포함되어 있으면 버림
+          const rowText = Object.values(row).join(' ');
+          if (commonExcludeKeywords.some(e => rowText.includes(e))) return false;
+
           if (isDateOlderThan30Days(dateStr)) return false;
           if (isYearOutdated(row, name)) return false;
           return name && name !== '이름 없음' && !isDuplicateTitle(name, existingNames);
