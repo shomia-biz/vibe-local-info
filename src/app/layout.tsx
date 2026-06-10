@@ -115,6 +115,26 @@ export default function RootLayout({
           {children}
         </div>
 
+        {/* 하단 푸터 영역 */}
+        <footer className="bg-slate-900 text-slate-400 py-12 border-t border-slate-800 mt-auto">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+              <div>
+                <p className="font-bold text-lg text-white mb-2">모아팁스🍯</p>
+                <p className="text-sm">수도권(서울, 경기, 인천) 지역 행사, 축제 및 지원금 정보</p>
+                <p className="text-xs text-slate-500 mt-2">© 2026 모아팁스. All rights reserved.</p>
+              </div>
+              <div className="flex flex-wrap gap-4 sm:gap-6 text-sm">
+                <Link href="/about" className="hover:text-white transition-colors">소개</Link>
+                <Link href="/terms" className="hover:text-white transition-colors">이용약관</Link>
+                <Link href="/privacy" className="hover:text-white font-semibold text-cyan-400 transition-colors">개인정보처리방침</Link>
+                <Link href="/disclaimer" className="hover:text-white transition-colors">면책고지</Link>
+                <Link href="/contact" className="hover:text-white transition-colors">문의하기</Link>
+              </div>
+            </div>
+          </div>
+        </footer>
+
         {/* 카카오톡 채널 추가 플로팅 버튼 */}
         <KakaoFloatingButton />
 

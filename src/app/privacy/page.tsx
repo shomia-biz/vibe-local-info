@@ -19,7 +19,7 @@ export default function PrivacyPage() {
 
         <div className="bg-white p-8 sm:p-12 rounded-[2rem] shadow-sm border border-gray-100 text-gray-700 leading-relaxed">
           <p className="mb-4 text-gray-900  border-b border-gray-100 pb-4">
-            수도권 모아픽스(이하 "모아픽스" 또는 "사이트")은 이용자의 개인정보를 중요하게 생각하며, 「개인정보 보호법」 및 관련 법령에 따라 아래와 같이 개인정보처리방침을 수립·공개합니다.
+            수도권 모아팁스(이하 "모아팁스" 또는 "사이트")은 이용자의 개인정보를 중요하게 생각하며, 「개인정보 보호법」 및 관련 법령에 따라 아래와 같이 개인정보처리방침을 수립·공개합니다.
           </p>
 
           <h2 className="text-xl font-bold text-gray-900 mb-2">1. 수집하는 개인정보 항목</h2>
