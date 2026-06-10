@@ -2,14 +2,14 @@ const fs = require('fs');
 const path = require('path');
 const utils = require('./fetch-utils');
 
-async function fetchSeoulEvents() {
+async function fetchIncheonEvents() {
   utils.loadEnv();
 
   const cleanKey = (key) => key ? key.replace(/^\[[^\]]+\]\s*/, '').trim() : '';
   const GEMINI_API_KEY = cleanKey(process.env.GEMINI_API_KEY || process.env.NEXT_PUBLIC_GEMINI_API_KEY);
-  const SEOUL_DATA_API_KEY = cleanKey(process.env.SEOUL_DATA_API_KEY);
+  const INCHEON_DATA_API_KEY = cleanKey(process.env.INCHEON_DATA_API_KEY || process.env.INCHEON_DATA_API__KEY);
 
-  if (!GEMINI_API_KEY || !SEOUL_DATA_API_KEY) {
+  if (!GEMINI_API_KEY || !INCHEON_DATA_API_KEY) {
     console.error('환경변수가 일부 설정되지 않았습니다. (.env.local 파일을 확인해 주세요)');
     return;
   }
@@ -55,41 +55,59 @@ async function fetchSeoulEvents() {
     }
   };
 
-  try {
-    const seoulStart = Math.floor(Math.random() * 5) * 100 + 1;
-    const seoulEnd = seoulStart + 10;
-    const seoulUrl = `http://openAPI.seoul.go.kr:8088/${SEOUL_DATA_API_KEY}/json/culturalEventInfo/${seoulStart}/${seoulEnd}/`;
-    const res = await fetch(seoulUrl, fetchOptions);
-    const text = await res.text();
-    let json;
-    try {
-      json = JSON.parse(text);
-    } catch (e) {
-      throw new Error(`서울 API 응답 파싱 실패:\n${text.substring(0, 100)}`);
-    }
-    if (json.culturalEventInfo && json.culturalEventInfo.row) {
-      const rows = json.culturalEventInfo.row;
-      console.log(`👀 [참고] 서울시 API 서버에서 방금 가져온 데이터 목록 (총 ${rows.length}건):`);
-      console.log(rows.map((row, idx) => `   ${idx + 1}. ${row.TITLE || '이름 없음'}`).join('\n'));
+  const incheonEndpoints = [
+    { name: 'IC_CULTURE', url: `https://ifac.or.kr/openAPI/real/search.do?apiKey=${INCHEON_DATA_API_KEY}&svID=culture&resultType=json` },
+    { name: 'IC_FESTIVAL', url: `https://ifac.or.kr/openAPI/real/search.do?apiKey=${INCHEON_DATA_API_KEY}&svID=festival&resultType=json` }
+  ];
 
-      const freshSeoul = rows.filter(row => {
-        const dateStr = utils.getRowStartDate(row);
-        if (utils.isDateOlderThan30Days(dateStr)) return false;
-        if (utils.isYearOutdated(row, row.TITLE)) return false;
-        return row.TITLE && !utils.isDuplicateTitle(row.TITLE, existingNames);
-      });
-      for (const row of freshSeoul) {
-        if (targetItems.length < MAX_ITEMS) {
-          targetItems.push({ rawItem: row, source: 'SEOUL_EVENT' });
-          existingNames.add(row.TITLE);
-        }
+  for (const api of incheonEndpoints) {
+    try {
+      const res = await fetch(api.url, fetchOptions);
+      const text = await res.text();
+      let json;
+      try {
+        json = JSON.parse(text);
+      } catch (e) {
+        throw new Error(`인천 API 응답 파싱 실패:\n${text.substring(0, 100)}`);
       }
-    } else {
-      const errMsg = json.RESULT ? `${json.RESULT.CODE}: ${json.RESULT.MESSAGE}` : JSON.stringify(json);
-      console.log(`⚠️ [참고] 서울시 API 서버 응답 결과: ${errMsg}`);
+      let icRows = [];
+      if (Array.isArray(json)) {
+        if (json[0] && Array.isArray(json[0].item)) {
+          icRows = json[0].item;
+        } else if (json[0] && Array.isArray(json[0].data)) {
+          icRows = json[0].data;
+        }
+      } else if (json) {
+        icRows = json.data || json.list || json.row || (json.item ? (Array.isArray(json.item) ? json.item : [json.item]) : []);
+      }
+
+      if (Array.isArray(icRows) && icRows.length > 0) {
+        console.log(`👀 [참고] 인천 ${api.name} 서버에서 방금 가져온 데이터 목록 (총 ${icRows.length}건):`);
+        console.log(icRows.map((row, idx) => `   ${idx + 1}. ${utils.getRowName(row, api.name)}`).join('\n'));
+
+        const freshIC = icRows.filter(row => {
+          const name = utils.getRowName(row, api.name);
+          const dateStr = utils.getRowStartDate(row);
+
+          const rowText = Object.values(row).join(' ');
+          if (utils.commonExcludeKeywords.some(e => rowText.includes(e))) return false;
+
+          if (utils.isDateOlderThan30Days(dateStr)) return false;
+          if (utils.isYearOutdated(row, name)) return false;
+          return name && name !== '이름 없음' && !utils.isDuplicateTitle(name, existingNames);
+        });
+        for (const row of freshIC) {
+          if (targetItems.length < MAX_ITEMS) {
+            targetItems.push({ rawItem: row, source: api.name });
+            existingNames.add(utils.getRowName(row, api.name));
+          }
+        }
+      } else {
+        console.log(`⚠️ [참고] 인천 ${api.name} 서버 응답 결과: 데이터가 없거나 형식이 올바르지 않습니다. (응답: ${JSON.stringify(json)})`);
+      }
+    } catch (err) {
+      console.error(`인천 API 스캔 에러 (${api.name}):`, err.message);
     }
-  } catch (err) {
-    console.error('서울 API 스캔 에러:', err.message);
   }
 
   if (targetItems.length === 0) {
@@ -244,4 +262,4 @@ async function fetchSeoulEvents() {
   }
 }
 
-fetchSeoulEvents();
+fetchIncheonEvents();

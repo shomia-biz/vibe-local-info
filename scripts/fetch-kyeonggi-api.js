@@ -2,14 +2,14 @@ const fs = require('fs');
 const path = require('path');
 const utils = require('./fetch-utils');
 
-async function fetchSeoulEvents() {
+async function fetchKyeonggiEvents() {
   utils.loadEnv();
 
   const cleanKey = (key) => key ? key.replace(/^\[[^\]]+\]\s*/, '').trim() : '';
   const GEMINI_API_KEY = cleanKey(process.env.GEMINI_API_KEY || process.env.NEXT_PUBLIC_GEMINI_API_KEY);
-  const SEOUL_DATA_API_KEY = cleanKey(process.env.SEOUL_DATA_API_KEY);
+  const KYEONGGI_DATA_API_KEY = cleanKey(process.env.KYEONGGI_DATA_API_KEY);
 
-  if (!GEMINI_API_KEY || !SEOUL_DATA_API_KEY) {
+  if (!GEMINI_API_KEY || !KYEONGGI_DATA_API_KEY) {
     console.error('환경변수가 일부 설정되지 않았습니다. (.env.local 파일을 확인해 주세요)');
     return;
   }
@@ -55,41 +55,67 @@ async function fetchSeoulEvents() {
     }
   };
 
-  try {
-    const seoulStart = Math.floor(Math.random() * 5) * 100 + 1;
-    const seoulEnd = seoulStart + 10;
-    const seoulUrl = `http://openAPI.seoul.go.kr:8088/${SEOUL_DATA_API_KEY}/json/culturalEventInfo/${seoulStart}/${seoulEnd}/`;
-    const res = await fetch(seoulUrl, fetchOptions);
-    const text = await res.text();
-    let json;
-    try {
-      json = JSON.parse(text);
-    } catch (e) {
-      throw new Error(`서울 API 응답 파싱 실패:\n${text.substring(0, 100)}`);
-    }
-    if (json.culturalEventInfo && json.culturalEventInfo.row) {
-      const rows = json.culturalEventInfo.row;
-      console.log(`👀 [참고] 서울시 API 서버에서 방금 가져온 데이터 목록 (총 ${rows.length}건):`);
-      console.log(rows.map((row, idx) => `   ${idx + 1}. ${row.TITLE || '이름 없음'}`).join('\n'));
+  const ggRandomPage = Math.floor(Math.random() * 18) + 1;
+  const kyeonggiEndpoints = [
+    { 
+      name: 'GG_FESTIVAL', 
+      url: `https://openapi.gg.go.kr/CultureFestival?KEY=${KYEONGGI_DATA_API_KEY}&Type=json&pIndex=1&pSize=200`, 
+      key: 'CultureFestival', 
+      nameField: 'FASTVL_NM',
+      dateField: 'FASTVL_BEGIN_DE'
+    },
+    { name: 'GG_EVENT', url: `https://openapi.gg.go.kr/GGCULTUREVENTSTUS?KEY=${KYEONGGI_DATA_API_KEY}&Type=json&pIndex=${ggRandomPage}&pSize=50`, key: 'GGCULTUREVENTSTUS', nameField: 'EVENT_NM' },
+    { name: 'GG_PERFORMANCE', url: `https://openapi.gg.go.kr/PerformanceEvent?KEY=${KYEONGGI_DATA_API_KEY}&Type=json&pIndex=${ggRandomPage}&pSize=100`, key: 'PerformanceEvent', nameField: 'EVENT_TITLE',dateField: 'EVENT_BEGIN_DE' },
+    { name: 'GG_KINTEX', url: `https://openapi.gg.go.kr/KintexEventFixatn?KEY=${KYEONGGI_DATA_API_KEY}&Type=json&pIndex=1&pSize=50`, key: 'KintexEventFixatn', nameField: 'EVENT_NM_INFO',dateField: 'EVENT_PERD' },
+    { name: 'GG_BENEFIT', url: `https://openapi.gg.go.kr/GGYOUNGBGTRNSSAMTSTUS?KEY=${KYEONGGI_DATA_API_KEY}&Type=json&pIndex=${ggRandomPage}&pSize=50`, key: 'GGYOUNGBGTRNSSAMTSTUS', nameField: 'SM_TITLE' }
+  ];
 
-      const freshSeoul = rows.filter(row => {
-        const dateStr = utils.getRowStartDate(row);
-        if (utils.isDateOlderThan30Days(dateStr)) return false;
-        if (utils.isYearOutdated(row, row.TITLE)) return false;
-        return row.TITLE && !utils.isDuplicateTitle(row.TITLE, existingNames);
+  for (const api of kyeonggiEndpoints) {
+    try {
+      console.log(`⏳ [대기 중] 경기도 ${api.name} 서버 응답을 기다립니다 (서버 지연으로 20~30초 소요될 수 있습니다)...`);
+      const res = await fetch(api.url, {
+        ...fetchOptions,
+        signal: AbortSignal.timeout(60000)
       });
-      for (const row of freshSeoul) {
-        if (targetItems.length < MAX_ITEMS) {
-          targetItems.push({ rawItem: row, source: 'SEOUL_EVENT' });
-          existingNames.add(row.TITLE);
-        }
+      const text = await res.text();
+      let json;
+      try {
+        json = JSON.parse(text);
+      } catch (e) {
+        throw new Error(`경기도 API 응답 파싱 실패:\n${text.substring(0, 100)}`);
       }
-    } else {
-      const errMsg = json.RESULT ? `${json.RESULT.CODE}: ${json.RESULT.MESSAGE}` : JSON.stringify(json);
-      console.log(`⚠️ [참고] 서울시 API 서버 응답 결과: ${errMsg}`);
+      if (json[api.key] && json[api.key][1] && json[api.key][1].row) {
+        const rows = json[api.key][1].row;
+        console.log(`👀 [참고] 경기도 ${api.name} 서버에서 방금 가져온 데이터 목록 (총 ${rows.length}건, 랜덤선택: ${ggRandomPage}페이지):`);
+        console.log(rows.map((row, idx) => `   ${idx + 1}. ${utils.getRowName(row, api.name)}`).join('\n'));
+
+        const freshGG = rows.filter(row => {
+          const name = utils.getRowName(row, api.name);
+          const dateStr = utils.getRowStartDate(row);
+
+          const rowText = Object.values(row).join(' ');
+          if (utils.commonExcludeKeywords.some(e => rowText.includes(e))) return false;
+
+          if (utils.isDateOlderThan30Days(dateStr)) return false;
+          if (utils.isYearOutdated(row, name)) return false;
+          return name && name !== '이름 없음' && !utils.isDuplicateTitle(name, existingNames);
+        });
+        for (const row of freshGG) {
+          if (targetItems.length < MAX_ITEMS) {
+            targetItems.push({ rawItem: row, source: api.name });
+            existingNames.add(utils.getRowName(row, api.name));
+          }
+        }
+      } else {
+        const errorMsg = json.RESULT ? `${json.RESULT.CODE}: ${json.RESULT.MESSAGE}` : JSON.stringify(json);
+        console.log(`⚠️ [참고] 경기도 ${api.name} 서버 응답 결과: ${errorMsg}`);
+      }
+    } catch (err) {
+      console.error(`경기도 ${api.name} 스캔 실패:`, err.message);
+      if (err.cause) {
+        console.error(`   └─ 상세 원인:`, err.cause);
+      }
     }
-  } catch (err) {
-    console.error('서울 API 스캔 에러:', err.message);
   }
 
   if (targetItems.length === 0) {
@@ -244,4 +270,4 @@ async function fetchSeoulEvents() {
   }
 }
 
-fetchSeoulEvents();
+fetchKyeonggiEvents();
