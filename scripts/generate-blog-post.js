@@ -93,10 +93,10 @@ async function generatePost() {
       const latestItem = targetItems[i];
       console.log(`🤖 [${i + 1}/${targetItems.length}] "${latestItem.name}" 정보로 블로그 글 생성 중...`);
 
-      // 무료 AI 한도(RPM) 초과 에러를 완벽하게 피하기 위해 대기 시간을 25초로 넉넉히 늘립니다.
+      // 무료 AI 한도(RPM) 초과 에러를 완벽하게 피하기 위해 대기 시간을 40초로 넉넉히 늘립니다.
       if (i > 0) {
-        console.log(`⏳ 안정적인 생성을 위해 25초간 대기합니다...`);
-        await sleep(25000);
+        console.log(`⏳ 안정적인 생성을 위해 40초간 대기합니다...`);
+        await sleep(40000);
       }
 
       const prompt = `아래 공공서비스 정보를 바탕으로 검색엔진(SEO)에 최적화된 블로그 글을 작성해줘.
@@ -131,7 +131,7 @@ tags: [태그1, 태그2, tags3]
 
       let response;
       let result;
-      const backoffDelays = [25000, 35000, 60000];
+      const backoffDelays = [40000, 60000, 90000];
       let attempt = 0;
 
       while (attempt < backoffDelays.length) {
