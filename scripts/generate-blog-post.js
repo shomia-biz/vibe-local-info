@@ -58,10 +58,15 @@ async function generatePost() {
 
     // 1회 실행 당 최대 생성할 블로그 글 수 (필요시 숫자를 변경하시면 됩니다)
     const MAX_POSTS_TO_GENERATE = 3;
+    const today = new Date().toISOString().split('T')[0]; // 오늘 날짜
 
     // 아직 글을 작성하지 않은 '최신' 항목 찾기 (최대 MAX_POSTS_TO_GENERATE개 수집)
     const targetItems = [];
     for (const item of allItems) {
+      // 이미 종료된 행사나 혜택은 작성 후보에서 제외 ("상시" 제외)
+      if (item.endDate && item.endDate !== '상시' && item.endDate < today) {
+        continue;
+      }
       if (targetItems.length >= MAX_POSTS_TO_GENERATE) {
         break;
       }
@@ -86,7 +91,6 @@ async function generatePost() {
 
     const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
     const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${GEMINI_API_KEY}`;
-    const today = new Date().toISOString().split('T')[0];
 
     // [2단계] 루프를 돌며 각 아이템에 대한 블로그 글 생성
     for (let i = 0; i < targetItems.length; i++) {
