@@ -1533,6 +1533,20 @@
   ],
   "seoulExhibitionEvents": [
     {
+      "name": "정보경 개인전 [사유를 앞질러]",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-06-19",
+      "endDate": "2026-07-05",
+      "location": "서울시 용산구 대사관로12길 8 , OMG",
+      "target": "누구나",
+      "summary": "서울시 용산구 OMG에서 개최되는 정보경 개인 미술 전시회로, 관람 시간은 13:00~18:00(일·월 휴관)이며 무료로 관람 가능합니다.",
+      "link": "https://omg-kr.com/OutrunsThought",
+      "imageUrl": "https://cdn.imweb.me/upload/S20251028ce1a51eadabbf/253d288bcacf4.png",
+      "id": 1778713506436,
+      "updatedAt": "2026-06-11"
+    },
+    {
       "name": "[구립증산도서관] 책 따라 걷는 도서관 6월 원화 전시 [용기를 내, 비닐장갑!]",
       "category": "전시",
       "region": "서울",
@@ -1804,6 +1818,34 @@
   ],
   "nationalExhibitionEvents": [],
   "seoulEvents": [
+    {
+      "name": "[한국메세나협회/IBK기업은행] 다문화 통합을 위한 찾아가는 음악회 [IBK 모두다 가족콘서트 2026]",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-06-19",
+      "endDate": "2026-06-19",
+      "location": "국립중앙박물관 극장 용",
+      "target": "누구나",
+      "summary": "한국메세나협회와 IBK기업은행이 함께 진행하는 다문화 통합을 위한 찾아가는 음악회로, 온 가족이 함께 즐길 수 있는 콘서트입니다.",
+      "link": "https://www.mecenat.or.kr/ko/community/notice.php",
+      "imageUrl": "https://www.mecenat.or.kr/ko/img/common/logo.png",
+      "id": 1778713506438,
+      "updatedAt": "2026-06-11"
+    },
+    {
+      "name": "Pianist 김송현의 [시간의 풍경]",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-06-19",
+      "endDate": "2026-06-20",
+      "location": "아트센터 림 아트홀",
+      "target": "누구나",
+      "summary": "피아니스트 김송현이 '시간'과 '풍경'을 주제로 1월부터 12월까지를 표현한 클래식 작품들을 통해 한 해의 흐름과 감정을 그려내는 피아노 독주회",
+      "link": "https://artcenterlim.co.kr/programs/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&bmode=view&idx=171571763&t=board",
+      "imageUrl": "https://cdn.imweb.me/thumbnail/20260601/585c2f8d65913.png",
+      "id": 1778713506437,
+      "updatedAt": "2026-06-11"
+    },
     {
       "name": "구민희 피아노 독주회",
       "category": "행사",
