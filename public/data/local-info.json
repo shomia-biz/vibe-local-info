@@ -1761,6 +1761,45 @@
   ],
   "incheonExhibitionEvents": [
     {
+      "name": "소망비",
+      "category": "전시",
+      "region": "인천",
+      "startDate": "2026-06-16",
+      "endDate": "2026-06-29",
+      "location": "인천광역시교육청평생학습관 갤러리 나무",
+      "target": "누구나",
+      "summary": "계절의 숨결을 담은 '비'라는 주제를 통해 인간과 자연의 따뜻한 공존을 이야기하는 전시입니다. 캔버스 위의 반복적인 요철 질감으로 빗물을 형상화하고, 다채로운 색감으로 자연의 아름다움과 위대한 회복력을 표현한 작품들을 선보입니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13655",
+      "id": 1778713506442,
+      "updatedAt": "2026-06-11"
+    },
+    {
+      "name": "서주선 초대전 《신화를 찾아서》",
+      "category": "전시",
+      "region": "인천",
+      "startDate": "2026-06-08",
+      "endDate": "2026-06-27",
+      "location": "갤러리EOS",
+      "target": "누구나",
+      "summary": "달항아리, 반가사유상 등 전통적 도상과 현대적이고 환상적인 존재들이 어우러지는 작품들을 통해 일상의 현실을 벗어나 새로운 환상의 세계를 경험하게 하는 서주선 작가의 개인 전시회입니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13657",
+      "id": 1778713506441,
+      "updatedAt": "2026-06-11"
+    },
+    {
+      "name": "집_2026 공간 듬_두번째 전시_Alliance - 배에 힘을 주고",
+      "category": "전시",
+      "region": "인천",
+      "startDate": "2026-06-12",
+      "endDate": "2026-07-05",
+      "location": "공간 듬",
+      "target": "누구나",
+      "summary": "공간 듬에서 개최되는 오스카 페체트(Oskar Petzet) 작가의 전시 'Alliance - 배에 힘을 주고'입니다. 오프닝, 사운드 퍼포먼스, 작가와의 대화 및 어린이 행사 등의 프로그램이 마련되어 있습니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13660",
+      "id": 1778713506439,
+      "updatedAt": "2026-06-11"
+    },
+    {
       "name": "2026 Green Preject 노우석 x 조형우",
       "category": "전시",
       "region": "인천",
@@ -3196,6 +3235,19 @@
     }
   ],
   "incheonEvents": [
+    {
+      "name": "2026 인천문화재단 청년예술활동지원사업 연극 [울며 마늘 먹기]",
+      "category": "행사",
+      "region": "인천",
+      "startDate": "2026-06-11",
+      "endDate": "2026-06-13",
+      "location": "인천문학경기장 문학시어터",
+      "target": "누구나",
+      "summary": "인천문화재단 청년예술활동지원사업 선정작으로, 단군신화 속 곰과 호랑이의 이야기를 빌려 타인과 함께 살아가며 겪는 사소하고 피할 수 없는 갈등과 불편함을 무대 위에 그려낸 연극 공연입니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13659",
+      "id": 1778713506440,
+      "updatedAt": "2026-06-11"
+    },
     {
       "name": "CELL",
       "category": "행사",
