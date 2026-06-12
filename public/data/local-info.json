@@ -1324,6 +1324,19 @@
   ],
   "nationalCultureEvents": [
     {
+      "name": "국립청소년인터넷드림마을 운영 지원",
+      "category": "문화",
+      "region": "전국",
+      "startDate": "2026-06-12",
+      "endDate": "상시",
+      "location": "국립청소년인터넷드림마을",
+      "target": "인터넷·스마트폰 과의존 및 사이버도박 문제 청소년(중·고등학생)",
+      "summary": "인터넷 및 스마트폰 과의존 청소년을 대상으로 전문 진단, 맞춤형 개인상담, 집단상담, 부모교육 및 가족상담, 대안놀이 체험과 수련활동 등 다양한 치유 프로그램을 제공합니다.",
+      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/138300000008",
+      "id": 1778713506443,
+      "updatedAt": "2026-06-12"
+    },
+    {
       "name": "외국인 범죄 예방교실 운영 지원",
       "category": "문화",
       "region": "전국",
@@ -3478,6 +3491,97 @@
     }
   ],
   "nationalBenefits": [
+    {
+      "name": "양육비 이행 지원 서비스",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-06-12",
+      "endDate": "상시",
+      "location": "성평등가족부",
+      "target": "19세 미만 미성년 자녀를 양육하고 있는 부 또는 모 및 조부모",
+      "summary": "미성년 자녀의 양육비 청구와 이행확보를 지원하기 위해 양육비 관련 상담, 법률지원, 양육비 선지급제도 운영 및 채무 불이행자에 대한 제재조치 등을 제공합니다.",
+      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/138300000066",
+      "id": 1778713506450,
+      "updatedAt": "2026-06-12"
+    },
+    {
+      "name": "양육비 선지급 지원",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-06-12",
+      "endDate": "상시",
+      "location": "성평등가족부",
+      "target": "미성년 자녀를 키우는 양육비 채권자 중 기준 중위소득 150% 이하 등 요건을 모두 만족하는 사람",
+      "summary": "양육비를 받지 못하고 있는 한부모가족 등에게 국가가 미성년 자녀 1인당 월 20만원을 먼저 지급하고 양육비 채무자에게 회수하는 제도",
+      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/138300000065",
+      "id": 1778713506449,
+      "updatedAt": "2026-06-12"
+    },
+    {
+      "name": "가정 밖 청소년 자립지원",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-06-12",
+      "endDate": "상시",
+      "location": "성평등가족부",
+      "target": "청소년복지시설(청소년쉼터, 청소년자립지원관, 청소년회복지원시설) 이용 청소년",
+      "summary": "가정 밖 청소년에게 생활보호, 심리상담, 의료, 학업복귀, 취업지원 등 맞춤형 자립지원서비스를 제공하여 신속한 가정복귀와 사회진출을 지원합니다.",
+      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/138300000063",
+      "id": 1778713506448,
+      "updatedAt": "2026-06-12"
+    },
+    {
+      "name": "청소년회복지원시설운영",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-06-12",
+      "endDate": "상시",
+      "location": "성평등가족부",
+      "target": "소년법 처분(제1호 ‘보호자 감호위탁’)을 받은 청소년",
+      "summary": "소년법 처분(제1호 ‘보호자 감호위탁’)을 받은 청소년에게 상담, 주거, 학업, 자립 및 보호·생활지원을 제공하여 신체, 심리, 정서적 치유와 회복을 돕습니다.",
+      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/138300000062",
+      "id": 1778713506447,
+      "updatedAt": "2026-06-12"
+    },
+    {
+      "name": "학교 밖 청소년 건강검진 지원",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-06-12",
+      "endDate": "상시",
+      "location": "학교밖청소년지원센터",
+      "target": "9세 이상 18세 이하 학교 밖 청소년",
+      "summary": "학교 밖 청소년을 대상으로 건강검진 비용 전액 지원(본인 부담 없음)",
+      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/138300000033",
+      "id": 1778713506446,
+      "updatedAt": "2026-06-12"
+    },
+    {
+      "name": "청소년 상담 서비스 제공",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-06-12",
+      "endDate": "상시",
+      "location": "청소년상담복지센터",
+      "target": "9세~24세 (위기)청소년",
+      "summary": "위기청소년을 대상으로 상담, 긴급구조, 학업지원 등의 서비스 제공",
+      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/138300000030",
+      "id": 1778713506445,
+      "updatedAt": "2026-06-12"
+    },
+    {
+      "name": "한국청소년상담복지개발원 운영 지원",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-06-12",
+      "endDate": "상시",
+      "location": "한국청소년상담복지개발원",
+      "target": "만 9~24세 청소년, 청소년 상담 관련 자격증 취득자 및 예정자, 지도자 등",
+      "summary": "청소년 및 청소년지도자를 위한 정책연구, 상담복지사업 운영 지원, 청소년상담사 및 또래상담지도사 등 전문 인력 양성을 지원합니다.",
+      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/138300000011",
+      "id": 1778713506444,
+      "updatedAt": "2026-06-12"
+    },
     {
       "name": "2025 영구 불임예상 난자·정자 냉동 지원",
       "category": "혜택",
