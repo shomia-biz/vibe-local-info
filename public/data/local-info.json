@@ -1255,6 +1255,34 @@
   ],
   "incheonCultureEvents": [
     {
+      "name": "어린이 패션 프로젝트 <사계지장>",
+      "category": "문화",
+      "region": "인천",
+      "startDate": "2026-06-25",
+      "endDate": "2026-09-29",
+      "location": "지읒아트스튜디오",
+      "target": "초등학생 5, 6학년",
+      "summary": "기후 변화 속 사계절을 디자인하는 어린이 패션 프로젝트 '사계지장'에서 활약할 어린이 패션 디자이너를 모집하고 교육하는 프로그램",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13653",
+      "imageUrl": "https://ifac.or.kr/resource/www/images/layout/og_images.png",
+      "id": 1778713506467,
+      "updatedAt": "2026-06-13"
+    },
+    {
+      "name": "2026 문화서로 사랑방_몸짓춤",
+      "category": "문화",
+      "region": "인천",
+      "startDate": "2026-06-24",
+      "endDate": "2026-07-01",
+      "location": "복합문화공간 해시",
+      "target": "누구나 (정원 6명 이내)",
+      "summary": "내 몸의 리듬과 움직임을 발견하는 소규모 몸짓 워크숍 프로그램으로, 조주리 강사와 함께 복합문화공간 해시에서 진행됩니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13654",
+      "imageUrl": "https://ifac.or.kr/resource/www/images/layout/og_images.png",
+      "id": 1778713506466,
+      "updatedAt": "2026-06-13"
+    },
+    {
       "name": "선상키친 via 인천 - 네바네바 아트토크",
       "category": "문화",
       "region": "인천",
@@ -1801,6 +1829,19 @@
     }
   ],
   "incheonExhibitionEvents": [
+    {
+      "name": "우리는 무엇을 기억하는가 : Réminiscence",
+      "category": "전시",
+      "region": "인천",
+      "startDate": "2026-06-16",
+      "endDate": "2026-07-14",
+      "location": "인천광역시교육청평생학습관 갤러리 「다솜」",
+      "target": "누구나",
+      "summary": "사진, 옷감, 실, 비즈 등 다양한 재료로 기억이 축적되고 변형되는 과정과 감각의 흐름을 담아낸 20여 점의 작품을 선보이는 전시회",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13656",
+      "id": 1778713506465,
+      "updatedAt": "2026-06-13"
+    },
     {
       "name": "소망비",
       "category": "전시",
