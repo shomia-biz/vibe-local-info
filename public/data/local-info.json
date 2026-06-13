@@ -3572,6 +3572,45 @@
   ],
   "nationalBenefits": [
     {
+      "name": "유휴간호사 등 교육 및 취업 연계 서비스 제공",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-06-13",
+      "endDate": "상시",
+      "location": "간호인력 취업교육센터",
+      "target": "유휴·이직 간호사, 간호간병통합서비스 실시 병원의 간호사 및 간호조무사, 간호대학 졸업예정자, 의료기관 신규 및 재직간호사",
+      "summary": "유휴간호사의 재취업을 돕기 위해 교육 지원 및 취업 연계 서비스를 제공합니다.",
+      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200000096",
+      "id": 1778713506461,
+      "updatedAt": "2026-06-13"
+    },
+    {
+      "name": "금연클리닉 서비스 제공",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-06-13",
+      "endDate": "상시",
+      "location": "해당지역 보건소",
+      "target": "전 국민 (지역사회 흡연자)",
+      "summary": "지역사회 흡연자를 대상으로 금연상담 및 금연지원서비스를 제공합니다.",
+      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200000081",
+      "id": 1778713506460,
+      "updatedAt": "2026-06-13"
+    },
+    {
+      "name": "대학원 학과 기반 교육연구단 연구장학금 등 지원(4단계 두뇌한국21 사업)",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-06-13",
+      "endDate": "상시",
+      "location": "교육부",
+      "target": "대학원 학과를 기반으로 구성된 교육연구단(팀)",
+      "summary": "대학원 학과기반 사업단 소속 대학원생에 연구장학금, 산학협력 활동지원비 등 지급",
+      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/134200000007",
+      "id": 1778713506459,
+      "updatedAt": "2026-06-13"
+    },
+    {
       "name": "중소환경기업 사업화 지원",
       "category": "혜택",
       "region": "전국",
