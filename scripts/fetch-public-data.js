@@ -15,7 +15,7 @@ async function fetchData() {
     return;
   }
 
-  const MAX_ITEMS = 100;
+  const MAX_ITEMS = 3;
   const dataPath = path.join(process.cwd(), 'public/data/local-info.json');
   let localData;
   try {
@@ -75,12 +75,12 @@ async function fetchData() {
     }
 
     const keywords = [
-      '송파', '서울', '경기', '인천', '소상공인', '육아', '아동', '다자녀', '청소년', '학생', '청년', '출산', '창업', '전세사기', '유아', '영아', '장학금', 
+      '송파', '서울', '경기', '인천', '소상공인', '육아', '아동', '다자녀', '청소년', '학생', '청년', '출산', '창업', '전세사기', '유아', '영아', '장학금',
       '건강검진', '건강관리', '문화생활', '경로', '장애인', '부동산', '행정사무', '공공임대주택', '주택청약', '복지서비스', '지원금', '지원사업', '기초생활보장', '생계급여', '주거급여', '긴급복지지원',
       '국민취업지원', '고용보험', '실업급여', '건강보험', '국민연금', '국민건강보험', '건강보험공단', '국민취업지원', '월세', '친환경', '고경력', '창업자금', '양육비', '평생교육', '임산부', '영유아', '보육료',
       '금연클리닉', '보건소', '유휴간호사', '금연치료', '자산형성지원사업'
     ];
-    
+
     const filteredItems = rawItems.filter(item => {
       const targetText = (item.서비스명 || '') + (item.서비스목적요약 || '') + (item.지원대상 || '') + (item.소관기관명 || '');
       return keywords.some(k => targetText.includes(k)) && !utils.commonExcludeKeywords.some(e => targetText.includes(e));
@@ -92,7 +92,7 @@ async function fetchData() {
       if (utils.isYearOutdated(item, item.서비스명)) return false;
       return item.서비스명 && !utils.isDuplicateTitle(item.서비스명, existingNames);
     });
-    
+
     for (const item of freshItems) {
       if (targetItems.length < MAX_ITEMS) {
         targetItems.push({ rawItem: item, source: 'GOV24' });
@@ -123,8 +123,9 @@ async function fetchData() {
       const itemName = utils.getRowName(rawItem, source);
       console.log(`🤖 [Gemini 정제 중...] 출처: ${source} | 명칭: ${itemName}`);
 
-      console.log(`⏳ [대기 중] 무료 API 한도(Rate Limit) 방지를 위해 25초간 대기합니다...`);
-      await sleep(25000);
+      // 평소에는 분당 20회 한도(3초당 1회)를 맞추기 위해 안전하게 4초 대기합니다.
+      console.log(`⏳ [대기 중] API 무료 한도 준수를 위해 4초간 대기...`);
+      await sleep(4000);
 
       const prompt = `아래 입력된 데이터 1건을 분석해서 규격화된 시스템용 JSON 데이터로 전환해줘.
       형식: {name: 서비스명또는행사명, category: '행사' 또는 '문화' 또는 '전시' 또는 '혜택', region: '서울' 또는 '경기' 또는 '인천' 또는 '전국', startDate: 'YYYY-MM-DD', endDate: 'YYYY-MM-DD', location: 장소 또는 기관명, target: 대상층, summary: 내용 요약설명, link: 링크주소}
@@ -143,10 +144,12 @@ async function fetchData() {
       불필요한 마크다운 백틱 문법이나 서론 생략하고 오로지 순수 유효 JSON 텍스트 한 덩어리만 반환해.\n\n데이터 소스: ${JSON.stringify(Object.assign({}, rawItem, { parsedName: itemName }))}`;
 
       let geminiResponse;
-      let geminiResult;
+      let geminiResult = null;
       const backoffDelays = [15000, 30000, 60000];
       let attempt = 0;
+      let isSuccess = false;
 
+      // API 요청 지연 재시도 루프
       while (attempt < backoffDelays.length) {
         let errDetail = '';
         try {
@@ -155,28 +158,45 @@ async function fetchData() {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
           });
+
+          // HTTP 상태 코드가 정상 코드가 아닐 경우 에러 처리
+          if (!geminiResponse.ok) {
+            const errText = await geminiResponse.text();
+            throw new Error(`HTTP Error ${geminiResponse.status}: ${errText}`);
+          }
+
           geminiResult = await geminiResponse.json();
 
-          if (geminiResult.candidates && geminiResult.candidates.length > 0) {
-            break;
+          // 올바른 응답 구조가 들어왔는지 확인
+          if (geminiResult?.candidates?.[0]?.content?.parts?.[0]?.text) {
+            isSuccess = true;
+            break; // 성공 시 루프 즉시 탈출
           }
-          
-          errDetail = geminiResult.error ? geminiResult.error.message : JSON.stringify(geminiResult);
+
+          errDetail = geminiResult.error ? geminiResult.error.message : '알 수 없는 응답 구조';
         } catch (fetchErr) {
           errDetail = fetchErr.message;
         }
 
+        // 최대 재시도 횟수를 초과했으면 루프 종료
+        if (attempt === backoffDelays.length) {
+          break;
+        }
+
+        // 실패 시 지정된 백오프 시간만큼 대기 후 재시도
         const delay = backoffDelays[attempt];
-        console.warn(`   ⚠️ Gemini API 한도 초과 또는 오류. ${delay/1000}초 후 다시 시도합니다... (원인: ${errDetail})`);
+        console.warn(`⚠️ Gemini API 한도 초과 또는 오류 (시도 ${attempt + 1}/${backoffDelays.length}). ${delay / 1000}초 후 다시 시도합니다... (원인: ${errDetail})`);
         await sleep(delay);
         attempt++;
       }
 
-      if (!geminiResult || !geminiResult.candidates || geminiResult.candidates.length === 0) {
-        console.error(`❌ Gemini AI 응답 오류 (${itemName} 데이터를 최종적으로 가공하지 못했습니다)`);
-        continue;
+      // 최종 실패 처리 (이 부분이 누락되면 아래에서 crash가 발생합니다)
+      if (!isSuccess || !geminiResult) {
+        console.error(`❌ Gemini AI 응답 오류: 3회 재시도 후에도 [${itemName}] 데이터를 가공하지 못했습니다.`);
+        continue; // 다음 아이템(target)으로 안전하게 넘어감
       }
 
+      // JSON 텍스트 추출 및 정제
       let aiText = geminiResult.candidates[0].content.parts[0].text;
       aiText = aiText.replace(/```json|```/g, '').trim();
 

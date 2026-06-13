@@ -97,10 +97,10 @@ async function generatePost() {
       const latestItem = targetItems[i];
       console.log(`🤖 [${i + 1}/${targetItems.length}] "${latestItem.name}" 정보로 블로그 글 생성 중...`);
 
-      // 무료 AI 한도(RPM) 초과 에러를 완벽하게 피하기 위해 대기 시간을 40초로 넉넉히 늘립니다.
+      // 평소에는 4초만 대기하여 실행 속도를 극대화합니다.
       if (i > 0) {
-        console.log(`⏳ 안정적인 생성을 위해 40초간 대기합니다...`);
-        await sleep(40000);
+        console.log(`⏳ 안정적인 생성을 위해 4초간 대기합니다...`);
+        await sleep(4000);
       }
 
       const prompt = `아래 공공서비스 정보를 바탕으로 검색엔진(SEO)에 최적화된 블로그 글을 작성해줘.
@@ -134,10 +134,12 @@ tags: [태그1, 태그2, tags3]
 마지막 줄에 FILENAME: YYYY-MM-DD-keyword 형식으로 파일명도 출력해줘. 키워드는 영문으로.`;
 
       let response;
-      let result;
-      const backoffDelays = [40000, 60000, 90000];
+      let result = null;
+      const backoffDelays = [15000, 30000, 60000]; // 에러 발생 시 대기 시간 (15초 -> 30초 -> 60초)
       let attempt = 0;
+      let isSuccess = false;
 
+      // API 요청 지연 재시도 루프
       while (attempt < backoffDelays.length) {
         let errDetail = '';
         try {
@@ -148,17 +150,28 @@ tags: [태그1, 태그2, tags3]
               contents: [{ parts: [{ text: prompt }] }]
             })
           });
-          result = await response.json();
-
-          if (result.candidates && result.candidates[0]) {
-            break; // 성공 시 루프 탈출
+          
+          // HTTP 상태 코드가 200번대가 아닐 경우 (429 한도초과 등) 강제 에러 발생
+          if (!response.ok) {
+            const errText = await response.text();
+            throw new Error(`HTTP ${response.status}: ${errText}`);
           }
 
-          errDetail = result.error ? result.error.message : JSON.stringify(result);
+          result = await response.json();
+
+          // 원하는 데이터 구조가 올바르게 들어왔는지 검증
+          if (result?.candidates?.[0]?.content?.parts?.[0]?.text) {
+            isSuccess = true;
+            break; // 성공 시 재시도 루프 즉시 탈출
+          }
+
+          // 성공했지만 API 응답 구조가 예상과 다를 경우
+          errDetail = result.error ? result.error.message : '올바르지 않은 응답 구조';
         } catch (fetchErr) {
           errDetail = fetchErr.message;
         }
 
+        // 실패했을 때만 긴 대기 시간(Backoff) 적용
         const delay = backoffDelays[attempt];
         console.warn(`   ⚠️ Gemini API 한도 초과 또는 오류. ${delay/1000}초 후 다시 시도합니다... (원인: ${errDetail})`);
         await sleep(delay);
