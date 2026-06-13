@@ -135,7 +135,7 @@ tags: [태그1, 태그2, tags3]
 
       let response;
       let result = null;
-      const backoffDelays = [15000, 30000, 60000]; // 에러 발생 시 대기 시간 (15초 -> 30초 -> 60초)
+      const backoffDelays = [30000, 60000, 120000]; // 에러 발생 시 대기 시간 (30초 -> 60초 -> 120초)
       let attempt = 0;
       let isSuccess = false;
 

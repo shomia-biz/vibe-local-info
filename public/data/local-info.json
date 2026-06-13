@@ -783,6 +783,34 @@
   ],
   "seoulCultureEvents": [
     {
+      "name": "[서울역사편찬원] 2026년 [제8차] 엄마아빠와 함께하는 교과서 역사기행",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-05-23",
+      "endDate": "2026-05-23",
+      "location": "서대문형무소역사관",
+      "target": "초.중.고 학생 자녀가 있는 서울시민 가족",
+      "summary": "초·중·고 자녀를 동반한 서울시민 가족을 대상으로 서대문형무소역사관에서 진행되는 교과서 연계 역사 탐방 및 교육 체험 프로그램입니다.",
+      "link": "https://history.seoul.go.kr/bbsctt/view.do?bbscttSn=2605040001&key=2210200020&sc_custom1=apply&pageIndex=1&orderBy=bbscttOrdr+desc&sc_cate=&sc_bbsctt_adit_iem_cn=&sc=&sw=",
+      "imageUrl": "https://history.seoul.go.kr/common/getImg.do?key=bbsctt_thumb&name=202605/1762335994020.jpg",
+      "id": 1778713506455,
+      "updatedAt": "2026-06-13"
+    },
+    {
+      "name": "[서울공예박물관] 2026 SeMoCA 공예강좌 #3",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-05-23",
+      "endDate": "2026-05-23",
+      "location": "서울공예박물관 교육동 1층 강당",
+      "target": "모든 시민 (선착순 80명)",
+      "summary": "서울공예박물관에서 진행되는 2026 SeMoCA 공예강좌 #3 교육 프로그램입니다.",
+      "link": "https://craftmuseum.seoul.go.kr/progrm/view/477",
+      "imageUrl": "https://craftmuseum.seoul.go.kr/common/program/filedown?idx=1996",
+      "id": 1778713506453,
+      "updatedAt": "2026-06-13"
+    },
+    {
       "name": "[운현궁] 2026 별 헤는 밤 운현궁 안내(5월)",
       "category": "문화",
       "region": "서울",
@@ -1870,6 +1898,19 @@
   ],
   "nationalExhibitionEvents": [],
   "seoulEvents": [
+    {
+      "name": "윤은경 피아노 독주회",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-05-23",
+      "endDate": "2026-05-23",
+      "location": "세종체임버홀",
+      "target": "7세 이상 관람 가능 (2019년 이전 출생자)",
+      "summary": "세종체임버홀에서 개최되는 윤은경 피아노 독주회로, 전석 30,000원에 관람할 수 있는 클래식 공연 예술 행사입니다.",
+      "link": "https://www.sejongpac.or.kr/portal/performance/performance/performTicket.do?performIdx=37160&menuNo=200320",
+      "id": 1778713506454,
+      "updatedAt": "2026-06-13"
+    },
     {
       "name": "[한국메세나협회/IBK기업은행] 다문화 통합을 위한 찾아가는 음악회 [IBK 모두다 가족콘서트 2026]",
       "category": "행사",
@@ -3125,6 +3166,45 @@
   ],
   "kyeonggiEvents": [
     {
+      "name": "2026 모두모여모란",
+      "category": "행사",
+      "region": "경기",
+      "startDate": "2026-10-01",
+      "endDate": "2026-10-31",
+      "location": "모란 민속 5일장",
+      "target": "누구나",
+      "summary": "의식행사와 무대 공연 및 유관기관 참여로 꾸며지는 축제 행사",
+      "link": "",
+      "id": 1778713506458,
+      "updatedAt": "2026-06-13"
+    },
+    {
+      "name": "제5회 정자동 놀터축제 및 작품발표회",
+      "category": "행사",
+      "region": "경기",
+      "startDate": "2026-10-01",
+      "endDate": "2026-10-31",
+      "location": "정자동 봉우재어린이공원 일대",
+      "target": "누구나",
+      "summary": "경기도 성남시 분당구 정자동에서 개최되는 축제로, 주민자치위원회가 주관하여 공연, 체험부스, 전시 등 다양한 프로그램을 진행합니다.",
+      "link": "",
+      "id": 1778713506457,
+      "updatedAt": "2026-06-13"
+    },
+    {
+      "name": "2026 파크콘서트",
+      "category": "행사",
+      "region": "경기",
+      "startDate": "2026-09-01",
+      "endDate": "2026-09-30",
+      "location": "중앙공원 야외공연장",
+      "target": "누구나",
+      "summary": "기간 중 공연 3회 예정 / 1일 1회",
+      "link": "",
+      "id": 1778713506456,
+      "updatedAt": "2026-06-13"
+    },
+    {
       "name": "한국외대 글로벌스포츠산업학부와 함께하는 유소년 축구 페스티벌",
       "category": "행사",
       "region": "경기",
@@ -3491,6 +3571,34 @@
     }
   ],
   "nationalBenefits": [
+    {
+      "name": "중소환경기업 사업화 지원",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-06-13",
+      "endDate": "상시",
+      "location": "한국환경산업기술원",
+      "target": "환경분야 예비창업자, 창업기업, 중소환경기업 및 39세 이하의 청년창업기업",
+      "summary": "환경분야 예비창업자와 중소환경기업을 대상으로 시제품 제작, 인검증, 컨설팅 및 시장진출 등에 필요한 사업화 자금(최대 3억 원)을 지원하고 창업 역량강화 프로그램을 제공합니다.",
+      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/148000000003",
+      "imageUrl": "http://www.gov.kr/images/etc/og_image_600.png",
+      "id": 1778713506452,
+      "updatedAt": "2026-06-13"
+    },
+    {
+      "name": "금속광산 현대화 굴진 지원",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-06-13",
+      "endDate": "상시",
+      "location": "한국광해광업공단",
+      "target": "광업법 제3조에 의한 법정광물 중 금속광종을 탐사ㆍ개발하고자 하는 광산",
+      "summary": "국내 금속광산의 자급률 향상을 위해 현대화 굴진비용을 사업비의 50% 이내로 지원합니다.",
+      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/145000000053",
+      "imageUrl": "http://www.gov.kr/images/etc/og_image_600.png",
+      "id": 1778713506451,
+      "updatedAt": "2026-06-13"
+    },
     {
       "name": "양육비 이행 지원 서비스",
       "category": "혜택",

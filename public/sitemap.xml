@@ -2,31 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://moa-tips.com/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://moa-tips.com/blog/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://moa-tips.com/about/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://moa-tips.com/contact/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://moa-tips.com/fortune/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -249,5 +249,45 @@
   <url>
     <loc>https://moa-tips.com/blog/2026-05-31-vocal-consort-seoul-concert/</loc>
     <lastmod>2026-05-31</lastmod>
+  </url>
+  <url>
+    <loc>https://moa-tips.com/blog/2026-06-10-hanam-iseongsanseong-festival/</loc>
+    <lastmod>2026-06-10</lastmod>
+  </url>
+  <url>
+    <loc>https://moa-tips.com/blog/2026-06-10-incheon-drawing-show/</loc>
+    <lastmod>2026-06-10</lastmod>
+  </url>
+  <url>
+    <loc>https://moa-tips.com/blog/2026-06-10-little-hero-olympics/</loc>
+    <lastmod>2026-06-10</lastmod>
+  </url>
+  <url>
+    <loc>https://moa-tips.com/blog/2026-06-10-namjin-concert-incheon/</loc>
+    <lastmod>2026-06-10</lastmod>
+  </url>
+  <url>
+    <loc>https://moa-tips.com/blog/2026-06-10-seolmijae-art-museum-exhibition/</loc>
+    <lastmod>2026-06-10</lastmod>
+  </url>
+  <url>
+    <loc>https://moa-tips.com/blog/2026-06-10-seongnam-global-festival/</loc>
+    <lastmod>2026-06-10</lastmod>
+  </url>
+  <url>
+    <loc>https://moa-tips.com/blog/2026-06-10-suwon-galleries-art-fair/</loc>
+    <lastmod>2026-06-10</lastmod>
+  </url>
+  <url>
+    <loc>https://moa-tips.com/blog/2026-06-10-yogijogi-day/</loc>
+    <lastmod>2026-06-10</lastmod>
+  </url>
+  <url>
+    <loc>https://moa-tips.com/blog/2026-06-11-public-food-service-loan/</loc>
+    <lastmod>2026-06-11</lastmod>
+  </url>
+  <url>
+    <loc>https://moa-tips.com/blog/2026-06-11-rural-childcare-support/</loc>
+    <lastmod>2026-06-11</lastmod>
   </url>
 </urlset>

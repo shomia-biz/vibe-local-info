@@ -157,7 +157,7 @@ async function fetchKyeonggiEvents() {
 
       let geminiResponse;
       let geminiResult = null;
-      const backoffDelays = [15000, 30000, 60000];
+      const backoffDelays = [30000, 60000, 120000];
       let attempt = 0;
       let isSuccess = false;
 
