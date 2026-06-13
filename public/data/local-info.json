@@ -1899,6 +1899,48 @@
   "nationalExhibitionEvents": [],
   "seoulEvents": [
     {
+      "name": "[강남문화재단] 6월 키즈예술공연 [노는 국악 셋!]",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-06-20",
+      "endDate": "2026-06-20",
+      "location": "강남씨어터",
+      "target": "36개월 이상",
+      "summary": "강남문화재단에서 개최하는 어린이 대상 국악 공연 프로그램으로, 36개월 이상 관람 가능한 키즈 예술 공연입니다.",
+      "link": "https://www.gangnam.go.kr/office/gfac/board/gfac_perform02/260/view.do?mid=gfac_perform0105",
+      "imageUrl": "https://www.gangnam.go.kr/assets/images/icon/touch/og_image_src.png",
+      "id": 1778713506464,
+      "updatedAt": "2026-06-13"
+    },
+    {
+      "name": "[서울시립교향악단] 2026 서울시향 체임버 클래식스 III: 독일 & 오스트리아",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-06-20",
+      "endDate": "2026-06-20",
+      "location": "세종문화회관 체임버홀",
+      "target": "초등학생 이상 관람가",
+      "summary": "서울시립교향악단 단원들과 피아니스트 프란체스코 피에몬테시가 함께 세종문화회관 체임버홀에서 선보이는 독일 및 오스트리아 작곡가들의 클래식 체임버 음악 공연입니다.",
+      "link": "https://www.seoulphil.or.kr/perf/view?perfNo=7131",
+      "imageUrl": "https://www.seoulphil.or.kr/static/webdoc/image/sns_logo1.png",
+      "id": 1778713506463,
+      "updatedAt": "2026-06-13"
+    },
+    {
+      "name": "빛의 바다 빛의 음악 : 피아니스트 김이안 x 건축가 김종진 교수",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-06-20",
+      "endDate": "2026-06-20",
+      "location": "서울숲 스튜디오301",
+      "target": "전체연령 이용 가능",
+      "summary": "피아니스트 김이안과 건축가 김종진 교수가 함께 진행하는 건축과 음악 특별 콘서트입니다. 이용 요금은 40,000원이며 효형출판 증정본이 포함되어 있습니다.",
+      "link": "https://m.booking.naver.com/booking/5/bizes/601161/items/7620917",
+      "imageUrl": "https://naverbooking-phinf.pstatic.net/20260526_49/1779752491064k9qkW_JPEG/image.jpg?type=f804_408_60_sharpen",
+      "id": 1778713506462,
+      "updatedAt": "2026-06-13"
+    },
+    {
       "name": "윤은경 피아노 독주회",
       "category": "행사",
       "region": "서울",
