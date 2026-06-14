@@ -1602,6 +1602,20 @@
   ],
   "seoulExhibitionEvents": [
     {
+      "name": "한국영상대학교 영상디자인학과 27회 졸업작품전 [범람(氾濫) ; 틀을 깨고 쏟아져 나오다.]",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-06-11",
+      "endDate": "2026-06-13",
+      "location": "서울특별시 중구 다산로 138 RnL 로즈앤라임 빌딩 B1층",
+      "target": "누구나",
+      "summary": "한국영상대학교 영상디자인학과의 제27회 졸업작품전으로, '범람(氾濫) ; 틀을 깨고 쏟아져 나오다'를 주제로 진행되는 전시회입니다.",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=158147&menuNo=200009",
+      "imageUrl": "https://culture.seoul.go.kr/resources/culture/img/sub/culturePotalImg2.jpg",
+      "id": 1778713506469,
+      "updatedAt": "2026-06-14"
+    },
+    {
       "name": "정보경 개인전 [사유를 앞질러]",
       "category": "전시",
       "region": "서울",
@@ -1939,6 +1953,34 @@
   ],
   "nationalExhibitionEvents": [],
   "seoulEvents": [
+    {
+      "name": "[서울문화예술교육센터 강북] 토크콘서트 [배우 장영남의 사적인 예술]",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-06-11",
+      "endDate": "2026-06-11",
+      "location": "서울문화예술교육센터 강북 2층 예술당솔샘",
+      "target": "성인 총 70명",
+      "summary": "서울문화예술교육센터 강북에서 진행되는 배우 장영남의 사적인 예술 토크콘서트 프로그램입니다.",
+      "link": "https://www.sfac.or.kr/asa/edu/view.do?eduMstSeq=36980",
+      "imageUrl": "https://www.sfac.or.kr/upload/artsnet/program/thumb_7060c44c-8d36-4a77-8aac-01880a3c9213.jpg",
+      "id": 1778713506470,
+      "updatedAt": "2026-06-14"
+    },
+    {
+      "name": "제58회 서울음악제",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-06-11",
+      "endDate": "2026-06-14",
+      "location": "(11일) 이음아트홀, (14일) 모두예술극장",
+      "target": "누구나",
+      "summary": "서대문구에서 무료로 진행되는 제58회 서울음악제입니다. 11일 이음아트홀, 14일 모두예술극장에서 공연이 개최됩니다.",
+      "link": "https://www.mak.or.kr:444/html/assct_event/creat_01.asp",
+      "imageUrl": "https://www.mak.or.kr:444/assets/image/logo.png",
+      "id": 1778713506468,
+      "updatedAt": "2026-06-14"
+    },
     {
       "name": "[강남문화재단] 6월 키즈예술공연 [노는 국악 셋!]",
       "category": "행사",
