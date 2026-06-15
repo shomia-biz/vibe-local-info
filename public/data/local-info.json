@@ -1602,6 +1602,48 @@
   ],
   "seoulExhibitionEvents": [
     {
+      "name": "스페이스 깨 [세 칸의 방]",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-06-03",
+      "endDate": "2026-06-14",
+      "location": "스페이스 깨 1층",
+      "target": "누구나",
+      "summary": "박슬기, 박지은, 최명숙, 황수경, 김해찬 작가가 참여하는 스페이스 깨 1층의 '세 칸의 방' 전시/미술 전시회입니다.",
+      "link": "https://archivist.kr/exi?m=gov&i=1780636233",
+      "imageUrl": "https://imagedelivery.net/w4-VNNnUV8Ounl2Y9OqM-w/20260605_spaceccae_poster_1780636233_75108de3/800",
+      "id": 1778713506473,
+      "updatedAt": "2026-06-15"
+    },
+    {
+      "name": "Centrifugation 이후, 조형공장에서 계속되는 난파선 만들기와 Melting Point Study에서 우리는 내가 아니다",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-06-03",
+      "endDate": "2026-06-21",
+      "location": "옥상팩토리",
+      "target": "누구나",
+      "summary": "유형우, 이연진, 이오이 등 여러 작가들이 참여하는 전시회로, 송파구 옥상팩토리에서 무료로 관람할 수 있습니다.",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=158106&menuNo=200009",
+      "imageUrl": "https://culture.seoul.go.kr/resources/culture/img/sub/culturePotalImg2.jpg",
+      "id": 1778713506472,
+      "updatedAt": "2026-06-15"
+    },
+    {
+      "name": "[덕수궁] 한국-프랑스 수교 140주년 기념 특별전 [반화, 상서로운 마음]",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-06-03",
+      "endDate": "2026-08-30",
+      "location": "덕수궁 돈덕전",
+      "target": "일반 국민",
+      "summary": "한국-프랑스 수교 140주년 기념 특별전 [반화, 상서로운 마음] 전시가 덕수궁 돈덕전에서 진행됩니다. 관람 시간은 9:00~17:30(입장마감 17:00)이며, 덕수궁 입장료는 별도입니다.",
+      "link": "https://royal.khs.go.kr/ROYAL/contents/R201000000.do?act=view&ceIdx=202605260282&selDate=2026-6-5",
+      "imageUrl": "https://royal.khs.go.kr/resource/templete/royal/img/common/og_image.jpg",
+      "id": 1778713506471,
+      "updatedAt": "2026-06-15"
+    },
+    {
       "name": "한국영상대학교 영상디자인학과 27회 졸업작품전 [범람(氾濫) ; 틀을 깨고 쏟아져 나오다.]",
       "category": "전시",
       "region": "서울",
