@@ -19,9 +19,6 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://moa-tips.com"),
-  alternates: {
-    canonical: "/",
-  },
   title: "수도권 모아팁스 | 지원금·행사·혜택 안내",
   description: "서울, 경기, 인천 주민을 위한 지역 행사, 축제, 지원금, 혜택 정보를 매일 업데이트합니다.",
   openGraph: {

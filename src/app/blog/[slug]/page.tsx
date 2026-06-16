@@ -25,6 +25,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${post.title} |서울 경기 인천 생활 정보`,
     description: post.summary,
+    alternates: {
+      canonical: `/blog/${slug}/`,
+    },
     openGraph: {
       title: post.title,
       description: post.summary,

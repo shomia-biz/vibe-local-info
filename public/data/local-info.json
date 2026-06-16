@@ -3635,6 +3635,20 @@
   ],
   "seoulBenefits": [
     {
+      "name": "자녀출산 무주택가구 주거비지원",
+      "category": "혜택",
+      "region": "서울",
+      "startDate": "2026-02-02",
+      "endDate": "2026-06-30",
+      "location": "서울시여성가족재단",
+      "target": "2025.11.이후 출산가구 / 부또는 모 중 한명은 대한민국 국민이어야함",
+      "summary": "신청일 기준 부,모 모두 무주택, 기준 중위소득 180% 이하",
+      "link": "https://umppa.seoul.go.kr/hmpg/life/cycl/lifeCyclInfoDetail.do",
+      "imageUrl": "https://umppa.seoul.go.kr/contents/ctmg/bner/1693278290411.png",
+      "id": 1778713506474,
+      "updatedAt": "2026-06-16"
+    },
+    {
       "name": "광진구 1인가구지원센터 [동행지원] <일상, 선물> 6월 프로그램",
       "category": "혜택",
       "region": "서울",
