@@ -3373,6 +3373,19 @@
   ],
   "kyeonggiEvents": [
     {
+      "name": "제20회 시흥갯골축제",
+      "category": "행사",
+      "region": "경기",
+      "startDate": "2026-09-18",
+      "endDate": "2026-09-20",
+      "location": "시흥갯골생태공원",
+      "target": "누구나",
+      "summary": "수도권 유일의 내만 갯골에서 자연과 함께 펼쳐지는 시민이 행복한 공연 및 체험 프로그램 등",
+      "link": "www.instagram.com/sgfestival",
+      "id": 1778713506478,
+      "updatedAt": "2026-06-16"
+    },
+    {
       "name": "2026 모두모여모란",
       "category": "행사",
       "region": "경기",
