@@ -1282,6 +1282,19 @@
   ],
   "incheonCultureEvents": [
     {
+      "name": "내 손으로 만드는 코바늘 뜨개인형",
+      "category": "문화",
+      "region": "인천",
+      "startDate": "2026-07-02",
+      "endDate": "2026-07-16",
+      "location": "복합문화공간 해시",
+      "target": "인천 시민 누구나",
+      "summary": "2026문화서로사랑방 손끝살림 워크샵 프로그램으로, 총 3회차에 걸쳐 나만의 코바늘 뜨개인형을 직접 만들어보는 문화 체험 프로그램입니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13666",
+      "id": 1778713506479,
+      "updatedAt": "2026-06-16"
+    },
+    {
       "name": "어린이 패션 프로젝트 <사계지장>",
       "category": "문화",
       "region": "인천",
@@ -3548,6 +3561,34 @@
     }
   ],
   "incheonEvents": [
+    {
+      "name": "사랑방 금요일 상상극장 <낭만유랑극단>",
+      "category": "행사",
+      "region": "인천",
+      "startDate": "2026-06-26",
+      "endDate": "2026-06-26",
+      "location": "부평문화사랑방",
+      "target": "누구나",
+      "summary": "섬세한 인형극과 라이브 아코디언 연주, 코미디가 어우러진 마리오네트 인형극 <낭만유랑극단> 공연",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13662",
+      "imageUrl": "https://ifac.or.kr/resource/www/images/layout/og_images.png",
+      "id": 1778713506481,
+      "updatedAt": "2026-06-16"
+    },
+    {
+      "name": "예술의전당 공연영상 무료 상영 <연극 - 양손프로젝트 단편선 3>",
+      "category": "행사",
+      "region": "인천",
+      "startDate": "2026-06-23",
+      "endDate": "2026-06-23",
+      "location": "문학시어터",
+      "target": "누구나",
+      "summary": "문학시어터에서 매월 둘째주, 넷째주 화요일 오전에 진행되는 예술의전당 우수 공연 레퍼토리 무료 상영 프로그램으로, 이번 회차에서는 '연극 - 양손프로젝트 단편선 3' 영상을 상영합니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13665",
+      "imageUrl": "https://ifac.or.kr/resource/www/images/layout/og_images.png",
+      "id": 1778713506480,
+      "updatedAt": "2026-06-16"
+    },
     {
       "name": "2026 인천문화재단 청년예술활동지원사업 연극 [울며 마늘 먹기]",
       "category": "행사",
