@@ -1282,6 +1282,19 @@
   ],
   "incheonCultureEvents": [
     {
+      "name": "인천관련 노래발굴 - 발굴 음원 소개",
+      "category": "문화",
+      "region": "인천",
+      "startDate": "2026-06-16",
+      "endDate": "2026-12-31",
+      "location": "유튜브 음원링크",
+      "target": "누구나",
+      "summary": "창작곡 및 숨은 노래 발굴을 통해 누구나 즐겨 부를 수 있는 인천의 노래를 발굴하고 유튜브 등을 통해 배포합니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13667",
+      "id": 1778713506490,
+      "updatedAt": "2026-06-17"
+    },
+    {
       "name": "내 손으로 만드는 코바늘 뜨개인형",
       "category": "문화",
       "region": "인천",
