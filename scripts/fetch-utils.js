@@ -242,6 +242,45 @@ function isDateOlderThan30Days(dateStr) {
   return diffDays > 30;
 }
 
+function getRowEndDate(row) {
+  if (!row) return null;
+  const knownFields = [
+    'END_DE', 'FSTVL_END_DE', 'FASTVL_END_DE',
+    'PERFRM_END_DE', 'EVENT_END_DE',
+    'edate', 'ENDDATE', 'eventenddate', 'endDate', '신청기간종료일'
+  ];
+  for (const field of knownFields) {
+    if (row[field]) return row[field];
+  }
+  const keys = Object.keys(row);
+  for (const key of keys) {
+    const lowerKey = key.toLowerCase();
+    if (lowerKey.includes('end')) {
+      const val = row[key];
+      if (val && (typeof val === 'string' || typeof val === 'number')) {
+        return val.toString().trim();
+      }
+    }
+  }
+  return null;
+}
+
+function isDatePassed(dateStr) {
+  if (!dateStr || dateStr === '상시') return false;
+  let formattedStr = dateStr.toString().trim();
+  formattedStr = formattedStr.split(' ')[0];
+  formattedStr = formattedStr.replace(/\./g, '-');
+  if (formattedStr.length === 8 && !formattedStr.includes('-')) {
+    formattedStr = `${formattedStr.substring(0, 4)}-${formattedStr.substring(4, 6)}-${formattedStr.substring(6, 8)}`;
+  }
+  const itemDate = new Date(formattedStr);
+  if (isNaN(itemDate.getTime())) return false;
+  const todayDate = new Date();
+  todayDate.setHours(0, 0, 0, 0);
+  itemDate.setHours(0, 0, 0, 0);
+  return itemDate.getTime() < todayDate.getTime();
+}
+
 const commonExcludeKeywords = [
   '어업', '해운', '선박', '항만', '선원', '수산', '축산업', '축사', '임업', '농업', '해양사고', '방역', '경마', '경륜', '유기견', '유기묘', '보상', 
   '동물보호', '해양', '북한이탈주민', '성매매', '국적상실', '국적회복', '국적취득', '소년원', '소년원법', '귀화', '농가', '수의사', '구제역', '송아지', 
@@ -267,5 +306,7 @@ module.exports = {
   getRowStartDate,
   isYearOutdated,
   isDateOlderThan30Days,
+  getRowEndDate,
+  isDatePassed,
   commonExcludeKeywords
 };

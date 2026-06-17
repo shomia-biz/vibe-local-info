@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const utils = require('./fetch-utils');
 
 // .env.local 파일에서 수동으로 API 키 읽어오기
 function loadEnv() {
@@ -64,8 +65,10 @@ async function generatePost() {
     const targetItems = [];
     for (const item of allItems) {
       // 이미 종료된 행사나 혜택은 작성 후보에서 제외 ("상시" 제외)
-      if (item.endDate && item.endDate !== '상시' && item.endDate < today) {
-        continue;
+      if (item.endDate && item.endDate !== '상시') {
+        if (utils.isDatePassed(item.endDate) || item.endDate < today) {
+          continue;
+        }
       }
       if (targetItems.length >= MAX_POSTS_TO_GENERATE) {
         break;

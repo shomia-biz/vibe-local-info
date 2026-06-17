@@ -90,6 +90,8 @@ async function fetchData() {
       const dateStr = utils.getRowStartDate(item);
       if (utils.isDateOlderThan30Days(dateStr)) return false;
       if (utils.isYearOutdated(item, item.서비스명)) return false;
+      const endStr = utils.getRowEndDate(item);
+      if (utils.isDatePassed(endStr)) return false;
       return item.서비스명 && !utils.isDuplicateTitle(item.서비스명, existingNames);
     });
 
@@ -216,6 +218,13 @@ async function fetchData() {
       if (processedItem.startDate && processedItem.startDate !== '상시') {
         if (utils.isDateOlderThan30Days(processedItem.startDate)) {
           console.log(`   ⚠️ [제외] 시작일(${processedItem.startDate})이 조회 기준 30일 이전이므로 가공에서 제외합니다. 명칭: ${processedItem.name}`);
+          continue;
+        }
+      }
+
+      if (processedItem.endDate && processedItem.endDate !== '상시') {
+        if (utils.isDatePassed(processedItem.endDate)) {
+          console.log(`   ⚠️ [제외] 이미 종료된 행사/혜택입니다 (종료일: ${processedItem.endDate}). 명칭: ${processedItem.name}`);
           continue;
         }
       }
