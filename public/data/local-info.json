@@ -3399,6 +3399,19 @@
   ],
   "kyeonggiEvents": [
     {
+      "name": "2026 파크콘서트",
+      "category": "행사",
+      "region": "경기",
+      "startDate": "2026-09-01",
+      "endDate": "2026-09-30",
+      "location": "중앙공원 야외공연장",
+      "target": "누구나",
+      "summary": "기간 중 총 3회(1일 1회) 야외 공연 예정",
+      "link": "",
+      "id": 1778713506491,
+      "updatedAt": "2026-06-18"
+    },
+    {
       "name": "제20회 시흥갯골축제",
       "category": "행사",
       "region": "경기",
