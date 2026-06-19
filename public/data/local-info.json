@@ -783,6 +783,20 @@
   ],
   "seoulCultureEvents": [
     {
+      "name": "[서초문화원] 2026년 서초문화원 [청년문화살롱]",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-06-09",
+      "endDate": "2026-08-14",
+      "location": "서초문화예술회관 및 관내 문화공간",
+      "target": "만 25세~39세 청년",
+      "summary": "문화예술 활동과 인문학 특강을 통해 서초 청년들이 자연스럽게 소통하고 교류하는 프로그램",
+      "link": "http://socc.or.kr/bbs/board.php?bo_table=sub05_01&wr_id=417",
+      "imageUrl": "http://www.socc.or.kr/sub03/sub03_01.php",
+      "id": 1778713506494,
+      "updatedAt": "2026-06-19"
+    },
+    {
       "name": "[국토발전전시관] 정기강연 - 이 땅 위에 우리 이야기",
       "category": "문화",
       "region": "서울",
@@ -1654,6 +1668,34 @@
     }
   ],
   "seoulExhibitionEvents": [
+    {
+      "name": "[2026 신진미술인 지원 프로그램] 신재은 개인전 《GAIA-피식의 서》",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-06-09",
+      "endDate": "2026-07-17",
+      "location": "Hall 1 (서울시 영등포구 양평로22마길 8)",
+      "target": "누구나",
+      "summary": "서울시립미술관에서 개최되는 2026 신진미술인 지원 프로그램 신재은 개인전 전시",
+      "link": "https://sema.seoul.go.kr/kr/whatson/exhibition/detail?exNo=1546824",
+      "imageUrl": "https://sema.seoul.go.kr/resources/images/common/noimg_none.jpg",
+      "id": 1778713506496,
+      "updatedAt": "2026-06-19"
+    },
+    {
+      "name": "K-헤리티지 아트전 [미백 未白]",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-06-09",
+      "endDate": "2026-07-26",
+      "location": "송파구청 2층",
+      "target": "누구나",
+      "summary": "김경미, 김동식 등 여러 작가들이 참여하는 K-헤리티지 아트전 [미백 未白] 전시입니다. 화요일부터 일요일, 10시부터 19시까지 무료로 관람할 수 있습니다.",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=158185&menuNo=200009",
+      "imageUrl": "https://culture.seoul.go.kr/resources/culture/img/sub/culturePotalImg2.jpg",
+      "id": 1778713506495,
+      "updatedAt": "2026-06-19"
+    },
     {
       "name": "스페이스 깨 [세 칸의 방]",
       "category": "전시",
