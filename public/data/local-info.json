@@ -4067,6 +4067,45 @@
   ],
   "nationalBenefits": [
     {
+      "name": "신혼부부 및 청년 주택자금 대출이자 지원 사업",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-06-19",
+      "endDate": "상시",
+      "location": "전북특별자치도 정읍시",
+      "target": "신혼부부 및 청년",
+      "summary": "관내 신혼부부 및 청년 대상 주택자금 대출이자를 지원하여 결혼장려 및 저출산 대응",
+      "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000020&wlfareInfoReldBztpCd=02",
+      "id": 1778713506502,
+      "updatedAt": "2026-06-19"
+    },
+    {
+      "name": "운동으로 산후우울에 브레이크를! (출산 후 심신 건강회복 운동비 지원)",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-06-19",
+      "endDate": "상시",
+      "location": "경상남도 함안군",
+      "target": "출산 후 산모",
+      "summary": "출산 후 산모의 신체적·정서적 회복을 통해 산후우울을 예방하고 모자의 건강 증진을 도모하며, 저출산에 따른 인구감소에 대응하기 위한 출산장려 운동비를 지원합니다.",
+      "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006321&wlfareInfoReldBztpCd=02",
+      "id": 1778713506501,
+      "updatedAt": "2026-06-19"
+    },
+    {
+      "name": "전입학생 생활안정 장학금",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-06-19",
+      "endDate": "상시",
+      "location": "전북특별자치도 완주군",
+      "target": "청년",
+      "summary": "완주군으로 전입한 전입학생에게 생활안정 장학금을 지원하여 완주군에 안정적으로 정착하도록 돕고자 함.",
+      "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006322&wlfareInfoReldBztpCd=02",
+      "id": 1778713506500,
+      "updatedAt": "2026-06-19"
+    },
+    {
       "name": "한강수계 주민지원(특별지원사업)",
       "category": "혜택",
       "region": "전국",
