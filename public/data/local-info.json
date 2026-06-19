@@ -1296,6 +1296,33 @@
   ],
   "incheonCultureEvents": [
     {
+      "name": "영종을 노래하다: 시민X 제로벨 프로젝트 참여자 모집",
+      "category": "문화",
+      "region": "인천",
+      "startDate": "2026-06-18",
+      "endDate": "2026-07-01",
+      "location": "인천 중구 청년내일기지 및 영종도 내 음악연습실",
+      "target": "영종에 거주하거나 생활권을 둔 청소년 및 청년, 또는 영종에 관심 있는 청소년 및 청년",
+      "summary": "영종도에서의 일상과 이야기를 바탕으로 직접 가사를 쓰고 멜로디를 만들어 음악과 뮤직비디오를 완성하는 시민 참여형 문화 예술 프로그램입니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13674",
+      "imageUrl": "https://ifac.or.kr/resource/www/images/layout/og_images.png",
+      "id": 1778713506498,
+      "updatedAt": "2026-06-19"
+    },
+    {
+      "name": "[창작집단도르리] <심술장이 : 담다> 참여자 모집",
+      "category": "문화",
+      "region": "인천",
+      "startDate": "2026-07-04",
+      "endDate": "2026-10-17",
+      "location": "문화예술창작공간도르리",
+      "target": "누구나",
+      "summary": "화수동에서 오래 가게를 운영해 온 장인들의 삶의 이야기를 듣고, 일터의 자투리 재료를 활용하여 책 만들기, 청바지 북커버 만들기, 와인병 조명 만들기, 재생 비누 만들기 등을 직접 체험해보는 참여형 무료 문화예술교육 프로그램입니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13675",
+      "id": 1778713506497,
+      "updatedAt": "2026-06-19"
+    },
+    {
       "name": "인천관련 노래발굴 - 발굴 음원 소개",
       "category": "문화",
       "region": "인천",
@@ -3629,6 +3656,19 @@
     }
   ],
   "incheonEvents": [
+    {
+      "name": "[수봉IN기획공연] 에코와 멜로디의 애니멀 심포니",
+      "category": "행사",
+      "region": "인천",
+      "startDate": "2026-07-11",
+      "endDate": "2026-07-11",
+      "location": "인천수봉문화회관 소극장",
+      "target": "누구나",
+      "summary": "음악으로 만나는 환경과 동물들의 이야기!",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13671",
+      "id": 1778713506499,
+      "updatedAt": "2026-06-19"
+    },
     {
       "name": "사랑방 금요일 상상극장 <낭만유랑극단>",
       "category": "행사",
