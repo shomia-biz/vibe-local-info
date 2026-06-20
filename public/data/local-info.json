@@ -1386,6 +1386,19 @@
   ],
   "incheonCultureEvents": [
     {
+      "name": "뇌를 깨우는 신화 수업",
+      "category": "문화",
+      "region": "인천",
+      "startDate": "2026-06-30",
+      "endDate": "2026-07-22",
+      "location": "인천이음문화교육협회 홀",
+      "target": "인천 시민",
+      "summary": "그리스로마, 한국, 북유럽 신화를 통해 삶과 인간관계를 쉽고 재미있게 들여다보는 3주 압축 신화 교양 프로그램",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13668",
+      "id": 1778713506507,
+      "updatedAt": "2026-06-20"
+    },
+    {
       "name": "영종을 노래하다: 시민X 제로벨 프로젝트 참여자 모집",
       "category": "문화",
       "region": "인천",
@@ -3785,6 +3798,20 @@
     }
   ],
   "incheonEvents": [
+    {
+      "name": "[수봉IN기획공연] Sound Of Cinema (사운드 오브 시네마)",
+      "category": "행사",
+      "region": "인천",
+      "startDate": "2026-06-27",
+      "endDate": "2026-06-27",
+      "location": "인천수봉문화회관 소극장",
+      "target": "제한없음",
+      "summary": "스크린 속 영화와 드라마 명장면들을 오케스트라의 웅장한 라이브 사운드와 특별 퍼포먼스로 만나볼 수 있는 시네마 콘서트 공연입니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13670",
+      "imageUrl": "https://ifac.or.kr/resource/www/images/layout/og_images.png",
+      "id": 1778713506506,
+      "updatedAt": "2026-06-20"
+    },
     {
       "name": "[수봉IN기획공연] 에코와 멜로디의 애니멀 심포니",
       "category": "행사",
