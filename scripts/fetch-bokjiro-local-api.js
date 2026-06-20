@@ -15,7 +15,7 @@ async function fetchData() {
     return;
   }
 
-  const MAX_ITEMS = 3;
+  const MAX_ITEMS = 5;
   const dataPath = path.join(process.cwd(), 'public/data/local-info.json');
   let localData;
   try {
@@ -59,7 +59,7 @@ async function fetchData() {
   try {
     const randomPage = Math.floor(Math.random() * 5) + 1;
     // 제공해주신 엔드포인트를 기반으로 추정한 URL입니다. Base URL이 다를 경우 이 부분을 수정해 주세요!
-    const apiUrl = `https://apis.data.go.kr/B554287/LocalGovernmentWelfareInformations/LcgvWelfarelist?serviceKey=${BOKJIRO_API_KEY}&pageNo=${randomPage}&numOfRows=50`;
+    const apiUrl = `https://apis.data.go.kr/B554287/LocalGovernmentWelfareInformations/LcgvWelfarelist?serviceKey=${BOKJIRO_API_KEY}&pageNo=${randomPage}&numOfRows=100`;
     
     const response = await fetch(apiUrl, fetchOptions);
     const text = await response.text();
@@ -105,8 +105,18 @@ async function fetchData() {
       '금연클리닉', '보건소', '유휴간호사', '금연치료', '자산형성지원사업'
     ];
 
+    const allowedRegions = ['전국', '서울', '경기', '인천'];
+
     const filteredItems = rawItems.filter(item => {
       const targetText = typeof item === 'string' ? item : JSON.stringify(item);
+      
+      // 1. 허용된 지역(전국, 서울, 경기, 인천) 단어가 데이터 안에 있는지 검사
+      const hasAllowedRegion = allowedRegions.some(region => targetText.includes(region));
+      
+      // 해당 지역 단어가 하나도 없으면 여기서 즉시 탈락(가공 안 함)
+      if (!hasAllowedRegion) return false;
+
+      // 2. 통과된 것들 중에서 관심 키워드 포함 및 제외 키워드 여부 최종 검사
       return keywords.some(k => targetText.includes(k)) && !utils.commonExcludeKeywords.some(e => targetText.includes(e));
     });
 
