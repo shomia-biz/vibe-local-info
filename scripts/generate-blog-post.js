@@ -236,6 +236,26 @@ tags: [태그1, 태그2, tags3]
       const finalPath = path.join(postsDir, filename);
       fs.writeFileSync(finalPath, blogContent, 'utf8');
 
+      // [자동화] 사이트맵(sitemap.xml) 업데이트 로직
+      const sitemapPath = path.join(process.cwd(), 'public', 'sitemap.xml');
+      if (fs.existsSync(sitemapPath)) {
+        try {
+          let sitemapContent = fs.readFileSync(sitemapPath, 'utf8');
+          const slug = filename.replace('.md', ''); // 파일명에서 .md 제거 (URL 경로용)
+          const newUrlEntry = `  <url>\n    <loc>https://moa-tips.com/blog/${slug}/</loc>\n    <lastmod>${today}</lastmod>\n  </url>\n`;
+          
+          // 중복 등록 방지
+          if (!sitemapContent.includes(`<loc>https://moa-tips.com/blog/${slug}/</loc>`)) {
+            // </urlset> 바로 앞에 새 url 태그를 삽입합니다.
+            sitemapContent = sitemapContent.replace('</urlset>', `${newUrlEntry}</urlset>`);
+            fs.writeFileSync(sitemapPath, sitemapContent, 'utf8');
+            console.log(`   🗺️ 사이트맵(sitemap.xml)에 무사히 등록되었습니다!`);
+          }
+        } catch (sitemapErr) {
+          console.error(`   ⚠️ 사이트맵 업데이트 중 에러:`, sitemapErr.message);
+        }
+      }
+
       console.log(`✅ 블로그 글 생성 완료: ${filename}\n`);
     }
 
