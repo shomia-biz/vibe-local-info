@@ -156,17 +156,20 @@ async function fetchData() {
       console.log(`⏳ [대기 중] API 무료 한도 준수를 위해 4초간 대기...`);
       await sleep(4000);
 
-      const prompt = `아래 입력된 지자체 복지 혜택 데이터 1건을 분석해서 규격화된 시스템용 JSON 데이터로 전환해줘.
-      형식: {name: 혜택명, category: '혜택', region: '서울' 또는 '경기' 또는 '인천' 또는 '전국', startDate: 'YYYY-MM-DD', endDate: 'YYYY-MM-DD', location: 주관지자체명, target: 대상층, summary: 혜택 요약설명, link: 링크주소}
+      const prompt = \`아래 입력된 지자체 복지 혜택 데이터 1건을 분석해서 규격화된 시스템용 JSON 데이터로 전환해줘.
+      형식: {name: 혜택명, category: '혜택', region: '서울' 또는 '경기' 또는 '인천' 또는 '전국', startDate: 'YYYY-MM-DD', endDate: 'YYYY-MM-DD', location: 주관지자체명, target: 대상층, summary: 혜택 요약설명, link: 링크주소, serviceField: 서비스분야, supportType: 지원유형, targetGroup: 대상}
 
       [필수 규칙 가이드라인]
-      1. 출처 힌트 프로토콜: ${source}
+      1. 출처 힌트 프로토콜: \${source}
       2. category 분류: '혜택'으로 고정해줘.
       3. region 분류: 지자체 복지서비스이므로 본문에 나오는 지역명(예: 서울시 00구, 경기도 00시 등)을 파악하여 '서울', '경기', '인천' 중 하나로 매칭해주고, 그 외 지역이거나 알 수 없으면 '전국'으로 해줘.
-      4. startDate/endDate: 날짜 포맷은 무조건 'YYYY-MM-DD'로 처리해. 수치가 없으면 시작일은 오늘 날짜(${todayStr}), 종료일은 '상시'로 기입해.
+      4. startDate/endDate: 날짜 포맷은 무조건 'YYYY-MM-DD'로 처리해. 수치가 없으면 시작일은 오늘 날짜(\${todayStr}), 종료일은 '상시'로 기입해.
       5. link: 소스 데이터 내에 URL 주소 필드가 마땅히 없거나 xml 태그면 공백문자("")로 선언해줘.
+      6. serviceField: 다음 중 하나로 엄격하게 분류해줘. [생활안정, 보건 의료, 보육 교육, 농림축산어업, 고용 창업, 임신 출산, 보호 돌봄, 행정 안전, 문화 환경, 주거 자립]
+      7. supportType: 다음 중 하나로 엄격하게 분류해줘. [현금, 현금(보험), 현금(융자), 현금(장학금), 현금(감면), 현물, 서비스(돌봄), 서비스(일자리), 이용권, 기타, 기타(교육), 기타(상담), 기술지원, 시설이용]
+      8. targetGroup: 다음 중 하나로 엄격하게 분류해줘. [개인, 가구, 소상공인, 법인/시설/단체]
 
-      불필요한 마크다운 백틱 문법이나 서론 생략하고 오로지 순수 유효 JSON 텍스트 한 덩어리만 반환해.\n\n데이터 소스: ${JSON.stringify(rawItem)}`;
+      불필요한 마크다운 백틱 문법이나 서론 생략하고 오로지 순수 유효 JSON 텍스트 한 덩어리만 반환해.\n\n데이터 소스: \${JSON.stringify(rawItem)}\`;
 
       let geminiResponse;
       let geminiResult = null;

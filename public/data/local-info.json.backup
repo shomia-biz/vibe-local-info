@@ -170,10 +170,7 @@
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/154300000055",
       "imageUrl": "http://www.gov.kr/images/etc/og_image_600.png",
       "id": 1778713506310,
-      "updatedAt": "2026-06-02",
-      "serviceField": "보육 교육",
-      "supportType": "현금",
-      "targetGroup": "법인/시설/단체"
+      "updatedAt": "2026-06-02"
     },
     {
       "name": "공공급식 운영 활성화(융자)",
@@ -187,10 +184,7 @@
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/154300000051",
       "imageUrl": "http://www.gov.kr/images/etc/og_image_600.png",
       "id": 1778713506308,
-      "updatedAt": "2026-06-02",
-      "serviceField": "농림축산어업",
-      "supportType": "현금(융자)",
-      "targetGroup": "법인/시설/단체"
+      "updatedAt": "2026-06-02"
     },
     {
       "name": "광진구 1인가구지원센터 [동행지원] <일상, 선물> 6월 프로그램",
@@ -204,10 +198,7 @@
       "link": "https://www.1lifegj.or.kr/main/sub.html?pageCode=15&page=1&num=336&processType=view",
       "imageUrl": "https://www.1lifegj.or.kr/user/saveDir/editor/202605/26JdYLIaZ3HM2c.jpg",
       "id": 1778713506264,
-      "updatedAt": "2026-05-30",
-      "serviceField": "생활안정",
-      "supportType": "이용권",
-      "targetGroup": "가구"
+      "updatedAt": "2026-05-30"
     },
     {
       "name": "서울형 아이돌봄비 지원사업",
@@ -221,10 +212,7 @@
       "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005097&wlfareInfoReldBztpCd=02",
       "imageUrl": "",
       "id": 1778713506240,
-      "updatedAt": "2026-05-27",
-      "serviceField": "보호 돌봄",
-      "supportType": "현금",
-      "targetGroup": "가구"
+      "updatedAt": "2026-05-27"
     },
     {
       "name": "[인천] 2026년 1인 창조기업 지원센터 선택형 지원 모집 공고",
@@ -238,10 +226,7 @@
       "link": "https://bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=6&rows=15&cpage=1&cat=&schPblancDiv=01&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6280000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=searchPblancNm&condition1=AND&keyword=&pblancId=PBLN_000000000122414",
       "imageUrl": "https://bizinfo.go.kr/images/bizinfo/common/sns_thumbnail_img.png",
       "id": 1778713506229,
-      "updatedAt": "2026-05-26",
-      "serviceField": "고용 창업",
-      "supportType": "현금",
-      "targetGroup": "소상공인"
+      "updatedAt": "2026-05-26"
     },
     {
       "name": "시흥시 2026년 소공인 협업 활성화 지원사업",
@@ -255,10 +240,7 @@
       "link": "https://bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=6&rows=15&cpage=1&cat=&schPblancDiv=01&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6110000%2C6410000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=searchPblancNm&condition1=AND&keyword=&pblancId=PBLN_000000000122419",
       "imageUrl": "https://bizinfo.go.kr/images/bizinfo/common/sns_thumbnail_img.png",
       "id": 1778713506228,
-      "updatedAt": "2026-05-26",
-      "serviceField": "고용 창업",
-      "supportType": "현금",
-      "targetGroup": "소상공인"
+      "updatedAt": "2026-05-26"
     },
     {
       "name": "[서울] 2026년 2차 소규모 세탁소 VOCs 저감시설 지원사업 세탁소 모집 공고",
@@ -272,10 +254,7 @@
       "link": "https://bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=6&rows=15&cpage=1&cat=&schPblancDiv=01&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6110000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=searchPblancNm&condition1=AND&keyword=&pblancId=PBLN_000000000122406",
       "imageUrl": "https://bizinfo.go.kr/images/bizinfo/common/sns_thumbnail_img.png",
       "id": 1778713506227,
-      "updatedAt": "2026-05-26",
-      "serviceField": "문화 환경",
-      "supportType": "현금",
-      "targetGroup": "소상공인"
+      "updatedAt": "2026-05-26"
     },
     {
       "name": "100세 어르신 장수축하물품 지급",
@@ -289,10 +268,7 @@
       "link": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2181916&bnefType=all&svcId=320000000315",
       "imageUrl": "https://static.gov.kr/content/images/layout/logo-header.svg?time=1779397096671",
       "id": 1778713506199,
-      "updatedAt": "2026-05-23",
-      "serviceField": "생활안정",
-      "supportType": "현물",
-      "targetGroup": "개인"
+      "updatedAt": "2026-05-23"
     },
     {
       "name": "고유가 피해지원금 서울사랑상품권 신청 및 서울배달+ 땡겨요 혜택",
@@ -306,10 +282,7 @@
       "link": "https://news.seoul.go.kr/economy/archives/572536?listPage=1&s=%EC%A7%80%EC%9B%90%EA%B8%88",
       "imageUrl": "https://news.seoul.go.kr/economy/files/2026/05/6a0a5b044c2f82.89690905.jpg",
       "id": 1778713506198,
-      "updatedAt": "2026-05-23",
-      "serviceField": "생활안정",
-      "supportType": "이용권",
-      "targetGroup": "개인"
+      "updatedAt": "2026-05-23"
     },
     {
       "name": "노인복지시설 지방세 감면",
@@ -322,10 +295,7 @@
       "summary": "노인복지시설 설치·운영을 위해 취득하는 부동산에 대한 지방세(취득세, 재산세) 감면 혜택. 2026년 12월 31일까지 적용.",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/131200000005",
       "id": 1778713506189,
-      "updatedAt": "2026-05-21",
-      "serviceField": "보호 돌봄",
-      "supportType": "현금(감면)",
-      "targetGroup": "법인/시설/단체"
+      "updatedAt": "2026-05-21"
     },
     {
       "name": "지방공무원 신규 임용시험 응시 수수료 면제",
@@ -338,10 +308,7 @@
       "summary": "지방공무원 신규 임용에 응시할 경우 수수료 면제",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/131200000002",
       "id": 1778713506188,
-      "updatedAt": "2026-05-21",
-      "serviceField": "고용 창업",
-      "supportType": "현금(감면)",
-      "targetGroup": "개인"
+      "updatedAt": "2026-05-21"
     },
     {
       "name": "전역예정장병 취업활동지원",
@@ -354,10 +321,7 @@
       "summary": "장기간 사회와 단절된 생활로 사회적응 및 취업준비가 필요한 전역예정장병의 취업활동을 지원합니다. 중장기복무자에게는 맞춤형 진로설계 및 전문지식 기술습득 기회를 제공하여 취창업 역량 강화를 돕고, 청년장병에게는 찾아가는 진로도움교육 및 1:1 상담을 통해 진로설정 및 취업준비 과정을 지원합니다.",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/129000000015",
       "id": 1778713506187,
-      "updatedAt": "2026-05-21",
-      "serviceField": "고용 창업",
-      "supportType": "서비스(일자리)",
-      "targetGroup": "개인"
+      "updatedAt": "2026-05-21"
     },
     {
       "name": "범죄 피해 구조금 지급",
@@ -370,10 +334,7 @@
       "summary": "범죄피해자 및 가족 등에게 상담 및 의료, 구조금, 주거지원 등의 구조방안 제공",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/128000000001",
       "id": 1778713506186,
-      "updatedAt": "2026-05-21",
-      "serviceField": "행정 안전",
-      "supportType": "현금",
-      "targetGroup": "개인"
+      "updatedAt": "2026-05-21"
     },
     {
       "name": "전역예정군인 재취업 지원",
@@ -386,10 +347,7 @@
       "summary": "전역예정장병에게 전직상담 및 교육, 취업 등을 지원하는 서비스",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/129000000013",
       "id": 1778713506185,
-      "updatedAt": "2026-05-21",
-      "serviceField": "고용 창업",
-      "supportType": "서비스(일자리)",
-      "targetGroup": "개인"
+      "updatedAt": "2026-05-21"
     },
     {
       "name": "장병 인권상담 지원",
@@ -402,10 +360,7 @@
       "summary": "군 인권 관련 진정 및 상담",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/129000000009",
       "id": 1778713506184,
-      "updatedAt": "2026-05-21",
-      "serviceField": "행정 안전",
-      "supportType": "기타(상담)",
-      "targetGroup": "개인"
+      "updatedAt": "2026-05-21"
     },
     {
       "name": "범죄피해자에 대한 경제적 지원",
@@ -418,10 +373,7 @@
       "summary": "범죄피해자 및 가족 등에게 치료비, 생계비, 학자금, 장례비, 긴급생활안정 등 경제적 지원",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/128000000003",
       "id": 1778713506183,
-      "updatedAt": "2026-05-21",
-      "serviceField": "생활안정",
-      "supportType": "현금",
-      "targetGroup": "가구"
+      "updatedAt": "2026-05-21"
     },
     {
       "name": "이전비 지원",
@@ -434,10 +386,7 @@
       "summary": "범죄피해자 혹은 신고자 등이 보복우려를 피해 이전할 경우 이사비용을 지원하는 서비스입니다.",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/128000000002",
       "id": 1778713506182,
-      "updatedAt": "2026-05-21",
-      "serviceField": "행정 안전",
-      "supportType": "현금",
-      "targetGroup": "개인"
+      "updatedAt": "2026-05-21"
     },
     {
       "name": "취약계층 무료 법률서비스 제공(법률홈닥터 변호사)",
@@ -450,10 +399,7 @@
       "summary": "취약계층에게 법률상담, 법률문서 작성 조력, 유관기관 연계, 법교육 등의 서비스 지원",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/127000000002",
       "id": 1778713506181,
-      "updatedAt": "2026-05-21",
-      "serviceField": "행정 안전",
-      "supportType": "기타(상담)",
-      "targetGroup": "개인"
+      "updatedAt": "2026-05-21"
     },
     {
       "name": "북한이탈주민 정착금 지원(가산금)",
@@ -466,10 +412,7 @@
       "summary": "일정조건에 해당하는 북한이탈주민에게 가산금을 지원합니다. 고령가산금(만 60세 이상, 분기별 50만원씩 총 800만원), 한부모가정아동보호가산금(만13세 미만 아동 동반 한부모, 분기별 25만원씩 총 400만원), 장애가산금, 장기치료가산금, 제3국출생자녀 양육가산금, 무연고청소년가산금 등이 있습니다.",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/125000000015",
       "id": 1778713506180,
-      "updatedAt": "2026-05-21",
-      "serviceField": "생활안정",
-      "supportType": "현금",
-      "targetGroup": "가구"
+      "updatedAt": "2026-05-21"
     },
     {
       "name": "북한이탈주민 정착금 지원(기본금)",
@@ -482,10 +425,7 @@
       "summary": "북한이탈주민에게 세대 및 세대 구성원의 수에 따라 차등 지급되는 정착금 지원 서비스. 1인 세대 기준 1,500만원, 2인 세대 2,400만원, 3인 세대 3,150만원, 4인 세대 3,900만원을 지원합니다.",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/125000000014",
       "id": 1778713506179,
-      "updatedAt": "2026-05-21",
-      "serviceField": "생활안정",
-      "supportType": "현금",
-      "targetGroup": "가구"
+      "updatedAt": "2026-05-21"
     },
     {
       "name": "북한이탈주민 자산형성 지원 (미래행복통장)",
@@ -498,10 +438,7 @@
       "summary": "북한이탈주민 대상으로 매월 10~50만 원 저축 시, 적립금과 동일한 금액 지원",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/125000000004",
       "id": 1778713506178,
-      "updatedAt": "2026-05-21",
-      "serviceField": "생활안정",
-      "supportType": "현금",
-      "targetGroup": "개인"
+      "updatedAt": "2026-05-21"
     },
     {
       "id": 1777391602453,
@@ -514,10 +451,7 @@
       "summary": "영유아 보육시설 설치·운영을 위해 취득한 부동산의 취득세, 재산세 면제",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/131200000010",
       "updatedAt": "2026-05-05",
-      "region": "전국",
-      "serviceField": "보육 교육",
-      "supportType": "현금(감면)",
-      "targetGroup": "법인/시설/단체"
+      "region": "전국"
     },
     {
       "id": 1777391602452,
@@ -530,10 +464,7 @@
       "summary": "다자녀가구가 취득한 자동차 취득세 감면",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/131200000008",
       "updatedAt": "2026-05-04",
-      "region": "전국",
-      "serviceField": "생활안정",
-      "supportType": "현금(감면)",
-      "targetGroup": "가구"
+      "region": "전국"
     },
     {
       "id": 7,
@@ -545,10 +476,7 @@
       "target": "보증금 1억원 이하 및 월세금 60만원 이하인 월세 계약을 체결한 주택도시 기금 주거안정 월세대출 대상자\n[우대형]\n- 취업준비생(신청일 현재 만 35세 이하의 무소득자이며 부모 소득이 6천만원 이하인 자)\n- 희망키움통장 가입자\n- 신청일 기준 최근 1년 이내 수급사실이 인정되는 근로장려금 수급자\n- 취업 후 5년 이내인 사회초년생으로 신청일 현재 만 35세 이하이며 부부합산 연소득 4천만원 이하인 자\n- 신청일 기준 최근 1년 이내 수급사실이 인정되는 자녀장려금 수급자\n- 신청일 현재 주거급여 수급자 확인서가 발급되는 주거급여 수급자\n\n[일반형]\n- 부부합산 연소득 5천만원 이하자 중 상기 [우대형]에 해당되지 않는 자",
       "summary": "일정요건의 월세대출 대상자에게 월세자금보증을 지원",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/116010000001",
-      "region": "전국",
-      "serviceField": "주거 자립",
-      "supportType": "기타",
-      "targetGroup": "가구"
+      "region": "전국"
     },
     {
       "id": 6,
@@ -560,10 +488,7 @@
       "target": "소득 및 재산 요건을 충족하는 근로, 사업, 종교인 소득이 있는 가구",
       "summary": "소득과 재산이 적은 근로소득자에게 근로장려금을, 자녀가 있을 경우 자녀장려금 지급",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/105100000001",
-      "region": "전국",
-      "serviceField": "생활안정",
-      "supportType": "현금",
-      "targetGroup": "가구"
+      "region": "전국"
     },
     {
       "id": 5,
@@ -575,10 +500,7 @@
       "target": "국공립 및 사립유치원에 다니는 3~5세 유아",
       "summary": "유치원에 다니는 3~5세 아동에게 유아학비, 방과후과정비 등 지원",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/000000465790",
-      "region": "전국",
-      "serviceField": "보육 교육",
-      "supportType": "현금",
-      "targetGroup": "가구"
+      "region": "전국"
     },
     {
       "id": 1,
@@ -591,10 +513,7 @@
       "summary": "새롭게 성년이 된 청년들의 미래를 응원하기 위해 모바일 송파사랑상품권 20만 원을 지급합니다.",
       "link": "https://www.songpa.go.kr/www/selectBbsNttView.do?key=2781&bbsNo=96&nttNo=19229597",
       "blogContent": "안녕하세요! AI 알리미입니다. 🎉\n\n올해 어엿한 성년이 된 송파구의 청년 여러분! 진심으로 축하드립니다.\n송파구에서는 여러분의 새로운 출발을 힘차게 응원하기 위해 특별한 선물을 준비했는데요, 바로 '성년출발지원금'입니다!\n모바일 송파사랑상품권으로 무려 20만 원이 지급된답니다. 책을 사거나, 자기계발을 하거나, 친구들과 맛있는 식사를 하는 데 유용하게 사용할 수 있겠죠?\n\n신청은 송파구청 홈페이지에서 온라인으로 아주 간단하게 할 수 있으니, 대상자이신 분들은 잊지 말고 꼭! 신청하셔서 혜택을 누리시길 바랍니다. 청년 여러분의 눈부신 미래를 응원합니다! 🚀",
-      "region": "서울",
-      "serviceField": "생활안정",
-      "supportType": "이용권",
-      "targetGroup": "개인"
+      "region": "서울"
     },
     {
       "id": 2,
@@ -607,10 +526,7 @@
       "summary": "취업 준비에 어려움을 겪는 미취업 청년에게 어학시험 응시료, 자격증 취득 비용 등 취업 준비 비용을 지원합니다.",
       "link": "https://youth.seoul.go.kr/",
       "blogContent": "안녕하세요! AI 알리미입니다. 💼\n\n취업 준비하느라 몸도 마음도 지치고, 무엇보다 경제적 부담이 크시죠? 송파구 미취업 청년 여러분을 위해 든든한 지원군이 나섰습니다!\n토익, 오픽 같은 어학 시험부터 한국사, 각종 국가기술자격증 시험까지! 응시료 때문에 시험 보기가 망설여졌다면 이제 걱정 마세요. 1인당 최대 10만 원까지 응시료 실비를 지원해 드립니다. (생애 1회)\n\n열심히 노력하는 여러분의 꿈이 현실이 될 수 있도록, 어깨를 조금이나마 가볍게 해드릴게요. 서울청년포털에서 자세한 내용을 확인하시고 꼭 혜택 챙겨가세요! 취업 준비생 여러분 모두 화이팅! 💪",
-      "region": "서울",
-      "serviceField": "고용 창업",
-      "supportType": "현금",
-      "targetGroup": "개인"
+      "region": "서울"
     },
     {
       "id": 3,
@@ -623,10 +539,7 @@
       "summary": "첫만남이용권(200만원), 부모급여(월 35~70만원), 아동수당(월 10만원) 등 아동 양육에 필요한 종합 비용을 지원합니다.",
       "link": "https://www.songpa.go.kr/www/contents.do?key=5645&",
       "blogContent": "안녕하세요! AI 알리미입니다. 🍼\n\n새로운 생명의 탄생을 진심으로 축하드립니다! 아이를 키우는 기쁨만큼 챙겨야 할 혜택들도 많으실 텐데요, 우리 동네 송파구와 정부에서 준비한 든든한 출산/육아 혜택들을 싹 정리해 드립니다!\n\n✨ **주요 혜택 3가지**\n1. **첫만남이용권**: 태어난 아기를 위해 200만 원 바우처가 한 번에 지급돼요! 기저귀, 분유 등 꼭 필요한 물품을 구매하세요.\n2. **부모급여**: 0~11개월 아기는 월 70만 원, 12~23개월 아기는 월 35만 원씩 든든하게 입금됩니다.\n3. **아동수당**: 아이가 만 8세가 되기 전까지 매월 10만 원씩 꾸준히 지원됩니다.\n\n이 모든 혜택은 복지로 홈페이지나 가까운 동주민센터에서 한 번에 신청하실 수 있어요. 아이 키우기 좋은 동네 송파구에서 행복한 육아 하시길 응원합니다! 👨‍👩‍👧‍👦",
-      "region": "전국",
-      "serviceField": "임신 출산",
-      "supportType": "현금",
-      "targetGroup": "가구"
+      "region": "전국"
     },
     {
       "id": 4,
@@ -639,10 +552,7 @@
       "summary": "음식물 쓰레기를 줄이기 위해 인증받은 소형감량기 구매 시 구매 비용의 40%(최대 21만 원)를 지원해 드립니다.",
       "link": "https://www.songpa.go.kr/www/selectBbsNttView.do?key=2781&bbsNo=96&nttNo=19275381",
       "blogContent": "안녕하세요! AI 알리미입니다. 🌍\n\n매일 나오는 음식물 쓰레기 처리하기 너무 귀찮으시죠? 환경도 보호하고 쓰레기 버리는 수고도 덜 수 있는 '가정용 음식물 소형감량기' 구매를 고민 중이시라면 주목해 주세요!\n\n송파구에서 발표한 **2026년 최신 공고**에 따르면, 올해 인증받은 음식물 소형감량기를 구매한 구민에게 구매 금액의 최대 40%(최대 21만 원)를 보조금으로 든든하게 지원해 드립니다. (단, 싱크대에 직접 갈아 넣는 디스포저 방식은 환경 오염 우려로 지원 대상에서 제외되니 꼭 확인하세요!)\n\n초기 기계값이 부담되셨던 분들께는 정말 희소식이 아닐 수 없네요. 한정된 예산이 100% 소진되면 조기 마감될 수 있으니, 기기를 구매하셨다면 잊지 말고 송파구청 자원순환과에 보조금을 발 빠르게 신청하세요! 똑똑하고 알뜰한 살림꾼 되기, 어렵지 않죠? 😉",
-      "region": "서울",
-      "serviceField": "문화 환경",
-      "supportType": "현금",
-      "targetGroup": "개인"
+      "region": "서울"
     }
   ],
   "cultureEvents": [
@@ -3938,10 +3848,7 @@
       "link": "https://umppa.seoul.go.kr/hmpg/sprt/bzin/bzmgComtDetail.do?biz_mng_no=4ECE63A5582C4749A34BF4867436AAB1",
       "imageUrl": "https://umppa.seoul.go.kr/contents/ctmg/bner/1693278290411.png",
       "id": 1778713506489,
-      "updatedAt": "2026-06-17",
-      "serviceField": "임신 출산",
-      "supportType": "현물",
-      "targetGroup": "개인"
+      "updatedAt": "2026-06-17"
     },
     {
       "name": "35세 이상 임산부 의료비 지원",
@@ -3955,10 +3862,7 @@
       "link": "https://umppa.seoul.go.kr/hmpg/sprt/bzin/bzmgComtDetail.do?biz_mng_no=BB80BABF442E40D3BF59EBA63F4DF1D7",
       "imageUrl": "https://umppa.seoul.go.kr/contents/ctmg/bner/1693278290411.png",
       "id": 1778713506488,
-      "updatedAt": "2026-06-17",
-      "serviceField": "임신 출산",
-      "supportType": "현금",
-      "targetGroup": "개인"
+      "updatedAt": "2026-06-17"
     },
     {
       "name": "서울 난자동결 시술비용 지원",
@@ -3972,10 +3876,7 @@
       "link": "https://umppa.seoul.go.kr/hmpg/sprt/bzin/bzmgComtDetail.do?biz_mng_no=DEC40D648D8647CABC7A5D7279EFCFB6",
       "imageUrl": "https://umppa.seoul.go.kr/contents/ctmg/bner/1693278290411.png",
       "id": 1778713506487,
-      "updatedAt": "2026-06-17",
-      "serviceField": "보건 의료",
-      "supportType": "현금",
-      "targetGroup": "개인"
+      "updatedAt": "2026-06-17"
     },
     {
       "name": "더 아름다운 결혼식 비품비 지원",
@@ -3989,10 +3890,7 @@
       "link": "https://umppa.seoul.go.kr/hmpg/sprt/bzin/bzmgComtDetail.do?biz_mng_no=5131BE613817CADFE063A60221622406",
       "imageUrl": "https://umppa.seoul.go.kr/contents/ctmg/bner/1693278290411.png",
       "id": 1778713506486,
-      "updatedAt": "2026-06-17",
-      "serviceField": "생활안정",
-      "supportType": "현금",
-      "targetGroup": "가구"
+      "updatedAt": "2026-06-17"
     },
     {
       "name": "서울형 손주돌봄수당 지원(민간형)",
@@ -4006,10 +3904,7 @@
       "link": "https://umppa.seoul.go.kr/hmpg/sprt/bzin/bzmgComtDetail.do?biz_mng_no=FBBD14E6690A4A898D077E618324D3F6",
       "imageUrl": "https://umppa.seoul.go.kr/contents/ctmg/bner/1693278290411.png",
       "id": 1778713506485,
-      "updatedAt": "2026-06-17",
-      "serviceField": "보호 돌봄",
-      "supportType": "현금",
-      "targetGroup": "가구"
+      "updatedAt": "2026-06-17"
     },
     {
       "name": "서울형 손주돌봄수당 지원(친인척형)",
@@ -4023,10 +3918,7 @@
       "link": "https://umppa.seoul.go.kr/hmpg/sprt/bzin/bzmgComtDetail.do?biz_mng_no=59F45FE9BC024848AD07143C962E6869",
       "imageUrl": "https://umppa.seoul.go.kr/contents/ctmg/bner/1693278290411.png",
       "id": 1778713506484,
-      "updatedAt": "2026-06-17",
-      "serviceField": "보호 돌봄",
-      "supportType": "현금",
-      "targetGroup": "가구"
+      "updatedAt": "2026-06-17"
     },
     {
       "name": "서울형 산후조리경비 지원",
@@ -4040,10 +3932,7 @@
       "link": "https://umppa.seoul.go.kr/hmpg/sprt/bzin/bzmgComtDetail.do?biz_mng_no=58D83411277E40D1BFF6255A10CBCDD5",
       "imageUrl": "https://umppa.seoul.go.kr/contents/ctmg/bner/1693278290411.png",
       "id": 1778713506483,
-      "updatedAt": "2026-06-17",
-      "serviceField": "임신 출산",
-      "supportType": "이용권",
-      "targetGroup": "가구"
+      "updatedAt": "2026-06-17"
     },
     {
       "name": "임산부교통비지원",
@@ -4057,10 +3946,7 @@
       "link": "https://umppa.seoul.go.kr/hmpg/sprt/bzin/bzmgComtDetail.do?biz_mng_no=34B5EA8BEB354E2DB26136CFE52AEFF2",
       "imageUrl": "https://umppa.seoul.go.kr/contents/ctmg/bner/1693278290411.png",
       "id": 1778713506482,
-      "updatedAt": "2026-06-17",
-      "serviceField": "임신 출산",
-      "supportType": "이용권",
-      "targetGroup": "개인"
+      "updatedAt": "2026-06-17"
     },
     {
       "name": "자녀출산 무주택가구 주거비지원",
@@ -4074,10 +3960,7 @@
       "link": "https://umppa.seoul.go.kr/hmpg/life/cycl/lifeCyclInfoDetail.do",
       "imageUrl": "https://umppa.seoul.go.kr/contents/ctmg/bner/1693278290411.png",
       "id": 1778713506474,
-      "updatedAt": "2026-06-16",
-      "serviceField": "주거 자립",
-      "supportType": "현금",
-      "targetGroup": "가구"
+      "updatedAt": "2026-06-16"
     },
     {
       "name": "광진구 1인가구지원센터 [동행지원] <일상, 선물> 6월 프로그램",
@@ -4091,10 +3974,7 @@
       "link": "https://www.1lifegj.or.kr/main/sub.html?pageCode=15&page=1&num=336&processType=view",
       "imageUrl": "https://www.1lifegj.or.kr/user/saveDir/editor/202605/26JdYLIaZ3HM2c.jpg",
       "id": 1778713506264,
-      "updatedAt": "2026-05-30",
-      "serviceField": "생활안정",
-      "supportType": "이용권",
-      "targetGroup": "개인"
+      "updatedAt": "2026-05-30"
     },
     {
       "name": "서울형 아이돌봄비 지원사업",
@@ -4108,10 +3988,7 @@
       "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005097&wlfareInfoReldBztpCd=02",
       "imageUrl": "",
       "id": 1778713506240,
-      "updatedAt": "2026-05-27",
-      "serviceField": "보호 돌봄",
-      "supportType": "현금",
-      "targetGroup": "가구"
+      "updatedAt": "2026-05-27"
     },
     {
       "name": "[서울] 2026년 2차 소규모 세탁소 VOCs 저감시설 지원사업 세탁소 모집 공고",
@@ -4125,10 +4002,7 @@
       "link": "https://bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=6&rows=15&cpage=1&cat=&schPblancDiv=01&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6110000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=searchPblancNm&condition1=AND&keyword=&pblancId=PBLN_000000000122406",
       "imageUrl": "https://bizinfo.go.kr/images/bizinfo/common/sns_thumbnail_img.png",
       "id": 1778713506227,
-      "updatedAt": "2026-05-26",
-      "serviceField": "문화 환경",
-      "supportType": "현금",
-      "targetGroup": "소상공인"
+      "updatedAt": "2026-05-26"
     },
     {
       "name": "100세 어르신 장수축하물품 지급",
@@ -4142,10 +4016,7 @@
       "link": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2181916&bnefType=all&svcId=320000000315",
       "imageUrl": "https://static.gov.kr/content/images/layout/logo-header.svg?time=1779397096671",
       "id": 1778713506199,
-      "updatedAt": "2026-05-23",
-      "serviceField": "생활안정",
-      "supportType": "현물",
-      "targetGroup": "개인"
+      "updatedAt": "2026-05-23"
     },
     {
       "name": "고유가 피해지원금 서울사랑상품권 신청 및 서울배달+ 땡겨요 혜택",
@@ -4159,10 +4030,7 @@
       "link": "https://news.seoul.go.kr/economy/archives/572536?listPage=1&s=%EC%A7%80%EC%9B%90%EA%B8%88",
       "imageUrl": "https://news.seoul.go.kr/economy/files/2026/05/6a0a5b044c2f82.89690905.jpg",
       "id": 1778713506198,
-      "updatedAt": "2026-05-23",
-      "serviceField": "생활안정",
-      "supportType": "이용권",
-      "targetGroup": "개인"
+      "updatedAt": "2026-05-23"
     }
   ],
   "kyeonggiBenefits": [
@@ -4178,10 +4046,7 @@
       "link": "https://bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=6&rows=15&cpage=1&cat=&schPblancDiv=01&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6110000%2C6410000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=searchPblancNm&condition1=AND&keyword=&pblancId=PBLN_000000000122419",
       "imageUrl": "https://bizinfo.go.kr/images/bizinfo/common/sns_thumbnail_img.png",
       "id": 1778713506228,
-      "updatedAt": "2026-05-26",
-      "serviceField": "고용 창업",
-      "supportType": "현금",
-      "targetGroup": "소상공인"
+      "updatedAt": "2026-05-26"
     }
   ],
   "incheonBenefits": [
@@ -4197,10 +4062,7 @@
       "link": "https://bizinfo.go.kr/sii/siia/selectSIIA200Detail.do?hashCode=&rowsSel=6&rows=15&cpage=1&cat=&schPblancDiv=01&schJrsdCodeTy=&schWntyAt=&schAreaDetailCodes=6280000&schEndAt=N&orderGb=&sort=&preKeywords=&condition=searchPblancNm&condition1=AND&keyword=&pblancId=PBLN_000000000122414",
       "imageUrl": "https://bizinfo.go.kr/images/bizinfo/common/sns_thumbnail_img.png",
       "id": 1778713506229,
-      "updatedAt": "2026-05-26",
-      "serviceField": "고용 창업",
-      "supportType": "현금",
-      "targetGroup": "소상공인"
+      "updatedAt": "2026-05-26"
     }
   ],
   "nationalBenefits": [
@@ -4215,10 +4077,7 @@
       "summary": "관내 신혼부부 및 청년 대상 주택자금 대출이자를 지원하여 결혼장려 및 저출산 대응",
       "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000020&wlfareInfoReldBztpCd=02",
       "id": 1778713506502,
-      "updatedAt": "2026-06-19",
-      "serviceField": "주거 자립",
-      "supportType": "현금(감면)",
-      "targetGroup": "개인"
+      "updatedAt": "2026-06-19"
     },
     {
       "name": "운동으로 산후우울에 브레이크를! (출산 후 심신 건강회복 운동비 지원)",
@@ -4231,10 +4090,7 @@
       "summary": "출산 후 산모의 신체적·정서적 회복을 통해 산후우울을 예방하고 모자의 건강 증진을 도모하며, 저출산에 따른 인구감소에 대응하기 위한 출산장려 운동비를 지원합니다.",
       "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006321&wlfareInfoReldBztpCd=02",
       "id": 1778713506501,
-      "updatedAt": "2026-06-19",
-      "serviceField": "임신 출산",
-      "supportType": "현금",
-      "targetGroup": "개인"
+      "updatedAt": "2026-06-19"
     },
     {
       "name": "전입학생 생활안정 장학금",
@@ -4247,10 +4103,7 @@
       "summary": "완주군으로 전입한 전입학생에게 생활안정 장학금을 지원하여 완주군에 안정적으로 정착하도록 돕고자 함.",
       "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006322&wlfareInfoReldBztpCd=02",
       "id": 1778713506500,
-      "updatedAt": "2026-06-19",
-      "serviceField": "생활안정",
-      "supportType": "현금(장학금)",
-      "targetGroup": "개인"
+      "updatedAt": "2026-06-19"
     },
     {
       "name": "한강수계 주민지원(특별지원사업)",
@@ -4263,10 +4116,7 @@
       "summary": "한강 상수원관리지역 지자체를 대상으로 수질 개선, 주민 복지 향상, 지역 발전을 위한 사업을 공모·선정하여 지원합니다.",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/148000000036",
       "id": 1778713506493,
-      "updatedAt": "2026-06-19",
-      "serviceField": "문화 환경",
-      "supportType": "현금",
-      "targetGroup": "법인/시설/단체"
+      "updatedAt": "2026-06-19"
     },
     {
       "name": "유휴간호사 등 교육 및 취업 연계 서비스 제공",
@@ -4279,10 +4129,7 @@
       "summary": "유휴간호사의 재취업을 돕기 위해 교육 지원 및 취업 연계 서비스를 제공합니다.",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200000096",
       "id": 1778713506461,
-      "updatedAt": "2026-06-13",
-      "serviceField": "고용 창업",
-      "supportType": "서비스(일자리)",
-      "targetGroup": "개인"
+      "updatedAt": "2026-06-13"
     },
     {
       "name": "금연클리닉 서비스 제공",
@@ -4295,10 +4142,7 @@
       "summary": "지역사회 흡연자를 대상으로 금연상담 및 금연지원서비스를 제공합니다.",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200000081",
       "id": 1778713506460,
-      "updatedAt": "2026-06-13",
-      "serviceField": "보건 의료",
-      "supportType": "기타(상담)",
-      "targetGroup": "개인"
+      "updatedAt": "2026-06-13"
     },
     {
       "name": "대학원 학과 기반 교육연구단 연구장학금 등 지원(4단계 두뇌한국21 사업)",
@@ -4311,10 +4155,7 @@
       "summary": "대학원 학과기반 사업단 소속 대학원생에 연구장학금, 산학협력 활동지원비 등 지급",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/134200000007",
       "id": 1778713506459,
-      "updatedAt": "2026-06-13",
-      "serviceField": "보육 교육",
-      "supportType": "현금(장학금)",
-      "targetGroup": "법인/시설/단체"
+      "updatedAt": "2026-06-13"
     },
     {
       "name": "중소환경기업 사업화 지원",
@@ -4328,11 +4169,9 @@
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/148000000003",
       "imageUrl": "http://www.gov.kr/images/etc/og_image_600.png",
       "id": 1778713506452,
-      "updatedAt": "2026-06-13",
-      "serviceField": "고용 창업",
-      "supportType": "현금",
-      "targetGroup": "소상공인"
+      "updatedAt": "2026-06-13"
     },
+
     {
       "name": "양육비 선지급 지원",
       "category": "혜택",
@@ -4344,10 +4183,7 @@
       "summary": "양육비를 받지 못하고 있는 한부모가족 등에게 국가가 미성년 자녀 1인당 월 20만원을 먼저 지급하고 양육비 채무자에게 회수하는 제도",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/138300000065",
       "id": 1778713506449,
-      "updatedAt": "2026-06-12",
-      "serviceField": "보호 돌봄",
-      "supportType": "현금",
-      "targetGroup": "가구"
+      "updatedAt": "2026-06-12"
     },
     {
       "name": "가정 밖 청소년 자립지원",
@@ -4360,10 +4196,7 @@
       "summary": "가정 밖 청소년에게 생활보호, 심리상담, 의료, 학업복귀, 취업지원 등 맞춤형 자립지원서비스를 제공하여 신속한 가정복귀와 사회진출을 지원합니다.",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/138300000063",
       "id": 1778713506448,
-      "updatedAt": "2026-06-12",
-      "serviceField": "보호 돌봄",
-      "supportType": "서비스(돌봄)",
-      "targetGroup": "개인"
+      "updatedAt": "2026-06-12"
     },
     {
       "name": "청소년회복지원시설운영",
@@ -4376,10 +4209,7 @@
       "summary": "소년법 처분(제1호 ‘보호자 감호위탁’)을 받은 청소년에게 상담, 주거, 학업, 자립 및 보호·생활지원을 제공하여 신체, 심리, 정서적 치유와 회복을 돕습니다.",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/138300000062",
       "id": 1778713506447,
-      "updatedAt": "2026-06-12",
-      "serviceField": "보호 돌봄",
-      "supportType": "서비스(돌봄)",
-      "targetGroup": "개인"
+      "updatedAt": "2026-06-12"
     },
     {
       "name": "학교 밖 청소년 건강검진 지원",
@@ -4392,10 +4222,7 @@
       "summary": "학교 밖 청소년을 대상으로 건강검진 비용 전액 지원(본인 부담 없음)",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/138300000033",
       "id": 1778713506446,
-      "updatedAt": "2026-06-12",
-      "serviceField": "보건 의료",
-      "supportType": "현금",
-      "targetGroup": "개인"
+      "updatedAt": "2026-06-12"
     },
     {
       "name": "청소년 상담 서비스 제공",
@@ -4408,10 +4235,7 @@
       "summary": "위기청소년을 대상으로 상담, 긴급구조, 학업지원 등의 서비스 제공",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/138300000030",
       "id": 1778713506445,
-      "updatedAt": "2026-06-12",
-      "serviceField": "보호 돌봄",
-      "supportType": "기타(상담)",
-      "targetGroup": "개인"
+      "updatedAt": "2026-06-12"
     },
     {
       "name": "한국청소년상담복지개발원 운영 지원",
@@ -4424,10 +4248,7 @@
       "summary": "청소년 및 청소년지도자를 위한 정책연구, 상담복지사업 운영 지원, 청소년상담사 및 또래상담지도사 등 전문 인력 양성을 지원합니다.",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/138300000011",
       "id": 1778713506444,
-      "updatedAt": "2026-06-12",
-      "serviceField": "보육 교육",
-      "supportType": "현금",
-      "targetGroup": "개인"
+      "updatedAt": "2026-06-12"
     },
     {
       "name": "가정위탁 아동양육보조금 지원",
@@ -4440,10 +4261,7 @@
       "summary": "가정위탁아동이 건전한 사회인으로 성장할 수 있도록 연령에 따라 1인당 월 34만 원에서 56만 원 이상의 양육보조금을 차등 지원합니다.",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200005055",
       "id": 1778713506434,
-      "updatedAt": "2026-06-11",
-      "serviceField": "생활안정",
-      "supportType": "현금",
-      "targetGroup": "가구"
+      "updatedAt": "2026-06-11"
     },
     {
       "name": "2세미만 영유아 입원진료비 본인부담금 면제",
@@ -4456,10 +4274,7 @@
       "summary": "2세 미만 영유아를 대상으로 입원 진료 시 발생하는 진료비 중 본인 부담금을 면제해 줍니다. (식대, 선별 급여 등은 제외)",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200005050",
       "id": 1778713506433,
-      "updatedAt": "2026-06-11",
-      "serviceField": "보건 의료",
-      "supportType": "현금(감면)",
-      "targetGroup": "개인"
+      "updatedAt": "2026-06-11"
     },
     {
       "name": "위기임신 및 보호출산 지원",
@@ -4472,10 +4287,7 @@
       "summary": "위기 임산부의 안전한 출산을 지원하고 태아 및 자녀의 안전한 양육 환경을 보장하기 위해 전문 상담, 비식별 출산 지원, 아동 보호 조치 및 출생 증서 기록 관리 등의 서비스를 제공합니다.",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200005048",
       "id": 1778713506432,
-      "updatedAt": "2026-06-11",
-      "serviceField": "임신 출산",
-      "supportType": "서비스(돌봄)",
-      "targetGroup": "개인"
+      "updatedAt": "2026-06-11"
     },
     {
       "name": "임산부 외래진료비 본인부담률 경감",
@@ -4488,10 +4300,7 @@
       "summary": "임신 기간 중 진료 과목 상관없이 요양 급여 비용 총액의 일정 비율 경감(상급 종합병원 40%, 종합병원 30%, 병원 20%, 의원 10%)",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200005046",
       "id": 1778713506431,
-      "updatedAt": "2026-06-11",
-      "serviceField": "임신 출산",
-      "supportType": "현금(감면)",
-      "targetGroup": "개인"
+      "updatedAt": "2026-06-11"
     },
     {
       "name": "아동 입원진료비 지원",
@@ -4504,10 +4313,7 @@
       "summary": "만 15세 이하 아동의 입원 진료비 본인부담금을 면제 또는 일부 지원(2세 미만 영유아 본인부담 0%, 그 외 15세 이하 아동 5%)하여 의료비 부담을 완화해 주는 서비스입니다.",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200005038",
       "id": 1778713506430,
-      "updatedAt": "2026-06-11",
-      "serviceField": "보건 의료",
-      "supportType": "현금(감면)",
-      "targetGroup": "개인"
+      "updatedAt": "2026-06-11"
     },
     {
       "name": "장기요양급여비용 본인부담금 감경",
@@ -4520,10 +4326,7 @@
       "summary": "소득 수준에 따라 장기요양급여 이용 시 발생하는 본인부담비용을 40%에서 60%까지 차등 감경하여 경제적 부담을 완화해 주는 서비스입니다.",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200005031",
       "id": 1778713506429,
-      "updatedAt": "2026-06-11",
-      "serviceField": "보건 의료",
-      "supportType": "현금(감면)",
-      "targetGroup": "개인"
+      "updatedAt": "2026-06-11"
     },
     {
       "name": "금연캠프사업",
@@ -4536,10 +4339,7 @@
       "summary": "스스로 금연이 어려운 중증·고도흡연자를 대상으로 전문적인 금연 프로그램(전문치료 및 상담, 니코틴보조제 제공 등)을 지원합니다.",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200005024",
       "id": 1778713506428,
-      "updatedAt": "2026-06-11",
-      "serviceField": "보건 의료",
-      "supportType": "서비스(돌봄)",
-      "targetGroup": "개인"
+      "updatedAt": "2026-06-11"
     },
     {
       "name": "치매 치료관리비 지원",
@@ -4552,10 +4352,7 @@
       "summary": "치매 어르신에게 치매 치료 관리비 보험급여분 중 본인부담금(약제비와 진료비)을 월 최대 3만 원(연 36만 원) 한도 내에서 실비로 지원합니다.",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200000125",
       "id": 1778713506427,
-      "updatedAt": "2026-06-11",
-      "serviceField": "보건 의료",
-      "supportType": "현금",
-      "targetGroup": "개인"
+      "updatedAt": "2026-06-11"
     },
     {
       "name": "사회복지법인 지방세 감면",
@@ -4569,10 +4366,7 @@
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/131200000012",
       "imageUrl": "http://www.gov.kr/images/etc/og_image_600.png",
       "id": 1778713506424,
-      "updatedAt": "2026-06-09",
-      "serviceField": "행정 안전",
-      "supportType": "현금(감면)",
-      "targetGroup": "법인/시설/단체"
+      "updatedAt": "2026-06-09"
     },
     {
       "name": "일상돌봄 서비스",
@@ -4585,10 +4379,7 @@
       "summary": "돌봄이 필요한 청·중장년과 가족돌봄청년을 대상으로 재가돌봄, 가사 등의 기본서비스와 식사영양관리, 병원 동행 등 맞춤형 특화서비스를 통합 제공하는 서비스입니다.",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200005027",
       "id": 1778713506421,
-      "updatedAt": "2026-06-08",
-      "serviceField": "보호 돌봄",
-      "supportType": "서비스(돌봄)",
-      "targetGroup": "개인"
+      "updatedAt": "2026-06-08"
     },
     {
       "name": "한국형 상병수당 시범사업",
@@ -4602,10 +4393,7 @@
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200005017",
       "imageUrl": "http://www.gov.kr/images/etc/og_image_600.png",
       "id": 1778713506420,
-      "updatedAt": "2026-06-08",
-      "serviceField": "생활안정",
-      "supportType": "현금",
-      "targetGroup": "개인"
+      "updatedAt": "2026-06-08"
     },
     {
       "name": "첫만남이용권 지원",
@@ -4619,10 +4407,7 @@
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200005015",
       "imageUrl": "http://www.gov.kr/images/etc/og_image_600.png",
       "id": 1778713506419,
-      "updatedAt": "2026-06-08",
-      "serviceField": "임신 출산",
-      "supportType": "이용권",
-      "targetGroup": "개인"
+      "updatedAt": "2026-06-08"
     },
     {
       "name": "입양축하금",
@@ -4635,10 +4420,7 @@
       "summary": "1회에 한하여 200만원 입양축하금 지급",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200005011",
       "id": 1778713506418,
-      "updatedAt": "2026-06-08",
-      "serviceField": "생활안정",
-      "supportType": "현금",
-      "targetGroup": "가구"
+      "updatedAt": "2026-06-08"
     },
     {
       "name": "자산형성지원사업(희망저축Ⅰ)",
@@ -4651,10 +4433,7 @@
       "summary": "일하는 생계‧의료 수급자를 대상으로 본인적립금(10만 원) 납입 시 정부지원금(30만 원)을 매칭하여 자산 형성을 지원하는 사업입니다.",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200005010",
       "id": 1778713506417,
-      "updatedAt": "2026-06-08",
-      "serviceField": "생활안정",
-      "supportType": "현금",
-      "targetGroup": "가구"
+      "updatedAt": "2026-06-08"
     },
     {
       "name": "긴급복지 해산비 지원",
@@ -4668,10 +4447,7 @@
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200005002",
       "imageUrl": "http://www.gov.kr/images/etc/og_image_600.png",
       "id": 1778713506416,
-      "updatedAt": "2026-06-08",
-      "serviceField": "임신 출산",
-      "supportType": "현금",
-      "targetGroup": "가구"
+      "updatedAt": "2026-06-08"
     },
     {
       "name": "아동수당",
@@ -4685,10 +4461,7 @@
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200000120",
       "imageUrl": "http://www.gov.kr/images/etc/og_image_600.png",
       "id": 1778713506415,
-      "updatedAt": "2026-06-08",
-      "serviceField": "보육 교육",
-      "supportType": "현금",
-      "targetGroup": "개인"
+      "updatedAt": "2026-06-08"
     },
     {
       "name": "아동복지시설 기능보강 지원",
@@ -4701,10 +4474,7 @@
       "summary": "법인이 운영하는 아동복지시설의 신축, 증·개축, 개보수 및 장비보강 비용을 지원합니다.",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200000086",
       "id": 1778713506414,
-      "updatedAt": "2026-06-08",
-      "serviceField": "보호 돌봄",
-      "supportType": "현금",
-      "targetGroup": "법인/시설/단체"
+      "updatedAt": "2026-06-08"
     },
     {
       "name": "보건소 방문건강관리 서비스",
@@ -4718,10 +4488,7 @@
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200000082",
       "imageUrl": "http://www.gov.kr/images/etc/og_image_600.png",
       "id": 1778713506413,
-      "updatedAt": "2026-06-08",
-      "serviceField": "보건 의료",
-      "supportType": "서비스(돌봄)",
-      "targetGroup": "개인"
+      "updatedAt": "2026-06-08"
     },
     {
       "name": "아동 공동생활 가정 운영 지원",
@@ -4735,10 +4502,7 @@
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200000010",
       "imageUrl": "http://www.gov.kr/images/etc/og_image_600.png",
       "id": 1778713506412,
-      "updatedAt": "2026-06-08",
-      "serviceField": "보호 돌봄",
-      "supportType": "현금",
-      "targetGroup": "법인/시설/단체"
+      "updatedAt": "2026-06-08"
     },
     {
       "name": "희귀질환 진단지원",
@@ -4751,10 +4515,7 @@
       "summary": "미진단된 희귀질환자에게 유전자 분석 및 검체 운송비 등 유전자 검사 및 해석을 지원합니다.",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200000008",
       "id": 1778713506411,
-      "updatedAt": "2026-06-08",
-      "serviceField": "보건 의료",
-      "supportType": "서비스(돌봄)",
-      "targetGroup": "개인"
+      "updatedAt": "2026-06-08"
     },
     {
       "name": "소년소녀가정 지원",
@@ -4768,10 +4529,7 @@
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200000006",
       "imageUrl": "http://www.gov.kr/images/etc/og_image_600.png",
       "id": 1778713506410,
-      "updatedAt": "2026-06-08",
-      "serviceField": "생활안정",
-      "supportType": "현금",
-      "targetGroup": "가구"
+      "updatedAt": "2026-06-08"
     },
     {
       "name": "임산부 및 영유아 영양플러스",
@@ -4784,10 +4542,7 @@
       "summary": "영양위험요인이 있는 임산부 및 영유아에게 정기적인 영양교육 및 상담을 실시하고, 맞춤형 영양 보충 식품패키지를 제공하는 복지 서비스입니다.",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200000005",
       "id": 1778713506409,
-      "updatedAt": "2026-06-08",
-      "serviceField": "임신 출산",
-      "supportType": "현물",
-      "targetGroup": "개인"
+      "updatedAt": "2026-06-08"
     },
     {
       "name": "의료급여 틀니·치과임플란트 지원",
@@ -4800,10 +4555,7 @@
       "summary": "65세 이상 의료급여 수급자를 대상으로 틀니(레진상, 금속상, 부분틀니 등) 및 치과임플란트(평생 2개 이내) 시술 시 본인부담금을 일부 경감하여 급여 적용을 지원합니다.",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200000002",
       "id": 1778713506408,
-      "updatedAt": "2026-06-08",
-      "serviceField": "보건 의료",
-      "supportType": "현금(감면)",
-      "targetGroup": "개인"
+      "updatedAt": "2026-06-08"
     },
     {
       "name": "유아교육비·보육료 추가지원",
@@ -4816,10 +4568,7 @@
       "summary": "학부모 양육비 부담 경감을 위해 유아 1인당 월 50,000원의 유아교육비 및 보육료를 추가로 지원합니다.",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/134200005047",
       "id": 1778713506407,
-      "updatedAt": "2026-06-08",
-      "serviceField": "보육 교육",
-      "supportType": "현금",
-      "targetGroup": "개인"
+      "updatedAt": "2026-06-08"
     },
     {
       "name": "법학전문대학원 취약계층 장학금",
@@ -4833,10 +4582,7 @@
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/134200005041",
       "imageUrl": "http://www.gov.kr/images/etc/og_image_600.png",
       "id": 1778713506406,
-      "updatedAt": "2026-06-08",
-      "serviceField": "보육 교육",
-      "supportType": "현금(장학금)",
-      "targetGroup": "개인"
+      "updatedAt": "2026-06-08"
     },
     {
       "name": "영유아보육료 지원",
@@ -4849,10 +4595,7 @@
       "summary": "소득수준에 관계없이 0~5세 아동에게 보육료 지원",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/134200005036",
       "id": 1778713506405,
-      "updatedAt": "2026-06-08",
-      "serviceField": "보육 교육",
-      "supportType": "현금",
-      "targetGroup": "개인"
+      "updatedAt": "2026-06-08"
     },
     {
       "name": "시간제보육 지원",
@@ -4866,10 +4609,7 @@
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/134200005031",
       "imageUrl": "http://www.gov.kr/images/etc/og_image_600.png",
       "id": 1778713506404,
-      "updatedAt": "2026-06-08",
-      "serviceField": "보육 교육",
-      "supportType": "서비스(돌봄)",
-      "targetGroup": "개인"
+      "updatedAt": "2026-06-08"
     },
     {
       "name": "가정양육수당 지원",
@@ -4882,10 +4622,7 @@
       "summary": "어린이집이나 유치원 등을 이용하지 않고 가정에서 양육하는 취학 전 24개월에서 86개월 미만의 영유아에게 월 10만 원에서 20만 원의 양육수당을 지원합니다.",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/134200005012",
       "id": 1778713506403,
-      "updatedAt": "2026-06-08",
-      "serviceField": "보육 교육",
-      "supportType": "현금",
-      "targetGroup": "개인"
+      "updatedAt": "2026-06-08"
     },
     {
       "name": "국가장학금 Ⅱ유형 (대학자체노력연계형)",
@@ -4898,10 +4635,7 @@
       "summary": "대학 자체 기준에 따라 등록금 범위 내에서 장학금을 지원합니다.",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/134200005002",
       "id": 1778713506402,
-      "updatedAt": "2026-06-08",
-      "serviceField": "보육 교육",
-      "supportType": "현금(장학금)",
-      "targetGroup": "개인"
+      "updatedAt": "2026-06-08"
     },
     {
       "name": "고졸 후학습자 장학금 (희망사다리Ⅱ유형)",
@@ -4915,10 +4649,7 @@
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/134200005001",
       "imageUrl": "http://www.gov.kr/images/etc/og_image_600.png",
       "id": 1778713506401,
-      "updatedAt": "2026-06-08",
-      "serviceField": "보육 교육",
-      "supportType": "현금(장학금)",
-      "targetGroup": "개인"
+      "updatedAt": "2026-06-08"
     },
     {
       "name": "대학입학전형료 면제·감액",
@@ -4932,10 +4663,7 @@
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/134200000014",
       "imageUrl": "http://www.gov.kr/images/etc/og_image_600.png",
       "id": 1778713506400,
-      "updatedAt": "2026-06-08",
-      "serviceField": "보육 교육",
-      "supportType": "현금(감면)",
-      "targetGroup": "개인"
+      "updatedAt": "2026-06-08"
     },
     {
       "name": "인문100년장학금",
@@ -4949,10 +4677,7 @@
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/134200000011",
       "imageUrl": "http://www.gov.kr/images/etc/og_image_600.png",
       "id": 1778713506399,
-      "updatedAt": "2026-06-08",
-      "serviceField": "보육 교육",
-      "supportType": "현금(장학금)",
-      "targetGroup": "개인"
+      "updatedAt": "2026-06-08"
     },
     {
       "name": "교육급여",
@@ -4966,10 +4691,7 @@
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/134200000003",
       "imageUrl": "http://www.gov.kr/images/etc/og_image_600.png",
       "id": 1778713506398,
-      "updatedAt": "2026-06-08",
-      "serviceField": "보육 교육",
-      "supportType": "현금",
-      "targetGroup": "개인"
+      "updatedAt": "2026-06-08"
     },
     {
       "name": "우리집 수돗물 안심 확인제 지원",
@@ -4982,10 +4704,7 @@
       "summary": "수돗물을 공급받는 가정에서 수질검사를 신청하고 결과를 확인할 수 있는 서비스 제공",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/148000000014",
       "id": 1778713506393,
-      "updatedAt": "2026-06-07",
-      "serviceField": "문화 환경",
-      "supportType": "기타",
-      "targetGroup": "가구"
+      "updatedAt": "2026-06-07"
     },
     {
       "name": "지방공무원 신규 임용시험 응시 수수료 면제",
@@ -4998,10 +4717,7 @@
       "summary": "지방공무원 신규 임용에 응시할 경우 수수료 면제",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/131200000002",
       "id": 1778713506188,
-      "updatedAt": "2026-05-21",
-      "serviceField": "고용 창업",
-      "supportType": "현금(감면)",
-      "targetGroup": "개인"
+      "updatedAt": "2026-05-21"
     },
     {
       "name": "전역예정장병 취업활동지원",
@@ -5014,10 +4730,7 @@
       "summary": "장기간 사회와 단절된 생활로 사회적응 및 취업준비가 필요한 전역예정장병의 취업활동을 지원합니다. 중장기복무자에게는 맞춤형 진로설계 및 전문지식 기술습득 기회를 제공하여 취창업 역량 강화를 돕고, 청년장병에게는 찾아가는 진로도움교육 및 1:1 상담을 통해 진로설정 및 취업준비 과정을 지원합니다.",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/129000000015",
       "id": 1778713506187,
-      "updatedAt": "2026-05-21",
-      "serviceField": "고용 창업",
-      "supportType": "서비스(일자리)",
-      "targetGroup": "개인"
+      "updatedAt": "2026-05-21"
     },
     {
       "name": "범죄 피해 구조금 지급",
@@ -5030,10 +4743,7 @@
       "summary": "범죄피해자 및 가족 등에게 상담 및 의료, 구조금, 주거지원 등의 구조방안 제공",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/128000000001",
       "id": 1778713506186,
-      "updatedAt": "2026-05-21",
-      "serviceField": "생활안정",
-      "supportType": "현금",
-      "targetGroup": "개인"
+      "updatedAt": "2026-05-21"
     },
     {
       "name": "전역예정군인 재취업 지원",
@@ -5046,10 +4756,7 @@
       "summary": "전역예정장병에게 전직상담 및 교육, 취업 등을 지원하는 서비스",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/129000000013",
       "id": 1778713506185,
-      "updatedAt": "2026-05-21",
-      "serviceField": "고용 창업",
-      "supportType": "서비스(일자리)",
-      "targetGroup": "개인"
+      "updatedAt": "2026-05-21"
     },
     {
       "name": "장병 인권상담 지원",
@@ -5062,10 +4769,7 @@
       "summary": "군 인권 관련 진정 및 상담",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/129000000009",
       "id": 1778713506184,
-      "updatedAt": "2026-05-21",
-      "serviceField": "행정 안전",
-      "supportType": "기타(상담)",
-      "targetGroup": "개인"
+      "updatedAt": "2026-05-21"
     },
     {
       "name": "범죄피해자에 대한 경제적 지원",
@@ -5078,10 +4782,7 @@
       "summary": "범죄피해자 및 가족 등에게 치료비, 생계비, 학자금, 장례비, 긴급생활안정 등 경제적 지원",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/128000000003",
       "id": 1778713506183,
-      "updatedAt": "2026-05-21",
-      "serviceField": "생활안정",
-      "supportType": "현금",
-      "targetGroup": "개인"
+      "updatedAt": "2026-05-21"
     },
     {
       "name": "이전비 지원",
@@ -5094,10 +4795,7 @@
       "summary": "범죄피해자 혹은 신고자 등이 보복우려를 피해 이전할 경우 이사비용을 지원하는 서비스입니다.",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/128000000002",
       "id": 1778713506182,
-      "updatedAt": "2026-05-21",
-      "serviceField": "생활안정",
-      "supportType": "현금",
-      "targetGroup": "개인"
+      "updatedAt": "2026-05-21"
     },
     {
       "name": "취약계층 무료 법률서비스 제공(법률홈닥터 변호사)",
@@ -5110,10 +4808,7 @@
       "summary": "취약계층에게 법률상담, 법률문서 작성 조력, 유관기관 연계, 법교육 등의 서비스 지원",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/127000000002",
       "id": 1778713506181,
-      "updatedAt": "2026-05-21",
-      "serviceField": "생활안정",
-      "supportType": "기타(상담)",
-      "targetGroup": "개인"
+      "updatedAt": "2026-05-21"
     },
     {
       "name": "북한이탈주민 정착금 지원(가산금)",
@@ -5126,10 +4821,7 @@
       "summary": "일정조건에 해당하는 북한이탈주민에게 가산금을 지원합니다. 고령가산금(만 60세 이상, 분기별 50만원씩 총 800만원), 한부모가정아동보호가산금(만13세 미만 아동 동반 한부모, 분기별 25만원씩 총 400만원), 장애가산금, 장기치료가산금, 제3국출생자녀 양육가산금, 무연고청소년가산금 등이 있습니다.",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/125000000015",
       "id": 1778713506180,
-      "updatedAt": "2026-05-21",
-      "serviceField": "생활안정",
-      "supportType": "현금",
-      "targetGroup": "개인"
+      "updatedAt": "2026-05-21"
     },
     {
       "name": "북한이탈주민 정착금 지원(기본금)",
@@ -5142,10 +4834,7 @@
       "summary": "북한이탈주민에게 세대 및 세대 구성원의 수에 따라 차등 지급되는 정착금 지원 서비스. 1인 세대 기준 1,500만원, 2인 세대 2,400만원, 3인 세대 3,150만원, 4인 세대 3,900만원을 지원합니다.",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/125000000014",
       "id": 1778713506179,
-      "updatedAt": "2026-05-21",
-      "serviceField": "생활안정",
-      "supportType": "현금",
-      "targetGroup": "개인"
+      "updatedAt": "2026-05-21"
     },
     {
       "name": "북한이탈주민 자산형성 지원 (미래행복통장)",
@@ -5158,10 +4847,7 @@
       "summary": "북한이탈주민 대상으로 매월 10~50만 원 저축 시, 적립금과 동일한 금액 지원",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/125000000004",
       "id": 1778713506178,
-      "updatedAt": "2026-05-21",
-      "serviceField": "생활안정",
-      "supportType": "현금",
-      "targetGroup": "개인"
+      "updatedAt": "2026-05-21"
     },
     {
       "id": 1777391602453,
@@ -5174,10 +4860,7 @@
       "summary": "영유아 보육시설 설치·운영을 위해 취득한 부동산의 취득세, 재산세 면제",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/131200000010",
       "updatedAt": "2026-05-05",
-      "region": "전국",
-      "serviceField": "보육 교육",
-      "supportType": "현금(감면)",
-      "targetGroup": "법인/시설/단체"
+      "region": "전국"
     },
     {
       "id": 1777391602452,
@@ -5190,10 +4873,7 @@
       "summary": "다자녀가구가 취득한 자동차 취득세 감면",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/131200000008",
       "updatedAt": "2026-05-04",
-      "region": "전국",
-      "serviceField": "생활안정",
-      "supportType": "현금(감면)",
-      "targetGroup": "가구"
+      "region": "전국"
     },
     {
       "id": 7,
@@ -5205,10 +4885,7 @@
       "target": "보증금 1억원 이하 및 월세금 60만원 이하인 월세 계약을 체결한 주택도시 기금 주거안정 월세대출 대상자\n[우대형]\n- 취업준비생(신청일 현재 만 35세 이하의 무소득자이며 부모 소득이 6천만원 이하인 자)\n- 희망키움통장 가입자\n- 신청일 기준 최근 1년 이내 수급사실이 인정되는 근로장려금 수급자\n- 취업 후 5년 이내인 사회초년생으로 신청일 현재 만 35세 이하이며 부부합산 연소득 4천만원 이하인 자\n- 신청일 기준 최근 1년 이내 수급사실이 인정되는 자녀장려금 수급자\n- 신청일 현재 주거급여 수급자 확인서가 발급되는 주거급여 수급자\n\n[일반형]\n- 부부합산 연소득 5천만원 이하자 중 상기 [우대형]에 해당되지 않는 자",
       "summary": "일정요건의 월세대출 대상자에게 월세자금보증을 지원",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/116010000001",
-      "region": "전국",
-      "serviceField": "주거 자립",
-      "supportType": "현금(융자)",
-      "targetGroup": "개인"
+      "region": "전국"
     },
     {
       "id": 6,
@@ -5220,10 +4897,7 @@
       "target": "소득 및 재산 요건을 충족하는 근로, 사업, 종교인 소득이 있는 가구",
       "summary": "소득과 재산이 적은 근로소득자에게 근로장려금을, 자녀가 있을 경우 자녀장려금 지급",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/105100000001",
-      "region": "전국",
-      "serviceField": "생활안정",
-      "supportType": "현금",
-      "targetGroup": "가구"
+      "region": "전국"
     },
     {
       "id": 5,
@@ -5235,10 +4909,7 @@
       "target": "국공립 및 사립유치원에 다니는 3~5세 유아",
       "summary": "유치원에 다니는 3~5세 아동에게 유아학비, 방과후과정비 등 지원",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/000000465790",
-      "region": "전국",
-      "serviceField": "보육 교육",
-      "supportType": "현금",
-      "targetGroup": "개인"
+      "region": "전국"
     },
     {
       "id": 1,
@@ -5251,10 +4922,7 @@
       "summary": "새롭게 성년이 된 청년들의 미래를 응원하기 위해 모바일 송파사랑상품권 20만 원을 지급합니다.",
       "link": "https://www.songpa.go.kr/www/selectBbsNttView.do?key=2781&bbsNo=96&nttNo=19229597",
       "blogContent": "안녕하세요! AI 알리미입니다. 🎉\n\n올해 어엿한 성년이 된 송파구의 청년 여러분! 진심으로 축하드립니다.\n송파구에서는 여러분의 새로운 출발을 힘차게 응원하기 위해 특별한 선물을 준비했는데요, 바로 '성년출발지원금'입니다!\n모바일 송파사랑상품권으로 무려 20만 원이 지급된답니다. 책을 사거나, 자기계발을 하거나, 친구들과 맛있는 식사를 하는 데 유용하게 사용할 수 있겠죠?\n\n신청은 송파구청 홈페이지에서 온라인으로 아주 간단하게 할 수 있으니, 대상자이신 분들은 잊지 말고 꼭! 신청하셔서 혜택을 누리시길 바랍니다. 청년 여러분의 눈부신 미래를 응원합니다! 🚀",
-      "region": "전국",
-      "serviceField": "생활안정",
-      "supportType": "이용권",
-      "targetGroup": "개인"
+      "region": "전국"
     },
     {
       "id": 2,
@@ -5267,10 +4935,7 @@
       "summary": "취업 준비에 어려움을 겪는 미취업 청년에게 어학시험 응시료, 자격증 취득 비용 등 취업 준비 비용을 지원합니다.",
       "link": "https://youth.seoul.go.kr/",
       "blogContent": "안녕하세요! AI 알리미입니다. 💼\n\n취업 준비하느라 몸도 마음도 지치고, 무엇보다 경제적 부담이 크시죠? 송파구 미취업 청년 여러분을 위해 든든한 지원군이 나섰습니다!\n토익, 오픽 같은 어학 시험부터 한국사, 각종 국가기술자격증 시험까지! 응시료 때문에 시험 보기가 망설여졌다면 이제 걱정 마세요. 1인당 최대 10만 원까지 응시료 실비를 지원해 드립니다. (생애 1회)\n\n열심히 노력하는 여러분의 꿈이 현실이 될 수 있도록, 어깨를 조금이나마 가볍게 해드릴게요. 서울청년포털에서 자세한 내용을 확인하시고 꼭 혜택 챙겨가세요! 취업 준비생 여러분 모두 화이팅! 💪",
-      "region": "전국",
-      "serviceField": "고용 창업",
-      "supportType": "현금",
-      "targetGroup": "개인"
+      "region": "전국"
     },
     {
       "id": 3,
@@ -5283,10 +4948,7 @@
       "summary": "첫만남이용권(200만원), 부모급여(월 35~70만원), 아동수당(월 10만원) 등 아동 양육에 필요한 종합 비용을 지원합니다.",
       "link": "https://www.songpa.go.kr/www/contents.do?key=5645&",
       "blogContent": "안녕하세요! AI 알리미입니다. 🍼\n\n새로운 생명의 탄생을 진심으로 축하드립니다! 아이를 키우는 기쁨만큼 챙겨야 할 혜택들도 많으실 텐데요, 우리 동네 송파구와 정부에서 준비한 든든한 출산/육아 혜택들을 싹 정리해 드립니다!\n\n✨ **주요 혜택 3가지**\n1. **첫만남이용권**: 태어난 아기를 위해 200만 원 바우처가 한 번에 지급돼요! 기저귀, 분유 등 꼭 필요한 물품을 구매하세요.\n2. **부모급여**: 0~11개월 아기는 월 70만 원, 12~23개월 아기는 월 35만 원씩 든든하게 입금됩니다.\n3. **아동수당**: 아이가 만 8세가 되기 전까지 매월 10만 원씩 꾸준히 지원됩니다.\n\n이 모든 혜택은 복지로 홈페이지나 가까운 동주민센터에서 한 번에 신청하실 수 있어요. 아이 키우기 좋은 동네 송파구에서 행복한 육아 하시길 응원합니다! 👨‍👩‍👧‍👦",
-      "region": "전국",
-      "serviceField": "임신 출산",
-      "supportType": "현금",
-      "targetGroup": "가구"
+      "region": "전국"
     },
     {
       "id": 4,
@@ -5299,10 +4961,7 @@
       "summary": "음식물 쓰레기를 줄이기 위해 인증받은 소형감량기 구매 시 구매 비용의 40%(최대 21만 원)를 지원해 드립니다.",
       "link": "https://www.songpa.go.kr/www/selectBbsNttView.do?key=2781&bbsNo=96&nttNo=19275381",
       "blogContent": "안녕하세요! AI 알리미입니다. 🌍\n\n매일 나오는 음식물 쓰레기 처리하기 너무 귀찮으시죠? 환경도 보호하고 쓰레기 버리는 수고도 덜 수 있는 '가정용 음식물 소형감량기' 구매를 고민 중이시라면 주목해 주세요!\n\n송파구에서 발표한 **2026년 최신 공고**에 따르면, 올해 인증받은 음식물 소형감량기를 구매한 구민에게 구매 금액의 최대 40%(최대 21만 원)를 보조금으로 든든하게 지원해 드립니다. (단, 싱크대에 직접 갈아 넣는 디스포저 방식은 환경 오염 우려로 지원 대상에서 제외되니 꼭 확인하세요!)\n\n초기 기계값이 부담되셨던 분들께는 정말 희소식이 아닐 수 없네요. 한정된 예산이 100% 소진되면 조기 마감될 수 있으니, 기기를 구매하셨다면 잊지 말고 송파구청 자원순환과에 보조금을 발 빠르게 신청하세요! 똑똑하고 알뜰한 살림꾼 되기, 어렵지 않죠? 😉",
-      "region": "전국",
-      "serviceField": "문화 환경",
-      "supportType": "현금",
-      "targetGroup": "개인"
+      "region": "전국"
     }
   ]
 }
