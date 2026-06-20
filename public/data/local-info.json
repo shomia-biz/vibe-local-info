@@ -783,6 +783,20 @@
   ],
   "seoulCultureEvents": [
     {
+      "name": "[서초문화원] 2026년 서초문화원 [청년문화살롱]",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-06-09",
+      "endDate": "2026-08-14",
+      "location": "서초문화예술회관 및 관내 문화공간",
+      "target": "만 25세~39세 청년",
+      "summary": "문화예술 활동과 인문학 특강을 통해 서초 청년들이 자연스럽게 소통하고 교류하는 프로그램",
+      "link": "http://socc.or.kr/bbs/board.php?bo_table=sub05_01&wr_id=417",
+      "imageUrl": "http://www.socc.or.kr/sub03/sub03_01.php",
+      "id": 1778713506494,
+      "updatedAt": "2026-06-19"
+    },
+    {
       "name": "[국토발전전시관] 정기강연 - 이 땅 위에 우리 이야기",
       "category": "문화",
       "region": "서울",
@@ -1282,6 +1296,46 @@
   ],
   "incheonCultureEvents": [
     {
+      "name": "영종을 노래하다: 시민X 제로벨 프로젝트 참여자 모집",
+      "category": "문화",
+      "region": "인천",
+      "startDate": "2026-06-18",
+      "endDate": "2026-07-01",
+      "location": "인천 중구 청년내일기지 및 영종도 내 음악연습실",
+      "target": "영종에 거주하거나 생활권을 둔 청소년 및 청년, 또는 영종에 관심 있는 청소년 및 청년",
+      "summary": "영종도에서의 일상과 이야기를 바탕으로 직접 가사를 쓰고 멜로디를 만들어 음악과 뮤직비디오를 완성하는 시민 참여형 문화 예술 프로그램입니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13674",
+      "imageUrl": "https://ifac.or.kr/resource/www/images/layout/og_images.png",
+      "id": 1778713506498,
+      "updatedAt": "2026-06-19"
+    },
+    {
+      "name": "[창작집단도르리] <심술장이 : 담다> 참여자 모집",
+      "category": "문화",
+      "region": "인천",
+      "startDate": "2026-07-04",
+      "endDate": "2026-10-17",
+      "location": "문화예술창작공간도르리",
+      "target": "누구나",
+      "summary": "화수동에서 오래 가게를 운영해 온 장인들의 삶의 이야기를 듣고, 일터의 자투리 재료를 활용하여 책 만들기, 청바지 북커버 만들기, 와인병 조명 만들기, 재생 비누 만들기 등을 직접 체험해보는 참여형 무료 문화예술교육 프로그램입니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13675",
+      "id": 1778713506497,
+      "updatedAt": "2026-06-19"
+    },
+    {
+      "name": "인천관련 노래발굴 - 발굴 음원 소개",
+      "category": "문화",
+      "region": "인천",
+      "startDate": "2026-06-16",
+      "endDate": "2026-12-31",
+      "location": "유튜브 음원링크",
+      "target": "누구나",
+      "summary": "창작곡 및 숨은 노래 발굴을 통해 누구나 즐겨 부를 수 있는 인천의 노래를 발굴하고 유튜브 등을 통해 배포합니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13667",
+      "id": 1778713506490,
+      "updatedAt": "2026-06-17"
+    },
+    {
       "name": "내 손으로 만드는 코바늘 뜨개인형",
       "category": "문화",
       "region": "인천",
@@ -1641,6 +1695,34 @@
     }
   ],
   "seoulExhibitionEvents": [
+    {
+      "name": "[2026 신진미술인 지원 프로그램] 신재은 개인전 《GAIA-피식의 서》",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-06-09",
+      "endDate": "2026-07-17",
+      "location": "Hall 1 (서울시 영등포구 양평로22마길 8)",
+      "target": "누구나",
+      "summary": "서울시립미술관에서 개최되는 2026 신진미술인 지원 프로그램 신재은 개인전 전시",
+      "link": "https://sema.seoul.go.kr/kr/whatson/exhibition/detail?exNo=1546824",
+      "imageUrl": "https://sema.seoul.go.kr/resources/images/common/noimg_none.jpg",
+      "id": 1778713506496,
+      "updatedAt": "2026-06-19"
+    },
+    {
+      "name": "K-헤리티지 아트전 [미백 未白]",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-06-09",
+      "endDate": "2026-07-26",
+      "location": "송파구청 2층",
+      "target": "누구나",
+      "summary": "김경미, 김동식 등 여러 작가들이 참여하는 K-헤리티지 아트전 [미백 未白] 전시입니다. 화요일부터 일요일, 10시부터 19시까지 무료로 관람할 수 있습니다.",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=158185&menuNo=200009",
+      "imageUrl": "https://culture.seoul.go.kr/resources/culture/img/sub/culturePotalImg2.jpg",
+      "id": 1778713506495,
+      "updatedAt": "2026-06-19"
+    },
     {
       "name": "스페이스 깨 [세 칸의 방]",
       "category": "전시",
@@ -3386,6 +3468,19 @@
   ],
   "kyeonggiEvents": [
     {
+      "name": "2026 파크콘서트",
+      "category": "행사",
+      "region": "경기",
+      "startDate": "2026-09-01",
+      "endDate": "2026-09-30",
+      "location": "중앙공원 야외공연장",
+      "target": "누구나",
+      "summary": "기간 중 총 3회(1일 1회) 야외 공연 예정",
+      "link": "",
+      "id": 1778713506491,
+      "updatedAt": "2026-06-18"
+    },
+    {
       "name": "제20회 시흥갯골축제",
       "category": "행사",
       "region": "경기",
@@ -3561,6 +3656,19 @@
     }
   ],
   "incheonEvents": [
+    {
+      "name": "[수봉IN기획공연] 에코와 멜로디의 애니멀 심포니",
+      "category": "행사",
+      "region": "인천",
+      "startDate": "2026-07-11",
+      "endDate": "2026-07-11",
+      "location": "인천수봉문화회관 소극장",
+      "target": "누구나",
+      "summary": "음악으로 만나는 환경과 동물들의 이야기!",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13671",
+      "id": 1778713506499,
+      "updatedAt": "2026-06-19"
+    },
     {
       "name": "사랑방 금요일 상상극장 <낭만유랑극단>",
       "category": "행사",
@@ -3958,6 +4066,71 @@
     }
   ],
   "nationalBenefits": [
+    {
+      "name": "신혼부부 및 청년 주택자금 대출이자 지원 사업",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-06-19",
+      "endDate": "상시",
+      "location": "전북특별자치도 정읍시",
+      "target": "신혼부부 및 청년",
+      "summary": "관내 신혼부부 및 청년 대상 주택자금 대출이자를 지원하여 결혼장려 및 저출산 대응",
+      "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000020&wlfareInfoReldBztpCd=02",
+      "id": 1778713506502,
+      "updatedAt": "2026-06-19"
+    },
+    {
+      "name": "운동으로 산후우울에 브레이크를! (출산 후 심신 건강회복 운동비 지원)",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-06-19",
+      "endDate": "상시",
+      "location": "경상남도 함안군",
+      "target": "출산 후 산모",
+      "summary": "출산 후 산모의 신체적·정서적 회복을 통해 산후우울을 예방하고 모자의 건강 증진을 도모하며, 저출산에 따른 인구감소에 대응하기 위한 출산장려 운동비를 지원합니다.",
+      "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006321&wlfareInfoReldBztpCd=02",
+      "id": 1778713506501,
+      "updatedAt": "2026-06-19"
+    },
+    {
+      "name": "전입학생 생활안정 장학금",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-06-19",
+      "endDate": "상시",
+      "location": "전북특별자치도 완주군",
+      "target": "청년",
+      "summary": "완주군으로 전입한 전입학생에게 생활안정 장학금을 지원하여 완주군에 안정적으로 정착하도록 돕고자 함.",
+      "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006322&wlfareInfoReldBztpCd=02",
+      "id": 1778713506500,
+      "updatedAt": "2026-06-19"
+    },
+    {
+      "name": "한강수계 주민지원(특별지원사업)",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-06-19",
+      "endDate": "상시",
+      "location": "한강유역환경청",
+      "target": "상수원관리지역 관할 시ㆍ군ㆍ구(수혜 대상: 해당지역 주민 및 마을)",
+      "summary": "한강 상수원관리지역 지자체를 대상으로 수질 개선, 주민 복지 향상, 지역 발전을 위한 사업을 공모·선정하여 지원합니다.",
+      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/148000000036",
+      "id": 1778713506493,
+      "updatedAt": "2026-06-19"
+    },
+    {
+      "name": "영산강섬진강수계 주민지원(특별지원사업)",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-06-19",
+      "endDate": "상시",
+      "location": "영산강유역환경청",
+      "target": "상수원관리지역 관할 8개 시군(순천시, 광양시, 담양군, 보성군, 화순군, 강진군, 장흥군, 영암군)",
+      "summary": "상수원관리지역 관할 8개 시군에 주민복지증진, 수질개선 등을 도모하기 위해 특별지원사업 공모를 통해 사업비를 지원합니다.",
+      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/148000000034",
+      "id": 1778713506492,
+      "updatedAt": "2026-06-19"
+    },
     {
       "name": "유휴간호사 등 교육 및 취업 연계 서비스 제공",
       "category": "혜택",
