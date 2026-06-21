@@ -2,7 +2,7 @@ name: Fetch Gov24 Data
 
 on:
   schedule:
-    - cron: '0 17 * * *' # 매일 한국시간 오전 2시 (UTC 17시)
+    - cron: '0 19 * * *' # 매일 한국시간 오전 4시 (UTC 19시)
   workflow_dispatch:
 
 permissions:

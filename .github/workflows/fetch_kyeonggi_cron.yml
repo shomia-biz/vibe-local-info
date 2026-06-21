@@ -2,7 +2,7 @@ name: Fetch Kyeonggi Data
 
 on:
   schedule:
-    - cron: '0 19 * * *' # 매일 한국시간 오전 4시 (UTC 19시)
+    - cron: '30 20 * * *' # 매일 한국시간 오전 5시 30분 (UTC 20시 30분)
   workflow_dispatch:
 
 permissions:

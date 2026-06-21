@@ -22,34 +22,34 @@ function loadEnv() {
 // 공식 홈페이지 링크 주소에서 대표 이미지를 긁어오는 헬퍼 함수
 async function scrapeImageFromUrl(url) {
   if (!url || !url.startsWith('http')) return null;
-  
+
   try {
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 5000); // 5초 타임아웃
-    
+
     const response = await fetch(url, {
       signal: controller.signal,
       headers: {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
       }
     });
-    
+
     clearTimeout(timeoutId);
-    
+
     if (!response.ok) return null;
-    
+
     const html = await response.text();
-    
+
     const ogImageRegex = /<meta[^>]*property=["']og:image["'][^>]*content=["']([^"']+)["']/i;
     const ogImageRegexAlt = /<meta[^>]*content=["']([^"']+)["'][^>]*property=["']og:image["']/i;
     let match = html.match(ogImageRegex) || html.match(ogImageRegexAlt);
-    
+
     if (!match) {
       const twitterImageRegex = /<meta[^>]*name=["']twitter:image["'][^>]*content=["']([^"']+)["']/i;
       const twitterImageRegexAlt = /<meta[^>]*content=["']([^"']+)["'][^>]*name=["']twitter:image["']/i;
       match = html.match(twitterImageRegex) || html.match(twitterImageRegexAlt);
     }
-    
+
     if (match && match[1]) {
       let imageUrl = match[1].trim();
       imageUrl = imageUrl.replace(/&amp;/g, '&');
@@ -65,7 +65,7 @@ async function scrapeImageFromUrl(url) {
       }
       return imageUrl;
     }
-    
+
     const imgRegex = /<img[^>]*src=["']([^"']+\.(?:jpg|jpeg|png|webp))["']/gi;
     let imgMatch;
     while ((imgMatch = imgRegex.exec(html)) !== null) {
@@ -134,14 +134,14 @@ function getRowName(row, source) {
 function cleanTitleForComparison(title) {
   if (!title) return '';
   return title
-    .replace(/\[[^\]]+\]/g, '') 
-    .replace(/\([^)]+\)/g, '') 
-    .replace(/(20\d{2}|19\d{2})년?/g, '') 
-    .replace(/제\s*\d+\s*회/g, '') 
-    .replace(/&amp;lt;[^&]+&amp;gt;/g, '') 
-    .replace(/[^\w\sㄱ-ㅎㅏ-ㅣ가-힣]/g, '') 
-    .replace(/\s+/g, '') 
-    .replace(/(축제|예술제|문화제|페스티벌|공연|콘서트|전시회|전시|행사|캠프|아카데미|클래식|시리즈)/g, '') 
+    .replace(/\[[^\]]+\]/g, '')
+    .replace(/\([^)]+\)/g, '')
+    .replace(/(20\d{2}|19\d{2})년?/g, '')
+    .replace(/제\s*\d+\s*회/g, '')
+    .replace(/&amp;lt;[^&]+&amp;gt;/g, '')
+    .replace(/[^\w\sㄱ-ㅎㅏ-ㅣ가-힣]/g, '')
+    .replace(/\s+/g, '')
+    .replace(/(축제|예술제|문화제|페스티벌|공연|콘서트|전시회|전시|행사|캠프|아카데미|클래식|시리즈)/g, '')
     .trim();
 }
 
@@ -282,17 +282,17 @@ function isDatePassed(dateStr) {
 }
 
 const commonExcludeKeywords = [
-  '어업', '해운', '선박', '항만', '선원', '수산', '축산업', '축사', '임업', '농업', '해양사고', '방역', '경마', '경륜', '유기견', '유기묘', '보상', 
-  '동물보호', '해양', '북한이탈주민', '성매매', '국적상실', '국적회복', '국적취득', '소년원', '소년원법', '귀화', '농가', '수의사', '구제역', '송아지', 
-  '브루셀라병', '공동방제단', '공공급식', '농촌맞춤형', '농촌아이돌봄지원', '농번기돌봄지원', '농촌형', '후계농업경영인', '전통발효식품', '과수거점산지', 
-  '과실브랜드', '과실전문', '고품질쌀유통', '미곡종합처리장', '도매유통활성화', '축산관련종사자', '인삼', '농산물', '산지유통', '국내채종', '친환경농산물', 
-  '밭작물', '동물용', '저탄소', '중소식품기업', '가축개량', '농식품', '살처분', '농지연금', '농촌융복합산업', '예방약품', '방역장비', '해외인증', '귀농', 
-  '귀촌', '공영도매시장', 'GAP', '대체초지조성비', '가축전염병', '농기계', '농촌', '경영회생지원', '농가사료', '외식기업', '꿀벌질병', '전략작물', '친환경퇴비', 
-  '경관보전', '이민여성', '산지저온', '화훼류', '습식유통', '과수', '식생활', '유기농업', '축산', '외식업체', '국제식품', '조사료', '농수산', '농기자재', 
-  '농업인', '임대', '농장', 'FA분야', '곤충산업', '축산악취', '스마트팜', '장애', '체육인', '도박문제', '글로벌', '이민예정자', '가정폭력', '한부모가족', '폭력', '피해', 
-  '이주여성', '다문화가족', '북한이탈여성', '디지털성범죄', '한부모', '고립', '은둔', '경력보유여성', '저소득', '다문화', 
-  '산불전문', '국가유공자', '유휴토지', '산림사업', '목재', '임업용', '치유의숲', '산림탄소', '사립휴양시설', '산림복지', '숲사랑지도원', '임업인', '귀산촌인', 
-  '백두대간', '산림소유자', '숲가꾸기', '조림지원', '임도', '임산물', '산사태', '국립수목원', '중소기업', '직업계고', '판로진출지원', '협동화사업', '자금융자', 
+  '어업', '해운', '선박', '항만', '선원', '수산', '축산업', '축사', '임업', '농업', '해양사고', '방역', '경마', '경륜', '유기견', '유기묘', '보상',
+  '동물보호', '해양', '북한이탈주민', '성매매', '국적상실', '국적회복', '국적취득', '소년원', '소년원법', '귀화', '농가', '수의사', '구제역', '송아지',
+  '브루셀라병', '공동방제단', '공공급식', '농촌맞춤형', '농촌아이돌봄지원', '농번기돌봄지원', '농촌형', '후계농업경영인', '전통발효식품', '과수거점산지',
+  '과실브랜드', '과실전문', '고품질쌀유통', '미곡종합처리장', '도매유통활성화', '축산관련종사자', '인삼', '농산물', '산지유통', '국내채종', '친환경농산물',
+  '밭작물', '동물용', '저탄소', '중소식품기업', '가축개량', '농식품', '살처분', '농지연금', '농촌융복합산업', '예방약품', '방역장비', '해외인증', '귀농',
+  '귀촌', '공영도매시장', 'GAP', '대체초지조성비', '가축전염병', '농기계', '농촌', '경영회생지원', '농가사료', '외식기업', '꿀벌질병', '전략작물', '친환경퇴비',
+  '경관보전', '이민여성', '산지저온', '화훼류', '습식유통', '과수', '식생활', '유기농업', '축산', '외식업체', '국제식품', '조사료', '농수산', '농기자재',
+  '농업인', '임대', '농장', 'FA분야', '곤충산업', '축산악취', '스마트팜', '장애', '체육인', '도박문제', '글로벌', '이민예정자', '가정폭력', '한부모가족', '폭력', '피해',
+  '이주여성', '다문화가족', '북한이탈여성', '디지털성범죄', '한부모', '고립', '은둔', '경력보유여성', '저소득', '다문화',
+  '산불전문', '국가유공자', '유휴토지', '산림사업', '목재', '임업용', '치유의숲', '산림탄소', '사립휴양시설', '산림복지', '숲사랑지도원', '임업인', '귀산촌인',
+  '백두대간', '산림소유자', '숲가꾸기', '조림지원', '임도', '임산물', '산사태', '국립수목원', '중소기업', '직업계고', '판로진출지원', '협동화사업', '자금융자',
   '전통시장', '맞춤형', '재창업기업', '벤처', '온누리상품권', 'M&A', '수출컨소시엄', '공공연', '신진연구', '기술보증',
   '산업전', '기술전', '기자재전', '물류', '보안', '테스팅', '의약품', '화학장치', '포장기자재', '솔루션'
 ];
@@ -325,6 +325,7 @@ async function fetchGeminiWithFallback(prompt, apiKey, type = 'fetch') {
     const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${currentModel}:generateContent?key=${apiKey}`;
 
     try {
+      const startTime = Date.now();
       const geminiResponse = await fetch(geminiUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -335,17 +336,19 @@ async function fetchGeminiWithFallback(prompt, apiKey, type = 'fetch') {
         const errText = await geminiResponse.text();
         throw new Error(`HTTP Error ${geminiResponse.status}: ${errText}`);
       }
-      
+
       const geminiResult = await geminiResponse.json();
 
       if (geminiResult?.candidates?.[0]?.content?.parts?.[0]?.text) {
+        const endTime = Date.now();
+        console.log(`   ⏱️ [${currentModel}] 응답 완료: ${((endTime - startTime) / 1000).toFixed(2)}초 소요`);
         return geminiResult;
       }
       throw new Error(geminiResult.error ? geminiResult.error.message : '알 수 없는 응답 구조');
-      
+
     } catch (fetchErr) {
       lastErrDetail = fetchErr.message;
-      
+
       if (lastErrDetail.includes('429') || lastErrDetail.includes('Quota') || lastErrDetail.includes('RESOURCE_EXHAUSTED')) {
         console.log(`   🔄 [${currentModel}] 한도 초과 감지! 다음 모델로 즉시 교체합니다...`);
         modelIndex++;

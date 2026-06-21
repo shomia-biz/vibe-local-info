@@ -2,7 +2,7 @@ name: Fetch Bokjiro Local Data (Cron)
 
 on:
   schedule:
-    - cron: '50 22 * * *' # 한국 시간 매일 아침 7시 50분
+    - cron: '40 21 * * *' # 매일 한국시간 오전 6시 40분 (UTC 21시 40분)
   workflow_dispatch:
 
 jobs:

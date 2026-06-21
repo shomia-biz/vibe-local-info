@@ -2,7 +2,7 @@ name: Fetch Seoul Data
 
 on:
   schedule:
-    - cron: '0 18 * * *' # 매일 한국시간 오전 3시 (UTC 18시)
+    - cron: '0 20 * * *' # 매일 한국시간 오전 5시 (UTC 20시)
   workflow_dispatch:
 
 permissions:
