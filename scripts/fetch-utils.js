@@ -297,6 +297,79 @@ const commonExcludeKeywords = [
   '산업전', '기술전', '기자재전', '물류', '보안', '테스팅', '의약품', '화학장치', '포장기자재', '솔루션'
 ];
 
+const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+async function fetchGeminiWithFallback(prompt, apiKey, type = 'fetch') {
+  const fetchModels = [
+    'gemini-flash-latest',
+    'gemini-2.5-flash',
+    'gemini-2.0-flash',
+    'gemini-flash-lite-latest',
+    'gemini-2.5-flash-lite'
+  ];
+  const blogModels = [
+    'gemini-pro-latest',
+    'gemini-2.5-pro',
+    'gemini-2.5-flash',
+    'gemini-flash-latest',
+    'gemini-2.0-flash'
+  ];
+  const models = type === 'blog' ? blogModels : fetchModels;
+  const backoffDelays = [30000, 60000, 120000];
+  let attempt = 0;
+  let modelIndex = 0;
+  let lastErrDetail = '';
+
+  while (modelIndex < models.length) {
+    const currentModel = models[modelIndex];
+    const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${currentModel}:generateContent?key=${apiKey}`;
+
+    try {
+      const geminiResponse = await fetch(geminiUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
+      });
+
+      if (!geminiResponse.ok) {
+        const errText = await geminiResponse.text();
+        throw new Error(`HTTP Error ${geminiResponse.status}: ${errText}`);
+      }
+      
+      const geminiResult = await geminiResponse.json();
+
+      if (geminiResult?.candidates?.[0]?.content?.parts?.[0]?.text) {
+        return geminiResult;
+      }
+      throw new Error(geminiResult.error ? geminiResult.error.message : '알 수 없는 응답 구조');
+      
+    } catch (fetchErr) {
+      lastErrDetail = fetchErr.message;
+      
+      if (lastErrDetail.includes('429') || lastErrDetail.includes('Quota') || lastErrDetail.includes('RESOURCE_EXHAUSTED')) {
+        console.log(`   🔄 [${currentModel}] 한도 초과 감지! 다음 모델로 즉시 교체합니다...`);
+        modelIndex++;
+        attempt = 0;
+        continue;
+      }
+    }
+
+    if (attempt >= backoffDelays.length) {
+      console.log(`   ⚠️ [${currentModel}] 재시도 초과. 다음 모델로 교체합니다...`);
+      modelIndex++;
+      attempt = 0;
+      continue;
+    }
+
+    const delay = backoffDelays[attempt];
+    console.log(`   ⚠️ [${currentModel}] API 오류. ${delay / 1000}초 후 다시 시도합니다... (원인: ${lastErrDetail})`);
+    await sleep(delay);
+    attempt++;
+  }
+
+  throw new Error(`모든 모델(${models.length}개)의 시도가 실패했습니다. 마지막 오류: ${lastErrDetail}`);
+}
+
 module.exports = {
   loadEnv,
   scrapeImageFromUrl,
@@ -308,5 +381,7 @@ module.exports = {
   isDateOlderThan30Days,
   getRowEndDate,
   isDatePassed,
-  commonExcludeKeywords
+  commonExcludeKeywords,
+  fetchGeminiWithFallback,
+  sleep
 };

@@ -93,7 +93,6 @@ async function generatePost() {
     console.log(`\n📝 블로그 글이 없는 신규 데이터 ${targetItems.length}개를 발견했습니다. 순차적으로 생성을 시작합니다.\n`);
 
     const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
-    const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${GEMINI_API_KEY}`;
 
     // [2단계] 루프를 돌며 각 아이템에 대한 블로그 글 생성
     for (let i = 0; i < targetItems.length; i++) {
@@ -142,57 +141,14 @@ tags: [태그1, 태그2, tags3]
 
 마지막 줄에 FILENAME: YYYY-MM-DD-keyword 형식으로 파일명도 출력해줘. 키워드는 영문으로.`;
 
-      let response;
-      let result = null;
-      const backoffDelays = [30000, 60000, 120000]; // 에러 발생 시 대기 시간 (30초 -> 60초 -> 120초)
-      let attempt = 0;
-      let isSuccess = false;
-
-      // API 요청 지연 재시도 루프
-      while (attempt < backoffDelays.length) {
-        let errDetail = '';
-        try {
-          response = await fetch(geminiUrl, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              contents: [{ parts: [{ text: prompt }] }]
-            })
-          });
-          
-          // HTTP 상태 코드가 200번대가 아닐 경우 (429 한도초과 등) 강제 에러 발생
-          if (!response.ok) {
-            const errText = await response.text();
-            throw new Error(`HTTP ${response.status}: ${errText}`);
-          }
-
-          result = await response.json();
-
-          // 원하는 데이터 구조가 올바르게 들어왔는지 검증
-          if (result?.candidates?.[0]?.content?.parts?.[0]?.text) {
-            isSuccess = true;
-            break; // 성공 시 재시도 루프 즉시 탈출
-          }
-
-          // 성공했지만 API 응답 구조가 예상과 다를 경우
-          errDetail = result.error ? result.error.message : '올바르지 않은 응답 구조';
-        } catch (fetchErr) {
-          errDetail = fetchErr.message;
-        }
-
-        // 실패했을 때만 긴 대기 시간(Backoff) 적용
-        const delay = backoffDelays[attempt];
-        console.warn(`   ⚠️ Gemini API 한도 초과 또는 오류. ${delay/1000}초 후 다시 시도합니다... (원인: ${errDetail})`);
-        await sleep(delay);
-        attempt++;
-      }
-
-      if (!result || !result.candidates || !result.candidates[0]) {
-        console.error(`❌ "${latestItem.name}" 글은 최종적으로 생성하지 못했습니다. 다음 글로 넘어갑니다.\n`);
+      let fullContent = '';
+      try {
+        const result = await utils.fetchGeminiWithFallback(prompt, GEMINI_API_KEY, 'blog');
+        fullContent = result.candidates[0].content.parts[0].text;
+      } catch (err) {
+        console.error(`❌ "${latestItem.name}" 글은 모든 재시도 실패로 최종 생성하지 못했습니다. 다음 글로 넘어갑니다. (원인: ${err.message})\n`);
         continue;
       }
-
-      let fullContent = result.candidates[0].content.parts[0].text;
 
       // [3단계] 파일 저장 및 파일명 추출
       const filenameMatch = fullContent.match(/FILENAME:\s*(.+)/);

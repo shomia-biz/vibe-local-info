@@ -120,7 +120,7 @@ async function fetchIncheonEvents() {
   console.log(`\n🎉 총 ${targetItems.length}개의 신규 데이터를 발견하여 가공을 진행합니다.\n`);
 
   const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
-  const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${GEMINI_API_KEY}`;
+  // geminiUrl is now handled by utils.fetchGeminiWithFallback
   const todayStr = new Date().toISOString().split('T')[0];
 
   for (const target of targetItems) {
@@ -149,57 +149,15 @@ async function fetchIncheonEvents() {
 
       불필요한 마크다운 백틱 문법이나 서론 생략하고 오로지 순수 유효 JSON 텍스트 한 덩어리만 반환해.\n\n데이터 소스: ${JSON.stringify(Object.assign({}, rawItem, { parsedName: itemName }))}`;
 
-      let geminiResponse;
-      let geminiResult = null;
-      const backoffDelays = [30000, 60000, 120000];
-      let attempt = 0;
       let isSuccess = false;
-
-      // API 요청 지연 재시도 루프
-      while (attempt < backoffDelays.length) {
-        let errDetail = '';
-        try {
-          geminiResponse = await fetch(geminiUrl, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
-          });
-
-          // HTTP 상태 코드가 정상 코드가 아닐 경우 에러 처리
-          if (!geminiResponse.ok) {
-            const errText = await geminiResponse.text();
-            throw new Error(`HTTP Error ${geminiResponse.status}: ${errText}`);
-          }
-          geminiResult = await geminiResponse.json();
-
-          // 올바른 응답 구조가 들어왔는지 확인
-          if (geminiResult?.candidates?.[0]?.content?.parts?.[0]?.text) {
-            isSuccess = true;
-            break; // 성공 시 루프 즉시 탈출
-          }
-
-          errDetail = geminiResult.error ? geminiResult.error.message : '알 수 없는 응답 구조';
-        } catch (fetchErr) {
-          errDetail = fetchErr.message;
-        }
-
-
-        // 최대 재시도 횟수를 초과했으면 루프 종료
-        if (attempt === backoffDelays.length) {
-          break;
-        }
-
-        // 실패 시 지정된 백오프 시간만큼 대기 후 재시도
-        const delay = backoffDelays[attempt];
-        console.warn(`   ⚠️ Gemini API 한도 초과 또는 오류. ${delay / 1000}초 후 다시 시도합니다... (원인: ${errDetail})`);
-        await sleep(delay);
-        attempt++;
-      }
-
-      // 최종 실패 처리 (이 부분이 누락되면 아래에서 crash가 발생합니다)
-      if (!isSuccess || !geminiResult) {
-        console.error(`❌ Gemini AI 응답 오류: 3회 재시도 후에도 [${itemName}] 데이터를 가공하지 못했습니다.`);
-        continue; // 다음 아이템(target)으로 안전하게 넘어감
+      let geminiResult = null;
+      
+      try {
+        geminiResult = await utils.fetchGeminiWithFallback(prompt, GEMINI_API_KEY);
+        isSuccess = true;
+      } catch (err) {
+        console.error(`❌ Gemini AI 응답 오류: 모든 재시도 실패 - [${itemName}] 데이터를 가공하지 못했습니다. (원인: ${err.message})`);
+        continue;
       }
 
       // JSON 텍스트 추출 및 정제

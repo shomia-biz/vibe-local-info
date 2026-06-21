@@ -134,7 +134,7 @@ async function fetchData() {
   console.log(`\n🎉 총 ${targetItems.length}개의 복지로 신규 데이터를 발견하여 가공을 진행합니다.\n`);
 
   const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
-  const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${GEMINI_API_KEY}`;
+  // geminiUrl is now handled by utils.fetchGeminiWithFallback
   const todayStr = new Date().toISOString().split('T')[0];
 
   for (const target of targetItems) {
@@ -146,65 +146,29 @@ async function fetchData() {
       console.log(`⏳ [대기 중] API 무료 한도 준수를 위해 4초간 대기...`);
       await sleep(4000);
 
-      const prompt = \`아래 입력된 복지 혜택 데이터 1건을 분석해서 규격화된 시스템용 JSON 데이터로 전환해줘.
+      const prompt = `아래 입력된 복지 혜택 데이터 1건을 분석해서 규격화된 시스템용 JSON 데이터로 전환해줘.
       형식: {name: 혜택명, category: '혜택', region: '전국', startDate: 'YYYY-MM-DD', endDate: 'YYYY-MM-DD', location: 소관부처명, target: 대상층, summary: 혜택 요약설명, link: 링크주소, serviceField: 서비스분야, supportType: 지원유형, targetGroup: 대상}
 
       [필수 규칙 가이드라인]
-      1. 출처 힌트 프로토콜: \${source}
+      1. 출처 힌트 프로토콜: ${source}
       2. category 분류: '혜택'으로 고정해줘.
       3. region 분류: 주로 중앙부처 복지서비스이므로 '전국'으로 해줘. (만약 서울/경기/인천에 한정된 명확한 증거가 있다면 해당 지역으로)
-      4. startDate/endDate: 날짜 포맷은 무조건 'YYYY-MM-DD'로 처리해. 수치가 없으면 시작일은 오늘 날짜(\${todayStr}), 종료일은 '상시'로 기입해.
+      4. startDate/endDate: 날짜 포맷은 무조건 'YYYY-MM-DD'로 처리해. 수치가 없으면 시작일은 오늘 날짜(${todayStr}), 종료일은 '상시'로 기입해.
       5. link: 소스 데이터 내에 URL 주소 필드가 마땅히 없거나 xml 태그면 공백문자("")로 선언해줘.
       6. serviceField: 다음 중 하나로 엄격하게 분류해줘. [생활안정, 보건 의료, 보육 교육, 농림축산어업, 고용 창업, 임신 출산, 보호 돌봄, 행정 안전, 문화 환경, 주거 자립]
       7. supportType: 다음 중 하나로 엄격하게 분류해줘. [현금, 현금(보험), 현금(융자), 현금(장학금), 현금(감면), 현물, 서비스(돌봄), 서비스(일자리), 이용권, 기타, 기타(교육), 기타(상담), 기술지원, 시설이용]
       8. targetGroup: 다음 중 하나로 엄격하게 분류해줘. [개인, 가구, 소상공인, 법인/시설/단체]
 
-      불필요한 마크다운 백틱 문법이나 서론 생략하고 오로지 순수 유효 JSON 텍스트 한 덩어리만 반환해.\n\n데이터 소스: \${JSON.stringify(rawItem)}\`;
+      불필요한 마크다운 백틱 문법이나 서론 생략하고 오로지 순수 유효 JSON 텍스트 한 덩어리만 반환해.\n\n데이터 소스: ${JSON.stringify(rawItem)}`;
 
-      let geminiResponse;
-      let geminiResult = null;
-      const backoffDelays = [30000, 60000, 120000];
-      let attempt = 0;
       let isSuccess = false;
-
-      while (attempt < backoffDelays.length) {
-        let errDetail = '';
-        try {
-          geminiResponse = await fetch(geminiUrl, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
-          });
-
-          if (!geminiResponse.ok) {
-            const errText = await geminiResponse.text();
-            throw new Error(`HTTP Error ${geminiResponse.status}: ${errText}`);
-          }
-
-          geminiResult = await geminiResponse.json();
-
-          if (geminiResult?.candidates?.[0]?.content?.parts?.[0]?.text) {
-            isSuccess = true;
-            break;
-          }
-
-          errDetail = geminiResult.error ? geminiResult.error.message : '알 수 없는 응답 구조';
-        } catch (fetchErr) {
-          errDetail = fetchErr.message;
-        }
-
-        if (attempt === backoffDelays.length) {
-          break;
-        }
-
-        const delay = backoffDelays[attempt];
-        console.warn(`⚠️ Gemini API 한도 초과 또는 오류 (시도 ${attempt + 1}/${backoffDelays.length}). ${delay / 1000}초 후 다시 시도합니다... (원인: ${errDetail})`);
-        await sleep(delay);
-        attempt++;
-      }
-
-      if (!isSuccess || !geminiResult) {
-        console.error(`❌ Gemini AI 응답 오류: 3회 재시도 후에도 [${itemName}] 데이터를 가공하지 못했습니다.`);
+      let geminiResult = null;
+      
+      try {
+        geminiResult = await utils.fetchGeminiWithFallback(prompt, GEMINI_API_KEY);
+        isSuccess = true;
+      } catch (err) {
+        console.error(`❌ Gemini AI 응답 오류: 모든 재시도 실패 - [${itemName}] 데이터를 가공하지 못했습니다. (원인: ${err.message})`);
         continue;
       }
 
