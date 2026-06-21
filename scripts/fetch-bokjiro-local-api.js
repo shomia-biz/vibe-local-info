@@ -15,7 +15,7 @@ async function fetchData() {
     return;
   }
 
-  const MAX_ITEMS = 5;
+  const MAX_ITEMS = 10;
   const dataPath = path.join(process.cwd(), 'public/data/local-info.json');
   let localData;
   try {
@@ -59,7 +59,7 @@ async function fetchData() {
   try {
     const randomPage = Math.floor(Math.random() * 5) + 1;
     // 제공해주신 엔드포인트를 기반으로 추정한 URL입니다. Base URL이 다를 경우 이 부분을 수정해 주세요!
-    const apiUrl = `https://apis.data.go.kr/B554287/LocalGovernmentWelfareInformations/LcgvWelfarelist?serviceKey=${BOKJIRO_API_KEY}&pageNo=${randomPage}&numOfRows=100`;
+    const apiUrl = `https://apis.data.go.kr/B554287/LocalGovernmentWelfareInformations/LcgvWelfarelist?serviceKey=${BOKJIRO_API_KEY}&pageNo=${randomPage}&numOfRows=200`;
     
     const response = await fetch(apiUrl, fetchOptions);
     const text = await response.text();
