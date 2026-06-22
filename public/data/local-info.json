@@ -873,6 +873,23 @@
   ],
   "seoulCultureEvents": [
     {
+      "name": "[서울백제어린이박물관] 유아·어린이 가족 대상 [서울역사생태탐험대2]",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-06-18",
+      "endDate": "2026-07-09",
+      "location": "서울백제어린이박물관 교육실, 전시실",
+      "target": "5세 유아~초등 1학년 어린이와 양육",
+      "summary": "서울백제어린이박물관에서 5세 유아부터 초등 1학년 어린이와 양육자를 대상으로 진행하는 서울역사생태탐험 체험 프로그램입니다.",
+      "link": "https://baekjemuseum.seoul.go.kr/module/index.jsp?boardid=a&code=ED&mmode=content&mpid=SBM0402000000&pid=23329&strsearch=&d_s_que=&cpage=1",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://baekjemuseum.seoul.go.kr/new2/images/hansung_main_03.png",
+      "id": 1778713506539,
+      "updatedAt": "2026-06-22"
+    },
+    {
       "name": "[서초문화원] 2026년 서초문화원 [청년문화살롱]",
       "category": "문화",
       "region": "서울",
@@ -1798,6 +1815,23 @@
     }
   ],
   "seoulExhibitionEvents": [
+    {
+      "name": "도암갤러리 기획전 [겹쳐 보는 순간 A Layered Moment]",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-06-18",
+      "endDate": "2026-07-25",
+      "location": "서울아트센터 도암 3층 도암갤러리",
+      "target": "전체 연령 관람 가능",
+      "summary": "서울아트센터 도암갤러리에서 개최되는 기획전 [겹쳐 보는 순간 A Layered Moment] 전시로, 누구나 무료로 관람할 수 있습니다.",
+      "link": "https://doam.me/Exhibition_Information/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&bmode=view&idx=171490417&t=board",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://cdn.imweb.me/thumbnail/20260604/c6c0c7d0ac23e.png",
+      "id": 1778713506538,
+      "updatedAt": "2026-06-22"
+    },
     {
       "name": "[2026 신진미술인 지원 프로그램] 신재은 개인전 《GAIA-피식의 서》",
       "category": "전시",
