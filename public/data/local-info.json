@@ -4703,6 +4703,45 @@
   ],
   "nationalBenefits": [
     {
+      "name": "청년 일경험 지원",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-06-22",
+      "endDate": "상시",
+      "location": "고용노동부",
+      "target": "15세 이상 34세 이하 미취업 청년",
+      "summary": "실무 중심의 다양한 일경험 프로그램 제공을 통해 청년의 직무탐색 및 직무역량 강화 지원",
+      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200005006",
+      "id": 1778713506537,
+      "updatedAt": "2026-06-22"
+    },
+    {
+      "name": "고용보험 미적용자 출산급여",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-06-22",
+      "endDate": "상시",
+      "location": "고용노동부",
+      "target": "소득활동을 하고 있지만 고용보험 미적용으로 '출산전후휴가급여'를 받지 못하는 출산여성(유산, 사산 포함)",
+      "summary": "고용보험 미적용으로 출산전후휴가급여를 받지 못하는 출산여성에게 출산급여 총 150만원(월 50만원 x 3개월분)을 일괄 지급합니다.",
+      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200000153",
+      "id": 1778713506536,
+      "updatedAt": "2026-06-22"
+    },
+    {
+      "name": "산재근로자 대체인력지원 사업",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-06-22",
+      "endDate": "상시",
+      "location": "고용노동부",
+      "target": "상시근로자 수 50인 미만을 고용하는 사업주",
+      "summary": "산재근로자의 고용안정과 사업주의 경영부담 완화를 위해 대체근로자를 채용한 50인 미만 사업주에게 대체근로자 임금의 50% 범위 내(월 60만 원 이내, 최대 6개월)를 지원합니다.",
+      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200000149",
+      "id": 1778713506535,
+      "updatedAt": "2026-06-22"
+    },
+    {
       "name": "신혼부부 및 청년 주택자금 대출이자 지원 사업",
       "category": "혜택",
       "region": "전국",
