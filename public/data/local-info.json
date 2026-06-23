@@ -3656,6 +3656,47 @@
   ],
   "kyeonggiEvents": [
     {
+      "name": "2025 화성 학생동아리 축제",
+      "category": "행사",
+      "region": "경기",
+      "startDate": "2026-10-24",
+      "endDate": "2026-10-24",
+      "location": "동탄센트럴파크 일원",
+      "target": "초중고 학생동아리",
+      "summary": "초중고 학생동아리 공연+전시 및 체험부스 운영",
+      "link": "http://www.hsscf.kr/",
+      "imageUrl": "http://hsscf.kr/sub01/sub01_01.php",
+      "id": 1778713506547,
+      "updatedAt": "2026-06-23"
+    },
+    {
+      "name": "정조효문화제 및 정조대왕능행차 공동재현",
+      "category": "행사",
+      "region": "경기",
+      "startDate": "2026-10-03",
+      "endDate": "2026-10-04",
+      "location": "정조효공원+융건릉 일원",
+      "target": "",
+      "summary": "현륭원 천원 재현, 을묘년 원행 재현, 현륭원 제향",
+      "link": "http://www.정조효문화제.com/",
+      "imageUrl": "http://www.xn--z92b78uwa84av60dmoa.com/img/link_img.jpg",
+      "id": 1778713506546,
+      "updatedAt": "2026-06-23"
+    },
+    {
+      "name": "2026 파크콘서트",
+      "category": "행사",
+      "region": "경기",
+      "startDate": "2026-09-01",
+      "endDate": "2026-09-30",
+      "location": "중앙공원 야외공연장",
+      "target": "",
+      "summary": "기간 중 공연 3회 예정 / 1일 1회",
+      "link": "",
+      "id": 1778713506545,
+      "updatedAt": "2026-06-23"
+    },
+    {
       "name": "제3회 화성 루나 빛 축제",
       "category": "행사",
       "region": "경기",
