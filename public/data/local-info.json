@@ -3721,6 +3721,47 @@
   ],
   "kyeonggiEvents": [
     {
+      "name": "안성맞춤 남사당바우덕이축제",
+      "category": "행사",
+      "region": "경기",
+      "startDate": "2026-10-02",
+      "endDate": "2026-10-05",
+      "location": "안성맞춤랜드 및 안성천 일원",
+      "target": "누구나",
+      "summary": "추모제, 전야제, 개장식, 개폐막식 등 다양한 프로그램으로 구성된 축제입니다.",
+      "link": "https://www.anseong.go.kr/festival",
+      "imageUrl": "https://www.anseong.go.kr/festival/img/sub/sub01/poster_2025.png",
+      "id": 1778713506566,
+      "updatedAt": "2026-06-24"
+    },
+    {
+      "name": "수원화성문화제",
+      "category": "행사",
+      "region": "경기",
+      "startDate": "2026-10-04",
+      "endDate": "2026-10-11",
+      "location": "수원화성 일원",
+      "target": "모든 연령",
+      "summary": "수원판타지 야조+정조대왕 능행차+시민의 위대한 건축 팔달+수원 가마레이스",
+      "link": "https://shfestival.com",
+      "imageUrl": "https://cdn.imweb.me/upload/S2025062678172e54096e4/0a9d32ec262c4.png",
+      "id": 1778713506565,
+      "updatedAt": "2026-06-24"
+    },
+    {
+      "name": "2026 파크콘서트",
+      "category": "행사",
+      "region": "경기",
+      "startDate": "2026-09-01",
+      "endDate": "2026-09-30",
+      "location": "중앙공원 야외공연장",
+      "target": "누구나",
+      "summary": "기간 중 공연 3회 예정 / 1일 1회",
+      "link": "",
+      "id": 1778713506564,
+      "updatedAt": "2026-06-24"
+    },
+    {
       "name": "2025 화성 학생동아리 축제",
       "category": "행사",
       "region": "경기",
