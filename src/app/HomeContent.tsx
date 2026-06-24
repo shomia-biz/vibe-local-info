@@ -365,6 +365,23 @@ export default function HomeContent() {
       // 기존 로직
       return selectedRegion === '전체' || benefit.region === '전국' || benefit.region === selectedRegion;
     }
+  }).sort((a, b) => {
+    // 1. 마감일(endDate) 기준 오름차순 (가장 임박한 순)
+    // 상시이거나 마감일이 없는 경우는 맨 뒤로
+    const getEndDateValue = (endDate) => {
+      if (!endDate || endDate === '상시') return '9999-12-31';
+      return endDate;
+    };
+    
+    const endA = getEndDateValue(a.endDate);
+    const endB = getEndDateValue(b.endDate);
+
+    if (endA !== endB) {
+      return endA.localeCompare(endB); // 문자열 비교로 날짜 오름차순
+    }
+
+    // 2. 마감일이 같다면 (또는 둘 다 상시라면) ID 기준 내림차순 (최근 등록 순)
+    return Number(b.id) - Number(a.id);
   });
 
   // 페이지네이션 로직 (지원금/혜택)

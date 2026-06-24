@@ -20,6 +20,8 @@ interface ItemData {
   transport?: string;
   region?: string;
   imageUrl?: string;
+  serviceField?: string;
+  supportType?: string;
 }
 
 // 행사 이름/장소에 따라 지역을 판별하는 함수
@@ -156,33 +158,58 @@ export default function DetailClient({ itemData, type }: { itemData: ItemData, t
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <BackButton />
         <article className="bg-white rounded-[32px] shadow-xl border border-slate-100 relative overflow-hidden">
-          <div className="relative h-64 sm:h-96 w-full overflow-hidden">
-            <img 
-              src={itemData.imageUrl || getEventImage(itemData.name)} 
-              alt={itemData.name}
-              className="w-full h-full object-cover"
-            />
-            <div className={`absolute inset-0 transition-opacity duration-500 ${isDarkBg ? 'bg-gradient-to-t from-black/70 via-black/20 to-transparent' : 'bg-white/10'}`}></div>
-            <div className="absolute bottom-8 left-8 right-8">
-              <div className="flex items-center gap-2 mb-3">
-                <span className={`px-4 py-1.5 rounded-full text-xs font-black tracking-wider shadow-lg ${
-                  type.toLowerCase().includes('seoul') ? 'bg-blue-600 text-white' : 
-                  type.toLowerCase().includes('kyeonggi') ? 'bg-emerald-600 text-white' : 
-                  type.toLowerCase().includes('incheon') ? 'bg-amber-600 text-white' : 
-                  type.toLowerCase().includes('national') ? 'bg-rose-600 text-white' : 
-                  isEvent ? 'bg-indigo-600 text-white' : 'bg-[#d97706] text-white'
-                }`}>
-                  {getRegion(itemData)} {itemData.category}
-                </span>
+          <div className="relative bg-slate-900 overflow-hidden">
+            <div 
+              className="absolute inset-0 opacity-20 transition-opacity duration-500" 
+              style={{
+                backgroundImage: `url(${itemData.imageUrl || getEventImage(itemData.name)})`,
+                backgroundPosition: 'center',
+                backgroundSize: 'cover'
+              }}
+            ></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 to-slate-900"></div>
+            
+            <div className="relative z-10 px-8 py-10 sm:py-12 flex flex-col justify-end min-h-[140px]">
+              <div className="flex flex-wrap items-center gap-2 mb-4">
+                {!isEvent ? (
+                  <>
+                    {itemData.serviceField && (
+                      <span className="bg-emerald-500 text-white px-4 py-1.5 rounded-full text-xs font-black tracking-wider shadow-sm">
+                        {itemData.serviceField}
+                      </span>
+                    )}
+                    {itemData.supportType && (
+                      <span className="bg-slate-700 text-white px-4 py-1.5 rounded-full text-xs font-black tracking-wider shadow-sm">
+                        {itemData.supportType}
+                      </span>
+                    )}
+                    {itemData.region && (
+                      <span className="bg-blue-500 text-white px-4 py-1.5 rounded-full text-xs font-black tracking-wider shadow-sm">
+                        {itemData.region}
+                      </span>
+                    )}
+                  </>
+                ) : (
+                  <>
+                    <span className="bg-indigo-500 text-white px-4 py-1.5 rounded-full text-xs font-black tracking-wider shadow-sm">
+                      {itemData.region || getRegion(itemData)}
+                    </span>
+                    {itemData.category && (
+                      <span className="bg-amber-500 text-white px-4 py-1.5 rounded-full text-xs font-black tracking-wider shadow-sm">
+                        {itemData.category}
+                      </span>
+                    )}
+                  </>
+                )}
               </div>
-              <h1 className={`text-3xl sm:text-4xl font-black leading-tight transition-colors duration-500 break-keep ${isDarkBg ? 'text-white drop-shadow-lg' : 'text-slate-900 drop-shadow-sm'}`}>
+              <h1 className="text-2xl sm:text-3xl font-black leading-tight text-white drop-shadow-md break-keep">
                 {itemData.name}
               </h1>
             </div>
           </div>
 
           <div className="p-8 sm:p-12">
-            <div className="border-l-4 border-indigo-500 bg-indigo-50/30 p-6 rounded-r-2xl mb-12">
+            <div className="border-l-4 border-indigo-500 bg-indigo-50/50 p-6 rounded-r-2xl mb-12 shadow-sm">
               <p className="text-indigo-900 text-lg sm:text-xl font-bold leading-relaxed break-keep">
                 "{itemData.summary}"
               </p>
@@ -190,44 +217,60 @@ export default function DetailClient({ itemData, type }: { itemData: ItemData, t
 
             <div className="mb-16">
               <h2 className="text-xl font-black text-slate-800 mb-6 flex items-center gap-2">
-                <span className="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center text-sm">📍</span>
-                기본 정보 안내
+                <span className="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center text-sm">📋</span>
+                핵심 요약 정보
               </h2>
-              <div className="overflow-x-auto">
-                <table className="w-full border-collapse border border-slate-100">
-                  <tbody>
-                    <tr className="bg-slate-50/50">
-                      <th className="py-2.5 px-4 w-24 sm:w-32 text-left text-slate-500 font-bold text-sm sm:text-base align-middle border border-slate-100">📅 일시</th>
-                      <td className="py-2.5 px-4 text-slate-900 font-extrabold text-base sm:text-lg break-keep border border-slate-100">
-                        {itemData.startDate === '상시' 
-                          ? '상시 진행' 
-                          : itemData.startDate === itemData.endDate 
-                            ? formatDateWithDay(itemData.startDate)
-                            : `${formatDateWithDay(itemData.startDate)} ~ ${formatDateWithDay(itemData.endDate)}`}
-                      </td>
-                    </tr>
-                    <tr className="bg-white">
-                      <th className="py-2.5 px-4 w-24 sm:w-32 text-left text-slate-500 font-bold text-sm sm:text-base align-middle border border-slate-100">🏛️ 장소</th>
-                      <td className="py-2.5 px-4 text-slate-900 font-extrabold text-base sm:text-lg break-keep border border-slate-100">{itemData.location}</td>
-                    </tr>
-                    <tr className="bg-slate-50/50">
-                      <th className="py-2.5 px-4 w-24 sm:w-32 text-left text-slate-500 font-bold text-sm sm:text-base align-middle border border-slate-100">👤 대상</th>
-                      <td className="py-2.5 px-4 text-slate-900 font-extrabold text-base sm:text-lg break-keep border border-slate-100">{itemData.target || '누구나 참여 가능'}</td>
-                    </tr>
-                    {isEvent && (
-                      <>
-                        <tr className="bg-white">
-                          <th className="py-2.5 px-4 w-24 sm:w-32 text-left text-slate-500 font-bold text-sm sm:text-base align-middle border border-slate-100">💳 입장료</th>
-                          <td className="py-2.5 px-4 text-slate-900 font-extrabold text-base sm:text-lg break-keep border border-slate-100">{itemData.fee || '정보 확인 필요'}</td>
-                        </tr>
-                        <tr className="bg-slate-50/50">
-                          <th className="py-2.5 px-4 w-24 sm:w-32 text-left text-slate-500 font-bold text-sm sm:text-base align-middle border border-slate-100">🚗 교통편</th>
-                          <td className="py-2.5 px-4 text-slate-900 font-extrabold text-base sm:text-lg break-keep border border-slate-100">{itemData.transport || '공식 홈페이지 참고'}</td>
-                        </tr>
-                      </>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="bg-slate-50/80 rounded-2xl p-5 border border-slate-100 flex items-start gap-4">
+                  <div className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-2xl shrink-0">📅</div>
+                  <div>
+                    <h3 className="text-slate-500 font-bold text-sm mb-1.5">일시</h3>
+                    <p className="text-slate-900 font-extrabold text-[15px] sm:text-base break-keep leading-snug">
+                      {itemData.startDate === '상시' 
+                        ? '상시 진행' 
+                        : itemData.startDate === itemData.endDate 
+                          ? formatDateWithDay(itemData.startDate)
+                          : `${formatDateWithDay(itemData.startDate)} ~ ${formatDateWithDay(itemData.endDate)}`}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-slate-50/80 rounded-2xl p-5 border border-slate-100 flex items-start gap-4">
+                  <div className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-2xl shrink-0">🏛️</div>
+                  <div>
+                    <h3 className="text-slate-500 font-bold text-sm mb-1.5">장소 / 방식</h3>
+                    <p className="text-slate-900 font-extrabold text-[15px] sm:text-base break-keep leading-snug">{itemData.location || '온라인 / 상세내용 참고'}</p>
+                  </div>
+                </div>
+                <div className="bg-slate-50/80 rounded-2xl p-5 border border-slate-100 flex items-start gap-4">
+                  <div className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-2xl shrink-0">👤</div>
+                  <div>
+                    <h3 className="text-slate-500 font-bold text-sm mb-1.5">지원 대상</h3>
+                    <p className="text-slate-900 font-extrabold text-[15px] sm:text-base break-keep leading-snug">{itemData.target || '제한 없음 (누구나 참여 가능)'}</p>
+                  </div>
+                </div>
+
+                {isEvent && (
+                  <>
+                    <div className="bg-slate-50/80 rounded-2xl p-5 border border-slate-100 flex items-start gap-4">
+                      <div className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-2xl shrink-0">💳</div>
+                      <div>
+                        <h3 className="text-slate-500 font-bold text-sm mb-1.5">비용</h3>
+                        <p className="text-slate-900 font-extrabold text-[15px] sm:text-base break-keep leading-snug">{itemData.fee || '무료 또는 공식 홈페이지 참고'}</p>
+                      </div>
+                    </div>
+                    {itemData.transport && (
+                      <div className="bg-slate-50/80 rounded-2xl p-5 border border-slate-100 flex items-start gap-4 sm:col-span-2">
+                        <div className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-2xl shrink-0">🚗</div>
+                        <div>
+                          <h3 className="text-slate-500 font-bold text-sm mb-1.5">교통편</h3>
+                          <p className="text-slate-900 font-extrabold text-[15px] sm:text-base break-keep leading-relaxed">{itemData.transport}</p>
+                        </div>
+                      </div>
                     )}
-                  </tbody>
-                </table>
+                  </>
+                )}
               </div>
             </div>
 
