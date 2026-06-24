@@ -368,7 +368,7 @@ export default function HomeContent() {
   }).sort((a, b) => {
     // 1. 마감일(endDate) 기준 오름차순 (가장 임박한 순)
     // 상시이거나 마감일이 없는 경우는 맨 뒤로
-    const getEndDateValue = (endDate) => {
+    const getEndDateValue = (endDate: string | undefined | null) => {
       if (!endDate || endDate === '상시') return '9999-12-31';
       return endDate;
     };
