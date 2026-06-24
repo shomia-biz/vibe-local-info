@@ -873,6 +873,23 @@
   ],
   "seoulCultureEvents": [
     {
+      "name": "[관악문화재단 × 서울대 문화예술원] 디지털과 만나는 관악마을창작소 시즌3 [새삶스런 예술 전파사]",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-06-19",
+      "endDate": "2026-07-01",
+      "location": "싱글벙글교육센터",
+      "target": "9세 이상부터 성인(시니어)까지",
+      "summary": "[관악문화재단 × 서울대 문화예술원] 디지털과 만나는 관악마을창작소 시즌3 [새삶스런 예술 전파사]",
+      "link": "https://gfac.or.kr/site/main/archive/post/%EB%94%94%EC%A7%80%ED%84%B8%EA%B3%BC-%EB%A7%8C%EB%82%98%EB%8A%94-%EA%B4%80%EC%95%85%EB%A7%88%EC%9D%84%EC%B0%BD%EC%9E%91%EC%86%8C-%EC%8B%9C%EC%A6%8C3-%EC%83%88%EC%82%B6%EC%8A%A4%EB%9F%B0-%EC%98%88%EC%88%A0-%EC%A0%84%ED%8C%8C%EC%82%AC-%EC%B0%B8%EA%B0%80-%EC%8B%A0%EC%B2%AD-71?cp=1&sortDirection=ASC&listType=list&catId=1&catSlug=%EC%9E%AC%EB%8B%A8%EC%86%8C%EC%8B%9D",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://www.gfac.or.kr/design/theme/gfac/image/common/common_img.png",
+      "id": 1778713506562,
+      "updatedAt": "2026-06-24"
+    },
+    {
       "name": "[서울백제어린이박물관] 유아·어린이 가족 대상 [서울역사생태탐험대2]",
       "category": "문화",
       "region": "서울",
@@ -1829,6 +1846,40 @@
     }
   ],
   "seoulExhibitionEvents": [
+    {
+      "name": "홍지희 [급류]",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-06-19",
+      "endDate": "2026-06-28",
+      "location": "주석모음집 1층",
+      "target": "누구나",
+      "summary": "홍지희 작가의 개인전 [급류]가 주석모음집 1층에서 진행됩니다.",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=158255&menuNo=200009",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://culture.seoul.go.kr/resources/culture/img/sub/culturePotalImg2.jpg",
+      "id": 1778713506563,
+      "updatedAt": "2026-06-24"
+    },
+    {
+      "name": "이민지 개인전: 아무 일도 없는 방",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-06-19",
+      "endDate": "2026-07-02",
+      "location": "크리스프 웨지",
+      "target": "누구나",
+      "summary": "이민지 작가의 개인전 '아무 일도 없는 방' 전시입니다.",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=158232&menuNo=200009",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://culture.seoul.go.kr/resources/culture/img/sub/culturePotalImg2.jpg",
+      "id": 1778713506561,
+      "updatedAt": "2026-06-24"
+    },
     {
       "name": "도암갤러리 기획전 [겹쳐 보는 순간 A Layered Moment]",
       "category": "전시",
