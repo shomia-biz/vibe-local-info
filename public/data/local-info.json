@@ -1454,6 +1454,32 @@
   ],
   "incheonCultureEvents": [
     {
+      "name": "지도예찬 - 조선지도 500년, 공간·시간·인간의 이야기",
+      "category": "문화",
+      "region": "인천",
+      "startDate": "2026-06-24",
+      "endDate": "2026-07-13",
+      "location": "학산소극장",
+      "target": "미추홀구민 등 관심 있는 시민 누구나 (12세 이상)",
+      "summary": "국립민속박물관 장상훈 관장을 초청하여 전통 지도를 통해 조선의 공간 인식, 역사, 생활문화를 새롭게 바라보는 미추홀학산문화원의 인문강좌 프로그램입니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13684",
+      "id": 1778713506592,
+      "updatedAt": "2026-06-26"
+    },
+    {
+      "name": "2026년 지역학 콘텐츠 공모전 <제6회 옛 서구마을 상상화 그리기 대회>",
+      "category": "문화",
+      "region": "인천",
+      "startDate": "2026-06-22",
+      "endDate": "2026-07-31",
+      "location": "인천광역시 서구문화원",
+      "target": "인천광역시 서구 거주 또는 재학 중인 초등학생(8~13세)",
+      "summary": "인천 서구의 옛 모습을 상상하여 그린 작품을 접수하는 공모전으로, 8절 도화지에 채색한 그림을 스캔하거나 촬영하여 온라인으로 제출하는 체험형 미술 대회입니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13686",
+      "id": 1778713506591,
+      "updatedAt": "2026-06-26"
+    },
+    {
       "name": "[인천아트플랫폼] 2026 예술교육 아기연극 프로그램 <푹하고 들어갔다가, 푸하고 솟아오르는> 참여자 모집",
       "category": "문화",
       "region": "인천",
@@ -4186,6 +4212,19 @@
     }
   ],
   "incheonEvents": [
+    {
+      "name": "다시, 별주부전 <바다를 부탁해>",
+      "category": "행사",
+      "region": "인천",
+      "startDate": "2026-07-09",
+      "endDate": "2026-07-11",
+      "location": "학산소극장",
+      "target": "누구나 (연계 장터는 미추홀구 주민 대상)",
+      "summary": "학산소극장 상주단체 극단 우주선의 레퍼토리 공연으로, 전래동화 별주부전을 재해석하여 관객의 상상으로 완성하는 신나는 바다 모험 이야기입니다. 연계 프로그램으로 아나바다 장터인 '초록항해장터'도 함께 운영됩니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13683",
+      "id": 1778713506593,
+      "updatedAt": "2026-06-26"
+    },
     {
       "name": "2026 플랫폼 초이스 선정작 <매지컬 피노키오>",
       "category": "행사",
