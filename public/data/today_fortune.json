@@ -1,23 +1,23 @@
 {
-    "date": "2026-06-25",
+    "date": "2026-06-26",
     "cards": [
         {
-            "type": "금전운 상승 카드",
-            "general": "오늘은 뜻밖의 이익이 생기거나 좋은 소식을 들을 수 있는 날입니다. 작은 행운을 놓치지 마세요!",
-            "lucky_item": "가성비 무선 키보드",
-            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=무선키보드"
+            "type": "행운의 달빛 카드",
+            "general": "바쁜 일상 속에서 마침내 마음의 평온을 찾고 지친 영혼이 깊이 위로받는 치유의 시간이 찾아올 거예요. 스스로를 따뜻하게 안아줄 때 당신은 가장 아름답게 빛납니다.",
+            "lucky_item": "라벤더 향 디퓨저",
+            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=라벤더 향 디퓨저"
         },
         {
-            "type": "연애운 폭발 카드",
-            "general": "새로운 인연이나 반가운 연락이 올 수 있습니다. 주변 사람들에게 따뜻한 미소를 지어보세요.",
-            "lucky_item": "향기로운 디퓨저",
-            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=디퓨저"
+            "type": "신비한 별빛 카드",
+            "general": "당신의 매력이 밤하늘의 별빛처럼 반짝여 사람들의 마음을 사로잡고 소중한 인연이 찾아오는 달콤한 연애운이 상승할 거예요. 마음을 열고 다가오는 설렘을 기쁘게 맞이해보세요.",
+            "lucky_item": "은하수 무드등",
+            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=은하수 무드등"
         },
         {
-            "type": "평온한 힐링 카드",
-            "general": "바쁜 일상 속에서 나만을 위한 휴식이 필요한 날입니다. 커피 한 잔의 여유가 큰 힘이 될 것입니다.",
-            "lucky_item": "감성 무드등",
-            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=무드등"
+            "type": "따뜻한 햇살 카드",
+            "general": "눈부신 햇살처럼 당신의 노력들이 눈부신 결실을 맺으며 예상치 못한 금전적 행운과 성공이 가득 흘러들어올 것입니다. 당신의 앞날을 황금빛으로 가득 채울 긍정적인 에너지를 믿어보세요.",
+            "lucky_item": "비타민 C 영양제",
+            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=비타민 C 영양제"
         }
     ]
 }
