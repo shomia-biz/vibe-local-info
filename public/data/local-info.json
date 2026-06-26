@@ -3837,6 +3837,46 @@
   ],
   "kyeonggiEvents": [
     {
+      "name": "용인시민의 날 연계 축제 행사",
+      "category": "행사",
+      "region": "경기",
+      "startDate": "2026-10-03",
+      "endDate": "2026-10-04",
+      "location": "용인미르스타디움",
+      "target": "시민 및 방문객",
+      "summary": "용인시민의 날 기념 조아용 캐릭터 축제 및 다양한 연계행사 진행",
+      "link": "https://www.yongin.go.kr",
+      "imageUrl": "https://www.yongin.go.kr/resources/user/main/images/main/logo_thumbnail.png",
+      "id": 1778713506590,
+      "updatedAt": "2026-06-26"
+    },
+    {
+      "name": "여주오곡나루축제",
+      "category": "행사",
+      "region": "경기",
+      "startDate": "2026-10-23",
+      "endDate": "2026-10-25",
+      "location": "여주 신륵사관광지 일원",
+      "target": "누구나",
+      "summary": "여주쌀 가마솥 비빔밥, 군고구마 기네스, 여주 본두리 낙화놀이, 여주 흔암리 쌍용거 줄다리기 등의 프로그램이 진행되는 축제",
+      "link": "https://www.yjfestival.or.kr/",
+      "id": 1778713506589,
+      "updatedAt": "2026-06-26"
+    },
+    {
+      "name": "2026 파크콘서트",
+      "category": "행사",
+      "region": "경기",
+      "startDate": "2026-09-01",
+      "endDate": "2026-09-30",
+      "location": "중앙공원 야외공연장",
+      "target": "누구나",
+      "summary": "기간 중 공연 3회 예정 / 1일 1회 진행되는 성남시 야외 콘서트",
+      "link": "",
+      "id": 1778713506588,
+      "updatedAt": "2026-06-26"
+    },
+    {
       "name": "안성맞춤 남사당바우덕이축제",
       "category": "행사",
       "region": "경기",
