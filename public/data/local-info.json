@@ -3948,6 +3948,45 @@
   ],
   "kyeonggiEvents": [
     {
+      "name": "식품제조 홍보 및 판매관",
+      "category": "행사",
+      "region": "경기",
+      "startDate": "2026-10-01",
+      "endDate": "2026-10-01",
+      "location": "성남시청",
+      "target": "누구나",
+      "summary": "식품 홍보 및 판매",
+      "link": "",
+      "id": 1778713506604,
+      "updatedAt": "2026-06-28"
+    },
+    {
+      "name": "사회복지페스티벌",
+      "category": "행사",
+      "region": "경기",
+      "startDate": "2026-09-04",
+      "endDate": "2026-09-04",
+      "location": "성남시청",
+      "target": "",
+      "summary": "사회복지의 날 기념식 및 사회복지박람회",
+      "link": "",
+      "id": 1778713506603,
+      "updatedAt": "2026-06-28"
+    },
+    {
+      "name": "2026 파크콘서트",
+      "category": "행사",
+      "region": "경기",
+      "startDate": "2026-09-01",
+      "endDate": "2026-09-30",
+      "location": "중앙공원 야외공연장",
+      "target": "",
+      "summary": "기간 중 공연 3회 예정 / 1일 1회",
+      "link": "",
+      "id": 1778713506602,
+      "updatedAt": "2026-06-28"
+    },
+    {
       "name": "용인시민의 날 연계 축제 행사",
       "category": "행사",
       "region": "경기",
