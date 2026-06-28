@@ -5554,6 +5554,20 @@
   ],
   "nationalBenefits": [
     {
+      "name": "양육비 이행 지원 서비스",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-06-28",
+      "endDate": "상시",
+      "location": "성평등가족부",
+      "target": "19세 미만 미성년 자녀를 양육하고 있는 부 또는 모 및 조부모",
+      "summary": "미성년 자녀의 양육비 청구와 이행확보를 위해 양육비 상담, 법률 지원, 양육비 선지급제도 운영 및 채무 불이행자 제재조치 등을 지원합니다.",
+      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/138300000066",
+      "imageUrl": "http://www.gov.kr/images/etc/og_image_600.png",
+      "id": 1778713506599,
+      "updatedAt": "2026-06-28"
+    },
+    {
       "name": "두루누리 사회보험료 지원",
       "category": "혜택",
       "region": "전국",
