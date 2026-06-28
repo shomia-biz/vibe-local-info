@@ -873,6 +873,23 @@
   ],
   "seoulCultureEvents": [
     {
+      "name": "[서울무형유산교육전시장] 2026년 2차 일반교육(12주) 모집 안내",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-06-05",
+      "endDate": "2026-08-29",
+      "location": "서울무형유산 교육전시장",
+      "target": "홈페이지 참고",
+      "summary": "[서울무형유산교육전시장] 2026년 2차 일반교육(12주) 모집 안내",
+      "link": "https://seoulmaster.co.kr/bbs/board.php?bo_table=bbs1&wr_id=216",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://seoulmaster.co.kr/data/editor/2605/4cd67493f0f809df1582b3ad6818c3dd_1777953144_52.png",
+      "id": 1778713506601,
+      "updatedAt": "2026-06-28"
+    },
+    {
       "name": "[서울시립과학관] 2026 과학관 성인교육 [감정, 그 너머: 신경전달물질로 알아보는 몸과 마음의 관계]",
       "category": "문화",
       "region": "서울",
@@ -2427,6 +2444,23 @@
   ],
   "nationalExhibitionEvents": [],
   "seoulEvents": [
+    {
+      "name": "[미래한강본부] 한강플플 오픈 마이크 x 구석구석 라이브",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-06-06",
+      "endDate": "2026-06-28",
+      "location": "한강플플 1층 리버뷰라운지",
+      "target": "누구나",
+      "summary": "한강플플 리버뷰라운지에서 진행되는 미래한강본부의 오픈 마이크 라이브 콘서트.",
+      "link": "https://hangang.seoul.go.kr/www/eventMng/detail.do?srchType=list&evntSn=427&mid=538&pageNo=1&keyword=&opt4=&opt11=&opt12=&opt13=&opt14=#pstnList",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://hangang.seoul.go.kr/www/file/thumbnail.do?fkey=1c31f2dcb15ded399c00b428dd64ff3b48edc87ca91b54a1a299484eda102946fa95e098bde67cbd33b525dc38dabb86085d18c632e538f886a73da193497a98",
+      "id": 1778713506600,
+      "updatedAt": "2026-06-28"
+    },
     {
       "name": "[세종문화회관] 김관지 on Sync Next 26",
       "category": "행사",
