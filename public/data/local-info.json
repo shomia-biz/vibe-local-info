@@ -873,6 +873,40 @@
   ],
   "seoulCultureEvents": [
     {
+      "name": "[서울공예박물관] 7월 큐레이터와 함께하는 전시해설 | 《더 하이브리드》",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-07-03",
+      "endDate": "2026-07-03",
+      "location": "서울공예박물관 전시1동 3층",
+      "target": "모든 시민",
+      "summary": "서울공예박물관에서 진행되는 《더 하이브리드》 기획전시를 큐레이터의 전문적인 설명과 함께 깊이 있게 이해하고 관람할 수 있는 해설 프로그램입니다.",
+      "link": "https://craftmuseum.seoul.go.kr/progrm/view/487",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://craftmuseum.seoul.go.kr/common/program/filedown?idx=2017",
+      "id": 1778713506616,
+      "updatedAt": "2026-06-29"
+    },
+    {
+      "name": "[한성백제박물관] 2026년 한성백제박물관 독서모임 [북토크]",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-07-03",
+      "endDate": "2026-07-03",
+      "location": "한성백제박물관 교육실",
+      "target": "성인 40명",
+      "summary": "한성백제박물관에서 성인을 대상으로 진행하는 2026년 한성백제박물관 독서모임 [북토크] 프로그램입니다.",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=158437&menuNo=200011",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://culture.seoul.go.kr/resources/culture/img/sub/culturePotalImg2.jpg",
+      "id": 1778713506615,
+      "updatedAt": "2026-06-29"
+    },
+    {
       "name": "[서울무형유산교육전시장] 2026년 2차 일반교육(12주) 모집 안내",
       "category": "문화",
       "region": "서울",
@@ -2444,6 +2478,22 @@
   ],
   "nationalExhibitionEvents": [],
   "seoulEvents": [
+    {
+      "name": "하늘 바람 햇살 이야기",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-07-03",
+      "endDate": "2026-07-03",
+      "location": "씨스퀘어 1층",
+      "target": "전체관람가",
+      "summary": "서울 강남구 씨스퀘어에서 펼쳐지는 국악 공연 '하늘 바람 햇살 이야기'입니다. 전체관람가 및 유료(전석 30,000원)로 진행됩니다.",
+      "link": "https://tickets.interpark.com/goods/26008333",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "id": 1778713506617,
+      "updatedAt": "2026-06-29"
+    },
     {
       "name": "[미래한강본부] 한강플플 오픈 마이크 x 구석구석 라이브",
       "category": "행사",
