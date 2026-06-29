@@ -39,7 +39,7 @@ const getDdayInfo = (endDateStr: string, mounted: boolean) => {
   const now = mounted ? new Date() : new Date('2026-06-24T00:00:00Z');
   const diffTime = end.getTime() - now.getTime();
   const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-  
+
   if (diffDays < 0) return { text: '마감', isDday: false };
   if (diffDays <= 10) return { text: `D-${diffDays}`, isDday: true };
   return { text: endDateStr, isDday: false };
@@ -74,7 +74,7 @@ const data = localData as unknown as LocalData;
 
 export default function HomeContent({ blogPosts = [] }: { blogPosts?: any[] }) {
 
-  
+
   const [localDataState, setLocalDataState] = useState<LocalData>(data);
   const [selectedRegion, setSelectedRegion] = useState('전체');
   const [timeTab, setTimeTab] = useState('thisWeek'); // 'thisWeek', 'past', 'upcoming'
@@ -373,7 +373,7 @@ export default function HomeContent({ blogPosts = [] }: { blogPosts?: any[] }) {
       if (!endDate || endDate === '상시') return '9999-12-31';
       return endDate;
     };
-    
+
     const endA = getEndDateValue(a.endDate);
     const endB = getEndDateValue(b.endDate);
 
@@ -403,7 +403,7 @@ export default function HomeContent({ blogPosts = [] }: { blogPosts?: any[] }) {
       })
       .filter(b => b.score > 0)
       .sort((a, b) => b.score - a.score);
-      
+
     if (scoredBenefits.length > 0) {
       recommendedBenefits = scoredBenefits.slice(0, 3);
     }
@@ -543,252 +543,279 @@ export default function HomeContent({ blogPosts = [] }: { blogPosts?: any[] }) {
         </section>
 
         <div className="space-y-3">
-        {/* 수도권 날씨 정보 위젯 */}
-        <div className="bg-gradient-to-r from-blue-50/50 to-cyan-50/50 border border-blue-100/50 rounded-[32px] p-1 shadow-sm space-y-1">
-          {/* 첫 번째 줄: 오늘 날씨 */}
-          <div className="bg-white/80 backdrop-blur-md rounded-[10px] px-8 py-2 flex flex-col md:grid md:grid-cols-[100px_1fr_1fr_1fr_100px] items-center gap-6 md:gap-0">
-            {/* 왼쪽: 타이틀 */}
-            <div className="flex flex-col items-center md:items-start md:pr-4 md:border-r border-slate-100 w-full">
-              <span className="text-[14px] font-black text-cyan-600 mb-0.5 whitespace-nowrap">오늘 날씨</span>
-              <span className="text-[11px] font-bold text-slate-400">수도권</span>
-            </div>
-
-            {/* 중앙: 도시별 날씨 */}
-            {[
-              { id: 0, city: '서울' },
-              { id: 1, city: '경기' },
-              { id: 2, city: '인천' }
-            ].map((loc, idx) => {
-              const currentW = weatherData?.[loc.id]?.current;
-              const currentA = airQualityData?.[loc.id]?.current;
-              const wInfo = currentW ? getWeatherInfo(currentW.weather_code) : { desc: '로딩중', icon: '⏳' };
-              const dustInfo = currentA ? getDustLevel(currentA.pm10) : { level: '-', color: 'text-slate-400' };
-              const temp = currentW ? Math.round(currentW.temperature_2m) + '°' : '-°';
-
-              return (
-                <div key={loc.city}
-                  onClick={() => setSelectedCityForModal(loc.city)}
-                  className={`flex items-center gap-4 w-full justify-center md:justify-start md:pl-10 cursor-pointer hover:bg-slate-50/50 rounded-xl transition-colors py-1 ${idx !== 2 ? 'md:border-r border-slate-50' : ''}`}>
-                  <span className="text-[15px] font-black text-slate-700 min-w-[30px]">{loc.city}</span>
-                  <div className="flex items-center gap-2">
-                    <span className="text-xl">{wInfo.icon}</span>
-                    <span className="text-[18px] font-black text-slate-900">{temp}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-[12px] font-bold text-slate-500">{wInfo.desc}</span>
-                    <span className="w-px h-2 bg-slate-200"></span>
-                    <span className={`text-[10px] font-black ${dustInfo.color}`}>
-                      미세: {dustInfo.level}
-                    </span>
-                  </div>
-                </div>
-              );
-            })}
-
-            {/* 오른쪽: 기준 시간 */}
-            <div className="md:pl-4 md:border-l border-slate-100 hidden lg:flex justify-end w-full">
-              <span className="text-[12px] font-bold text-slate-300 whitespace-nowrap">
-                {weatherLastUpdated ? `${weatherLastUpdated} 기준` : '업데이트 중...'}
-              </span>
-            </div>
-          </div>
-
-          {/* 두 번째 줄: 주말 예보 (사용자 요청으로 임시 숨김 처리) */}
-          {false && (
-            <div className="bg-white/60 backdrop-blur-md rounded-b-[30px] rounded-t-[10px] px-8 py-2 md:grid md:grid-cols-[100px_1fr_1fr_1fr_100px] items-center gap-6 md:gap-0">
+          {/* 수도권 날씨 정보 위젯 */}
+          <div className="bg-gradient-to-r from-blue-50/50 to-cyan-50/50 border border-blue-100/50 rounded-[32px] p-1 shadow-sm space-y-1">
+            {/* 첫 번째 줄: 오늘 날씨 */}
+            <div className="bg-white/80 backdrop-blur-md rounded-[10px] px-8 py-2 flex flex-col md:grid md:grid-cols-[100px_1fr_1fr_1fr_100px] items-center gap-6 md:gap-0">
+              {/* 왼쪽: 타이틀 */}
               <div className="flex flex-col items-center md:items-start md:pr-4 md:border-r border-slate-100 w-full">
-                <span className="text-[14px] font-black text-rose-500 mb-0.5 whitespace-nowrap">주말 예보</span>
+                <span className="text-[14px] font-black text-cyan-600 mb-0.5 whitespace-nowrap">오늘 날씨</span>
                 <span className="text-[11px] font-bold text-slate-400">수도권</span>
               </div>
 
+              {/* 중앙: 도시별 날씨 */}
               {[
-                { id: 0, region: '서울' },
-                { id: 1, region: '경기' },
-                { id: 2, region: '인천' }
-              ].map((r, idx) => {
-                const daily = weatherData?.[r.id]?.daily;
-                let sat = { temp: '-', icon: '⏳' };
-                let sun = { temp: '-', icon: '⏳' };
-                if (daily && daily.time) {
-                  const satIdx = daily.time.findIndex((t: string) => new Date(t).getDay() === 6);
-                  const sunIdx = daily.time.findIndex((t: string) => new Date(t).getDay() === 0);
-                  if (satIdx !== -1) sat = { temp: Math.round(daily.temperature_2m_max[satIdx]) + '°', icon: getWeatherInfo(daily.weather_code[satIdx]).icon };
-                  if (sunIdx !== -1) sun = { temp: Math.round(daily.temperature_2m_max[sunIdx]) + '°', icon: getWeatherInfo(daily.weather_code[sunIdx]).icon };
-                }
+                { id: 0, city: '서울' },
+                { id: 1, city: '경기' },
+                { id: 2, city: '인천' }
+              ].map((loc, idx) => {
+                const currentW = weatherData?.[loc.id]?.current;
+                const currentA = airQualityData?.[loc.id]?.current;
+                const wInfo = currentW ? getWeatherInfo(currentW.weather_code) : { desc: '로딩중', icon: '⏳' };
+                const dustInfo = currentA ? getDustLevel(currentA.pm10) : { level: '-', color: 'text-slate-400' };
+                const temp = currentW ? Math.round(currentW.temperature_2m) + '°' : '-°';
 
                 return (
-                  <div key={r.region} className={`flex items-center gap-4 w-full justify-center md:justify-start md:pl-10 ${idx !== 2 ? 'md:border-r border-slate-50' : ''}`}>
-                    <span className="text-[15px] font-black text-slate-700 min-w-[30px]">{r.region}</span>
-                    <div className="flex items-center gap-4 bg-slate-50/50 px-3 py-1 rounded-xl border border-slate-100">
-                      <div className="flex items-center gap-1.5">
-                        <span className="text-[11px] font-bold text-blue-500">토</span>
-                        <span className="text-sm">{sat.icon}</span>
-                        <span className="text-[14px] font-extrabold text-slate-700">{sat.temp}</span>
-                      </div>
-                      <div className="w-px h-2.5 bg-slate-200"></div>
-                      <div className="flex items-center gap-1.5">
-                        <span className="text-[11px] font-bold text-rose-500">일</span>
-                        <span className="text-sm">{sun.icon}</span>
-                        <span className="text-[14px] font-extrabold text-slate-700">{sun.temp}</span>
-                      </div>
+                  <div key={loc.city}
+                    onClick={() => setSelectedCityForModal(loc.city)}
+                    className={`flex items-center gap-4 w-full justify-center md:justify-start md:pl-10 cursor-pointer hover:bg-slate-50/50 rounded-xl transition-colors py-1 ${idx !== 2 ? 'md:border-r border-slate-50' : ''}`}>
+                    <span className="text-[15px] font-black text-slate-700 min-w-[30px]">{loc.city}</span>
+                    <div className="flex items-center gap-2">
+                      <span className="text-xl">{wInfo.icon}</span>
+                      <span className="text-[18px] font-black text-slate-900">{temp}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-[12px] font-bold text-slate-500">{wInfo.desc}</span>
+                      <span className="w-px h-2 bg-slate-200"></span>
+                      <span className={`text-[10px] font-black ${dustInfo.color}`}>
+                        미세: {dustInfo.level}
+                      </span>
                     </div>
                   </div>
                 );
               })}
 
+              {/* 오른쪽: 기준 시간 */}
               <div className="md:pl-4 md:border-l border-slate-100 hidden lg:flex justify-end w-full">
-                <span className="text-[12px] font-bold text-slate-300 whitespace-nowrap italic">
-                  야외활동 추천 🌳
+                <span className="text-[12px] font-bold text-slate-300 whitespace-nowrap">
+                  {weatherLastUpdated ? `${weatherLastUpdated} 기준` : '업데이트 중...'}
                 </span>
               </div>
             </div>
-          )}
-        </div>
 
-        {/* 1분 자가진단 툴 및 AI 블로그 */}
-        <div className="flex flex-col lg:flex-row gap-6 mb-8 mt-6">
-          {/* 1분 자가진단 툴 */}
-          <section className="w-full lg:w-1/2 bg-gradient-to-r from-teal-50 to-emerald-50 border border-teal-100 rounded-[32px] p-6 sm:p-8 shadow-sm flex flex-col justify-center">
-            <div className="text-center mb-6">
-              <h2 className="text-2xl font-black text-teal-800 mb-2">1분 만에 끝나는 내 지원금 찾기 🔍</h2>
-              <p className="text-teal-600 font-medium text-sm sm:text-base">나에게 딱 맞는 혜택을 빠르고 간편하게 찾아보세요!</p>
-            </div>
+            {/* 두 번째 줄: 주말 예보 (사용자 요청으로 임시 숨김 처리) */}
+            {false && (
+              <div className="bg-white/60 backdrop-blur-md rounded-b-[30px] rounded-t-[10px] px-8 py-2 md:grid md:grid-cols-[100px_1fr_1fr_1fr_100px] items-center gap-6 md:gap-0">
+                <div className="flex flex-col items-center md:items-start md:pr-4 md:border-r border-slate-100 w-full">
+                  <span className="text-[14px] font-black text-rose-500 mb-0.5 whitespace-nowrap">주말 예보</span>
+                  <span className="text-[11px] font-bold text-slate-400">수도권</span>
+                </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-lg mx-auto w-full">
-              {/* 서비스 분야 선택 */}
-              <div>
-                <label className="block text-xs font-bold text-teal-700 mb-1 pl-1">서비스 분야</label>
-                <select
-                  value={diagnosisServiceField}
-                  onChange={(e) => setDiagnosisServiceField(e.target.value)}
-                  className="w-full px-3 py-2.5 text-sm rounded-xl border-0 ring-1 ring-teal-200 focus:ring-2 focus:ring-teal-500 bg-white text-slate-700 font-bold shadow-sm outline-none cursor-pointer"
-                >
-                  <option value="전체">서비스 분야 (전체)</option>
-                  <option value="생활안정">생활안정</option>
-                  <option value="보건 의료">보건 의료</option>
-                  <option value="보육 교육">보육 교육</option>
-                  <option value="농림축산어업">농림축산어업</option>
-                  <option value="고용 창업">고용 창업</option>
-                  <option value="임신 출산">임신 출산</option>
-                  <option value="보호 돌봄">보호 돌봄</option>
-                  <option value="행정 안전">행정 안전</option>
-                  <option value="문화 환경">문화 환경</option>
-                  <option value="주거 자립">주거 자립</option>
-                </select>
+                {[
+                  { id: 0, region: '서울' },
+                  { id: 1, region: '경기' },
+                  { id: 2, region: '인천' }
+                ].map((r, idx) => {
+                  const daily = weatherData?.[r.id]?.daily;
+                  let sat = { temp: '-', icon: '⏳' };
+                  let sun = { temp: '-', icon: '⏳' };
+                  if (daily && daily.time) {
+                    const satIdx = daily.time.findIndex((t: string) => new Date(t).getDay() === 6);
+                    const sunIdx = daily.time.findIndex((t: string) => new Date(t).getDay() === 0);
+                    if (satIdx !== -1) sat = { temp: Math.round(daily.temperature_2m_max[satIdx]) + '°', icon: getWeatherInfo(daily.weather_code[satIdx]).icon };
+                    if (sunIdx !== -1) sun = { temp: Math.round(daily.temperature_2m_max[sunIdx]) + '°', icon: getWeatherInfo(daily.weather_code[sunIdx]).icon };
+                  }
+
+                  return (
+                    <div key={r.region} className={`flex items-center gap-4 w-full justify-center md:justify-start md:pl-10 ${idx !== 2 ? 'md:border-r border-slate-50' : ''}`}>
+                      <span className="text-[15px] font-black text-slate-700 min-w-[30px]">{r.region}</span>
+                      <div className="flex items-center gap-4 bg-slate-50/50 px-3 py-1 rounded-xl border border-slate-100">
+                        <div className="flex items-center gap-1.5">
+                          <span className="text-[11px] font-bold text-blue-500">토</span>
+                          <span className="text-sm">{sat.icon}</span>
+                          <span className="text-[14px] font-extrabold text-slate-700">{sat.temp}</span>
+                        </div>
+                        <div className="w-px h-2.5 bg-slate-200"></div>
+                        <div className="flex items-center gap-1.5">
+                          <span className="text-[11px] font-bold text-rose-500">일</span>
+                          <span className="text-sm">{sun.icon}</span>
+                          <span className="text-[14px] font-extrabold text-slate-700">{sun.temp}</span>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+
+                <div className="md:pl-4 md:border-l border-slate-100 hidden lg:flex justify-end w-full">
+                  <span className="text-[12px] font-bold text-slate-300 whitespace-nowrap italic">
+                    야외활동 추천 🌳
+                  </span>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* 1분 자가진단 툴 및 AI 블로그 */}
+          <div className="flex flex-col lg:flex-row gap-6 mb-8 mt-6">
+            {/* 1분 자가진단 툴 */}
+            <section className="w-full lg:w-1/2 bg-gradient-to-r from-teal-50 to-emerald-50 border border-teal-100 rounded-[32px] p-6 sm:p-8 shadow-sm flex flex-col justify-center">
+              <div className="text-center mb-6">
+                <h2 className="text-2xl font-black text-teal-800 mb-2">1분 만에 끝나는 내 지원금 찾기 🔍</h2>
+                <p className="text-teal-600 font-medium text-sm sm:text-base">나에게 딱 맞는 혜택을 빠르고 간편하게 찾아보세요!</p>
               </div>
 
-              {/* 지원 유형 선택 */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-lg mx-auto w-full">
+                {/* 서비스 분야 선택 */}
+                <div>
+                  <label className="block text-xs font-bold text-teal-700 mb-1 pl-1">서비스 분야</label>
+                  <select
+                    value={diagnosisServiceField}
+                    onChange={(e) => setDiagnosisServiceField(e.target.value)}
+                    className="w-full px-3 py-2.5 text-sm rounded-xl border-0 ring-1 ring-teal-200 focus:ring-2 focus:ring-teal-500 bg-white text-slate-700 font-bold shadow-sm outline-none cursor-pointer"
+                  >
+                    <option value="전체">서비스 분야 (전체)</option>
+                    <option value="생활안정">생활안정</option>
+                    <option value="보건 의료">보건 의료</option>
+                    <option value="보육 교육">보육 교육</option>
+                    <option value="농림축산어업">농림축산어업</option>
+                    <option value="고용 창업">고용 창업</option>
+                    <option value="임신 출산">임신 출산</option>
+                    <option value="보호 돌봄">보호 돌봄</option>
+                    <option value="행정 안전">행정 안전</option>
+                    <option value="문화 환경">문화 환경</option>
+                    <option value="주거 자립">주거 자립</option>
+                  </select>
+                </div>
+
+                {/* 지원 유형 선택 */}
+                <div>
+                  <label className="block text-xs font-bold text-teal-700 mb-1 pl-1">지원 유형</label>
+                  <select
+                    value={diagnosisSupportType}
+                    onChange={(e) => setDiagnosisSupportType(e.target.value)}
+                    className="w-full px-3 py-2.5 text-sm rounded-xl border-0 ring-1 ring-teal-200 focus:ring-2 focus:ring-teal-500 bg-white text-slate-700 font-bold shadow-sm outline-none cursor-pointer"
+                  >
+                    <option value="전체">지원 유형 (전체)</option>
+                    <option value="현금">현금</option>
+                    <option value="현금(보험)">현금(보험)</option>
+                    <option value="현금(융자)">현금(융자)</option>
+                    <option value="현금(장학금)">현금(장학금)</option>
+                    <option value="현금(감면)">현금(감면)</option>
+                    <option value="현물">현물</option>
+                    <option value="서비스(돌봄)">서비스(돌봄)</option>
+                    <option value="서비스(일자리)">서비스(일자리)</option>
+                    <option value="이용권">이용권</option>
+                    <option value="기술지원">기술지원</option>
+                    <option value="시설이용">시설이용</option>
+                    <option value="기타">기타</option>
+                    <option value="기타(교육)">기타(교육)</option>
+                    <option value="기타(상담)">기타(상담)</option>
+                  </select>
+                </div>
+
+                {/* 대상 선택 */}
+                <div>
+                  <label className="block text-xs font-bold text-teal-700 mb-1 pl-1">해당 대상</label>
+                  <select
+                    value={diagnosisTargetGroup}
+                    onChange={(e) => setDiagnosisTargetGroup(e.target.value)}
+                    className="w-full px-3 py-2.5 text-sm rounded-xl border-0 ring-1 ring-teal-200 focus:ring-2 focus:ring-teal-500 bg-white text-slate-700 font-bold shadow-sm outline-none cursor-pointer"
+                  >
+                    <option value="전체">대상 누구나 (전체)</option>
+                    <option value="개인">개인</option>
+                    <option value="가구">가구</option>
+                    <option value="소상공인">소상공인</option>
+                    <option value="법인/시설/단체">법인/시설/단체</option>
+                  </select>
+                </div>
+
+                {/* 버튼 */}
+                <div className="flex items-end">
+                  <button
+                    onClick={() => {
+                      setIsDiagnosisActive(true);
+                      setCurrentBenefitPage(1);
+                      document.getElementById('benefits')?.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                    className="w-full px-4 py-2.5 h-[42px] text-sm bg-teal-500 hover:bg-teal-600 text-white font-black rounded-xl shadow-lg shadow-teal-200 transition-all transform hover:scale-105 whitespace-nowrap"
+                  >
+                    맞춤 혜택 찾기
+                  </button>
+                </div>
+              </div>
+            </section>
+
+            {/* AI 블로그 */}
+            <section className="w-full lg:w-1/2 bg-white border border-slate-200 rounded-[32px] p-5 shadow-sm flex flex-col min-h-[220px]">
               <div>
-                <label className="block text-xs font-bold text-teal-700 mb-1 pl-1">지원 유형</label>
-                <select
-                  value={diagnosisSupportType}
-                  onChange={(e) => setDiagnosisSupportType(e.target.value)}
-                  className="w-full px-3 py-2.5 text-sm rounded-xl border-0 ring-1 ring-teal-200 focus:ring-2 focus:ring-teal-500 bg-white text-slate-700 font-bold shadow-sm outline-none cursor-pointer"
-                >
-                  <option value="전체">지원 유형 (전체)</option>
-                  <option value="현금">현금</option>
-                  <option value="현금(보험)">현금(보험)</option>
-                  <option value="현금(융자)">현금(융자)</option>
-                  <option value="현금(장학금)">현금(장학금)</option>
-                  <option value="현금(감면)">현금(감면)</option>
-                  <option value="현물">현물</option>
-                  <option value="서비스(돌봄)">서비스(돌봄)</option>
-                  <option value="서비스(일자리)">서비스(일자리)</option>
-                  <option value="이용권">이용권</option>
-                  <option value="기술지원">기술지원</option>
-                  <option value="시설이용">시설이용</option>
-                  <option value="기타">기타</option>
-                  <option value="기타(교육)">기타(교육)</option>
-                  <option value="기타(상담)">기타(상담)</option>
-                </select>
+                <h2 className="text-xl font-black text-teal-800 mb-2">
+                  몰라서 못 받은 혜택? AI가 찾아낸 우리 동네 꿀팁 🤖
+                </h2>
+                <div className="flex flex-col gap-1.5">
+                  {blogPosts
+                    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+                    .slice((currentBlogPage - 1) * 3, currentBlogPage * 3)
+                    .map((post) => (
+                      <Link href={`/blog/${post.slug}`} key={post.slug} className="block group">
+                        <div className="bg-white rounded-xl shadow-sm border border-slate-100 px-3 pt-1.5 pb-1 hover:border-cyan-200 hover:shadow-md transition-all duration-300 flex flex-col relative">
+                          <h4 className="font-extrabold text-[13px] text-slate-900 group-hover:text-cyan-600 transition-colors mb-1 line-clamp-1 relative z-10">
+                            {post.title}
+                          </h4>
+                          <div className="flex justify-between items-center relative z-10 text-[10px] text-slate-400">
+                            <span className="bg-emerald-50 text-emerald-600 font-bold px-1.5 py-[1px] rounded-full flex-shrink-0">
+                              {post.category || '블로그'}
+                            </span>
+                            <span className="truncate mx-2 flex-grow text-center">
+                              {(post.tags && post.tags.find((t: string) => ['서울', '경기', '인천', '송파', '송파구', '전국', '하남', '수원', '용산', '성북', '영등포'].some(region => t.includes(region)))) || '로컬'} 뉴스
+                            </span>
+                            <span className="flex-shrink-0">{post.date}</span>
+                          </div>
+                        </div>
+                      </Link>
+                    ))}
+                </div>
               </div>
 
-              {/* 대상 선택 */}
-              <div>
-                <label className="block text-xs font-bold text-teal-700 mb-1 pl-1">해당 대상</label>
-                <select
-                  value={diagnosisTargetGroup}
-                  onChange={(e) => setDiagnosisTargetGroup(e.target.value)}
-                  className="w-full px-3 py-2.5 text-sm rounded-xl border-0 ring-1 ring-teal-200 focus:ring-2 focus:ring-teal-500 bg-white text-slate-700 font-bold shadow-sm outline-none cursor-pointer"
-                >
-                  <option value="전체">대상 누구나 (전체)</option>
-                  <option value="개인">개인</option>
-                  <option value="가구">가구</option>
-                  <option value="소상공인">소상공인</option>
-                  <option value="법인/시설/단체">법인/시설/단체</option>
-                </select>
-              </div>
-
-              {/* 버튼 */}
-              <div className="flex items-end">
+              {/* 블로그 페이징 */}
+              <div className="flex justify-center items-center gap-1 sm:gap-2 mt-2 pt-2">
                 <button
-                  onClick={() => {
-                    setIsDiagnosisActive(true);
-                    setCurrentBenefitPage(1);
-                    document.getElementById('benefits')?.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                  className="w-full px-4 py-2.5 h-[42px] text-sm bg-teal-500 hover:bg-teal-600 text-white font-black rounded-xl shadow-lg shadow-teal-200 transition-all transform hover:scale-105 whitespace-nowrap"
+                  onClick={() => setCurrentBlogPage(prev => Math.max(1, prev - 1))}
+                  disabled={currentBlogPage === 1}
+                  className="px-3 py-1.5 rounded-full border border-slate-100 text-[12px] font-bold text-slate-400 hover:text-slate-600 hover:bg-slate-50 disabled:opacity-30 flex items-center gap-1"
                 >
-                  맞춤 혜택 찾기
+                  <span>&larr;</span> 이전
+                </button>
+
+                {(() => {
+                  const totalPages = Math.ceil(blogPosts.length / 3) || 1;
+                  const pages = [];
+                  if (totalPages <= 5) {
+                    for (let i = 1; i <= totalPages; i++) pages.push(i);
+                  } else {
+                    if (currentBlogPage <= 3) {
+                      pages.push(1, 2, 3, 4, '...', totalPages);
+                    } else if (currentBlogPage >= totalPages - 2) {
+                      pages.push(1, '...', totalPages - 3, totalPages - 2, totalPages - 1, totalPages);
+                    } else {
+                      pages.push(1, '...', currentBlogPage - 1, currentBlogPage, currentBlogPage + 1, '...', totalPages);
+                    }
+                  }
+
+                  return pages.map((p, idx) => (
+                    p === '...' ? (
+                      <span key={`dots-${idx}`} className="text-slate-300 text-[12px] px-0.5">...</span>
+                    ) : (
+                      <button
+                        key={`page-${p}`}
+                        onClick={() => setCurrentBlogPage(p as number)}
+                        className={`w-7 h-7 flex items-center justify-center rounded-full text-[12px] font-bold transition-colors ${currentBlogPage === p ? 'bg-[#00D0C0] text-white border-transparent' : 'bg-white border border-slate-100 text-slate-500 hover:bg-slate-50'}`}
+                      >
+                        {p}
+                      </button>
+                    )
+                  ));
+                })()}
+
+                <button
+                  onClick={() => setCurrentBlogPage(prev => Math.min(Math.ceil(blogPosts.length / 3), prev + 1))}
+                  disabled={currentBlogPage >= Math.ceil(blogPosts.length / 3)}
+                  className="px-3 py-1.5 rounded-full border border-slate-100 text-[12px] font-bold text-slate-600 hover:bg-slate-50 disabled:opacity-30 flex items-center gap-1"
+                >
+                  다음 <span>&rarr;</span>
                 </button>
               </div>
-            </div>
-          </section>
-
-          {/* AI 블로그 */}
-          <section className="w-full lg:w-1/2 bg-white border border-slate-200 rounded-[32px] p-6 shadow-sm flex flex-col justify-between min-h-[220px]">
-            <div>
-              <h2 className="text-[17px] font-black text-slate-800 mb-3 leading-snug">
-                몰라서 못 받은 혜택? AI가 찾아낸 우리 동네 꿀팁 🤖
-              </h2>
-              <div className="flex flex-col gap-2">
-                {blogPosts
-                  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-                  .slice((currentBlogPage - 1) * 3, currentBlogPage * 3)
-                  .map((post) => (
-                    <Link href={`/blog/${post.slug}`} key={post.slug} className="block group">
-                      <div className="p-2.5 rounded-2xl bg-slate-50 hover:bg-slate-100 transition-colors border border-slate-100 group-hover:border-slate-200">
-                        <div className="flex items-center gap-2 mb-1">
-                          <span className="text-base">{post.emoji || '📰'}</span>
-                          <span className="text-[10px] font-bold text-slate-400 bg-white px-2 py-0.5 rounded-full border border-slate-200">
-                            {post.date}
-                          </span>
-                        </div>
-                        <h3 className="font-bold text-slate-700 text-[13px] line-clamp-1 group-hover:text-blue-600 transition-colors">
-                          {post.title}
-                        </h3>
-                      </div>
-                    </Link>
-                  ))}
-              </div>
-            </div>
-            
-            {/* 블로그 페이징 */}
-            <div className="flex justify-center items-center gap-4 mt-3 pt-3 border-t border-slate-100">
-              <button
-                onClick={() => setCurrentBlogPage(prev => Math.max(1, prev - 1))}
-                disabled={currentBlogPage === 1}
-                className="p-1 rounded-full text-slate-400 hover:text-slate-600 hover:bg-slate-100 disabled:opacity-30 disabled:hover:bg-transparent"
-              >
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-              <span className="text-[11px] font-bold text-slate-500">
-                {currentBlogPage} / {Math.ceil(blogPosts.length / 3) || 1}
-              </span>
-              <button
-                onClick={() => setCurrentBlogPage(prev => Math.min(Math.ceil(blogPosts.length / 3), prev + 1))}
-                disabled={currentBlogPage >= Math.ceil(blogPosts.length / 3)}
-                className="p-1 rounded-full text-slate-400 hover:text-slate-600 hover:bg-slate-100 disabled:opacity-30 disabled:hover:bg-transparent"
-              >
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
-          </section>
-        </div>
+            </section>
+          </div>
         </div>
 
         {/* 지원금/혜택 정보 */}
@@ -935,7 +962,7 @@ export default function HomeContent({ blogPosts = [] }: { blogPosts?: any[] }) {
               >
                 &larr; 이전
               </button>
-              
+
               <div className="flex items-center gap-1.5">
                 {Array.from({ length: totalBenefitPages }, (_, i) => i + 1).map(pageNum => {
                   if (
@@ -952,11 +979,10 @@ export default function HomeContent({ blogPosts = [] }: { blogPosts?: any[] }) {
                           setCurrentBenefitPage(pageNum);
                           setTimeout(() => document.getElementById('benefits')?.scrollIntoView({ behavior: 'smooth' }), 50);
                         }}
-                        className={`w-9 h-9 flex items-center justify-center rounded-full font-bold text-sm transition-all ${
-                          currentBenefitPage === pageNum
-                            ? "bg-gradient-to-r from-teal-400 to-cyan-500 text-white shadow-md shadow-cyan-200/50 border-none"
-                            : "border border-slate-200 bg-white text-slate-500 hover:border-cyan-300 hover:text-cyan-500"
-                        }`}
+                        className={`w-9 h-9 flex items-center justify-center rounded-full font-bold text-sm transition-all ${currentBenefitPage === pageNum
+                          ? "bg-gradient-to-r from-teal-400 to-cyan-500 text-white shadow-md shadow-cyan-200/50 border-none"
+                          : "border border-slate-200 bg-white text-slate-500 hover:border-cyan-300 hover:text-cyan-500"
+                          }`}
                       >
                         {pageNum}
                       </button>
@@ -1085,7 +1111,7 @@ export default function HomeContent({ blogPosts = [] }: { blogPosts?: any[] }) {
             {currentEvents.map((event, index) => (
               <Link
                 key={`${event.id}-${event.name}-${index}`}
-                
+
                 href={`/detail/${(event as any).type}/${event.id}`}
                 className="group bg-white rounded-2xl border border-slate-100 hover:border-cyan-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col sm:flex-row overflow-hidden h-full"
               >
@@ -1159,7 +1185,7 @@ export default function HomeContent({ blogPosts = [] }: { blogPosts?: any[] }) {
                   &larr; 이전
                 </span>
               )}
-              
+
               <div className="flex items-center gap-1.5">
                 {Array.from({ length: totalEventPages }, (_, i) => i + 1).map(pageNum => {
                   if (
@@ -1172,11 +1198,10 @@ export default function HomeContent({ blogPosts = [] }: { blogPosts?: any[] }) {
                         key={pageNum}
                         type="button"
                         onClick={() => { setCurrentPage(pageNum); document.getElementById("events")?.scrollIntoView({ behavior: "smooth" }); }}
-                        className={`w-9 h-9 flex items-center justify-center rounded-full font-bold text-sm transition-all ${
-                          currentPage === pageNum
-                            ? "bg-gradient-to-r from-teal-400 to-cyan-500 text-white shadow-md shadow-cyan-200/50 border-none"
-                            : "border border-slate-200 bg-white text-slate-500 hover:border-cyan-300 hover:text-cyan-500"
-                        }`}
+                        className={`w-9 h-9 flex items-center justify-center rounded-full font-bold text-sm transition-all ${currentPage === pageNum
+                          ? "bg-gradient-to-r from-teal-400 to-cyan-500 text-white shadow-md shadow-cyan-200/50 border-none"
+                          : "border border-slate-200 bg-white text-slate-500 hover:border-cyan-300 hover:text-cyan-500"
+                          }`}
                       >
                         {pageNum}
                       </button>
@@ -1206,8 +1231,8 @@ export default function HomeContent({ blogPosts = [] }: { blogPosts?: any[] }) {
           )}
         </section>
 
-        
-{/* Promo Banner */}
+
+        {/* Promo Banner */}
         <section className="bg-gradient-to-br from-cyan-500 to-blue-600 rounded-[24px] p-6 sm:p-8 text-white overflow-hidden relative shadow-xl shadow-cyan-100/50">
           <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-64 h-64 bg-white/10 rounded-full blur-2xl"></div>
           <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
@@ -1219,7 +1244,7 @@ export default function HomeContent({ blogPosts = [] }: { blogPosts?: any[] }) {
                 모아팁스 카카오 채널을 추가하고 스마트한 생활을 시작하세요.
               </p>
             </div>
-            <button 
+            <button
               onClick={() => window.open('http://pf.kakao.com/_CrWxjX', '_blank')}
               className="bg-white text-cyan-600 px-6 py-3 rounded-xl font-black text-base hover:scale-105 transition-transform shadow-lg shrink-0"
             >
@@ -1237,8 +1262,8 @@ export default function HomeContent({ blogPosts = [] }: { blogPosts?: any[] }) {
         <section className="bg-white rounded-[24px] p-8 mt-12 border border-slate-100 shadow-sm text-left">
           <h2 className="text-2xl font-black text-slate-800 mb-4">수도권 모아팁스란?</h2>
           <p className="text-slate-600 mb-4 leading-relaxed font-medium">
-            수도권(서울, 경기, 인천) 지역의 핵심 정보, 행사, 축제 및 다양한 정부 지원금을 한곳에 모아 전달하는 종합 생활 정보 플랫폼입니다. 
-            매일 업데이트되는 공공데이터포털 및 지자체 공식 자료를 바탕으로, 소상공인, 청년, 어르신, 1인가구 등 각계각층의 시민들이 
+            수도권(서울, 경기, 인천) 지역의 핵심 정보, 행사, 축제 및 다양한 정부 지원금을 한곳에 모아 전달하는 종합 생활 정보 플랫폼입니다.
+            매일 업데이트되는 공공데이터포털 및 지자체 공식 자료를 바탕으로, 소상공인, 청년, 어르신, 1인가구 등 각계각층의 시민들이
             놓치기 쉬운 필수 혜택을 알기 쉽게 요약하여 제공합니다.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 mt-6">
@@ -1264,10 +1289,10 @@ export default function HomeContent({ blogPosts = [] }: { blogPosts?: any[] }) {
         </section>
 
         {/* Footer */}
-        
 
 
-      
+
+
         <footer className="pt-20 border-t border-slate-200 text-center pb-10">
           <div className="flex justify-center gap-6 mb-8">
             <Link href="/" className="text-slate-400 hover:text-slate-600 font-bold">홈</Link>
