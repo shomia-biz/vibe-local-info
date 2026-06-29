@@ -739,7 +739,7 @@ export default function HomeContent({ blogPosts = [] }: { blogPosts?: any[] }) {
             <section className="w-full lg:w-1/2 bg-white border border-slate-200 rounded-[32px] p-5 shadow-sm flex flex-col min-h-[220px]">
               <div>
                 <h2 className="text-xl font-black text-teal-800 mb-2">
-                  몰라서 못 받은 혜택? AI가 찾아낸 우리 동네 꿀팁 🤖
+                  놓치면 무조건 손해! AI가 골라주는 알짜배기 정보 🎁
                 </h2>
                 <div className="flex flex-col gap-1.5">
                   {blogPosts
