@@ -4387,6 +4387,47 @@
   ],
   "incheonEvents": [
     {
+      "name": "예술의전당 공연영상 무료 상영 <보물섬>",
+      "category": "행사",
+      "region": "인천",
+      "startDate": "2026-07-21",
+      "endDate": "2026-07-21",
+      "location": "문학시어터",
+      "target": "시민 누구나",
+      "summary": "문학시어터에서 예술의전당 우수 공연 영상 <보물섬>을 무료로 상영하는 행사입니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13688",
+      "imageUrl": "https://ifac.or.kr/resource/www/images/layout/og_images.png",
+      "id": 1778713506620,
+      "updatedAt": "2026-06-29"
+    },
+    {
+      "name": "세상의 종말이 아닌_프리뷰 공연",
+      "category": "행사",
+      "region": "인천",
+      "startDate": "2026-07-31",
+      "endDate": "2026-08-01",
+      "location": "없는극장",
+      "target": "누구나",
+      "summary": "기후변화 연구원 안나와 우타 교수가 면접 과정 속에서 과학과 정의, 기후위기를 둘러싼 책임에 대해 충돌하며 일상의 끝과 삶의 가능성을 이야기하는 연극 '세상의 종말이 아닌' 프리뷰 공연입니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13689",
+      "imageUrl": "https://ifac.or.kr/resource/www/images/layout/og_images.png",
+      "id": 1778713506619,
+      "updatedAt": "2026-06-29"
+    },
+    {
+      "name": "트라이보울 360 - OPUS 오푸스",
+      "category": "행사",
+      "region": "인천",
+      "startDate": "2026-07-18",
+      "endDate": "2026-07-18",
+      "location": "트라이보울",
+      "target": "누구나",
+      "summary": "트라이보울의 내·외부 공간을 하나의 무대로 확장하는 참여형·몰입형 공연 프로그램으로, 예술그룹 오푸스(OPUS)와 함께 관객이 고정된 객석을 벗어나 공간 곳곳에서 펼쳐지는 소리와 움직임을 가까이서 마주하는 무대를 선보입니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13690",
+      "id": 1778713506618,
+      "updatedAt": "2026-06-29"
+    },
+    {
       "name": "다시, 별주부전 <바다를 부탁해>",
       "category": "행사",
       "region": "인천",
