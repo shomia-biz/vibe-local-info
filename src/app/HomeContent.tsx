@@ -72,7 +72,7 @@ interface LocalData {
 
 const data = localData as unknown as LocalData;
 
-export default function HomeContent() {
+export default function HomeContent({ blogPosts = [] }: { blogPosts?: any[] }) {
 
   
   const [localDataState, setLocalDataState] = useState<LocalData>(data);
@@ -87,6 +87,7 @@ export default function HomeContent() {
   const [diagnosisSupportType, setDiagnosisSupportType] = useState('전체');
   const [diagnosisTargetGroup, setDiagnosisTargetGroup] = useState('전체');
   const [isDiagnosisActive, setIsDiagnosisActive] = useState(false);
+  const [currentBlogPage, setCurrentBlogPage] = useState(1);
 
 
   // 날씨 상태
@@ -644,94 +645,150 @@ export default function HomeContent() {
           )}
         </div>
 
-        {/* 1분 자가진단 툴 (미끼 상품) */}
-        <section className="bg-gradient-to-r from-teal-50 to-emerald-50 border border-teal-100 rounded-[32px] p-6 sm:p-8 shadow-sm">
-          <div className="text-center mb-6">
-            <h2 className="text-2xl font-black text-teal-800 mb-2">1분 만에 끝나는 내 지원금 찾기 🔍</h2>
-            <p className="text-teal-600 font-medium text-sm sm:text-base">나에게 딱 맞는 혜택을 빠르고 간편하게 찾아보세요!</p>
-          </div>
-
-          <div className="flex flex-col sm:flex-row items-center sm:items-end justify-center gap-3 max-w-5xl mx-auto">
-            {/* 서비스 분야 선택 */}
-            <div className="w-full sm:flex-1">
-              <label className="block text-xs font-bold text-teal-700 mb-1 pl-1">서비스 분야</label>
-              <select
-                value={diagnosisServiceField}
-                onChange={(e) => setDiagnosisServiceField(e.target.value)}
-                className="w-full px-4 py-3 rounded-xl border-0 ring-1 ring-teal-200 focus:ring-2 focus:ring-teal-500 bg-white text-slate-700 font-bold shadow-sm outline-none cursor-pointer"
-              >
-                <option value="전체">서비스 분야 (전체)</option>
-                <option value="생활안정">생활안정</option>
-                <option value="보건 의료">보건 의료</option>
-                <option value="보육 교육">보육 교육</option>
-                <option value="농림축산어업">농림축산어업</option>
-                <option value="고용 창업">고용 창업</option>
-                <option value="임신 출산">임신 출산</option>
-                <option value="보호 돌봄">보호 돌봄</option>
-                <option value="행정 안전">행정 안전</option>
-                <option value="문화 환경">문화 환경</option>
-                <option value="주거 자립">주거 자립</option>
-              </select>
+        {/* 1분 자가진단 툴 및 AI 블로그 */}
+        <div className="flex flex-col lg:flex-row gap-6 mb-8 mt-6">
+          {/* 1분 자가진단 툴 */}
+          <section className="w-full lg:w-1/2 bg-gradient-to-r from-teal-50 to-emerald-50 border border-teal-100 rounded-[32px] p-6 sm:p-8 shadow-sm flex flex-col justify-center">
+            <div className="text-center mb-6">
+              <h2 className="text-2xl font-black text-teal-800 mb-2">1분 만에 끝나는 내 지원금 찾기 🔍</h2>
+              <p className="text-teal-600 font-medium text-sm sm:text-base">나에게 딱 맞는 혜택을 빠르고 간편하게 찾아보세요!</p>
             </div>
 
-            {/* 지원 유형 선택 */}
-            <div className="w-full sm:flex-1">
-              <label className="block text-xs font-bold text-teal-700 mb-1 pl-1">지원 유형</label>
-              <select
-                value={diagnosisSupportType}
-                onChange={(e) => setDiagnosisSupportType(e.target.value)}
-                className="w-full px-4 py-3 rounded-xl border-0 ring-1 ring-teal-200 focus:ring-2 focus:ring-teal-500 bg-white text-slate-700 font-bold shadow-sm outline-none cursor-pointer"
-              >
-                <option value="전체">지원 유형 (전체)</option>
-                <option value="현금">현금</option>
-                <option value="현금(보험)">현금(보험)</option>
-                <option value="현금(융자)">현금(융자)</option>
-                <option value="현금(장학금)">현금(장학금)</option>
-                <option value="현금(감면)">현금(감면)</option>
-                <option value="현물">현물</option>
-                <option value="서비스(돌봄)">서비스(돌봄)</option>
-                <option value="서비스(일자리)">서비스(일자리)</option>
-                <option value="이용권">이용권</option>
-                <option value="기술지원">기술지원</option>
-                <option value="시설이용">시설이용</option>
-                <option value="기타">기타</option>
-                <option value="기타(교육)">기타(교육)</option>
-                <option value="기타(상담)">기타(상담)</option>
-              </select>
-            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-lg mx-auto w-full">
+              {/* 서비스 분야 선택 */}
+              <div>
+                <label className="block text-xs font-bold text-teal-700 mb-1 pl-1">서비스 분야</label>
+                <select
+                  value={diagnosisServiceField}
+                  onChange={(e) => setDiagnosisServiceField(e.target.value)}
+                  className="w-full px-3 py-2.5 text-sm rounded-xl border-0 ring-1 ring-teal-200 focus:ring-2 focus:ring-teal-500 bg-white text-slate-700 font-bold shadow-sm outline-none cursor-pointer"
+                >
+                  <option value="전체">서비스 분야 (전체)</option>
+                  <option value="생활안정">생활안정</option>
+                  <option value="보건 의료">보건 의료</option>
+                  <option value="보육 교육">보육 교육</option>
+                  <option value="농림축산어업">농림축산어업</option>
+                  <option value="고용 창업">고용 창업</option>
+                  <option value="임신 출산">임신 출산</option>
+                  <option value="보호 돌봄">보호 돌봄</option>
+                  <option value="행정 안전">행정 안전</option>
+                  <option value="문화 환경">문화 환경</option>
+                  <option value="주거 자립">주거 자립</option>
+                </select>
+              </div>
 
-            {/* 대상 선택 */}
-            <div className="w-full sm:flex-1">
-              <label className="block text-xs font-bold text-teal-700 mb-1 pl-1">해당 대상</label>
-              <select
-                value={diagnosisTargetGroup}
-                onChange={(e) => setDiagnosisTargetGroup(e.target.value)}
-                className="w-full px-4 py-3 rounded-xl border-0 ring-1 ring-teal-200 focus:ring-2 focus:ring-teal-500 bg-white text-slate-700 font-bold shadow-sm outline-none cursor-pointer"
-              >
-                <option value="전체">대상 누구나 (전체)</option>
-                <option value="개인">개인</option>
-                <option value="가구">가구</option>
-                <option value="소상공인">소상공인</option>
-                <option value="법인/시설/단체">법인/시설/단체</option>
-              </select>
-            </div>
+              {/* 지원 유형 선택 */}
+              <div>
+                <label className="block text-xs font-bold text-teal-700 mb-1 pl-1">지원 유형</label>
+                <select
+                  value={diagnosisSupportType}
+                  onChange={(e) => setDiagnosisSupportType(e.target.value)}
+                  className="w-full px-3 py-2.5 text-sm rounded-xl border-0 ring-1 ring-teal-200 focus:ring-2 focus:ring-teal-500 bg-white text-slate-700 font-bold shadow-sm outline-none cursor-pointer"
+                >
+                  <option value="전체">지원 유형 (전체)</option>
+                  <option value="현금">현금</option>
+                  <option value="현금(보험)">현금(보험)</option>
+                  <option value="현금(융자)">현금(융자)</option>
+                  <option value="현금(장학금)">현금(장학금)</option>
+                  <option value="현금(감면)">현금(감면)</option>
+                  <option value="현물">현물</option>
+                  <option value="서비스(돌봄)">서비스(돌봄)</option>
+                  <option value="서비스(일자리)">서비스(일자리)</option>
+                  <option value="이용권">이용권</option>
+                  <option value="기술지원">기술지원</option>
+                  <option value="시설이용">시설이용</option>
+                  <option value="기타">기타</option>
+                  <option value="기타(교육)">기타(교육)</option>
+                  <option value="기타(상담)">기타(상담)</option>
+                </select>
+              </div>
 
-            {/* 버튼 */}
-            <div className="w-full sm:w-auto flex items-end pt-5 sm:pt-0">
+              {/* 대상 선택 */}
+              <div>
+                <label className="block text-xs font-bold text-teal-700 mb-1 pl-1">해당 대상</label>
+                <select
+                  value={diagnosisTargetGroup}
+                  onChange={(e) => setDiagnosisTargetGroup(e.target.value)}
+                  className="w-full px-3 py-2.5 text-sm rounded-xl border-0 ring-1 ring-teal-200 focus:ring-2 focus:ring-teal-500 bg-white text-slate-700 font-bold shadow-sm outline-none cursor-pointer"
+                >
+                  <option value="전체">대상 누구나 (전체)</option>
+                  <option value="개인">개인</option>
+                  <option value="가구">가구</option>
+                  <option value="소상공인">소상공인</option>
+                  <option value="법인/시설/단체">법인/시설/단체</option>
+                </select>
+              </div>
+
+              {/* 버튼 */}
+              <div className="flex items-end">
+                <button
+                  onClick={() => {
+                    setIsDiagnosisActive(true);
+                    setCurrentBenefitPage(1);
+                    document.getElementById('benefits')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className="w-full px-4 py-2.5 h-[42px] text-sm bg-teal-500 hover:bg-teal-600 text-white font-black rounded-xl shadow-lg shadow-teal-200 transition-all transform hover:scale-105 whitespace-nowrap"
+                >
+                  맞춤 혜택 찾기
+                </button>
+              </div>
+            </div>
+          </section>
+
+          {/* AI 블로그 */}
+          <section className="w-full lg:w-1/2 bg-white border border-slate-200 rounded-[32px] p-6 shadow-sm flex flex-col justify-between min-h-[220px]">
+            <div>
+              <h2 className="text-[17px] font-black text-slate-800 mb-3 leading-snug">
+                몰라서 못 받은 혜택? AI가 찾아낸 우리 동네 꿀팁 🤖
+              </h2>
+              <div className="flex flex-col gap-2">
+                {blogPosts
+                  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+                  .slice((currentBlogPage - 1) * 3, currentBlogPage * 3)
+                  .map((post) => (
+                    <Link href={`/blog/${post.slug}`} key={post.slug} className="block group">
+                      <div className="p-2.5 rounded-2xl bg-slate-50 hover:bg-slate-100 transition-colors border border-slate-100 group-hover:border-slate-200">
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className="text-base">{post.emoji || '📰'}</span>
+                          <span className="text-[10px] font-bold text-slate-400 bg-white px-2 py-0.5 rounded-full border border-slate-200">
+                            {post.date}
+                          </span>
+                        </div>
+                        <h3 className="font-bold text-slate-700 text-[13px] line-clamp-1 group-hover:text-blue-600 transition-colors">
+                          {post.title}
+                        </h3>
+                      </div>
+                    </Link>
+                  ))}
+              </div>
+            </div>
+            
+            {/* 블로그 페이징 */}
+            <div className="flex justify-center items-center gap-4 mt-3 pt-3 border-t border-slate-100">
               <button
-                onClick={() => {
-                  setIsDiagnosisActive(true);
-                  setCurrentBenefitPage(1);
-                  // 부드러운 스크롤 이동
-                  document.getElementById('benefits')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-                className="w-full sm:w-auto px-6 py-3 bg-teal-500 hover:bg-teal-600 text-white font-black rounded-xl shadow-lg shadow-teal-200 transition-all transform hover:scale-105 whitespace-nowrap"
+                onClick={() => setCurrentBlogPage(prev => Math.max(1, prev - 1))}
+                disabled={currentBlogPage === 1}
+                className="p-1 rounded-full text-slate-400 hover:text-slate-600 hover:bg-slate-100 disabled:opacity-30 disabled:hover:bg-transparent"
               >
-                맞춤 혜택 찾기
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <span className="text-[11px] font-bold text-slate-500">
+                {currentBlogPage} / {Math.ceil(blogPosts.length / 3) || 1}
+              </span>
+              <button
+                onClick={() => setCurrentBlogPage(prev => Math.min(Math.ceil(blogPosts.length / 3), prev + 1))}
+                disabled={currentBlogPage >= Math.ceil(blogPosts.length / 3)}
+                className="p-1 rounded-full text-slate-400 hover:text-slate-600 hover:bg-slate-100 disabled:opacity-30 disabled:hover:bg-transparent"
+              >
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
               </button>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
         </div>
 
         {/* 지원금/혜택 정보 */}
