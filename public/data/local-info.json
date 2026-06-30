@@ -2355,6 +2355,20 @@
   ],
   "incheonExhibitionEvents": [
     {
+      "name": "COMPOSITION ROOM",
+      "category": "전시",
+      "region": "인천",
+      "startDate": "2026-07-04",
+      "endDate": "2026-07-19",
+      "location": "패치워크 코너룸",
+      "target": "누구나",
+      "summary": "자투리 옷감과 버리지 못한 종이 등 일상의 조각들을 새롭게 구성하는 작업을 하는 작가 '보풀'의 전시로, 배다리 마을이 내려다보이는 공간에서 주말 팝업 상점 및 작가 워크숍 등과 함께 진행됩니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13691",
+      "imageUrl": "https://ifac.or.kr/resource/www/images/layout/og_images.png",
+      "id": 1778713506621,
+      "updatedAt": "2026-06-30"
+    },
+    {
       "name": "2026년 제12회 유묵회서예전(먹물의 餘韻)",
       "category": "전시",
       "region": "인천",
@@ -4386,6 +4400,20 @@
     }
   ],
   "incheonEvents": [
+    {
+      "name": "예술의전당 공연영상 무료 상영 <홍콩 필하모닉 오케스트라>",
+      "category": "행사",
+      "region": "인천",
+      "startDate": "2026-07-07",
+      "endDate": "2026-07-07",
+      "location": "문학시어터",
+      "target": "누구나",
+      "summary": "문학시어터에서 매월 진행하는 예술의전당 우수 공연 영상 무료 상영 프로그램으로, 이번 회차에서는 홍콩 필하모닉 오케스트라의 공연 영상을 상영합니다. 사전 예약이 필요합니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13687",
+      "imageUrl": "https://ifac.or.kr/resource/www/images/layout/og_images.png",
+      "id": 1778713506622,
+      "updatedAt": "2026-06-30"
+    },
     {
       "name": "예술의전당 공연영상 무료 상영 <보물섬>",
       "category": "행사",
