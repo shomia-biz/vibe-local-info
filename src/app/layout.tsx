@@ -19,13 +19,21 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://moa-tips.com"),
-  title: "수도권 모아팁스 | 지원금·행사·혜택 안내",
-  description: "서울, 경기, 인천 주민을 위한 지역 행사, 축제, 지원금, 혜택 정보를 매일 업데이트합니다.",
+  title: "모아팁스 - 수도권 나들이 & 지원금 혜택 한눈에",
+  description: "주말 나들이 정보부터 소상공인 지원금까지 꼭 필요한 팁을 모아 제공합니다.",
   openGraph: {
-    title: "수도권 모아팁스 | 지원금·행사·혜택 안내",
-    description: "서울, 경기, 인천 주민을 위한 지역 행사, 축제, 지원금, 혜택 정보를 매일 업데이트합니다.",
+    title: "모아팁스 - 수도권 나들이 & 지원금 혜택 한눈에",
+    description: "주말 나들이 정보부터 소상공인 지원금까지 꼭 필요한 팁을 모아 제공합니다.",
     url: "https://moa-tips.com",
     siteName: "수도권 모아팁스",
+    images: [
+      {
+        url: "/images/og-thumbnail.jpg",
+        width: 1200,
+        height: 630,
+        alt: "모아팁스 대표 썸네일",
+      },
+    ],
     locale: "ko_KR",
     type: "website",
   },

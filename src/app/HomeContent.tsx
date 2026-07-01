@@ -532,9 +532,8 @@ export default function HomeContent({ blogPosts = [] }: { blogPosts?: any[] }) {
           {/* <div className="inline-block px-4 py-1.5 mb-6 bg-cyan-50 text-cyan-600 rounded-full text-sm font-bold tracking-tight animate-flash-pulse shadow-sm border border-cyan-100">
             오늘 <span className="text-amber-600 font-black">{newInfoCount}</span>개의 새로운 정보가 도착했습니다 💌
           </div> */}
-          <h1 className="text-4xl sm:text-6xl font-black text-slate-900 mb-1 tracking-tight leading-tight">
-            수도권 나들이부터<br />
-            <span className="text-cyan-500">지원금 혜택</span>까지 한눈에
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 mb-2 tracking-tight leading-tight break-keep">
+            수도권 나들이부터<br className="sm:hidden" /> 정부 지원금 혜택까지 한눈에,<br className="hidden sm:block" /> <span className="text-cyan-500">모아팁스</span>
           </h1>
           <p className="text-lg sm:text-xl text-slate-500 max-w-2xl mx-auto font-medium break-keep">
             서울, 경기, 인천 지역의 놓치기 아쉬운 정보를 엄선했습니다.<br />
@@ -643,6 +642,54 @@ export default function HomeContent({ blogPosts = [] }: { blogPosts?: any[] }) {
                 </div>
               </div>
             )}
+          </div>
+
+          {/* 메인 카테고리 대형 버튼 2개 */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 mb-4">
+            <button
+              onClick={() => {
+                document.getElementById('benefits')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="flex flex-col items-center justify-center p-6 bg-gradient-to-br from-indigo-500 to-indigo-700 hover:from-indigo-600 hover:to-indigo-800 text-white rounded-[24px] shadow-lg hover:shadow-indigo-200 transition-all active:scale-[0.98] group"
+            >
+              <span className="text-3xl mb-2 group-hover:-translate-y-1 transition-transform">💰</span>
+              <span className="text-xl sm:text-2xl font-black tracking-tight">지원금·혜택 모아보기</span>
+              <span className="text-indigo-100 text-sm font-medium mt-1">청년, 소상공인, 우리 가족 모두를 위한 알짜 정보</span>
+            </button>
+
+            <button
+              onClick={() => {
+                document.getElementById('events')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="flex flex-col items-center justify-center p-6 bg-gradient-to-br from-rose-400 to-rose-600 hover:from-rose-500 hover:to-rose-700 text-white rounded-[24px] shadow-lg hover:shadow-rose-200 transition-all active:scale-[0.98] group"
+            >
+              <span className="text-3xl mb-2 group-hover:-translate-y-1 transition-transform">🎡</span>
+              <span className="text-xl sm:text-2xl font-black tracking-tight">수도권 나들이 명소</span>
+              <span className="text-rose-100 text-sm font-medium mt-1">주말 가족, 연인과 함께 가볼만한 곳</span>
+            </button>
+          </div>
+
+          {/* 오늘의 운세 유도 배너 (Inline Banner) */}
+          <div className="mb-8 mt-2">
+            <Link 
+              href="/fortune"
+              className="group relative flex flex-col sm:flex-row items-center justify-between bg-gradient-to-r from-violet-600 via-fuchsia-600 to-pink-500 rounded-[24px] p-6 sm:px-10 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 overflow-hidden"
+            >
+              {/* 반짝이는 배경 효과 */}
+              <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20 group-hover:opacity-30 transition-opacity mix-blend-overlay"></div>
+              
+              <div className="relative z-10 flex items-center gap-4 sm:gap-6 mb-4 sm:mb-0 text-center sm:text-left">
+                <div className="text-5xl sm:text-6xl drop-shadow-md group-hover:scale-110 transition-transform duration-300">🔮</div>
+                <div>
+                  <h3 className="text-white font-black text-xl sm:text-2xl mb-1 tracking-tight drop-shadow-sm">나의 오늘의 띠별 운세는?</h3>
+                  <p className="text-violet-100 font-medium text-sm sm:text-base">12지신이 알려주는 행운의 메시지와 맞춤형 럭키 아이템 확인하기 ✨</p>
+                </div>
+              </div>
+
+              <div className="relative z-10 whitespace-nowrap bg-white/20 hover:bg-white/30 text-white backdrop-blur-md px-6 py-3 rounded-full font-bold text-sm transition-colors border border-white/30 shadow-sm flex items-center gap-2">
+                운세 확인하러 가기 <span className="group-hover:translate-x-1 transition-transform">→</span>
+              </div>
+            </Link>
           </div>
 
           {/* 1분 자가진단 툴 및 AI 블로그 */}

@@ -34,6 +34,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "article",
       publishedTime: post.date,
       url: `https://moa-tips.com/blog/${slug}/`,
+      images: [
+        {
+          url: "/images/og-thumbnail.jpg",
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        }
+      ],
     },
   };
 }
@@ -116,7 +124,7 @@ export default async function PostPage({ params }: Props) {
             <div className="inline-block bg-orange-100 text-orange-600 px-4 py-1 rounded-full font-bold mb-4">
               {post.category}
             </div>
-            <h1 className="text-3xl sm:text-4xl font-black text-slate-900 mb-6 tracking-tight leading-tight">
+            <h1 className="post-title text-3xl sm:text-4xl font-black text-slate-900 mb-6 tracking-tight leading-tight">
               {post.title}
             </h1>
             <div className="flex justify-start items-center gap-4 text-gray-500 font-medium">
@@ -125,6 +133,11 @@ export default async function PostPage({ params }: Props) {
               <span className="text-sm">최종 업데이트: {post.date}</span>
             </div>
           </header>
+
+          {/* 본문 상단 광고 (타이틀 바로 아래) */}
+          <div className="mb-8">
+            <AdBanner />
+          </div>
 
           <ReactMarkdown 
             remarkPlugins={[remarkGfm]}
@@ -143,6 +156,11 @@ export default async function PostPage({ params }: Props) {
           >
             {post.content.replace(/\*\*\r?\n/g, '**  \n')}
           </ReactMarkdown>
+
+          {/* 파이썬이 생성한 본문 내 쿠팡 링크 대응용 고정 대가성 문구 */}
+          <div className="mt-6 text-[11px] text-gray-400 font-medium text-center break-keep">
+            이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
+          </div>
         </div>
 
         {/* 카카오톡 채널 추가 유도 배너 (게시글 하단) */}
