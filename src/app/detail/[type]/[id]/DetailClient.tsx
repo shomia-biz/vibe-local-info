@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import BackButton from "../../../components/BackButton";
 import CoupangBanner from "@/components/CoupangBanner";
+import AdBanner from "@/components/AdBanner";
 
 interface ItemData {
   id: number | string;
@@ -64,9 +65,9 @@ const generateHashtags = (item: any) => {
     '전통', '역사', '자연', '캠핑', '피크닉', '드라이브', '산책', '힐링', '클래식', '미술', '박물관', '도서관', '교육', '강연',
     '창업', '취업', '복지', '건강', '주거', '금융', '출산', '육아', '1인가구', '대학생', '직장인'
   ];
-  
+
   let found = keywords.filter(k => text.includes(k));
-  
+
   // 카테고리 추가
   if (item.category) {
     found.unshift(item.category.replace(/[^\w\s가-힣]/g, '').trim());
@@ -76,7 +77,7 @@ const generateHashtags = (item: any) => {
   const titleWords = (item.name || '').split(/[\s,\[\]\(\)\-\_]+/)
     .filter((w: string) => w.length >= 2 && w.length <= 5 && !found.includes(w))
     .slice(0, 2);
-    
+
   found = [...found, ...titleWords];
 
   // 중복 제거 및 최대 8개로 제한
@@ -135,7 +136,7 @@ export default function DetailClient({ itemData, type }: { itemData: ItemData, t
     const img = new Image();
     img.crossOrigin = "Anonymous";
     img.src = itemData.imageUrl || getEventImage(itemData.name);
-    
+
     img.onload = () => {
       const canvas = document.createElement('canvas');
       const ctx = canvas.getContext('2d');
@@ -159,8 +160,8 @@ export default function DetailClient({ itemData, type }: { itemData: ItemData, t
         <BackButton />
         <article className="bg-white rounded-[32px] shadow-xl border border-slate-100 relative overflow-hidden">
           <div className="relative bg-slate-900 overflow-hidden">
-            <div 
-              className="absolute inset-0 opacity-20 transition-opacity duration-500" 
+            <div
+              className="absolute inset-0 opacity-20 transition-opacity duration-500"
               style={{
                 backgroundImage: `url(${itemData.imageUrl || getEventImage(itemData.name)})`,
                 backgroundPosition: 'center',
@@ -168,7 +169,7 @@ export default function DetailClient({ itemData, type }: { itemData: ItemData, t
               }}
             ></div>
             <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 to-slate-900"></div>
-            
+
             <div className="relative z-10 px-8 py-10 sm:py-12 flex flex-col justify-end min-h-[140px]">
               <div className="flex flex-wrap items-center gap-2 mb-4">
                 {!isEvent ? (
@@ -218,11 +219,11 @@ export default function DetailClient({ itemData, type }: { itemData: ItemData, t
             {/* SEO를 위한 서술형 문단 추가 (Thin content 방지) */}
             <div className="mb-12 text-slate-700 leading-relaxed break-keep text-[15px] sm:text-base">
               <p className="mb-4">
-                최근 <strong>{itemData.region || getRegion(itemData)}</strong> 지역에서 많은 관심을 받고 있는 <strong>{itemData.name}</strong>에 대한 상세 정보를 안내해 드립니다. 
+                최근 <strong>{itemData.region || getRegion(itemData)}</strong> 지역에서 많은 관심을 받고 있는 <strong>{itemData.name}</strong>에 대한 상세 정보를 안내해 드립니다.
                 이 프로그램은 <strong>{itemData.target || '모든 분들'}</strong>을(를) 위해 마련되었으며, 실생활에 밀접한 혜택과 유익한 경험을 제공하는 것을 목적으로 하고 있습니다.
               </p>
               <p>
-                특히 바쁜 일상 속에서도 놓치지 말아야 할 핵심 내용을 아래에 꼼꼼히 정리해 두었으니, 일시와 장소 등의 세부 조건들을 
+                특히 바쁜 일상 속에서도 놓치지 말아야 할 핵심 내용을 아래에 꼼꼼히 정리해 두었으니, 일시와 장소 등의 세부 조건들을
                 빠르게 확인하시고 본인에게 주어지는 소중한 기회를 꼭 챙기시길 바랍니다.
               </p>
             </div>
@@ -232,16 +233,16 @@ export default function DetailClient({ itemData, type }: { itemData: ItemData, t
                 <span className="w-8 h-8 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center text-sm">📋</span>
                 핵심 요약 정보
               </h2>
-              
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="bg-slate-50/80 rounded-2xl p-5 border border-slate-100 flex items-start gap-4">
                   <div className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-2xl shrink-0">📅</div>
                   <div>
                     <h3 className="text-slate-500 font-bold text-sm mb-1.5">일시</h3>
                     <p className="text-slate-900 font-extrabold text-[15px] sm:text-base break-keep leading-snug">
-                      {itemData.startDate === '상시' 
-                        ? '상시 진행' 
-                        : itemData.startDate === itemData.endDate 
+                      {itemData.startDate === '상시'
+                        ? '상시 진행'
+                        : itemData.startDate === itemData.endDate
                           ? formatDateWithDay(itemData.startDate)
                           : `${formatDateWithDay(itemData.startDate)} ~ ${formatDateWithDay(itemData.endDate)}`}
                     </p>
@@ -289,8 +290,8 @@ export default function DetailClient({ itemData, type }: { itemData: ItemData, t
             {/* SEO를 위한 맺음말 추가 (Thin content 방지) */}
             <div className="mb-12 text-slate-700 leading-relaxed break-keep text-[15px] sm:text-base bg-slate-50 p-6 rounded-2xl border border-slate-100">
               <p>
-                위에서 살펴본 바와 같이 <strong>{itemData.name}</strong>은(는) 해당 지역 주민들에게 유익한 정보가 될 것입니다. 
-                다만 주최 측의 사정에 따라 일시, 장소, 모집 인원 등의 세부 사항이 예고 없이 변경될 수 있으므로, 방문이나 신청 전 반드시 
+                위에서 살펴본 바와 같이 <strong>{itemData.name}</strong>은(는) 해당 지역 주민들에게 유익한 정보가 될 것입니다.
+                다만 주최 측의 사정에 따라 일시, 장소, 모집 인원 등의 세부 사항이 예고 없이 변경될 수 있으므로, 방문이나 신청 전 반드시
                 하단의 <strong>'공식 홈페이지/상세보기'</strong> 버튼을 눌러 최신 공지사항을 다시 한번 확인해 주시기 바랍니다.
               </p>
               <p className="mt-4 font-medium text-slate-600">
@@ -311,7 +312,7 @@ export default function DetailClient({ itemData, type }: { itemData: ItemData, t
               {/* 1번: 스마트 길찾기 (행사/축제이면서 장소 정보가 있을 때만 노출) */}
               {isEvent && itemData.location && (
                 <div className="mb-6">
-                  <a 
+                  <a
                     href={`https://map.kakao.com/?q=${encodeURIComponent(itemData.location)}`}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -324,7 +325,7 @@ export default function DetailClient({ itemData, type }: { itemData: ItemData, t
 
               {/* 3번: 카카오톡 공유하기 */}
               <div className="mb-8">
-                <button 
+                <button
                   onClick={shareToKakao}
                   className="flex items-center justify-center gap-2 w-full bg-[#FEE500] text-[#000000] font-black text-lg py-5 rounded-2xl hover:bg-[#F4DC00] transition-colors shadow-sm"
                 >
@@ -333,7 +334,7 @@ export default function DetailClient({ itemData, type }: { itemData: ItemData, t
               </div>
             </div>
 
-            <a 
+            <a
               href={itemData.link}
               target="_blank"
               rel="noopener noreferrer"
@@ -343,6 +344,7 @@ export default function DetailClient({ itemData, type }: { itemData: ItemData, t
               <span className="transition-transform group-hover:translate-x-1">→</span>
             </a>
 
+            <AdBanner />
             <CoupangBanner />
           </div>
         </article>

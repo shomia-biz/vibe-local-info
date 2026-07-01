@@ -2,31 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://moa-tips.com/</loc>
-    <lastmod>2026-06-29</lastmod>
+    <lastmod>2026-07-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://moa-tips.com/blog/</loc>
-    <lastmod>2026-06-29</lastmod>
+    <lastmod>2026-07-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://moa-tips.com/about/</loc>
-    <lastmod>2026-06-29</lastmod>
+    <lastmod>2026-07-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://moa-tips.com/contact/</loc>
-    <lastmod>2026-06-29</lastmod>
+    <lastmod>2026-07-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://moa-tips.com/fortune/</loc>
-    <lastmod>2026-06-29</lastmod>
+    <lastmod>2026-07-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -491,7 +491,7 @@
     <lastmod>2026-06-28</lastmod>
   </url>
   <url>
-    <loc>https://moa-tips.com/blog/2026-06-29-yonsei-future-education/</loc>
+    <loc>https://moa-tips.com/blog/2026-06-29-goyang-arammunyeacademy/</loc>
     <lastmod>2026-06-29</lastmod>
   </url>
   <url>
@@ -499,11 +499,11 @@
     <lastmod>2026-06-29</lastmod>
   </url>
   <url>
-    <loc>https://moa-tips.com/blog/2026-06-29-goyang-arammunyeacademy/</loc>
+    <loc>https://moa-tips.com/blog/2026-06-29-yonsei-future-education/</loc>
     <lastmod>2026-06-29</lastmod>
   </url>
   <url>
-    <loc>https://moa-tips.com/blog/2026-06-30-yonsei-future-education-summer-courses/</loc>
+    <loc>https://moa-tips.com/blog/2026-06-30-babyshark-ddp-exhibition/</loc>
     <lastmod>2026-06-30</lastmod>
   </url>
   <url>
@@ -511,7 +511,7 @@
     <lastmod>2026-06-30</lastmod>
   </url>
   <url>
-    <loc>https://moa-tips.com/blog/2026-06-30-babyshark-ddp-exhibition/</loc>
+    <loc>https://moa-tips.com/blog/2026-06-30-yonsei-future-education-summer-courses/</loc>
     <lastmod>2026-06-30</lastmod>
   </url>
 </urlset>
