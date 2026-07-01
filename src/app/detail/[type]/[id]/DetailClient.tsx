@@ -209,9 +209,21 @@ export default function DetailClient({ itemData, type }: { itemData: ItemData, t
           </div>
 
           <div className="p-8 sm:p-12">
-            <div className="border-l-4 border-indigo-500 bg-indigo-50/50 p-6 rounded-r-2xl mb-12 shadow-sm">
+            <div className="border-l-4 border-indigo-500 bg-indigo-50/50 p-6 rounded-r-2xl mb-8 shadow-sm">
               <p className="text-indigo-900 text-lg sm:text-xl font-bold leading-relaxed break-keep">
                 "{itemData.summary}"
+              </p>
+            </div>
+
+            {/* SEO를 위한 서술형 문단 추가 (Thin content 방지) */}
+            <div className="mb-12 text-slate-700 leading-relaxed break-keep text-[15px] sm:text-base">
+              <p className="mb-4">
+                최근 <strong>{itemData.region || getRegion(itemData)}</strong> 지역에서 많은 관심을 받고 있는 <strong>{itemData.name}</strong>에 대한 상세 정보를 안내해 드립니다. 
+                이 프로그램은 <strong>{itemData.target || '모든 분들'}</strong>을(를) 위해 마련되었으며, 실생활에 밀접한 혜택과 유익한 경험을 제공하는 것을 목적으로 하고 있습니다.
+              </p>
+              <p>
+                특히 바쁜 일상 속에서도 놓치지 말아야 할 핵심 내용을 아래에 꼼꼼히 정리해 두었으니, 일시와 장소 등의 세부 조건들을 
+                빠르게 확인하시고 본인에게 주어지는 소중한 기회를 꼭 챙기시길 바랍니다.
               </p>
             </div>
 
@@ -272,6 +284,18 @@ export default function DetailClient({ itemData, type }: { itemData: ItemData, t
                   </>
                 )}
               </div>
+            </div>
+
+            {/* SEO를 위한 맺음말 추가 (Thin content 방지) */}
+            <div className="mb-12 text-slate-700 leading-relaxed break-keep text-[15px] sm:text-base bg-slate-50 p-6 rounded-2xl border border-slate-100">
+              <p>
+                위에서 살펴본 바와 같이 <strong>{itemData.name}</strong>은(는) 해당 지역 주민들에게 유익한 정보가 될 것입니다. 
+                다만 주최 측의 사정에 따라 일시, 장소, 모집 인원 등의 세부 사항이 예고 없이 변경될 수 있으므로, 방문이나 신청 전 반드시 
+                하단의 <strong>'공식 홈페이지/상세보기'</strong> 버튼을 눌러 최신 공지사항을 다시 한번 확인해 주시기 바랍니다.
+              </p>
+              <p className="mt-4 font-medium text-slate-600">
+                앞으로도 모아팁스는 실생활에 꼭 필요한 알짜배기 소식과 숨은 혜택들을 발 빠르게 정리하여 전해드리겠습니다!
+              </p>
             </div>
 
             <div className="mb-12">

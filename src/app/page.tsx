@@ -9,6 +9,7 @@ export default function Home() {
     date: post.date,
     category: post.category || '새소식',
     tags: post.tags || [],
+    summary: post.summary || '',
   }));
 
   return <HomeContentWrapper blogPosts={blogPosts} />;

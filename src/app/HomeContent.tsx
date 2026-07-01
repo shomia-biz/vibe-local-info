@@ -751,6 +751,11 @@ export default function HomeContent({ blogPosts = [] }: { blogPosts?: any[] }) {
                           <h4 className="font-extrabold text-[13px] text-slate-900 group-hover:text-cyan-600 transition-colors mb-1 line-clamp-1 relative z-10">
                             {post.title}
                           </h4>
+                          {post.summary && (
+                            <p className="text-[11px] text-slate-500 line-clamp-1 mb-1.5 leading-tight relative z-10">
+                              {post.summary}
+                            </p>
+                          )}
                           <div className="flex justify-between items-center relative z-10 text-[10px] text-slate-400">
                             <span className="bg-emerald-50 text-emerald-600 font-bold px-1.5 py-[1px] rounded-full flex-shrink-0">
                               {post.category || '블로그'}
@@ -1294,10 +1299,13 @@ export default function HomeContent({ blogPosts = [] }: { blogPosts?: any[] }) {
 
 
         <footer className="pt-20 border-t border-slate-200 text-center pb-10">
-          <div className="flex justify-center gap-6 mb-8">
+          <div className="flex justify-center flex-wrap gap-4 sm:gap-6 mb-8">
             <Link href="/" className="text-slate-400 hover:text-slate-600 font-bold">홈</Link>
             <Link href="/blog" className="text-slate-400 hover:text-slate-600 font-bold">블로그</Link>
             <Link href="/about" className="text-slate-400 hover:text-slate-600 font-bold">소개</Link>
+            <Link href="/privacy" className="text-slate-400 hover:text-slate-600 font-bold">개인정보처리방침</Link>
+            <Link href="/terms" className="text-slate-400 hover:text-slate-600 font-bold">이용약관</Link>
+            <Link href="/contact" className="text-slate-400 hover:text-slate-600 font-bold">문의하기</Link>
           </div>
           <p className="text-slate-400 text-sm mb-2 font-medium">
             데이터 출처: 공공데이터포털 및 각 지자체 공식 홈페이지
