@@ -2493,6 +2493,23 @@
   "nationalExhibitionEvents": [],
   "seoulEvents": [
     {
+      "name": "[서울영화센터] 단체관람 할인 안내",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-06-11",
+      "endDate": "2026-12-31",
+      "location": "서울영화센터 상영관 1,2,3",
+      "target": "누구나",
+      "summary": "10인 이상 단체 관람 시 할인 적용 (일반 7000원 / 단체 5000원)",
+      "link": "https://www.seoulfilmcenter.com/index.do",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://www.seoulfilmcenter.com/resource/www/img/layout/logo.svg",
+      "id": 1778713506623,
+      "updatedAt": "2026-07-02"
+    },
+    {
       "name": "하늘 바람 햇살 이야기",
       "category": "행사",
       "region": "서울",
