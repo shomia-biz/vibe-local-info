@@ -4029,6 +4029,45 @@
   ],
   "kyeonggiEvents": [
     {
+      "name": "2026 김포 선셋 페스타",
+      "category": "행사",
+      "region": "경기",
+      "startDate": "2026-10-24",
+      "endDate": "2026-10-24",
+      "location": "김포함상공원 일원",
+      "target": "누구나",
+      "summary": "선상다이닝 + 셀프바비큐존 + 로컬푸드 쿠킹쇼 등",
+      "link": "",
+      "id": 1778713506639,
+      "updatedAt": "2026-07-03"
+    },
+    {
+      "name": "2026 김포 라베니체축제",
+      "category": "행사",
+      "region": "경기",
+      "startDate": "2026-10-17",
+      "endDate": "2026-10-17",
+      "location": "장기동 라베니체 일원",
+      "target": "누구나",
+      "summary": "불꽃쇼 + 콘서트 + 수상 버스킹 + 체험프로그램 등",
+      "link": "",
+      "id": 1778713506638,
+      "updatedAt": "2026-07-03"
+    },
+    {
+      "name": "2026 파크콘서트",
+      "category": "행사",
+      "region": "경기",
+      "startDate": "2026-09-01",
+      "endDate": "2026-09-30",
+      "location": "중앙공원 야외공연장",
+      "target": "누구나",
+      "summary": "기간 중 공연 3회 예정 / 1일 1회",
+      "link": "",
+      "id": 1778713506637,
+      "updatedAt": "2026-07-03"
+    },
+    {
       "name": "2026 김포 해병대문화축제",
       "category": "행사",
       "region": "경기",
