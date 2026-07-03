@@ -4496,6 +4496,32 @@
   ],
   "incheonEvents": [
     {
+      "name": "클래식시리즈, 산책3 - 이수빈 & 박예람 <Dance & Fantasy>",
+      "category": "행사",
+      "region": "인천",
+      "startDate": "2026-08-29",
+      "endDate": "2026-08-29",
+      "location": "제물포구문화체육센터 공연장",
+      "target": "7세 이상",
+      "summary": "제물포구문화체육센터에서 개최되는 클래식 연주회로, 이수빈과 박예람이 선보이는 클래식 무대 'Dance & Fantasy' 공연입니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13700",
+      "id": 1778713506642,
+      "updatedAt": "2026-07-03"
+    },
+    {
+      "name": "퇴근후N시리즈3 - 선예＆프렐류드 <Day Off>",
+      "category": "행사",
+      "region": "인천",
+      "startDate": "2026-08-19",
+      "endDate": "2026-08-19",
+      "location": "제물포구문화체육센터 공연장",
+      "target": "7세 이상",
+      "summary": "선예와 재즈 밴드 프렐류드가 함께하는 'Day Off' 콘서트로, 제물포구문화체육센터에서 퇴근 후 힐링을 선사하는 재즈 공연입니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13701",
+      "id": 1778713506641,
+      "updatedAt": "2026-07-03"
+    },
+    {
       "name": "예술의전당 공연영상 무료 상영 <홍콩 필하모닉 오케스트라>",
       "category": "행사",
       "region": "인천",
@@ -6061,6 +6087,19 @@
     }
   ],
   "incheonBenefits": [
+    {
+      "name": "2026 <애스컴-뮤직 플로우 사운즈> 참여 예술인(단체) 공모",
+      "category": "혜택",
+      "region": "인천",
+      "startDate": "2026-07-01",
+      "endDate": "2026-07-13",
+      "location": "(재)인천광역시부평구문화재단",
+      "target": "부평구 또는 인천광역시를 기반으로 활동하는 예술인(단체)",
+      "summary": "부평구문화재단에서 지역 예술인 및 뮤지션을 대상으로 축제 및 행사 공연 참여 기회를 제공하기 위해 진행하는 공모 사업으로, 대중음악, 무용, 마술 등 다양한 분야의 참여 예술인을 모집합니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13702",
+      "id": 1778713506640,
+      "updatedAt": "2026-07-03"
+    },
     {
       "name": "현장체험학습비 지원",
       "category": "혜택",
