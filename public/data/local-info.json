@@ -4547,6 +4547,45 @@
   ],
   "incheonEvents": [
     {
+      "name": "클래식 인사이트 IV : i-신포니에타 <청소년에게 들려주고 싶은 K-클래식>",
+      "category": "행사",
+      "region": "인천",
+      "startDate": "2026-08-13",
+      "endDate": "2026-08-13",
+      "location": "아트센터인천 다목적홀",
+      "target": "8세(초등학생) 이상 관람 가능",
+      "summary": "청소년들의 감성을 깨울 다채로운 음악으로 채워질 클래식 인사이트 시리즈의 네 번째 시간으로, 비발디의 '사계 - 여름'과 거슈윈의 '랩소디 인 블루' 등 쉽고 친근한 클래식 명곡 무대를 선보입니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13697",
+      "id": 1778713506658,
+      "updatedAt": "2026-07-04"
+    },
+    {
+      "name": "제물포구문화체육센터 개관5주년 기념음악회 〈Chapter 5〉",
+      "category": "행사",
+      "region": "인천",
+      "startDate": "2026-07-25",
+      "endDate": "2026-07-25",
+      "location": "제물포구문화체육센터 공연장",
+      "target": "7세 이상",
+      "summary": "제물포구문화체육센터 개관 5주년을 기념하여 개최되는 음악회 〈Chapter 5〉 공연으로, 2026년 7월 25일 오후 5시에 제물포구문화체육센터 공연장에서 진행됩니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13698",
+      "id": 1778713506657,
+      "updatedAt": "2026-07-04"
+    },
+    {
+      "name": "2026 SUMMER FESTA with 변진섭",
+      "category": "행사",
+      "region": "인천",
+      "startDate": "2026-08-08",
+      "endDate": "2026-08-08",
+      "location": "제물포구문화체육센터 공연장",
+      "target": "7세 이상",
+      "summary": "인천 제물포구문화체육센터에서 개최되는 변진섭과 함께하는 2026 SUMMER FESTA 공연입니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13699",
+      "id": 1778713506656,
+      "updatedAt": "2026-07-04"
+    },
+    {
       "name": "클래식시리즈, 산책3 - 이수빈 & 박예람 <Dance & Fantasy>",
       "category": "행사",
       "region": "인천",
