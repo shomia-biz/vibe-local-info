@@ -2510,6 +2510,22 @@
   "nationalExhibitionEvents": [],
   "seoulEvents": [
     {
+      "name": "[서울시평생교육진흥원] 서울시민대학 모두의학교 캠퍼스 8월 모두공연장 페이퍼아트 뮤지컬 [종이아빠]",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-08-22",
+      "endDate": "2026-08-22",
+      "location": "모두의학교 캠퍼스 1층 시민홀",
+      "target": "서울시민 누구나",
+      "summary": "모두의학교 캠퍼스 시민홀에서 개최되는 페이퍼아트 뮤지컬 '종이아빠' 공연으로, 서울시민 누구나 무료로 관람할 수 있습니다.",
+      "link": "https://buly.kr/D3gcSFG",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "id": 1778713506669,
+      "updatedAt": "2026-07-05"
+    },
+    {
       "name": "[마포문화재단] 2026 [인디스커버리 : FESTA] TRACK 01",
       "category": "행사",
       "region": "서울",
