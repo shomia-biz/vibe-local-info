@@ -53,12 +53,19 @@ async function generatePost() {
       return;
     }
 
-    // 기존 포스트 파일들 읽기
+    // 기존 포스트 파일들 읽기 (과거 방식 호환용)
     const existingFiles = fs.readdirSync(postsDir).filter(f => f.endsWith('.md'));
     const existingContents = existingFiles.map(file => fs.readFileSync(path.join(postsDir, file), 'utf8'));
 
+    // [중복 방지 원칙 적용] 히스토리 DB (기록장) 대조
+    const historyPath = path.join(process.cwd(), 'public/data/posted_history.txt');
+    let postedHistory = '';
+    if (fs.existsSync(historyPath)) {
+      postedHistory = fs.readFileSync(historyPath, 'utf8');
+    }
+
     // 1회 실행 당 최대 생성할 블로그 글 수 (필요시 숫자를 변경하시면 됩니다)
-    const MAX_POSTS_TO_GENERATE = 3;
+    const MAX_POSTS_TO_GENERATE = 2;
     const today = new Date().toISOString().split('T')[0]; // 오늘 날짜
 
     // 아직 글을 작성하지 않은 '최신' 항목 찾기 (최대 MAX_POSTS_TO_GENERATE개 수집)
@@ -74,13 +81,16 @@ async function generatePost() {
         break;
       }
 
-      // 제목이나 본문에 해당 데이터의 이름이 포함되어 있는지 확인
-      const alreadyPosted = existingContents.some(content => 
+      // 제목이나 본문에 해당 데이터의 이름이 포함되어 있는지 확인 (기존 방식)
+      const alreadyPostedInFiles = existingContents.some(content => 
         content.includes(item.name) || 
         (content.includes('title:') && content.includes(item.name))
       );
 
-      if (!alreadyPosted) {
+      // [중복 방지 원칙 적용] 기록장에 이미 있으면 (Pass)
+      const alreadyInHistory = postedHistory.includes(item.name);
+
+      if (!alreadyPostedInFiles && !alreadyInHistory) {
         targetItems.push(item);
       }
     }
@@ -214,6 +224,9 @@ tags: [태그1, 태그2, tags3]
         }
       }
 
+      // [중복 방지 원칙 적용] 기록장에 방금 쓴 행사명(ID) 추가 (Write)
+      fs.appendFileSync(historyPath, item.name + '\n', 'utf8');
+      
       console.log(`✅ 블로그 글 생성 완료: ${filename}\n`);
     }
 
