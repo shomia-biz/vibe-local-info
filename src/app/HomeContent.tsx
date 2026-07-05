@@ -664,8 +664,8 @@ export default function HomeContent({ blogPosts = [] }: { blogPosts?: any[] }) {
               className="flex flex-col items-center justify-center p-6 bg-gradient-to-br from-rose-400 to-rose-600 hover:from-rose-500 hover:to-rose-700 text-white rounded-[24px] shadow-lg hover:shadow-rose-200 transition-all active:scale-[0.98] group"
             >
               <span className="text-3xl mb-2 group-hover:-translate-y-1 transition-transform">🎡</span>
-              <span className="text-xl sm:text-2xl font-black tracking-tight">수도권 나들이 명소</span>
-              <span className="text-rose-100 text-sm font-medium mt-1">주말 가족, 연인과 함께 가볼만한 곳</span>
+              <span className="text-xl sm:text-2xl font-black tracking-tight">수도권 모아팁스 행사/축제</span>
+              <span className="text-rose-100 text-sm font-medium mt-1">수도권에서 열리는 다양한 문화·예술·전시 모아보기</span>
             </button>
           </div>
 
