@@ -1522,6 +1522,19 @@
   ],
   "incheonCultureEvents": [
     {
+      "name": "2026 도시산보클럽 멤버 모집",
+      "category": "문화",
+      "region": "인천",
+      "startDate": "2026-07-01",
+      "endDate": "2026-07-12",
+      "location": "패치워크 (카페 동양가배관 건물 3층)",
+      "target": "도시 탐구와 기록, 나만의 책(Zine) 제작 및 축제 전시에 관심 있는 시민",
+      "summary": "도시를 새로운 시선으로 바라보며 기록을 남기고, 종이를 활용한 나만의 책(Zine) 제작과 10월에 개최될 북 페스티벌 전시팀으로 함께 활동할 도시기록 커뮤니티 '도시산보클럽'의 멤버 모집 프로그램입니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13695",
+      "id": 1778713506671,
+      "updatedAt": "2026-07-05"
+    },
+    {
       "name": "지도예찬 - 조선지도 500년, 공간·시간·인간의 이야기",
       "category": "문화",
       "region": "인천",
@@ -4562,6 +4575,19 @@
     }
   ],
   "incheonEvents": [
+    {
+      "name": "화안콘서트 : i-신포니에타 현악4중",
+      "category": "행사",
+      "region": "인천",
+      "startDate": "2026-07-25",
+      "endDate": "2026-07-25",
+      "location": "복합문화공간 화안",
+      "target": "누구나",
+      "summary": "복합문화공간 화안에서 개최되는 i-신포니에타 현악4중주 실내악 콘서트로, 바이올린, 비올라, 첼로의 앙상블과 클라리넷 협연을 통해 무더운 여름 따뜻하고 섬세한 클래식 선율을 전합니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13696",
+      "id": 1778713506670,
+      "updatedAt": "2026-07-05"
+    },
     {
       "name": "클래식 인사이트 IV : i-신포니에타 <청소년에게 들려주고 싶은 K-클래식>",
       "category": "행사",
