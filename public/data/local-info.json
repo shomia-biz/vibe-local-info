@@ -1988,6 +1988,23 @@
   ],
   "seoulExhibitionEvents": [
     {
+      "name": "[청계천박물관] 청계천의 별이 된 노무라 모토유키",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-06-13",
+      "endDate": "2026-10-11",
+      "location": "청계천박물관",
+      "target": "누구나",
+      "summary": "청계천박물관 기획전시실에서 진행되는 '청계천의 별이 된 노무라 모토유키' 무료 전시 행사입니다.",
+      "link": "https://museum.seoul.go.kr/cgcm/board/NR_boardView.do?bbsCd=1002&seq=20260529170246055",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://museum.seoul.go.kr/cgcm/share/static/image/common/slogan.png",
+      "id": 1778713506682,
+      "updatedAt": "2026-07-06"
+    },
+    {
       "name": "유수진 개인전 [흙을 파고, 씨앗을 놓고, 물을 주며]",
       "category": "전시",
       "region": "서울",
