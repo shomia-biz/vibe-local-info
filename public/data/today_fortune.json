@@ -1,23 +1,23 @@
 {
-    "date": "2026-07-06",
+    "date": "2026-07-07",
     "cards": [
         {
-            "type": "행운의 달빛 카드",
-            "general": "마음의 평온과 깊은 휴식이 찾아와 지친 일상을 따뜻하게 위로해 주는 시기입니다. 오늘 밤은 온전히 자신만을 위한 편안한 시간을 가지며 재충전의 기쁨을 누려보세요.",
-            "lucky_item": "라벤더 향 디퓨저",
-            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=라벤더 향 디퓨저"
+            "type": "금전운 상승 카드",
+            "general": "오늘은 뜻밖의 이익이 생기거나 좋은 소식을 들을 수 있는 날입니다. 작은 행운을 놓치지 마세요!",
+            "lucky_item": "가성비 무선 키보드",
+            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=무선키보드"
         },
         {
-            "type": "신비한 별빛 카드",
-            "general": "반짝이는 별빛처럼 생각지도 못한 놀라운 재물운과 성공의 기회가 찾아옵니다. 당신의 숨은 재능이 빛을 발하고 주변의 인정과 아낌없는 찬사를 받게 될 것입니다.",
-            "lucky_item": "달콤한 초콜릿",
-            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=달콤한 초콜릿"
+            "type": "연애운 폭발 카드",
+            "general": "새로운 인연이나 반가운 연락이 올 수 있습니다. 주변 사람들에게 따뜻한 미소를 지어보세요.",
+            "lucky_item": "향기로운 디퓨저",
+            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=디퓨저"
         },
         {
-            "type": "따뜻한 햇살 카드",
-            "general": "사랑스러운 에너지가 가득 피어나며 연애운과 대인관계가 눈부시게 상승하는 날입니다. 당신의 맑고 밝은 미소가 주변 사람들의 마음을 사로잡아 기분 좋은 인연을 만들어줄 거예요.",
-            "lucky_item": "은은한 향의 핸드크림",
-            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=은은한 향의 핸드크림"
+            "type": "평온한 힐링 카드",
+            "general": "바쁜 일상 속에서 나만을 위한 휴식이 필요한 날입니다. 커피 한 잔의 여유가 큰 힘이 될 것입니다.",
+            "lucky_item": "감성 무드등",
+            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=무드등"
         }
     ]
 }
