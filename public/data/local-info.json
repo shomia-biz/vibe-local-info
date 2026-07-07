@@ -4986,6 +4986,20 @@
   ],
   "seoulBenefits": [
     {
+      "name": "서울커리업 구직지원금",
+      "category": "혜택",
+      "region": "서울",
+      "startDate": "2026-07-07",
+      "endDate": "2026-08-18",
+      "location": "서울시",
+      "target": "서울시 거주 만 30~59세 미취업·미창업 여성 (기준 중위소득 150% 이하)",
+      "summary": "경력보유여성의 경제활동 재진입을 지원하기 위해 구직활동에 필요한 포인트를 월 30만 원씩 최대 3개월간(최대 90만 원) 지급하고, 맞춤형 경력개발 교육 및 1:1 취업 상담 등을 종합 지원하는 사업입니다.",
+      "link": "https://mediahub.seoul.go.kr/archives/2018671?utm_source=main_inner1&utm_medium=banner&utm_campaign=hotissue",
+      "imageUrl": "https://mediahub.seoul.go.kr/uploads/mediahub/2026/07/rPSxPwgcWntPbpHCawBJlCmBZjLxgLXn.jpg?ver=1.0",
+      "id": 1778713506692,
+      "updatedAt": "2026-07-07"
+    },
+    {
       "name": "종로구 출생축하선물 지원사업",
       "category": "혜택",
       "region": "서울",
