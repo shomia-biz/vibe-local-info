@@ -184,7 +184,10 @@ async function startManualWorkflow() {
       location: "",
       target: "",
       summary: "",
-      link: urlInput
+      link: urlInput,
+      serviceField: "",
+      supportType: "",
+      targetGroup: ""
     };
 
     if (webpageText.trim()) {
@@ -193,7 +196,7 @@ async function startManualWorkflow() {
       const todayStr = new Date().toISOString().split('T')[0];
       
       const prompt = `아래 수집된 텍스트와 URL 링크 정보를 분석해서 규격화된 시스템용 JSON 데이터로 정제해줘.
-      형식: {name: 서비스명또는행사명, category: '행사' 또는 '문화' 또는 '전시' 또는 '혜택', region: '서울' 또는 '경기' 또는 '인천' 또는 '전국', startDate: 'YYYY-MM-DD', endDate: 'YYYY-MM-DD', location: 장소 또는 기관명, target: 대상층, summary: 내용 요약설명, link: 링크주소}
+      형식: {name: 서비스명또는행사명, category: '행사' 또는 '문화' 또는 '전시' 또는 '혜택', region: '서울' 또는 '경기' 또는 '인천' 또는 '전국', startDate: 'YYYY-MM-DD', endDate: 'YYYY-MM-DD', location: 장소 또는 기관명, target: 대상층, summary: 내용 요약설명, link: 링크주소, serviceField: 분야(예: 문화/예술, 복지 등), supportType: 지원형태(예: 현금, 서비스 등), targetGroup: 가구유형(예: 다자녀, 청년 등)}
 
       [필수 규칙 가이드라인]
       1. category: 
@@ -260,6 +263,9 @@ async function startManualWorkflow() {
     const summary = (await askQuestion(`8) 내용 요약 [${aiData.summary}]: `)).trim() || aiData.summary;
     const link = (await askQuestion(`9) 홈페이지 링크 [${aiData.link}]: `)).trim() || aiData.link;
     const imageUrl = (await askQuestion(`10) 대표 이미지 URL [${aiData.imageUrl || ''}]: `)).trim() || aiData.imageUrl || "";
+    const serviceField = (await askQuestion(`11) 서비스 분야 (예: 문화/예술, 복지 등) [${aiData.serviceField || ''}]: `)).trim() || aiData.serviceField || "";
+    const supportType = (await askQuestion(`12) 지원 형태 (예: 현금, 서비스 등) [${aiData.supportType || ''}]: `)).trim() || aiData.supportType || "";
+    const targetGroup = (await askQuestion(`13) 가구/대상 유형 (예: 다자녀, 청년 등) [${aiData.targetGroup || ''}]: `)).trim() || aiData.targetGroup || "";
 
     const finalItem = {
       name,
@@ -271,7 +277,10 @@ async function startManualWorkflow() {
       target,
       summary,
       link,
-      imageUrl
+      imageUrl,
+      serviceField,
+      supportType,
+      targetGroup
     };
 
     // 3단계: 파일에 최종 저장

@@ -47,27 +47,24 @@ def generate_fortune_with_gemini():
         
         prompt = """
         너는 매일 사람들에게 긍정적인 에너지를 주는 다정한 점성술사야.
-        방문자가 3장의 미스터리 타로 카드 중 하나를 선택하는 게임을 진행할 거야.
-        너는 3개의 서로 다른 매력적인 운세(예: 금전운 폭발, 연애운 상승, 평온한 힐링 등)를 1~2문장으로 긍정적으로 작성해주고,
-        각 운세에 어울리는 '행운 아이템'을 일상 생활에서 쉽게 살 수 있는 구체적인 상품(예: 무드등, 비타민, 디퓨저, 텀블러 등)으로 각각 1개씩 추천해줘.
+        방문자가 자신의 띠를 선택하면 오늘의 운세를 알려주는 띠별 운세 서비스를 제공할 거야.
+        12가지 띠(쥐띠, 소띠, 호랑이띠, 토끼띠, 용띠, 뱀띠, 말띠, 양띠, 원숭이띠, 닭띠, 개띠, 돼지띠) 각각에 대해
+        긍정적이고 희망찬 운세(1~2문장)를 작성해주고,
+        각 띠별 운세에 어울리는 '행운 아이템'을 일상 생활에서 쉽게 살 수 있는 구체적인 상품(예: 무드등, 비타민, 디퓨저, 텀블러 등)으로 각각 1개씩 추천해줘.
         
         반드시 아래 JSON 배열 형식에 맞춰서 답변해줘. 다른 말은 절대 하지마.
         [
             {
-                "type": "행운의 달빛 카드",
-                "general": "첫 번째 운세 내용",
+                "type": "쥐띠",
+                "general": "오늘의 운세 내용",
                 "lucky_item": "아이템1"
             },
             {
-                "type": "신비한 별빛 카드",
-                "general": "두 번째 운세 내용",
+                "type": "소띠",
+                "general": "오늘의 운세 내용",
                 "lucky_item": "아이템2"
             },
-            {
-                "type": "따뜻한 햇살 카드",
-                "general": "세 번째 운세 내용",
-                "lucky_item": "아이템3"
-            }
+            ... (나머지 10개 띠도 동일한 형식으로 전부 포함하여 총 12개의 아이템을 만들어야 함)
         ]
         """
         
@@ -97,28 +94,18 @@ def generate_fortune_with_gemini():
         return get_fallback_fortune()
 
 def get_fallback_fortune():
+    zodiacs = ["쥐띠", "소띠", "호랑이띠", "토끼띠", "용띠", "뱀띠", "말띠", "양띠", "원숭이띠", "닭띠", "개띠", "돼지띠"]
+    cards = []
+    for z in zodiacs:
+        cards.append({
+            "type": z,
+            "general": f"오늘은 {z}를 위한 특별하고 좋은 에너지가 가득한 날입니다. 작은 행운을 놓치지 마세요!",
+            "lucky_item": "감성 무드등",
+            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=무드등"
+        })
     return {
         "date": datetime.now().strftime("%Y-%m-%d"),
-        "cards": [
-            {
-                "type": "금전운 상승 카드",
-                "general": "오늘은 뜻밖의 이익이 생기거나 좋은 소식을 들을 수 있는 날입니다. 작은 행운을 놓치지 마세요!",
-                "lucky_item": "가성비 무선 키보드",
-                "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=무선키보드"
-            },
-            {
-                "type": "연애운 폭발 카드",
-                "general": "새로운 인연이나 반가운 연락이 올 수 있습니다. 주변 사람들에게 따뜻한 미소를 지어보세요.",
-                "lucky_item": "향기로운 디퓨저",
-                "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=디퓨저"
-            },
-            {
-                "type": "평온한 힐링 카드",
-                "general": "바쁜 일상 속에서 나만을 위한 휴식이 필요한 날입니다. 커피 한 잔의 여유가 큰 힘이 될 것입니다.",
-                "lucky_item": "감성 무드등",
-                "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=무드등"
-            }
-        ]
+        "cards": cards
     }
 
 if __name__ == "__main__":

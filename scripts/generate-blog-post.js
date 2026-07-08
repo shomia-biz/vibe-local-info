@@ -81,14 +81,15 @@ async function generatePost() {
         break;
       }
 
-      // 제목이나 본문에 해당 데이터의 이름이 포함되어 있는지 확인 (기존 방식)
+      // 제목이나 본문에 해당 데이터의 이름 또는 고유 ID가 포함되어 있는지 확인
       const alreadyPostedInFiles = existingContents.some(content => 
+        (item.id && content.includes(item.id)) || 
         content.includes(item.name) || 
         (content.includes('title:') && content.includes(item.name))
       );
 
-      // [중복 방지 원칙 적용] 기록장에 이미 있으면 (Pass)
-      const alreadyInHistory = postedHistory.includes(item.name);
+      // [중복 방지 원칙 적용] 기록장에 고유 ID나 이름이 이미 있으면 (Pass)
+      const alreadyInHistory = (item.id && postedHistory.includes(item.id)) || postedHistory.includes(item.name);
 
       if (!alreadyPostedInFiles && !alreadyInHistory) {
         targetItems.push(item);
@@ -224,8 +225,9 @@ tags: [태그1, 태그2, tags3]
         }
       }
 
-      // [중복 방지 원칙 적용] 기록장에 방금 쓴 행사명(ID) 추가 (Write)
-      fs.appendFileSync(historyPath, item.name + '\n', 'utf8');
+      // [중복 방지 원칙 적용] 기록장에 방금 쓴 행사명과 ID 추가 (Write)
+      const recordText = latestItem.id ? `${latestItem.id}|${latestItem.name}` : latestItem.name;
+      fs.appendFileSync(historyPath, recordText + '\n', 'utf8');
       
       console.log(`✅ 블로그 글 생성 완료: ${filename}\n`);
     }

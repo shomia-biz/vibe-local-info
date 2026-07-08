@@ -1,21 +1,75 @@
 {
-    "date": "2026-07-07",
+    "date": "2026-07-08",
     "cards": [
         {
-            "type": "금전운 상승 카드",
-            "general": "오늘은 뜻밖의 이익이 생기거나 좋은 소식을 들을 수 있는 날입니다. 작은 행운을 놓치지 마세요!",
-            "lucky_item": "가성비 무선 키보드",
-            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=무선키보드"
+            "type": "쥐띠",
+            "general": "오늘은 쥐띠를 위한 특별하고 좋은 에너지가 가득한 날입니다. 작은 행운을 놓치지 마세요!",
+            "lucky_item": "감성 무드등",
+            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=무드등"
         },
         {
-            "type": "연애운 폭발 카드",
-            "general": "새로운 인연이나 반가운 연락이 올 수 있습니다. 주변 사람들에게 따뜻한 미소를 지어보세요.",
-            "lucky_item": "향기로운 디퓨저",
-            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=디퓨저"
+            "type": "소띠",
+            "general": "오늘은 소띠를 위한 특별하고 좋은 에너지가 가득한 날입니다. 작은 행운을 놓치지 마세요!",
+            "lucky_item": "감성 무드등",
+            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=무드등"
         },
         {
-            "type": "평온한 힐링 카드",
-            "general": "바쁜 일상 속에서 나만을 위한 휴식이 필요한 날입니다. 커피 한 잔의 여유가 큰 힘이 될 것입니다.",
+            "type": "호랑이띠",
+            "general": "오늘은 호랑이띠를 위한 특별하고 좋은 에너지가 가득한 날입니다. 작은 행운을 놓치지 마세요!",
+            "lucky_item": "감성 무드등",
+            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=무드등"
+        },
+        {
+            "type": "토끼띠",
+            "general": "오늘은 토끼띠를 위한 특별하고 좋은 에너지가 가득한 날입니다. 작은 행운을 놓치지 마세요!",
+            "lucky_item": "감성 무드등",
+            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=무드등"
+        },
+        {
+            "type": "용띠",
+            "general": "오늘은 용띠를 위한 특별하고 좋은 에너지가 가득한 날입니다. 작은 행운을 놓치지 마세요!",
+            "lucky_item": "감성 무드등",
+            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=무드등"
+        },
+        {
+            "type": "뱀띠",
+            "general": "오늘은 뱀띠를 위한 특별하고 좋은 에너지가 가득한 날입니다. 작은 행운을 놓치지 마세요!",
+            "lucky_item": "감성 무드등",
+            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=무드등"
+        },
+        {
+            "type": "말띠",
+            "general": "오늘은 말띠를 위한 특별하고 좋은 에너지가 가득한 날입니다. 작은 행운을 놓치지 마세요!",
+            "lucky_item": "감성 무드등",
+            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=무드등"
+        },
+        {
+            "type": "양띠",
+            "general": "오늘은 양띠를 위한 특별하고 좋은 에너지가 가득한 날입니다. 작은 행운을 놓치지 마세요!",
+            "lucky_item": "감성 무드등",
+            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=무드등"
+        },
+        {
+            "type": "원숭이띠",
+            "general": "오늘은 원숭이띠를 위한 특별하고 좋은 에너지가 가득한 날입니다. 작은 행운을 놓치지 마세요!",
+            "lucky_item": "감성 무드등",
+            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=무드등"
+        },
+        {
+            "type": "닭띠",
+            "general": "오늘은 닭띠를 위한 특별하고 좋은 에너지가 가득한 날입니다. 작은 행운을 놓치지 마세요!",
+            "lucky_item": "감성 무드등",
+            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=무드등"
+        },
+        {
+            "type": "개띠",
+            "general": "오늘은 개띠를 위한 특별하고 좋은 에너지가 가득한 날입니다. 작은 행운을 놓치지 마세요!",
+            "lucky_item": "감성 무드등",
+            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=무드등"
+        },
+        {
+            "type": "돼지띠",
+            "general": "오늘은 돼지띠를 위한 특별하고 좋은 에너지가 가득한 날입니다. 작은 행운을 놓치지 마세요!",
             "lucky_item": "감성 무드등",
             "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=무드등"
         }

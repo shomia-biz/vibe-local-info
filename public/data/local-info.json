@@ -5080,7 +5080,10 @@
       "link": "https://mediahub.seoul.go.kr/archives/2018671?utm_source=main_inner1&utm_medium=banner&utm_campaign=hotissue",
       "imageUrl": "https://mediahub.seoul.go.kr/uploads/mediahub/2026/07/rPSxPwgcWntPbpHCawBJlCmBZjLxgLXn.jpg?ver=1.0",
       "id": 1778713506692,
-      "updatedAt": "2026-07-07"
+      "updatedAt": "2026-07-07",
+      "serviceField": "고용 창업",
+      "supportType": "현금",
+      "targetGroup": "개인"
     },
     {
       "name": "종로구 출생축하선물 지원사업",
@@ -7096,7 +7099,10 @@
       "summary": "부평구문화재단에서 지역 예술인 및 뮤지션을 대상으로 축제 및 행사 공연 참여 기회를 제공하기 위해 진행하는 공모 사업으로, 대중음악, 무용, 마술 등 다양한 분야의 참여 예술인을 모집합니다.",
       "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13702",
       "id": 1778713506640,
-      "updatedAt": "2026-07-03"
+      "updatedAt": "2026-07-03",
+      "serviceField": "문화 환경",
+      "supportType": "서비스(일자리)",
+      "targetGroup": "법인/시설/단체"
     },
     {
       "name": "현장체험학습비 지원",
@@ -7209,7 +7215,10 @@
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/138300000066",
       "imageUrl": "http://www.gov.kr/images/etc/og_image_600.png",
       "id": 1778713506599,
-      "updatedAt": "2026-06-28"
+      "updatedAt": "2026-06-28",
+      "serviceField": "보호 돌봄",
+      "supportType": "서비스(돌봄)",
+      "targetGroup": "가구"
     },
     {
       "name": "두루누리 사회보험료 지원",
@@ -7223,7 +7232,10 @@
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200005059",
       "imageUrl": "http://www.gov.kr/images/etc/og_image_600.png",
       "id": 1778713506595,
-      "updatedAt": "2026-06-27"
+      "updatedAt": "2026-06-27",
+      "serviceField": "생활안정",
+      "supportType": "현금(감면)",
+      "targetGroup": "소상공인"
     },
     {
       "name": "2025 영구 불임예상 난자·정자 냉동 지원",
@@ -7237,7 +7249,10 @@
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/135200005058",
       "imageUrl": "http://www.gov.kr/images/etc/og_image_600.png",
       "id": 1778713506594,
-      "updatedAt": "2026-06-27"
+      "updatedAt": "2026-06-27",
+      "serviceField": "보건 의료",
+      "supportType": "현금",
+      "targetGroup": "개인"
     },
     {
       "name": "조기재취업수당",
@@ -7251,7 +7266,10 @@
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200000063",
       "imageUrl": "http://www.gov.kr/images/etc/og_image_600.png",
       "id": 1778713506581,
-      "updatedAt": "2026-06-25"
+      "updatedAt": "2026-06-25",
+      "serviceField": "고용 창업",
+      "supportType": "현금",
+      "targetGroup": "개인"
     },
     {
       "name": "직업훈련 생계비대부사업",
@@ -7265,7 +7283,10 @@
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200000037",
       "imageUrl": "http://www.gov.kr/images/etc/og_image_600.png",
       "id": 1778713506580,
-      "updatedAt": "2026-06-25"
+      "updatedAt": "2026-06-25",
+      "serviceField": "고용 창업",
+      "supportType": "현금(융자)",
+      "targetGroup": "개인"
     },
     {
       "name": "산재근로자 케어센터 지원",
@@ -7279,7 +7300,10 @@
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200000035",
       "imageUrl": "http://www.gov.kr/images/etc/og_image_600.png",
       "id": 1778713506541,
-      "updatedAt": "2026-06-23"
+      "updatedAt": "2026-06-23",
+      "serviceField": "보호 돌봄",
+      "supportType": "시설이용",
+      "targetGroup": "개인"
     },
     {
       "name": "산재근로자 직장 복귀 지원",
@@ -7293,7 +7317,10 @@
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200000021",
       "imageUrl": "http://www.gov.kr/images/etc/og_image_600.png",
       "id": 1778713506540,
-      "updatedAt": "2026-06-23"
+      "updatedAt": "2026-06-23",
+      "serviceField": "고용 창업",
+      "supportType": "현금",
+      "targetGroup": "법인/시설/단체"
     },
     {
       "name": "청년 일경험 지원",
@@ -7306,7 +7333,10 @@
       "summary": "실무 중심의 다양한 일경험 프로그램 제공을 통해 청년의 직무탐색 및 직무역량 강화 지원",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200005006",
       "id": 1778713506537,
-      "updatedAt": "2026-06-22"
+      "updatedAt": "2026-06-22",
+      "serviceField": "고용 창업",
+      "supportType": "서비스(일자리)",
+      "targetGroup": "개인"
     },
     {
       "name": "고용보험 미적용자 출산급여",
@@ -7319,7 +7349,10 @@
       "summary": "고용보험 미적용으로 출산전후휴가급여를 받지 못하는 출산여성에게 출산급여 총 150만원(월 50만원 x 3개월분)을 일괄 지급합니다.",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200000153",
       "id": 1778713506536,
-      "updatedAt": "2026-06-22"
+      "updatedAt": "2026-06-22",
+      "serviceField": "임신 출산",
+      "supportType": "현금",
+      "targetGroup": "개인"
     },
     {
       "name": "산재근로자 대체인력지원 사업",
@@ -7332,7 +7365,10 @@
       "summary": "산재근로자의 고용안정과 사업주의 경영부담 완화를 위해 대체근로자를 채용한 50인 미만 사업주에게 대체근로자 임금의 50% 범위 내(월 60만 원 이내, 최대 6개월)를 지원합니다.",
       "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200000149",
       "id": 1778713506535,
-      "updatedAt": "2026-06-22"
+      "updatedAt": "2026-06-22",
+      "serviceField": "고용 창업",
+      "supportType": "현금",
+      "targetGroup": "소상공인"
     },
     {
       "name": "신혼부부 및 청년 주택자금 대출이자 지원 사업",
