@@ -1556,6 +1556,32 @@
   ],
   "incheonCultureEvents": [
     {
+      "name": "[투어프렌즈] 맛따라, 썰따라 도보투어",
+      "category": "문화",
+      "region": "인천",
+      "startDate": "2026-06-28",
+      "endDate": "2026-10-18",
+      "location": "하버파크호텔",
+      "target": "누구나",
+      "summary": "하버파크 호텔을 거점으로 투어프렌즈와 함께 개항장의 역사와 문화 이야기, 핫플레이스 소개 및 인천 관련 음식을 체험하며 걷는 도보 투어 프로그램",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13703",
+      "id": 1778713506723,
+      "updatedAt": "2026-07-09"
+    },
+    {
+      "name": "[투어프렌즈] 총총총 미래도시 송도 탐험 도보투어",
+      "category": "문화",
+      "region": "인천",
+      "startDate": "2026-06-27",
+      "endDate": "2026-10-17",
+      "location": "G타워전망대",
+      "target": "일반",
+      "summary": "송도의 핫플을 잇는 신나는 도보투어! 미래도시 송도를 걸어서 제대로 즐겨보자! G타워전망대에서 듣는 미래도시 송도 이야기와 센트럴파크를 비롯한 핫플레이스 방문, 미션을 통한 인천 로컬 기념품 획득까지!",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13704",
+      "id": 1778713506722,
+      "updatedAt": "2026-07-09"
+    },
+    {
       "name": "2026 도시산보클럽 멤버 모집",
       "category": "문화",
       "region": "인천",
@@ -4694,6 +4720,19 @@
     }
   ],
   "incheonEvents": [
+    {
+      "name": "제29회 청소년 협주곡의 밤",
+      "category": "행사",
+      "region": "인천",
+      "startDate": "2026-07-19",
+      "endDate": "2026-07-19",
+      "location": "아트센터 인천",
+      "target": "청소년",
+      "summary": "아트센터 인천에서 열리는 제29회 청소년 협주곡의 밤. 지휘자 백종성과 사회자 이연성, 특별공연 IL CANTO 및 첼로, 소프라노, 바이올린, 트럼펫, 마림바 연주자들이 참여한다. 본 공연은 인천광역시 보조금 지원 사업으로 전석 무료이다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13705",
+      "id": 1778713506721,
+      "updatedAt": "2026-07-09"
+    },
     {
       "name": "화안콘서트 : i-신포니에타 현악4중",
       "category": "행사",
