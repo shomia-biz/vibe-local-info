@@ -7598,32 +7598,6 @@
   ],
   "nationalBenefits": [
     {
-      "name": "영산강섬진강수계 주민지원(특별지원사업)",
-      "category": "혜택",
-      "region": "전국",
-      "startDate": "2026-07-08",
-      "endDate": "상시",
-      "location": "영산강유역환경청(영산강섬진강수계관리위원회)",
-      "target": "상수원관리지역 관할 8개 시군 주민/기관",
-      "summary": "영산강·섬진강수계 상수원관리지역 관할 8개 시군에 주민복지 증진, 수질 개선, 소득 향상을 위한 사업비(수계기금)를 지원하는 사업.",
-      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/148000000034",
-      "id": 1778713506707,
-      "updatedAt": "2026-07-08"
-    },
-    {
-      "name": "금속광산 현대화 굴진 지원",
-      "category": "혜택",
-      "region": "전국",
-      "startDate": "2026-07-08",
-      "endDate": "상시",
-      "location": "한국광해광업공단",
-      "target": "광업법 제3조에 의한 법정광물 중 금속광종을 탐사ㆍ개발하고자 하는 광산",
-      "summary": "금속광산을 대상으로 사업비의 50% 이내로 굴진비용 지원",
-      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/145000000053",
-      "id": 1778713506706,
-      "updatedAt": "2026-07-08"
-    },
-    {
       "name": "중,고등학생 통학교통비 지원 사업",
       "category": "혜택",
       "region": "전국",
