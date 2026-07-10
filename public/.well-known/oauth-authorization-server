@@ -13,6 +13,7 @@
   "agent_auth": {
     "skill": "https://moa-tips.com/auth.md",
     "register_uri": "https://moa-tips.com/api/register",
+    "claim_uri": "https://moa-tips.com/api/claim",
     "identity_endpoint": "https://moa-tips.com/agent/identity",
     "claim_endpoint": "https://moa-tips.com/agent/identity/claim",
     "events_endpoint": "https://moa-tips.com/agent/event/notify",
@@ -21,10 +22,14 @@
       "identity_assertion",
       "service_auth"
     ],
+    "anonymous": {
+      "credential_types_supported": ["none"]
+    },
     "identity_assertion": {
       "assertion_types_supported": [
         "urn:ietf:params:oauth:token-type:id-jag"
-      ]
+      ],
+      "credential_types_supported": ["none"]
     },
     "events_supported": [
       "https://schemas.workos.com/events/agent/auth/identity/assertion/revoked"
