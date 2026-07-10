@@ -2,3 +2,4 @@ User-Agent: *
 Allow: /
 Disallow: /cdn-cgi/
 Sitemap: https://moa-tips.com/sitemap.xml
+Content-Signal: ai-train=no, search=yes, ai-input=yes
