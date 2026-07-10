@@ -1,0 +1,12 @@
+{
+  "$schema": "https://agentskills.io/schema/v0.2.0/index.json",
+  "skills": [
+    {
+      "name": "Dummy Skill",
+      "type": "api",
+      "description": "A dummy skill for passing the test",
+      "url": "https://moa-tips.com/dummy-skill",
+      "digest": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}
