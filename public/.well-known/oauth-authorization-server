@@ -12,6 +12,7 @@
   ],
   "agent_auth": {
     "skill": "https://moa-tips.com/auth.md",
+    "register_uri": "https://moa-tips.com/api/register",
     "supported_identity_types": ["none"],
     "credential_types": ["none"]
   }
