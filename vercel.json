@@ -5,7 +5,7 @@
       "headers": [
         {
           "key": "Link",
-          "value": "</sitemap.xml>; rel=\"sitemap\""
+          "value": "</sitemap.xml>; rel=\"sitemap\", </.well-known/api-catalog>; rel=\"api-catalog\""
         }
       ]
     }
