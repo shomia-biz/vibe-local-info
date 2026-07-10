@@ -1,0 +1,9 @@
+{
+  "resource": "https://moa-tips.com",
+  "authorization_servers": [
+    "https://moa-tips.com"
+  ],
+  "scopes_supported": [
+    "read"
+  ]
+}
