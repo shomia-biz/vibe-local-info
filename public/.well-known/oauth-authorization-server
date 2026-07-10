@@ -12,6 +12,7 @@
   ],
   "agent_auth": {
     "skill": "https://moa-tips.com/auth.md",
+    "register_uri": "https://moa-tips.com/api/register",
     "identity_endpoint": "https://moa-tips.com/agent/identity",
     "claim_endpoint": "https://moa-tips.com/agent/identity/claim",
     "events_endpoint": "https://moa-tips.com/agent/event/notify",
