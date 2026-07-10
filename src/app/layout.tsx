@@ -59,15 +59,16 @@ export default function RootLayout({
                 if (typeof navigator !== 'undefined' && 'modelContext' in navigator) {
                   try {
                     navigator.modelContext.provideContext({
-                      tools: {
-                        searchBenefits: {
+                      tools: [
+                        {
+                          name: "searchBenefits",
                           description: "Search for available benefits in Moa-Tips",
                           inputSchema: { type: "object", properties: { region: { type: "string" } } },
                           execute: async function(args) {
-                            return { text: "Search executed successfully for " + args.region };
+                            return { text: "Search executed successfully for " + (args.region || "all") };
                           }
                         }
-                      }
+                      ]
                     });
                   } catch (e) {
                     console.error("WebMCP registration failed:", e);
