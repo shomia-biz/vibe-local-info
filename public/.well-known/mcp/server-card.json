@@ -1,0 +1,11 @@
+{
+  "serverInfo": {
+    "name": "moa-tips",
+    "version": "1.0.0"
+  },
+  "transport": {
+    "type": "sse",
+    "endpoint": "https://moa-tips.com/mcp/sse"
+  },
+  "capabilities": {}
+}
