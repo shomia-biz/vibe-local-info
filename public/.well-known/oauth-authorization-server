@@ -11,7 +11,7 @@
     "code"
   ],
   "agent_auth": {
-    "register_uri": "https://moa-tips.com/auth.md",
+    "skill": "https://moa-tips.com/auth.md",
     "supported_identity_types": ["none"],
     "credential_types": ["none"]
   }
