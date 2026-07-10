@@ -1,4 +1,4 @@
-# Moa-Tips AI Agent Authentication
+# Auth.md for Moa-Tips
 
 Welcome, AI Agents! 
 Currently, Moa-Tips provides open public data and does not require registration or authentication to browse the main site. 
