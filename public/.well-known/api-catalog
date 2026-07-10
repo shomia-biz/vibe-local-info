@@ -1,8 +1,25 @@
 {
-  "openapi": "3.0.0",
-  "info": {
-    "title": "Moa-Tips API Catalog",
-    "version": "1.0.0"
-  },
-  "paths": {}
+  "linkset": [
+    {
+      "anchor": "https://moa-tips.com/api",
+      "service-desc": [
+        {
+          "href": "https://moa-tips.com/openapi.json",
+          "type": "application/vnd.oai.openapi+json;version=3.0"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://moa-tips.com/docs",
+          "type": "text/html"
+        }
+      ],
+      "status": [
+        {
+          "href": "https://moa-tips.com/status",
+          "type": "application/json"
+        }
+      ]
+    }
+  ]
 }
