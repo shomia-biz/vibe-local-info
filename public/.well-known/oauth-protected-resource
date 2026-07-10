@@ -5,5 +5,8 @@
   ],
   "scopes_supported": [
     "read"
+  ],
+  "bearer_methods_supported": [
+    "header"
   ]
 }
