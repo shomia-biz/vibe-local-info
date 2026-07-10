@@ -4772,6 +4772,20 @@
   ],
   "incheonEvents": [
     {
+      "name": "풍류일로",
+      "category": "행사",
+      "region": "인천",
+      "startDate": "2026-07-29",
+      "endDate": "2026-07-29",
+      "location": "국악전용극장 잔치마당",
+      "target": "누구나",
+      "summary": "인천의 전통 음악인 인천향제줄풍류를 비롯해 경풍년, 새가락별곡, 고법산조 등을 오늘의 감각으로 풀어낸 국악 공연",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13706",
+      "imageUrl": "https://ifac.or.kr/resource/www/images/layout/og_images.png",
+      "id": 1778713506737,
+      "updatedAt": "2026-07-10"
+    },
+    {
       "name": "제29회 청소년 협주곡의 밤",
       "category": "행사",
       "region": "인천",
