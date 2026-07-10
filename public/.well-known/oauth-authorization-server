@@ -1,0 +1,18 @@
+{
+  "issuer": "https://moa-tips.com",
+  "authorization_endpoint": "https://moa-tips.com/oauth/authorize",
+  "token_endpoint": "https://moa-tips.com/oauth/token",
+  "jwks_uri": "https://moa-tips.com/oauth/jwks",
+  "grant_types_supported": [
+    "authorization_code",
+    "client_credentials"
+  ],
+  "response_types_supported": [
+    "code"
+  ],
+  "agent_auth": {
+    "register_uri": "https://moa-tips.com/auth.md",
+    "supported_identity_types": ["none"],
+    "credential_types": ["none"]
+  }
+}
