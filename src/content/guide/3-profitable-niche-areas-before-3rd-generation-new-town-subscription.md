@@ -1,7 +1,7 @@
 ---
 title: "“서울 아파트 반값이라고?” 3기 신도시 청약 전 반드시 확인해야 할 ‘돈 버는’ 틈새 지역 3곳"
 summary: "치솟는 서울 집값 속에서 '서울 반값'으로 내 집 마련이 가능한 3기 신도시 핵심 틈새 지역 3곳의 입지, 교통 호재, 분양가 예측까지 완벽 분석해 드립니다."
-date: 2025-02-18
+date: 2026-07-12
 category: 부동산
 thumbnail: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
 cta_link: "https://moa-tips.com"
