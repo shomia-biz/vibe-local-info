@@ -4373,6 +4373,47 @@
   ],
   "kyeonggiEvents": [
     {
+      "name": "제21회 광릉숲축제",
+      "category": "행사",
+      "region": "경기",
+      "startDate": "2026-10-24",
+      "endDate": "2026-10-25",
+      "location": "남양주시 광릉숲 일원",
+      "target": "누구나",
+      "summary": "광릉숲길 걷기+숲속공연+환경경 체험프로그램 운영 등",
+      "link": "https://www.nyj.go.kr/gff/index.do",
+      "imageUrl": "https://www.nyj.go.kr/site/gff/images/main/main_title_txt.png",
+      "id": 1778713506759,
+      "updatedAt": "2026-07-12"
+    },
+    {
+      "name": "제40회 정약용문화제",
+      "category": "행사",
+      "region": "경기",
+      "startDate": "2026-10-17",
+      "endDate": "2026-10-18",
+      "location": "남양주시 정약용유적지 일원",
+      "target": "누구나",
+      "summary": "정약용 선생의 정신을 기리는 역사문화축제",
+      "link": "https://www.nyj.go.kr/thinkj/index.do",
+      "imageUrl": "https://www.nyj.go.kr/common/images/ci_img_3.png",
+      "id": 1778713506758,
+      "updatedAt": "2026-07-12"
+    },
+    {
+      "name": "2026 파크콘서트",
+      "category": "행사",
+      "region": "경기",
+      "startDate": "2026-09-01",
+      "endDate": "2026-09-30",
+      "location": "중앙공원 야외공연장",
+      "target": "누구나",
+      "summary": "성남시 분당구 중앙공원 야외공연장에서 진행되는 야외 콘서트로, 축제 기간 중 총 3회 공연이 예정되어 있습니다.",
+      "link": "",
+      "id": 1778713506757,
+      "updatedAt": "2026-07-12"
+    },
+    {
       "name": "2026 김포 선셋 페스타",
       "category": "행사",
       "region": "경기",
