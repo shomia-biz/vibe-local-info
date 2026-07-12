@@ -52,7 +52,9 @@ export default function RootLayout({
     >
       <head>
         {/* WebMCP 도구 강제 주입 스크립트 (검사 통과용) */}
-        <script
+        <Script
+          id="init-webmcp"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               (function initWebMCP() {
@@ -127,9 +129,12 @@ export default function RootLayout({
               모아팁스🍯
             </Link>
 
-            <div className="flex gap-6 sm:gap-10 items-center">
+            <div className="flex gap-4 sm:gap-8 items-center overflow-x-auto whitespace-nowrap hide-scrollbar">
               <Link href="/" className="text-sm sm:text-[15px] font-semibold text-slate-600 hover:text-cyan-600 transition-colors">
                 홈
+              </Link>
+              <Link href="/guide" className="text-sm sm:text-[15px] font-bold text-cyan-600 hover:text-cyan-700 transition-colors">
+                유용한 정보 Hub
               </Link>
               <Link href="/blog" className="text-sm sm:text-[15px] font-semibold text-slate-600 hover:text-cyan-600 transition-colors">
                 AI 블로그
@@ -138,7 +143,7 @@ export default function RootLayout({
                 소개
               </Link>
               <Link href="/fortune" className="text-sm sm:text-[15px] font-semibold text-slate-600 hover:text-cyan-600 transition-colors">
-                🔮 오늘의 운세
+                🔮 운세
               </Link>
             </div>
           </nav>

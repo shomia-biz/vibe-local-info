@@ -11,6 +11,7 @@ function generateSitemap() {
   const staticPages = [
     { loc: `${domain}/`, priority: '1.0', changefreq: 'daily' },
     { loc: `${domain}/blog/`, priority: '0.8', changefreq: 'daily' },
+    { loc: `${domain}/guide/`, priority: '0.9', changefreq: 'daily' },
     { loc: `${domain}/about/`, priority: '0.5', changefreq: 'weekly' },
     { loc: `${domain}/contact/`, priority: '0.5', changefreq: 'weekly' },
     { loc: `${domain}/fortune/`, priority: '0.5', changefreq: 'daily' }
@@ -54,6 +55,28 @@ function generateSitemap() {
 
       xml += '  <url>\n';
       xml += `    <loc>${domain}/blog/${slug}/</loc>\n`;
+      xml += `    <lastmod>${postDate}</lastmod>\n`;
+      xml += '  </url>\n';
+    });
+  }
+
+  // 3. 유용한 정보(Guide) 포스트 동적 추가
+  const guideDir = path.join(process.cwd(), 'src/content/guide');
+  if (fs.existsSync(guideDir)) {
+    const files = fs.readdirSync(guideDir).filter(file => file.endsWith('.md'));
+    
+    files.forEach(file => {
+      const slug = file.replace(/\.md$/, '');
+      const postPath = path.join(guideDir, file);
+      
+      let postDate = today;
+      try {
+        const stats = fs.statSync(postPath);
+        postDate = stats.mtime.toISOString().split('T')[0];
+      } catch (e) {}
+
+      xml += '  <url>\n';
+      xml += `    <loc>${domain}/guide/${slug}/</loc>\n`;
       xml += `    <lastmod>${postDate}</lastmod>\n`;
       xml += '  </url>\n';
     });
