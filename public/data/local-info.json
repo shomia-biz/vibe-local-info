@@ -2082,6 +2082,23 @@
   ],
   "seoulExhibitionEvents": [
     {
+      "name": "[서울아트책보고] 사랑의 덕통사고: 사랑 이후, 우리가 만들어 낸 세계",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-06-19",
+      "endDate": "2026-09-06",
+      "location": "서울아트책보고 갤러리",
+      "target": "누구나",
+      "summary": "서울아트책보고 갤러리에서 개최되는 '사랑의 덕통사고: 사랑 이후, 우리가 만들어 낸 세계' 전시입니다.",
+      "link": "https://artbookbogo.kr/seoul/menu/10024/program/30009/cultureDetail.do?currentPageNo=1&cultureIdx=24631&searchCultureTypeCd=ALL&searchOperStatusCd=ALL",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://artbookbogo.kr/include/image/common/og.jpg",
+      "id": 1778713506756,
+      "updatedAt": "2026-07-12"
+    },
+    {
       "name": "[청계천박물관] 청계천의 별이 된 노무라 모토유키",
       "category": "전시",
       "region": "서울",
