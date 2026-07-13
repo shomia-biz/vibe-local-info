@@ -1,0 +1,40 @@
+name: Daily Auto Trending Guide Generator
+
+on:
+  schedule:
+    # 매일 UTC 18:00 (한국 시간 KST 03:00 AM)
+    - cron: '0 18 * * *'
+  workflow_dispatch: # 수동 실행 버튼 허용
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Auto Guide Generator
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: npm run guide:auto
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/content/guide/ scripts/generated-history.json public/sitemap.xml
+          git commit -m "📝 Auto-generate daily trending guides & sitemap [skip ci]" || echo "No changes to commit"
+          git push

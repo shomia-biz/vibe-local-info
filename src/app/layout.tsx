@@ -89,14 +89,21 @@ export default function RootLayout({
           crossOrigin=""
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css"
         />
-        <script
+        <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7299812089029185"
           crossOrigin="anonymous"
-        ></script>
+          strategy="afterInteractive"
+        />
         {/* Google Analytics */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-DZ5L26LSW0"></script>
-        <script
+        <Script 
+          async 
+          src="https://www.googletagmanager.com/gtag/js?id=G-DZ5L26LSW0" 
+          strategy="afterInteractive"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];

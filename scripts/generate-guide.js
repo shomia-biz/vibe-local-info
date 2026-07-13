@@ -39,20 +39,31 @@ async function callGemini(prompt, isJson = false) {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ 
       contents: [{ parts: [{ text: prompt }] }],
-      generationConfig: { temperature: 0.8 }
+      generationConfig: { temperature: 0.8 },
+      safetySettings: [
+        { category: "HARM_CATEGORY_HARASSMENT", threshold: "BLOCK_ONLY_HIGH" },
+        { category: "HARM_CATEGORY_HATE_SPEECH", threshold: "BLOCK_ONLY_HIGH" },
+        { category: "HARM_CATEGORY_SEXUALLY_EXPLICIT", threshold: "BLOCK_ONLY_HIGH" },
+        { category: "HARM_CATEGORY_DANGEROUS_CONTENT", threshold: "BLOCK_ONLY_HIGH" }
+      ]
     })
   });
 
   const result = await response.json();
   if (result.candidates && result.candidates.length > 0) {
-    let text = result.candidates[0].content.parts[0].text.trim();
-    if (isJson) {
-      text = text.replace(/```json\n?/m, '').replace(/```\n?/m, '').trim();
-      return JSON.parse(text);
+    let text = result.candidates[0].content?.parts[0]?.text;
+    if (text) {
+      text = text.trim();
+      if (isJson) {
+        text = text.replace(/```json\n?/m, '').replace(/```\n?/m, '').trim();
+        return JSON.parse(text);
+      }
+      return text;
     }
-    return text;
   }
-  throw new Error("AI 응답이 비어있습니다.");
+  
+  console.error("❌ AI API 상세 응답 내역:", JSON.stringify(result, null, 2));
+  throw new Error("AI 응답이 비어있습니다. (안전 필터링에 걸렸거나 응답 생성 실패)");
 }
 
 async function generateGuide() {

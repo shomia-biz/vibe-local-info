@@ -72,7 +72,7 @@ interface LocalData {
 
 const data = localData as unknown as LocalData;
 
-export default function HomeContent({ blogPosts = [] }: { blogPosts?: any[] }) {
+export default function HomeContent({ blogPosts = [], guidePosts = [] }: { blogPosts?: any[], guidePosts?: any[] }) {
 
 
   const [localDataState, setLocalDataState] = useState<LocalData>(data);
@@ -88,6 +88,7 @@ export default function HomeContent({ blogPosts = [] }: { blogPosts?: any[] }) {
   const [diagnosisTargetGroup, setDiagnosisTargetGroup] = useState('전체');
   const [isDiagnosisActive, setIsDiagnosisActive] = useState(false);
   const [currentBlogPage, setCurrentBlogPage] = useState(1);
+  const [currentGuidePage, setCurrentGuidePage] = useState(1);
 
 
   // 날씨 상태
@@ -667,6 +668,98 @@ export default function HomeContent({ blogPosts = [] }: { blogPosts?: any[] }) {
               </div>
             )}
           </div>
+
+          {/* 유용한 정보 Hub (가이드) */}
+          {guidePosts.length > 0 && (
+            <div className="mt-8 mb-4">
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 flex items-center gap-2">
+                  <span>💡</span> 유용한 정보 Hub
+                </h2>
+              </div>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {guidePosts
+                  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+                  .slice((currentGuidePage - 1) * 3, currentGuidePage * 3)
+                  .map((guide) => (
+                    <Link 
+                      key={guide.slug} 
+                      href={`/guide/${guide.slug}`}
+                      className="group flex flex-col bg-slate-900 rounded-[24px] overflow-hidden shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 relative aspect-[4/3] border border-slate-100"
+                    >
+                      <img 
+                        src={guide.thumbnail || 'https://images.unsplash.com/photo-1432821596592-e2c18b78144f?auto=format&fit=crop&w=800&q=80'} 
+                        alt={guide.title}
+                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                      <div className="absolute inset-0 p-6 flex flex-col justify-end items-center text-center">
+                        <div className="bg-black/50 text-yellow-400 text-xs font-bold px-3 py-1 rounded-md mb-3 border border-yellow-400/30">
+                          {guide.category}
+                        </div>
+                        <h3 className="text-xl sm:text-2xl font-black text-white mb-4 leading-tight drop-shadow-lg break-keep">
+                          <span className="text-yellow-400">{guide.title.split(' ')[0]}</span>{' '}
+                          {guide.title.split(' ').slice(1).join(' ')}
+                        </h3>
+                        <div className="bg-orange-500 hover:bg-orange-600 text-white text-sm font-bold px-6 py-2 rounded-full shadow-lg transition-colors inline-flex items-center gap-1">
+                          자세히보기 <span className="text-lg leading-none">›</span>
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+              </div>
+
+              {/* 가이드 페이징 */}
+              {guidePosts.length > 3 && (
+                <div className="flex justify-center items-center gap-2 mt-8">
+                  <button
+                    onClick={() => setCurrentGuidePage(prev => Math.max(1, prev - 1))}
+                    disabled={currentGuidePage === 1}
+                    className="w-10 h-10 flex items-center justify-center rounded-full border border-slate-200 bg-white text-slate-500 font-bold hover:bg-slate-50 disabled:opacity-30 transition-colors shadow-sm"
+                  >
+                    &larr;
+                  </button>
+                  {(() => {
+                    const totalPages = Math.ceil(guidePosts.length / 3) || 1;
+                    const pages = [];
+                    if (totalPages <= 5) {
+                      for (let i = 1; i <= totalPages; i++) pages.push(i);
+                    } else {
+                      if (currentGuidePage <= 3) {
+                        pages.push(1, 2, 3, 4, '...', totalPages);
+                      } else if (currentGuidePage >= totalPages - 2) {
+                        pages.push(1, '...', totalPages - 3, totalPages - 2, totalPages - 1, totalPages);
+                      } else {
+                        pages.push(1, '...', currentGuidePage - 1, currentGuidePage, currentGuidePage + 1, '...', totalPages);
+                      }
+                    }
+
+                    return pages.map((p, idx) => (
+                      p === '...' ? (
+                        <span key={`guide-dots-${idx}`} className="text-slate-300 text-sm px-1">...</span>
+                      ) : (
+                        <button
+                          key={`guide-page-${p}`}
+                          onClick={() => setCurrentGuidePage(p as number)}
+                          className={`w-10 h-10 flex items-center justify-center rounded-full font-bold transition-colors shadow-sm ${currentGuidePage === p ? 'bg-[#00D0C0] text-white border-transparent' : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'}`}
+                        >
+                          {p}
+                        </button>
+                      )
+                    ));
+                  })()}
+                  <button
+                    onClick={() => setCurrentGuidePage(prev => Math.min(Math.ceil(guidePosts.length / 3), prev + 1))}
+                    disabled={currentGuidePage >= Math.ceil(guidePosts.length / 3)}
+                    className="w-10 h-10 flex items-center justify-center rounded-full border border-slate-200 bg-white text-slate-500 font-bold hover:bg-slate-50 disabled:opacity-30 transition-colors shadow-sm"
+                  >
+                    &rarr;
+                  </button>
+                </div>
+              )}
+            </div>
+          )}
 
           {/* 메인 카테고리 대형 버튼 2개 */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 mb-4">
