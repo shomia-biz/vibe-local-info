@@ -4424,6 +4424,45 @@
   ],
   "kyeonggiEvents": [
     {
+      "name": "제26회 복사골청소년예술제",
+      "category": "행사",
+      "region": "경기",
+      "startDate": "2026-10-09",
+      "endDate": "2026-10-09",
+      "location": "잔디광장",
+      "target": "청소년",
+      "summary": "dodo경연대회",
+      "link": "artbucheon.com",
+      "id": 1778713506775,
+      "updatedAt": "2026-07-13"
+    },
+    {
+      "name": "제18회 시민어울림한마당",
+      "category": "행사",
+      "region": "경기",
+      "startDate": "2026-10-08",
+      "endDate": "2026-10-08",
+      "location": "잔디광장",
+      "target": "시민",
+      "summary": "퍼레이드와 콘테스트가 함께하는 시민 참여 축제",
+      "link": "artbucheon.com",
+      "id": 1778713506774,
+      "updatedAt": "2026-07-13"
+    },
+    {
+      "name": "2026 파크콘서트",
+      "category": "행사",
+      "region": "경기",
+      "startDate": "2026-09-01",
+      "endDate": "2026-09-30",
+      "location": "중앙공원 야외공연장",
+      "target": "누구나",
+      "summary": "기간 중 공연 3회 예정 / 1일 1회 진행되는 파크콘서트",
+      "link": "",
+      "id": 1778713506773,
+      "updatedAt": "2026-07-13"
+    },
+    {
       "name": "제21회 광릉숲축제",
       "category": "행사",
       "region": "경기",
