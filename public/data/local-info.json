@@ -873,6 +873,23 @@
   ],
   "seoulCultureEvents": [
     {
+      "name": "[서울시립미술관 서소문본관] 코랄 비평연구 모임",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-07-09",
+      "endDate": "2026-09-09",
+      "location": "서울시립미술관 서소문본관",
+      "target": "동시대 미술을 중심으로 현장 비평을 하고자 하는 비평가, 연구자",
+      "summary": "미술비평의 지평 확장과 연구자 양성을 위한 연구 모임으로, 정기 모임과 상호 피드백을 통해 연구를 발전시키고 결과물은 세마 코랄에 게재될 예정입니다.",
+      "link": "https://sema.seoul.go.kr/kr/whatson/education/detail?acadmyEeNo=1547254",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://sema.seoul.go.kr/resources/content/2x3.jpg",
+      "id": 1778713506770,
+      "updatedAt": "2026-07-13"
+    },
+    {
       "name": "2026 서울문학기행",
       "category": "문화",
       "region": "서울",
@@ -2082,6 +2099,23 @@
   ],
   "seoulExhibitionEvents": [
     {
+      "name": "개인전 “911” Ground Concerto no.1, op.5",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-07-09",
+      "endDate": "2026-07-31",
+      "location": "YK PRESENTS",
+      "target": "누구나",
+      "summary": "개인전 “911” Ground Concerto no.1, op.5",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=158547&menuNo=200009",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://culture.seoul.go.kr/resources/culture/img/sub/culturePotalImg2.jpg",
+      "id": 1778713506772,
+      "updatedAt": "2026-07-13"
+    },
+    {
       "name": "[서울아트책보고] 사랑의 덕통사고: 사랑 이후, 우리가 만들어 낸 세계",
       "category": "전시",
       "region": "서울",
@@ -2650,6 +2684,23 @@
   ],
   "nationalExhibitionEvents": [],
   "seoulEvents": [
+    {
+      "name": "스릴러 공포연극 [시그널]",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-07-09",
+      "endDate": "2026-08-24",
+      "location": "대학로 공간아울",
+      "target": "만 13세이상",
+      "summary": "종로구 대학로 공간아울에서 진행되는 스릴러 공포연극 [시그널] 공연입니다. 프리뷰 할인 15,000원에 관람하실 수 있습니다.",
+      "link": "https://booking.naver.com/booking/12/bizes/1669602",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://naverbooking-phinf.pstatic.net/20260617_270/1781692864701b3fpO_PNG/image.png?type=f804_408_60_sharpen",
+      "id": 1778713506771,
+      "updatedAt": "2026-07-13"
+    },
     {
       "name": "[동작문화재단] 2026 까망돌어울마당 아트홀 하반기 정기 기획공연 [까망돌 칸타빌레]",
       "category": "행사",
