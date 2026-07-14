@@ -1607,6 +1607,19 @@
   ],
   "incheonCultureEvents": [
     {
+      "name": "2026 인천아트플랫폼 <창작스튜디오 프로젝트> 시민참여 워크숍 참여자 모집",
+      "category": "문화",
+      "region": "인천",
+      "startDate": "2026-07-18",
+      "endDate": "2026-07-31",
+      "location": "인천아트플랫폼",
+      "target": "시민 (성인, 청소년, 대학생 등 프로그램별 상이)",
+      "summary": "인천아트플랫폼 입주 예술가들의 작업 세계를 시민과 나누는 참여형 워크숍입니다. 7월에는 신승엽, 유장우, 홍혜림 작가가 참여하여 코딩, 회화, 인천 지도 드로잉 등 다채로운 창작 체험 프로그램을 진행합니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13715",
+      "id": 1778713506793,
+      "updatedAt": "2026-07-14"
+    },
+    {
       "name": "2026 여름 도시실험 <가정동의 여름방학> 생활동행단 모집",
       "category": "문화",
       "region": "인천",
@@ -2560,6 +2573,20 @@
     }
   ],
   "incheonExhibitionEvents": [
+    {
+      "name": "김종하PREVIEWW",
+      "category": "전시",
+      "region": "인천",
+      "startDate": "2026-07-14",
+      "endDate": "2026-07-24",
+      "location": "라보체갤러리(구월관)",
+      "target": "",
+      "summary": "김종하 작가의 '관계는 흔들리며 존재한다' 프리 전시로, 본 전시에 앞서 작가의 사유와 작업 세계를 미리 선보이는 자리입니다. 일상과 인간에 대한 관찰을 바탕으로 관계, 선악, 영웅과 빌런의 서사를 시각적으로 탐색하며, 관람객이 본 전시를 깊이 이해할 단서를 제공합니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13713",
+      "imageUrl": "https://ifac.or.kr/resource/www/images/layout/og_images.png",
+      "id": 1778713506794,
+      "updatedAt": "2026-07-14"
+    },
     {
       "name": "COMPOSITION ROOM",
       "category": "전시",
@@ -5076,6 +5103,20 @@
     }
   ],
   "incheonEvents": [
+    {
+      "name": "[인천시립박물관] 여름민속행사 개최 안내",
+      "category": "행사",
+      "region": "인천",
+      "startDate": "2026-07-25",
+      "endDate": "2026-07-25",
+      "location": "인천시립박물관 우현마당",
+      "target": "인천시민 누구나",
+      "summary": "인천시립박물관에서 여름방학 시즌을 맞아 여름민속행사 <여름아! 박물관에서 놀자>를 운영합니다. 봉숭아물들이기, 전통문양자개팽이, 전통손제기, 전통민화부채 만들기 등 다양한 체험 프로그램을 즐길 수 있습니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13711",
+      "imageUrl": "https://ifac.or.kr/resource/www/images/layout/og_images.png",
+      "id": 1778713506795,
+      "updatedAt": "2026-07-14"
+    },
     {
       "name": "풍류일로",
       "category": "행사",
