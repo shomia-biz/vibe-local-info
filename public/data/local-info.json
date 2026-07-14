@@ -8391,6 +8391,45 @@
   ],
   "nationalBenefits": [
     {
+      "name": "고령자고용지원금",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-07-14",
+      "endDate": "상시",
+      "location": "고용노동부",
+      "target": "우선지원대상기업, 중견기업 및 사회적기업",
+      "summary": "60세 이상 고령자 고용을 늘린 기업을 대상으로, 3년 평균 대비 증가한 고령 근로자 1인당 분기 30만 원을 2년간 지원하는 고용지원금 제도입니다.",
+      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200005012",
+      "id": 1778713506786,
+      "updatedAt": "2026-07-14"
+    },
+    {
+      "name": "자영업자 실업급여",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-07-14",
+      "endDate": "상시",
+      "location": "고용노동부",
+      "target": "비자발적으로 폐업한 자영업자 (고용보험 가입 피보험자)",
+      "summary": "비자발적으로 폐업한 자영업자의 생활 안정과 재취업을 돕기 위해 구직급여(실업급여)를 지급하는 고용노동부의 지원 서비스입니다.",
+      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200005008",
+      "id": 1778713506785,
+      "updatedAt": "2026-07-14"
+    },
+    {
+      "name": "국민취업지원제도",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-07-14",
+      "endDate": "상시",
+      "location": "전국 고용센터",
+      "target": "15세~69세 구직자(저소득층, 청년, 경력단절여성 등 취업취약계층)",
+      "summary": "취업취약계층에게 맞춤형 취업지원서비스를 제공하고, 구직활동 이행 시 구직촉진수당 등 생계안정을 위한 소득을 지원하는 제도입니다.",
+      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200005007",
+      "id": 1778713506784,
+      "updatedAt": "2026-07-14"
+    },
+    {
       "name": "중,고등학생 통학교통비 지원 사업",
       "category": "혜택",
       "region": "전국",
