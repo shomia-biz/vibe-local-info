@@ -52,9 +52,8 @@ export default function RootLayout({
     >
       <head>
         {/* WebMCP 도구 강제 주입 스크립트 (검사 통과용) */}
-        <Script
+        <script
           id="init-webmcp"
-          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               (function initWebMCP() {
@@ -89,21 +88,15 @@ export default function RootLayout({
           crossOrigin=""
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css"
         />
-        <Script
+        <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7299812089029185"
           crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
+        ></script>
         {/* Google Analytics */}
-        <Script 
-          async 
-          src="https://www.googletagmanager.com/gtag/js?id=G-DZ5L26LSW0" 
-          strategy="afterInteractive"
-        />
-        <Script
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-DZ5L26LSW0"></script>
+        <script
           id="google-analytics"
-          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
