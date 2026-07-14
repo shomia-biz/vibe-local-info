@@ -4489,6 +4489,47 @@
   ],
   "kyeonggiEvents": [
     {
+      "name": "제16회 평택뮤직페스티벌&전국밴드경연대회",
+      "category": "행사",
+      "region": "경기",
+      "startDate": "2026-07-25",
+      "endDate": "2026-07-25",
+      "location": "평택남부문예회관(대공연장)",
+      "target": "누구나",
+      "summary": "밴드경연대회 및 가수 축하공연 등",
+      "link": "https://www.pccf.or.kr/",
+      "imageUrl": "https://www.pccf.or.kr/resource/pccf/img/logo-color.svg",
+      "id": 1778713506792,
+      "updatedAt": "2026-07-14"
+    },
+    {
+      "name": "평택 원평나루 억새축제",
+      "category": "행사",
+      "region": "경기",
+      "startDate": "2026-10-31",
+      "endDate": "2026-10-31",
+      "location": "군문교 아래 억새밭(노을생태문화공원)",
+      "target": "누구나",
+      "summary": "공연, 상설공연, 체험, 먹거리 등 다양한 프로그램이 제공되는 평택 원평나루 억새축제",
+      "link": "https://www.pccf.or.kr/",
+      "imageUrl": "https://www.pccf.or.kr/resource/pccf/img/logo-color.svg",
+      "id": 1778713506791,
+      "updatedAt": "2026-07-14"
+    },
+    {
+      "name": "2026 파크콘서트",
+      "category": "행사",
+      "region": "경기",
+      "startDate": "2026-09-01",
+      "endDate": "2026-09-30",
+      "location": "중앙공원 야외공연장",
+      "target": "누구나",
+      "summary": "기간 중 1일 1회, 총 3회 공연이 예정된 성남 야외 파크콘서트",
+      "link": "",
+      "id": 1778713506790,
+      "updatedAt": "2026-07-14"
+    },
+    {
       "name": "제26회 복사골청소년예술제",
       "category": "행사",
       "region": "경기",
