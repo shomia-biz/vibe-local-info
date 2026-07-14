@@ -873,6 +873,23 @@
   ],
   "seoulCultureEvents": [
     {
+      "name": "[서울시립미술관 서소문본관] 코랄 비평연구 모임",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-07-09",
+      "endDate": "2026-09-09",
+      "location": "서울시립미술관 서소문본관",
+      "target": "동시대 미술을 중심으로 현장 비평을 하고자 하는 비평가, 연구자",
+      "summary": "미술비평의 지평 확장과 연구자 양성을 위한 연구 모임으로, 정기 모임과 상호 피드백을 통해 연구를 발전시키고 결과물은 세마 코랄에 게재될 예정입니다.",
+      "link": "https://sema.seoul.go.kr/kr/whatson/education/detail?acadmyEeNo=1547254",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://sema.seoul.go.kr/resources/content/2x3.jpg",
+      "id": 1778713506770,
+      "updatedAt": "2026-07-13"
+    },
+    {
       "name": "2026 서울문학기행",
       "category": "문화",
       "region": "서울",
@@ -1590,6 +1607,20 @@
   ],
   "incheonCultureEvents": [
     {
+      "name": "2026 여름 도시실험 <가정동의 여름방학> 생활동행단 모집",
+      "category": "문화",
+      "region": "인천",
+      "startDate": "2026-07-18",
+      "endDate": "2026-10-17",
+      "location": "가정1동·가정2동 일대",
+      "target": "이웃 어린이 및 마을 공동체, 문화예술 프로젝트에 관심 있는 시민",
+      "summary": "어린이의 여름방학을 함께하며 어린이가 살아가기 좋은 마을을 상상하고 실험하는 시민문화활동 '생활동행단'을 모집하며, 모임과 동네 산책, 아카이빙 전시 등의 활동을 진행합니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13714",
+      "imageUrl": "https://ifac.or.kr/resource/www/images/layout/og_images.png",
+      "id": 1778713506776,
+      "updatedAt": "2026-07-13"
+    },
+    {
       "name": "[투어프렌즈] 맛따라, 썰따라 도보투어",
       "category": "문화",
       "region": "인천",
@@ -2081,6 +2112,23 @@
     }
   ],
   "seoulExhibitionEvents": [
+    {
+      "name": "개인전 “911” Ground Concerto no.1, op.5",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-07-09",
+      "endDate": "2026-07-31",
+      "location": "YK PRESENTS",
+      "target": "누구나",
+      "summary": "개인전 “911” Ground Concerto no.1, op.5",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=158547&menuNo=200009",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://culture.seoul.go.kr/resources/culture/img/sub/culturePotalImg2.jpg",
+      "id": 1778713506772,
+      "updatedAt": "2026-07-13"
+    },
     {
       "name": "[서울아트책보고] 사랑의 덕통사고: 사랑 이후, 우리가 만들어 낸 세계",
       "category": "전시",
@@ -2650,6 +2698,23 @@
   ],
   "nationalExhibitionEvents": [],
   "seoulEvents": [
+    {
+      "name": "스릴러 공포연극 [시그널]",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-07-09",
+      "endDate": "2026-08-24",
+      "location": "대학로 공간아울",
+      "target": "만 13세이상",
+      "summary": "종로구 대학로 공간아울에서 진행되는 스릴러 공포연극 [시그널] 공연입니다. 프리뷰 할인 15,000원에 관람하실 수 있습니다.",
+      "link": "https://booking.naver.com/booking/12/bizes/1669602",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://naverbooking-phinf.pstatic.net/20260617_270/1781692864701b3fpO_PNG/image.png?type=f804_408_60_sharpen",
+      "id": 1778713506771,
+      "updatedAt": "2026-07-13"
+    },
     {
       "name": "[동작문화재단] 2026 까망돌어울마당 아트홀 하반기 정기 기획공연 [까망돌 칸타빌레]",
       "category": "행사",
@@ -4373,6 +4438,45 @@
   ],
   "kyeonggiEvents": [
     {
+      "name": "제26회 복사골청소년예술제",
+      "category": "행사",
+      "region": "경기",
+      "startDate": "2026-10-09",
+      "endDate": "2026-10-09",
+      "location": "잔디광장",
+      "target": "청소년",
+      "summary": "dodo경연대회",
+      "link": "artbucheon.com",
+      "id": 1778713506775,
+      "updatedAt": "2026-07-13"
+    },
+    {
+      "name": "제18회 시민어울림한마당",
+      "category": "행사",
+      "region": "경기",
+      "startDate": "2026-10-08",
+      "endDate": "2026-10-08",
+      "location": "잔디광장",
+      "target": "시민",
+      "summary": "퍼레이드와 콘테스트가 함께하는 시민 참여 축제",
+      "link": "artbucheon.com",
+      "id": 1778713506774,
+      "updatedAt": "2026-07-13"
+    },
+    {
+      "name": "2026 파크콘서트",
+      "category": "행사",
+      "region": "경기",
+      "startDate": "2026-09-01",
+      "endDate": "2026-09-30",
+      "location": "중앙공원 야외공연장",
+      "target": "누구나",
+      "summary": "기간 중 공연 3회 예정 / 1일 1회 진행되는 파크콘서트",
+      "link": "",
+      "id": 1778713506773,
+      "updatedAt": "2026-07-13"
+    },
+    {
       "name": "제21회 광릉숲축제",
       "category": "행사",
       "region": "경기",
@@ -5300,6 +5404,38 @@
     }
   ],
   "seoulBenefits": [
+    {
+      "name": "출산양육지원금 지원",
+      "category": "혜택",
+      "region": "서울",
+      "startDate": "2026-07-13",
+      "endDate": "상시",
+      "location": "서울특별시 강남구",
+      "target": "영유아",
+      "summary": "사회적 여건 및 가치관의 변화로 인한 출산율 저하와 고령화 사회 진입에 따른 인구 불균형 문제가 야기되어 출산양육 지원금 지원을 함으로써 출산에 대한 긍정적 인식 제고를 통해 출산을 장려",
+      "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004029&wlfareInfoReldBztpCd=02",
+      "serviceField": "임신 출산",
+      "supportType": "현금",
+      "targetGroup": "가구",
+      "id": 1778713506782,
+      "updatedAt": "2026-07-13"
+    },
+    {
+      "name": "자원봉사자 통합 교육",
+      "category": "혜택",
+      "region": "서울",
+      "startDate": "2026-07-13",
+      "endDate": "상시",
+      "location": "서울특별시 강서구",
+      "target": "자원봉사 활동에 참여하는 구민(청소년, 성인, 단체 등)",
+      "summary": "자원봉사 활동에 참여하는 구민을 대상으로 자원봉사 기본교육 및 보수교육을 실시하고, 청소년 및 성인 등 개인/단체별 자원봉사 교육을 진행하여 참여를 활성화하며, 청소년 대상 프로그램을 다양화하여 봉사활동 기회를 제공합니다.",
+      "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004607&wlfareInfoReldBztpCd=02",
+      "serviceField": "보육 교육",
+      "supportType": "기타(교육)",
+      "targetGroup": "개인",
+      "id": 1778713506778,
+      "updatedAt": "2026-07-13"
+    },
     {
       "name": "용산구 청년 국가자증 및 어학시험 응시료 지원",
       "category": "혜택",
@@ -6376,6 +6512,54 @@
     }
   ],
   "kyeonggiBenefits": [
+    {
+      "name": "어린이날 행사 운영",
+      "category": "혜택",
+      "region": "경기",
+      "startDate": "2026-07-13",
+      "endDate": "상시",
+      "location": "군포시",
+      "target": "아동",
+      "summary": "아동이 건강한 사회인으로 성장할 수 있도록 기반여건 조성",
+      "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000723&amp;wlfareInfoReldBztpCd=02",
+      "serviceField": "문화 환경",
+      "supportType": "기타",
+      "targetGroup": "개인",
+      "id": 1778713506783,
+      "updatedAt": "2026-07-13"
+    },
+    {
+      "name": "8.15 광복절 위문금(애국지사 및 유족)",
+      "category": "혜택",
+      "region": "경기",
+      "startDate": "2026-07-13",
+      "endDate": "상시",
+      "location": "경기도 고양시",
+      "target": "애국지사 및 유족",
+      "summary": "8.15 광복절 위문금(애국지사 및 유족)\n1인당 100,000원",
+      "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000966&wlfareInfoReldBztpCd=02",
+      "serviceField": "생활안정",
+      "supportType": "현금",
+      "targetGroup": "가구",
+      "id": 1778713506781,
+      "updatedAt": "2026-07-13"
+    },
+    {
+      "name": "노숙인 보호(일산서구)",
+      "category": "혜택",
+      "region": "경기",
+      "startDate": "2026-07-13",
+      "endDate": "상시",
+      "location": "고양시 일산서구",
+      "target": "노숙인",
+      "summary": "행려자 복지지원",
+      "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002505&amp;wlfareInfoReldBztpCd=02",
+      "serviceField": "보호 돌봄",
+      "supportType": "현금",
+      "targetGroup": "개인",
+      "id": 1778713506780,
+      "updatedAt": "2026-07-13"
+    },
     {
       "name": "성남시 아동의료비 본인부담 100만원 상한제 사업",
       "category": "혜택",
@@ -7707,6 +7891,38 @@
     }
   ],
   "incheonBenefits": [
+    {
+      "name": "참전유공자 및 보훈대상자 지원",
+      "category": "혜택",
+      "region": "인천",
+      "startDate": "2026-07-13",
+      "endDate": "상시",
+      "location": "인천광역시 중구",
+      "target": "참전유공자 및 보훈대상자",
+      "summary": "국가에 헌신,공헌한 참전유공자와 보훈대상자의 명예를 선양하고 지원",
+      "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001217&wlfareInfoReldBztpCd=02",
+      "serviceField": "생활안정",
+      "supportType": "현금",
+      "targetGroup": "개인",
+      "id": 1778713506779,
+      "updatedAt": "2026-07-13"
+    },
+    {
+      "name": "국가보훈대상자 위문품 지급",
+      "category": "혜택",
+      "region": "인천",
+      "startDate": "2026-07-13",
+      "endDate": "상시",
+      "location": "인천광역시 중구",
+      "target": "보훈대상자",
+      "summary": "국가를 위해 헌신, 공헌한 국가보훈대상자 위문 및 지원",
+      "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002488&wlfareInfoReldBztpCd=02",
+      "serviceField": "생활안정",
+      "supportType": "현금",
+      "targetGroup": "개인",
+      "id": 1778713506777,
+      "updatedAt": "2026-07-13"
+    },
     {
       "name": "인천광역시교육청 다자녀 신학년 학습 준비비",
       "category": "혜택",
