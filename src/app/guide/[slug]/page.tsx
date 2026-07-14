@@ -60,20 +60,6 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
             </p>
           </div>
 
-          {/* 목차(TOC) 박스 */}
-          {headings.length > 0 && (
-            <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 mb-12">
-              <h3 className="text-lg font-black text-slate-900 mb-4">📑 이 글의 목차</h3>
-              <ul className="space-y-3">
-                {headings.map((heading, idx) => (
-                  <li key={idx} className="flex items-start gap-2">
-                    <span className="text-cyan-500 font-bold">{idx + 1}.</span>
-                    <span className="text-slate-700 font-medium">{heading}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
 
           {/* 마크다운 렌더링 영역 */}
           <div className="prose prose-lg prose-slate max-w-none 
@@ -109,7 +95,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-4 bg-cyan-500 hover:bg-cyan-600 text-white rounded-full font-black text-lg shadow-lg hover:shadow-cyan-200 transition-all hover:-translate-y-1"
               >
-                관련 공식 홈페이지 바로가기 <span className="ml-2">→</span>
+                홈페이지로 돌아가기 <span className="ml-2">→</span>
               </a>
             </div>
           )}
