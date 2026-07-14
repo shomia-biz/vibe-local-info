@@ -3,7 +3,7 @@ const path = require('path');
 const Parser = require('rss-parser');
 const parser = new Parser();
 
-const HISTORY_FILE = path.join(__dirname, 'generated-history.json');
+const HISTORY_FILE = path.join(__dirname, '../public/data/generated-history.json');
 const KEYWORDS_FILE = path.join(__dirname, '../public/data/trending-keywords.json');
 
 const RSS_SOURCES = [

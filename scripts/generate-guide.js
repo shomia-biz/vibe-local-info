@@ -176,6 +176,19 @@ async function generateGuide() {
     const filePath = path.join(__dirname, `../src/content/guide/${slug}.md`);
     fs.writeFileSync(filePath, markdownContent, 'utf8');
     
+    // 히스토리 자동 저장 기능 추가
+    const historyPath = path.join(__dirname, '../public/data/generated-history.json');
+    let history = [];
+    if (fs.existsSync(historyPath)) {
+      try {
+        history = JSON.parse(fs.readFileSync(historyPath, 'utf8'));
+      } catch(e) {}
+    }
+    if (!history.includes(finalTitle)) {
+      history.push(finalTitle);
+      fs.writeFileSync(historyPath, JSON.stringify(history, null, 2), 'utf8');
+    }
+
     console.log(`\n🎉 성공! AI가 작성한 포스트가 저장되었습니다.`);
     console.log(`📂 저장 위치: src/content/guide/${slug}.md`);
 
