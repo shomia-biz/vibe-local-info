@@ -29,7 +29,7 @@ const RSS_SOURCES = [
   },
   {
     category: "문화/여가 및 OTT",
-    url: "https://news.google.com/rss/search?q=" + encodeURIComponent("넷플릭스 추천 OR OTT 신작 OR 영화 순위 OR 전시회 추천 OR 팝업스토어") + "&hl=ko&gl=KR&ceid=KR:ko",
+    url: "https://news.google.com/rss/search?q=" + encodeURIComponent("넷플릭스 추천 OR OTT 신작 OR 영화 순위 OR 전시회 추천 OR 팝업스토어 OR 콘서트 OR 맛집 OR 여행") + "&hl=ko&gl=KR&ceid=KR:ko",
     limit: 3
   }
 ];
