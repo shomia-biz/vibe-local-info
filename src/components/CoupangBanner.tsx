@@ -22,7 +22,7 @@ export default function CoupangBanner() {
   return null;
 
   // 배너 위젯 ID는 보통 6자리 이상의 '숫자'입니다. AF로 시작하는 파트너스 ID와 다릅니다.
-  const isWidgetIdValid = /^\d+$/.test(activeWidgetId);
+  const isWidgetIdValid = /^\d+$/.test(activeWidgetId || '');
 
   return (
     <div className="my-8 w-full">
