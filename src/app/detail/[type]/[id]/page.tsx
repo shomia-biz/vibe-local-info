@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ type: str
     title: `${itemData.name} - 모아팁스 상세정보`,
     description: itemData.summary || `${itemData.name}에 대한 상세 정보입니다.`,
     robots: {
-      index: true,
+      index: false,
       follow: true,
     },
   };

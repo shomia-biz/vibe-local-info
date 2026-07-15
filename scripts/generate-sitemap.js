@@ -13,8 +13,7 @@ function generateSitemap() {
     { loc: `${domain}/blog/`, priority: '0.8', changefreq: 'daily' },
     { loc: `${domain}/guide/`, priority: '0.9', changefreq: 'daily' },
     { loc: `${domain}/about/`, priority: '0.5', changefreq: 'weekly' },
-    { loc: `${domain}/contact/`, priority: '0.5', changefreq: 'weekly' },
-    { loc: `${domain}/fortune/`, priority: '0.5', changefreq: 'daily' }
+    { loc: `${domain}/contact/`, priority: '0.5', changefreq: 'weekly' }
   ];
 
   let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
