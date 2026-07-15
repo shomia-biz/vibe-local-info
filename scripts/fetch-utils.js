@@ -146,24 +146,41 @@ function cleanTitleForComparison(title) {
 }
 
 function isDuplicateTitle(newTitle, existingNames) {
+  if (!newTitle) return false;
+
+  // 1. 원본 기준 완벽 동일 여부 검사 (띄어쓰기, 대소문자 무시)
+  const exactNew = newTitle.replace(/\s+/g, '').toLowerCase();
+  for (const existing of existingNames) {
+    if (existing && exactNew === existing.replace(/\s+/g, '').toLowerCase()) return true;
+  }
+
+  // 2. 특수기호만 제거한 상태에서 동일 여부 검사
+  const basicClean = (str) => str.replace(/[^\wㄱ-ㅎㅏ-ㅣ가-힣]/g, '').toLowerCase();
+  const basicNew = basicClean(newTitle);
+  for (const existing of existingNames) {
+    if (existing && basicNew === basicClean(existing)) return true;
+  }
+
+  // 3. 기존의 복잡한 유사도 검사 (단어가 너무 많이 잘려서 짧아질 경우를 대비해 위에서 1, 2단계를 먼저 거침)
   const cleanNew = cleanTitleForComparison(newTitle);
   if (!cleanNew || cleanNew.length < 3) return false;
+  
   for (const existing of existingNames) {
     const cleanExisting = cleanTitleForComparison(existing);
     if (!cleanExisting || cleanExisting.length < 3) continue;
     if (cleanNew === cleanExisting) return true;
+    
     const set1 = new Set(cleanNew.split(''));
     const set2 = new Set(cleanExisting.split(''));
     const intersection = new Set([...set1].filter(x => set2.has(x)));
     const union = new Set([...set1, ...set2]);
     const similarity = intersection.size / union.size;
+    
     if (similarity >= 0.7) {
       const keywords = ['코스모스', '유채꽃', '벚꽃', '거리극', '해맞이', '음악회'];
       let keywordMismatch = false;
       for (const kw of keywords) {
-        const hasNew = cleanNew.includes(kw);
-        const hasExisting = cleanExisting.includes(kw);
-        if (hasNew !== hasExisting) {
+        if (cleanNew.includes(kw) !== cleanExisting.includes(kw)) {
           keywordMismatch = true;
           break;
         }
@@ -347,6 +364,11 @@ async function fetchGeminiWithFallback(prompt, apiKey, type = 'fetch') {
       }
 
       const geminiResult = await geminiResponse.json();
+
+      if (geminiResult.usageMetadata) {
+        const usage = geminiResult.usageMetadata;
+        console.log(`\n📊 [토큰 사용량] 입력: ${usage.promptTokenCount}개 / 출력: ${usage.candidatesTokenCount}개 / 총합: ${usage.totalTokenCount}개`);
+      }
 
       if (geminiResult?.candidates?.[0]?.content?.parts?.[0]?.text) {
         const endTime = Date.now();

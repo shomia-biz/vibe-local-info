@@ -55,6 +55,12 @@ Return exactly a JSON array of objects with the exact following structure, in th
     });
 
     const data = await response.json();
+
+    if (data.usageMetadata) {
+      const usage = data.usageMetadata;
+      console.log(`\n📊 [토큰 사용량] 입력: ${usage.promptTokenCount}개 / 출력: ${usage.candidatesTokenCount}개 / 총합: ${usage.totalTokenCount}개`);
+    }
+
     if (data.error) {
       console.error("Gemini API Error:", data.error);
       return null;

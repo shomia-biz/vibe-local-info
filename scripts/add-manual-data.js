@@ -221,6 +221,11 @@ async function startManualWorkflow() {
         });
         const geminiResult = await geminiResponse.json();
         
+        if (geminiResult.usageMetadata) {
+          const usage = geminiResult.usageMetadata;
+          console.log(`\n📊 [토큰 사용량] 입력: ${usage.promptTokenCount}개 / 출력: ${usage.candidatesTokenCount}개 / 총합: ${usage.totalTokenCount}개`);
+        }
+
         if (geminiResult.candidates && geminiResult.candidates.length > 0) {
           let aiText = geminiResult.candidates[0].content.parts[0].text;
           aiText = aiText.replace(/```json|```/g, '').trim();

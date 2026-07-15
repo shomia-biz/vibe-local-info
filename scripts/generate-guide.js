@@ -35,11 +35,6 @@ const askQuestion = (query) => new Promise((resolve) => rl.question(query, resol
 
 async function callGemini(prompt, isJson = false) {
   const result = await utils.fetchGeminiWithFallback(prompt, GEMINI_API_KEY, 'blog');
-  
-  if (result.usageMetadata) {
-    const usage = result.usageMetadata;
-    console.log(`\n📊 [토큰 사용량] 입력: ${usage.promptTokenCount}개 / 출력: ${usage.candidatesTokenCount}개 / 총합: ${usage.totalTokenCount}개`);
-  }
 
   if (result.candidates && result.candidates.length > 0) {
     let text = result.candidates[0].content?.parts[0]?.text;
