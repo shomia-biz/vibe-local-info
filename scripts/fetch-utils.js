@@ -326,11 +326,20 @@ async function fetchGeminiWithFallback(prompt, apiKey, type = 'fetch') {
 
     try {
       const startTime = Date.now();
-      const geminiResponse = await fetch(geminiUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
-      });
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 30000);
+
+      let geminiResponse;
+      try {
+        geminiResponse = await fetch(geminiUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          signal: controller.signal,
+          body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
+        });
+      } finally {
+        clearTimeout(timeoutId);
+      }
 
       if (!geminiResponse.ok) {
         const errText = await geminiResponse.text();

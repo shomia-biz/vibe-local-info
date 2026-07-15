@@ -1,6 +1,8 @@
+
 const fs = require('fs');
 const path = require('path');
 const readline = require('readline');
+const utils = require('./fetch-utils');
 
 // 환경변수 수동 로드 (.env.local)
 function loadEnv() {
@@ -32,24 +34,13 @@ const rl = readline.createInterface({
 const askQuestion = (query) => new Promise((resolve) => rl.question(query, resolve));
 
 async function callGemini(prompt, isJson = false) {
-  const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${GEMINI_API_KEY}`;
+  const result = await utils.fetchGeminiWithFallback(prompt, GEMINI_API_KEY, 'blog');
   
-  const response = await fetch(geminiUrl, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ 
-      contents: [{ parts: [{ text: prompt }] }],
-      generationConfig: { temperature: 0.8 },
-      safetySettings: [
-        { category: "HARM_CATEGORY_HARASSMENT", threshold: "BLOCK_ONLY_HIGH" },
-        { category: "HARM_CATEGORY_HATE_SPEECH", threshold: "BLOCK_ONLY_HIGH" },
-        { category: "HARM_CATEGORY_SEXUALLY_EXPLICIT", threshold: "BLOCK_ONLY_HIGH" },
-        { category: "HARM_CATEGORY_DANGEROUS_CONTENT", threshold: "BLOCK_ONLY_HIGH" }
-      ]
-    })
-  });
+  if (result.usageMetadata) {
+    const usage = result.usageMetadata;
+    console.log(`\n📊 [토큰 사용량] 입력: ${usage.promptTokenCount}개 / 출력: ${usage.candidatesTokenCount}개 / 총합: ${usage.totalTokenCount}개`);
+  }
 
-  const result = await response.json();
   if (result.candidates && result.candidates.length > 0) {
     let text = result.candidates[0].content?.parts[0]?.text;
     if (text) {
@@ -146,8 +137,8 @@ async function generateGuide() {
 
 2. 본문 구조
    - 본문이 시작되는 맨 윗부분에 **마크다운 목차(Table of Contents)**를 반드시 추가하세요. (목차 제목은 "## 이 글의 목차" 로 작성하세요)
-   - 목차에 "1. 1. 소제목"처럼 숫자가 중복되지 않도록, 숫자(1., 2.) 대신 글머리 기호(-)를 사용하세요. (예: `- [1. 소제목](#1-소제목)`)
-   - 목차가 끝난 직후, 바로 밑에 썸네일 이미지(`![대표 이미지](https://images.unsplash.com/photo-1432821596592-e2c18b78144f?auto=format&fit=crop&w=800&q=80)`)를 반드시 삽입하세요.
+   - 목차에 "1. 1. 소제목"처럼 숫자가 중복되지 않도록, 숫자(1., 2.) 대신 글머리 기호(-)를 사용하세요. (예: - [1. 소제목](#1-소제목))
+   - 목차가 끝난 직후, 바로 밑에 썸네일 이미지( ![대표 이미지](https://images.unsplash.com/photo-1432821596592-e2c18b78144f?auto=format&fit=crop&w=800&q=80) )를 반드시 삽입하세요.
    - 본문의 소제목은 "## 1. [소제목]" 형태로 3~4개 나누어 작성하며, 목차의 링크와 소제목이 정확히 연결되게 앵커를 설정하세요.
    - 본문 중간에 가독성을 높이기 위해 반드시 마크다운 표(Table)를 1개 이상 포함하여 핵심 데이터를 깔끔하게 정리하세요.
    - 중요한 정보는 굵은 글씨(**텍스트**)나 리스트(Bullet points)를 적극 활용하세요.
