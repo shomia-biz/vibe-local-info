@@ -127,13 +127,13 @@ async function generateGuide() {
    - summary: 1~2줄 분량의 호기심을 유발하는 요약
    - date: "${today}"
    - category: 주제에 맞는 카테고리 (예: 생활, 경제, IT, 부동산 등)
-   - thumbnail: "https://images.unsplash.com/photo-1432821596592-e2c18b78144f?auto=format&fit=crop&w=800&q=80"
+   - thumbnail: "https://image.pollinations.ai/prompt/[영어로 번역된 핵심 키워드]?width=800&height=400&nologo=true" (예: 제목이 '부동산 청약'이라면 "https://image.pollinations.ai/prompt/real%20estate%20subscription?width=800&height=400&nologo=true" 처럼 URL 인코딩된 영어 키워드를 넣으세요)
    - cta_link: "https://moa-tips.com"
 
 2. 본문 구조
    - 본문이 시작되는 맨 윗부분에 **마크다운 목차(Table of Contents)**를 반드시 추가하세요. (목차 제목은 "## 이 글의 목차" 로 작성하세요)
    - 목차에 "1. 1. 소제목"처럼 숫자가 중복되지 않도록, 숫자(1., 2.) 대신 글머리 기호(-)를 사용하세요. (예: - [1. 소제목](#1-소제목))
-   - 목차가 끝난 직후, 바로 밑에 썸네일 이미지( ![대표 이미지](https://images.unsplash.com/photo-1432821596592-e2c18b78144f?auto=format&fit=crop&w=800&q=80) )를 반드시 삽입하세요.
+   - 목차가 끝난 직후, 바로 밑에 프론트매터의 thumbnail과 동일한 URL을 사용하여 썸네일 이미지( ![대표 이미지](https://image.pollinations.ai/prompt/[영어로 번역된 핵심 키워드]?width=800&height=400&nologo=true) )를 반드시 삽입하세요.
    - 본문의 소제목은 "## 1. [소제목]" 형태로 3~4개 나누어 작성하며, 목차의 링크와 소제목이 정확히 연결되게 앵커를 설정하세요.
    - 본문 중간에 가독성을 높이기 위해 반드시 마크다운 표(Table)를 1개 이상 포함하여 핵심 데이터를 깔끔하게 정리하세요.
    - 중요한 정보는 굵은 글씨(**텍스트**)나 리스트(Bullet points)를 적극 활용하세요.
@@ -159,10 +159,11 @@ async function generateGuide() {
     let slug = `new-guide-${Date.now()}`;
     try {
       const slugText = await callGemini(slugPrompt, false);
-      slug = slugText.toLowerCase().replace(/[^a-z0-9-]/g, '');
+      slug = slugText.toLowerCase().replace(/[^a-z0-9-]/g, '').replace(/-+/g, '-').replace(/^-|-$/g, '');
     } catch(e) {}
 
-    const filePath = path.join(__dirname, `../src/content/guide/${slug}.md`);
+    const fileName = `${today}-${slug}.md`;
+    const filePath = path.join(__dirname, `../src/content/guide/${fileName}`);
     fs.writeFileSync(filePath, markdownContent, 'utf8');
     
     // 히스토리 자동 저장 기능 추가
@@ -179,7 +180,7 @@ async function generateGuide() {
     }
 
     console.log(`\n🎉 성공! AI가 작성한 포스트가 저장되었습니다.`);
-    console.log(`📂 저장 위치: src/content/guide/${slug}.md`);
+    console.log(`📂 저장 위치: src/content/guide/${fileName}`);
 
     // 생성 직후 자동으로 사이트맵(Sitemap) 업데이트 실행
     try {

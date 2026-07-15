@@ -14,6 +14,9 @@ export default function CoupangBanner() {
     setActiveWidgetId(randomId);
   }, []);
 
+  // [임시 조치] 쿠팡 파트너스 승인 전까지 화면 출력 중단
+  return null;
+
   if (!activeWidgetId || activeWidgetId === '나중에_입력') {
     return null;
   }
