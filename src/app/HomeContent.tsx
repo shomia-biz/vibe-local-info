@@ -1182,9 +1182,9 @@ export default function HomeContent({ blogPosts = [], guidePosts = [] }: { blogP
           )}
         </section>
 
-        {/* 중앙 광고 영역 */}
-        <AdBanner />
-        <CoupangBanner />
+        {/* 중앙 광고 영역 (임시 숨김) */}
+        {/* <AdBanner /> */}
+        {/* <CoupangBanner /> */}
 
         {/* 모아팁스 행사/축제 */}
         <section id="events" className="scroll-mt-20">
