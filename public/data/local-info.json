@@ -8285,6 +8285,34 @@
   ],
   "nationalBenefits": [
     {
+      "name": "청년 국가기술자격시험 응시료 지원",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-07-15",
+      "endDate": "상시",
+      "location": "고용노동부",
+      "target": "만 34세 이하 청년",
+      "summary": "만 34세 이하 청년을 대상으로 한국산업인력공단이 시행하는 국가기술자격 시험 응시료의 50%를 지원합니다. (1인당 총 3회 지원, 지원금 소진 시까지)",
+      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200005023",
+      "imageUrl": "http://www.gov.kr/images/etc/og_image_600.png",
+      "id": 1778713506797,
+      "updatedAt": "2026-07-15"
+    },
+    {
+      "name": "예술인ㆍ노무제공자 출산전후급여등",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-07-15",
+      "endDate": "상시",
+      "location": "고용노동부",
+      "target": "출산 또는 유산·사산한 고용보험 가입 예술인 및 노무제공자",
+      "summary": "출산 또는 유산ㆍ사산한 고용보험 가입 예술인·노무제공자에게 출산전후급여 등을 지원하여 생활 안정을 도모합니다.",
+      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200005017",
+      "imageUrl": "http://www.gov.kr/images/etc/og_image_600.png",
+      "id": 1778713506796,
+      "updatedAt": "2026-07-15"
+    },
+    {
       "name": "고령자고용지원금",
       "category": "혜택",
       "region": "전국",
