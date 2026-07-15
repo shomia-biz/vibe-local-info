@@ -14,12 +14,12 @@ export default function CoupangBanner() {
     setActiveWidgetId(randomId);
   }, []);
 
-  // [임시 조치] 쿠팡 파트너스 승인 전까지 화면 출력 중단
-  return null;
-
   if (!activeWidgetId || activeWidgetId === '나중에_입력') {
     return null;
   }
+
+  // [임시 조치] 쿠팡 파트너스 승인 전까지 화면 출력 중단
+  return null;
 
   // 배너 위젯 ID는 보통 6자리 이상의 '숫자'입니다. AF로 시작하는 파트너스 ID와 다릅니다.
   const isWidgetIdValid = /^\d+$/.test(activeWidgetId);
