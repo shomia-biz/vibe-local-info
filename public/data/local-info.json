@@ -2625,6 +2625,19 @@
   ],
   "incheonExhibitionEvents": [
     {
+      "name": "제5회 꿈꾸는 목요일 단체전",
+      "category": "전시",
+      "region": "인천",
+      "startDate": "2026-07-18",
+      "endDate": "2026-07-29",
+      "location": "인천광역시교육청평생학습관 갤러리다솜",
+      "target": "누구나",
+      "summary": "매주 목요일에 그림을 사랑하는 이들이 모여 성장한 미술 동호회 '꿈꾸는 목요일'의 다섯 번째 정기 단체전입니다. 자연, 풍경, 건축물 등 일상 속 소재를 유화 작품으로 선보이며, 각자의 경험과 감정을 빛과 색채로 섬세하게 표현하여 관람객에게 깊은 공감과 친근함을 선사합니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13708",
+      "id": 1778713506802,
+      "updatedAt": "2026-07-15"
+    },
+    {
       "name": "김종하PREVIEWW",
       "category": "전시",
       "region": "인천",
@@ -4915,6 +4928,20 @@
     }
   ],
   "incheonEvents": [
+    {
+      "name": "2026 인천아트플랫폼 <플랫폼 초이스> 7월 공연 안내",
+      "category": "행사",
+      "region": "인천",
+      "startDate": "2026-07-19",
+      "endDate": "2026-07-19",
+      "location": "인천아트플랫폼 C동 공연장",
+      "target": "만 5세 이상",
+      "summary": "서커스디랩의 대표 작품 2편을 한 무대에서 만나는 특별 기획공연입니다. 마술과 서커스의 매력으로 상상력과 즐거움을 선사합니다. 1부 <순간들>은 일상 속 특별한 순간을 마술로 표현하며, 2부 <서커스게임즈>는 올림픽을 배경으로 한 이색 서커스 공연입니다.",
+      "link": "https://ifac.or.kr/culturalInfo/cuturalEvents/performanceSrch/view.do?key=m2501152621396&eventSn=13710",
+      "imageUrl": "https://ifac.or.kr/resource/www/images/layout/og_images.png",
+      "id": 1778713506801,
+      "updatedAt": "2026-07-15"
+    },
     {
       "name": "[인천시립박물관] 여름민속행사 개최 안내",
       "category": "행사",
