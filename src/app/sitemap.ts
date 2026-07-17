@@ -1,3 +1,5 @@
+export const dynamic = 'force-static';
+
 import { MetadataRoute } from 'next';
 import { getSortedPostsData } from '@/lib/posts';
 import localData from '../../public/data/local-info.json';
@@ -26,7 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // 2. Blog Posts
   const posts = getSortedPostsData();
   const blogRoutes = posts.map((post) => ({
-    url: `${BASE_URL}/blog/${post.id}`,
+    url: `${BASE_URL}/blog/${post.slug}`,
     lastModified: new Date(post.date || new Date()),
     changeFrequency: 'weekly' as const,
     priority: 0.7,
