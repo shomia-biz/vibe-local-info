@@ -686,29 +686,33 @@ export default function HomeContent({ blogPosts = [], guidePosts = [] }: { blogP
                     <Link 
                       key={guide.slug} 
                       href={`/guide/${guide.slug}`}
-                      className="group flex flex-col bg-slate-900 rounded-[20px] overflow-hidden shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 relative aspect-[4/3] border border-slate-100"
+                      className="group flex flex-col bg-slate-900 rounded-[24px] overflow-hidden shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 relative aspect-[4/3] border border-slate-100"
                     >
                       <img 
                         src={guide.thumbnail || 'https://images.unsplash.com/photo-1432821596592-e2c18b78144f?auto=format&fit=crop&w=800&q=80'} 
                         alt={guide.title}
-                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-70"
+                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80"
                       />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
                       
-                      {/* 하단 어두운 그라디언트 */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
-
-                      <div className="absolute inset-0 p-4 flex flex-col justify-end text-left">
-                        <div className="text-yellow-400 text-[10px] font-bold mb-1">
+                      {/* 상단 뱃지 영역: 카테고리(좌측), 날짜(우측) */}
+                      <div className="absolute top-0 left-0 w-full p-5 sm:p-6 flex justify-between items-start z-10">
+                        <div className="bg-black/50 text-yellow-400 text-xs font-bold px-3 py-1 rounded-md border border-yellow-400/30">
                           {guide.category}
                         </div>
-                        <h4 className="text-[15px] sm:text-base font-black text-white leading-snug drop-shadow-md line-clamp-2 mb-2 group-hover:text-yellow-200 transition-colors">
-                          {guide.title}
-                        </h4>
-                        <div className="flex justify-between items-center mt-auto">
-                          <span className="text-xs text-slate-300 font-medium">{guide.date}</span>
-                          <span className="bg-orange-500 text-white text-[10px] px-2 py-1 rounded-full font-bold">
-                            자세히보기 &gt;
-                          </span>
+                        <div className="text-slate-200 text-[11px] font-bold px-2 py-1 bg-black/30 rounded-md backdrop-blur-sm border border-white/10">
+                          {guide.date}
+                        </div>
+                      </div>
+
+                      {/* 하단 텍스트 및 버튼 영역 (기존 크기 유지) */}
+                      <div className="absolute inset-0 p-5 sm:p-6 flex flex-col justify-end items-center text-center">
+                        <h3 className="text-xl sm:text-2xl font-black text-white mb-4 leading-tight drop-shadow-lg break-keep">
+                          <span className="text-yellow-400">{guide.title.split(' ')[0]}</span>{' '}
+                          {guide.title.split(' ').slice(1).join(' ')}
+                        </h3>
+                        <div className="bg-orange-500 hover:bg-orange-600 text-white text-sm font-bold px-6 py-2 rounded-full shadow-lg transition-colors inline-flex items-center gap-1">
+                          자세히보기 <span className="text-lg leading-none">›</span>
                         </div>
                       </div>
                     </Link>
