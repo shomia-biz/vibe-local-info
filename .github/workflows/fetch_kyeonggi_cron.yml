@@ -1,8 +1,8 @@
 name: Fetch Kyeonggi Data
 
 on:
-  schedule:
-    - cron: '30 20 * * *' # 매일 한국시간 오전 5시 30분 (UTC 20시 30분)
+#  schedule:
+#    - cron: '30 20 * * *' # 매일 한국시간 오전 5시 30분 (UTC 20시 30분)
   workflow_dispatch:
 
 permissions:
