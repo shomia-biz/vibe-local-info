@@ -42,6 +42,17 @@ async function fetchKeywordsFromSource(source, history) {
     for (const item of feed.items) {
       if (keywords.length >= source.limit) break;
       
+      // 날짜 체크: 2일(48시간)이 지난 오래된 기사는 건너뛰기
+      if (item.isoDate || item.pubDate) {
+        const itemDate = new Date(item.isoDate || item.pubDate);
+        const now = new Date();
+        const diffDays = (now - itemDate) / (1000 * 60 * 60 * 24);
+        
+        if (diffDays > 2) {
+          continue;
+        }
+      }
+
       // 구글 뉴스 타이틀 정리 (" - 언론사" 제거)
       let title = item.title;
       if (title.includes(' - ')) {
