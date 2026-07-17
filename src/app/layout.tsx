@@ -5,8 +5,7 @@ import Script from "next/script";
 import "./globals.css";
 import ChatBot from "@/components/ChatBot";
 import KakaoFloatingButton from "@/components/KakaoFloatingButton";
-
-
+import CopyProtection from "@/components/CopyProtection";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -179,6 +178,9 @@ export default function RootLayout({
 
         {/* 채널톡 스타일 챗봇 */}
         <ChatBot />
+
+        {/* 전역 복사 방지 (우클릭, 드래그, 단축키 금지) */}
+        <CopyProtection />
       </body>
     </html>
   );
