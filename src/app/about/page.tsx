@@ -14,25 +14,24 @@ export default function AboutPage() {
           <section className="mb-10">
             <h2 className="text-2xl font-bold text-orange-600 mb-4">🏠 사이트 운영 목적</h2>
             <p className="text-gray-700 leading-relaxed">
-              <strong>서울 경기 인천 생활 정보</strong>는 지역 주민분들이 일상에서 놓치기 쉬운 소중한 혜택들을 한눈에 확인하실 수 있도록 돕는 커뮤니티형 정보 서비스입니다. 
-              복잡한 공고문 대신, 누구나 이해하기 쉬운 설명으로 우리 동네의 축제, 행사, 지원금 정보를 신속하게 전달하는 것을 목표로 합니다.
+              <strong>'수도권 모아팁스'</strong>는 서울, 경기, 인천 주민분들의 든든한 정보 길잡이가 되고자 합니다. 
+              복잡하게 흩어져 있는 지원금과 행사 소식을 한곳에 모아, 누구나 이해하기 쉬운 편안한 설명으로 신속하게 전달하는 것이 저희의 목표입니다.
             </p>
           </section>
           
           <section className="mb-10">
             <h2 className="text-2xl font-bold text-orange-600 mb-4">📊 데이터 출처</h2>
             <p className="text-gray-700 leading-relaxed">
-              본 사이트에 게시되는 모든 기초 정보는 <strong>공공데이터포털(data.go.kr)</strong>에서 제공하는 신뢰할 수 있는 공식 데이터를 바탕으로 합니다. 
-              정부 및 지자체의 API를 통해 수집된 객관적인 정보를 바탕으로 신뢰도 높은 콘텐츠를 구축하고 있습니다.
+              안심하고 정보를 활용하실 수 있도록, 모든 바탕 자료는 <strong>공공데이터포털(data.go.kr)</strong>과 정부 API에서 가져옵니다. 
+              철저하게 공식적이고 객관적인 데이터만을 사용하여 신뢰를 더했습니다.
             </p>
           </section>
           
           <section className="mb-10">
             <h2 className="text-2xl font-bold text-orange-600 mb-4">🤖 콘텐츠 생성 방식</h2>
             <p className="text-gray-700 leading-relaxed">
-              저희는 방대한 공공데이터를 빠르게 분석하여 주민분들께 전달하기 위해 <strong>인공지능(AI) 기술</strong>을 활용합니다. 
-              수집된 원문 정보를 바탕으로 AI가 핵심 내용을 요약하고 읽기 편한 블로그 형태로 재구성합니다. 
-              이를 통해 더 많은 혜택 정보를 더 빠르게 제공해 드릴 수 있습니다.
+              시시각각 변하는 수많은 혜택을 누구보다 빠르게 전달하기 위해 <strong>인공지능(AI) 기술</strong>을 활용하고 있습니다. 
+              수집된 어려운 정책 자료를 AI가 읽기 쉽게 다듬고 요약하여, 한 편의 블로그 글처럼 편안하게 읽으실 수 있도록 돕고 있습니다.
             </p>
           </section>
 
