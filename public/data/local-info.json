@@ -8751,6 +8751,48 @@
   ],
   "nationalBenefits": [
     {
+      "name": "근로조건 자율개선 지원사업",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-07-18",
+      "endDate": "상시",
+      "location": "지방고용노동관서(노동기준조사과)",
+      "target": "상시근로자 30인 미만 사업장 (사업주 신청 시 100인 미만)",
+      "summary": "근로기준법 등 3개 법률 10개 조항(최저임금 준수, 서면근로계약서 체결, 임금체불 등)의 집중점검을 통해 사업장의 자율적인 근로조건 개선을 지원합니다.",
+      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200000087",
+      "imageUrl": "http://www.gov.kr/images/etc/og_image_600.png",
+      "id": 1778713506830,
+      "updatedAt": "2026-07-18"
+    },
+    {
+      "name": "사업주 직업능력개발 지원",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-07-18",
+      "endDate": "상시",
+      "location": "고용노동부",
+      "target": "고용보험가입 사업주",
+      "summary": "고용보험 가입 사업주에게 소속 근로자를 위한 훈련비, 인건비, 수당, 숙식비 등 지원",
+      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200000066",
+      "imageUrl": "http://www.gov.kr/images/etc/og_image_600.png",
+      "id": 1778713506829,
+      "updatedAt": "2026-07-18"
+    },
+    {
+      "name": "국민내일배움카드",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-07-18",
+      "endDate": "상시",
+      "location": "고용노동부",
+      "target": "국민 누구나 (공무원, 사립학교 교직원, 고소득자 등 제외)",
+      "summary": "직업훈련을 희망하는 국민에게 5년간 300~500만원 한도 내에서 직업능력개발훈련비와 훈련장려금 지원",
+      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200000026",
+      "imageUrl": "http://www.gov.kr/images/etc/og_image_600.png",
+      "id": 1778713506828,
+      "updatedAt": "2026-07-18"
+    },
+    {
       "name": "기장군 청년 창업자 임차료 지원사업",
       "category": "혜택",
       "region": "전국",
