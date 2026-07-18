@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: "광고문의 | 모아팁스",
+  title: "문의하기 | 모아팁스",
 };
 
 export default function ContactPage() {
@@ -57,8 +57,8 @@ export default function ContactPage() {
         <div className="mt-16 flex flex-wrap justify-center gap-6 text-sm text-slate-400 font-medium">
           <Link href="/terms" className="hover:text-slate-700 transition-colors">이용약관</Link>
           <Link href="/privacy" className="hover:text-slate-700 transition-colors">개인정보처리방침</Link>
-          <Link href="/disclaimer" className="hover:text-slate-700 transition-colors">면책공고</Link>
-          <Link href="/contact" className="text-slate-700 font-bold transition-colors">광고문의</Link>
+          <Link href="/disclaimer" className="hover:text-slate-700 transition-colors">면책고지</Link>
+          <Link href="/contact" className="text-slate-700 font-bold transition-colors">문의하기</Link>
         </div>
 
       </div>

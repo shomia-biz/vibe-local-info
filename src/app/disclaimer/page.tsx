@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: "면책공고 | 모아팁스",
+  title: "면책고지 | 모아팁스",
 };
 
 export default function DisclaimerPage() {
@@ -15,7 +15,7 @@ export default function DisclaimerPage() {
             <span className="mr-1">←</span> 홈으로 돌아가기
           </Link>
           <h1 className="text-4xl sm:text-5xl font-black text-slate-900 leading-tight tracking-tight mb-4">
-            면책공고
+            면책고지
           </h1>
           <p className="text-slate-500 font-medium">최종 업데이트: 2026년 5월 24일</p>
         </div>
@@ -45,8 +45,8 @@ export default function DisclaimerPage() {
         <div className="mt-16 flex flex-wrap justify-center gap-6 text-sm text-slate-400 font-medium">
           <Link href="/terms" className="hover:text-slate-700 transition-colors">이용약관</Link>
           <Link href="/privacy" className="hover:text-slate-700 transition-colors">개인정보처리방침</Link>
-          <Link href="/disclaimer" className="text-slate-700 font-bold transition-colors">면책공고</Link>
-          <Link href="/contact" className="hover:text-slate-700 transition-colors">광고문의</Link>
+          <Link href="/disclaimer" className="text-slate-700 font-bold transition-colors">면책고지</Link>
+          <Link href="/contact" className="hover:text-slate-700 transition-colors">문의하기</Link>
         </div>
 
       </div>
