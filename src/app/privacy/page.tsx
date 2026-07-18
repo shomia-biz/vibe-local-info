@@ -26,7 +26,7 @@ export default function PrivacyPage() {
         {/* 본문 카드 */}
         <div className="bg-white rounded-[32px] p-8 sm:p-10 shadow-sm border border-slate-100 text-slate-600 leading-relaxed">
           <p className="mb-4 text-slate-900 border-b border-slate-100 pb-4 font-medium">
-            수도권 모아팁스(이하 "모아팁스" 또는 "사이트")은 이용자의 개인정보를 중요하게 생각하며, 「개인정보 보호법」 및 관련 법령에 따라 아래와 같이 개인정보처리방침을 수립·공개합니다.
+            모아팁스(이하 "모아팁스" 또는 "사이트")은 이용자의 개인정보를 중요하게 생각하며, 「개인정보 보호법」 및 관련 법령에 따라 아래와 같이 개인정보처리방침을 수립·공개합니다.
           </p>
 
           <h2 className="text-xl font-bold text-slate-900 mb-2 mt-6">1. 수집하는 개인정보 항목</h2>
@@ -61,7 +61,7 @@ export default function PrivacyPage() {
           <div className="border-t border-slate-100 pt-6 mt-8">
             <h3 className="text-lg font-bold text-slate-900 mb-2">문의 및 연락처</h3>
             <p className="mb-2">📧 이메일:<a href="mailto:omnia.ahn.biz@gmail.com" className="text-cyan-600 hover:text-cyan-700 transition-colors ml-1 font-medium">omnia.ahn.biz@gmail.com</a></p>
-            <p>🌐 운영자: 수도권 모아팁스 (<a href="https://moa-tips.com" target="_blank" rel="noopener noreferrer" className="text-cyan-600 hover:text-cyan-700 transition-colors font-medium">moa-tips.com</a>)</p>
+            <p>🌐 운영자: 모아팁스 (<a href="https://moa-tips.com" target="_blank" rel="noopener noreferrer" className="text-cyan-600 hover:text-cyan-700 transition-colors font-medium">moa-tips.com</a>)</p>
           </div>
         </div>
 

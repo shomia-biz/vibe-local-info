@@ -15,6 +15,16 @@ export async function generateMetadata({ params }: { params: Promise<{ type: str
   return {
     title: `${itemData.name} - 모아팁스 상세정보`,
     description: itemData.summary || `${itemData.name}에 대한 상세 정보입니다.`,
+    alternates: {
+      canonical: `https://moa-tips.com/detail/${type}/${id}`,
+    },
+    openGraph: {
+      title: `${itemData.name} - 모아팁스 상세정보`,
+      description: itemData.summary || `${itemData.name}에 대한 상세 정보입니다.`,
+      url: `https://moa-tips.com/detail/${type}/${id}`,
+      type: "website",
+      siteName: "모아팁스",
+    },
     robots: {
       index: true,
       follow: true,
@@ -74,5 +84,36 @@ export default async function DetailPage({ params }: { params: Promise<{ type: s
     notFound();
   }
 
-  return <DetailClient itemData={itemData} type={type} />;
+  const isEvent = type.toLowerCase().includes('event');
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": isEvent ? "Event" : "Thing",
+    "name": itemData.name,
+    "description": itemData.summary || itemData.name,
+    ...(isEvent && itemData.startDate && {
+      "startDate": itemData.startDate.replace(/\./g, '-'),
+      "endDate": itemData.endDate ? itemData.endDate.replace(/\./g, '-') : itemData.startDate.replace(/\./g, '-'),
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": {
+        "@type": "Place",
+        "name": itemData.location || "온라인/해당 장소",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": itemData.location || "온라인/해당 장소"
+        }
+      }
+    }),
+    "url": `https://moa-tips.com/detail/${type}/${id}`
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      <DetailClient itemData={itemData} type={type} />
+    </>
+  );
 }

@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: "소개 | 수도권 모아팁스",
-  description: "수도권 모아팁스의 운영 목적과 데이터 출처를 소개합니다.",
+  title: "소개 | 모아팁스",
+  description: "모아팁스의 운영 목적과 데이터 출처를 소개합니다.",
 };
 
 export default function AboutPage() {
@@ -15,7 +15,7 @@ export default function AboutPage() {
             About Us
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-slate-900 leading-tight tracking-tight mb-6">
-            수도권 모아팁스 <span className="text-cyan-500">소개</span>
+            모아팁스 <span className="text-cyan-500">소개</span>
           </h1>
           <p className="text-lg text-slate-500 font-medium max-w-2xl mx-auto break-keep">
             서울, 경기, 인천 주민분들이 꼭 알아야 할 혜택을 빠르고 쉽게 전해드리는 라이프스타일 정보 큐레이션 서비스입니다.
@@ -36,7 +36,7 @@ export default function AboutPage() {
               <h2 className="text-2xl font-black text-slate-800">사이트 운영 목적</h2>
             </div>
             <p className="text-slate-600 text-lg leading-relaxed font-medium">
-              <strong className="text-slate-900 font-black">'수도권 모아팁스'</strong>는 서울, 경기, 인천 주민분들의 든든한 정보 길잡이가 되고자 합니다. 
+              <strong className="text-slate-900 font-black">'모아팁스'</strong>는 서울, 경기, 인천 주민분들의 든든한 정보 길잡이가 되고자 합니다. 
               복잡하게 흩어져 있는 지원금과 행사 소식을 한곳에 모아, 누구나 이해하기 쉬운 편안한 설명으로 신속하게 전달하는 것이 저희의 목표입니다.
             </p>
           </section>

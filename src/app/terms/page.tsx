@@ -26,7 +26,7 @@ export default function TermsPage() {
         {/* 본문 카드 */}
         <div className="bg-white rounded-[32px] p-8 sm:p-10 shadow-sm border border-slate-100 text-slate-600 leading-relaxed">
           <h2 className="text-xl font-bold text-slate-900 mb-2">제1조 (목적)</h2>
-          <p className="mb-6">본 약관은 '수도권 모아팁스'(이하 "모아팁스")가 제공하는 정보 서비스의 이용과 관련하여, 모아팁스와 이용자 간의 권리, 의무 및 책임 사항 등 기본적인 규칙을 정하는 것을 목적으로 합니다.</p>
+          <p className="mb-6">본 약관은 '모아팁스'(이하 "모아팁스")가 제공하는 정보 서비스의 이용과 관련하여, 모아팁스와 이용자 간의 권리, 의무 및 책임 사항 등 기본적인 규칙을 정하는 것을 목적으로 합니다.</p>
 
           <h2 className="text-xl font-bold text-slate-900 mb-2">제2조 (용어의 정의)</h2>
           <ul className="list-disc pl-5 mb-6 space-y-1">
@@ -76,7 +76,7 @@ export default function TermsPage() {
           <div className="border-t border-slate-100 pt-6 mt-8">
             <h3 className="text-lg font-bold text-slate-900 mb-2">문의 및 연락처</h3>
             <p className="mb-2">📧 이메일: <a href="mailto:omnia.ahn.biz@gmail.com" className="text-cyan-600 hover:text-cyan-700 transition-colors font-medium">omnia.ahn.biz@gmail.com</a></p>
-            <p>🌐 사이트: 수도권 모아팁스(<a href="https://moa-tips.com" target="_blank" rel="noopener noreferrer" className="text-cyan-600 hover:text-cyan-700 transition-colors font-medium">moa-tips.com</a>)</p>
+            <p>🌐 사이트: 모아팁스(<a href="https://moa-tips.com" target="_blank" rel="noopener noreferrer" className="text-cyan-600 hover:text-cyan-700 transition-colors font-medium">moa-tips.com</a>)</p>
           </div>
         </div>
 

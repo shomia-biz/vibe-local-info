@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     title: "모아팁스 - 수도권 나들이 & 지원금 혜택 한눈에",
     description: "주말 나들이 정보부터 소상공인 지원금까지 꼭 필요한 팁을 모아 제공합니다.",
     url: "https://moa-tips.com",
-    siteName: "수도권 모아팁스",
+    siteName: "모아팁스",
     images: [
       {
         url: "/images/og-thumbnail.jpg",
@@ -35,6 +35,9 @@ export const metadata: Metadata = {
     ],
     locale: "ko_KR",
     type: "website",
+  },
+  alternates: {
+    canonical: "https://moa-tips.com",
   },
 };
 
@@ -116,7 +119,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              "name": "수도권 모아팁스",
+              "name": "모아팁스",
               "url": "https://moa-tips.com",
               "description": "수도권 주민을 위한 지역 행사, 축제, 지원금, 혜택 정보"
             })

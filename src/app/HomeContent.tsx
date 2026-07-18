@@ -790,7 +790,7 @@ export default function HomeContent({ blogPosts = [], guidePosts = [] }: { blogP
               className="flex flex-col items-center justify-center p-6 bg-gradient-to-br from-rose-400 to-rose-600 hover:from-rose-500 hover:to-rose-700 text-white rounded-[24px] shadow-lg hover:shadow-rose-200 transition-all active:scale-[0.98] group"
             >
               <span className="text-3xl mb-2 group-hover:-translate-y-1 transition-transform">🎡</span>
-              <span className="text-xl sm:text-2xl font-black tracking-tight">수도권 모아팁스 행사/축제</span>
+              <span className="text-xl sm:text-2xl font-black tracking-tight">모아팁스 행사/축제</span>
               <span className="text-rose-100 text-sm font-medium mt-1">수도권에서 열리는 다양한 문화·예술·전시 모아보기</span>
             </button>
           </div>
@@ -1438,7 +1438,7 @@ export default function HomeContent({ blogPosts = [], guidePosts = [] }: { blogP
 
         {/* SEO 텍스트 (모아팁스 소개) */}
         <section className="bg-white rounded-[24px] p-8 mt-12 border border-slate-100 shadow-sm text-left">
-          <h2 className="text-2xl font-black text-slate-800 mb-4">수도권 모아팁스란?</h2>
+          <h2 className="text-2xl font-black text-slate-800 mb-4">모아팁스란?</h2>
           <p className="text-slate-600 mb-4 leading-relaxed font-medium">
             알아두면 돈이 되고 힘이 되는 서울, 경기, 인천 주민들의 우리 동네 꿀팁 창고입니다. 
             복잡한 정부 지원금부터 다가오는 주말에 가볼 만한 지역 축제까지! 바쁜 일상 속에서 놓치기 쉬운 알짜 혜택들만 쏙쏙 골라, 

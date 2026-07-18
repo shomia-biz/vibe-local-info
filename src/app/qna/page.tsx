@@ -64,7 +64,7 @@ export default function QnaPage() {
         <header className="bg-white shadow-sm border-b border-slate-100 sticky top-0 z-30">
           <div className="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
             <Link href="/" className="font-extrabold text-xl tracking-tight text-slate-800 flex items-center gap-2">
-              <span className="text-2xl">✨</span> 수도권 모아팁스
+              <span className="text-2xl">✨</span> 모아팁스
             </Link>
           </div>
         </header>
@@ -90,7 +90,7 @@ export default function QnaPage() {
       <header className="bg-white shadow-sm border-b border-slate-100 sticky top-0 z-30">
         <div className="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link href="/" className="font-extrabold text-xl tracking-tight text-slate-800 flex items-center gap-2">
-            <span className="text-2xl">✨</span> 수도권 모아팁스
+            <span className="text-2xl">✨</span> 모아팁스
           </Link>
           <Link href="/" className="text-sm font-bold text-slate-500 hover:text-slate-800">
             홈으로 가기
