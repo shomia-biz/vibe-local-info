@@ -873,6 +873,23 @@
   ],
   "seoulCultureEvents": [
     {
+      "name": "[강남문화재단] 서울문화예술교육 [개인의 장소 : 공공의 지도]",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-07-04",
+      "endDate": "2026-10-10",
+      "location": "삼성2동복합문화센터 4층 취미교실",
+      "target": "A반: 초등학교 3학년~6학년 / B반: 중·장년(만40세 이상)",
+      "summary": "강남문화재단에서 운영하는 서울문화예술교육 프로그램으로, 초등학생과 만 40세 이상 중·장년층을 대상으로 삼성2동복합문화센터에서 진행하는 교육 및 체험 강좌입니다.",
+      "link": "https://www.gangnam.go.kr/office/gfac/board/gfac_notice/623/view.do?mid=gfac_notice01",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://www.gangnam.go.kr/assets/images/icon/touch/og_image_src.png",
+      "id": 1778713506832,
+      "updatedAt": "2026-07-19"
+    },
+    {
       "name": "[문화실험공간 호수] 월간 호수랩 8월: 예술로 더위격파!",
       "category": "문화",
       "region": "서울",
@@ -2210,6 +2227,23 @@
   ],
   "seoulExhibitionEvents": [
     {
+      "name": "[서울상상나라] 그림책 작업실: 사소하고 특별한",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-07-04",
+      "endDate": "2027-12-31",
+      "location": "서울상상나라 B1 기획전시실",
+      "target": "누구나",
+      "summary": "서울상상나라에서 개최되는 기획 전시로, '그림책 작업실: 사소하고 특별한'을 주제로 한 전시/미술 프로그램입니다.",
+      "link": "https://www.seoulchildrensmuseum.org/display/displayExhibition28.do",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://www.seoulchildrensmuseum.org/z00_images/common/sns_sImg.png",
+      "id": 1778713506831,
+      "updatedAt": "2026-07-19"
+    },
+    {
       "name": "[서울시립 사진미술관] 마틴 파 : We Are Martin Parr",
       "category": "전시",
       "region": "서울",
@@ -2839,6 +2873,23 @@
   ],
   "nationalExhibitionEvents": [],
   "seoulEvents": [
+    {
+      "name": "[세종문화회관] 연극 [오이디푸스]",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-07-04",
+      "endDate": "2026-08-23",
+      "location": "세종M씨어터",
+      "target": "13세 이상 관람 가능 (2013년 포함 이전 출생자)",
+      "summary": "세종문화회관 세종M씨어터에서 진행되는 연극 [오이디푸스] 공연 안내입니다. 이용 요금은 R석 90,000원, S석 70,000원입니다.",
+      "link": "https://www.sejongpac.or.kr/portal/performance/performance/performTicket.do?performIdx=37291&menuNo=200320",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://www.sejongpac.or.kr/cmmn/file/linkedxmlImg.do?performIdx=37291&ver=2&mainYn=Y",
+      "id": 1778713506833,
+      "updatedAt": "2026-07-19"
+    },
     {
       "name": "[마포문화재단] 제11회 M 클래식 축제 [소프라노 황수미 리사이틀]",
       "category": "행사",
