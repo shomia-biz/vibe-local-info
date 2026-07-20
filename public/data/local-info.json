@@ -6815,6 +6815,22 @@
   ],
   "kyeonggiBenefits": [
     {
+      "name": "안양시 부모등 부양자 지원",
+      "category": "혜택",
+      "region": "경기",
+      "startDate": "2026-07-20",
+      "endDate": "상시",
+      "location": "경기도 안양시",
+      "target": "부모 등을 부양하고 있는 가정",
+      "summary": "부모 등을 부양하고 있는 가정에 공공시설 사용료 등을 지원함으로써 고령사회 문제 해결과 효문화 확산을 도모하는 서비스",
+      "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002475&wlfareInfoReldBztpCd=02",
+      "serviceField": "생활안정",
+      "supportType": "현금(감면)",
+      "targetGroup": "가구",
+      "id": 1778713506849,
+      "updatedAt": "2026-07-20"
+    },
+    {
       "name": "부천시 대안교육기관 등 교복비 지원",
       "category": "혜택",
       "region": "경기",
@@ -8385,6 +8401,38 @@
     }
   ],
   "incheonBenefits": [
+    {
+      "name": "강화군 참전유공자 명예수당 지원",
+      "category": "혜택",
+      "region": "인천",
+      "startDate": "2026-07-20",
+      "endDate": "상시",
+      "location": "인천광역시 강화군",
+      "target": "노년층 보훈대상자",
+      "summary": "참전유공자의 명예 선양 및 복리증진, 군민의 애국정신 함양에 이바지",
+      "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004521&wlfareInfoReldBztpCd=02",
+      "serviceField": "생활안정",
+      "supportType": "현금",
+      "targetGroup": "개인",
+      "id": 1778713506848,
+      "updatedAt": "2026-07-20"
+    },
+    {
+      "name": "행려자 보호 및 지원",
+      "category": "혜택",
+      "region": "인천",
+      "startDate": "2026-07-20",
+      "endDate": "상시",
+      "location": "인천광역시 계양구",
+      "target": "행려자 (청소년, 청년, 중장년, 노년)",
+      "summary": "행려자 귀향여비 제공",
+      "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000934&wlfareInfoReldBztpCd=02",
+      "serviceField": "보호 돌봄",
+      "supportType": "현금",
+      "targetGroup": "개인",
+      "id": 1778713506847,
+      "updatedAt": "2026-07-20"
+    },
     {
       "name": "인천 청년도약기지(취업아카데미)",
       "category": "혜택",
