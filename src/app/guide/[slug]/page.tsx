@@ -86,6 +86,17 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
             </ReactMarkdown>
           </div>
 
+          {/* 해시태그 영역 */}
+          {guideData.tags && guideData.tags.length > 0 && (
+            <div className="mt-8 flex flex-wrap gap-2">
+              {guideData.tags.map((tag) => (
+                <span key={tag} className="px-3 py-1.5 bg-slate-100 text-slate-600 text-[13px] font-bold rounded-full shadow-sm">
+                  #{tag}
+                </span>
+              ))}
+            </div>
+          )}
+
           {/* CTA 버튼 */}
           {guideData.cta_link && (
             <div className="mt-12 pt-8 border-t border-slate-100 text-center">
