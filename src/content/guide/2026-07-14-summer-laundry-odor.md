@@ -3,6 +3,7 @@ title: "세탁소 사장님들이 쉬쉬하는 '여름철 걸레 냄새' 완벽 
 summary: "아무리 빨아도 옷에서 나는 쉰내, 꿉꿉한 냄새 때문에 스트레스 받으셨나요? 돈 안 들이고 당장 실천할 수 있는 세탁소 비법 3가지를 공개합니다."
 date: "2026-07-14"
 category: 생활/리빙
+tags: [여름철빨래, 세탁꿀팁, 걸레냄새, 빨래냄새제거, 살림꿀팁, 생활정보]
 thumbnail: "https://images.unsplash.com/photo-1582735689369-4fe89b7156f5?auto=format&fit=crop&w=800&q=80"
 cta_link: "https://moa-tips.com"
 ---

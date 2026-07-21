@@ -8997,6 +8997,23 @@
   ],
   "nationalBenefits": [
     {
+      "name": "2026 IBK아이돌봄지원사업 대상자 모집",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-07-20",
+      "endDate": "2026-07-24",
+      "location": "IBK행복나눔재단",
+      "target": "'26년 상반기(1월~6월) 중 정부지원 아이돌봄서비스를 이용하여 본인부담금이 발생한 중소기업에 재직중인 근로자 또는 26년 소상공인 확인서를 발급받은 자영업자 / 최대 150만원 한도 내",
+      "summary": "IBK행복나눔재단에서 가정의 양육 부담을 완화하고 아동의 건강한 성장을 돕기 위해 시행하는 2026년도 IBK아이돌봄지원사업의 참여 대상자를 모집합니다.",
+      "link": "https://www.ibkfoundation.or.kr/boarddata/view?board_seq=1&board_data_seq=4256&qtr=perpage=10&mn=15",
+      "imageUrl": "https://www.ibkfoundation.or.kr/data/editor/a264ec9b4d19ce6721a4d334328602be1700271.jpg",
+      "serviceField": "복지",
+      "supportType": "현금",
+      "targetGroup": "정부지원 아이돌봄 서비스",
+      "id": 1778713506850,
+      "updatedAt": "2026-07-21"
+    },
+    {
       "name": "고등학교 신입생 입학준비금 지원 사업",
       "category": "혜택",
       "region": "전국",

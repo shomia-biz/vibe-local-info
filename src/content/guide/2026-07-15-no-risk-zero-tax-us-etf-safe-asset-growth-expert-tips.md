@@ -3,6 +3,7 @@ title: "위험 NO! 세금 ZERO? 미국 ETF로 안전하게 자산 늘리는 초�
 summary: "위험은 줄이고, 세금 효율은 높이며, 안정적으로 자산을 불려나가는 미국 ETF 투자! 지금 바로 초고수들의 핵심 비법을 확인하고 당신의 자산 증식 로드맵을 그려보세요."
 date: "2026-07-15"
 category: 경제, 투자, 재테크
+tags: [미국ETF, 투자, 재테크, 절세, 안전자산, 주식초보, 투자꿀팁]
 thumbnail: "https://images.unsplash.com/photo-1432821596592-e2c18b78144f?auto=format&fit=crop&w=800&q=80"
 cta_link: "https://moa-tips.com"
 ---

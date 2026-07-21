@@ -3,6 +3,7 @@ title: "긴급속보: 출생가구 민영주택 청약 '지름길' 대공개! �
 summary: "아이를 키우는 부모님이라면 주목! 새로워진 출생가구 민영주택 청약 제도로 내 집 마련의 꿈을 현실로 만들 절호의 기회를 잡아보세요. 당첨 확률을 극대화하는 비법까지 모두 공개합니다."
 date: "2026-07-16"
 category: 부동산
+tags: [신생아특공, 민영주택, 청약꿀팁, 내집마련, 출생가구, 아파트청약, 당첨전략]
 thumbnail: "https://image.pollinations.ai/prompt/birth%20household%20private%20housing%20subscription%20shortcut%20winning%20tips?width=800&height=400&nologo=true"
 cta_link: "https://moa-tips.com"
 ---

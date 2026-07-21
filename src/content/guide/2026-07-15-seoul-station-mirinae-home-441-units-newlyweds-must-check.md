@@ -3,6 +3,7 @@ title: "서울 역세권 441세대 미리내집, 신혼부부 청약 자격과 �
 summary: "서울 역세권에 들어서는 신혼부부 특화 공공주택 '미리내집'의 장점, 청약 자격, 소득 기준, 그리고 주의사항까지 한눈에 알아보기 쉽게 정리했습니다."
 date: "2026-07-15"
 category: 부동산
+tags: [미리내집, 신혼부부청약, 서울역세권, 부동산, 주거지원, 공공임대, 청약자격]
 thumbnail: "https://images.unsplash.com/photo-1432821596592-e2c18b78144f?auto=format&fit=crop&w=800&q=80"
 cta_link: "https://moa-tips.com"
 ---

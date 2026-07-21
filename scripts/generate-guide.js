@@ -127,6 +127,7 @@ async function generateGuide() {
    - summary: 1~2줄 분량의 호기심을 유발하는 요약
    - date: "${today}"
    - category: 주제에 맞는 카테고리 (예: 생활, 경제, IT, 부동산 등)
+   - tags: [키워드1, 키워드2, 키워드3] (주제와 관련된 핵심 키워드를 5~10개 정도 콤마로 구분해서 작성하세요)
    - thumbnail: "https://image.pollinations.ai/prompt/[영어로 번역된 핵심 키워드]?width=800&height=400&nologo=true" (예: 제목이 '부동산 청약'이라면 "https://image.pollinations.ai/prompt/real%20estate%20subscription?width=800&height=400&nologo=true" 처럼 URL 인코딩된 영어 키워드를 넣으세요)
    - cta_link: "https://moa-tips.com"
 

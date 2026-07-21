@@ -3,6 +3,7 @@ title: "지방 내려가면 부자 된다?! 이전지원금 비과세 포함, �
 summary: "정부가 지방 이전을 장려하기 위해 파격적인 세금 혜택을 제공하고 있습니다. 이전지원금 비과세부터 농어촌 주택 특례까지, 지방으로 내려가면 누릴 수 있는 강력한 세금 혜택 3종 세트를 지금 바로 확인하고 '지방 부자'의 꿈에 한 발짝 더 다가가세요!"
 date: "2026-07-15"
 category: 경제
+tags: [지방이전, 세금혜택, 비과세, 정부지원, 절세, 재테크, 지방우대]
 thumbnail: "https://images.unsplash.com/photo-1432821596592-e2c18b78144f?auto=format&fit=crop&w=800&q=80"
 cta_link: "https://moa-tips.com"
 ---

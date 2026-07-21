@@ -3,6 +3,7 @@ title: '"에어컨 제습보다 낫네" 방안을 5분 만에 뽀송하게 만�
 summary: 에어컨 제습 모드보다 훨씬 빠르고 강력하게 방안을 뽀송하게 만드는 제습기 최적의 '비밀 위치'와 200% 활용 꿀팁을 공개합니다.
 date: "2026-07-14"
 category: 생활
+tags: [제습기, 여름철, 습기제거, 생활꿀팁, 실내건조, 제습기위치, 뽀송한방]
 thumbnail: "https://images.unsplash.com/photo-1432821596592-e2c18b78144f?auto=format&fit=crop&w=800&q=80"
 cta_link: "https://moa-tips.com"
 ---
