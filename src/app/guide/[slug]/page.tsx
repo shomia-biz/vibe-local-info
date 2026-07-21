@@ -90,7 +90,7 @@ export default async function GuideDetailPage({ params }: { params: Promise<{ sl
           {guideData.tags && guideData.tags.length > 0 && (
             <div className="mt-8 flex flex-wrap gap-2">
               {guideData.tags.map((tag) => (
-                <span key={tag} className="px-3 py-1.5 bg-slate-100 text-slate-600 text-[13px] font-bold rounded-full shadow-sm">
+                <span key={tag} className="px-4 py-2 bg-slate-800 text-white text-[15px] font-bold rounded-full shadow-sm">
                   #{tag}
                 </span>
               ))}

@@ -225,7 +225,7 @@ export default async function PostPage({ params }: Props) {
         {/* 태그 목록 */}
         <div className="mt-8 flex flex-wrap gap-2 justify-center">
           {post.tags.map((tag) => (
-            <span key={tag} className="text-sm text-gray-400 bg-gray-50 px-3 py-1 rounded-full">
+            <span key={tag} className="px-4 py-2 bg-slate-800 text-white text-[15px] font-bold rounded-full shadow-sm">
               #{tag}
             </span>
           ))}
