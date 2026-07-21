@@ -5596,6 +5596,23 @@
   ],
   "seoulBenefits": [
     {
+      "name": "송파구 공공 야간 / 심야 약국 운영 안내",
+      "category": "혜택",
+      "region": "서울",
+      "startDate": "2026-07-21",
+      "endDate": "2026-12-31",
+      "location": "야간 심야 약국",
+      "target": "지역주민 누구나",
+      "summary": "평일 토,일,공휴일 야간 시간대 구민들의 의약품 구입 불편을 해소하고, 약사의 복약지도로 의약품 등의 오남용을 방지하기 위한 공공심야약국을 지정하여 운영, 운영시간 : 365일 밤10시 ~ 다음날 새벽 1시 또는 2시 운영",
+      "link": "https://www.songpa.go.kr/ehealth/selectBbsNttView.do?key=4713&bbsNo=179&nttNo=19268658",
+      "imageUrl": "https://www.songpa.go.kr/common/images/layout/thumbnail.png?v=20230914",
+      "serviceField": "복지",
+      "supportType": "서비스",
+      "targetGroup": "지역주민누구나",
+      "id": 1778713506852,
+      "updatedAt": "2026-07-21"
+    },
+    {
       "name": "동대문구 임산부 백일해 예방접종 지원사업",
       "category": "혜택",
       "region": "서울",
