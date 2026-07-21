@@ -65,7 +65,7 @@ async function generatePost() {
     }
 
     // 1회 실행 당 최대 생성할 블로그 글 수 (필요시 숫자를 변경하시면 됩니다)
-    const MAX_POSTS_TO_GENERATE = 2;
+    const MAX_POSTS_TO_GENERATE =1;
     const today = new Date().toISOString().split('T')[0]; // 오늘 날짜
 
     // 아직 글을 작성하지 않은 '최신' 항목 찾기 (최대 MAX_POSTS_TO_GENERATE개 수집)

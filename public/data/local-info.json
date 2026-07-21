@@ -5564,6 +5564,23 @@
   ],
   "nationalEvents": [
     {
+      "name": "우리 동네 워터파크! ‘하하호호 물놀이장’",
+      "category": "행사",
+      "region": "서울 송파구",
+      "startDate": "2026-07-24",
+      "endDate": "2026-08-17",
+      "location": "서울 송파구청",
+      "target": "영유아 / 어린이",
+      "summary": "8월 16일까지, 가든파이브 라이프 중앙광장에서 무료 운영, 분수 터널 새로 선보여, 중형 풀장, 클라이밍 풀장, 분수 터널 새로 선보여 스마트 대기로 기다림 줄이고, 매 주말 즐거운 이벤트",
+      "link": "https://www.songpa.go.kr/www/selectBbsNttView.do?key=2781&bbsNo=96&nttNo=19277987",
+      "imageUrl": "https://www.songpa.go.kr/common/images/layout/thumbnail.png?v=20230914",
+      "serviceField": "행사",
+      "supportType": "서비스",
+      "targetGroup": "어린이",
+      "id": 1778713506851,
+      "updatedAt": "2026-07-21"
+    },
+    {
       "id": 2,
       "name": "올림픽공원 장미축제 (로즈아워페스타) 🌹",
       "category": "축제",
