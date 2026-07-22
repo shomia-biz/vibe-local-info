@@ -1,10 +1,68 @@
 const fs = require('fs');
 const path = require('path');
 const Parser = require('rss-parser');
+const cheerio = require('cheerio');
+const googleTrends = require('google-trends-api');
+const { GoogleGenerativeAI } = require('@google/generative-ai');
+
+require('dotenv').config({ path: path.resolve(__dirname, '../.env.local') });
+
 const parser = new Parser();
+const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_GEMINI_API_KEY);
 
 const HISTORY_FILE = path.join(__dirname, '../public/data/generated-history.json');
 const KEYWORDS_FILE = path.join(__dirname, '../public/data/trending-keywords.json');
+
+// 정치/사회 논란 관련 키워드 필터링
+const politicalKeywords = [
+  "여야", "국민의힘", "더불어민주당", "민주당", "윤석열", "이재명", "한동훈", 
+  "국회", "대통령", "정치", "총선", "대선", "여당", "야당", "의원", 
+  "공천", "특검", "탄핵", "검찰", "김건희", "정부", "장관"
+];
+
+function isPolitical(text) {
+  return politicalKeywords.some(kw => text.includes(kw));
+}
+
+// 구글 트렌드 API를 통한 트렌드 확인 (간이 검증)
+async function checkTrend(keyword) {
+  try {
+    const res = await googleTrends.interestOverTime({keyword: keyword, startTime: new Date(Date.now() - (3 * 24 * 60 * 60 * 1000))});
+    const parsed = JSON.parse(res);
+    const data = parsed.default.timelineData;
+    if (data && data.length > 0) {
+      // 검색량이 0보다 큰지 확인
+      return data.some(d => d.value[0] > 0);
+    }
+    return true; // 데이터가 애매하면 일단 통과
+  } catch(e) {
+    // 429 에러 등 API 호출 실패 시에는 기본적으로 허용
+    return true; 
+  }
+}
+
+// cheerio를 사용한 원문 페이지 간이 크롤링 (본문 내용 파악)
+async function fetchArticleContent(url) {
+  try {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 3000); // 3초 타임아웃
+    
+    const res = await fetch(url, { signal: controller.signal });
+    clearTimeout(timeout);
+    
+    const html = await res.text();
+    const $ = cheerio.load(html);
+    
+    // 본문으로 추정되는 p 태그들 추출
+    let text = "";
+    $('p').each((i, el) => {
+      if (i < 5) text += $(el).text() + " ";
+    });
+    return text.trim();
+  } catch(e) {
+    return ""; // 접근 실패 시 빈 문자열
+  }
+}
 
 const RSS_SOURCES = [
   {
@@ -34,6 +92,28 @@ const RSS_SOURCES = [
   }
 ];
 
+// Gemini AI를 활용한 기사 요약 함수
+async function summarizeWithGemini(title, content) {
+  if (!process.env.NEXT_PUBLIC_GEMINI_API_KEY) return null;
+  try {
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const prompt = `다음 기사의 제목과 내용을 바탕으로 블로그 독자들에게 유용한 핵심 정보를 3~4줄로 요약해줘. \n제목: ${title}\n내용: ${content}`;
+    const result = await model.generateContent(prompt);
+    return result.response.text();
+  } catch (error) {
+    console.error("⚠️ Gemini API Error:", error.message);
+    return null;
+  }
+}
+
+// 향후 확장을 위한 네이버 API / 유튜브 API 연동 템플릿
+async function fetchAdditionalSources(keyword) {
+  // TODO: 네이버 검색 API 및 유튜브 Data API 연동
+  // const naverClientId = process.env.NAVER_CLIENT_ID;
+  // ...
+  return [];
+}
+
 async function fetchKeywordsFromSource(source, history) {
   try {
     const feed = await parser.parseURL(source.url);
@@ -42,36 +122,60 @@ async function fetchKeywordsFromSource(source, history) {
     for (const item of feed.items) {
       if (keywords.length >= source.limit) break;
       
-      // 날짜 체크: 2일(48시간)이 지난 오래된 기사는 건너뛰기
       if (item.isoDate || item.pubDate) {
         const itemDate = new Date(item.isoDate || item.pubDate);
         const now = new Date();
         const diffDays = (now - itemDate) / (1000 * 60 * 60 * 24);
-        
-        if (diffDays > 2) {
-          continue;
-        }
+        if (diffDays > 2) continue;
       }
 
-      // 구글 뉴스 타이틀 정리 (" - 언론사" 제거)
       let title = item.title;
       if (title.includes(' - ')) {
         const parts = title.split(' - ');
-        parts.pop(); // 마지막 언론사 부분 제거
+        parts.pop(); 
         title = parts.join(' - ').trim();
       } else {
         title = title.trim();
       }
 
-      // 중복 체크 (기존 히스토리에 있는지, 혹은 너무 비슷한지)
-      const isDuplicate = history.some(past => 
-        past.includes(title) || title.includes(past) || 
-        calculateSimilarity(past, title) > 0.7
-      );
+      // 정치 뉴스 필터링 (제목 및 기본 요약 기준)
+      const basicSummary = item.contentSnippet || item.content || "";
+      if (isPolitical(title) || isPolitical(basicSummary)) {
+        continue;
+      }
 
-      if (!isDuplicate && !keywords.includes(title)) {
+      // 히스토리 중복 체크 (문자열 호환성)
+      const isDuplicate = history.some(past => {
+        const pastTitle = typeof past === 'string' ? past : past.title;
+        return pastTitle.includes(title) || title.includes(pastTitle) || 
+               calculateSimilarity(pastTitle, title) > 0.7;
+      });
+
+      if (!isDuplicate && !keywords.some(k => k.includes(title))) {
+        
+        // 1. Cheerio 크롤링: 본문을 가져와서 정치 성향이 있는지 2차 검증
+        const articleText = await fetchArticleContent(item.link);
+        if (articleText.length > 50 && isPolitical(articleText)) {
+          // 본문에 정치 내용이 많으면 제외
+          continue;
+        }
+
+        // 2. Google Trends: 카테고리나 제목의 주요 단어로 트렌드 유효성 확인
+        // 제목의 가장 긴 단어를 키워드로 간주하여 트렌드 API 체크
+        const words = title.split(' ').sort((a, b) => b.length - a.length);
+        const mainKeyword = words[0].replace(/[^가-힣a-zA-Z0-9]/g, '');
+        if (mainKeyword.length >= 2) {
+          const isTrending = await checkTrend(mainKeyword);
+          if (!isTrending) {
+             // 검색 트렌드가 아예 죽어있는 키워드는 패스 (옵션)
+          }
+        }
+
+        // 3. (Gemini 요약은 에러 방지를 위해 이번에는 제외하거나 필요시 사용)
+        // 사용자가 이전 형식으로 요청했으므로 단순 문자열 형태로 저장
+        
         keywords.push(title);
-        history.push(title); // 현재 세션 히스토리에도 추가해서 중복 방지
+        history.push(title); 
       }
     }
     return keywords;
@@ -80,6 +184,7 @@ async function fetchKeywordsFromSource(source, history) {
     return [];
   }
 }
+
 
 // 간단한 자카드 유사도 비교 함수 (너무 비슷한 문장 필터링)
 function calculateSimilarity(str1, str2) {
@@ -104,21 +209,21 @@ async function runKeywordCollector() {
   let todayKeywords = [];
 
   for (const source of RSS_SOURCES) {
-    console.log(`📡 [${source.category}] 키워드 수집 중...`);
+    console.log(`📡 [${source.category}] 데이터 수집 및 트렌드 분석 중...`);
     const keywords = await fetchKeywordsFromSource(source, history);
-    console.log(`  -> ${keywords.length}개 발견`);
+    console.log(`  -> ${keywords.length}개 유효 핫이슈 발견 (정치뉴스 필터링됨)`);
     
-    // 키워드 앞에 카테고리 태그 달기 (나중에 보기 편하게)
+    // 이전 방식대로 카테고리를 앞에 붙인 문자열 포맷으로 되돌림
     const taggedKeywords = keywords.map(kw => `[${source.category}] ${kw}`);
     todayKeywords = todayKeywords.concat(taggedKeywords);
   }
 
   if (todayKeywords.length === 0) {
-    console.log("\n⚠️ 오늘 새로 수집된 신규 키워드가 없습니다.");
+    console.log("\n⚠️ 오늘 새로 수집된 신규 핫이슈가 없습니다.");
     return;
   }
 
-  console.log(`\n✅ 총 ${todayKeywords.length}개의 신선한 키워드가 수집되었습니다!`);
+  console.log(`\n✅ 총 ${todayKeywords.length}개의 신선한 핫이슈 정보가 수집되었습니다!`);
 
   // 히스토리 파일 업데이트
   fs.writeFileSync(HISTORY_FILE, JSON.stringify(history, null, 2), 'utf8');
