@@ -9370,6 +9370,34 @@
   ],
   "nationalBenefits": [
     {
+      "name": "일생활 균형 인프라 구축비 지원",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-07-24",
+      "endDate": "상시",
+      "location": "고용노동부",
+      "target": "일‧생활균형을 위한 다양한 제도의 도입･개선에 필요한 시스템 설치･사용하려는 우선지원 대상기업·중견기업의 사업주",
+      "summary": "사업주 투자비용(부가세 제외)의 80% 이내 범위에서 최대 1천만원 지원 및 30인 미만 소규모 사업장 사용료 최대 2년 지원",
+      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200005031",
+      "imageUrl": "http://www.gov.kr/images/etc/og_image_600.png",
+      "id": 1778713506877,
+      "updatedAt": "2026-07-24"
+    },
+    {
+      "name": "중장년 경력지원제",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-07-24",
+      "endDate": "상시",
+      "location": "고용노동부",
+      "target": "퇴직 후 경력전환을 위해 자격을 취득했거나 직업훈련을 이수한 50세 이상 중장년 및 피보험자수 5인 이상 기업",
+      "summary": "퇴직한 중장년에게 경력전환형 일경험을 쌓을 수 있도록 4주~12주간 실무 수행, 직무교육, 멘토링 등 지원",
+      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/149200005029",
+      "imageUrl": "http://www.gov.kr/images/etc/og_image_600.png",
+      "id": 1778713506876,
+      "updatedAt": "2026-07-24"
+    },
+    {
       "name": "부랑인 보호 및 지원",
       "category": "혜택",
       "region": "전국",
