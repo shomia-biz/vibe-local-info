@@ -2295,6 +2295,23 @@
   ],
   "seoulExhibitionEvents": [
     {
+      "name": "노우찬·이기찬 [입으로 부는 바람 When breath turns to Wind]",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-07-03",
+      "endDate": "2026-07-29",
+      "location": "스페이스 카다로그",
+      "target": "누구나",
+      "summary": "중구 스페이스 카다로그에서 진행되는 노우찬·이기찬 [입으로 부는 바람 When breath turns to Wind] 전시",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=158539&menuNo=200009",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://culture.seoul.go.kr/resources/culture/img/sub/culturePotalImg2.jpg",
+      "id": 1778713506878,
+      "updatedAt": "2026-07-25"
+    },
+    {
       "name": "[서울상상나라] 그림책 작업실: 사소하고 특별한",
       "category": "전시",
       "region": "서울",
