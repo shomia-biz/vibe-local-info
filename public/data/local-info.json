@@ -5664,6 +5664,22 @@
   ],
   "seoulBenefits": [
     {
+      "name": "임산부 가사돌봄 지원사업",
+      "category": "혜택",
+      "region": "서울",
+      "startDate": "2026-07-26",
+      "endDate": "상시",
+      "location": "서울특별시 성동구",
+      "target": "임산부 및 출산가정",
+      "summary": "임산부 및 출산가정에 가사서비스를 제공함으로써 안전한 출산을 도모하고, 가사노동의 부담을 경감하고 일·가정 양립 지원",
+      "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003923&wlfareInfoReldBztpCd=02",
+      "serviceField": "임신 출산",
+      "supportType": "서비스(돌봄)",
+      "targetGroup": "가구",
+      "id": 1778713506890,
+      "updatedAt": "2026-07-26"
+    },
+    {
       "name": "외국국적 유아학비 추가 지원",
       "category": "혜택",
       "region": "서울",
@@ -7012,6 +7028,54 @@
     }
   ],
   "kyeonggiBenefits": [
+    {
+      "name": "청년 면접 지원 꿈나래",
+      "category": "혜택",
+      "region": "경기",
+      "startDate": "2026-07-26",
+      "endDate": "상시",
+      "location": "경기도 화성시",
+      "target": "청년",
+      "summary": "청년 구직비용 절감",
+      "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002710&wlfareInfoReldBztpCd=02",
+      "serviceField": "고용 창업",
+      "supportType": "현금",
+      "targetGroup": "개인",
+      "id": 1778713506893,
+      "updatedAt": "2026-07-26"
+    },
+    {
+      "name": "경기도 어린이·청소년 교통비 지원 사업",
+      "category": "혜택",
+      "region": "경기",
+      "startDate": "2026-07-26",
+      "endDate": "상시",
+      "location": "경기도 교통국 버스정책과",
+      "target": "만6~18세 어린이·청소년",
+      "summary": "경기버스 요금인상에 따라 교통비가 증가한 도내 만6~18세 어린이·청소년들이 사용한 대중교통 금액을 연 최대 24만원(분기별 6만원) 한도 내 교통비 환급",
+      "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004473&wlfareInfoReldBztpCd=02",
+      "serviceField": "생활안정",
+      "supportType": "현금",
+      "targetGroup": "개인",
+      "id": 1778713506891,
+      "updatedAt": "2026-07-26"
+    },
+    {
+      "name": "독거노인 행복커뮤니티 지원 사업",
+      "category": "혜택",
+      "region": "경기",
+      "startDate": "2026-07-26",
+      "endDate": "상시",
+      "location": "경기도 화성시",
+      "target": "취약 독거노인",
+      "summary": "취약 독거노인 지원에 IoT/AI 기술을 활용한 24시간 ICT케어서비스를 제공으로 고독사 예방 및 사회적 안전망을 강화하고 노인돌봄사업에 다양한 컨텐츠 사업 운영을 통한 독거노인 삶의 질 향상 도모",
+      "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001627&wlfareInfoReldBztpCd=02",
+      "serviceField": "보호 돌봄",
+      "supportType": "서비스(돌봄)",
+      "targetGroup": "개인",
+      "id": 1778713506889,
+      "updatedAt": "2026-07-26"
+    },
     {
       "name": "다자녀장려금 지원",
       "category": "혜택",
@@ -8887,6 +8951,22 @@
     }
   ],
   "incheonBenefits": [
+    {
+      "name": "아빠 육아휴직 장려금 지원",
+      "category": "혜택",
+      "region": "인천",
+      "startDate": "2026-07-26",
+      "endDate": "상시",
+      "location": "인천광역시 남동구",
+      "target": "영유아",
+      "summary": "아빠육아휴직 장려금 지급을 통해 일과 가정이 양립하는 아이낳고 기르기 좋은 남동구 실현을 위함.",
+      "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002485&wlfareInfoReldBztpCd=02",
+      "serviceField": "보육 교육",
+      "supportType": "현금",
+      "targetGroup": "개인",
+      "id": 1778713506892,
+      "updatedAt": "2026-07-26"
+    },
     {
       "name": "인천광역시교육청 초등학교 1학년 입학준비금 지원",
       "category": "혜택",
