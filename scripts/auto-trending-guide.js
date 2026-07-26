@@ -196,6 +196,11 @@ function calculateSimilarity(str1, str2) {
 }
 
 async function runKeywordCollector() {
+  // TODO(AdSense): 애드센스 승인이 완료될 때까지 자동 포스팅을 임시 중지합니다.
+  // 승인 이후 아래 두 줄을 지우면 다시 정상 작동합니다.
+  console.log("⚠️ 애드센스 심사 기간으로 인해 자동 수집기가 임시 중지되었습니다.");
+  return;
+
   console.log("========================================================");
   console.log("🔍 모아팁스 일일 핫이슈/꿀팁 키워드 수집기 시작");
   console.log("========================================================\n");
