@@ -2363,6 +2363,22 @@
   ],
   "seoulExhibitionEvents": [
     {
+      "name": "파인캐릭터 2026 (FineCharacter 2026)",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-11-27",
+      "endDate": "2026-11-29",
+      "location": "동대문디자인플라자(DDP) 쇼룸 1층 (서울 중구 을지로 281)",
+      "target": "누구나",
+      "summary": "동대문디자인플라자(DDP) 쇼룸 1층에서 진행되는 파인캐릭터 2026 전시입니다. 관람시간은 10:00~19:00이며 무료로 관람할 수 있습니다.",
+      "link": "https://finecharacter.kr/",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "id": 1778713506915,
+      "updatedAt": "2026-07-29"
+    },
+    {
       "name": "노우찬·이기찬 [입으로 부는 바람 When breath turns to Wind]",
       "category": "전시",
       "region": "서울",
@@ -3026,6 +3042,38 @@
   ],
   "nationalExhibitionEvents": [],
   "seoulEvents": [
+    {
+      "name": "2026 카즈미 타테이시 트리오 내한공연-지브리, 재즈를 만나다-(서울)",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-12-22",
+      "endDate": "2026-12-22",
+      "location": "영등포아트홀",
+      "target": "성인, 청소년",
+      "summary": "이웃집 토토로, 하울의 움직이는 성 등 지브리 애니메이션의 명곡을 피아노, 콘트라베이스, 드럼의 일본 재즈 트리오 연주로 듣는 공연",
+      "link": "https://tickets.interpark.com/goods/26010060",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "id": 1778713506914,
+      "updatedAt": "2026-07-29"
+    },
+    {
+      "name": "2026 카즈미 타테이시 트리오 내한공연-크리스마스, 재즈를 만나다-(서울)",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-12-24",
+      "endDate": "2026-12-24",
+      "location": "강동아트센터 대극장 한강",
+      "target": "성인, 청소년",
+      "summary": "Let It Snow, White Christmas 등 크리스마스 캐롤 명곡을 피아노, 콘트라베이스, 드럼의 일본 재즈 트리오 연주로 듣는 공연",
+      "link": "https://tickets.interpark.com/goods/26010350",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "id": 1778713506913,
+      "updatedAt": "2026-07-29"
+    },
     {
       "name": "[강동문화재단] 와이즈발레단 [백조왕자]",
       "category": "행사",
