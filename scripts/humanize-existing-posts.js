@@ -11,6 +11,23 @@ async function runHumanizerBatch() {
     return;
   }
 
+  // 전체 행사 데이터를 불러옵니다.
+  const dataPath = path.join(process.cwd(), 'public/data/local-info.json');
+  let allItems = [];
+  try {
+    const localData = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
+    allItems = [
+      ...localData.events, ...localData.benefits,
+      ...localData.cultureEvents, ...localData.exhibitionEvents,
+      ...localData.seoulEvents, ...localData.kyeonggiEvents, ...localData.incheonEvents, ...localData.nationalEvents,
+      ...localData.seoulCultureEvents, ...localData.kyeonggiCultureEvents, ...localData.incheonCultureEvents, ...localData.nationalCultureEvents,
+      ...localData.seoulExhibitionEvents, ...localData.kyeonggiExhibitionEvents, ...localData.incheonExhibitionEvents, ...localData.nationalExhibitionEvents,
+      ...localData.seoulBenefits, ...localData.kyeonggiBenefits, ...localData.incheonBenefits, ...localData.nationalBenefits
+    ].filter(item => item && item.id);
+  } catch (err) {
+    console.log('참고: 원본 데이터(local-info.json)를 불러올 수 없습니다.');
+  }
+
   const postsDir = path.join(process.cwd(), 'src/content/posts');
   let existingFiles = [];
   try {
@@ -32,6 +49,16 @@ async function runHumanizerBatch() {
     if (content.includes('humanized: true')) {
       console.log(`⏭️ [${i + 1}/${existingFiles.length}] ${filename} 은(는) 이미 사람 냄새 나는 글로 수정되어 건너뜁니다.`);
       continue;
+    }
+
+    // 기한이 지났는지 검사하여 건너뜁니다.
+    const matchedItem = allItems.find(item => filename.includes(item.id));
+    if (matchedItem && matchedItem.endDate && matchedItem.endDate !== '상시') {
+      const today = new Date().toISOString().split('T')[0];
+      if (utils.isDatePassed(matchedItem.endDate) || matchedItem.endDate < today) {
+        console.log(`⏭️ [${i + 1}/${existingFiles.length}] ${filename} 은(는) 행사 기한이 지나 건너뜁니다.`);
+        continue;
+      }
     }
 
     console.log(`🤖 [${i + 1}/${existingFiles.length}] ${filename} 파일 윤문 중...`);
