@@ -3060,6 +3060,23 @@
   "nationalExhibitionEvents": [],
   "seoulEvents": [
     {
+      "name": "[강북문화재단] 2026 강북Festa 공연안내",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-07-11",
+      "endDate": "2026-08-01",
+      "location": "강북진달래홀 공연장",
+      "target": "공연 별 상이",
+      "summary": "강북문화재단에서 진행하는 2026 강북Festa 연극 공연 안내입니다.",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=158526&menuNo=200008",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://culture.seoul.go.kr/resources/culture/img/sub/culturePotalImg2.jpg",
+      "id": 1778713506919,
+      "updatedAt": "2026-07-31"
+    },
+    {
       "name": "[여름, 낭독시즌] 봄 작가, 겨울 무대 낭독공연 2026",
       "category": "행사",
       "region": "서울",
