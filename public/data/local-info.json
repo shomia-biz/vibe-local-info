@@ -873,6 +873,23 @@
   ],
   "seoulCultureEvents": [
     {
+      "name": "[민주화운동기념관] 방학 가족 교육프로그램 [모두의 가치! 민주적인 우리 가족]",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-07-30",
+      "endDate": "2026-08-06",
+      "location": "민주화운동기념관 E(교육동) 3층 교육실",
+      "target": "초등 3~6학년과 동반 가족(성인 보호자)",
+      "summary": "가족에서부터 민주주의를 발견하는 시간! 가족이 함께 민주주의 역사와 우리의 경험 속에서 민주주의의 가치를 찾아봅니다.",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=158883&menuNo=200011",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://culture.seoul.go.kr/resources/culture/img/sub/culturePotalImg2.jpg",
+      "id": 1778713506945,
+      "updatedAt": "2026-08-02"
+    },
+    {
       "name": "[서울문화예술교육센터 강북] 우리 곁의 예술-감각하기 [영화로 떠나는 예술여행, 시네마 공감]",
       "category": "문화",
       "region": "서울",
@@ -2397,6 +2414,23 @@
   ],
   "seoulExhibitionEvents": [
     {
+      "name": "[문화살롱 5120] 공유시선 선정 전시 [On Body Senses]",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-07-31",
+      "endDate": "2026-09-05",
+      "location": "문화살롱 5120",
+      "target": "누구나",
+      "summary": "노원구 문화살롱 5120에서 진행되는 공유시선 선정 전시 [On Body Senses]",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=158885&menuNo=200009",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://culture.seoul.go.kr/resources/culture/img/sub/culturePotalImg2.jpg",
+      "id": 1778713506943,
+      "updatedAt": "2026-08-02"
+    },
+    {
       "name": "파인캐릭터 2026 (FineCharacter 2026)",
       "category": "전시",
       "region": "서울",
@@ -3076,6 +3110,23 @@
   ],
   "nationalExhibitionEvents": [],
   "seoulEvents": [
+    {
+      "name": "DDP 바캉스: 뮤직페스티벌",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-07-31",
+      "endDate": "2026-08-02",
+      "location": "DDP 어울림광장",
+      "target": "누구나",
+      "summary": "DDP가 선사하는 여름 휴가 DDP 바캉스: 뮤직페스티벌",
+      "link": "https://booking.naver.com/booking/5/bizes/1666309",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://naverbooking-phinf.pstatic.net/20260707_158/17834190507269Y9tm_JPEG/image.jpg?type=f804_408_60_sharpen",
+      "id": 1778713506944,
+      "updatedAt": "2026-08-02"
+    },
     {
       "name": "2026 까망돌어울마당 아트홀 정기 기획공연 [까망돌 칸타빌레] 8회차 창작집단 현인의 [더 클라운]",
       "category": "행사",
