@@ -873,6 +873,23 @@
   ],
   "seoulCultureEvents": [
     {
+      "name": "[서울무형유산교육전시장] 홍염 일일체험 [명주실 전통염색 일일체험] 2차",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-07-18",
+      "endDate": "2026-08-29",
+      "location": "서울무형유산교육전시장",
+      "target": "전체 이용가",
+      "summary": "서울무형유산교육전시장에서 진행되는 명주실 전통염색 홍염 일일체험 프로그램입니다.",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=158783&menuNo=200011",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://culture.seoul.go.kr/resources/culture/img/sub/culturePotalImg2.jpg",
+      "id": 1778713506967,
+      "updatedAt": "2026-08-10"
+    },
+    {
       "name": "[거마도서관] 어린이 여름방학 시 창작 프로그램 [지금부터 시작(詩作)!]",
       "category": "문화",
       "region": "서울",
@@ -2599,6 +2616,23 @@
     }
   ],
   "seoulExhibitionEvents": [
+    {
+      "name": "[갤러리 그라프] 기획전시 - 유가월, 마리노 후나하시 《여과된 풍경》",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-07-18",
+      "endDate": "2026-08-22",
+      "location": "갤러리 그라프 전시실",
+      "target": "누구나",
+      "summary": "갤러리 그라프에서 열리는 유가월, 마리노 후나하시의 기획전시 《여과된 풍경》입니다.",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=158576&menuNo=200009",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://culture.seoul.go.kr/resources/culture/img/sub/culturePotalImg2.jpg",
+      "id": 1778713506968,
+      "updatedAt": "2026-08-10"
+    },
     {
       "name": "[문화살롱 5120] 공유시선 선정 전시 [On Body Senses]",
       "category": "전시",
