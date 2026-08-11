@@ -178,7 +178,7 @@ export default function HomeContent({ blogPosts = [], guidePosts = [] }: { blogP
   //   return () => clearInterval(interval);
   // }, []);
 
-  // 날씨 호출 함수
+  // 날씨 호출 함수 (하이브리드: Open-Meteo + 네이버 실시간 파싱)
   const fetchWeather = async () => {
     try {
       const locations = [
@@ -196,10 +196,23 @@ export default function HomeContent({ blogPosts = [], guidePosts = [] }: { blogP
         };
       };
 
-      const results = await Promise.all(locations.map(fetchCityData));
+      const [results, naverRes] = await Promise.all([
+        Promise.all(locations.map(fetchCityData)),
+        fetch('/api/weather').then(res => res.json()).catch(() => null)
+      ]);
 
       const weatherJson = results.map(r => r.weather);
       const airJson = results.map(r => r.air);
+      
+      // 네이버 데이터가 성공적으로 왔다면 Open-Meteo current 덮어쓰기
+      if (naverRes && naverRes.success && naverRes.data) {
+        naverRes.data.forEach((naverData: any, idx: number) => {
+           if (weatherJson[idx] && weatherJson[idx].current && naverData.temp !== null) {
+             weatherJson[idx].current.naverTemp = naverData.temp;
+             weatherJson[idx].current.naverCond = naverData.condition;
+           }
+        });
+      }
 
       setWeatherData(weatherJson);
       setAirQualityData(airJson);
@@ -585,9 +598,24 @@ export default function HomeContent({ blogPosts = [], guidePosts = [] }: { blogP
               ].map((loc, idx) => {
                 const currentW = weatherData?.[loc.id]?.current;
                 const currentA = airQualityData?.[loc.id]?.current;
-                const wInfo = currentW ? getWeatherInfo(currentW.weather_code) : { desc: '로딩중', icon: '⏳' };
+                
+                // 네이버 데이터가 있으면 적용, 없으면 Open-Meteo 기본값
+                const isNaver = currentW?.naverTemp !== undefined;
+                const temp = currentW ? (isNaver ? currentW.naverTemp + '°' : Math.round(currentW.temperature_2m) + '°') : '-°';
+                
+                const getNaverIcon = (cond: string) => {
+                  if (cond.includes('맑음')) return '☀️';
+                  if (cond.includes('구름많음')) return '⛅';
+                  if (cond.includes('흐림')) return '☁️';
+                  if (cond.includes('비')) return '🌧️';
+                  if (cond.includes('눈')) return '❄️';
+                  if (cond.includes('소나기')) return '🌦️';
+                  if (cond.includes('천둥')) return '⛈️';
+                  return '☀️'; // 기본값
+                };
+                
+                const wInfo = currentW ? (isNaver ? { desc: currentW.naverCond, icon: getNaverIcon(currentW.naverCond) } : getWeatherInfo(currentW.weather_code)) : { desc: '로딩중', icon: '⏳' };
                 const dustInfo = currentA ? getDustLevel(currentA.pm10) : { level: '-', color: 'text-slate-400' };
-                const temp = currentW ? Math.round(currentW.temperature_2m) + '°' : '-°';
 
                 return (
                   <div key={loc.city}
