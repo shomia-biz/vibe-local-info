@@ -13,7 +13,7 @@ const scrapeNaverWeather = async (query: string) => {
     
     const html = await res.text();
     
-    const tempMatch = html.match(/<div class="temperature_text">.*?<span class="blind">현재 온도<\/span>([^<]+)/s);
+    const tempMatch = html.match(/<div class="temperature_text">[\s\S]*?<span class="blind">현재 온도<\/span>([^<]+)/);
     const condMatch = html.match(/<span class="weather before_slash">([^<]+)<\/span>/);
     
     return {
