@@ -16,17 +16,18 @@ export default function WeatherWidget({ isDark = false }: { isDark?: boolean }) 
   useEffect(() => {
     async function fetchWeather() {
       try {
-        // 1. 송파구 날씨 및 기온 (Open-Meteo API - 송파구 좌표: 37.5145, 127.106)
-        const weatherRes = await fetch('https://api.open-meteo.com/v1/forecast?latitude=37.5145&longitude=127.106&current_weather=true');
+        // 1. 서울 날씨 및 기온 (wttr.in API - 한국 온도에 더 정확함)
+        const weatherRes = await fetch('https://wttr.in/Seoul?format=j1');
         const weatherData = await weatherRes.json();
-        const current = weatherData.current_weather;
+        const current = weatherData.current_condition[0];
 
-        // 날씨 코드 변환
-        const getCondition = (code: number) => {
-          if (code === 0) return '맑음 ☀️';
-          if (code <= 3) return '구름 ☁️';
-          if (code <= 67) return '비 ☔';
-          if (code <= 77) return '눈 ❄️';
+        // 날씨 코드 변환 (wttr.in WWO 코드)
+        const getCondition = (codeStr: string) => {
+          const code = parseInt(codeStr);
+          if (code === 113) return '맑음 ☀️';
+          if ([116, 119, 122].includes(code)) return '구름 ☁️';
+          if ([176, 263, 266, 293, 296, 299, 302, 305, 308, 311, 314, 353, 356, 359].includes(code)) return '비 ☔';
+          if ([179, 182, 185, 227, 230, 281, 284, 317, 320, 323, 326, 329, 332, 335, 338, 350, 362, 365, 368, 371, 374, 377].includes(code)) return '눈 ❄️';
           return '흐림 🌫️';
         };
 
@@ -36,8 +37,8 @@ export default function WeatherWidget({ isDark = false }: { isDark?: boolean }) 
         const pm10 = dustData.current.pm10;
         
         setWeather({
-          temp: Math.round(current.temperature),
-          condition: getCondition(current.weathercode),
+          temp: Math.round(parseFloat(current.temp_C)),
+          condition: getCondition(current.weatherCode),
           dustValue: Math.round(pm10),
           dust: pm10 <= 30 ? '좋음' : pm10 <= 80 ? '보통' : '나쁨'
         });
