@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-export const revalidate = 600; // 10분(600초) 캐시 설정
+export const dynamic = 'force-dynamic'; // 항상 최신 데이터 가져오기
 
 const scrapeNaverWeather = async (query: string) => {
   try {
@@ -8,7 +8,7 @@ const scrapeNaverWeather = async (query: string) => {
       headers: {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
       },
-      next: { revalidate: 600 } // Next.js fetch 캐시 (10분)
+      cache: 'no-store' // 캐시 비활성화 (항상 실시간)
     });
     
     const html = await res.text();

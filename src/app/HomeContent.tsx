@@ -198,7 +198,7 @@ export default function HomeContent({ blogPosts = [], guidePosts = [] }: { blogP
 
       const [results, naverRes] = await Promise.all([
         Promise.all(locations.map(fetchCityData)),
-        fetch('/api/weather').then(res => res.json()).catch(() => null)
+        fetch(`/api/weather?t=${Date.now()}`).then(res => res.json()).catch(() => null)
       ]);
 
       const weatherJson = results.map(r => r.weather);
