@@ -3416,6 +3416,23 @@
   "nationalExhibitionEvents": [],
   "seoulEvents": [
     {
+      "name": "[그루브재즈데이] 재즈클럽에서 만나는 불멸의 스탠다드 재즈",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-08-06",
+      "endDate": "2026-08-20",
+      "location": "재즈클럽그루브",
+      "target": "누구나",
+      "summary": "그루브 20주년 기념, 재즈연주의 활성화와 재즈공연에 대한 문턱을 낮추고자 마련한 [그루브재즈데이] 기획시리즈 공연",
+      "link": "https://www.groove.kr/jamsession",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://static.wixstatic.com/media/c306a2_9e2dd8a41b9e493aa554d36de479c6df~mv2.jpg/v1/fill/w_1064,h_700,al_c/c306a2_9e2dd8a41b9e493aa554d36de479c6df~mv2.jpg",
+      "id": 1778713506991,
+      "updatedAt": "2026-08-19"
+    },
+    {
       "name": "전유나 가야금 독주회: 영산회상",
       "category": "행사",
       "region": "서울",
