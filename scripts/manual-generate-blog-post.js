@@ -163,7 +163,7 @@ tags: [태그1, 태그2, tags3]
    - "결론적으로", "따라서" 등 기계적이거나 과장된 표현을 빼고 담백하고 사람 냄새 나게 써줘.
    - "~일 것이다", "~인 것이다" 등 애매한 추측성 말투 대신 확신에 찬 어조로 단언해줘.
 
-마지막 줄에 FILENAME: YYYY-MM-DD-keyword 형식으로 파일명도 출력해줘. 키워드는 영문으로.\`;
+마지막 줄에 FILENAME: keyword 형식으로 파일명에 쓰일 영문 단어(소문자, 띄어쓰기 대신 하이픈)만 출력해줘.\`;
 
     let fullContent = '';
     try {
@@ -180,8 +180,9 @@ tags: [태그1, 태그2, tags3]
     let blogContent = fullContent;
 
     if (filenameMatch) {
-      filename = filenameMatch[1].trim();
-      if (!filename.endsWith('.md')) filename += '.md';
+      let keyword = filenameMatch[1].trim();
+      keyword = keyword.replace(/\.md$/, '').replace(/^\d{4}-\d{2}-\d{2}-?/, '');
+      filename = `${today}-${keyword}.md`;
       blogContent = fullContent.replace(/FILENAME:\s*.+/, '').trim();
     }
 
