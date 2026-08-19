@@ -6425,6 +6425,22 @@
   ],
   "seoulBenefits": [
     {
+      "name": "청년 자격증 등 응시료 지원",
+      "category": "혜택",
+      "region": "서울",
+      "startDate": "2026-08-19",
+      "endDate": "상시",
+      "location": "서울특별시 중구",
+      "target": "중구 미취업 청년",
+      "summary": "중구 미취업 청년들을 대상으로 취업 동기를 부여하고 경제적 부담을 경감하기 위해, 어학·자격시험 응시료 지원사업을 추진하여 청년들의 구직 활동을 돕고자 함.",
+      "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006069&wlfareInfoReldBztpCd=02",
+      "serviceField": "고용 창업",
+      "supportType": "현금",
+      "targetGroup": "개인",
+      "id": 1778713506995,
+      "updatedAt": "2026-08-19"
+    },
+    {
       "name": "임신부 가사돌봄 서비스",
       "category": "혜택",
       "region": "서울",
@@ -7901,6 +7917,54 @@
     }
   ],
   "kyeonggiBenefits": [
+    {
+      "name": "자활민관합동연찬회",
+      "category": "혜택",
+      "region": "경기",
+      "startDate": "2026-08-19",
+      "endDate": "상시",
+      "location": "경기도 성남시",
+      "target": "자활담당 공무원 및 자활시설 종사자",
+      "summary": "자활담당 공무원과 시설 종사자간 자활사업 활성화와 발전방향 모색을 위한 정보교류의 장 마련",
+      "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005002&wlfareInfoReldBztpCd=02",
+      "serviceField": "고용 창업",
+      "supportType": "기타",
+      "targetGroup": "법인/시설/단체",
+      "id": 1778713506994,
+      "updatedAt": "2026-08-19"
+    },
+    {
+      "name": "가정위탁아동 능력개발비",
+      "category": "혜택",
+      "region": "경기",
+      "startDate": "2026-08-19",
+      "endDate": "상시",
+      "location": "경기도 구리시",
+      "target": "소년소녀가정 및 가정위탁아동",
+      "summary": "사회의 특별한 보호가 필요한 소년소녀가정 및 가정위탁아동의 학습과 진로에 도움이 될 수 있도록 능력개발비를 지원함으로써 당당한 사회인으로의 육성을 도모하고자 함",
+      "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000995&wlfareInfoReldBztpCd=02",
+      "serviceField": "보호 돌봄",
+      "supportType": "현금",
+      "targetGroup": "개인",
+      "id": 1778713506993,
+      "updatedAt": "2026-08-19"
+    },
+    {
+      "name": "다자녀가구 행복더하기(지역화폐)",
+      "category": "혜택",
+      "region": "경기",
+      "startDate": "2026-08-19",
+      "endDate": "상시",
+      "location": "경기도 구리시",
+      "target": "출산가정 및 다자녀가정",
+      "summary": "출산가정 및 다자녀가정에 대한 사회적우대 분위기조성과 출산ㆍ양육에 따른 경제적 부담 경감을 통한 출산율 향상 도모",
+      "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003868&wlfareInfoReldBztpCd=02",
+      "serviceField": "임신 출산",
+      "supportType": "이용권",
+      "targetGroup": "가구",
+      "id": 1778713506992,
+      "updatedAt": "2026-08-19"
+    },
     {
       "name": "정신질환자 치료지원사업",
       "category": "혜택",
@@ -10480,6 +10544,38 @@
     }
   ],
   "incheonBenefits": [
+    {
+      "name": "민간·가정 어린이집 누리과정 부모부담보육료 지원",
+      "category": "혜택",
+      "region": "인천",
+      "startDate": "2026-08-19",
+      "endDate": "상시",
+      "location": "인천광역시 계양구",
+      "target": "정부미지원 어린이집 재원 누리 만3~5세 과정 아동",
+      "summary": "실질적 무상보육 실현을 위해 정부미지원 어린이집 재원 누리 만3~5세 과정 아동에 대한 정부지원보육료 차액분 부모부담금 지원",
+      "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000910&wlfareInfoReldBztpCd=02",
+      "serviceField": "보육 교육",
+      "supportType": "현금(감면)",
+      "targetGroup": "개인",
+      "id": 1778713506997,
+      "updatedAt": "2026-08-19"
+    },
+    {
+      "name": "강화군 대학생 등록금 지원사업",
+      "category": "혜택",
+      "region": "인천",
+      "startDate": "2026-08-19",
+      "endDate": "상시",
+      "location": "인천광역시 강화군 행정국 자치교육과",
+      "target": "청소년, 청년",
+      "summary": "강화군민의 교육비 부담을 경감하고 지역 인재를 육성하기 위해 등록금 지원 사업을 시작함..",
+      "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005340&wlfareInfoReldBztpCd=02",
+      "serviceField": "보육 교육",
+      "supportType": "현금(장학금)",
+      "targetGroup": "개인",
+      "id": 1778713506996,
+      "updatedAt": "2026-08-19"
+    },
     {
       "name": "강화군 시간제 청년근로자 장려금 지원",
       "category": "혜택",
