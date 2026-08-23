@@ -6492,6 +6492,22 @@
   ],
   "seoulBenefits": [
     {
+      "name": "깡충깡충 성장양육지원금 지원",
+      "category": "혜택",
+      "region": "서울",
+      "startDate": "2026-08-23",
+      "endDate": "상시",
+      "location": "서울특별시 관악구",
+      "target": "2~4세 영유아",
+      "summary": "2~4세 영유아 대상 깡충깡충 성장양육지원금(관악사랑상품권)을 지원하여 양육 경제 부담을 경감하고 출산장려 분위기를 조성합니다.",
+      "link": "",
+      "serviceField": "보육 교육",
+      "supportType": "이용권",
+      "targetGroup": "개인",
+      "id": 1778713507021,
+      "updatedAt": "2026-08-23"
+    },
+    {
       "name": "첫돌축하금 지원",
       "category": "혜택",
       "region": "서울",
@@ -8000,6 +8016,22 @@
     }
   ],
   "kyeonggiBenefits": [
+    {
+      "name": "새 생명 탄생 출산축하용품 지원",
+      "category": "혜택",
+      "region": "경기",
+      "startDate": "2026-08-23",
+      "endDate": "상시",
+      "location": "경기도 과천시",
+      "target": "임신 · 출산, 영유아",
+      "summary": "출산 친화적 분위기 조성으로 저출산 극복에 기여하고, 가정의 경제적 부담을 경감하는 사업입니다.",
+      "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00003981&wlfareInfoReldBztpCd=02",
+      "serviceField": "임신 출산",
+      "supportType": "현물",
+      "targetGroup": "가구",
+      "id": 1778713507022,
+      "updatedAt": "2026-08-23"
+    },
     {
       "name": "이재민 구호",
       "category": "혜택",
