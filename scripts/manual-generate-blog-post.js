@@ -119,7 +119,7 @@ async function generateManualPost() {
     
     const randomTemplate = templates[Math.floor(Math.random() * templates.length)];
 
-    const prompt = \`아래 공공서비스 정보를 바탕으로 구글 애드센스 승인을 통과하기 위한 고품질의 독창적인(E-E-A-T) 블로그 글을 작성해줘.
+    const prompt = `아래 공공서비스 정보를 바탕으로 구글 애드센스 승인을 통과하기 위한 고품질의 독창적인(E-E-A-T) 블로그 글을 작성해줘.
 
 정보: \${JSON.stringify(targetItem)}
 
@@ -163,7 +163,7 @@ tags: [태그1, 태그2, tags3]
    - "결론적으로", "따라서" 등 기계적이거나 과장된 표현을 빼고 담백하고 사람 냄새 나게 써줘.
    - "~일 것이다", "~인 것이다" 등 애매한 추측성 말투 대신 확신에 찬 어조로 단언해줘.
 
-마지막 줄에 FILENAME: keyword 형식으로 파일명에 쓰일 영문 단어(소문자, 띄어쓰기 대신 하이픈)만 출력해줘.\`;
+마지막 줄에 FILENAME: keyword 형식으로 파일명에 쓰일 영문 단어(소문자, 띄어쓰기 대신 하이픈)만 출력해줘.`;
 
     let fullContent = '';
     try {

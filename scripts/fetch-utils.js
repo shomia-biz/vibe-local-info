@@ -318,18 +318,16 @@ const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 async function fetchGeminiWithFallback(prompt, apiKey, type = 'fetch') {
   const fetchModels = [
-    'gemini-flash-latest',
-    'gemini-1.5-flash',
-    'gemini-2.0-flash',
-    'gemini-flash-lite-latest',
-    'gemini-1.5-flash-8b'
+    'gemini-3.7-flash',
+    'gemini-3.6-flash',
+    'gemini-3.5-flash',
+    'gemini-flash-latest'
   ];
   const blogModels = [
-    'gemini-pro-latest',
-    'gemini-1.5-pro',
-    'gemini-1.5-flash',
-    'gemini-flash-latest',
-    'gemini-2.0-flash'
+    'gemini-3.1-pro-preview',
+    'gemini-3.7-flash',
+    'gemini-3.6-flash',
+    'gemini-pro-latest'
   ];
   const models = type === 'blog' ? blogModels : fetchModels;
   const backoffDelays = [30000, 60000, 120000];
