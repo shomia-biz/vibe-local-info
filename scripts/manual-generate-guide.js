@@ -74,7 +74,7 @@ async function generateGuide() {
 
   // 2단계: AI가 매력적인 제목 5개 추천
   console.log("\n🤖 클릭을 유도하는 매력적인 제목 후보를 뽑아내고 있습니다. 잠시만 대기해주세요...");
-  const titlePrompt = `당신은 트래픽을 끌어모으는 천재적인 웹 콘텐츠 에디터입니다.
+  const titlePrompt = `당신은 트래픽을 끌어모으는 천재적인 웹 콘텐츠 에디터입니다. 현재 연도는 ${new Date().getFullYear()}년 입니다. 제목에 연도가 들어간다면 반드시 현재 연도를 사용하세요.
 다음 주제에 대해, 구글 검색이나 SNS에서 사람들이 무조건 클릭하고 싶어지는 자극적이고 구체적인 제목 5개를 제안해주세요. 
 번호를 매기지 말고, 순수하게 JSON 배열 형태로만 반환해주세요. (예: ["제목1", "제목2", ...])
 주제: ${rawTopic}`;
@@ -125,7 +125,7 @@ async function generateGuide() {
   
   const randomTemplate = templates[Math.floor(Math.random() * templates.length)];
 
-  const prompt = `당신은 구글 애드센스 심사를 통과하기 위해 고품질의 독창적인(E-E-A-T) 글을 작성하는 전문 에디터입니다. 아래 확정된 제목으로, 아주 상세하고 정보가 풍부한 블로그 포스트를 마크다운(Markdown) 형식으로 작성해주세요.
+  const prompt = `당신은 구글 애드센스 심사를 통과하기 위해 고품질의 독창적인(E-E-A-T) 글을 작성하는 전문 에디터입니다. 아래 확정된 제목으로, 아주 상세하고 정보가 풍부한 블로그 포스트를 마크다운(Markdown) 형식으로 작성해주세요. 현재 기준 날짜는 ${today} 입니다. 본문이나 제목에서 연도나 날짜를 언급할 때 반드시 이를 기준으로 작성하세요.
 
 [확정된 제목]: ${finalTitle}
 
@@ -133,7 +133,7 @@ async function generateGuide() {
 1. 프론트매터(Frontmatter)를 맨 위에 반드시 포함하세요.
    - title: "${finalTitle}"
    - summary: 1~2줄 분량의 호기심을 유발하는 요약
-   - date: "\${today}"
+   - date: "${today}"
    - category: 주제에 맞는 카테고리
    - tags: [키워드1, 키워드2, 키워드3] 
    - thumbnail: "https://image.pollinations.ai/prompt/[영어로 번역된 핵심 키워드]?width=800&height=400&nologo=true"

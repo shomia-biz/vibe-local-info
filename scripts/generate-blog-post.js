@@ -124,14 +124,14 @@ async function generatePost() {
       
       const randomTemplate = templates[Math.floor(Math.random() * templates.length)];
 
-      const prompt = `아래 공공서비스 정보를 바탕으로 구글 애드센스 승인을 통과하기 위한 고품질의 독창적인(E-E-A-T) 블로그 글을 작성해줘.
+      const prompt = `아래 공공서비스 정보를 바탕으로 구글 애드센스 승인을 통과하기 위한 고품질의 독창적인(E-E-A-T) 블로그 글을 작성해줘. 현재 기준 날짜는 ${today} 입니다. 본문이나 제목에서 연도나 날짜를 언급할 때 반드시 이를 기준으로 작성하세요.
 
-정보: \${JSON.stringify(latestItem)}
+정보: ${JSON.stringify(latestItem)}
 
 아래 형식으로 출력해줘. 반드시 이 형식만 출력하고 다른 텍스트는 없이:
 ---
 title: (친근하고 검색량이 많을 법한 매력적인 제목)
-date: \${today}
+date: ${today}
 summary: (독자의 호기심을 자극하는 한 줄 요약)
 category: 정보
 tags: [태그1, 태그2, tags3]
