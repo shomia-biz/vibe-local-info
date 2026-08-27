@@ -47,7 +47,7 @@ jobs:
           git add .
           if ! git diff-index --quiet HEAD; then
             git commit -m "자동 업데이트: 공공데이터 수집 및 블로그 글 생성"
-            git pull --rebase origin main
+            git pull origin main --no-edit --strategy-option=ours
             git push origin main
           else
             echo "No changes to commit"
