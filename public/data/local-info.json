@@ -873,6 +873,23 @@
   ],
   "seoulCultureEvents": [
     {
+      "name": "[구립증산도서관] 미니멀 북큐레이션 [달마다, 나를 아끼는 습관] 소소한 취미, 특별한 하루",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-08-06",
+      "endDate": "2026-08-31",
+      "location": "구립증산도서관 2층 종합자료실",
+      "target": "전연령 / 도서관 이용자 누구나",
+      "summary": "구립증산도서관 2층 종합자료실에서 진행되는 미니멀 북큐레이션 '[달마다, 나를 아끼는 습관] 소소한 취미, 특별한 하루' 프로그램입니다.",
+      "link": "https://www.eplib.or.kr/jslib/menu/10457/program/30028/eventLectureDetail.do?currentPageNo=1&lectureIdx=221690&manageCd=MB&searchTarget=&searchStatus=OPEN",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://www.eplib.or.kr/include/image/common/ico_sns_favicon.png",
+      "id": 1778713507048,
+      "updatedAt": "2026-08-29"
+    },
+    {
       "name": "[궁] 저자와 함께하는 인문학 여행 [궁으로 출근합니다.]",
       "category": "문화",
       "region": "서울",
