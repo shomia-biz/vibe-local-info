@@ -157,10 +157,10 @@ export default async function PostPage({ params }: Props) {
             </div>
           </header>
 
-          {/* 본문 상단 광고 (타이틀 바로 아래) */}
-          <div className="mb-8">
+          {/* 본문 상단 광고 (타이틀 바로 아래) - 임시 숨김 처리 */}
+          {/* <div className="mb-8">
             <AdBanner />
-          </div>
+          </div> */}
 
           <ReactMarkdown 
             remarkPlugins={[remarkGfm]}
@@ -207,8 +207,8 @@ export default async function PostPage({ params }: Props) {
           </a>
         </div>
 
-        {/* 광고 영역 */}
-        <AdBanner />
+        {/* 광고 영역 - 임시 숨김 처리 */}
+        {/* <AdBanner /> */}
         {/* <CoupangBanner /> */} {/* 쿠팡 파트너스 등록 전까지 임시 숨김 */}
 
         {/* 하단 네비게이션 (대안 B) */}
