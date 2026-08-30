@@ -2871,6 +2871,23 @@
   ],
   "seoulExhibitionEvents": [
     {
+      "name": "[함석헌기념관] 흐름의 서, 삶을 묻다",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-08-16",
+      "endDate": "2026-08-30",
+      "location": "함석헌기념관 씨알갤러리",
+      "target": "누구나",
+      "summary": "작가모임 모들의 첫 번째 전시. 서로 다른 지역에서 활동하는 작가들이 '모두 함께'라는 마음으로 모여 삶의 흐름을 글씨에 담았습니다. 한 획, 한 글자에 담긴 따뜻한 이야기를 통해 관람객과 공감하는 시간을 마련합니다.",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=158729&menuNo=200009",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://culture.seoul.go.kr/resources/culture/img/sub/culturePotalImg2.jpg",
+      "id": 1778713507055,
+      "updatedAt": "2026-08-30"
+    },
+    {
       "name": "백남준·김류 [백색소음 White Noise]",
       "category": "전시",
       "region": "서울",
