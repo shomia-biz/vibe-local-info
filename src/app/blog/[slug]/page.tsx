@@ -180,10 +180,10 @@ export default async function PostPage({ params }: Props) {
             {post.content.replace(/\*\*\r?\n/g, '**  \n')}
           </ReactMarkdown>
 
-          {/* 파이썬이 생성한 본문 내 쿠팡 링크 대응용 고정 대가성 문구 */}
-          <div className="mt-6 text-[11px] text-gray-400 font-medium text-center break-keep">
+          {/* 파이썬이 생성한 본문 내 쿠팡 링크 대응용 고정 대가성 문구 (쿠팡 파트너스 등록 전까지 임시 숨김) */}
+          {/* <div className="mt-6 text-[11px] text-gray-400 font-medium text-center break-keep">
             이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.
-          </div>
+          </div> */}
         </div>
 
         {/* 카카오톡 채널 추가 유도 배너 (게시글 하단) */}
@@ -209,7 +209,7 @@ export default async function PostPage({ params }: Props) {
 
         {/* 광고 영역 */}
         <AdBanner />
-        <CoupangBanner />
+        {/* <CoupangBanner /> */} {/* 쿠팡 파트너스 등록 전까지 임시 숨김 */}
 
         {/* 하단 네비게이션 (대안 B) */}
         <div className="mt-8 pt-6 border-t border-orange-100 flex justify-center">
