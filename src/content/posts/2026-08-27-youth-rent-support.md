@@ -4,6 +4,7 @@ date: 2026-08-27
 summary: "매달 나가는 20만 원 월세 부담, 국가에서 최대 240만 원 지원받는 조건과 신청 꿀팁을 정리했습니다."
 category: 정보
 tags: [청년월세특별지원, 청년주거지원, 복지로월세신청]
+sourceLink: "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006135&wlfareInfoReldBztpCd=02"
 ---
 
 | 항목 | 내용 |

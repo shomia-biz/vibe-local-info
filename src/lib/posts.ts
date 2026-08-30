@@ -12,6 +12,7 @@ export interface PostData {
   category: string;
   tags: string[];
   content: string;
+  sourceLink?: string;
 }
 
 export function getSortedPostsData(): PostData[] {
@@ -45,6 +46,7 @@ export function getSortedPostsData(): PostData[] {
         category: data.category || '',
         tags: data.tags || [],
         content,
+        sourceLink: data.sourceLink || '',
       } as PostData;
     });
 
@@ -77,5 +79,6 @@ export function getPostData(slug: string): PostData | null {
     category: data.category || '',
     tags: data.tags || [],
     content,
+    sourceLink: data.sourceLink || '',
   };
 }

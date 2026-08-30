@@ -4,6 +4,7 @@ date: 2026-08-19
 summary: "바쁜 일상 속 특별한 위로와 활력을 선사할 마포아트센터의 'M 마티네' 모닝 콘서트, 놓치지 마세요! 품격 있는 음악으로 수요일 아침을 예술적으로 시작하는 경험을 선사합니다."
 category: 정보
 tags: [마포문화재단, M마티네, MAC모닝콘서트, 마포아트센터, 클래식공연, 서울문화행사, 2026콘서트, 8월공연, 문화생활, 모닝콘서트]
+sourceLink: "https://www.mfac.or.kr/performance/whole_view.jsp?sc_b_category=17&sc_b_code=BOARD_1207683401&pk_seq=2636&page=1"
 ---
 
 | 항목 | 내용 |

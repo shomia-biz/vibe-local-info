@@ -71,6 +71,11 @@ async function generatePost() {
     // 아직 글을 작성하지 않은 '최신' 항목 찾기 (최대 MAX_POSTS_TO_GENERATE개 수집)
     const targetItems = [];
     for (const item of allItems) {
+      // B 방법: 원본 출처(링크)가 없으면 블로그 작성 대상에서 아예 제외
+      if (!item.link || item.link.trim() === '') {
+        continue;
+      }
+      
       // 이미 종료된 행사나 혜택은 작성 후보에서 제외 ("상시" 제외)
       if (item.endDate && item.endDate !== '상시') {
         if (utils.isDatePassed(item.endDate) || item.endDate < today) {
@@ -212,8 +217,17 @@ tags: [태그1, 태그2, tags3]
                 return `${key}: "${value}"`;
               }
             }
+            if (line.startsWith('tags:')) {
+              if (!latestItem.link) {
+                return line.replace(']', ', 출처확인필요]');
+              }
+            }
             return line;
           });
+          
+          // sourceLink 추가 (링크가 없으면 빈 문자열)
+          updatedLines.push(`sourceLink: "${latestItem.link || ''}"`);
+          
           parts[1] = updatedLines.join('\n');
           blogContent = parts.join('---');
         }

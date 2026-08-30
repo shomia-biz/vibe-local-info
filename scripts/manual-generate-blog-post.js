@@ -75,6 +75,10 @@ async function generateManualPost() {
 
     // 검색어로 필터링
     const matchedItems = allItems.filter(item => {
+      // B 방법: 원본 출처(링크)가 없으면 검색 대상에서 아예 제외
+      if (!item.link || item.link.trim() === '') {
+        return false;
+      }
       const nameMatch = item.name && item.name.toLowerCase().includes(searchTerm.toLowerCase());
       const idMatch = item.id && item.id.toString() === searchTerm.trim();
       return nameMatch || idMatch;
@@ -205,6 +209,10 @@ tags: [태그1, 태그2, tags3]
           }
           return line;
         });
+
+        // sourceLink 추가 (링크가 없으면 빈 문자열)
+        updatedLines.push(`sourceLink: "${targetItem.link || ''}"`);
+
         parts[1] = updatedLines.join('\n');
         blogContent = parts.join('---');
       }

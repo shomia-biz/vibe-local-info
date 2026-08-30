@@ -61,31 +61,54 @@ export default async function PostPage({ params }: Props) {
     notFound();
   }
 
-  // local-info.json에서 원문 링크 찾기
-  let sourceLink = '';
-  try {
-    const localInfoPath = path.join(process.cwd(), 'public/data/local-info.json');
-    if (fs.existsSync(localInfoPath)) {
-      const localInfo = JSON.parse(fs.readFileSync(localInfoPath, 'utf8'));
-      const allData = [
-        ...(localInfo.events || []),
-        ...(localInfo.benefits || []),
-        ...(localInfo.seoulEvents || []),
-        ...(localInfo.nationalEvents || [])
-      ];
-      
-      // 제목 키워드 매칭 (가장 간단한 방식)
-      const matched = allData.find(item => 
-        post.title.includes(item.name) || 
-        item.name.split(' ').some((word: string) => word.length > 1 && post.title.includes(word))
-      );
-      
-      if (matched) {
-        sourceLink = matched.link;
+  // 먼저 마크다운 파일(Frontmatter)에 지정된 링크가 있는지 확인
+  let sourceLink = post.sourceLink || '';
+  
+  // 명시적으로 'none'이 지정된 경우 출처 칸을 비우고 자동 매칭을 건너뜀
+  if (sourceLink === 'none') {
+    sourceLink = '';
+  } 
+  // 마크다운에 링크가 없다면 기존 방식으로 local-info.json에서 매칭 시도 (기존 글 호환용)
+  else if (!sourceLink) {
+    try {
+      const localInfoPath = path.join(process.cwd(), 'public/data/local-info.json');
+      if (fs.existsSync(localInfoPath)) {
+        const localInfo = JSON.parse(fs.readFileSync(localInfoPath, 'utf8'));
+        const allData = [
+          ...(localInfo.events || []), ...(localInfo.benefits || []),
+          ...(localInfo.cultureEvents || []), ...(localInfo.exhibitionEvents || []),
+          ...(localInfo.seoulEvents || []), ...(localInfo.kyeonggiEvents || []), ...(localInfo.incheonEvents || []), ...(localInfo.nationalEvents || []),
+          ...(localInfo.seoulCultureEvents || []), ...(localInfo.kyeonggiCultureEvents || []), ...(localInfo.incheonCultureEvents || []), ...(localInfo.nationalCultureEvents || []),
+          ...(localInfo.seoulExhibitionEvents || []), ...(localInfo.kyeonggiExhibitionEvents || []), ...(localInfo.incheonExhibitionEvents || []), ...(localInfo.nationalExhibitionEvents || []),
+          ...(localInfo.seoulBenefits || []), ...(localInfo.kyeonggiBenefits || []), ...(localInfo.incheonBenefits || []), ...(localInfo.nationalBenefits || [])
+        ];
+        
+        // 제목이나 본문에서 가장 유사한 항목 찾기
+        // 1. name이 post.title에 그대로 포함된 경우
+        // 2. name의 모든 단어(길이 2 이상)가 post.title에 포함된 경우
+        // 3. name의 모든 단어가 본문에 포함된 경우
+        const matched = allData.find(item => {
+          if (!item.name) return false;
+          const nameWithoutSpaces = item.name.replace(/\s/g, '');
+          const postTitleWithoutSpaces = post.title.replace(/\s/g, '');
+          
+          if (postTitleWithoutSpaces.includes(nameWithoutSpaces)) return true;
+          
+          const words = item.name.split(' ').filter((word: string) => word.length > 1);
+          if (words.length > 0 && words.every((word: string) => post.title.includes(word))) return true;
+          
+          if (words.length > 0 && words.every((word: string) => post.content.includes(word))) return true;
+          
+          return false;
+        });
+        
+        if (matched) {
+          sourceLink = matched.link || '';
+        }
       }
+    } catch (e) {
+      console.error('Failed to load source link:', e);
     }
-  } catch (e) {
-    console.error('Failed to load source link:', e);
   }
 
   return (
@@ -200,7 +223,7 @@ export default async function PostPage({ params }: Props) {
 
         {/* 출처 및 AI 안내 영역 (E-E-A-T 강화) */}
         <div className="mt-8 bg-gray-50 p-6 rounded-2xl border border-gray-100">
-          {sourceLink && (
+          {sourceLink ? (
             <div className="mb-4 pb-4 border-b border-gray-200">
               <span className="block text-sm font-bold text-gray-500 mb-1">🔗 원문 출처</span>
               <a 
@@ -212,6 +235,15 @@ export default async function PostPage({ params }: Props) {
                 {sourceLink}
               </a>
             </div>
+          ) : (
+            process.env.NODE_ENV === 'development' && (
+              <div className="mb-4 pb-4 border-b border-red-200">
+                <div className="bg-red-50 text-red-600 p-4 rounded-lg border border-red-200">
+                  <p className="font-bold mb-1">⚠️ [관리자 전용] 원문 출처 매칭 실패</p>
+                  <p className="text-sm">현재 개발 모드에서만 보이는 알림입니다. <code>local-info.json</code>에서 이 글과 일치하는 항목을 찾지 못했거나 링크가 없습니다. 데이터를 확인해 주세요.</p>
+                </div>
+              </div>
+            )
           )}
           <div className="text-sm text-gray-500 leading-relaxed">
             <p className="font-semibold mb-1">🤖 AI 생성 정보 안내</p>
