@@ -2871,6 +2871,23 @@
   ],
   "seoulExhibitionEvents": [
     {
+      "name": "[한솥아트스페이스] 이상원 개인전 [레스토피아 : RESTOPIA]",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-08-08",
+      "endDate": "2026-09-19",
+      "location": "한솥아트스페이스(서울시 강남구 압구정로 459 B1F)",
+      "target": "전 연령 누구나",
+      "summary": "한솥아트스페이스에서 열리는 이상원 작가의 개인전 [레스토피아 : RESTOPIA] 무료 관람 전시",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=158934&menuNo=200009",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://culture.seoul.go.kr/resources/culture/img/sub/culturePotalImg2.jpg",
+      "id": 1778713507065,
+      "updatedAt": "2026-09-01"
+    },
+    {
       "name": "[함석헌기념관] 흐름의 서, 삶을 묻다",
       "category": "전시",
       "region": "서울",
