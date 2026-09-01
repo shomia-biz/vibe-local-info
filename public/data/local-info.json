@@ -6730,6 +6730,22 @@
   ],
   "seoulBenefits": [
     {
+      "name": "서울형 기초보장제도 운영",
+      "category": "혜택",
+      "region": "서울",
+      "startDate": "2026-09-01",
+      "endDate": "상시",
+      "location": "서울특별시",
+      "target": "생활수준은 최저생계비 이하이나 국민기초생활보장제도 법정기준이 맞지 않아 보호를 받지 못하는 비수급 빈곤층",
+      "summary": "생활수준은 최저생계비 이하이나 국민기초생활보장제도 법정기준이 맞지 않아 보호를 받지 못하는 비수급 빈곤층의 최소한의 생계보장 및 복지 사각지대 해소 도모",
+      "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002234&wlfareInfoReldBztpCd=02",
+      "serviceField": "생활안정",
+      "supportType": "현금",
+      "targetGroup": "가구",
+      "id": 1778713507064,
+      "updatedAt": "2026-09-01"
+    },
+    {
       "name": "보호종료아동 생활보조수당",
       "category": "혜택",
       "region": "서울",
@@ -11537,6 +11553,22 @@
     }
   ],
   "incheonBenefits": [
+    {
+      "name": "출산·양육지원사업 추진",
+      "category": "혜택",
+      "region": "인천",
+      "startDate": "2026-09-01",
+      "endDate": "상시",
+      "location": "인천광역시 강화군",
+      "target": "강화군에 거주하는 출산보육 가정",
+      "summary": "강화군에 거주하는 출산보육 가정의 경제적 부담 해소에 도움을 줌으로써 인구감소 문제에 적극 대처하기 위함",
+      "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004583&wlfareInfoReldBztpCd=02",
+      "serviceField": "임신 출산",
+      "supportType": "현금",
+      "targetGroup": "가구",
+      "id": 1778713507063,
+      "updatedAt": "2026-09-01"
+    },
     {
       "name": "중증당뇨환자(1형 당뇨환자)지원 사업",
       "category": "혜택",
