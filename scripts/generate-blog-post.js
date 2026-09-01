@@ -227,6 +227,7 @@ tags: [태그1, 태그2, tags3]
           
           // sourceLink 추가 (링크가 없으면 빈 문자열)
           updatedLines.push(`sourceLink: "${latestItem.link || ''}"`);
+          updatedLines.push(''); // 프론트매터 닫는 '---' 기호 앞에 줄바꿈이 오도록 강제 추가
           
           parts[1] = updatedLines.join('\n');
           blogContent = parts.join('---');
