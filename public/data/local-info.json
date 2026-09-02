@@ -873,6 +873,23 @@
   ],
   "seoulCultureEvents": [
     {
+      "name": "[청계천박물관] 2026년 하반기 초등 특수학급 교육 [오감으로 만지는 청계천이야기]",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-09-11",
+      "endDate": "2026-10-23",
+      "location": "청계천박물관(서울특별시 성동구 청계천로 530)",
+      "target": "어린이(초등1-6학년 특수학급단체)",
+      "summary": "청계천박물관에서 진행하는 2026년 하반기 초등 특수학급 대상 교육 프로그램",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=159051&menuNo=200011",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://culture.seoul.go.kr/resources/culture/img/sub/culturePotalImg2.jpg",
+      "id": 1778713507068,
+      "updatedAt": "2026-09-02"
+    },
+    {
       "name": "[구립증산도서관] 미니멀 북큐레이션 [달마다, 나를 아끼는 습관] 소소한 취미, 특별한 하루",
       "category": "문화",
       "region": "서울",
@@ -2871,6 +2888,23 @@
   ],
   "seoulExhibitionEvents": [
     {
+      "name": "지금이라도 차차차를 해보면 어떨까?",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-09-11",
+      "endDate": "2026-09-19",
+      "location": "홍대갤러리 키르큐펠",
+      "target": "누구나",
+      "summary": "홍대갤러리 키르큐펠에서 진행되는 전시/미술 행사",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=159112&menuNo=200009",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://culture.seoul.go.kr/resources/culture/img/sub/culturePotalImg2.jpg",
+      "id": 1778713507069,
+      "updatedAt": "2026-09-02"
+    },
+    {
       "name": "[한솥아트스페이스] 이상원 개인전 [레스토피아 : RESTOPIA]",
       "category": "전시",
       "region": "서울",
@@ -3652,6 +3686,23 @@
   ],
   "nationalExhibitionEvents": [],
   "seoulEvents": [
+    {
+      "name": "[구로문화재단] 예술극장 재개관 시리즈 [디토 오케스트라 정기연주회 톡톡 클래식]",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-09-12",
+      "endDate": "2026-09-12",
+      "location": "구로아트밸리 예술극장",
+      "target": "8세 이상 관람가",
+      "summary": "구로문화재단 예술극장 재개관 시리즈로 진행되는 디토 오케스트라 정기연주회 톡톡 클래식 공연입니다.",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=158897&menuNo=200008",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://culture.seoul.go.kr/resources/culture/img/sub/culturePotalImg2.jpg",
+      "id": 1778713507067,
+      "updatedAt": "2026-09-02"
+    },
     {
       "name": "[강남문화재단] 강남심포니오케스트라 제118회 정기연주회 [쇼스타코비치 첼로 협주곡 제1번]",
       "category": "행사",
