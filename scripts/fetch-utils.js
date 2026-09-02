@@ -317,19 +317,17 @@ const commonExcludeKeywords = [
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 async function fetchGeminiWithFallback(prompt, apiKey, type = 'fetch') {
-  const fetchModels = [
-    'gemini-3.7-flash',
-    'gemini-3.6-flash',
-    'gemini-3.5-flash',
-    'gemini-flash-latest'
+  // 분석된 한도(RPM, RPD)가 압도적으로 높은 순서대로 모델을 통합 배치
+  const models = [
+    'gemini-3.5-flash-lite', // RPM 15, RPD 500
+    'gemini-3.1-flash-lite', // RPM 15, RPD 500
+    'gemini-2.5-flash-lite', // RPM 10, RPD 20
+    'gemini-3.7-flash',      // RPM 5, RPD 20
+    'gemini-3.6-flash',      // RPM 5, RPD 20
+    'gemini-3.5-flash',      // RPM 5, RPD 20
+    'gemini-3.0-flash',      // RPM 5, RPD 20
+    'gemini-2.5-flash'       // RPM 5, RPD 20
   ];
-  const blogModels = [
-    'gemini-3.1-pro-preview',
-    'gemini-3.7-flash',
-    'gemini-3.6-flash',
-    'gemini-pro-latest'
-  ];
-  const models = type === 'blog' ? blogModels : fetchModels;
   const backoffDelays = [30000, 60000, 120000];
   let attempt = 0;
   let modelIndex = 0;
