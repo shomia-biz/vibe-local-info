@@ -12390,6 +12390,19 @@
   ],
   "nationalBenefits": [
     {
+      "name": "연탄쿠폰",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-09-02",
+      "endDate": "상시",
+      "location": "산업통상부 / 한국광해광업공단",
+      "target": "연탄보일러를 가정난방용으로 사용하는 가구 중 수급권자, 차상위계층, 소외계층",
+      "summary": "연탄보일러를 사용하는 가구에 가구당 54.6만원의 연탄쿠폰(난방비) 지원",
+      "link": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/145000000111",
+      "id": 1778713507066,
+      "updatedAt": "2026-09-02"
+    },
+    {
       "name": "청소년 시내버스 무료 이용 지원 사업",
       "category": "혜택",
       "region": "전국",
