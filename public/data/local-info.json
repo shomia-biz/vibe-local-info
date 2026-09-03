@@ -873,6 +873,40 @@
   ],
   "seoulCultureEvents": [
     {
+      "name": "[서울생활사박물관] 2026년 하반기 변장나들이",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-09-01",
+      "endDate": "2026-11-10",
+      "location": "서울생활사박물관",
+      "target": "유치원 및 어린이집 등 단체 5~7세",
+      "summary": "서울생활사박물관에서 진행하는 2026년 하반기 어린이 대상 교육/체험 프로그램 '변장나들이'",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=158814&menuNo=200011",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://culture.seoul.go.kr/resources/culture/img/sub/culturePotalImg2.jpg",
+      "id": 1778713507072,
+      "updatedAt": "2026-09-03"
+    },
+    {
+      "name": "[구립증산도서관] 책 읽어주는 야옹이 사서",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-09-01",
+      "endDate": "2026-11-11",
+      "location": "구립증산도서관 3층 가족열람실",
+      "target": "구립증산도서관 가족열람실 방문 유아 누구나",
+      "summary": "구립증산도서관에서 유아를 대상으로 진행하는 책 읽어주는 야옹이 사서 프로그램",
+      "link": "https://www.eplib.or.kr/jslib/menu/10457/program/30028/eventLectureDetail.do?currentPageNo=1&lectureIdx=224820&manageCd=MB&searchTarget=&searchStatus=OPEN",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://www.eplib.or.kr/include/image/common/ico_sns_favicon.png",
+      "id": 1778713507071,
+      "updatedAt": "2026-09-03"
+    },
+    {
       "name": "2026. 달빛 속 문화유산 여행 개최",
       "category": "문화",
       "region": "서울",
@@ -2904,6 +2938,23 @@
     }
   ],
   "seoulExhibitionEvents": [
+    {
+      "name": "[갤러리 508] Japanese Pop Trio II",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-09-01",
+      "endDate": "2026-10-28",
+      "location": "갤러리508",
+      "target": "누구나",
+      "summary": "츠즈키 마유미, 시카타 하루카, 유타카 시모무라 작가의 작품을 만나볼 수 있는 전시 프로그램입니다.",
+      "link": "https://archivist.kr/exi?m=gov&i=1788095782",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://imagedelivery.net/w4-VNNnUV8Ounl2Y9OqM-w/20260830_gallery508_poster_1788095782_b0f8b5d7/800",
+      "id": 1778713507073,
+      "updatedAt": "2026-09-03"
+    },
     {
       "name": "지금이라도 차차차를 해보면 어떨까?",
       "category": "전시",
