@@ -873,6 +873,23 @@
   ],
   "seoulCultureEvents": [
     {
+      "name": "2026. 달빛 속 문화유산 여행 개최",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-09-11",
+      "endDate": "2026-09-12",
+      "location": "풍납백제문화공원",
+      "target": "누구나",
+      "summary": "달빛 아래서 만나는 2,000년 백제의 시간 2026. 달빛 속 문화유산 여행으로 초대합니다.",
+      "link": "https://www.songpa.go.kr/www/selectBbsNttView.do?bbsNo=92&nttNo=19278805&&pageUnit=10&key=2775&pageIndex=1",
+      "imageUrl": "https://www.songpa.go.kr/common/images/layout/thumbnail.png?v=20230914",
+      "serviceField": "문화/예술",
+      "supportType": "문화",
+      "targetGroup": "누구나",
+      "id": 1778713507070,
+      "updatedAt": "2026-09-03"
+    },
+    {
       "name": "[청계천박물관] 2026년 하반기 초등 특수학급 교육 [오감으로 만지는 청계천이야기]",
       "category": "문화",
       "region": "서울",
