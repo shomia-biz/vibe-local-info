@@ -2939,6 +2939,23 @@
   ],
   "seoulExhibitionEvents": [
     {
+      "name": "[서울역사박물관] 서울도시계획 대관람",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-08-14",
+      "endDate": "2026-11-08",
+      "location": "서울역사박물관 기획전시실A",
+      "target": "누구나",
+      "summary": "서울역사박물관에서 개최하는 서울도시계획 대관람 전시입니다.",
+      "link": "https://museum.seoul.go.kr/www/board/NR_boardView.do?bbsCd=1002&q_exhSttus=next&seq=20260723145427523&sso=ok",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://museum.seoul.go.kr/www/share/images/new21/common/m_semu_btn.png",
+      "id": 1778713507074,
+      "updatedAt": "2026-09-04"
+    },
+    {
       "name": "[갤러리 508] Japanese Pop Trio II",
       "category": "전시",
       "region": "서울",
