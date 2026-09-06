@@ -22,11 +22,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {};
   }
 
+  // 본문에서 첫 번째 이미지 URL 추출 (없으면 기본 썸네일 사용)
+  const imgRegex = /!\[.*?\]\((.*?)\)/;
+  const match = post.content.match(imgRegex);
+  const imageUrl = match ? match[1] : "https://moa-tips.com/images/og-thumbnail.jpg";
+
   return {
-    title: `${post.title} |서울 경기 인천 생활 정보`,
+    title: `${post.title} | 모아팁스`,
     description: post.summary,
     alternates: {
-      canonical: `/blog/${slug}/`,
+      canonical: `https://moa-tips.com/blog/${slug}/`,
     },
     openGraph: {
       title: post.title,
@@ -34,14 +39,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "article",
       publishedTime: post.date,
       url: `https://moa-tips.com/blog/${slug}/`,
+      siteName: "모아팁스",
       images: [
         {
-          url: "/images/og-thumbnail.jpg",
+          url: imageUrl,
           width: 1200,
           height: 630,
           alt: post.title,
         }
       ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.summary,
+      images: [imageUrl],
     },
   };
 }
@@ -261,6 +273,32 @@ export default async function PostPage({ params }: Props) {
               #{tag}
             </span>
           ))}
+        </div>
+
+        {/* 관련 최신 글 목록 (SEO 내부 링크 강화) */}
+        <div className="mt-12 pt-8 border-t border-slate-200">
+          <h3 className="text-xl sm:text-2xl font-black text-slate-900 mb-6">최신 글 함께 보기</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {(() => {
+              const recentPosts = getSortedPostsData()
+                .filter(p => p.slug !== slug)
+                .slice(0, 3);
+              
+              return recentPosts.map((relatedPost) => (
+                <Link 
+                  href={`/blog/${relatedPost.slug}`} 
+                  key={relatedPost.slug}
+                  className="group block p-4 bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-md transition-all hover:-translate-y-1"
+                >
+                  <div className="text-xs font-bold text-orange-600 mb-2">{relatedPost.category}</div>
+                  <h4 className="text-base font-bold text-slate-900 mb-2 line-clamp-2 group-hover:text-orange-600 transition-colors">
+                    {relatedPost.title}
+                  </h4>
+                  <div className="text-sm text-slate-500">{relatedPost.date}</div>
+                </Link>
+              ));
+            })()}
+          </div>
         </div>
 
       </article>

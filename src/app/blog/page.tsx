@@ -1,5 +1,19 @@
 import { getSortedPostsData } from '@/lib/posts';
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "블로그 | 모아팁스",
+  description: "모아팁스 블로그에서 우리 동네의 새로운 소식과 지역 축제, 꿀팁 정보들을 빠르게 확인하세요.",
+  alternates: {
+    canonical: "https://moa-tips.com/blog",
+  },
+  openGraph: {
+    title: "블로그 | 모아팁스",
+    description: "우리 동네의 새로운 소식과 정보를 확인하세요.",
+    url: "https://moa-tips.com/blog",
+  }
+};
 
 export default function BlogPage() {
   const posts = getSortedPostsData();
