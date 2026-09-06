@@ -15,7 +15,7 @@ sourceLink: "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cu
 | **신청 기간 (또는 행사 기간)** | 2026년 10월 17일 ~ 2026년 10월 18일 |
 | **신청 방법 (또는 장소)** | 서울 종로구 마로니에공원 및 윤동주문학관 일대 현장 참여 |
 
-![[종로문화재단] 2026 윤동주문학제 [동주의 한글, 별이 되다] 안내 이미지](https://culture.seoul.go.kr/resources/culture/img/sub/culturePotalImg2.jpg)
+![[종로문화재단] 2026 윤동주문학제 [동주의 한글, 별이 되다] 안내 이미지](https://culture.seoul.go.kr/cmmn/file/imageSrc.do?fileStreCours=35367259ca6485b8ea26e64a6b235a53853458f85f6e2f12731531a129ae4121&streFileNm=98a5b4373d6e80b7da542744a2ae4de44200ca52209836814279c2c87fbc6042)
 
 ## 가을바람과 함께 찾아온 시인의 계절
 
