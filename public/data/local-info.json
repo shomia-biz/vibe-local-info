@@ -873,6 +873,23 @@
   ],
   "seoulCultureEvents": [
     {
+      "name": "[청계천박물관] 2026년 하반기 온라인 교육 [톡톡톡 청계천]",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-08-26",
+      "endDate": "2026-11-25",
+      "location": "각 기관",
+      "target": "어린이(지역아동센터 및 초등돌봄교실)",
+      "summary": "청계천박물관에서 진행하는 2026년 하반기 어린이 대상 온라인 교육 프로그램입니다.",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=159050&menuNo=200011",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://culture.seoul.go.kr/resources/culture/img/sub/culturePotalImg2.jpg",
+      "id": 1778713507081,
+      "updatedAt": "2026-09-07"
+    },
+    {
       "name": "[마포구립서강도서관] 9월/어린이메이킹 [해봄아 노올자! 해봄맘껏Time]",
       "category": "문화",
       "region": "서울",
@@ -2972,6 +2989,40 @@
     }
   ],
   "seoulExhibitionEvents": [
+    {
+      "name": "[갤러리 그라프] 기획전시 《After Hours: 밤이 되면 달라지는 감각》 - 서유라, 정인지, YEKKI",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-08-26",
+      "endDate": "2026-10-02",
+      "location": "갤러리 그라프 전시실",
+      "target": "누구나",
+      "summary": "갤러리 그라프에서 서유라, 정인지, YEKKI 작가가 참여하는 기획전시 《After Hours: 밤이 되면 달라지는 감각》을 개최합니다.",
+      "link": "https://ggrappe.com/exhibitions/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&bmode=view&idx=173216341&t=board",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://cdn.imweb.me/thumbnail/20260819/177d2822eb7d0.jpg",
+      "id": 1778713507083,
+      "updatedAt": "2026-09-07"
+    },
+    {
+      "name": "제15회 두산연강예술상 수상자 정여름 개인전 [복수]",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-08-26",
+      "endDate": "2026-10-17",
+      "location": "두산아트센터 두산갤러리",
+      "target": "누구나",
+      "summary": "제15회 두산연강예술상 수상자 정여름 작가의 개인전 [복수]",
+      "link": "https://www.doosangallery.com/kr/exhibitions/detail/238",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://www.doosangallery.com/doosan-gallery.png",
+      "id": 1778713507082,
+      "updatedAt": "2026-09-07"
+    },
     {
       "name": "[서울역사박물관] 서울도시계획 대관람",
       "category": "전시",
