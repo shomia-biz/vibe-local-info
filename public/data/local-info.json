@@ -3857,6 +3857,23 @@
   "nationalExhibitionEvents": [],
   "seoulEvents": [
     {
+      "name": "2026 서울 바비큐 페스티벌",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-10-24",
+      "endDate": "2026-10-25",
+      "location": "난지캠핑장",
+      "target": "누구나",
+      "summary": "2026 서울 바비큐 페스티벌",
+      "link": "https://www.seoulbbqfesta.com/",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://www.seoulbbqfesta.com/bbs7/images/bbqfesta.jpg",
+      "id": 1778713507084,
+      "updatedAt": "2026-09-08"
+    },
+    {
       "name": "2026 창극 중심 세계음악극축제",
       "category": "행사",
       "region": "서울",
