@@ -15,7 +15,7 @@ sourceLink: "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cu
 | **신청 기간 (또는 행사 기간)** | 2026년 9월 9일 ~ 2026년 9월 23일 |
 | **신청 방법 (또는 장소)** | 서울문화포털 온라인 신청 / 예총아트홀, 예술의전당 콘서트홀 |
 
-![[2026공연봄날 공식선정작] 아르테늄 브라스밴드의 브라스 무브먼트 안내 이미지](https://culture.seoul.go.kr/resources/culture/img/sub/culturePotalImg2.jpg)
+![[2026공연봄날 공식선정작] 아르테늄 브라스밴드의 브라스 무브먼트 안내 이미지](https://culture.seoul.go.kr/cmmn/file/imageSrc.do?fileStreCours=35367259ca6485b8ea26e64a6b235a53853458f85f6e2f12731531a129ae4121&streFileNm=b5751ac54b77b2ea6125cecb713d06626a7ff77472074eb1dad6fba65becd736)
 
 ## 지루할 틈 없는 금관악기의 매력, 청소년을 위한 최고의 클래식 무대
 

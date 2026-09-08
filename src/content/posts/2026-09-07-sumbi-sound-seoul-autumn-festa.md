@@ -8,7 +8,7 @@ tags: [서울어텀페스타, 숨비소리해녀들의노래, 서초문화재단
 sourceLink: "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=159097&menuNo=200008"
 ---
 
-![[서초문화재단] 2026 서울어텀페스타 선정작 [숨비소리, 해녀들의 노래] 안내 이미지](https://culture.seoul.go.kr/resources/culture/img/sub/culturePotalImg2.jpg)
+![[서초문화재단] 2026 서울어텀페스타 선정작 [숨비소리, 해녀들의 노래] 안내 이미지](https://culture.seoul.go.kr/cmmn/file/imageSrc.do?fileStreCours=35367259ca6485b8ea26e64a6b235a53853458f85f6e2f12731531a129ae4121&streFileNm=a6533bd8b5632d8274485d3712b2f73f52e2f1440befb29c34155b70a7ef77fe)
 
 | 항목 | 내용 |
 | --- | --- |

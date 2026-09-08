@@ -4,6 +4,8 @@ date: 2026-08-29
 summary: "2026년 9월 9일 예술의전당에서 펼쳐지는 강남심포니오케스트라 제118회 정기연주회 관람 정보와 첼로 협주곡 감상을 위한 알짜배기 팁을 전해드립니다."
 category: 정보
 tags: [강남심포니오케스트라, 쇼스타코비치첼로협주곡, 예술의전당콘서트홀, 서울클래식공연, 9월공연추천]
+
+sourceLink: "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=159239&menuNo=200008"
 ---
 
 | 항목 | 내용 |
@@ -13,7 +15,7 @@ tags: [강남심포니오케스트라, 쇼스타코비치첼로협주곡, 예술
 | **신청 기간 (또는 행사 기간)** | 2026년 9월 9일(수) 공연 (현재 잔여석 예매 진행 중) |
 | **신청 방법 (또는 장소)** | 예술의전당 및 서울문화포털 연계 예매 / 예술의전당 콘서트홀 |
 
-![강남심포니오케스트라 제118회 정기연주회 안내 이미지](https://culture.seoul.go.kr/resources/culture/img/sub/culturePotalImg2.jpg)
+![강남심포니오케스트라 제118회 정기연주회 안내 이미지](https://culture.seoul.go.kr/cmmn/file/imageSrc.do?fileStreCours=35367259ca6485b8ea26e64a6b235a53853458f85f6e2f12731531a129ae4121&streFileNm=d661de2f423e8d6c164181555701c7f5f91317191ed56d5d878495e687f379bf)
 
 ## 클래식 마니아가 기다려온 2026년 9월 최고의 무대
 

@@ -21,7 +21,7 @@ sourceLink: "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cu
 
 특히 이번 재개관 시리즈의 하이라이트 중 하나로 꼽히는 '디토 오케스트라 정기연주회 톡톡 클래식'이 눈에 들어왔다. 클래식이라고 하면 왠지 지루하고 드레스 코드를 차려입어야 할 것 같은 무거운 선입견을 가지기 쉽다. 하지만 이번 공연은 제목처럼 '톡톡' 튀는 해설과 함께 진행되는 프로그램이라 평소 클래식에 문외한인 사람들도 부담 없이 즐길 수 있도록 기획되었다. 작년에 다른 공연장에서 해설이 있는 음악회를 접한 적이 있는데, 곡의 배경이나 작곡가의 비하인드 스토리를 알고 들으니 귀가 완전히 트이는 경험을 했다. 이번에도 그런 감동을 다시 한번 느낄 수 있을 것 같아 벌써부터 기대가 크다.
 
-![구로문화재단 예술극장 재개관 시리즈 디토 오케스트라 정기연주회 톡톡 클래식 안내 이미지](https://culture.seoul.go.kr/resources/culture/img/sub/culturePotalImg2.jpg)
+![구로문화재단 예술극장 재개관 시리즈 디토 오케스트라 정기연주회 톡톡 클래식 안내 이미지](https://culture.seoul.go.kr/cmmn/file/imageSrc.do?fileStreCours=35367259ca6485b8ea26e64a6b235a53997da90151b0ac653759c43ab1f23176&streFileNm=7da534f67d7cfd3f3405fe3133543caf6a7ff77472074eb1dad6fba65becd736)
 
 ## 디토 오케스트라 톡톡 클래식 공연 기본 정보
 
