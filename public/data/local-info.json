@@ -873,6 +873,23 @@
   ],
   "seoulCultureEvents": [
     {
+      "name": "[청계천박물관] 2026년 11월 초등1~3학년 학급단체 교육 [씽씽! 청계천 시간여행]",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-11-04",
+      "endDate": "2026-11-27",
+      "location": "청계천박물관",
+      "target": "어린이(초등1~3학년 학급 단체)",
+      "summary": "청계천박물관에서 진행하는 초등 1~3학년 학급 단체 대상 교육 프로그램",
+      "link": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260826105625074095",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://yeyak.seoul.go.kr/common/img//iseoulu.png",
+      "id": 1778713507086,
+      "updatedAt": "2026-09-10"
+    },
+    {
       "name": "[청계천박물관] 2026년 하반기 온라인 교육 [톡톡톡 청계천]",
       "category": "문화",
       "region": "서울",
@@ -3856,6 +3873,23 @@
   ],
   "nationalExhibitionEvents": [],
   "seoulEvents": [
+    {
+      "name": "[동작문화재단] 2026 동작 빵도동 축제",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-10-31",
+      "endDate": "2026-10-31",
+      "location": "노량진 축구장 (서울시 동작구 노들로 688)",
+      "target": "누구나",
+      "summary": "2026 동작 빵도동 축제",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=159308&menuNo=200010",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://culture.seoul.go.kr/resources/culture/img/sub/culturePotalImg2.jpg",
+      "id": 1778713507087,
+      "updatedAt": "2026-09-10"
+    },
     {
       "name": "2026 서울 바비큐 페스티벌",
       "category": "행사",
