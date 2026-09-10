@@ -58,8 +58,13 @@ async function fetchData() {
 
   try {
     const randomPage = Math.floor(Math.random() * 5) + 1;
-    // URL 인코딩 처리된 키 혹은 원본 키 모두 대응 (fetch 과정에서 에러 발생 시 변경 가능)
-    const apiUrl = `https://apis.data.go.kr/B554287/NationalWelfareInformationsV001/NationalWelfarelistV001?serviceKey=${BOKJIRO_API_KEY}&pageNo=${randomPage}&numOfRows=50`;
+    const safeKey = BOKJIRO_API_KEY.includes('%') ? BOKJIRO_API_KEY : encodeURIComponent(BOKJIRO_API_KEY);
+    
+    // 복지로 중앙부처 API 필수 규칙: 검색어와 목록(callTp=L) 옵션 지정
+    const searchKeywords = ['청년', '주거', '일자리', '출산', '소상공인', '지원금', '육아', '장애인', '어르신'];
+    const randomKeyword = searchKeywords[Math.floor(Math.random() * searchKeywords.length)];
+    const apiUrl = `https://apis.data.go.kr/B554287/NationalWelfareInformationsV001/NationalWelfarelistV001?serviceKey=${safeKey}&callTp=L&pageNo=${randomPage}&numOfRows=50&srchKeyCode=003&searchWrd=${encodeURIComponent(randomKeyword)}`;
+    console.log(`🔍 [복지로 검색] 키워드 '${randomKeyword}' (페이지: ${randomPage}) 조건으로 조회를 시작합니다.`);
     
     const response = await fetch(apiUrl, fetchOptions);
     const text = await response.text();
@@ -89,7 +94,7 @@ async function fetchData() {
            rawItems = result;
         }
       } catch (e) {
-        console.error(`복지로 API 응답 파싱 실패:\n${text.substring(0, 100)}`);
+        console.error(`복지로 API 응답 내용 전체:\n${text}`);
       }
     }
 
