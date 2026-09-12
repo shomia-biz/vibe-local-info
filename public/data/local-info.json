@@ -873,6 +873,22 @@
   ],
   "seoulCultureEvents": [
     {
+      "name": "[구산동도서관마을] 전국책읽는도시협의회 우수독서프로그램 [책 한 권 사이에]",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-09-10",
+      "endDate": "2026-10-08",
+      "location": "구립구산동도서관마을",
+      "target": "자립준비청년 및 청년",
+      "summary": "전국책읽는도시협의회 우수독서프로그램 [책 한 권 사이에] 교육/체험 행사",
+      "link": "https://www.eplib.or.kr/gsvlib/bbs/20001/bbsPostDetail.do?bbsPostIdx=226786&manageCd=MI",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "id": 1778713507092,
+      "updatedAt": "2026-09-12"
+    },
+    {
       "name": "[청계천박물관] 2026년 11월 초등1~3학년 학급단체 교육 [씽씽! 청계천 시간여행]",
       "category": "문화",
       "region": "서울",
@@ -3006,6 +3022,40 @@
     }
   ],
   "seoulExhibitionEvents": [
+    {
+      "name": "[2026 신진미술인 지원 프로그램] 최혜련 개인전 《오늘 다시 사심을》",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-09-10",
+      "endDate": "2026-09-27",
+      "location": "챔버",
+      "target": "누구나",
+      "summary": "성북구에서 진행되는 2026 신진미술인 지원 프로그램 최혜련 개인전 《오늘 다시 사심을》 전시 안내",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=159389&menuNo=200009",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://culture.seoul.go.kr/resources/culture/img/sub/culturePotalImg2.jpg",
+      "id": 1778713507093,
+      "updatedAt": "2026-09-12"
+    },
+    {
+      "name": "[종로문화재단] 2026 무계원 기획전시 한국의 미(美) 17 《금별, 우주를 만나다》",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-09-10",
+      "endDate": "2026-11-01",
+      "location": "무계원(서울시 종로구 창의문로 5가길 2)",
+      "target": "누구나",
+      "summary": "종로문화재단 2026 무계원 기획전시로 국가무형유산 금박장 보유자 김기호와 함께하는 한국의 미(美) 17 《금별, 우주를 만나다》 전시 프로그램",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=159268&menuNo=200009",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://culture.seoul.go.kr/resources/culture/img/sub/culturePotalImg2.jpg",
+      "id": 1778713507091,
+      "updatedAt": "2026-09-12"
+    },
     {
       "name": "[갤러리 그라프] 기획전시 《After Hours: 밤이 되면 달라지는 감각》 - 서유라, 정인지, YEKKI",
       "category": "전시",
