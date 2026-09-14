@@ -873,6 +873,23 @@
   ],
   "seoulCultureEvents": [
     {
+      "name": "[은평문화재단] 예술인문 아카데미 《세계의 음악도시를 여행하다》 - 클래식으로 떠나는 음악기행",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-08-26",
+      "endDate": "2026-09-23",
+      "location": "은평문화예술회관 6강좌실",
+      "target": "누구나",
+      "summary": "은평문화재단에서 진행하는 예술인문 아카데미로, 클래식을 통해 세계의 음악도시를 여행하는 총 4회 과정의 음악기행 프로그램입니다.",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=159210&menuNo=200011",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://culture.seoul.go.kr/resources/culture/img/sub/culturePotalImg2.jpg",
+      "id": 1778713507098,
+      "updatedAt": "2026-09-14"
+    },
+    {
       "name": "[구산동도서관마을] 전국책읽는도시협의회 우수독서프로그램 [책 한 권 사이에]",
       "category": "문화",
       "region": "서울",
@@ -3023,6 +3040,23 @@
   ],
   "seoulExhibitionEvents": [
     {
+      "name": "배준현·황예랑 [빌려온 믿음 Borrowed Faith]",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-08-26",
+      "endDate": "2026-09-23",
+      "location": "오에이오에이",
+      "target": "누구나",
+      "summary": "배준현, 황예랑 작가의 전시 [빌려온 믿음 Borrowed Faith]전",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=159305&menuNo=200009",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://culture.seoul.go.kr/resources/culture/img/sub/culturePotalImg2.jpg",
+      "id": 1778713507099,
+      "updatedAt": "2026-09-14"
+    },
+    {
       "name": "[서울시립미술관] 자치구 협력전시 《SeMA Collection: 만남의 장면들》",
       "category": "전시",
       "region": "서울",
@@ -3957,6 +3991,23 @@
   ],
   "nationalExhibitionEvents": [],
   "seoulEvents": [
+    {
+      "name": "2026 양성평등주간 기념행사: AI 시대의 양성평등, 서울의 미래가 되다",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-08-26",
+      "endDate": "2026-09-29",
+      "location": "서울여성플라자",
+      "target": "서울시민 누구나",
+      "summary": "2026 양성평등주간을 맞아 AI 시대의 양성평등을 주제로 개최되는 서울시 기념행사",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=159173&menuNo=200010",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://culture.seoul.go.kr/resources/culture/img/sub/culturePotalImg2.jpg",
+      "id": 1778713507097,
+      "updatedAt": "2026-09-14"
+    },
     {
       "name": "[서울시립교향악단] 비그림파워코리아와 함께하는 2026 서울시향 파크 콘서트",
       "category": "행사",
