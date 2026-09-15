@@ -15,7 +15,7 @@ sourceLink: "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cu
 | **신청 기간 (또는 행사 기간)** | 2026년 8월 26일 ~ 2026년 9월 29일 |
 | **신청 방법 (또는 장소)** | 서울여성플라자 현장 방문 및 공식 문화포털 사전 참고 |
 
-![2026 양성평등주간 기념행사 안내 이미지](https://culture.seoul.go.kr/resources/culture/img/sub/culturePotalImg2.jpg)
+![2026 양성평등주간 기념행사 안내 이미지](https://culture.seoul.go.kr/cmmn/file/imageSrc.do?fileStreCours=35367259ca6485b8ea26e64a6b235a53853458f85f6e2f12731531a129ae4121&streFileNm=2c1fbea37c33dac6f19fbd83fc63d6bc6db30ab9edb0bb8e4f449a9903cb06fb)
 
 ## 들어가며: 에디터가 직접 겪은 기술과 평등의 교차점
 

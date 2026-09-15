@@ -15,7 +15,7 @@ sourceLink: "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cu
 | **신청 기간 (또는 행사 기간)** | 2026년 10월 31일 (단하루 개최) |
 | **신청 방법 (또는 장소)** | 서울시 동작구 노들로 688 노량진 축구장 현장 방문 |
 
-![2026 동작 빵도동 축제 안내 이미지](https://culture.seoul.go.kr/resources/culture/img/sub/culturePotalImg2.jpg)
+![2026 동작 빵도동 축제 안내 이미지](https://culture.seoul.go.kr/cmmn/file/imageSrc.do?fileStreCours=35367259ca6485b8ea26e64a6b235a5327b665f3cafb5cc74fad7cf009942746&streFileNm=6b43ed89b57ae85ad877993297494b0624078277cccf491c8dad44ed96e373b4)
 
 ## 가을바람과 함께 찾아오는 달콤한 초대, 동작 빵도동 축제
 
