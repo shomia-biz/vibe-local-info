@@ -3040,6 +3040,23 @@
   ],
   "seoulExhibitionEvents": [
     {
+      "name": "[서울로봇인공지능과학관] 미디어파사드전시 [서울라임:로봇시티]",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-08-28",
+      "endDate": "2026-12-05",
+      "location": "서울로봇인공지능과학관 1층 및 정문 외관",
+      "target": "누구나",
+      "summary": "서울로봇인공지능과학관에서 진행하는 미디어파사드 전시 프로그램입니다.",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=159385&menuNo=200009",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://culture.seoul.go.kr/resources/culture/img/sub/culturePotalImg2.jpg",
+      "id": 1778713507100,
+      "updatedAt": "2026-09-16"
+    },
+    {
       "name": "배준현·황예랑 [빌려온 믿음 Borrowed Faith]",
       "category": "전시",
       "region": "서울",
