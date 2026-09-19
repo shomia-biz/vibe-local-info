@@ -5,8 +5,10 @@ summary: "다가오는 가을, 용인미르스타디움에서 열리는 2026 용
 category: 정보
 tags: [용인시민의날, 용인미르스타디움, 조아용축제, 가을축제, 용인가볼만한곳]
 
-sourceLink: "https://www.yongin.go.kr"
+sourceLink: "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1020&q_bbscttSn=20260918075012182"
 ---
+
+![용인시민의 날 연계 축제 행사 안내 이미지](https://www.yongin.go.kr/webcontent/upload/bbs/2026/9/18/5d3d77b0-f3b6-4954-9cba-999a8d76bcd1.jpg)
 
 | 항목 | 내용 |
 | --- | --- |
@@ -15,7 +17,6 @@ sourceLink: "https://www.yongin.go.kr"
 | **신청 기간 (또는 행사 기간)** | 2026년 10월 3일(토) ~ 2026년 10월 4일(일) |
 | **신청 방법 (또는 장소)** | 용인미르스타디움 현장 방문 (별도 사전 예약 없이 무료 입장) |
 
-![용인시민의 날 연계 축제 행사 안내 이미지](https://www.yongin.go.kr/resources/user/main/images/main/logo_thumbnail.png)
 
 ## 가을바람 살랑일 때, 우리 가족은 왜 매년 용인으로 향할까?
 

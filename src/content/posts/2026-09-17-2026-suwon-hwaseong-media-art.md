@@ -8,6 +8,8 @@ tags: [수원화성미디어아트, 수원가볼만한곳, 2026수원화성행�
 sourceLink: "https://www.swcf.or.kr/hlfl/"
 ---
 
+![2026 수원화성 미디어아트 안내 이미지](https://www.swcf.or.kr/hlfl/resources/images/main-banner-2025_post_1.jpg)
+
 | 항목 | 내용 |
 | --- | --- |
 | **신청 대상** | 누구나 (입장료 무료) |
