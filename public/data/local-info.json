@@ -3040,6 +3040,23 @@
   ],
   "seoulExhibitionEvents": [
     {
+      "name": "[서울시립미술관 서소문본관] 2026 SeMA 9월 외국어 전시해설",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-09-16",
+      "endDate": "2026-09-20",
+      "location": "서울시립미술관 서소문본관 2층 천경자 상설전 전시장 앞",
+      "target": "누구나, 외국인",
+      "summary": "서울시립미술관 서소문본관에서 진행하는 2026년 9월 외국어 전시해설 프로그램",
+      "link": "https://sema.seoul.go.kr/kr/whatson/education/detail?acadmyEeNo=1578747",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://sema.seoul.go.kr/resources/content/2x3.jpg",
+      "id": 1778713507105,
+      "updatedAt": "2026-09-20"
+    },
+    {
       "name": "2026 신광호 개인전 [21st 殘骸 잔해] SHIN Kwang-ho solo exhibition",
       "category": "전시",
       "region": "서울",
@@ -4059,6 +4076,39 @@
   ],
   "nationalExhibitionEvents": [],
   "seoulEvents": [
+    {
+      "name": "커피 볶는 기타리스트 김성진의 [한 잔의 여유 시리즈]",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-09-15",
+      "endDate": "2026-11-17",
+      "location": "라율아트홀",
+      "target": "누구나",
+      "summary": "클래식 공연 - 커피 볶는 기타리스트 김성진의 [한 잔의 여유 시리즈]",
+      "link": "https://www.rayularthall.com/concerts/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&bmode=view&idx=173475338&t=board",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://cdn.imweb.me/thumbnail/20260827/b20046df45d8e.png",
+      "id": 1778713507106,
+      "updatedAt": "2026-09-20"
+    },
+    {
+      "name": "[문학주간2026] 곁눈질",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-09-16",
+      "endDate": "2026-09-20",
+      "location": "대학로 마로니에 공원 일대",
+      "target": "누구나",
+      "summary": "대학로 마로니에 공원 일대에서 진행되는 [문학주간2026] 곁눈질 행사입니다.",
+      "link": "http://munhakweek.or.kr",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "id": 1778713507104,
+      "updatedAt": "2026-09-20"
+    },
     {
       "name": "2026 양성평등주간 기념행사: AI 시대의 양성평등, 서울의 미래가 되다",
       "category": "행사",
