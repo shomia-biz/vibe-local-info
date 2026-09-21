@@ -476,7 +476,17 @@ export default function HomeContent({ blogPosts = [], guidePosts = [] }: { blogP
     const isDuringThisWeek = event.startDate <= thisSundayStr && event.endDate >= currentDateStr;
     return isDuringThisWeek;
   }).sort((a, b) => {
-    // 날짜 순 정렬 (시작일 기준 오름차순)
+    // 1. 기간이 '이번주(thisWeek)'일 때는 최근 등록된 최신글(등록일/ID 기준)을 먼저 노출
+    if (timeTab === 'thisWeek') {
+      const dateA = a.updatedAt || a.startDate || '';
+      const dateB = b.updatedAt || b.startDate || '';
+      if (dateA !== dateB) {
+        return dateB.localeCompare(dateA); // 최근 등록일/시작일 내림차순 (최신순)
+      }
+      return Number(b.id || 0) - Number(a.id || 0); // 최신 등록 ID 내림차순
+    }
+
+    // 그 외(전체, 진행 예정, 지난 행사 등)는 시작일 기준 오름차순 유지
     if (a.startDate !== b.startDate) {
       return a.startDate.localeCompare(b.startDate);
     }
@@ -804,22 +814,26 @@ export default function HomeContent({ blogPosts = [], guidePosts = [] }: { blogP
               onClick={() => {
                 document.getElementById('benefits')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="flex flex-col items-center justify-center p-6 bg-gradient-to-br from-indigo-500 to-indigo-700 hover:from-indigo-600 hover:to-indigo-800 text-white rounded-[24px] shadow-lg hover:shadow-indigo-200 transition-all active:scale-[0.98] group"
+              className="flex flex-col items-center justify-center p-7 bg-white hover:bg-blue-50/40 text-slate-800 rounded-[24px] border-2 border-blue-100 hover:border-blue-300 shadow-sm hover:shadow-md transition-all active:scale-[0.98] group"
             >
-              <span className="text-3xl mb-2 group-hover:-translate-y-1 transition-transform">💰</span>
-              <span className="text-xl sm:text-2xl font-black tracking-tight">지원금·혜택 모아보기</span>
-              <span className="text-indigo-100 text-sm font-medium mt-1">청년, 소상공인, 우리 가족 모두를 위한 알짜 정보</span>
+              <div className="w-14 h-14 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-3xl mb-3 group-hover:scale-110 transition-transform shadow-inner">
+                💰
+              </div>
+              <span className="text-xl sm:text-2xl font-black tracking-tight text-slate-900 group-hover:text-blue-600 transition-colors">지원금·혜택 모아보기</span>
+              <span className="text-slate-500 text-sm font-medium mt-1">청년, 소상공인, 우리 가족 모두를 위한 알짜 정보</span>
             </button>
 
             <button
               onClick={() => {
                 document.getElementById('events')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="flex flex-col items-center justify-center p-6 bg-gradient-to-br from-rose-400 to-rose-600 hover:from-rose-500 hover:to-rose-700 text-white rounded-[24px] shadow-lg hover:shadow-rose-200 transition-all active:scale-[0.98] group"
+              className="flex flex-col items-center justify-center p-7 bg-white hover:bg-rose-50/40 text-slate-800 rounded-[24px] border-2 border-rose-100 hover:border-rose-300 shadow-sm hover:shadow-md transition-all active:scale-[0.98] group"
             >
-              <span className="text-3xl mb-2 group-hover:-translate-y-1 transition-transform">🎡</span>
-              <span className="text-xl sm:text-2xl font-black tracking-tight">모아팁스 행사/축제</span>
-              <span className="text-rose-100 text-sm font-medium mt-1">수도권에서 열리는 다양한 문화·예술·전시 모아보기</span>
+              <div className="w-14 h-14 rounded-2xl bg-rose-50 text-rose-500 flex items-center justify-center text-3xl mb-3 group-hover:scale-110 transition-transform shadow-inner">
+                🎡
+              </div>
+              <span className="text-xl sm:text-2xl font-black tracking-tight text-slate-900 group-hover:text-rose-600 transition-colors">모아팁스 행사/축제</span>
+              <span className="text-slate-500 text-sm font-medium mt-1">수도권에서 열리는 다양한 문화·예술·전시 모아보기</span>
             </button>
           </div>
 
@@ -827,20 +841,19 @@ export default function HomeContent({ blogPosts = [], guidePosts = [] }: { blogP
           <div className="mb-8 mt-2">
             <Link 
               href="/fortune"
-              className="group relative flex flex-col sm:flex-row items-center justify-between bg-gradient-to-r from-violet-600 via-fuchsia-600 to-pink-500 rounded-[24px] p-6 sm:px-10 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 overflow-hidden"
+              className="group relative flex flex-col sm:flex-row items-center justify-between bg-gradient-to-r from-white via-purple-50/30 to-white rounded-[24px] p-6 sm:px-10 border-2 border-purple-100 hover:border-purple-300 shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5"
             >
-              {/* 반짝이는 배경 효과 */}
-              <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20 group-hover:opacity-30 transition-opacity mix-blend-overlay"></div>
-              
               <div className="relative z-10 flex items-center gap-4 sm:gap-6 mb-4 sm:mb-0 text-center sm:text-left">
-                <div className="text-5xl sm:text-6xl drop-shadow-md group-hover:scale-110 transition-transform duration-300">🔮</div>
+                <div className="w-14 h-14 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform shadow-inner shrink-0">
+                  🔮
+                </div>
                 <div>
-                  <h3 className="text-white font-black text-xl sm:text-2xl mb-1 tracking-tight drop-shadow-sm">나의 오늘의 띠별 운세는?</h3>
-                  <p className="text-violet-100 font-medium text-sm sm:text-base">12지신이 알려주는 행운의 메시지와 맞춤형 럭키 아이템 확인하기 ✨</p>
+                  <h3 className="text-slate-900 font-black text-xl sm:text-2xl mb-1 tracking-tight group-hover:text-purple-700 transition-colors">나의 오늘의 띠별 운세는?</h3>
+                  <p className="text-slate-500 font-medium text-sm sm:text-base">12지신이 알려주는 행운의 메시지와 맞춤형 럭키 아이템 확인하기 ✨</p>
                 </div>
               </div>
 
-              <div className="relative z-10 whitespace-nowrap bg-white/20 hover:bg-white/30 text-white backdrop-blur-md px-6 py-3 rounded-full font-bold text-sm transition-colors border border-white/30 shadow-sm flex items-center gap-2">
+              <div className="relative z-10 whitespace-nowrap bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-full font-bold text-sm transition-all shadow-sm flex items-center gap-2">
                 운세 확인하러 가기 <span className="group-hover:translate-x-1 transition-transform">→</span>
               </div>
             </Link>
