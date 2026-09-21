@@ -855,8 +855,8 @@ export default function HomeContent({ blogPosts = [], guidePosts = [] }: { blogP
                 </div>
               </div>
 
-              <div className="relative z-10 whitespace-nowrap bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-full font-bold text-sm transition-all shadow-sm flex items-center gap-2">
-                운세 확인하러 가기 <span className="group-hover:translate-x-1 transition-transform">→</span>
+              <div className="relative z-10 whitespace-nowrap bg-white hover:bg-purple-50 text-purple-900 border border-purple-200/80 px-6 py-3 rounded-full font-bold text-sm transition-all shadow-sm hover:shadow flex items-center gap-2">
+                운세 확인하러 가기 <span className="group-hover:translate-x-1 transition-transform text-purple-600">→</span>
               </div>
             </Link>
           </div>
