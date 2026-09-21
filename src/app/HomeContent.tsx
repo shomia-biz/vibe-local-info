@@ -810,50 +810,52 @@ export default function HomeContent({ blogPosts = [], guidePosts = [] }: { blogP
 
           {/* 메인 카테고리 대형 버튼 2개 */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 mb-4">
+            {/* 1. 지원금·혜택: 모아팁스 오션 청록 */}
             <button
               onClick={() => {
                 document.getElementById('benefits')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="flex flex-col items-center justify-center p-7 bg-white hover:bg-blue-50/40 text-slate-800 rounded-[24px] border-2 border-blue-100 hover:border-blue-300 shadow-sm hover:shadow-md transition-all active:scale-[0.98] group"
+              className="flex flex-col items-center justify-center p-7 bg-gradient-to-br from-[#2E8B9A] to-[#47A1B8] hover:from-[#257380] hover:to-[#3b8fa3] text-white rounded-[24px] shadow-lg hover:shadow-cyan-100 transition-all active:scale-[0.98] group"
             >
-              <div className="w-14 h-14 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-3xl mb-3 group-hover:scale-110 transition-transform shadow-inner">
+              <div className="w-14 h-14 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center text-3xl mb-3 group-hover:scale-110 transition-transform shadow-inner">
                 💰
               </div>
-              <span className="text-xl sm:text-2xl font-black tracking-tight text-slate-900 group-hover:text-blue-600 transition-colors">지원금·혜택 모아보기</span>
-              <span className="text-slate-500 text-sm font-medium mt-1">청년, 소상공인, 우리 가족 모두를 위한 알짜 정보</span>
+              <span className="text-xl sm:text-2xl font-black tracking-tight text-white">지원금·혜택 모아보기</span>
+              <span className="text-cyan-50 text-sm font-medium mt-1">청년, 소상공인, 우리 가족 모두를 위한 알짜 정보</span>
             </button>
 
+            {/* 2. 행사/축제: 따뜻한 살구 피치 코랄 */}
             <button
               onClick={() => {
                 document.getElementById('events')?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="flex flex-col items-center justify-center p-7 bg-white hover:bg-rose-50/40 text-slate-800 rounded-[24px] border-2 border-rose-100 hover:border-rose-300 shadow-sm hover:shadow-md transition-all active:scale-[0.98] group"
+              className="flex flex-col items-center justify-center p-7 bg-gradient-to-br from-orange-400 to-rose-400 hover:from-orange-500 hover:to-rose-500 text-white rounded-[24px] shadow-lg hover:shadow-orange-100 transition-all active:scale-[0.98] group"
             >
-              <div className="w-14 h-14 rounded-2xl bg-rose-50 text-rose-500 flex items-center justify-center text-3xl mb-3 group-hover:scale-110 transition-transform shadow-inner">
+              <div className="w-14 h-14 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center text-3xl mb-3 group-hover:scale-110 transition-transform shadow-inner">
                 🎡
               </div>
-              <span className="text-xl sm:text-2xl font-black tracking-tight text-slate-900 group-hover:text-rose-600 transition-colors">모아팁스 행사/축제</span>
-              <span className="text-slate-500 text-sm font-medium mt-1">수도권에서 열리는 다양한 문화·예술·전시 모아보기</span>
+              <span className="text-xl sm:text-2xl font-black tracking-tight text-white">모아팁스 행사/축제</span>
+              <span className="text-orange-50 text-sm font-medium mt-1">수도권에서 열리는 다양한 문화·예술·전시 모아보기</span>
             </button>
           </div>
 
-          {/* 오늘의 운세 유도 배너 (Inline Banner) */}
+          {/* 오늘의 운세 유도 배너: 은은한 라벤더 바이올렛 */}
           <div className="mb-8 mt-2">
             <Link 
               href="/fortune"
-              className="group relative flex flex-col sm:flex-row items-center justify-between bg-gradient-to-r from-white via-purple-50/30 to-white rounded-[24px] p-6 sm:px-10 border-2 border-purple-100 hover:border-purple-300 shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5"
+              className="group relative flex flex-col sm:flex-row items-center justify-between bg-gradient-to-r from-indigo-500 via-purple-500 to-violet-500 hover:from-indigo-600 hover:to-violet-600 rounded-[24px] p-6 sm:px-10 shadow-lg hover:shadow-purple-100 transition-all hover:-translate-y-0.5"
             >
               <div className="relative z-10 flex items-center gap-4 sm:gap-6 mb-4 sm:mb-0 text-center sm:text-left">
-                <div className="w-14 h-14 rounded-2xl bg-purple-50 text-purple-600 flex items-center justify-center text-3xl group-hover:scale-110 transition-transform shadow-inner shrink-0">
+                <div className="w-14 h-14 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center text-3xl group-hover:scale-110 transition-transform shadow-inner shrink-0">
                   🔮
                 </div>
                 <div>
-                  <h3 className="text-slate-900 font-black text-xl sm:text-2xl mb-1 tracking-tight group-hover:text-purple-700 transition-colors">나의 오늘의 띠별 운세는?</h3>
-                  <p className="text-slate-500 font-medium text-sm sm:text-base">12지신이 알려주는 행운의 메시지와 맞춤형 럭키 아이템 확인하기 ✨</p>
+                  <h3 className="text-white font-black text-xl sm:text-2xl mb-1 tracking-tight">나의 오늘의 띠별 운세는?</h3>
+                  <p className="text-indigo-100 font-medium text-sm sm:text-base">12지신이 알려주는 행운의 메시지와 맞춤형 럭키 아이템 확인하기 ✨</p>
                 </div>
               </div>
 
-              <div className="relative z-10 whitespace-nowrap bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-full font-bold text-sm transition-all shadow-sm flex items-center gap-2">
+              <div className="relative z-10 whitespace-nowrap bg-white/25 hover:bg-white/35 text-white backdrop-blur-md px-6 py-3 rounded-full font-bold text-sm transition-all border border-white/30 shadow-sm flex items-center gap-2">
                 운세 확인하러 가기 <span className="group-hover:translate-x-1 transition-transform">→</span>
               </div>
             </Link>
