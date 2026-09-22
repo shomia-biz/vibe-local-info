@@ -4077,6 +4077,23 @@
   "nationalExhibitionEvents": [],
   "seoulEvents": [
     {
+      "name": "리비툼 오케스트라 제4회 정기연주회 : 멘델스존 교향곡 4번",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-11-01",
+      "endDate": "2026-11-01",
+      "location": "북서울꿈의숲아트센터 콘서트홀",
+      "target": "누구나",
+      "summary": "리비툼 오케스트라 제4회 정기연주회로 모차르트와 멘델스존의 곡들을 연주합니다.",
+      "link": "https://libitumcau2023.wixsite.com/libitum/event-details/libitum-philomusica-orchestra-the-5th-concert",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://static.wixstatic.com/media/b47f58_e906437123d54bb6b32fabab4919502d~mv2.png/v1/fill/w_844,h_1192,al_c/b47f58_e906437123d54bb6b32fabab4919502d~mv2.png",
+      "id": 1778713507110,
+      "updatedAt": "2026-09-22"
+    },
+    {
       "name": "커피 볶는 기타리스트 김성진의 [한 잔의 여유 시리즈]",
       "category": "행사",
       "region": "서울",
