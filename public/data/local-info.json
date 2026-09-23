@@ -873,6 +873,40 @@
   ],
   "seoulCultureEvents": [
     {
+      "name": "[구립증산도서관] 9월 미니멀 북큐레이션 [달마다, 나를 아끼는 습관] 운동이 일상이 되는 순간",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-09-03",
+      "endDate": "2026-09-30",
+      "location": "2층 종합자료실",
+      "target": "누구나",
+      "summary": "구립증산도서관에서 진행하는 9월 미니멀 북큐레이션 프로그램으로, '운동이 일상이 되는 순간'을 주제로 한 도서 전시 및 관련 프로그램입니다.",
+      "link": "https://www.eplib.or.kr/jslib/menu/10457/program/30028/eventLectureDetail.do?currentPageNo=1&lectureIdx=226412&manageCd=MB&searchTarget=&searchStatus=OPEN",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://www.eplib.or.kr/include/image/common/ico_sns_favicon.png",
+      "id": 1778713507112,
+      "updatedAt": "2026-09-23"
+    },
+    {
+      "name": "[서울시립 사진미술관] 대학(원)·기관 단체 대상 [미술관 현장학습]",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-09-03",
+      "endDate": "2026-10-08",
+      "location": "서울시립 사진미술관 전시실 및 1교육실, 로비 등",
+      "target": "대학(원), 기관 단체",
+      "summary": "대학(원) 및 기관 단체를 대상으로 서울시립 사진미술관에서 진행하는 현장학습 교육 프로그램입니다.",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=159504&menuNo=200011",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://culture.seoul.go.kr/resources/culture/img/sub/culturePotalImg2.jpg",
+      "id": 1778713507111,
+      "updatedAt": "2026-09-23"
+    },
+    {
       "name": "[은평문화재단] 예술인문 아카데미 《세계의 음악도시를 여행하다》 - 클래식으로 떠나는 음악기행",
       "category": "문화",
       "region": "서울",
@@ -3039,6 +3073,22 @@
     }
   ],
   "seoulExhibitionEvents": [
+    {
+      "name": "[노원문화재단] 문화공간 정담 기획전시 [손이 머문 자리, 공릉]",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-09-03",
+      "endDate": "2026-09-30",
+      "location": "문화공간 정담",
+      "target": "누구나",
+      "summary": "노원문화재단 문화공간 정담 기획전시 [손이 머문 자리, 공릉]",
+      "link": "https://nowonarts.kr/channels/exhibition/programs/1048",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "id": 1778713507113,
+      "updatedAt": "2026-09-23"
+    },
     {
       "name": "[서울시립미술관 서소문본관] 2026 SeMA 9월 외국어 전시해설",
       "category": "전시",
