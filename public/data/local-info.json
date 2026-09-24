@@ -13260,6 +13260,38 @@
   ],
   "nationalBenefits": [
     {
+      "name": "사회보험사각지대해소 사업(두루누리 사회보험료 지원사업)",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-09-24",
+      "endDate": "상시",
+      "location": "고용노동부",
+      "target": "청년,중장년",
+      "summary": "소규모 사업 저임금 근로자, 예술인, 노무제공자의 사회보험료를 지원하여 사회보험가입 사각지대 해소 및 사회안전망을 강화합니다.",
+      "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000095&wlfareInfoReldBztpCd=01",
+      "serviceField": "고용 창업",
+      "supportType": "현금(감면)",
+      "targetGroup": "개인",
+      "id": 1778713507128,
+      "updatedAt": "2026-09-24"
+    },
+    {
+      "name": "제대군인전직지원금",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-09-24",
+      "endDate": "상시",
+      "location": "국가보훈부",
+      "target": "보훈대상자 (실업상태의 군인연금 비대상자)",
+      "summary": "실업상태의 군인연금 비대상자에게 제대군인 전직지원금을 지급하여 중·장기복무 제대군인의 생활안정을 도모하고 취업과 창업을 지원합니다.",
+      "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00000096&wlfareInfoReldBztpCd=01",
+      "serviceField": "생활안정",
+      "supportType": "현금",
+      "targetGroup": "개인",
+      "id": 1778713507127,
+      "updatedAt": "2026-09-24"
+    },
+    {
       "name": "해외취업 지원",
       "category": "혜택",
       "region": "전국",
