@@ -873,6 +873,23 @@
   ],
   "seoulCultureEvents": [
     {
+      "name": "[서울시립 미술아카이브] 《오윤》 전시 연계 강연",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-09-18",
+      "endDate": "2026-11-25",
+      "location": "서울시립 미술아카이브 나눔동 다목적홀",
+      "target": "성인",
+      "summary": "서울시립 미술아카이브 《오윤》 전시 연계 강연",
+      "link": "https://sema.seoul.go.kr/kr/whatson/event/detail?evtNo=1582983",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://sema.seoul.go.kr/resources/content/2x3.jpg",
+      "id": 1778713507129,
+      "updatedAt": "2026-09-27"
+    },
+    {
       "name": "[구립증산도서관] 9월 미니멀 북큐레이션 [달마다, 나를 아끼는 습관] 운동이 일상이 되는 순간",
       "category": "문화",
       "region": "서울",
@@ -3073,6 +3090,23 @@
     }
   ],
   "seoulExhibitionEvents": [
+    {
+      "name": "[문화살롱 5120] 망각 기관―셰헤라자데 장치",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-09-18",
+      "endDate": "2026-11-14",
+      "location": "문화살롱 5120",
+      "target": "누구나",
+      "summary": "문화살롱 5120에서 진행되는 '[문화살롱 5120] 망각 기관―셰헤라자데 장치' 전시입니다.",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=159527&menuNo=200009",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://culture.seoul.go.kr/resources/culture/img/sub/culturePotalImg2.jpg",
+      "id": 1778713507130,
+      "updatedAt": "2026-09-27"
+    },
     {
       "name": "[노원문화재단] 문화공간 정담 기획전시 [손이 머문 자리, 공릉]",
       "category": "전시",
