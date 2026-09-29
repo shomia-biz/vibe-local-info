@@ -873,6 +873,23 @@
   ],
   "seoulCultureEvents": [
     {
+      "name": "[서울아트책보고] 영화의 언어 - 이다혜 작가",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-09-22",
+      "endDate": "2026-10-27",
+      "location": "서울아트책보고 워크숍룸",
+      "target": "성인 누구나",
+      "summary": "서울아트책보고에서 진행하는 이다혜 작가의 '영화의 언어' 강좌 프로그램입니다.",
+      "link": "https://artbookbogo.kr/seoul/menu/10024/program/30009/cultureDetail.do?currentPageNo=1&cultureIdx=26941",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://artbookbogo.kr/include/image/common/og.jpg",
+      "id": 1778713507136,
+      "updatedAt": "2026-09-29"
+    },
+    {
       "name": "[3기] 서울아트책보고 북클럽 X 현대문학 : 첫 번째 시간 『나미야 잡화점의 기적』 읽기 / 박인곤 교수",
       "category": "문화",
       "region": "서울",
@@ -3107,6 +3124,23 @@
     }
   ],
   "seoulExhibitionEvents": [
+    {
+      "name": "[서울공예박물관] 현대공예 기증특별전 [에퀴녹스 : 추분_춘분]",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-09-22",
+      "endDate": "2027-03-07",
+      "location": "서울공예박물관 전시1동 3층 기획전시실",
+      "target": "누구나",
+      "summary": "서울공예박물관에서 개최하는 현대공예 기증특별전 [에퀴녹스 : 추분_춘분] 전시 안내",
+      "link": "https://craftmuseum.seoul.go.kr/exhibit/plan/view/194",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://craftmuseum.seoul.go.kr/common/exhibition/filedown?idx=1980",
+      "id": 1778713507135,
+      "updatedAt": "2026-09-29"
+    },
     {
       "name": "[문화살롱 5120] 망각 기관―셰헤라자데 장치",
       "category": "전시",
