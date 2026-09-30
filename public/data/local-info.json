@@ -873,6 +873,39 @@
   ],
   "seoulCultureEvents": [
     {
+      "name": "[성북문화재단] 2026 성북축제학교 [지음·이음·다음]",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-09-09",
+      "endDate": "2026-11-04",
+      "location": "돌곶이생활예술문화센터",
+      "target": "청년",
+      "summary": "성북문화재단에서 주관하는 2026 성북축제학교 [지음·이음·다음] 프로그램으로, 매주 수요일 19:00~21:00에 진행됩니다.",
+      "link": "https://blog.naver.com/sbculture1/224378250626",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "id": 1778713507138,
+      "updatedAt": "2026-09-30"
+    },
+    {
+      "name": "[성북문화예술교육센터] 2026 [오늘도 예술로] 가을 시즌 프로그램 안내",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-09-09",
+      "endDate": "2026-11-07",
+      "location": "성북문화예술교육센터",
+      "target": "누구나 (프로그램별 상이-초등,청소년~성인)",
+      "summary": "성북문화예술교육센터에서 진행하는 2026 '오늘도 예술로' 가을 시즌(9-10월) 프로그램 안내",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=159181&menuNo=200011",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://culture.seoul.go.kr/resources/culture/img/sub/culturePotalImg2.jpg",
+      "id": 1778713507137,
+      "updatedAt": "2026-09-30"
+    },
+    {
       "name": "[서울아트책보고] 영화의 언어 - 이다혜 작가",
       "category": "문화",
       "region": "서울",
@@ -3124,6 +3157,22 @@
     }
   ],
   "seoulExhibitionEvents": [
+    {
+      "name": "[서울디자인재단] DDP 협력전시 SPECTRUM (스펙트럼)",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-09-09",
+      "endDate": "2026-10-27",
+      "location": "DDP 갤러리문",
+      "target": "누구나",
+      "summary": "DDP 협력전시 SPECTRUM (스펙트럼)",
+      "link": "https://ddp.or.kr/index.html?menuno=230&siteno=2&bbsno=613&boardno=15&bbstopno=613&act=view&subno=",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "id": 1778713507139,
+      "updatedAt": "2026-09-30"
+    },
     {
       "name": "[서울공예박물관] 현대공예 기증특별전 [에퀴녹스 : 추분_춘분]",
       "category": "전시",
