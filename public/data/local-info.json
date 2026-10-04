@@ -3175,6 +3175,23 @@
   ],
   "seoulExhibitionEvents": [
     {
+      "name": "[서울대학교 미술관] 일상의 이미지, 어떻게 말을 거는가",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-09-11",
+      "endDate": "2026-11-22",
+      "location": "서울대학교미술관 2-3층",
+      "target": "전체",
+      "summary": "권기수, 권오상 등 작가들의 작품을 통해 일상의 이미지가 어떻게 말을 거는지 살펴보는 서울대학교 미술관 전시",
+      "link": "http://www.snumoa.org/exhibitions_view.php?exh_id=195",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "http://www.snumoa.org/files/0747577ba0cf172a696e6538a45272aecb830247.png",
+      "id": 1778713507154,
+      "updatedAt": "2026-10-04"
+    },
+    {
       "name": "[서울디자인재단] DDP 협력전시 SPECTRUM (스펙트럼)",
       "category": "전시",
       "region": "서울",
