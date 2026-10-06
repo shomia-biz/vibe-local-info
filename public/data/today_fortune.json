@@ -1,77 +1,77 @@
 {
-    "date": "2026-10-05",
+    "date": "2026-10-06",
     "cards": [
         {
             "type": "쥐띠",
-            "general": "반짝이는 아이디어가 샘솟아 주변 사람들의 시선을 사로잡는 기분 좋은 날입니다. 마음먹은 대로 차근차근 나아가면 기대 이상의 보람찬 결실을 맺을 거예요.",
-            "lucky_item": "메모패드",
-            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=메모패드"
+            "general": "반짝이는 아이디어가 샘솟아 뜻밖의 좋은 기회를 맞이하게 되는 하루예요. 당신의 직관을 믿고 자신 있게 발걸음을 내디뎌보세요.",
+            "lucky_item": "미니 메모지",
+            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=미니 메모지"
         },
         {
             "type": "소띠",
-            "general": "묵묵히 걸어온 당신의 성실함이 마침내 빛을 발하는 따스한 하루예요. 편안한 마음으로 주변의 따뜻한 인정과 칭찬을 기쁘게 받아들여 보세요.",
-            "lucky_item": "핸드크림",
-            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=핸드크림"
-        },
-        {
-            "type": "호랑이띠",
-            "general": "넘치는 자신감과 긍정적인 활력이 당신을 멋진 성공으로 이끄는 날입니다. 망설이지 말고 가슴 뛰는 일을 향해 당당하게 첫발을 내디뎌보세요.",
+            "general": "묵묵히 쌓아온 노력이 마침내 빛을 발하며 주변의 따뜻한 인정을 받게 됩니다. 마음의 여유를 가지고 달콤한 성취감을 만끽해 보세요.",
             "lucky_item": "텀블러",
             "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=텀블러"
         },
         {
+            "type": "호랑이띠",
+            "general": "넘치는 활력과 자신감으로 어떤 일이든 시원시원하게 주도해 나갈 수 있는 멋진 날이에요. 마음먹은 일이 있다면 주저 말고 당당하게 시작해 보세요.",
+            "lucky_item": "비타민",
+            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=비타민"
+        },
+        {
             "type": "토끼띠",
-            "general": "온화하고 다정한 당신의 미소가 주변에 행복한 에너지를 선물하는 날이에요. 뜻밖의 반가운 소식이나 소중한 인연이 찾아와 마음을 설레게 할 거예요.",
-            "lucky_item": "립밤",
-            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=립밤"
+            "general": "부드러운 미소와 다정한 말 한마디가 소중한 인연과 행운을 불러오는 날입니다. 평온한 분위기 속에서 기분 좋은 소식이 찾아올 거예요.",
+            "lucky_item": "핸드크림",
+            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=핸드크림"
         },
         {
             "type": "용띠",
-            "general": "커다란 행운의 바람이 불어와 당신의 잠재력을 마음껏 펼칠 수 있는 기회가 찾아옵니다. 높은 곳을 향해 날아오르듯 스스로의 직관과 능력을 믿어보세요.",
-            "lucky_item": "탁상용 시계",
-            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=탁상용 시계"
+            "general": "당신의 뛰어난 재능과 매력이 사람들의 시선을 사로잡아 어디서나 환영받는 하루예요. 긍정적인 에너지를 활짝 펼치며 주인공이 되어보세요.",
+            "lucky_item": "무드등",
+            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=무드등"
         },
         {
             "type": "뱀띠",
-            "general": "뛰어난 통찰력과 지혜로 복잡했던 일들이 시원하게 풀리는 명쾌한 하루입니다. 차분히 여유를 즐기며 나만의 시간을 소중히 가꿔보세요.",
-            "lucky_item": "캐모마일 티백",
-            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=캐모마일 티백"
+            "general": "차분한 지혜와 통찰력이 당신을 가장 올바른 길로 부드럽게 이끌어 줍니다. 복잡했던 일들도 자연스럽게 실마리가 풀리며 마음이 편안해질 거예요.",
+            "lucky_item": "디퓨저",
+            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=디퓨저"
         },
         {
             "type": "말띠",
-            "general": "활기찬 에너지와 함께 긍정적인 변화의 물결이 밀려오는 역동적인 날이에요. 가벼운 발걸음으로 하루를 시작하면 멋진 기회를 마주하게 될 것입니다.",
+            "general": "상쾌한 바람처럼 가벼운 발걸음으로 시작한 일이 기대 이상의 큰 기쁨으로 돌아옵니다. 자유롭고 활기찬 에너지가 하루 종일 가득할 거예요.",
             "lucky_item": "스포츠 양말",
             "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=스포츠 양말"
         },
         {
             "type": "양띠",
-            "general": "따스한 햇살처럼 마음이 편안해지고 몽글몽글한 행복이 피어나는 날입니다. 당신의 깊은 배려와 친절이 더 큰 사랑과 행운이 되어 돌아올 거예요.",
-            "lucky_item": "수면 안대",
-            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=수면 안대"
+            "general": "따뜻한 배려와 친절이 주변을 환하게 밝히며 더 큰 복으로 되돌아오는 날입니다. 소소한 일상 속에서 뜻밖의 다정한 위로와 행복을 마주하게 될 거예요.",
+            "lucky_item": "허브티",
+            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=허브티"
         },
         {
             "type": "원숭이띠",
-            "general": "재치 넘치는 유머와 유연한 대처로 어디서나 환영받는 주인공이 되는 하루예요. 작은 호기심 하나가 커다란 즐거움과 뜻밖의 행운으로 이어질 거예요.",
-            "lucky_item": "비타민 젤리",
-            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=비타민 젤리"
+            "general": "재치 넘치는 유머와 순발력 덕분에 막혔던 일도 술술 풀리는 유쾌한 하루예요. 당신의 밝은 웃음이 주변 사람들에게도 커다란 활력을 선물해 줍니다.",
+            "lucky_item": "스마트폰 그립톡",
+            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=스마트폰 그립톡"
         },
         {
             "type": "닭띠",
-            "general": "예리한 감각과 꼼꼼한 눈썰미로 숨어 있던 소중한 기회를 포착하는 날입니다. 정돈된 하루 속에서 완벽한 성취감과 자부심을 느끼실 수 있을 거예요.",
-            "lucky_item": "실내 디퓨저",
-            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=실내 디퓨저"
+            "general": "꼼꼼한 준비와 성실함이 빛을 발해 계획했던 일들이 차근차근 순조롭게 진행됩니다. 부지런히 움직인 만큼 보람차고 풍요로운 결실이 기다리고 있어요.",
+            "lucky_item": "볼펜",
+            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=볼펜"
         },
         {
             "type": "개띠",
-            "general": "진실된 태도와 따뜻한 마음씨 덕분에 소중한 사람들과 깊은 신뢰를 쌓는 날입니다. 든든한 응원군이 곁에 머물며 당신의 하루를 환하게 지켜줄 거예요.",
-            "lucky_item": "세라믹 머그컵",
-            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=세라믹 머그컵"
+            "general": "진솔한 태도와 신뢰가 든든한 조력자를 불러모아 마음이 한없이 든든해지는 날이에요. 곁에 있는 소중한 사람들과 따뜻한 정을 나누어 보세요.",
+            "lucky_item": "키링",
+            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=키링"
         },
         {
             "type": "돼지띠",
-            "general": "풍요롭고 넉넉한 기운이 가득해 소소한 일상 속에서도 커다란 기쁨을 느끼는 날이에요. 마음에 여유를 두고 좋아하는 사람들과 행복한 시간을 만끽해 보세요.",
-            "lucky_item": "미니 무드등",
-            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=미니 무드등"
+            "general": "풍요롭고 너그러운 기운이 감돌아 생각지도 못한 작은 행운들이 연이어 찾아옵니다. 스스로에게 맛있는 간식이나 편안한 휴식을 선물해 보세요.",
+            "lucky_item": "립밤",
+            "coupang_url": "https://link.coupang.com/a/AF8906554?keyword=립밤"
         }
     ]
 }
