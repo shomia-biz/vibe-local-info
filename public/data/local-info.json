@@ -3243,6 +3243,39 @@
   ],
   "seoulExhibitionEvents": [
     {
+      "name": "[문화실험공간 호수] 2026 더 임팩트 청년예술인 공모전시 [THE OTHERS]",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-10-06",
+      "endDate": "2026-10-18",
+      "location": "문화실험공간 호수 2F 전시실",
+      "target": "누구나",
+      "summary": "문화실험공간 호수에서 진행하는 2026 더 임팩트 청년예술인 공모전시 [THE OTHERS]",
+      "link": "https://blog.naver.com/exp_space_hosu/224430157183",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "id": 1778713507174,
+      "updatedAt": "2026-10-09"
+    },
+    {
+      "name": "최은지 개인전 [지도에 없는 장소에 그림자를 붙이고 있었다]",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-10-06",
+      "endDate": "2026-10-24",
+      "location": "콤플렉스",
+      "target": "누구나",
+      "summary": "종로구 콤플렉스에서 개최되는 최은지 개인전 [지도에 없는 장소에 그림자를 붙이고 있었다]",
+      "link": "https://archivist.kr/exi?m=gov&i=1791086082",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://imagedelivery.net/w4-VNNnUV8Ounl2Y9OqM-w/20261004_komplex_poster_1791086082_f146ed9a/800",
+      "id": 1778713507173,
+      "updatedAt": "2026-10-09"
+    },
+    {
       "name": "[서울대학교 미술관] 일상의 이미지, 어떻게 말을 거는가",
       "category": "전시",
       "region": "서울",
@@ -4362,6 +4395,23 @@
   ],
   "nationalExhibitionEvents": [],
   "seoulEvents": [
+    {
+      "name": "[성동문화재단] 2026 크리에이티브X성수",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-10-05",
+      "endDate": "2026-10-11",
+      "location": "에스팩토리, 펍지성수, 서울숲, 연무장길 등 성수동 전역",
+      "target": "누구나",
+      "summary": "성수를 가장 트렌디하게 즐기는 방법! 주제전시, 컨퍼런스, 피칭, 게임, 공연, 아트페어, 패션, 뷰티 등 다양한 분야의 프로그램을 직접 경험하고 즐길 수 있는 기회!",
+      "link": "https://www.creativexseongsu.co.kr/",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://cdn.imweb.me/upload/S202406106dfac71d99315/4239ff709980d.png",
+      "id": 1778713507175,
+      "updatedAt": "2026-10-09"
+    },
     {
       "name": "[서울남산국악당] 헤이스트링 [서큘레이터]",
       "category": "행사",
