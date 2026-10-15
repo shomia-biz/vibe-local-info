@@ -3243,6 +3243,23 @@
   ],
   "seoulExhibitionEvents": [
     {
+      "name": "석사학위 청구전 [Our Own Shelter] 한지연 · 박세빈",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-10-12",
+      "endDate": "2026-10-15",
+      "location": "갤러리 지하",
+      "target": "누구나",
+      "summary": "마포구 갤러리 지하에서 진행되는 석사학위 청구전 [Our Own Shelter] 전시입니다.",
+      "link": "https://galleryjiha.com/home/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&bmode=view&idx=175009108&t=board",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://cdn.imweb.me/thumbnail/20261008/2bf890b9377b9.jpg",
+      "id": 1778713507182,
+      "updatedAt": "2026-10-15"
+    },
+    {
       "name": "[송파 청년아티스트센터] 3기 릴레이 개인전 [주워진 시간] - 허유",
       "category": "전시",
       "region": "서울",
@@ -4412,6 +4429,22 @@
   ],
   "nationalExhibitionEvents": [],
   "seoulEvents": [
+    {
+      "name": "[서초구 야외도서관] 2026 양재천을 품은 양재도서관 「물길 따라 그림책 여행」",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-10-10",
+      "endDate": "2026-11-08",
+      "location": "서초구립양재도서관 앞 오솔숲도서관 일대",
+      "target": "누구나",
+      "summary": "양재천을 품은 양재도서관에서 진행되는 야외도서관 프로그램 「물길 따라 그림책 여행」",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=159511&menuNo=200010",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "id": 1778713507183,
+      "updatedAt": "2026-10-15"
+    },
     {
       "name": "[서초문화재단] 2026 서리풀 재즈페스타 [Remembering Bud Powell]",
       "category": "행사",
