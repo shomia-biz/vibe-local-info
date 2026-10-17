@@ -3277,6 +3277,22 @@
   ],
   "seoulExhibitionEvents": [
     {
+      "name": "[서울디자인재단] 2026 DDP디자인페어",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-10-14",
+      "endDate": "2026-10-18",
+      "location": "아트홀 1관, 2관, 컨퍼런스홀",
+      "target": "누구나",
+      "summary": "2026 DDP디자인페어 전시 행사",
+      "link": "https://ddp.or.kr/?menuno=241&siteno=1&boardno=16&act=view&bbsno=781",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "id": 1778713507187,
+      "updatedAt": "2026-10-17"
+    },
+    {
       "name": "석사학위 청구전 [Our Own Shelter] 한지연 · 박세빈",
       "category": "전시",
       "region": "서울",
