@@ -3277,6 +3277,22 @@
   ],
   "seoulExhibitionEvents": [
     {
+      "name": "박희주 개인전 [아주 오래된 잔해]",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-10-03",
+      "endDate": "2026-10-18",
+      "location": "예술공간 의식주",
+      "target": "누구나",
+      "summary": "서대문구 예술공간 의식주에서 개최되는 박희주 개인전 [아주 오래된 잔해]. 수-일요일 13:00~18:00 관람 가능 (무료)",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=159805&menuNo=200009",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "id": 1778713507189,
+      "updatedAt": "2026-10-18"
+    },
+    {
       "name": "[서울디자인재단] 2026 DDP디자인페어",
       "category": "전시",
       "region": "서울",
@@ -4479,6 +4495,22 @@
   ],
   "nationalExhibitionEvents": [],
   "seoulEvents": [
+    {
+      "name": "[동작문화재단] 2026 동작사육신 충효예술한마당",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-10-03",
+      "endDate": "2026-11-28",
+      "location": "사육신 역사관 및 야외마당 갤러리",
+      "target": "누구나",
+      "summary": "2026년 동작사육신 충효예술한마당 행사",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=159614&menuNo=200010",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "id": 1778713507188,
+      "updatedAt": "2026-10-18"
+    },
     {
       "name": "수림뉴웨이브 2026 - 김효영 [비껴선 시선]",
       "category": "행사",
