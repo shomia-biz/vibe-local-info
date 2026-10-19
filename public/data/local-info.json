@@ -873,6 +873,23 @@
   ],
   "seoulCultureEvents": [
     {
+      "name": "[구립증산도서관] 개관 18주년 기념 로비 체험 [점자 키링 만들기]",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-10-24",
+      "endDate": "2026-10-24",
+      "location": "구립증산도서관 1층 로비",
+      "target": "도서관 이용자 누구나 선착순 자유 참여",
+      "summary": "구립증산도서관 개관 18주년 기념 로비 체험 프로그램으로 점자 키링 만들기 진행",
+      "link": "https://www.eplib.or.kr/jslib/menu/10457/program/30028/eventLectureDetail.do?currentPageNo=1&lectureIdx=231918",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://www.eplib.or.kr/include/image/common/ico_sns_favicon.png",
+      "id": 1778713507190,
+      "updatedAt": "2026-10-19"
+    },
+    {
       "name": "[서울디자인창업센터] 서울디자인런 2026 - 유명한 사람을 쓰면 뭐가 달라질까?",
       "category": "문화",
       "region": "서울",
@@ -4495,6 +4512,38 @@
   ],
   "nationalExhibitionEvents": [],
   "seoulEvents": [
+    {
+      "name": "[성동문화재단] 2026 톡톡 클래식 시리즈 [사랑에 빠지다 Fall in Love]",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-10-23",
+      "endDate": "2026-10-30",
+      "location": "소월아트홀",
+      "target": "성동구민 및 서울시민 누구나",
+      "summary": "성동문화재단에서 주관하는 2026 톡톡 클래식 시리즈 [사랑에 빠지다 Fall in Love] 공연입니다.",
+      "link": "https://www.sdfac.or.kr/kor/sdfac/performance/plan_view.do?p_idx=1649",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "id": 1778713507192,
+      "updatedAt": "2026-10-19"
+    },
+    {
+      "name": "서울시무형유산 석암제 시조 지정 10주년 기념 [제4회 호수문화제]",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-10-23",
+      "endDate": "2026-11-07",
+      "location": "한국의집 민속극장, 남산골한옥마을 천우각",
+      "target": "누구나",
+      "summary": "서울시무형유산 석암제 시조 지정 10주년을 기념하여 개최되는 제4회 호수문화제입니다.",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=159822&menuNo=200008",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "id": 1778713507191,
+      "updatedAt": "2026-10-19"
+    },
     {
       "name": "[동작문화재단] 2026 동작사육신 충효예술한마당",
       "category": "행사",
