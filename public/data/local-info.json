@@ -873,6 +873,23 @@
   ],
   "seoulCultureEvents": [
     {
+      "name": "문예북흥 No.72 - 격동기의 뜨거운 파도를 타고 불꽃으로 산화한 젊음의 기록. 은밀하고 특별한 아지트-소설가 이화경의 『비밀구락부』",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-10-24",
+      "endDate": "2026-10-24",
+      "location": "이호철북콘서트홀",
+      "target": "누구나",
+      "summary": "문예북흥 No.72 - 격동기의 뜨거운 파도를 타고 불꽃으로 산화한 젊음의 기록. 은밀하고 특별한 아지트-소설가 이화경의 『비밀구락부』",
+      "link": "https://lbch.kr/event_info/event/event_info_view.php?board_id=142",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://lbch.kr/asset/img/og.jpg",
+      "id": 1778713507194,
+      "updatedAt": "2026-10-20"
+    },
+    {
       "name": "[구립증산도서관] 개관 18주년 기념 로비 체험 [점자 키링 만들기]",
       "category": "문화",
       "region": "서울",
@@ -4512,6 +4529,39 @@
   ],
   "nationalExhibitionEvents": [],
   "seoulEvents": [
+    {
+      "name": "GYPSY TRAIN × SPAIN",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-10-24",
+      "endDate": "2026-10-24",
+      "location": "Studio301 성수",
+      "target": "성인, 청소년",
+      "summary": "성동구 Studio301 성수에서 열리는 클래식 공연 행사",
+      "link": "https://booking.naver.com/booking/5/bizes/601161/items/8121456?area=pll&startDateTime=2026-10-15T00%3A00%3A00%2B09%3A00",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://naverbooking-phinf.pstatic.net/20261010_126/1791581204974ys94k_PNG/image.png?type=f804_408_60_sharpen",
+      "id": 1778713507195,
+      "updatedAt": "2026-10-20"
+    },
+    {
+      "name": "[서울시립과학관 x 노원천문우주과학관] 2026년 별빛축제",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-10-24",
+      "endDate": "2026-10-25",
+      "location": "서울시립과학관",
+      "target": "별과 우주, 과학을 사랑하는 누구나",
+      "summary": "서울시립과학관과 노원천문우주과학관이 함께하는 2026년 별빛축제",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=159876&menuNo=200010",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "id": 1778713507193,
+      "updatedAt": "2026-10-20"
+    },
     {
       "name": "[성동문화재단] 2026 톡톡 클래식 시리즈 [사랑에 빠지다 Fall in Love]",
       "category": "행사",
