@@ -3311,6 +3311,23 @@
   ],
   "seoulExhibitionEvents": [
     {
+      "name": "서울시립미술관 & 노원문화재단 협력전시 《SeMA Collection: 시선의 결》",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-10-15",
+      "endDate": "2026-11-29",
+      "location": "노원문화예술회관 4층, 노원아트뮤지엄",
+      "target": "누구나",
+      "summary": "서울시립미술관과 노원문화재단이 협력하여 개최하는 소장품 전시로, 다양한 작가들의 작품을 선보입니다.",
+      "link": "https://www.nowonarts.kr/channels/exhibition/programs/1073",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://www.nowonarts.kr/html/resources/images/common/ogimage.png?v1",
+      "id": 1778713507196,
+      "updatedAt": "2026-10-21"
+    },
+    {
       "name": "박희주 개인전 [아주 오래된 잔해]",
       "category": "전시",
       "region": "서울",
