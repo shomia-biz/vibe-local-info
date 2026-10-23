@@ -873,6 +873,22 @@
   ],
   "seoulCultureEvents": [
     {
+      "name": "[역삼푸른솔도서관] 그림책에서 초등 국어까지, 우리 아이 문해력 로드맵",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-10-28",
+      "endDate": "2026-11-11",
+      "location": "역삼푸른솔도서관 프로그램실",
+      "target": "유아 및 초등 자녀를 둔 학부모 25명",
+      "summary": "그림책부터 초등 문학과 비문학 독해 실력으로 확실하게 이어주는 명쾌한 독서 로드맵을 전수하는 학부모 대상 자녀 국어 교육 솔루션 프로그램",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=159806&menuNo=200011",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "id": 1778713507201,
+      "updatedAt": "2026-10-23"
+    },
+    {
       "name": "문예북흥 No.72 - 격동기의 뜨거운 파도를 타고 불꽃으로 산화한 젊음의 기록. 은밀하고 특별한 아지트-소설가 이화경의 『비밀구락부』",
       "category": "문화",
       "region": "서울",
@@ -4546,6 +4562,39 @@
   ],
   "nationalExhibitionEvents": [],
   "seoulEvents": [
+    {
+      "name": "[쿼드, 연극의 질문들] 김우옥 [혁명의 춤]",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-10-28",
+      "endDate": "2026-11-08",
+      "location": "서울문화재단 대학로극장 쿼드",
+      "target": "누구나 (만 13세(중학생)이상)",
+      "summary": "서울문화재단 대학로극장 쿼드에서 진행되는 연극 프로그램 '[쿼드, 연극의 질문들] 김우옥 [혁명의 춤]'",
+      "link": "https://www.quad.or.kr/product/performance/1277",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "id": 1778713507202,
+      "updatedAt": "2026-10-23"
+    },
+    {
+      "name": "[서울시립교향악단] 2026 서울시향 우리동네 음악회-뮤지엄 콘서트 (송파책박물관)",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-10-29",
+      "endDate": "2026-10-29",
+      "location": "송파책박물관 어울림홀",
+      "target": "누구나",
+      "summary": "서울시립교향악단이 주관하는 클래식 뮤지엄 콘서트로, 송파책박물관 어울림홀에서 진행되는 무료 음악회입니다.",
+      "link": "https://www.seoulphil.or.kr/perf/view?perfNo=7781",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://www.seoulphil.or.kr/static/webdoc/image/sns_logo1.png",
+      "id": 1778713507200,
+      "updatedAt": "2026-10-23"
+    },
     {
       "name": "[서울시립교향악단] 2026 서울시향 뮤지엄 콘서트 ① ②",
       "category": "행사",
