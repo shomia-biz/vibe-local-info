@@ -873,6 +873,22 @@
   ],
   "seoulCultureEvents": [
     {
+      "name": "[구립증산도서관] 개관 18주년 기념 [나만의 AI 그림책 만들기]",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-10-10",
+      "endDate": "2026-11-07",
+      "location": "구립증산도서관 1층 문화교육실",
+      "target": "초등생 (초등 4~6학년)",
+      "summary": "구립증산도서관 개관 18주년을 기념하여 초등 4~6학년을 대상으로 진행하는 '나만의 AI 그림책 만들기' 교육/체험 프로그램입니다.",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=159867&menuNo=200011",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "id": 1778713507203,
+      "updatedAt": "2026-10-24"
+    },
+    {
       "name": "[역삼푸른솔도서관] 그림책에서 초등 국어까지, 우리 아이 문해력 로드맵",
       "category": "문화",
       "region": "서울",
@@ -3326,6 +3342,22 @@
     }
   ],
   "seoulExhibitionEvents": [
+    {
+      "name": "이하린 개인전 [Wash Me (and I shall be whiter than snow)]",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-10-10",
+      "endDate": "2026-10-25",
+      "location": "FINORK (서울숲 9길 5, 2층)",
+      "target": "누구나",
+      "summary": "성동구 FINORK에서 열리는 이하린 개인전 [Wash Me (and I shall be whiter than snow)] 전시 안내. (네이버플레이스 링크, 전화, DM 등 예약 필요)",
+      "link": "https://www.instagram.com/p/Dd0KQZ6GGPP/?img_index=1",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "id": 1778713507204,
+      "updatedAt": "2026-10-24"
+    },
     {
       "name": "서울시립미술관 & 노원문화재단 협력전시 《SeMA Collection: 시선의 결》",
       "category": "전시",
