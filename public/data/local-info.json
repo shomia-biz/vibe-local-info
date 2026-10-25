@@ -873,6 +873,40 @@
   ],
   "seoulCultureEvents": [
     {
+      "name": "[구립증산도서관] 개관 시간 연장 지원 사업 [책이랑 뚝딱! 공방] 10월",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-10-28",
+      "endDate": "2026-10-28",
+      "location": "구립증산도서관 3층 어린이열람실",
+      "target": "어린이 이용자 누구나",
+      "summary": "구립증산도서관 개관 시간 연장 지원 사업의 일환으로 진행되는 어린이 대상 체험 프로그램 [책이랑 뚝딱! 공방] 10월 행사입니다.",
+      "link": "https://www.eplib.or.kr/jslib/menu/10457/program/30028/eventLectureDetail.do?currentPageNo=1&lectureIdx=232868&manageCd=MB&searchTarget=&searchStatus=OPEN",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://www.eplib.or.kr/include/image/common/ico_sns_favicon.png",
+      "id": 1778713507210,
+      "updatedAt": "2026-10-25"
+    },
+    {
+      "name": "[이:음 예술창작 아카데미] 매개자 과정 2026 이음캠프 [알아차림]",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-10-28",
+      "endDate": "2026-10-30",
+      "location": "서울시어울림플라자",
+      "target": "장애예술 매개자, 신경다양성 시각예술 창작자+보호자",
+      "summary": "창작자와 매개자, 보호자가 서로의 세계를 만나는 2박 3일 교육/체험 프로그램",
+      "link": "https://ac.ieum.or.kr/program/program.php?ptype=view&idx=1505&category=3",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://ac.ieum.or.kr/img/og_logo.gif",
+      "id": 1778713507209,
+      "updatedAt": "2026-10-25"
+    },
+    {
       "name": "[구립증산도서관] 개관 18주년 기념 [나만의 AI 그림책 만들기]",
       "category": "문화",
       "region": "서울",
@@ -3342,6 +3376,23 @@
     }
   ],
   "seoulExhibitionEvents": [
+    {
+      "name": "전시 [IMPRINTS OF TIME]",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-10-28",
+      "endDate": "2026-10-31",
+      "location": "갤러리 지하",
+      "target": "누구나",
+      "summary": "마포구 갤러리 지하에서 진행되는 전시 [IMPRINTS OF TIME]",
+      "link": "https://galleryjiha.com/exhibitions/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&bmode=view&idx=175062080&t=board",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://cdn.imweb.me/thumbnail/20261012/ea42251134b65.jpg",
+      "id": 1778713507208,
+      "updatedAt": "2026-10-25"
+    },
     {
       "name": "이하린 개인전 [Wash Me (and I shall be whiter than snow)]",
       "category": "전시",
