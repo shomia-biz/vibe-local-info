@@ -873,6 +873,38 @@
   ],
   "seoulCultureEvents": [
     {
+      "name": "[서초문화원] 서초문화벨트 해설투어",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-10-19",
+      "endDate": "2026-10-30",
+      "location": "예술의전당, 국악박물관, 세계음악분수 등",
+      "target": "누구나",
+      "summary": "서초문화벨트 해설투어 프로그램 (예술의전당, 국악박물관, 세계음악분수 등 진행)",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=159506&menuNo=200011",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "id": 1778713507213,
+      "updatedAt": "2026-10-26"
+    },
+    {
+      "name": "[서울시립과학관] 과학X예술 워크숍 [과학관에 온 예술가들]",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-10-20",
+      "endDate": "2026-11-22",
+      "location": "서울시립과학관 1층 메이커스튜디오",
+      "target": "초등학생 4학년 이상부터 성인까지",
+      "summary": "과학과 예술을 융합한 워크숍 프로그램(돌은 언제 색이 되는가/상상망상/햇빛 관측소/스파게티와 라면 등)을 서울시립과학관에서 진행합니다.",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=159937&menuNo=200011",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "id": 1778713507211,
+      "updatedAt": "2026-10-26"
+    },
+    {
       "name": "[구립증산도서관] 개관 시간 연장 지원 사업 [책이랑 뚝딱! 공방] 10월",
       "category": "문화",
       "region": "서울",
@@ -3376,6 +3408,22 @@
     }
   ],
   "seoulExhibitionEvents": [
+    {
+      "name": "[송파 청년아티스트센터] 3기 릴레이 개인전 [dot to dot] - 권봉균",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-10-20",
+      "endDate": "2026-10-31",
+      "location": "송파 청년아티스트센터 지하1층 아트 스페이스",
+      "target": "누구나",
+      "summary": "송파 청년아티스트센터에서 진행하는 3기 릴레이 개인전 [dot to dot] 권봉균 작가의 전시입니다.",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=159859&menuNo=200009",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "id": 1778713507212,
+      "updatedAt": "2026-10-26"
+    },
     {
       "name": "전시 [IMPRINTS OF TIME]",
       "category": "전시",
