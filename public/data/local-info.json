@@ -4743,6 +4743,22 @@
   "nationalExhibitionEvents": [],
   "seoulEvents": [
     {
+      "name": "[서초문화원] 제10회 [시詩와 아리아]",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-10-14",
+      "endDate": "2026-11-11",
+      "location": "서초문화예술회관 1층 아트홀(강남대로 201)",
+      "target": "누구나",
+      "summary": "2026년 서초문화원 「시詩와 아리아」는 시와 음악을 통해 삶의 순간마다 마주하는 사랑과 기억을 그려낸 공연입니다. 시낭송과 노래가 어우러져 봄·여름·가을·겨울 4막으로 삶의 이야기를 전합니다.",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=159840&menuNo=200008",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "id": 1778713507221,
+      "updatedAt": "2026-10-28"
+    },
+    {
       "name": "[쿼드, 연극의 질문들] 김우옥 [혁명의 춤]",
       "category": "행사",
       "region": "서울",
