@@ -873,6 +873,23 @@
   ],
   "seoulCultureEvents": [
     {
+      "name": "[서울아트책보고] 가을엔, 재즈 함께 들어요 - 김광현 월간 재즈피플 편집장 (6주차)",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-10-15",
+      "endDate": "2026-11-26",
+      "location": "서울아트책보고 워크숍룸",
+      "target": "누구나 (성인 40명)",
+      "summary": "서울아트책보고에서 진행하는 김광현 월간 재즈피플 편집장의 가을 재즈 강좌 프로그램입니다.",
+      "link": "https://www.artbookbogo.kr/seoul/menu/10024/program/30009/cultureDetail.do?currentPageNo=1&cultureIdx=27683&cultureTypeCdArr=EDUC&searchCultureTypeCd=&searchOperStatusCd=VALID",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://www.artbookbogo.kr/include/image/common/og.jpg",
+      "id": 1778713507224,
+      "updatedAt": "2026-10-29"
+    },
+    {
       "name": "[서초문화원] 서초문화벨트 해설투어",
       "category": "문화",
       "region": "서울",
@@ -3408,6 +3425,39 @@
     }
   ],
   "seoulExhibitionEvents": [
+    {
+      "name": "[서울문화예술교육센터 양천] 개관 10주년 특별기획전 [끝없이, 물처럼Ever Flowing, as Water]",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-10-15",
+      "endDate": "2026-11-28",
+      "location": "서울문화예술교육센터 양천 지하 1층 전시공간 · 야외수조",
+      "target": "누구나",
+      "summary": "서울문화예술교육센터 양천의 지난 10년과 공간에 쌓인 시간과 기억을 사진·미디어·설치 작품으로 풀어낸 전시.",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=159807&menuNo=200009",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "id": 1778713507223,
+      "updatedAt": "2026-10-29"
+    },
+    {
+      "name": "[갤러리 그라프] 잠시, 다른 것이 되는 (Becoming Otherwise) 이진희, 무아리, 풀림",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-10-15",
+      "endDate": "2026-11-28",
+      "location": "갤러리 그라프 전시실",
+      "target": "누구나",
+      "summary": "갤러리 그라프에서 개최하는 이진희, 무아리, 풀림 작가의 전시 '잠시, 다른 것이 되는 (Becoming Otherwise)'입니다.",
+      "link": "https://ggrappe.com/exhibitions/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&bmode=view&idx=174912615&t=board",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://cdn.imweb.me/thumbnail/20261008/07314dfed51d9.png",
+      "id": 1778713507222,
+      "updatedAt": "2026-10-29"
+    },
     {
       "name": "이승현 개인전 [염원의 에너지 변환을 위한 신세기 엔진 실험]",
       "category": "전시",
