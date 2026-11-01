@@ -14668,6 +14668,38 @@
   ],
   "nationalBenefits": [
     {
+      "name": "햇살론119",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-11-01",
+      "endDate": "상시",
+      "location": "금융위원회",
+      "target": "청년, 중장년, 노년",
+      "summary": "은행 채무조정 프로그램을 이용중인 취약 개인 사업자에게 금융부담 경감과 함께 사업 운영에 필요한 신규 운전자금 보증부대출입니다.",
+      "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006271&wlfareInfoReldBztpCd=01",
+      "serviceField": "생활안정",
+      "supportType": "현금(융자)",
+      "targetGroup": "개인",
+      "id": 1778713507231,
+      "updatedAt": "2026-11-01"
+    },
+    {
+      "name": "소상공인 특례 햇살론카드",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-11-01",
+      "endDate": "상시",
+      "location": "금융위원회",
+      "target": "청년,중장년,노년 (개인사업자)",
+      "summary": "개인사업자가 최소한의 상환 능력을 충족하면 사업 경비 등 지출에 부담 없이 영업을 지속할 수 있도록 도움을 주고 경제적 재기를 지원합니다.",
+      "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00006272&wlfareInfoReldBztpCd=01",
+      "serviceField": "생활안정",
+      "supportType": "이용권",
+      "targetGroup": "개인",
+      "id": 1778713507230,
+      "updatedAt": "2026-11-01"
+    },
+    {
       "name": "자립준비청년(보호종료아동) 자립정착금 지원",
       "category": "혜택",
       "region": "전국",
