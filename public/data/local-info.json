@@ -873,6 +873,22 @@
   ],
   "seoulCultureEvents": [
     {
+      "name": "외국인과 함께하는 서대문역사 및 영천시장 미식 투어",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-10-31",
+      "endDate": "2026-11-08",
+      "location": "독립문영천시장 및 서대문형무소 일대",
+      "target": "외국인 누구나 사전 신청자에 한해 1회당 60명 한정",
+      "summary": "외국인과 함께 서대문 역사 탐방 및 영천시장 미식을 즐기는 투어 프로그램입니다.",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=160009&menuNo=200011",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "id": 1778713507244,
+      "updatedAt": "2026-11-08"
+    },
+    {
       "name": "[마포구립서강도서관] 11월/일반강좌 [옛 밥상, 오늘의 삶을 차리다_품격 있는 나이듦을 위한 인문학]",
       "category": "문화",
       "region": "서울",
@@ -3509,6 +3525,22 @@
   ],
   "seoulExhibitionEvents": [
     {
+      "name": "[노들섬] 2026 노들섬 특별기획 [노들anding]",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-10-31",
+      "endDate": "2026-11-29",
+      "location": "노들섬 라이브하우스 옆 (구 편의점)",
+      "target": "누구나",
+      "summary": "노들섬 라이브하우스 옆에서 진행되는 2026 노들섬 특별기획 전시 프로그램",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=160106&menuNo=200009",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "id": 1778713507242,
+      "updatedAt": "2026-11-08"
+    },
+    {
       "name": "박성민 [형태를 지나 결에 머물다]",
       "category": "전시",
       "region": "서울",
@@ -4908,6 +4940,22 @@
   ],
   "nationalExhibitionEvents": [],
   "seoulEvents": [
+    {
+      "name": "팝업&페스티벌 [SSE PBR FEST]",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-10-31",
+      "endDate": "2026-11-23",
+      "location": "동대문디자인플라자 디자인랩1층 DDP쇼룸",
+      "target": "누구나",
+      "summary": "동대문디자인플라자에서 개최되는 팝업 및 페스티벌 행사입니다.",
+      "link": "https://ddpshowroom.sba.kr/menu/news/view?idx=202",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "id": 1778713507243,
+      "updatedAt": "2026-11-08"
+    },
     {
       "name": "국립무용단 [2026 안무가 프로젝트]",
       "category": "행사",
