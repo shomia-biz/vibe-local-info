@@ -873,6 +873,39 @@
   ],
   "seoulCultureEvents": [
     {
+      "name": "제31회 한무숙문학상 수상자 구병모 소설가와 함께하는 [소설 읽는 시간 & 작가와의 대화]",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-11-13",
+      "endDate": "2026-11-13",
+      "location": "한무숙문학관 전시실",
+      "target": "누구나",
+      "summary": "제31회 한무숙문학상 수상자 구병모 소설가와 함께 작품을 낭독하고, 작가와 문학 이야기를 나누는 시간",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=159815&menuNo=200011",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "id": 1778713507246,
+      "updatedAt": "2026-11-10"
+    },
+    {
+      "name": "2026 강북창업포럼 [AI가 바꾸는 창업의 미래] (NCI 민/관/학 창업포럼)",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-11-13",
+      "endDate": "2026-11-13",
+      "location": "강북문화예술회관 소나무홀",
+      "target": "누구나",
+      "summary": "AI 시대 창업의 기회를 찾는 2026 강북창업포럼 (AI가 바꾸는 창업의 미래)",
+      "link": "https://snsgangbuk.com/sub/notice.html?type=view&bsNo=3373",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "http://snsgangbuk.com/img/logo/logo.png",
+      "id": 1778713507245,
+      "updatedAt": "2026-11-10"
+    },
+    {
       "name": "외국인과 함께하는 서대문역사 및 영천시장 미식 투어",
       "category": "문화",
       "region": "서울",
@@ -4940,6 +4973,23 @@
   ],
   "nationalExhibitionEvents": [],
   "seoulEvents": [
+    {
+      "name": "[서울시립교향악단] 2026 서울시향 행복한 음악회, 함께! II",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-11-13",
+      "endDate": "2026-11-13",
+      "location": "예술의전당 IBK기업은행챔버홀",
+      "target": "초등학생 이상",
+      "summary": "서울시립교향악단이 개최하는 클래식 음악회",
+      "link": "https://www.seoulphil.or.kr/perf/view?perfNo=7795",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://www.seoulphil.or.kr/static/webdoc/image/sns_logo1.png",
+      "id": 1778713507247,
+      "updatedAt": "2026-11-10"
+    },
     {
       "name": "팝업&페스티벌 [SSE PBR FEST]",
       "category": "행사",
