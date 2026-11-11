@@ -873,6 +873,22 @@
   ],
   "seoulCultureEvents": [
     {
+      "name": "[마포구립서강도서관] 11월/어린이메이킹 해봄이웃집Maker [그림책으로 만나는 슈링클스 키캡 만들기]",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-11-14",
+      "endDate": "2026-11-14",
+      "location": "마포구립서강도서관 3층 세미나실",
+      "target": "해봄이로 등록한 초등학교 1-3학년 12명",
+      "summary": "마포구립서강도서관에서 진행하는 어린이 메이킹 프로그램으로, 그림책을 읽고 슈링클스 키캡을 만드는 체험 행사이자 교육 프로그램입니다.",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=159910&menuNo=200011",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "id": 1778713507249,
+      "updatedAt": "2026-11-11"
+    },
+    {
       "name": "제31회 한무숙문학상 수상자 구병모 소설가와 함께하는 [소설 읽는 시간 & 작가와의 대화]",
       "category": "문화",
       "region": "서울",
@@ -4973,6 +4989,23 @@
   ],
   "nationalExhibitionEvents": [],
   "seoulEvents": [
+    {
+      "name": "[강동문화재단] 최태지의 발레 오픈 리허설 Ⅱ",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-11-14",
+      "endDate": "2026-11-14",
+      "location": "강동아트센터 소극장 드림",
+      "target": "8세 이상",
+      "summary": "최태지의 발레 오픈 리허설 Ⅱ 공연",
+      "link": "https://www.gdfac.or.kr/product/ko/performance/258502",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://www.gdfac.or.kr/Down/Perf/202609/KakaoTalk_20260928_105002567.jpg",
+      "id": 1778713507248,
+      "updatedAt": "2026-11-11"
+    },
     {
       "name": "[서울시립교향악단] 2026 서울시향 행복한 음악회, 함께! II",
       "category": "행사",
