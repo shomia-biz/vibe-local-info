@@ -3639,6 +3639,22 @@
   ],
   "seoulExhibitionEvents": [
     {
+      "name": "2026 제11회 서화·공예 명장대전",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-12-16",
+      "endDate": "2026-12-21",
+      "location": "한국미술관 3층",
+      "target": "누구나",
+      "summary": "제11회 서화·공예 명장대전 전시회",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=160056&menuNo=200009",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "id": 1778713507255,
+      "updatedAt": "2026-11-14"
+    },
+    {
       "name": "[노들섬] 2026 노들섬 특별기획 [노들anding]",
       "category": "전시",
       "region": "서울",
@@ -5054,6 +5070,40 @@
   ],
   "nationalExhibitionEvents": [],
   "seoulEvents": [
+    {
+      "name": "[강동문화재단] 마티네 콘서트Ⅴ: 윈터 마티네(Winter Matinee) 송영훈의 4 첼리스트",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-12-16",
+      "endDate": "2026-12-16",
+      "location": "강동아트센터 대극장 한강",
+      "target": "8세 이상",
+      "summary": "강동문화재단 마티네 콘서트Ⅴ: 윈터 마티네(Winter Matinee) 송영훈의 4 첼리스트 공연",
+      "link": "https://www.gdfac.or.kr/product/ko/performance/258460",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://www.gdfac.or.kr/Down/Perf/202610/[크기변환]사본_-윈터_마티네_메인이미지.jpg",
+      "id": 1778713507256,
+      "updatedAt": "2026-11-14"
+    },
+    {
+      "name": "[강동문화재단] 이자람 판소리 갈라 시리즈 [바탕]",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-12-19",
+      "endDate": "2026-12-19",
+      "location": "강동아트센터 대극장 한강",
+      "target": "8세 이상 관람가 (2019년생 이상)",
+      "summary": "강동문화재단에서 진행하는 이자람 판소리 갈라 시리즈 [바탕] 공연입니다.",
+      "link": "https://www.gdfac.or.kr/product/ko/performance/258496",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://www.gdfac.or.kr/Down/Perf/202609/사본_-GAC2026_메인이미지_이자람바탕.jpg",
+      "id": 1778713507254,
+      "updatedAt": "2026-11-14"
+    },
     {
       "name": "[강동문화재단] 최태지의 발레 오픈 리허설 Ⅱ",
       "category": "행사",
