@@ -873,6 +873,23 @@
   ],
   "seoulCultureEvents": [
     {
+      "name": "[구립증산도서관] 11월 미니멀 북큐레이션 [달마다, 나를 아끼는 습관] '마음에도 휴식이 필요해'",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-11-05",
+      "endDate": "2026-11-30",
+      "location": "2층 종합자료실",
+      "target": "누구나",
+      "summary": "은평구립증산도서관에서 진행하는 11월 미니멀 북큐레이션 프로그램입니다.",
+      "link": "https://www.eplib.or.kr/jslib/menu/10457/program/30028/eventLectureDetail.do?currentPageNo=1&lectureIdx=235289&manageCd=MB&searchTarget=&searchStatus=OPEN",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://www.eplib.or.kr/include/image/common/ico_sns_favicon.png",
+      "id": 1778713507253,
+      "updatedAt": "2026-11-14"
+    },
+    {
       "name": "2026년 제28회 백범 문화 강좌",
       "category": "문화",
       "region": "서울",
