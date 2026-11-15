@@ -9116,6 +9116,22 @@
   ],
   "seoulBenefits": [
     {
+      "name": "성동구 청년 등 탈모 치료 지원",
+      "category": "혜택",
+      "region": "서울",
+      "startDate": "2026-11-15",
+      "endDate": "상시",
+      "location": "서울특별시 성동구",
+      "target": "청소년, 청년, 아동, 영유아",
+      "summary": "청년 등의 탈모로 인한 정신적·육제적 고통을 해소하고 자신감 넘치는 일상생활을 영위할 수 있도록 탈모 치료 지원",
+      "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005234&wlfareInfoReldBztpCd=02",
+      "serviceField": "보건 의료",
+      "supportType": "현금",
+      "targetGroup": "개인",
+      "id": 1778713507257,
+      "updatedAt": "2026-11-15"
+    },
+    {
       "name": "서대문구 다자녀가족 입학축하상품권 지원사업",
       "category": "혜택",
       "region": "서울",
