@@ -873,6 +873,23 @@
   ],
   "seoulCultureEvents": [
     {
+      "name": "[서울시립과학관] 과학교양 진로 북토크: 과학 공학과 애니메이션을 연결하다",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-12-20",
+      "endDate": "2026-12-20",
+      "location": "서울시립과학관 3층 스타홀",
+      "target": "이공계 진학을 꿈꾸는 청소년 및 과학을 좋아하는 누구나",
+      "summary": "과학 공학과 애니메이션을 연결하는 과학교양 진로 북토크 프로그램",
+      "link": "https://science.seoul.go.kr/sciEdu/talk/read?menuId=73&progMstId=2418",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://science.seoul.go.kr/resources/renewal/asset/img/common/og_logo2.png",
+      "id": 1778713507259,
+      "updatedAt": "2026-11-17"
+    },
+    {
       "name": "[구립증산도서관] 11월 미니멀 북큐레이션 [달마다, 나를 아끼는 습관] '마음에도 휴식이 필요해'",
       "category": "문화",
       "region": "서울",
@@ -5070,6 +5087,23 @@
   ],
   "nationalExhibitionEvents": [],
   "seoulEvents": [
+    {
+      "name": "2026 송년음악회 [One Voice, One Dream]",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2026-12-26",
+      "endDate": "2026-12-26",
+      "location": "국립국악원 예악당",
+      "target": "7세 이상 누구나",
+      "summary": "국악 장르의 2026 송년음악회 [One Voice, One Dream] 공연",
+      "link": "http://worldpansori.com/?wHuLfc4e",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "http://worldpansori.com/pansori/upfile/P261102161346.jpg",
+      "id": 1778713507258,
+      "updatedAt": "2026-11-17"
+    },
     {
       "name": "[강동문화재단] 마티네 콘서트Ⅴ: 윈터 마티네(Winter Matinee) 송영훈의 4 첼리스트",
       "category": "행사",
