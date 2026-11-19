@@ -15129,6 +15129,20 @@
   ],
   "nationalBenefits": [
     {
+      "name": "어린이집‧유치원 틈새돌봄 운영 기관 안내",
+      "category": "혜택",
+      "region": "전국",
+      "startDate": "2026-11-19",
+      "endDate": "2026-12-31",
+      "location": "교육부",
+      "target": "어린이집, 유치원 재원 유아",
+      "summary": "아침‧야간‧주말‧휴일‧방학 등 틈새돌봄 서비스 제공",
+      "link": "https://plus.gov.kr/portal/benefitV2/benefitTotalSrvcList/benefitSrvcDtl?svcSeq=2189824&bnefType=all&svcId=134200005050",
+      "imageUrl": "https://static.gov.kr/content/images/layout/logo-header.svg?time=1793956307147",
+      "id": 1778713507260,
+      "updatedAt": "2026-11-19"
+    },
+    {
       "name": "햇살론119",
       "category": "혜택",
       "region": "전국",
