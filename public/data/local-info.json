@@ -873,6 +873,39 @@
   ],
   "seoulCultureEvents": [
     {
+      "name": "[구산동도서관마을] 구산동도서관마을 개관 11주년 기념 행사",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-11-01",
+      "endDate": "2026-11-30",
+      "location": "구산동도서관마을 3층 힐링캠프",
+      "target": "누구나",
+      "summary": "구산동도서관마을 개관 11주년을 기념하여 진행되는 교육 및 체험 행사",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=159971&menuNo=200011",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "id": 1778713507263,
+      "updatedAt": "2026-11-19"
+    },
+    {
+      "name": "[서울문화재단] 무대를 꿈꾸는 예술가들을 위한 6개의 창작 클래스",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-11-02",
+      "endDate": "2026-11-30",
+      "location": "서울거리예술창작센터 연습실",
+      "target": "공연예술 창작자 및 관심자 누구나",
+      "summary": "무대를 꿈꾸는 예술가들을 위한 6개의 창작 클래스",
+      "link": "https://www.sfac.or.kr/artspace/artspace/streetArts_notice.do?cbIdx=984&bcIdx=138984&type=",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://www.sfac.or.kr/common/sfac2023/images/artspace/thumb_space_01.jpg",
+      "id": 1778713507261,
+      "updatedAt": "2026-11-19"
+    },
+    {
       "name": "[서울시립과학관] 과학교양 진로 북토크: 과학 공학과 애니메이션을 연결하다",
       "category": "문화",
       "region": "서울",
@@ -3655,6 +3688,23 @@
     }
   ],
   "seoulExhibitionEvents": [
+    {
+      "name": "[구립증산도서관] 가족열람실 11월 북큐레이션 [같이 만나자, 우주]",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-11-01",
+      "endDate": "2026-11-30",
+      "location": "구립증산도서관 3층 가족열람실",
+      "target": "도서관 이용자 누구나",
+      "summary": "구립증산도서관 가족열람실에서 진행하는 11월 북큐레이션 프로그램 '같이 만나자, 우주'",
+      "link": "https://www.eplib.or.kr/jslib/menu/10457/program/30028/eventLectureDetail.do?currentPageNo=1&lectureIdx=234632&manageCd=MB&searchTarget=&searchStatus=OPEN",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://www.eplib.or.kr/include/image/common/ico_sns_favicon.png",
+      "id": 1778713507262,
+      "updatedAt": "2026-11-19"
+    },
     {
       "name": "2026 제11회 서화·공예 명장대전",
       "category": "전시",
