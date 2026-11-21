@@ -6,7 +6,7 @@ async function fetchIncheonEvents() {
   utils.loadEnv();
 
   const cleanKey = (key) => key ? key.replace(/^\[[^\]]+\]\s*/, '').trim() : '';
-  const GEMINI_API_KEY = cleanKey(process.env.GEMINI_API_KEY || process.env.NEXT_PUBLIC_GEMINI_API_KEY);
+  const GEMINI_API_KEY = cleanKey(process.env.GEMINI_API_KEY);
   const INCHEON_DATA_API_KEY = cleanKey(process.env.INCHEON_DATA_API_KEY || process.env.INCHEON_DATA_API__KEY);
 
   if (!GEMINI_API_KEY || !INCHEON_DATA_API_KEY) {

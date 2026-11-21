@@ -8,7 +8,7 @@ async function fetchData() {
   const cleanKey = (key) => key ? key.replace(/^\[[^\]]+\]\s*/, '').trim() : '';
 
   const PUBLIC_DATA_API_KEY = cleanKey(process.env.PUBLIC_DATA_API_KEY);
-  const GEMINI_API_KEY = cleanKey(process.env.GEMINI_API_KEY || process.env.NEXT_PUBLIC_GEMINI_API_KEY);
+  const GEMINI_API_KEY = cleanKey(process.env.GEMINI_API_KEY);
 
   if (!PUBLIC_DATA_API_KEY || !GEMINI_API_KEY) {
     console.error('환경변수가 일부 설정되지 않았습니다. (.env.local 파일을 확인해 주세요)');

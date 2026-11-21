@@ -8,7 +8,7 @@ const { GoogleGenerativeAI } = require('@google/generative-ai');
 require('dotenv').config({ path: path.resolve(__dirname, '../.env.local') });
 
 const parser = new Parser();
-const genAI = new GoogleGenerativeAI(process.env.NEXT_PUBLIC_GEMINI_API_KEY);
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 const HISTORY_FILE = path.join(__dirname, '../public/data/generated-history.json');
 const KEYWORDS_FILE = path.join(__dirname, '../public/data/trending-keywords.json');
@@ -94,7 +94,7 @@ const RSS_SOURCES = [
 
 // Gemini AI를 활용한 기사 요약 함수
 async function summarizeWithGemini(title, content) {
-  if (!process.env.NEXT_PUBLIC_GEMINI_API_KEY) return null;
+  if (!process.env.GEMINI_API_KEY) return null;
   try {
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
     const prompt = `다음 기사의 제목과 내용을 바탕으로 블로그 독자들에게 유용한 핵심 정보를 3~4줄로 요약해줘. \n제목: ${title}\n내용: ${content}`;
