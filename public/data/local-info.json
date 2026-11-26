@@ -873,6 +873,23 @@
   ],
   "seoulCultureEvents": [
     {
+      "name": "[도암 키즈 아카데미] 2027 DOAM WINTER KIDS ART CAMP: 겨울을 바라보는 세 가지 시선",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2027-01-09",
+      "endDate": "2027-01-23",
+      "location": "도암갤러리내 아카데미실",
+      "target": "초등학교 1~6학년(초등학교 입학 예정자 제외)",
+      "summary": "도암 키즈 아카데미에서 진행하는 어린이 대상 겨울 아트 캠프 프로그램입니다.",
+      "link": "https://doam.me/Academy_Program_Information/?q=YToxOntzOjEyOiJrZXl3b3JkX3R5cGUiO3M6MzoiYWxsIjt9&bmode=view&idx=175399418&t=board",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://cdn.imweb.me/thumbnail/20261111/b9036d877f829.png",
+      "id": 1778713507268,
+      "updatedAt": "2026-11-26"
+    },
+    {
       "name": "[구립증산도서관] 11월 책 읽어주는 사서 [수요일은 책이랑 쑥쑥]",
       "category": "문화",
       "region": "서울",
@@ -5154,6 +5171,22 @@
   ],
   "nationalExhibitionEvents": [],
   "seoulEvents": [
+    {
+      "name": "앰비규어스댄스컴퍼니 [세 개의 심장]",
+      "category": "행사",
+      "region": "서울",
+      "startDate": "2027-02-12",
+      "endDate": "2027-02-28",
+      "location": "한전아트센터",
+      "target": "초등학생 이상 관람가",
+      "summary": "앰비규어스댄스컴퍼니의 공연 '세 개의 심장' (바디콘서트, 피버, 더 벨트 등 프로그램 진행)",
+      "link": "https://culture.seoul.go.kr/culture/culture/cultureEvent/view.do?cultcode=160198&menuNo=200008",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "id": 1778713507267,
+      "updatedAt": "2026-11-26"
+    },
     {
       "name": "바이올리니스트 성경주의 베토벤 바이올린 소나타 전곡 연주 Ⅲ",
       "category": "행사",
