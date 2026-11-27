@@ -9334,6 +9334,38 @@
   ],
   "seoulBenefits": [
     {
+      "name": "보육료 차액지원",
+      "category": "혜택",
+      "region": "서울",
+      "startDate": "2026-11-27",
+      "endDate": "상시",
+      "location": "서울특별시 여성가족정책실 영유아담당관",
+      "target": "영유아 (정부미지원시설인 민간·가정어린이집을 이용하는 3~5세 아동)",
+      "summary": "정부미지원시설인 민간·가정어린이집을 이용하고 있는 3~5세 아동에 대한 보육료 차액 지원을 통해 보호자의 육아 부담 해소와 건전한 양육 분위기 조성",
+      "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00002815&wlfareInfoReldBztpCd=02",
+      "serviceField": "보육 교육",
+      "supportType": "현금",
+      "targetGroup": "개인",
+      "id": 1778713507275,
+      "updatedAt": "2026-11-27"
+    },
+    {
+      "name": "청년인턴 지원사업",
+      "category": "혜택",
+      "region": "서울",
+      "startDate": "2026-11-27",
+      "endDate": "상시",
+      "location": "서울특별시 서초구",
+      "target": "청년",
+      "summary": "AI교육과정, 공연기획, e스포츠산업교육과정 등을 운영하여 우수 수료생들을 취업연계하여 청년 일자리 창출에 기여하고자 함",
+      "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004791&amp;wlfareInfoReldBztpCd=02",
+      "serviceField": "고용 창업",
+      "supportType": "현금",
+      "targetGroup": "개인",
+      "id": 1778713507274,
+      "updatedAt": "2026-11-27"
+    },
+    {
       "name": "성동구 청년 등 탈모 치료 지원",
       "category": "혜택",
       "region": "서울",
@@ -11114,6 +11146,22 @@
     }
   ],
   "kyeonggiBenefits": [
+    {
+      "name": "치매 감별검사 본인부담금 지원",
+      "category": "혜택",
+      "region": "경기",
+      "startDate": "2026-11-27",
+      "endDate": "상시",
+      "location": "경기도 성남시 수정구보건소 건강증진과",
+      "target": "취약계층 어르신",
+      "summary": "취약계층 어르신들의 치매 감별검사 본인부담금을 지원하여 치매를 조기에 발견하고 중증화를 예방하고자 하는 사업입니다.",
+      "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00005069&wlfareInfoReldBztpCd=02",
+      "serviceField": "보건 의료",
+      "supportType": "현금",
+      "targetGroup": "개인",
+      "id": 1778713507273,
+      "updatedAt": "2026-11-27"
+    },
     {
       "name": "포천시 다자녀가정 포천 쌀 지원사업",
       "category": "혜택",
@@ -14477,6 +14525,22 @@
     }
   ],
   "incheonBenefits": [
+    {
+      "name": "인플루엔자예방접종사업",
+      "category": "혜택",
+      "region": "인천",
+      "startDate": "2026-11-27",
+      "endDate": "상시",
+      "location": "인천광역시 강화군 보건소 건강증진과",
+      "target": "아동, 노년, 중장년, 청소년, 청년 (국가예방접종 지원 대상자 외의 군민 15~64세)",
+      "summary": "국가예방접종 지원 대상자 외의 군민에게(15~64세) 인플루엔자 예방접종을 실시하여 대상자의 건강 보호와 지역사회 감염병 예방에 기여",
+      "link": "https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00001353&wlfareInfoReldBztpCd=02",
+      "serviceField": "보건 의료",
+      "supportType": "현물",
+      "targetGroup": "개인",
+      "id": 1778713507272,
+      "updatedAt": "2026-11-27"
+    },
     {
       "name": "다자녀 가정 양육비 지원",
       "category": "혜택",
