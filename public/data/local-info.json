@@ -873,6 +873,40 @@
   ],
   "seoulCultureEvents": [
     {
+      "name": "[마포구립서강도서관] 11-12월/성인메이킹 [오일파스텔로 그리는 따뜻한 하루] / Book Cx클래스",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-11-18",
+      "endDate": "2026-12-09",
+      "location": "서강도서관 3층 Book C",
+      "target": "성인 8명",
+      "summary": "마포구립서강도서관에서 진행하는 성인 대상 오일파스텔 드로잉 체험 프로그램",
+      "link": "https://mplib.mapo.go.kr/sglib/MENU1199/PGM3028/eventDetail.do?currentPageNo=1&eventSn=13628",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://mplib.mapo.go.kr/include/image/common/ico_favicon.png",
+      "id": 1778713507277,
+      "updatedAt": "2026-11-28"
+    },
+    {
+      "name": "2026 청와대 사랑채 국민화합 체험형 문화프로그램 [배우와 함께하는 참여형 전시 투어]",
+      "category": "문화",
+      "region": "서울",
+      "startDate": "2026-11-18",
+      "endDate": "2026-12-13",
+      "location": "청와대 사랑채 1층",
+      "target": "누구나",
+      "summary": "배우와 함께하는 참여형 전시 투어 형식의 청와대 사랑채 국민화합 체험형 문화프로그램",
+      "link": "https://booking.naver.com/booking/12/bizes/695630",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "imageUrl": "https://naverbooking-phinf.pstatic.net/20261103_51/1793702504346VXEFv_JPEG/image.jpg?type=f804_408_60_sharpen",
+      "id": 1778713507276,
+      "updatedAt": "2026-11-28"
+    },
+    {
       "name": "[도암 키즈 아카데미] 2027 DOAM WINTER KIDS ART CAMP: 겨울을 바라보는 세 가지 시선",
       "category": "문화",
       "region": "서울",
@@ -3722,6 +3756,22 @@
     }
   ],
   "seoulExhibitionEvents": [
+    {
+      "name": "[세종뮤지엄갤러리] 최은정 기획초대전",
+      "category": "전시",
+      "region": "서울",
+      "startDate": "2026-11-18",
+      "endDate": "2026-12-01",
+      "location": "세종뮤지엄갤러리 2관",
+      "target": "누구나",
+      "summary": "세종뮤지엄갤러리에서 개최하는 최은정 기획초대전입니다.",
+      "link": "https://www.instagram.com/p/Df59SUHGVWX/",
+      "serviceField": "",
+      "supportType": "",
+      "targetGroup": "",
+      "id": 1778713507278,
+      "updatedAt": "2026-11-28"
+    },
     {
       "name": "[주석모음집] 전시를 만드는 일에 대하여",
       "category": "전시",
